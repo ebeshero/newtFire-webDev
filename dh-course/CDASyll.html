@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE html
+  SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Syllabus: Coding and Digital Archives</title>
+      <meta name="Description" content="Supported by the University of Pittsburgh at Greensburg" />
+      <meta name="keywords" content="Digital Humanities, Syllabus, XML, TEI, XSLT, XQuery, Schematron, Relax NG, SVG, digital scholarship, digital edition, electronic edition, electronic text, humanities computing, electronic editing, Beshero-Bondar" />
+      <link rel="stylesheet" type="text/css" href="syllsched.css" />
+   </head>
+   <body>
+      <!--#include virtual="top-index.html" -->
+      <h1><span class="banner">Coding and Digital Archives</span></h1>
+      <h2><span class="banner">Humanities 1030 / Social Sciences 1031: Autumn 2015 Syllabus</span></h2>
+      <div id="main">
+         <div id="courseInfo">
+            <p><strong>Autumn 2015:</strong> Classes meet M W F 10:30 - 11:20 AM, 116 Cassell
+               Hall
+            </p>
+            <p><a href="#schedule">Jump Down to the Schedule</a></p>
+            <h2>All the Tools You Need As We Begin:</h2>
+            <p>Download and install the following software on your own personal computer(s) on or
+               before the first day of class. These software tools are available in our campus computing
+               labs, too.
+            </p>
+            <ol>
+               <li><strong>All students:</strong><a href="http://www.oxygenxml.com/">&lt;oXygen/&gt;</a>. The University of
+                  Pittsburgh has purchased a site license for this software, which is installed in
+                  the Pitt computer labs on multiple campuses, and it's in use in courses here at
+                  Greensburg and at Oakland. The license also permits students enrolled in the
+                  course to install the software on their home computers (for course-related use
+                  only). When installing this on your own computers, <strong>you will need the
+                     license key</strong>, which we have posted on our course Announcements section of
+                  <a href="https://courseweb.pitt.edu">Courseweb</a>.
+               </li>
+               <li>All students require a good means of secure file transfer (SFTP) for homework
+                  assignments and projects (also available in the campus computer labs). There are
+                  several good options available. We recommend you download and install on your own
+                  computers one (or more) of the following, depending on your platform: (Feel free
+                  to experiment with these and others!) 
+                  <ul>
+                     <li><strong>Windows users:</strong> one of the following FTP clients—the functionality is
+                        similar: 
+                        <ul>
+                           <li><a href="http://www.wm.edu/offices/it/services/software/licensedsoftware/webeditingsftp/sshsecureshell/index.php">SSH Secure Shell Client</a> <span class="smaller"> (this one is the most ad-free experience)</span></li>
+                           <li><a href="http://winscp.net/eng/download.php">WinSCP</a> <span class="smaller">An alternative to SSH with a few more bells and whistles (This is one we used for
+                                 a long time, since the 1990s, but we now use SSH and Filezilla more frequently.)</span></li>
+                           <li> or <a href="https://filezilla-project.org/download.php?show_all=1">FileZilla</a> <span class="smaller"> (a great tool, but be wary of accepting its bundled ad offers
+                                 as you install!)</span></li>
+                        </ul>
+                     </li>
+                     <li><strong>Mac users:</strong><ul>
+                           <li><a href="http://fetchsoftworks.com/fetch/">Fetch</a> (students
+                              may obtain free licenses at <a href="http://fetchsoftworks.com/fetch/free">http://fetchsoftworks.com/fetch/free</a>)
+                           </li>
+                           <li>or <a href="https://filezilla-project.org/download.php?show_all=1">FileZilla</a> <span class="smaller">(a great tool, but be wary of accepting its bundled ad offers as
+                                 you install!)</span></li>
+                        </ul>
+                     </li>
+                     <li><strong>Linux users:</strong> You probably don't need to install anything,
+                        but look at how your system handles secure file transfer (SFTP).
+                         <span class="smaller">(FileZilla or other clients designed for Linux
+                           environments.)</span></li>
+                  </ul>
+               </li>
+               <li><strong>Read the <a href="CDA.html">Course Description</a></strong> and this Syllabus page to see how this course works on a day-to-day basis.
+               </li>
+               <li>This course fulfills general education requirements in Q2, NS, SS, and HM, and it
+                  fulfills a core requirement for <a href="http://greensburg.pitt.edu/academics/info/digital-studies">the Digital Studies Certificate at Pitt-Greensburg</a>. Think about where this course might fit in your academic career, and how you might
+                  apply the skills you learn here.
+               </li>
+               <li>No coding experience? Don't worry! You are in very good company. We don't expect any
+                  of you to have written a line of computer code before now. Past students in this course
+                  who never saw anything like markup or XML code have designed projects (<a href="http://newtfire.org/dh/studentProjects.html">like these</a>) and even spoken about them at an undergraduate conference! You'll help continue
+                  some of these projects we've started, and you'll learn to build and create digital
+                  tools for yourself with skills we hope you will keep developing.
+               </li>
+            </ol>The Webs Where We Work:
+            <ul>
+               <li><a href="http://newtfire.org/dh/CDA.html">Course Home Website:
+                     http://newtfire.org/dh/CDA.html</a> Home of our syllabus and
+                  schedule.
+               </li>
+               <li><a href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub:
+                     https://github.com/ebeshero/DHClass-Hub</a> Class GitHub Repository and
+                  Issues Board
+               </li>
+               <li><a href="https://courseweb.pitt.edu">Courseweb:
+                     https://courseweb.pitt.edu</a> To submit homework assignments and exams
+                  and read private course announcements
+               </li>
+               <li><a href="http://dh.obdurodon.org/file-naming_conventions.xhtml">How to Construct Filenames for Courseweb Homework Submissions</a> <span class="smaller"> (courtesy of Obdurodon)</span></li>
+               <li>Server Access Instructions for Web Project Development on newtFire: [To Be
+                  Announced]
+               </li>
+            </ul><a href="index.html">Explanatory Guides</a></div>
+         <div id="schedule">
+            <table>
+               <tr>
+                  <th><a id="Week1"></a><h4><em>Week 1</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 08-31</h4>
+                  </td>
+                  <td>
+                     <p>Welcome! Intro to the course, and Intro to XML and working in
+                        &lt;oXygen/&gt;: Write your first XML. <strong>Mindful File Management</strong>
+                        (<a href="http://dh.obdurodon.org/file-naming_conventions.xhtml">how
+                           to name</a>, store, share, and submit files in this course). Setting up
+                        accounts for web server and for GitHub. <a href="http://www.simplyrecipes.com/recipes/gazpacho">Gazpacho
+                           Soup</a></p>
+                  </td>
+                  <td>
+                     <ul>
+                        <li>By Wed. 9/2: Install &lt;oXygen/&gt; software on your own computers.
+                           <a href="https://courseweb.pitt.edu">Instructions and license key
+                              posted on Courseweb</a>.
+                        </li>
+                        <li>Read our <a href="explainXML.html">Introduction to XML</a>, and
+                           read <a href="http://dh.obdurodon.org/file-naming_conventions.xhtml">File-Naming Conventions for Courseweb Homework
+                              Submissions</a>.
+                        </li>
+                        <li><strong>First XML exercise:</strong> Look at this recipe for
+                           gazpacho soup. What if you were running a restaurant and needed to create
+                           a system to file it according to ingredients to purchase, to track
+                           quantities per unit serving--and this recipe were one of, say, 100 other
+                           recipes you're keeping on file? Or, what if you needed to adapt it with
+                           markup to fit a system like we see at the GitHub-based recipe center <a href="http://forkthecookbook.com/">ForktheCookbook.com</a>? Think
+                           about a good system for tagging the file for this long-term situation,
+                           and mark up your file accordingly. Experiment with this and write a
+                           complete XML file in a way that makes sense to represent the recipe, and
+                           try to make use of elements as well as attributes in your markup. There
+                           is no single way to do this exercise, but we want you to think about how
+                           you nest levels of information (elements within elements), and the
+                           relationship between elements and attributes in XML: Can the attributes
+                           hold information from the main text, perhaps removing it from the body of
+                           the text?) Submit the results on Courseweb, in the folder labelled
+                           "Upload Assignments Here," before our next class.
+                        </li>
+                        <li>By Wed. or Fri. this week: Read <a href="http://dh.obdurodon.org/github.xhtml">the Obdurodon GitHub
+                              tutorial</a>, then create your GitHub account. Clone <a href="https://github.com/ebeshero/DHClass-Hub">our class GitHub
+                              repository</a> to your local machine(s). Practice opening an
+                           Issue and pushing files to the Sandbox directory.
+                        </li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 09-02</h4>
+                  </td>
+                  <td>
+                     <p>Setting up GitHub, Working in the Cloud and campus lab access. "Markup" vs.
+                        "Markdown." Discussion of the XML recipe homework: XML Comments, Validity, and
+                        Well-formedness, and how to work with oXygen. Web Accounts: collect
+                        info.
+                     </p>
+                  </td>
+                  <td>
+                     <p><strong>Set up your GitHub account by the next class</strong>, and post a
+                        test file (anything) into the Sandbox. Join in Sandbox discussion of an
+                        Issue.
+                     </p>
+                     <p><strong>XML Exercise 2:</strong> Choose the text of one letter from one of
+                        the following websites (click through until you see a complete letter), and
+                        copy its text into &lt;oXygen/&gt;. Then, mark it up in XML, using your own
+                        system of tagging, as seems appropriate, to code the structure and the
+                        content of the document. Save and name your document according to the
+                        File-Naming Conventions (which hold for all coding homework in this course),
+                        and upload to Courseweb. Options:
+                     </p>
+                     <ul>
+                        <li><a href="http://www.yale.edu/glc/harriet/docs.htm"> Harriet Jacobs:
+                              Selected Writings and Correspondence </a></li>
+                        <li><a href="http://englishhistory.net/byron/letters.html"> Lord Byron:
+                              Selected Letters </a></li>
+                        <li><a href="http://www.woolfonline.com/timepasses/?q=letters/overview">Virginia Woolf letters</a></li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 09-04</h4>
+                  </td>
+                  <td>
+                     <p>Discussion of homework, and XML: Validity and Well-formedness. XML projects
+                        in digital humanities. Introduce the <a href="http://digitalmitford.org">Digital Mitford Project</a> and <a href="http://www.pitt.edu/~ebb8/EmilyDickinson16"> Emily Dickinson's
+                           Fascicle 16</a></p>
+                     <p>Opening and closing Issues, joining in discussions (via Issues) on our class
+                        GitHub. 
+                     </p>
+                  </td>
+                  <td>
+                     <p><strong>Reading and Discussion Post on GitHub</strong> Read Gabrielle
+                        Kirilloff, <a href="http://gk.obdurodon.org/seminar/seminarPaper.xhtml">“&lt;Traversing_the_Tree/&gt;”</a>, the short article, <a href="http://www.idsnews.com/article/2015/04/frankenstein-novel-analyzed">“Frankenstein novel analyzed”</a> and scroll through <a href="http://balisage.net/Proceedings/vol13/html/Piez01/BalisageVol13-Piez01.html">Wendell Piez's conference talk and images for the Balisage Markup
+                           Conference 2014</a>. If you like, you can take a close look at his <a href="https://github.com/wendellpiez/Luminescent/blob/master/lmnl/frankenstein-as-published.lmnl">LMNL code of Frankenstein on GitHub</a>. Then go to our class GitHub
+                        Issues page to discuss: <strong>Discussion Prompts:</strong></p>
+                     <ul>
+                        <li>What perspective does Kirilloff provide on the kinds of XML markup we
+                           are learning, the history and context of hierarchical markup, and its
+                           potential issues?
+                        </li>
+                        <li>Consider the examples of overlapping hierarchies in Kirilloff's and
+                           Piez's readings: What ideas are presented for how to deal with these in
+                           code, and how effective might these be? Is it possible to write XML to
+                           get around the problems raised in these pieces?
+                        </li>
+                     </ul>
+                     <p>For full credit, your posts should make specific reference to passages in
+                        Kirilloff's essay, and reflect on those passages. Raising questions is
+                        encouraged, and so is responding to each other.
+                     </p>
+                     <p><strong>XML exercise 3:</strong> Review our feedback on your coding
+                        exercises so far and submit revisions if we asked you to. Mark up a text of
+                        your choice (any genre; manageable but reasonable size; foreign languages
+                        welcome). Work on applying attributes with your elements, and doing so in a
+                        careful and systematic way. 
+                     </p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week2"></a><h4><em>Week 2</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 09-07</h4>
+                  </td>
+                  <td>
+                     <p><strong>Labor Day Holiday: No classes.</strong></p>
+                  </td>
+                  <td>
+                     <p></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 09-09</h4>
+                  </td>
+                  <td>
+                     <p> LMNL markup: Document Analysis and Coding: Group Exercise with <a href="http://www.online-literature.com/coleridge/640/">Kubla Khan</a>
+                        The concept of "UX." 
+                     </p>
+                  </td>
+                  <td>
+                     <p><strong>Response Paper:</strong> Choose one of the following major Digital
+                        Humanities projects to explore, and write a response paper addressing 1) how
+                        effective the site is for working with centuries-old texts, and 2) the
+                        effectiveness of the user experience (“UX”).
+                     </p>
+                     <ul>
+                        <li><a href="http://mapoflondon.uvic.ca/index.htm">Map of Early Modern
+                              London</a></li>
+                        <li><a href="http://www.perseus.tufts.edu/hopper/text?doc=urn:cts:greekLit:tlg0013.tlg007.perseus-eng1">The Homeric Hymn 7 to Dionysus within the Perseus Project</a>, and
+                           explore the features here.
+                        </li>
+                        <li><a href="http://shelleygodwinarchive.org/contents/frankenstein">Shelley-Godwin Archive: Frankenstein Notebooks:</a> what can we
+                           learn about the manuscript drafts of Frankenstein from this project? How
+                           does the site guide us to make certain kinds of discoveries?
+                        </li>
+                     </ul>
+                     <p>Read <a href="explainRNG.html">Intro to Relax NG</a>.
+                     </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 09-11 </h4> <span class="smaller"> <span class="smaller">drop-add period ends</span></span></td>
+                  <td>
+                     <p><strong>Test 1: XML, markup.</strong></p>
+                     <p>Schema Languages: Writing the Rules. Writing Relax NG</p>
+                  </td>
+                  <td>
+                     <p><strong>Relax NG exercise 1:</strong> Write a Relax NG schema for one of the XML documents you created for an earlier assignment
+                        (XML exercise 2 or 3), and upload it an your XML file to Courseweb.
+                     </p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week3"></a><h4><em>Week 3</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 09-14</h4>
+                  </td>
+                  <td>
+                     <p><strong>Relax NG exercise 2: </strong>This time, choose a small text
+                        (maybe one of the letters from the first assignment that you did NOT mark up before,
+                        or anything you like). Perform document analysis, write a schema,
+                        and mark up the text according to the schema.
+                     </p>
+                  </td>
+                  <td>
+                     <p><strong>Discussion Post on GitHub Issues: Where Might We Go from Here?</strong>Choose one of the following Greensburg
+                        project sites under development. Describe (in your own words) at least one
+                        significant topic it seems to be exploring, and reflect on what we might
+                        want to try next to improve the "UX," and/or develop the research areas of
+                        the project.
+                     </p>
+                     <ul>
+                        <li><a href="http://nell.obdurodon.org">The Nell Nelson Project</a>.
+                        </li>
+                        <li>From our Digital Mitford Project: <a href="http://mitford.pitt.edu/letters.html">Letters
+                              Introduction</a>. First review the bottom section: "Digitizing a
+                           Mitford Letter: Photofacsimile, Transcription Markup, and Versioning
+                           Markup": What does the side-by-side view show us and what might we be
+                           able to learn from it? Comment on the reading views of the letters: What
+                           kind of research is involved here/ what kinds of questions have we been
+                           investigating to generate our views of these letters? What (besides
+                           coding some thousands more letters) could we try to build from our
+                           markup? 
+                        </li>
+                        <li><a href="http://pacific.pitt.edu/">Digital Archives and Pacific
+                              Cultures Site</a>: This is a complicated site, so you may want to
+                           choose just one aspect of it (voyage narratives, mapping, graphs and
+                           charts of cultural responses, reading interface, etc.) to address.
+                            <span class="smaller">This project site represents the origins of our Pitt-Greensburg
+                              digital humanities projects—it was our starting point and first
+                              collaboration with students. What do you think we should do with it
+                              next?</span></li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 09-16</h4>
+                  </td>
+                  <td>
+                     <p>Projects Designed by students: <a href="http://rap.obdurodon.org/">Russian Rap project</a> and <a href="http://translate.obdurodon.org/">Divergences in Machine
+                           Translation: Examining Harry Potter texts processed by Google Translate
+                           across multiple language families</a></p>
+                     <p>Descriptive markup and non-textual features: Manuscripts and Physical
+                        Objects. <a href="http://gwpapers.virginia.edu/multimedia/account-book-2-1767-1775/">The Papers of George Washington project: Visualizations page</a>.
+                     </p>
+                     <p>Introducing the Text Encoding Initiative (TEI).</p>
+                  </td>
+                  <td>
+                     <p><strong>Relax NG exercise 3:</strong> Choose a small text of a different
+                        type or genre than last time, perform document analysis, write a schema, and
+                        mark up the text according to the schema.
+                     </p>
+                     <p><strong>GitHub Post and Discussion: Project Proposal Ideas. 
+                           </strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 09-18</h4>
+                  </td>
+                  <td>
+                     <p><a href="http://www.tei-c.org/index.xml">The TEI</a>: Why and how we work with it. Project Discussion.
+                     </p>
+                  </td>
+                  <td>
+                     <p>TEI Lookup Exercise, with a small manuscript [TBA]: [Cheese Straw Recipe]: what code
+                        to use?
+                        
+                        
+                     </p>
+                     <p>Read our <a href="explainRegex.html">Intro to Regular Expressions</a> and start looking at
+                        <a href="http://www.regular-expressions.info/quickstart.html">the
+                           Regular Expressions Quick Start</a> in prep for next class. 
+                     </p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week4"></a><h4><em>Week 4</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 09-21</h4>
+                  </td>
+                  <td>
+                     <p><strong>Project teams</strong></p>
+                     <p>Up-Conversion with Regular Expressions: Using Find &amp; Replace in &lt;oXygen/&gt;. Model with
+                        Cheese Straw Recipe. 
+                     </p>
+                  </td>
+                  <td>
+                     <p>Consult our <a href="explainRegex.html">Intro to Regular Expressions</a> and <a href="http://www.regular-expressions.info/quickstart.html">the Regular
+                           Expressions Quick Start</a> as you work on the exercise:
+                     </p>
+                     <p><strong><a href="http://dh.obdurodon.org/regex-assignment-01.html">Regex Exercise 1: Shakespeare's Sonnets</a></strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 09-23</h4>
+                  </td>
+                  <td>
+                     <p>More on Regular Expressions. Inside-out or Outside-in? Greedy Matching.</p>
+                     <p>Review Relax NG</p>
+                  </td>
+                  <td>
+                     <p><strong><a href="http://dh.obdurodon.org/regex-assignment-02.xhtml">Regex Exercise 2: Blithedale</a></strong></p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 09-25</h4>
+                  </td>
+                  <td>
+                     <p><strong>Test 2: Relax NG</strong></p>
+                     <p>Regular Expressions: thinking algorithmically</p>
+                  </td>
+                  <td>
+                     <p><strong><a href="RegexExerciseVoyage.html">Regex Exercise 3: Voyage Log</a></strong></p>
+                     <p>GitHub Discussion: Applications of Regex Outside of &lt;oXygen/&gt;?</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week5"></a><h4><em>Week 5</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 09-28</h4>
+                  </td>
+                  <td>
+                     <p>Regular Expressions: Selecting for what's not there, complicated patterns</p>
+                  </td>
+                  <td>
+                     <p><strong><a href="RegexExercisePlay.html">Regex Exercise 4: Wilde play</a></strong></p>
+                     <p>Read our <a href="explainHTML.html">Introduction to XHTML (and HTML)</a>.
+                     </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 09-30</h4>
+                  </td>
+                  <td>
+                     <p>XML and the Web: HTML and CSS. SFTP into the Apache Server, file directories, and
+                        web URLs.
+                     </p>
+                  </td>
+                  <td>
+                     <p>Work with our <a href="explainHTML.html">Introduction to XHTML (and HTML)</a>, and our <a href="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</a>. Experiment
+                        with writing a simple HTML page with an image file, and an associated CSS stylesheet
+                        file.
+                     </p>
+                     <p><strong>HTML/CSS Exercise 1:</strong> Create and
+                        upload your first HTML web page to your space on the newtFire server
+                        (design and attach CSS to your HTML file)
+                     </p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 10-02</h4>
+                  </td>
+                  <td>
+                     <p>The Web: HTML, XHTML, HTML5....and CSS</p>
+                  </td>
+                  <td>
+                     <p>Read <a href="http://learnlayout.com/">Learn CSS Layout</a>, and
+                        consult <a href="http://www.w3schools.com/css/">w3 Schools CSS
+                           Reference</a> as you code. (Also, check out <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF">Paletton to help think about choosing balanced color schemes. Experiment with writing
+                           CSS to control font, layout, color, backgrounds. Rewrite your HTML to give you more
+                           to style.</a>: 
+                     </p>
+                     <p><strong>HTML/CSS Exercise 2:</strong> Expand and develop your first HTML web pages on your newtFire space (design and attach
+                        CSS to
+                        your HTML file(s): think about page layouts / structure. <strong>(Submit this homework by using FTP to post to the the web server.)</strong></p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week6"></a><h4><em>Week 6</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 10-05</h4>
+                  </td>
+                  <td>
+                     <p>More on the Web. Namespaces. What happens on the server side. Perspective on
+                        Database servers, JavaScript / PHP: How XML code structure matters for web
+                        transforms and delivery: Why we need to navigate XML with XPath. Introducing
+                        XPath: Paths, Axes.
+                     </p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 10-07</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 10-09</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week7"></a><h4><em>Week 7</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 10-12</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 10-14</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 10-16</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week8"></a><h4><em>Week 8</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 10-19</h4>
+                  </td>
+                  <td>
+                     <p><strong>Fall Break: Monday classes meet on Tuesday this week.</strong></p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>T 10-20</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 10-21</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 10-23</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week9"></a><h4><em>Week 9</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 10-26</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 10-28</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 10-30</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week10"></a><h4><em>Week 10</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 11-02</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 11-04</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 11-06</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week11"></a><h4><em>Week 11</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 11-09</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 11-11</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 11-13</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week12"></a><h4><em>Week 12</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 11-16</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 11-18</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 11-20</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week13"></a><h4><em>Week 13</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 11-23</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 11-25 to F 11-27</h4>
+                  </td>
+                  <td>
+                     <p><strong>Thanksgiving Recess: No Classes.</strong></p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week14"></a><h4><em>Week 14</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 11-30</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 12-02</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 12-04</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th><a id="Week15"></a><h4><em>Week 15</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>In Class</em></h4>
+                  </th>
+                  <th>
+                     <h4><em>Due Next Time</em></h4>
+                  </th>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>M 12-07</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>W 12-09</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+               <tr>
+                  <td>
+                     <h4>F 12-11 (Last Day of Classes)</h4>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+                  <td>
+                     <p>. . . .</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <td>
+                     <h4>Thurs. 12/17 by 11:59 PM</h4>
+                  </td>
+                  <td>
+                     <p><strong>Projects due.</strong></p>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <hr />
+   </body>
+</html>

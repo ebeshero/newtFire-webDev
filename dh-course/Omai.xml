@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+          <title type="full"><title type="main">Omai, or a Trip Round the World</title>: 
+            <title type="sub">A Short Account of the Pantomime as performed at the Theatre Royal in Covent-Garden, London, 1785</title></title>
+        
+        <respStmt>
+            <resp>Transcription, encoding, and notes coded by</resp>
+            <persName>Mattia Piazza,</persName>
+            <persName>Nicole Wong,</persName>
+            <persName>Jacob Hornin</persName>
+            <orgName>Fall 2012 Digital Humanities Class</orgName>
+            <orgName>University of Pittsburgh at Greensburg</orgName>
+          </respStmt>
+          <sponsor>
+            <orgName>University of Pittsburgh at Greensburg</orgName>
+            
+          </sponsor>
+          <funder>
+            <orgName>University of Pittsburgh at Greensburg</orgName>
+            
+          </funder>
+          <principal>
+            <persName>Elisa E. Beshero-Bondar</persName>
+          </principal>
+        </titleStmt>
+        <editionStmt>
+          <edition n="1"/>
+          <respStmt>
+            <resp>Transcription, encoding, and notes</resp>
+            <persName>Digital Humanities Class</persName>
+            <orgName>University of Pittsburgh at Greensburg</orgName>
+          </respStmt>
+        </editionStmt>
+        <publicationStmt>
+          <publisher>Elisa Beshero-Bondar for demonstration purposes only. May not be reproduced without
+            permission</publisher>
+          <address>
+               <addrLine/>
+            </address>
+          <idno type="ISBN"/>
+          <availability>
+            <p/>
+          </availability>
+          <distributor/>
+        </publicationStmt>
+        <sourceDesc>
+          <listBibl>
+            <biblStruct>
+              <monogr>
+              <author>John O'Keefe</author>
+              <title>Omai: or a Trip Round the World, a Digital Edition</title>
+              
+              <imprint>
+                <publisher><!--Add printer info for the edition you worked with.--></publisher>
+                <pubPlace><!--Add place of publication--></pubPlace>
+                <date>1785</date></imprint>
+                <biblScope>First three scenes, coded by Mattia Piazza, Nicole Wong, and Jacob Hornin, 
+                  Fall 2012 Digital Humanities Class at <ref target="http://greensburg.pitt.edu">the University of Pittsburgh at Greensburg</ref>.
+                  <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DR.html">MORE INFORMATION ON TEI CODING FOR DRAMA </ref></biblScope>
+                </monogr>
+            </biblStruct>
+            
+          </listBibl>
+        </sourceDesc>
+      </fileDesc>
+    </teiHeader>
+    <text>
+        <front><!--Title page, opening matter, prologue, castlist appear here, separated by <div> elements-->
+          <titlePage>
+          <docTitle>
+          
+            <titlePart>Omai, or a Trip Round the World</titlePart>
+           
+          </docTitle>
+          </titlePage>
+          
+          <performance>
+              <p>
+                <ref target= "PanOmaiPPC.html#Reception"> Reception of the play in its time </ref>
+				<ref target="PanOmaiPPC.html#Loutherbourg"> Information on sets and Loutherbourg </ref>
+				<ref target="PanOmaiPPC.html#Pics"> Some pictures of the set </ref>
+                <!--This contains background info describing how the dramatic piece was performed in general, OR how it was played on a particular occasion or occasions at a particular theatre, etc.-->
+              </p>
+            </performance>
+           
+          <set>
+            <p><!--Describe the OVERALL setting of the action of the play: the place(s), time, locale, as usually conveyed in the front matter of a printed performance text.
+              Note: this is DISTINCT from stage directions, scene shifting in the body of the play.-->
+              
+            </p>
+          </set>
+          
+          <castList>
+            <head>Dramatis Personae <!--or whatever it's called in the play!-->
+            </head>
+            <castGroup>
+              <castItem>
+                <role xml:id="Towha"><ref target="PanOmaiPPC.html#TrueTowha">Tohwa</ref> - The Guardian Genius of Omai's Ancestors, and Protector of the legal Kings of Otaheite</role>
+                <actor>Mrs. Rivers</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Otoo"><ref target="PanOmaiPPC.html#TrueOtoo">Otoo</ref> - Father of Omai, a Descendant from the legal Kings, a Priest and a Magician</role>
+                  <actor>Mr. Darley</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Omai">Omai</role>
+                <actor>Mr. Blurton</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Otaheitean">Otaheitean<note type="author" anchored="true" n="*">The idea of his dress was taken from Cook's Voyages, where it is said, that Omai, to make himself fine on his introduction to a Chiefs dressed himself with a piece of the habit of each country he had seen in his several voyages.</note> - supposed to have accompanied Omai to England</role>
+                <actor>Mr. Edwin</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Harlequin">Harlequin - Servant to Omai</role>
+                <actor>Mr. Kennedy</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Oediddee"><ref target="PanOmaiPPC.html#TrueOediddee">Oediddee</ref> - Pretender to the Throne</role>
+                <actor>Mrs. Kennedy</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Oberea"><ref target="PanOmaiPPC.html#TrueOberea">Oberea</ref> - Regent and Protectress of Oediddee, an Enchantress</role>
+                <actor>Mrs. Martyr</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Britannia">Britannia</role>
+                <actor>Mrs. Inchbald</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Don">Don Struttolando - Rival to Omai, in his love to Londina</role>
+                <actor>Mr. Palmer</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Clown">Clown - his Servant and  Rival of Harlequin</role>
+                <actor>Mr. D'Elpini</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Father">Father of Londina</role>
+                <actor>Mr. Thompson</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Mother">Mother</role>
+                <actor>Mrs. Davenett</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Londina">Londina - the Consort destined to Omia<!--Another variation of Omai's name.--></role>
+                <actor>Miss Cranfield</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Colombine">Colombine - Maid to Londina</role>
+                <actor>Miss Rowson</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="OldFairy">Old Fairy - Friend to Harlequin</role>
+                <actor>Mr. Wewitzer</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="EnglishCaptain">English Captain</role>
+                <actor>Mr. Brett</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Justice">Justice</role>
+                <actor>M. Davies</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Constables">Constables</role>
+                <actor>Messr Doyle</actor>
+                <actor>Messr Meadows</actor>
+                <actor>Messr Swords</actor>
+              </castItem>
+              <castItem>
+                <role xml:id="Spirits">Good and Evil Spirits</role>
+                <role xml:id="Officers">Custome-House Officers</role>
+                <role xml:id="Sailors">Sailors</role>
+                <role xml:id="Extras">Ect</role>
+              </castItem>
+            
+            </castGroup>
+          </castList>
+        
+          
+        
+        </front>
+      
+      
+    <body>
+     
+      <!--Divisions of the text. Part I, Act I, scene 1...We use div1 headings for the largest units in the text (as in Part I), and div2 for divisions inside.-->
+            <div type="part" n="1">
+        <head>Part 1</head>
+       <div type="scene" n="1">
+         <head rend="italic">Scene 1</head> 
+         <stage type="setting">A Morai<note type="author" anchored="true" n="1">A temple, or burying place.</note> in Otaheite by Moon-light</stage>
+         
+        <stage type="setting">Otoo discovered making Invocations to the Genii of his Ancestors for their Assistance to fix his Son on the Throne.</stage>
+         
+         <stage type="delivery">Recitative</stage>
+         <sp who="#Otoo">
+           <speaker>Otoo</speaker>
+           <l>Hail to this awful place!  sacred Fiatoo-ka<note type="author" anchored="true" n="2">A repository for the dead</note> hail!</l>
+           <l>Where Otaheitean Cheifs in everlasting moe<note>Sleep</note> lie; warriors renown'd,</l>
+           <l>On Eimeo's<note type="author" anchored="true" n="3">One of the Society Islands, generally at war with Otaheite</note> sanguine plains with hard=fought victory crown'd;</l>
+           <l>Tho' here in death ye moulder, yet the royal line can never fail,</l>
+           <l>Preserv'd by Towha's power divine;</l>
+           <l>And the illustrious name,</l> 
+           <l>By glorious actions dear to fame,</l> 
+           <l>In my belov'd Omai shall never die.</l>
+         </sp>
+         
+         <stage type="delivery">Air I</stage>
+         <sp who="#Otoo">
+           <speaker>Otoo</speaker>
+           <l>God of Bolabola<note type="author" anchored="true" n="4">Another of the Society Islands, the most ferocious in war, conquerors of Ulitea, which was anciently subject to Omai's ancestors.</note> hear!</l>
+           <l>Accept this plantain, yam, and hog, well roasted,</l>
+           <l>Offerings to they Godship dear,</l>
+           <l>With mahee<note type="author" anchored="true" n="5">Bread</note> sweet as ever boasted;</l>
+           <l>And while thus I lowly bend,</l>
+           <l>Let my humble suit ascend.</l>
+         
+         
+         <stage type="setting">The sacrifice blazes up.</stage>
+           <l>The flames arise,</l>
+           <l>Blest sacrifice!</l>
+           <l>Towha snuffs the favour;</l>
+           <l>Propitious sign</l>
+           <l>Of grace benign,</l>
+           <l>Sure token of his favor.</l>  
+         
+         
+         <stage type="deliver">Recitative</stage>
+           <l>Say, shall my son omai reign?</l>
+           <l>Great Towha now an answer deign.</l>
+         </sp>
+         
+         <stage type="setting">Towha assumes the Appearance of a Chief Mourner.</stage>
+         <stage type="delivery">Recitative</stage>
+         <sp who="#Otoo">
+           <speaker>Otoo</speaker>
+           <stage type="delivery">appalled</stage>
+           <l>My quiv'ring flesh, my limbs bedew'd all o'er,</l>
+           <l>Each feeble sense---my eyes---my voice---no more!</l>
+           <stage type="setting">falls prostrate</stage>
+         </sp>
+         
+         <stage type="delivery">Air II</stage>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>Spirits of peace that hover round,</l>
+           <l>Oh, chear his mortal fight!</l>
+           <l>Dispel with sweet responsive sound</l>
+           <l>The horrors of the night.</l>
+           
+           <stage type="setting">Celestial music</stage>
+           <l>My aerial band, ar't ready?</l>
+         </sp>
+         <sp who="#Spirits">
+           <speaker>Chorus of Spirits</speaker>
+         <l>Ready.</l></sp>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>To run, to swim, to fly, at my command?</l>
+         </sp>
+         <sp who="#Spirits">
+           <speaker>Chorus of spirits</speaker>
+           <l>Command.</l>
+         </sp>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>To run?</l>
+         </sp>
+         <sp who="#Spirits">
+           <speaker>Chorus of spirits</speaker>
+           <l>To run</l>
+         </sp>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>To swim?</l>
+         </sp>
+         <sp who="#Spirits">
+           <speaker>Chorus of spirits</speaker>
+           <l>To swim.</l>
+         </sp>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>To fly?</l>
+         </sp>
+         <sp who="#Spirits">
+           <speaker>Chorus of spirits</speaker>
+           <l>To fly.</l>
+         </sp>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>At my command?</l>
+         </sp>
+         <sp who="#Spirits">
+           <speaker>Chorus of spirits</speaker>
+           <l>Command.</l>
+         </sp>
+         
+         <stage type="entrance">Spirits Appear</stage>
+         
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+             <l>His darling son with motion soft as Maoaian<note type="author" anchored="true" n="6"><ref target="PanOmaiPPC.html#MaoainGales">Western breezes</ref></note> gales, hither convey</l>
+         </sp>
+         <sp who="#Spirits">
+           <speaker>Chorus of Spirits</speaker>
+           <l>Away!</l>
+         </sp>
+         <stage type="exit">Disappears</stage>
+         
+         <stage type="setting">Soft Music, and Omai brought in</stage>
+         <stage type="entrance">Omai is brought in</stage>
+         <stage type="delivery">Air III</stage>
+        
+         <sp who="#Spirits">
+           <speaker>Chorus (Spirits)</speaker>
+           <l>Happy father---Otaheite's heir!</l>
+         </sp>
+         <stage type="setting">To Otoo and Omai</stage>
+         <sp who="#Otoo">
+           <speaker>Otoo</speaker>
+           <l>Otoo's hope,</l>
+         </sp>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>And Towha's care.</l>
+         </sp>
+         
+         <stage type="delivery">Recitative</stage>
+         <sp who="#Towha">
+           <speaker>Towha</speaker>
+           <l>My precepts still from solly shall direct him,</l>
+           <l>This potent talisman from harm protect him.</l>
+          <stage type="business">Places the talisman by the side of Omai -- Thunder -- Britannia is seen holding Londina</stage>
+         </sp>
+         
+         <stage type="business">Britannia speaks</stage>
+         <sp who="#Britannia">
+           <speaker>Britannia</speaker>
+           <l>Mark, votive Islander, thy fate is mine, for mine.</l>
+           <l>The Queen of Isles, the mistress of the main!</l>
+           <l>Upon my sea-girt shore, by Neptune fenc'd,</l>
+           <l>Kind greeting, pleasure, welcome sweet receive;</l>
+           <l>Still shall my sons, by Cook's example taught,</l>
+           <l>Thy new-found world protect and humanize.</l>
+           <l>In soft alliance bound, this British maid</l>
+           <l>Be thine, and Love, a radiant throne shall fix</l>
+           <l>Firm as my rock, where sits bright Liberty.</l>
+         </sp>
+         
+         <stage type="delivery">Recitative</stage>
+         <sp who="#Otoo">
+           <speaker>Otoo</speaker>
+           <l>The splendid vision, oh, my son obey,</l>
+           <l>Towha commands for England quick away.</l>
+           <l>But ere, lov'd youth, you quit your native shore,</l>
+           <l>Your rival Oediddee shall restore</l>
+           <l>The Royal Ensigns, Britain to convince</l>
+           <l>That in Omai she receives a Prince.</l>
+         </sp>
+         
+       </div>
+   
+      
+       <div type="scene" n="2">
+        <head rend="italic">Scene 2.  </head>
+          <stage type="settings">Inside of a Morai of the antient Aree-de-hy's<note type="author" anchored="true" n="7">Grand Chiefs</note> Ancestors of Omai.</stage>
+         
+         <stage type="entrance">Enter Otoo and Omai</stage>
+         
+         <stage type="delivery">Recitative</stage>
+          <sp who="#Otoo">
+            <speaker>Otoo</speaker>
+            <stage type="business">Omai kneels.</stage>
+            <l>Alas!  to spare him you in vain implore me;</l>
+            <l>Quick, fly and bring Oediddee here before me.</l>
+          </sp>
+            <stage type="delivery">Recitative</stage>
+         <sp who="#Oediddee">
+           <speaker>Oediddee</speaker>
+         <l>Oh, sage Otoo!  accept my true contrition,</l>
+           <l>I yield obedience to each hard condition;</l>
+           <l>Your son still loves me, still I love that son,</l>
+           <l>From childhood still the race of life we've run;</l>
+           <l>My smallest grief was anguish to his heart,</l>
+           <l>His slightest joy could every joy impart.</l>
+         </sp>
+         
+         <stage type="delivery">Air IV</stage>
+         <sp who="#Oediddee">
+           <speaker>Oediddee</speaker>
+           <l>O'er groves of coral, through the deep,</l>
+           <l>Where Mogee<note type="author" anchored="true" n="8">An excellent species of fish in those seas.</note> fish their revel keep,</l>
+           <l>Our staunch canoes in consort glide,</l>
+           <l>Tho'stern Farooa<note type="author" anchored="true" n="9">A strong and dangerous wind</note> swells the tide,</l>
+           <l>Small the danger each could see,</l>
+           <l>Friendship cried, you're safe with me.</l>
+           
+           <l>On the hill, that upward towers,</l>
+           <l>Crown'd with shrubs and sweetest flowers,</l>
+           <l>There we taste eternal spring,</l>
+           <l>While the Wattle-bird<note type="author" anchored="true" n="10">The most melodious in the Islands.</note> shall sing</l>
+           <l>Double joys to him and me,</l>
+           <l>Ever such let friendship be.</l>
+         </sp>
+         
+         <stage type="delivery">Recitative</stage>
+         <sp who="#Otoo">
+           <speaker>Otoo</speaker>
+           <l>Resign, fond youth, each silly vain pretension.</l>
+         </sp>
+         <sp who="#Oediddee">
+           <speaker>Oediddee</speaker>
+           <l>What good awaits my tacit condescension?</l>
+         </sp>
+         <sp who="#Otoo">
+           <speaker>Otoo</speaker>
+           <l>Your fortunes with my son I'll link for ever</l>
+           <l>So strong, that nought but death your fates can sever.</l>
+           <l>Surrounding isles shall own thy sovereign sway,</l>
+           <l>E'en distant Wateoo<note type="author" anchored="true" n="*">The farthest situated from Otaheite.</note> shall tribute pay,</l>
+           <l>Be you their Chief, their powerful Areekee<note type="author" anchored="true" n="11">King.</note></l>
+           <l>'T' Omai leave th' Otaheitean crown, this is Otoo's decree.</l>
+           <l>To Britain, now, Omai must repair,</l>
+           <l>And many dangers run to win the British fair.</l>
+         </sp>
+         
+         <stage type="delivery">Air V</stage>
+         <sp who="#Oediddee">
+           <speaker>Oediddee</speaker>
+           <l>Adieu, dear Omai, and gladly receive</l>
+           <l>That true and kind welcome that Britons can give.</l>
+         </sp>
+           <stage type="setting">General Chorus</stage>
+         <sp who="#Extras">
+           <speaker>General Chorus</speaker>
+           <l>Adieu, Prince Omai, and gladly receive</l>
+           <l>That true and kind welcome that Britons can give.</l>
+         </sp>
+       </div>
+         
+
+         
+       <div type="scene" n="3">
+         <head rend="italic">Scene 3.  </head>
+         <stage type="setting">A view of Plymouth Sound, with Part of Mount Edgcumb, where Omai, with Harlequin as his servant, lands; as also does Don Struttolando, with Clown as his Servant: both in pursuit of the Object of their Affections, Londina.  Different comic Business is here introduced, with the two following Airs by an old Water-cress Woman, or Fairy.</stage>
+         <stage type="delivery">Air VI</stage>
+         <sp who="#OldFairy">
+           <speaker>Old Fairy</speaker>
+           <l>Cold and hungry tho' I sing</l>
+           <l>Water-cresses o'the spring;</l>
+           <l>Your money, neighbours, little less is,</l>
+           <l>So buy my nice spring water-cresses;</l>
+           <l>Buy my nice spring water-cresses.</l>
+         </sp>
+         
+         <stage type="delivery">Air VII</stage>
+         <sp who="#OldFairy">
+           <speaker>Old Fairy</speaker>
+           <l>Keep it, prithee keep it, my kind, my generous Boy;</l>
+           <l>And featly, nimbly use it, shou'd surly care annoy.</l>
+           <l>Quick posting on a sun0beam, here potent Towha sent me;</l>
+           <l>His charge "take care of Harlequin" and pow'rful spells he lent me.</l>
+           <l>Be still Omai's valet, he</l>
+           <l>With kind regard</l>
+           <l>Shall well reward</l>
+           <l>Thy care and strict fidelity.</l>
+           <l>Let pity touch thy bosom thro' frolick and vagary,</l>
+           <l>And though shalt ever find me thy true, thy guardian fairy.</l>
+         </sp>
+         <stage type="setting">The Scene ends with Omai's losing his Talisman, and their going off to a Justice of Peace for its recovery.</stage>
+         
+         
+       </div> 
+     
+      
+      </div>
+      
+    </body>
+  </text>
+</TEI>
