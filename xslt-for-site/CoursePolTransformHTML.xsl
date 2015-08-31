@@ -158,7 +158,7 @@
         <xsl:text> </xsl:text><span class="smaller"><xsl:apply-templates/></span>
     </xsl:template>
    
-   <xsl:template match="body//title[not(@level)] | title[@level='m']">
+   <xsl:template match="body//title[not(@level)] | body//title[@level='m']">
        <cite><xsl:apply-templates/></cite>
        
    </xsl:template>
