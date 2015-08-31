@@ -6,8 +6,8 @@
     xmlns="http://www.w3.org/1999/xhtml"
     version="3.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
-
-    <xsl:output method="xhtml" encoding="utf-8" indent="yes" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+   
+    <xsl:output method="xhtml" doctype-system="about:legacy-compat"/> 
     <!--<xsl:strip-space elements="*"/>-->
     
     <xsl:template match="/">
