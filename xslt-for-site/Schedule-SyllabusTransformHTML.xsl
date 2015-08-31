@@ -7,7 +7,7 @@
 
     <xsl:output method="xhtml" encoding="utf-8" indent="yes"
         doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
-    <xsl:strip-space elements="*"/>
+    <!--<xsl:strip-space elements="*"/>-->
    
     <xsl:template match="/">
 
@@ -259,6 +259,20 @@
         <span class="smaller">
             <xsl:apply-templates/>
         </span>
+    </xsl:template>
+    
+    <xsl:template match="body//title[not(@level)] | title[./@level='m']">
+        <cite><xsl:apply-templates/></cite>
+        
+    </xsl:template>
+    
+    <xsl:template match="body//title[@level='a']">
+        <cite class="sub"><xsl:apply-templates/></cite>
+        
+    </xsl:template>
+    
+    <xsl:template match="q">
+        <q><xsl:apply-templates/></q>
     </xsl:template>
 
 
