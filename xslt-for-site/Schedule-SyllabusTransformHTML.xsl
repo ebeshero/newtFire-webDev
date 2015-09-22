@@ -108,8 +108,8 @@
                 <table>
 
                     <tr>
-                        <th>
-                            <a id="Week{@n}"/>
+                        <th id="Week{@n}">
+                           
                             <h4>
                                 <em>
                                     <xsl:text>Week </xsl:text>
@@ -168,7 +168,7 @@
     <xsl:template match="div[@type='day'][parent::div/@n]">
 
         <tr>
-            <td>
+            <td id="d{head/date/@when}">
                 <h4>
                     <xsl:apply-templates select="head/date/text()"/>
                 </h4>
