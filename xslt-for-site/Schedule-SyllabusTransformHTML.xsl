@@ -164,8 +164,8 @@
 
     <xsl:template match="div[@type='day'][parent::div/@n]">
 
-        <tr>
-            <td id="d{head/date/@when}">
+        <tr id="d{head/date/@when}">
+            <td>
                 <h4>
                     <xsl:apply-templates select="head/date/text()"/>
                 </h4>
