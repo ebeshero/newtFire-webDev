@@ -20,10 +20,7 @@
                 <meta name="keywords"
                     content="Digital Humanities, Syllabus, XML, TEI, XSLT, XQuery, Schematron, Relax NG, SVG, digital scholarship, digital edition, electronic edition, electronic text, humanities computing, electronic editing, Beshero-Bondar"/>
                 <link rel="stylesheet" type="text/css" href="syllsched.css"/>
-
-
-
-
+                <script type="text/javascript" src="jumpingDateLinks.js">//</script>
             </head>
             <body>
 
@@ -51,7 +48,7 @@
                             </h3>-->
 
                             <xsl:apply-templates select="//div[@type='meetTimes']"/>
-                            <p><a href="#schedule">Jump Down to the Schedule</a></p>
+                            <p><a class="dateRef">Jump Down to the Schedule</a></p>
 
 
                             <xsl:apply-templates select="//div[@type='courseMtls']"/>
