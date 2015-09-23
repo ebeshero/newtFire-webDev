@@ -22,6 +22,11 @@ function makeHrefDate() {
                              var maxDate = Math.max.apply(null, dates);
                              maxDate = new Date(maxDate);
                              today = maxDate;
+                             //Here I think I'm looking through the various @id values (the parts after the letterd "d"), and calling them
+//dateToken. I'm looking at each dateToken in turn and seeing if it's less than the variable I set for today's date.
+//If it *is* less than today's date, I expect to add this value an entry to an array called dates. I then look for the maximum
+//date on this array I've supposedly created, and set that equal to the variable today.
+//In theory, I can then replace today's date with the nearest earlier date coded on my syllabus.
                          }
                      }
                  }
