@@ -165,7 +165,32 @@
     <xsl:template match="div[@type='day'][parent::div/@n]">
 
         <tr id="d{head/date/@when}">
-            <td>
+            <xsl:variable name="dateToken" select="tokenize(head/date/@when, '-')"/>
+            <td><xsl:choose>
+                <xsl:when test="head[matches(., '[MW]')][../following-sibling::div[@type='day'][1][head[not(matches(., 'T'))]]]">
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 1 }"/>
+                </xsl:when>
+                <xsl:when test="head[../following-sibling::div[@type='day'][1][head[matches(., 'T')]]]"></xsl:when>
+                <xsl:when test="head[matches(., 'T')]"></xsl:when>
+                <xsl:when test="head[matches(., 'F')][not(./date[contains(., 'Last Day of Classes')])]"><a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 1 }"/> 
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 2 }"/></xsl:when>
+                <xsl:when test="head[matches(., 'W.+?F')]">
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 1 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 2 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 3 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 4 }"/>
+                </xsl:when>
+                <xsl:when test="head/date[contains(., 'Last Day of Classes')]">
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 1 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 2 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 3 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 4 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 5 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 6 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 7 }"/>
+                    <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 8 }"/>
+                </xsl:when>
+            </xsl:choose>
                 <h4>
                     <xsl:apply-templates select="head/date/text()"/>
                 </h4>
