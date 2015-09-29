@@ -70,7 +70,9 @@ span.green {color: #004C00; font-weight:bold;}
 span.purple {color:#6600FF; font-weight:bold;}
 
 span.code {color:#AA0000; font-weight:bold; width: 60%; margin:auto;}
+code {color:#AA0000; font-weight:bold; width: 60%; margin:auto; font-family: arial, helvetica, sans-serif; }
 
+pre {background-color: #9EA9B9; color:#000; border:1px navy dashed; padding:10px; line-height:1.5em; margin:auto; font-family: arial, helvetica, sans-serif; }
 div.code {background-color: #9EA9B9; color:#000; border:1px navy dashed; padding:10px; line-height:1.5em; width:60%; margin:auto;}
 span.badCode {color:#5F0000; background-color: #FFD6D6; width: 60%; margin:auto;  }
 
@@ -88,7 +90,8 @@ ul {list-style-type: circle;}
 ul li { padding: 10px 10px 10px 10px}
 
 
-ol li { padding: 3px}
+ol li { padding: 10px}
+ol li ol li {padding: 5px; list-style-type: lower-alpha;}
 
 ol.d {list-style-type: lower-alpha; display: block; padding: 10px 10px 20px 20px}
 
