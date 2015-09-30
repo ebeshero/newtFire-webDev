@@ -61,17 +61,24 @@
 
             <li>There are multiple authors of the second book - let's refine the solution to the
                 first question by removing "Authors:" from that result. What Xpath function can we
-                use to seperate "Authors:" from the rest of the string, and throw it away? (hint: It
-                will be helpful to refer to punctuation here, and use a predicate to filter your
-                final results.)
-                <!-- alk: Use of tokenize at :, then a predicate to filter the results-->
+                use to seperate "Authors:" from the rest of the string, and throw it away, leaving "
+                Bruce Hyslop, Lenny Burdette, and Chris Casciano"? (hint: It will be helpful to
+                refer to punctuation here, and use a predicate to filter your final results.)
+                <!-- alk: Use of tokenize() at :, then a predicate to filter the results and return only the part they want-->
             </li>
 
 
+            <li> Which 'div' elements contain references to 'homework'? What Xpath tells us the
+                context of these references, the parent elements of the homework references?
+                <!-- alk: uses contains() and  then looks for parent element -->
+            </li>
 
-
-
-
+            <li> How many 'div' elements of type 'assign' contain references to our sister site, Obdurodon?
+                Find the longest and shortest divs of this type in the document. How long and short are they? <!-- alk: contains() with 
+                with attrib added and then a simpler version of the challenge--></li>
+            
+            <li> Let's concatente some dates! Can you smash together all of the 'date' elements in the
+                document into one giant disgusting string? <!-- alk: concat() --></li>
 
 
 
@@ -84,7 +91,7 @@
                 Note that there are several ways to identify the characters in this markup,
                 including the <code>&lt;castList&gt;</code> element, the
                     <code>&lt;speaker&gt;</code> elements, and the <code>@who</code> atribute on the
-                    <code>&lt;sp&gt;</code> element. Which should you use and why?</li>   -->
+                    <code>&lt;sp&gt;</code> element. Which should you use and why?</li>   
             <li>Most metrical lines (<code>&lt;l&gt;</code>) have an <code>@xml:id</code> attribute
                 with a value like <q>sha-ham101010</q>, ending in a six-digit number. The first
                 digit is the act, the next two the scene, and the last three the line in the scene.
@@ -142,7 +149,7 @@
                     <li>...</li>
                 </ol>There are several possible solutions, each of which raises issues that you may
                 not have seen before. If you get an error message, try to figure out what it means
-                and how to resolve it.</li>
+                and how to resolve it.</li> -->
         </ol>
     </body>
 </html>
