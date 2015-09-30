@@ -1,58 +1,90 @@
 <!DOCTYPE html
   SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    
-    
+
+
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="explain.css" />
         <title>XPath Exercise 4</title>
     </head>
-    
-    
-    
+
+
+
     <body>
         <!--#include virtual="top.html" -->
-        
-        
-        <h1><span class="banner">XPath Exercise 4</span></h1>
-        
+
+
+        <h1>
+            <span class="banner">XPath Exercise 4</span>
+        </h1>
+
         <!--2015-09-29 ebb: Our Goal: We're revising this so that it applies many of the same tasks with XPath String Functions to a different file entirely, my syllabus file for the Fall 2015 Greensburg DH course. Our tasks probably won't look exactly the same as Obdurodon's XPath 4, but let's try to include
             * tokenizing a string and selecting a part of it, 
             * matching on something that contains a particular string (and possibly finding its neighboring element). 
             * applying string-join() and concat()
             * We can also adapt the Optional Challenge to try to output a numbered concatenated list in the XPath results window. 
         -->
-        
+
         <p>You can find an XML (TEI) version of our Fall 2015 DH class syllabus at <a
-            href="dhCDA-2015.xml">http://newtfire.org/dh/dhCDA-2015.xml</a>. Download this file to save locally on your computer, and open it in &lt;oXygen/&gt;.</p>
-        <p>You should
-            consult <cite class="sub"><a href="http://dh.obdurodon.org/functions.xhtml">The XPath Functions We Use Most</a></cite> page and especially its section III. on Strings. Also, if you have the Michael Kay text, it may be useful to you here. As always,
-            consult our class notes and our introductory guide <cite class="sub"><a href="explainXPath.html">Follow the XPath!</a></cite>.
-            
-            After you’ve completed your homework, save your answers to a file and upload it to
-            CourseWeb as an attachment. (Please use an attachment! If you paste your answer into the
-            text box, CourseWeb may munch the angle brackets.) Some of these tasks are
-            thought-provoking, and even difficult. If you get stuck, do the best you can, and if you
-            can’t get a working answer, give the answers you tried and explain where they failed to
-            get the results you wanted. Sometimes doing that will help you figure out what’s wrong,
-            and even when it doesn’t, it will help us identify the difficult moments. These tasks
-            require the use of path expressions, predicates, and functions. There may be more than
-            one possible answer.</p>
-        <p>Using the <cite>Pitt-Greensburg syllabus</cite> XML document and the XPath browser window in
-            &lt;oXygen/&gt;, construct XPath expressions that will do the following (give the full
-            XPath expressions in your answers, and not just the results):</p>
+                href="dhCDA-2015.xml">http://newtfire.org/dh/dhCDA-2015.xml</a>. Download
+            <!-- 2015-09-29 alk just a note to perhaps specify a right-click save
+            here since copying all the text over to Oxygen results in a damaged XML-->
+            this file to save locally on your computer, and open it in &lt;oXygen/&gt;.</p>
+        <p>You should consult <cite class="sub"><a href="http://dh.obdurodon.org/functions.xhtml"
+                    >The XPath Functions We Use Most</a></cite> page and especially its section III.
+            on Strings. Also, if you have the Michael Kay text, it may be useful to you here. As
+            always, consult our class notes and our introductory guide <cite class="sub"><a
+                    href="explainXPath.html">Follow the XPath!</a></cite>. After you’ve completed
+            your homework, save your answers to a file and upload it to CourseWeb as an attachment.
+            (Please use an attachment! If you paste your answer into the text box, CourseWeb may
+            munch the angle brackets.) Some of these tasks are thought-provoking, and even
+            difficult. If you get stuck, do the best you can, and if you can’t get a working answer,
+            give the answers you tried and explain where they failed to get the results you wanted.
+            Sometimes doing that will help you figure out what’s wrong, and even when it doesn’t, it
+            will help us identify the difficult moments. These tasks require the use of path
+            expressions, predicates, and functions. There may be more than one possible answer.</p>
+        <p>Using the <cite>Pitt-Greensburg syllabus</cite> XML document and the XPath browser window
+            in &lt;oXygen/&gt;, construct XPath expressions that will do the following (give the
+            full XPath expressions in your answers, and not just the results):</p>
         <ol>
             <!--2015-09-29 ebb: Okay! Here's here we have to start revising. Play around with the tasks being asked for, and hunt about
             in my syllabus file to see if you can come up with similar tasks! Let me know how this goes or if you get stuck.-->
             <li>What XPath will return a hyphen-separated list of all characters without duplicates.
                 <!--ebb: To begin, I was thinking of trying this with a list of Assignment URLs, or a list of all the websites in the Pitt domain, or even a list of the dates on the syllabus...Hunt about for something reasonably short that we can grab, that might look good in a comma or semicolon or hyphen separated list: what might work here?-->
-                The resulting list will look something like: <pre>Claudius-Hamlet-Polonius ...</pre>
+                There are two books referenced in the syllabus using the tag 'bibl'. What Xpath will
+                return a comma-seperated list of the authors?
+                <!-- alk: Use of string-join(). This might be a good start question because the concept scales but is only a small amount
+               of data.-->
+            </li>
+
+
+            <li>There are multiple authors of the second book - let's refine the solution to the
+                first question by removing "Authors:" from that result. What Xpath function can we
+                use to seperate "Authors:" from the rest of the string, and throw it away? (hint: It
+                will be helpful to refer to punctuation here, and use a predicate to filter your
+                final results.)
+                <!-- alk: Use of tokenize at :, then a predicate to filter the results-->
+            </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- The resulting list will look something like: <pre>Claudius-Hamlet-Polonius ...</pre>
                 Our solution uses <code>distinct-values()</code> and <code>string-join()</code>.
                 Note that there are several ways to identify the characters in this markup,
                 including the <code>&lt;castList&gt;</code> element, the
                     <code>&lt;speaker&gt;</code> elements, and the <code>@who</code> atribute on the
-                    <code>&lt;sp&gt;</code> element. Which should you use and why?</li>
+                    <code>&lt;sp&gt;</code> element. Which should you use and why?</li>   -->
             <li>Most metrical lines (<code>&lt;l&gt;</code>) have an <code>@xml:id</code> attribute
                 with a value like <q>sha-ham101010</q>, ending in a six-digit number. The first
                 digit is the act, the next two the scene, and the last three the line in the scene.
@@ -72,7 +104,8 @@
                     <li>Can you think of an alternative solution that doesn't use any functions
                         (just a predicate)?</li>
                 </ol></li>
-            <li><p>The <code>string-length()</code> function can be used in two ways. You can wrap
+            <li>
+                <p>The <code>string-length()</code> function can be used in two ways. You can wrap
                     it around an argument, so that, for example, <code>string-length('Hi,
                         Mom!')</code> will return 8, the length in character count of the string
                     inside the quotation marks. It can also be used as part of a path expression, so
@@ -92,7 +125,8 @@
                     each time it applies, it has just a single argument.</p>
                 <p>Use this information to identify an XPath that finds the length of the longest
                     speech. What length does it return? Our solution uses
-                        <code>string-length()</code> and <code>max()</code>.</p></li>
+                        <code>string-length()</code> and <code>max()</code>.</p>
+            </li>
             <li><em>Optional, challenging question:</em> Given the preceding solution, how can you
                 use that XPath to retrieve the longest <code>&lt;sp&gt;</code> itself? No fair
                 checking the length and then writing a separate XPath that looks for that number.
