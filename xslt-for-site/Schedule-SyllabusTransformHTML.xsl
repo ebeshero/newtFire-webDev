@@ -20,7 +20,7 @@
                 <meta name="keywords"
                     content="Digital Humanities, Syllabus, XML, TEI, XSLT, XQuery, Schematron, Relax NG, SVG, digital scholarship, digital edition, electronic edition, electronic text, humanities computing, electronic editing, Beshero-Bondar"/>
                 <link rel="stylesheet" type="text/css" href="syllsched.css"/>
-                <script type="text/javascript" src="jumpingDateLinks.js">//</script>
+                <script type="text/javascript" src="jumpingDateLinks-Test.js">//</script>
             </head>
             <body>
 
@@ -165,7 +165,9 @@
     <xsl:template match="div[@type='day'][parent::div/@n]">
 
         <tr id="d{head/date/@when}">
-            <xsl:variable name="dateToken" select="tokenize(head/date/@when, '-')"/>
+            <td><!--ebb delete this <td> if we have to put the commented-out code back, if the JavaScript doesn't work!-->
+            <!--2015-10-01 ebb: This should no longer be necessary, now that we have a functioning JavaScript for jumping to the current, or closest preceding date!
+                <xsl:variable name="dateToken" select="tokenize(head/date/@when, '-')"/>
             <td><xsl:choose>
                 <xsl:when test="head[matches(., '[MW]')][../following-sibling::div[@type='day'][1][head[not(matches(., 'T'))]]]">
                     <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 1 }"/>
@@ -190,7 +192,7 @@
                     <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 7 }"/>
                     <a id="d{$dateToken[1]}-{$dateToken[2]}-{number($dateToken[last()]) + 8 }"/>
                 </xsl:when>
-            </xsl:choose>
+            </xsl:choose>-->
                 <h4>
                     <xsl:apply-templates select="head/date/text()"/>
                 </h4>
@@ -250,11 +252,6 @@
         </li>
     </xsl:template>
 
-    <xsl:template match="body//title">
-        <span class="italic">
-            <xsl:apply-templates/>
-        </span>
-    </xsl:template>
 
     <xsl:template match="ref">
         <a href="{@target}">
