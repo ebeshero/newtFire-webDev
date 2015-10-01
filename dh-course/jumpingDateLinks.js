@@ -1,40 +1,45 @@
 function makeHrefDate() {
-           var anchorLink =  document.getElementsByClassName('dateRef');
-             for (var i = 0; i < anchorLink.length; i++) {
-                 var date = new Date().toISOString();
-                 var today = date.split("T")[0];
-
-                 //We need to find the dates actually encoded in the syllabus. When today's date is not a class day,
-                 //we need to return the nearest preceding class day.
-                 //Ref: http://stackoverflow.com/questions/4443070/given-an-associative-array-of-date-strings-find-the-next-closest-date
-                 //Ref 2: http://stackoverflow.com/questions/7394089/getting-next-closest-date-from-json
-                 //2015-09-23 ebb: CAUTION: THIS MAY BREAK ON A DAY THAT ISN'T EQUAL TO A SYLLABUS DAY
-                 var dateRow = document.querySelectorAll("tr[id]");
-                 //grab attribute values in javascript, tokenize and convert into an array
-                 for (var j = 0; j < dateRow.length; j++) {
-                     var dateAnchor = dateRow[j].getAttribute("id");
-                     var Tokens = dateAnchor.split("d");
-                     var dateToken = Tokens[Tokens.length - 1];
-                     var dates = [];
-                     for (var k in dateToken) {
-                         if (new Date(dateToken[k]) < today) {
-                             dates.push(new Date(dateToken[k]));
-                             var maxDate = Math.max.apply(null, dates);
-                             maxDate = new Date(maxDate);
-                             today = maxDate;
-                             //Here I think I'm looking through the various @id values (the parts after the letterd "d"), and calling them
-//dateToken. I'm looking at each dateToken in turn and seeing if it's less than the variable I set for today's date.
-//If it *is* less than today's date, I expect to add this value an entry to an array called dates. I then look for the maximum
-//date on this array I've supposedly created, and set that equal to the variable today.
-//In theory, I can then replace today's date with the nearest earlier date coded on my syllabus.
-                         }
-                     }
-                 }
-
-                 var att = document.createAttribute("href");
-                 att.value = '#d' + today;
-
-                 anchorLink[i].setAttributeNode(att);
-             }
-         }
-         window.addEventListener('DOMContentLoaded', makeHrefDate, false);
+    /* 2015-09-30: Thanks to David Birnbaum for revising this JavaScript to make it functional on dates not marked in the syllabus! 
+    * This JavaScript involves testing for today's date, and then seeking either a matching date marked in an attribute values on the syllabus 
+    * or the earliest preceding date when today is not marked in the syllabus.
+     *  Variables:
+     *
+     *  anchorLink: element that will get the new @href
+     *  today: today's date as a string in yyyy-mm-dd format
+     *  sessions: all <tr> elements (some of which are don't include dates; these get filtered out later)
+     *  dates: array of all dates as strings in yyyy-mm-dd format
+     *  target: eventual value of @href attribute
+     *
+     *  To fix:
+     *  Currently push all dates onto sessions array; could filter out late ones first
+     *  Currently generates "dnope" as the @href value is the current date is before the beginning of the semester
+     *  Currently jumps to the end after the end of the semester; is this what you want?
+     *  */
+    var anchorLink = document.getElementById('dateRef');
+    var today = new Date().toISOString().split("T")[0];
+    //Comment out the preceding line and uncomment the following one for testing
+    // var today = '2016-10-01';
+    var sessions = document.getElementsByTagName('tr');
+    var dates =[]
+    for (var i = 0, count = sessions.length; i < count; i++) {
+        if (sessions[i].id != '') {
+            dates.push(sessions[i].id.substr(1));
+        }
+    }
+    if (dates.indexOf(today) != -1) {
+        target = today;
+    } else {
+        dates.reverse();
+        for (i = 0, count = dates.length; i < count; i++) {
+            if (dates[i] < today) {
+                target = dates[i];
+                break;
+            }
+        }
+        if (typeof target === 'undefined') {
+            target = 'nope';
+        }
+        anchorLink.setAttribute('href', '#d' + target);
+    }
+}
+window.addEventListener('DOMContentLoaded', makeHrefDate, false);
