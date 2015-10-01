@@ -73,83 +73,19 @@
                 <!-- alk: uses contains() and  then looks for parent element -->
             </li>
 
-            <li> How many 'div' elements of type 'assign' contain references to our sister site, Obdurodon?
-                Find the longest and shortest divs of this type in the document. How long and short are they? <!-- alk: contains() with 
+            <li> How many 'div' elements of type 'assign' contain references to our sister site,
+                Obdurodon? Find the longest and shortest divs of this type in the document. How long
+                and short are they?
+                <!-- alk: contains() with 
                 with attrib added and then a simpler version of the challenge--></li>
+
+            <li> Let's concatente some dates! Can you smash together all of the 'date' elements in
+                the document into one giant disgusting string? <!-- alk: concat() --></li>
+
             
-            <li> Let's concatente some dates! Can you smash together all of the 'date' elements in the
-                document into one giant disgusting string? <!-- alk: concat() --></li>
-
-
-
-
-
-
-
-            <!-- The resulting list will look something like: <pre>Claudius-Hamlet-Polonius ...</pre>
-                Our solution uses <code>distinct-values()</code> and <code>string-join()</code>.
-                Note that there are several ways to identify the characters in this markup,
-                including the <code>&lt;castList&gt;</code> element, the
-                    <code>&lt;speaker&gt;</code> elements, and the <code>@who</code> atribute on the
-                    <code>&lt;sp&gt;</code> element. Which should you use and why?</li>   
-            <li>Most metrical lines (<code>&lt;l&gt;</code>) have an <code>@xml:id</code> attribute
-                with a value like <q>sha-ham101010</q>, ending in a six-digit number. The first
-                digit is the act, the next two the scene, and the last three the line in the scene.
-                Some metrical lines are split across multiple speakers, and in that case the
-                six-digit number in the <code>@xml:id</code> value is followed by <q>I</q> (initial
-                part), <q>M</q> (middle part), or <q>F</q> (final part). In a few places there may
-                be more than one middle part, and in those cases the <q>M</q> is followed by a
-                one-digit number. For example, one of Hamlet’s lines
-                is:<pre>&lt;l xml:id="sha-ham502277M2" n="277"&gt;One.&lt;/l&gt;</pre> which is the
-                second middle part. What XPath will return the number of <code>&lt;l&gt;</code>
-                elements that are middle parts? Our solution uses <code>count()</code> and
-                    <code>contains()</code>.</li>
-            <li>Sometimes Rosencrantz speaks by himself and sometimes he speaks in unison with Guildenstern.<ol>
-                    <li>What XPath finds all of the speeches by Rosencrantz, whether alone or
-                        together with Guildenstern? Our solution uses a single instance of
-                            <code>contains()</code>.</li>
-                    <li>Can you think of an alternative solution that doesn't use any functions
-                        (just a predicate)?</li>
-                </ol></li>
-            <li>
-                <p>The <code>string-length()</code> function can be used in two ways. You can wrap
-                    it around an argument, so that, for example, <code>string-length('Hi,
-                        Mom!')</code> will return 8, the length in character count of the string
-                    inside the quotation marks. It can also be used as part of a path expression, so
-                    that, for example, if the XPath <code>//sp</code> returns a sequence of all
-                        <code>&lt;sp&gt;</code> elements, <code>//sp/string-length(.)</code> returns
-                    a sequence of the lengths of all <code>&lt;sp&gt;</code> elements as measured by
-                    counting characters. This works by finding all of the <code>&lt;sp&gt;</code>
-                    elements and then (next path step) getting the string length of each one.
-                    Remember that the dot inside the parentheses refers to the current context node,
-                    which is the member of the sequence of <code>&lt;sp&gt;</code> nodes that is
-                    being processed at the moment. We need to use the subterfuge because
-                        <code>string-length(//sp)</code> generates an error. The problem is that
-                        <code>string-length()</code> can take only a single argument, and
-                        <code>//sp</code> returns more than one item. Putting the
-                        <code>string-length()</code> function on its own path step with a dot inside
-                    means that it applies once for every <code>&lt;sp&gt;</code> element, and that
-                    each time it applies, it has just a single argument.</p>
-                <p>Use this information to identify an XPath that finds the length of the longest
-                    speech. What length does it return? Our solution uses
-                        <code>string-length()</code> and <code>max()</code>.</p>
-            </li>
-            <li><em>Optional, challenging question:</em> Given the preceding solution, how can you
-                use that XPath to retrieve the longest <code>&lt;sp&gt;</code> itself? No fair
-                checking the length and then writing a separate XPath that looks for that number.
-                Your answer must find the longest speech without your knowing how long it is. Our
-                solution doesn’t require any additional functions beyond the ones used in #4, but it
-                does use a complicated predicate.</li>
-            <li><em>Optional, very challenging question:</em> What XPath produces a numbered list of
-                all characters, without any duplicates, which should look something like:<ol
-                    style="list-style-type: decimal;">
-                    <li>Claudius</li>
-                    <li>Hamlet</li>
-                    <li>Polonius</li>
-                    <li>...</li>
-                </ol>There are several possible solutions, each of which raises issues that you may
-                not have seen before. If you get an error message, try to figure out what it means
-                and how to resolve it.</li> -->
+           <li>Optional (but reccomended!) challenge question: </li>
+            
+            
         </ol>
     </body>
 </html>
