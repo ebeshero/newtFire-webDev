@@ -50,12 +50,12 @@
         <ol>
             <!--2015-09-29 ebb: Okay! Here's here we have to start revising. Play around with the tasks being asked for, and hunt about
             in my syllabus file to see if you can come up with similar tasks! Let me know how this goes or if you get stuck.-->
-            <li>What XPath will return a hyphen-separated list of all characters without duplicates.
+            <li>
                 <!--ebb: To begin, I was thinking of trying this with a list of Assignment URLs, or a list of all the websites in the Pitt domain, or even a list of the dates on the syllabus...Hunt about for something reasonably short that we can grab, that might look good in a comma or semicolon or hyphen separated list: what might work here?-->
                 There are two books referenced in the syllabus using the tag 'bibl'. What Xpath will
                 return a comma-seperated list of the authors?
                 <!-- alk: Use of string-join(). This might be a good start question because the concept scales but is only a small amount
-               of data.-->
+               of data. A: string-join(//bibl/author, ‘,’) -->
             </li>
 
 
@@ -64,13 +64,14 @@
                 use to seperate "Authors:" from the rest of the string, and throw it away, leaving "
                 Bruce Hyslop, Lenny Burdette, and Chris Casciano"? (hint: It will be helpful to
                 refer to punctuation here, and use a predicate to filter your final results.)
-                <!-- alk: Use of tokenize() at :, then a predicate to filter the results and return only the part they want-->
+                <!-- alk: Use of tokenize() at :, then a predicate to filter the results and return only the part they want
+                A: tokenize((//bibl)[2]/author, ':')[2] -->
             </li>
 
 
             <li> Which 'div' elements contain references to 'homework'? What Xpath tells us the
                 context of these references, the parent elements of the homework references?
-                <!-- alk: uses contains() and  then looks for parent element -->
+                <!-- alk: uses contains() and  then looks for parent element A: //div[contains(., 'homework')] -->
             </li>
 
             <li> How many 'div' elements of type 'assign' contain references to our sister site,
