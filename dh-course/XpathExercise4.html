@@ -78,7 +78,12 @@
                 Obdurodon? Find the longest and shortest divs of this type in the document. How long
                 and short are they?
                 <!-- alk: contains() with 
-                with attrib added and then a simpler version of the challenge--></li>
+                with attrib added and then a simpler version of the challenge
+                A: //div[@type=“assign”][contains(., ‘Obdurodon’)] returns 9 (easy error - has to be captitalized)
+                
+               Longest: //div[@type="assign"][contains(., "Obdurodon")][string-length(.) eq max(//div[@type="assign"][contains(., "Obdurodon")]/string-length(.))]
+                Shortest is same thing with min instead of max
+                --></li>
 
             <li> Let's concatente some dates! Can you smash together all of the 'date' elements in
                 the document into one giant disgusting string? <!-- alk: concat() --></li>
