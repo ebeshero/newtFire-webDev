@@ -1,0 +1,262 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0xffffffffa4105120, pid=9592, tid=8768
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_40-b25) (build 1.8.0_40-b25)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.40-b25 mixed mode windows-amd64 compressed oops)
+# Problematic frame:
+# C  0xffffffffa4105120
+#
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000001502800):  JavaThread "main" [_thread_in_Java, id=8768, stack(0x0000000000cb0000,0x0000000000db0000)]
+
+siginfo: ExceptionCode=0xc0000005, ExceptionInformation=0x0000000000000008 0xffffffffa4105120
+
+Registers:
+RAX=0x000000000000000c, RBX=0x000000000000077e, RCX=0x00000000e24ee460, RDX=0x00000000e24ee460
+RSP=0x0000000000dad118, RBP=0x0000000000dad300, RSI=0x00000000e287ea50, RDI=0x000000000000000c
+R8 =0x00000000e287ea50, R9 =0x000000000000077e, R10=0x0000000100153aa0, R11=0x00000000e287ea50
+R12=0x0000000000000000, R13=0x0000000000dad2b8, R14=0x0000000000000000, R15=0x0000000001502800
+RIP=0xffffffffa4105120, EFLAGS=0x0000000000010206
+
+Top of Stack: (sp=0x0000000000dad118)
+0x0000000000dad118:   000000000342c424 00000000e289f290
+0x0000000000dad128:   00000000e237d568 0000000000000000
+0x0000000000dad138:   00000000e287ea50 0000000000000421
+0x0000000000dad148:   00000000e237d568 00000000e289f620
+0x0000000000dad158:   00000000e24ee460 0000077e0000000c
+0x0000000000dad168:   00000000e287ea50 000000000000004c
+0x0000000000dad178:   00000000e237d568 0000000000dad300
+0x0000000000dad188:   000000000342a43c 00000000e237d568
+0x0000000000dad198:   0000000000dad198 0000000000000800
+0x0000000000dad1a8:   00000000034541d2 00000000e2bb8260
+0x0000000000dad1b8:   0000000000000000 000000001a846fa8
+0x0000000000dad1c8:   00000000e289ee40 00000000e289f290
+0x0000000000dad1d8:   00000000e25cc038 00000000e289f620
+0x0000000000dad1e8:   00000000e25cc038 0000000000000001
+0x0000000000dad1f8:   000000000000003e 0000000000dad300
+0x0000000000dad208:   000000000343679c 0000000000dad300 
+
+Instructions: (pc=0xffffffffa4105120)
+0xffffffffa4105100:   
+[error occurred during error reporting (printing registers, top of stack, instructions near pc), id 0xc0000005]
+
+Register to memory mapping:
+
+RAX=0x000000000000000c is an unknown value
+RBX=0x000000000000077e is an unknown value
+RCX=0x00000000e24ee460 is an oop
+org.apache.xerces.util.SymbolTable 
+ - klass: 'org/apache/xerces/util/SymbolTable'
+RDX=0x00000000e24ee460 is an oop
+org.apache.xerces.util.SymbolTable 
+ - klass: 'org/apache/xerces/util/SymbolTable'
+RSP=0x0000000000dad118 is pointing into the stack for thread: 0x0000000001502800
+RBP=0x0000000000dad300 is pointing into the stack for thread: 0x0000000001502800
+RSI=0x00000000e287ea50 is an oop
+[C 
+ - klass: {type array char}
+ - length: 2048
+RDI=0x000000000000000c is an unknown value
+R8 =0x00000000e287ea50 is an oop
+[C 
+ - klass: {type array char}
+ - length: 2048
+R9 =0x000000000000077e is an unknown value
+R10=0x0000000100153aa0 is pointing into metadata
+R11=0x00000000e287ea50 is an oop
+[C 
+ - klass: {type array char}
+ - length: 2048
+R12=0x0000000000000000 is an unknown value
+R13=0x0000000000dad2b8 is pointing into the stack for thread: 0x0000000001502800
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000001502800 is a thread
+
+
+Stack: [0x0000000000cb0000,0x0000000000db0000],  sp=0x0000000000dad118,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  0xffffffffa4105120
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000018a16800 JavaThread "AWT-Windows" daemon [_thread_in_native, id=6344, stack(0x0000000019380000,0x0000000019480000)]
+  0x0000000018a15000 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=1340, stack(0x0000000019180000,0x0000000019280000)]
+  0x0000000018292800 JavaThread "Exe4JStartupThread" daemon [_thread_blocked, id=4624, stack(0x00000000187a0000,0x00000000188a0000)]
+  0x00000000181c0800 JavaThread "Service Thread" daemon [_thread_blocked, id=1132, stack(0x00000000185a0000,0x00000000186a0000)]
+  0x000000001692b800 JavaThread "C1 CompilerThread2" daemon [_thread_blocked, id=4648, stack(0x00000000180a0000,0x00000000181a0000)]
+  0x0000000016920800 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8872, stack(0x0000000017fa0000,0x00000000180a0000)]
+  0x000000001691d800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=10052, stack(0x0000000017ea0000,0x0000000017fa0000)]
+  0x000000001691c800 JavaThread "Attach Listener" daemon [_thread_blocked, id=9620, stack(0x0000000017da0000,0x0000000017ea0000)]
+  0x000000001691b800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=3660, stack(0x0000000017ca0000,0x0000000017da0000)]
+  0x00000000015fa800 JavaThread "Finalizer" daemon [_thread_blocked, id=7664, stack(0x0000000017ba0000,0x0000000017ca0000)]
+  0x00000000168e9800 JavaThread "Reference Handler" daemon [_thread_blocked, id=8480, stack(0x0000000017aa0000,0x0000000017ba0000)]
+=>0x0000000001502800 JavaThread "main" [_thread_in_Java, id=8768, stack(0x0000000000cb0000,0x0000000000db0000)]
+
+Other Threads:
+  0x00000000168e7800 VMThread [stack: 0x00000000179a0000,0x0000000017aa0000] [id=10008]
+  0x00000000181da000 WatcherThread [stack: 0x00000000186a0000,0x00000000187a0000] [id=5832]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 32952K [0x00000000e0c00000, 0x00000000e3680000, 0x0000000100000000)
+  eden space 33280K, 99% used [0x00000000e0c00000,0x00000000e2c2e100,0x00000000e2c80000)
+  from space 5120K, 0% used [0x00000000e3180000,0x00000000e3180000,0x00000000e3680000)
+  to   space 5120K, 0% used [0x00000000e2c80000,0x00000000e2c80000,0x00000000e3180000)
+ ParOldGen       total 87552K, used 0K [0x00000000a2400000, 0x00000000a7980000, 0x00000000e0c00000)
+  object space 87552K, 0% used [0x00000000a2400000,0x00000000a2400000,0x00000000a7980000)
+ Metaspace       used 11537K, capacity 11758K, committed 12032K, reserved 1060864K
+  class space    used 1378K, capacity 1448K, committed 1536K, reserved 1048576K
+
+Card table byte_map: [0x00000000124c0000,0x00000000127b0000] byte_map_base: 0x0000000011fae000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000072674040
+ Begin Bits: [0x0000000012db0000, 0x0000000014520000)
+ End Bits:   [0x0000000014520000, 0x0000000015c90000)
+
+Polling page: 0x00000000014e0000
+
+CodeCache: size=245760Kb used=3558Kb max_used=3573Kb free=242201Kb
+ bounds [0x0000000003100000, 0x0000000003490000, 0x0000000012100000]
+ total_blobs=1220 nmethods=847 adapters=288
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.758 Thread 0x000000001692b800  834       3       org.apache.xerces.util.XMLAttributesImpl::setSpecified (11 bytes)
+Event: 1.759 Thread 0x000000001692b800 nmethod 834 0x0000000003458a10 code [0x0000000003458b60, 0x0000000003458cf0]
+Event: 1.759 Thread 0x000000001692b800  841       3       org.apache.xerces.impl.XMLScannerXerces::isInvalidLiteral (5 bytes)
+Event: 1.759 Thread 0x000000001692b800 nmethod 841 0x0000000003458590 code [0x0000000003458700, 0x0000000003458948]
+Event: 1.759 Thread 0x000000001692b800  842       3       org.apache.xerces.util.XMLChar::isInvalid (13 bytes)
+Event: 1.759 Thread 0x000000001692b800 nmethod 842 0x0000000003457fd0 code [0x0000000003458140, 0x0000000003458470]
+Event: 1.759 Thread 0x000000001692b800  843       3       org.apache.xerces.util.XMLChar::isValid (34 bytes)
+Event: 1.759 Thread 0x000000001692b800 nmethod 843 0x0000000003476590 code [0x0000000003476700, 0x0000000003476970]
+Event: 1.760 Thread 0x000000001691d800 nmethod 840 0x0000000003474d10 code [0x0000000003474e40, 0x0000000003474fd8]
+Event: 1.760 Thread 0x000000001691d800  837       4       org.apache.xerces.impl.XMLEntityScannerXerces::scanName (322 bytes)
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (4 events):
+Event: 0.809 Thread 0x0000000001502800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000032a79a8 method=java.lang.String.indexOf([CII[CIII)I @ 134
+Event: 0.871 Thread 0x0000000001502800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000032ff840 method=java.lang.AbstractStringBuilder.append(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder; @ 1
+Event: 1.686 Thread 0x0000000001502800 Uncommon trap: reason=predicate action=maybe_recompile pc=0x000000000338c608 method=sun.net.www.ParseUtil.encodePath(Ljava/lang/String;Z)Ljava/lang/String; @ 36
+Event: 1.726 Thread 0x0000000001502800 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000343c5bc method=org.apache.xerces.impl.XMLEntityScanner.scanContent(Lorg/apache/xerces/xni/XMLString;)I @ 43
+
+Internal exceptions (10 events):
+Event: 0.848 Thread 0x0000000001502800 Exception <a 'java/lang/ClassNotFoundException': java/lang/ObjectCustomizer> (0x00000000e160b148) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.851 Thread 0x0000000001502800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 18> (0x00000000e160d8e8) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 366]
+Event: 0.852 Thread 0x0000000001502800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 22> (0x00000000e1610c00) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 366]
+Event: 0.854 Thread 0x0000000001502800 Exception <a 'java/lang/ArrayIndexOutOfBoundsException': 160> (0x00000000e1612f28) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\interpreter\interpreterRuntime.cpp, line 366]
+Event: 0.861 Thread 0x0000000001502800 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/LayoutCustomizer> (0x00000000e163d8b0) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.866 Thread 0x0000000001502800 Exception <a 'java/lang/ClassNotFoundException': org/apache/log4j/PatternLayoutCustomizer> (0x00000000e167b008) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\classfile\systemDictionary.cpp, line 210]
+Event: 0.871 Thread 0x0000000001502800 Implicit null exception at 0x00000000032ff516 to 0x00000000032ff829
+Event: 1.137 Thread 0x0000000001502800 Exception <a 'java/lang/UnsatisfiedLinkError': The specified procedure could not be found.
+> (0x00000000e1c7fb18) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\prims\jni.cpp, line 735]
+Event: 1.137 Thread 0x0000000001502800 Exception <a 'java/lang/UnsatisfiedLinkError': The specified procedure could not be found.
+> (0x00000000e1c80f20) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\prims\jni.cpp, line 735]
+Event: 1.443 Thread 0x0000000001502800 Exception <a 'java/io/FileNotFoundException'> (0x00000000e1cd6058) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\prims\jni.cpp, line 709]
+
+Events (10 events):
+Event: 1.751 Thread 0x0000000001502800 DEOPT PACKING pc=0x00000000034168fb sp=0x0000000000dacd90
+Event: 1.751 Thread 0x0000000001502800 DEOPT UNPACKING pc=0x00000000031471bf sp=0x0000000000dacba8 mode 0
+Event: 1.753 Thread 0x0000000001502800 DEOPT PACKING pc=0x00000000034168fb sp=0x0000000000daccb0
+Event: 1.753 Thread 0x0000000001502800 DEOPT UNPACKING pc=0x00000000031471bf sp=0x0000000000dacac8 mode 0
+Event: 1.755 Thread 0x0000000001502800 DEOPT PACKING pc=0x00000000034168fb sp=0x0000000000daccd0
+Event: 1.755 Thread 0x0000000001502800 DEOPT UNPACKING pc=0x00000000031471bf sp=0x0000000000dacae8 mode 0
+Event: 1.756 Thread 0x0000000001502800 DEOPT PACKING pc=0x00000000034168fb sp=0x0000000000dacc00
+Event: 1.756 Thread 0x0000000001502800 DEOPT UNPACKING pc=0x00000000031471bf sp=0x0000000000daca18 mode 0
+Event: 1.757 Thread 0x0000000001502800 DEOPT PACKING pc=0x00000000034168fb sp=0x0000000000daccd0
+Event: 1.758 Thread 0x0000000001502800 DEOPT UNPACKING pc=0x00000000031471bf sp=0x0000000000dacae8 mode 0
+
+
+Dynamic libraries:
+0x00007ff7867b0000 - 0x00007ff786859000 	C:\Program Files\Oxygen XML Editor 17\oxygen17.0.exe
+0x00007ffea3c20000 - 0x00007ffea3de1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffea1620000 - 0x00007ffea16cd000 	C:\WINDOWS\system32\KERNEL32.DLL
+0x00007ffea10f0000 - 0x00007ffea12cd000 	C:\WINDOWS\system32\KERNELBASE.dll
+0x00007ffea3ad0000 - 0x00007ffea3c1e000 	C:\WINDOWS\system32\USER32.dll
+0x00007ffea1a50000 - 0x00007ffea1bd6000 	C:\WINDOWS\system32\GDI32.dll
+0x00007ffea1910000 - 0x00007ffea19b6000 	C:\WINDOWS\system32\ADVAPI32.dll
+0x00007ffea36d0000 - 0x00007ffea376d000 	C:\WINDOWS\system32\msvcrt.dll
+0x00007ffea3670000 - 0x00007ffea36cb000 	C:\WINDOWS\system32\sechost.dll
+0x00007ffea3770000 - 0x00007ffea3896000 	C:\WINDOWS\system32\RPCRT4.dll
+0x00007ffe9a9d0000 - 0x00007ffe9ac44000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.10240.16384_none_f41f7b285750ef43\COMCTL32.dll
+0x00007ffea1be0000 - 0x00007ffea1c16000 	C:\WINDOWS\system32\IMM32.DLL
+0x00007ffea16d0000 - 0x00007ffea182c000 	C:\WINDOWS\system32\MSCTF.dll
+0x0000000180000000 - 0x000000018000a000 	C:\WINDOWS\KATRK64.DLL
+0x00007ffe9ddb0000 - 0x00007ffe9ddc3000 	C:\WINDOWS\SYSTEM32\WTSAPI32.dll
+0x0000000071e70000 - 0x00000000726f3000 	c:\program files\oxygen xml editor 17\jre\bin\server\jvm.dll
+0x00007ffea3950000 - 0x00007ffea3958000 	C:\WINDOWS\system32\PSAPI.DLL
+0x00007ffe96790000 - 0x00007ffe96799000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe9de70000 - 0x00007ffe9de93000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe9ec30000 - 0x00007ffe9ec3a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x0000000072de0000 - 0x0000000072eb2000 	C:\WINDOWS\SYSTEM32\MSVCR100.dll
+0x00007ffea12d0000 - 0x00007ffea1339000 	C:\WINDOWS\system32\WS2_32.dll
+0x00007ffea1a30000 - 0x00007ffea1a38000 	C:\WINDOWS\system32\NSI.dll
+0x00007ffe9de40000 - 0x00007ffe9de6c000 	C:\WINDOWS\SYSTEM32\WINMMBASE.dll
+0x00007ffea10a0000 - 0x00007ffea10e4000 	C:\WINDOWS\system32\cfgmgr32.dll
+0x00007ffea0180000 - 0x00007ffea01a7000 	C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+0x00000000731c0000 - 0x00000000731cf000 	c:\program files\oxygen xml editor 17\jre\bin\verify.dll
+0x0000000073190000 - 0x00000000731b9000 	c:\program files\oxygen xml editor 17\jre\bin\java.dll
+0x0000000073170000 - 0x0000000073186000 	c:\program files\oxygen xml editor 17\jre\bin\zip.dll
+0x00007ffea1d00000 - 0x00007ffea3222000 	C:\WINDOWS\system32\SHELL32.dll
+0x00007ffea0950000 - 0x00007ffea0f78000 	C:\WINDOWS\system32\windows.storage.dll
+0x00007ffea1340000 - 0x00007ffea15bc000 	C:\WINDOWS\system32\combase.dll
+0x00007ffea15c0000 - 0x00007ffea1611000 	C:\WINDOWS\system32\shlwapi.dll
+0x00007ffea0630000 - 0x00007ffea063f000 	C:\WINDOWS\system32\kernel.appcore.dll
+0x00007ffea0fe0000 - 0x00007ffea1093000 	C:\WINDOWS\system32\shcore.dll
+0x00007ffea0660000 - 0x00007ffea06aa000 	C:\WINDOWS\system32\powrprof.dll
+0x00007ffea06b0000 - 0x00007ffea06c3000 	C:\WINDOWS\system32\profapi.dll
+0x0000000073140000 - 0x0000000073166000 	C:\Program Files\Oxygen XML Editor 17\jre\bin\JavaAccessBridge-64.dll
+0x0000000072fa0000 - 0x0000000073138000 	C:\Program Files\Oxygen XML Editor 17\jre\bin\awt.dll
+0x00007ffea1c40000 - 0x00007ffea1cfe000 	C:\WINDOWS\system32\OLEAUT32.dll
+0x00007ffe9e490000 - 0x00007ffe9e508000 	C:\WINDOWS\system32\apphelp.dll
+0x00007ffe9e700000 - 0x00007ffe9e796000 	C:\WINDOWS\system32\uxtheme.dll
+0x00007ffe9d880000 - 0x00007ffe9d8a2000 	C:\WINDOWS\system32\dwmapi.dll
+0x00007ffea3960000 - 0x00007ffea3aa1000 	C:\WINDOWS\system32\ole32.dll
+0x00007ffea0430000 - 0x00007ffea049b000 	C:\WINDOWS\SYSTEM32\bcryptPrimitives.dll
+0x0000000002f70000 - 0x0000000002fa8000 	C:\Program Files\Oxygen XML Editor 17\lib\com\sun\jna\win32-x86-64\jnidispatch.dll
+0x0000000072f80000 - 0x0000000072f9a000 	C:\Program Files\Oxygen XML Editor 17\jre\bin\net.dll
+0x00007ffe9fb90000 - 0x00007ffe9fbed000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffe86f60000 - 0x00007ffe870ea000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dexe4j.semaphoreName=Local\c:_program_files_oxygen_xml_editor_17_oxygen17.0.exe -Dexe4j.isInstall4j=true -Dexe4j.moduleName=C:\Program Files\Oxygen XML Editor 17\oxygen17.0.exe -Dexe4j.processCommFile=C:\Users\Lisa\AppData\Local\Temp\e4j_p9592.tmp -Dexe4j.tempDir= -Dexe4j.unextractedPosition=0 -Djava.library.path=C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Google\Google Apps Sync\;C:\Program Files (x86)\Google\Google Apps Migration\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Google\Google Apps Sync\;C:\Program Files\Google\Google Apps Migration\;C:\Program Files (x86)\Git\cmd;C:\Program Files\cURL\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Anaconda3;C:\Anaconda3\Scripts;C:\Program Files (x86)\Graphviz2.38\bin;C:\Anaconda3\MinGW\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Users\Lisa\AppData\Local\Box\Box Edit\;c:\program files\oxygen xml editor 17\jre\bin -Dexe4j.consoleCodepage=cp0 -Dcom.oxygenxml.tree.readonly=false -XX:SoftRefLRUPolicyMSPerMB=10 -XX:MaxPermSize=256m -Dsun.java2d.noddraw=true -Dsun.awt.nopixfmt=true -Dsun.java2d.dpiaware=true -Dsun.awt.keepWorkingSetOnMinimize=true -Dinstall4j.launcherId=19 -Dinstall4j.swt=false -Xmx1500m -Dcom.oxygenxml.language=English -XX:+UseParallelGC -XX:ErrorFile=C:\Users\Lisa\AppData\Local\Temp\/oxy_jvm_crash.log -XX:OnError=C:\Program Files\Oxygen XML Editor 17/rp.exe 
+java_command: C:\Program Files\Oxygen XML Editor 17\oxygen17.0.exe
+java_class_path (initial): C:\Program Files\Oxygen XML Editor 17\.install4j\i4jruntime.jar;C:\Program Files\Oxygen XML Editor 17\.\lib\oxygen.jar;
+Launcher Type: generic
+
+Environment Variables:
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Google\Google Apps Sync\;C:\Program Files (x86)\Google\Google Apps Migration\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Microsoft ASP.NET\ASP.NET Web Pages\v1.0\;C:\Program Files (x86)\Windows Kits\8.0\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Program Files\Google\Google Apps Sync\;C:\Program Files\Google\Google Apps Migration\;C:\Program Files (x86)\Git\cmd;C:\Program Files\cURL\bin;C:\Program Files (x86)\QuickTime\QTSystem\;C:\Anaconda3;C:\Anaconda3\Scripts;C:\Program Files (x86)\Graphviz2.38\bin;C:\Anaconda3\MinGW\bin;C:\Program Files (x86)\SSH Communications Security\SSH Secure Shell;C:\Users\Lisa\AppData\Local\Box\Box Edit\;c:\program files\oxygen xml editor 17\jre\bin
+USERNAME=Lisa
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 23 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 10240 (10.0.10240.16384)
+
+CPU:total 4 (4 cores per cpu, 1 threads per core) family 6 model 23 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, tsc
+
+Memory: 4k page, physical 8386804k(4299716k free), swap 16775412k(11842528k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.40-b25) for windows-amd64 JRE (1.8.0_40-b25), built on Feb 10 2015 21:53:57 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sat Oct 03 22:04:58 2015
+elapsed time: 1 seconds (0d 0h 0m 1s)
+
