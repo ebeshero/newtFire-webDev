@@ -347,12 +347,10 @@
       				
       				
       			
-      <div class="code">			&lt;xsl:template match="something-wherever-it-is-that-we-want-to-match"&gt;
-         					
-         					
-         					<span class="indent">&lt;NEW-ELEMENT&gt;  &lt;!--this is the new element we want to show up in the transformed document--&gt;</span><br />
+      <div class="code">			&lt;xsl:template match="wherever-it-is-that-we-want-to-match"&gt;<br/>	
+         					<span class="indent">&lt;newElement&gt; &lt;!--this is the new element we want to show up in the transformed document--&gt;</span><br />
          					<span class="indentMore">&lt;xsl:apply-templates <span class="code">select="something-related-by-XPath-to-this-point-we’ve-matched</span>&gt;</span><br />
-         				<span class="indent">&lt;/NEW-ELEMENT&gt;</span>
+         				<span class="indent">&lt;/newElement&gt;</span><br/>
          				&lt;/xsl:template&gt;
       </div>
       				
