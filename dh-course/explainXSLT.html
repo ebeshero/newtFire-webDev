@@ -153,7 +153,7 @@
          				doctype-system="about:legacy-compat"/&gt; 
       </div>
       			
-      <p>The method is set to xml . We set <span class="code">@encoding</span> to utf-8,
+      <p>The method is set to xml to control the xml syntax of the output document (as HTML in XML form). We set <span class="code">@encoding</span> to utf-8,
          				because it’s the <a href="http://en.wikipedia.org/wiki/UTF-8">universal
             					Unicode character set</a>, the most widely compatible character set for use on
          				the World Wide Web. We usually set <span class="code">@indent</span> to "yes" (and
@@ -295,7 +295,12 @@
          			
       </div>
       			
-      <p>In the stylesheet above, notice that the <span class="code">@select</span> attribute on <span class="code">xsl:apply-templates</span> is a <strong>literal XPath expression</strong>. In the template rule matching <span class="code">div @type="chapter"</span> we see two ways of stepping down into a literal XPath from the current context node,
+      <p>In the stylesheet above, the very first template rule matches on <span class="code">"/"</span>, and that indicates the XML root element. When we transform XML to HTML we begin with this 
+         template match on root, so that we say the basic structural elemetns of the XML file are to be replaced by the basic structural elements of an HTML document. 
+         We begin basically writing the document hierarchy of an HTML page, from its <span class="code">&lt;html&gt;</span> document node (or root) onward, any <strong>outer level</strong> element that we expect to appear only <strong>once</strong> in the document hierarchy. 
+         So up here in the template rule matching on the document node, we plot out the basic structural units of the HTML file and we set up the outer element that creates any unordered list or table we need. 
+         Where we need to reach in and grab more deeply nested, repeating elements in the hierarchy, we need to invoke and fire new template rules, via <span class="code">xsl:apply-templates</span>, 
+         which we can specify as needed with the <span class="code">@select</span> attribute to direct which parts of the XML file will be consumed and processed in particular lists or positions in the output HTML document. Notice that the <span class="code">@select</span> attribute on <span class="code">xsl:apply-templates</span> is a <strong>literal XPath expression</strong>. In the template rule matching <span class="code">div @type="chapter"</span> we see two ways of stepping down into a literal XPath from the current context node,
          whatever it is: In the <em>first</em> <span class="code">xsl:apply-templates @select</span>, we step into a child node and then down another path step to the <span class="code">&lt;l&gt;</span> (or line) element that is the child of head:
          <span class="code">head/l</span>. In the <em>second</em> <span class="code">xsl:apply-templates @select</span>, we use the <strong>"dot" notation</strong> to indicate the current context node. This dot notation, <span class="code">.</span>, is very important
          because our <span class="code">//</span> descendent axis notation would otherwise be read as starting from the root of the
