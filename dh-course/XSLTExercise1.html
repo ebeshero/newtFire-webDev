@@ -21,11 +21,47 @@
       			
       			
       			
-      <p>Our very first XSLT assignment is an Identity Transformation, a kind transformation we have to do frequently in our projects when we need to make specific changes to our encoding. 
-         To begin, download this XML file from our Pacific Voyage project that I have linked here: <a href="ForsterGeorgComplete.xml">ForsterGeorgComplete.xml</a>.
-      </p>
+      <p>Our very first XSLT assignment is an Identity Transformation, a kind transformation we have to do frequently in our projects when we need to make specific changes to our encoding. We want to make some small changes in our Georg Forster file to make better choices of TEI elements for some of our tags.</p>
+      <p>To begin, download the Georg Forster file from here: <a href="ForsterGeorgComplete.xml">ForsterGeorgComplete.xml</a> and open it in &lt;oXygen&gt;. We don't want to change much about this file, but we do want to alter its tagging just a little, and that is a good occasion to write an Identity Transformation XSLT, converting our XML to XML that is meant to be (for the most part) <em>identical</em> to the original.</p>
+      <p>Here are two changes we want to make to our XML file:</p> 
+      <ul><li>Looking through the file in the Outline view, we notice that our <span class="code">&lt;head&gt;</span> elements inside each <span class="code">&lt;div type="chapter"&gt;</span> are holding <span class="code">&lt;l&gt;</span> elements, which we originally applied to preserve line breaks in the original document. But we really should not be using the <span class="code">&lt;l&gt;</span> element, because in TEI that element is reserved for a line of poetry! We should change our tagging, and we think we should instead <em>end</em> each line with the self-closing <span class="code">&lt;lb/&gt;</span> element used to record a (non-poetry) line-break in TEI.</li>
+         <li>Scrolling through the document, we notice we have used <span class="code">&lt;emph&gt;</span> elements in TEI when we wanted to indicate a rendering in italics in the original. Just like the problem with the use of <span class="code">&lt;l&gt;</span>, that was a mistaken application of the TEI (even though it looks perfectly valid), because the <span class="code">&lt;emph&gt;</span> element is only supposed to be used when a writer is placing <em>strong emphasis</em> on a word or phrase. In this document, the <span class="code">&lt;emph&gt;</span> elements are being applied to designate non-English words and book titles, so this tagging is not really for emphasis. We really should be using the TEI <span class="code">&lt;hi rend="italic"&gt;</span> tagging for these instead, since this element is designated for highlighting of any kind.</li>
+      </ul>
+         <p>You may already be calculating how to do these tasks with a regular expression Find and Replace, and while we know you could do that, our purpose with this exercise is to make the changes using an XSLT transformation, and we hope you will learn some things about how XSLT works through this exercise! </p>
+      <p>To begin, open a new XSLT stylesheet in &lt;oXygen&gt; and switch to the XSLT view. We will have some housekeeping to do as we get started.</p>
+      <h3>Namespaces matter! Setting up an XSLT stylesheet to Read TEI</h3>
+
+      <p>Georg Forster's <cite>A Voyage Round the World</cite> is coded in the TEI namespace, which means that your XSLT stylesheet
+         must include an instruction at the top to specify that when it tries to match elements, it needs to
+         match them in that TEI namespace. When you create a new XSLT document in &lt;oXygen/&gt; it
+         won’t contain that instruction by default, so <em>whenever you are working with TEI</em> you need to add it (See the text in <span style="color:blue;">blue</span> below). (It's actually not critical in this Identity Transformation, but not declaring the namespace would actually prevent you from getting any output at all if you were transforming from TEI to XHTML or HTML.) Our modified stylesheet template looks like the following:</p>
+      <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    <span style="color:blue;">xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+    exclude-result-prefixes="xs math"
+    version="3.0">
+    
+&lt;/xsl:stylesheet&gt;</pre>
+      
+      
+      <h3>Writing the Identity Transformation!</h3>
+      
+      
+     <ol> <li>We will give you your first template rule, to set this as an <em>identity transformation</em>. We're going to use a new form for this in XSLT 3.0 <span class="smaller">(You can see an old form here in the first template rule of our Identity transformation of Shakespeare's sonnets, which you can download, save and open from <a href="XSLT-XMLtoHTML-Model.xsl">here</a>. That old first rule matches on all nodes, elements and attributes throughout the document and simply copies them. It's perfectly fine to use that older template rule in place of the one we show you below, but we like the simplicity of this new form even better!)</span>.
+      <div class="code">
+         &lt;xsl:mode on-no-match="shallow-copy"/&gt; 
+      </div>
+      <p> This XSLT statement is the <em>opposite</em> of the <span class="code">xsl:template match</span> we have been showing you in <a href="explainXSLT.html">our XSLT tutorial</a>. You basically say, if I do not write a template rule to <em>match</em> an element, attribute, or comment node, really of any part of the document that I do not mention in a template match rule, XSLT should simply make a copy of that element and output it. Try running this and look at your output: it will look exactly <em>identical</em> to the current XML document. Obviously we do not need to do this <em>unless</em> we want to make changes with template match rules! 
+      <span class="smaller">There is another way to copy, called "deep copy" in XSLT, but we do not need to use it here. When you use "deep copy" in XSLT, you reproduce the full directory tree underneath a given element, and in our set-up here, we think that would result in a huge file, as each element would copy with all its nested children and descendent elements, and then each of those would reproduce its own descendents over and over again! We do not recommend trying this out except on a much smaller file than our Forster voyage narrative!</span></p>
+     </li>
+        <li>Next, we will simply write our template rules to match on the particular elements we wish to change. You may wish to start with the simpler of the two, to convert all the <span class="code">&lt;emph&gt;</span> elements into <span class="code">&lt;hi rend="italics"&gt;</span> in the output XML. Review our Introduction to XSLT to see how to write a template match on any particular element, and how to output as a different element in its place using <span class="code">&lt;xsl:apply-templates/&gt;</span>.</li>
+        <li>Now, write the template rule that will match <em>only</em> on <span class="code">&lt;l&gt;</span> elements that are children of <span class="code">&lt;head&gt;</span> elements. And see if you can figure out how to replace these by positioning the self-closing line-break element <span class="code">&lt;lb/&gt;</span>, positioned in the correct spot in relation to <span class="code">&lt;xsl:apply-templates/&gt;</span> so that the <span class="code">&lt;lb/&gt;</span> sits at the end of a line.</li>
+      </ol>
+      
       			
-      <p>We often use an Identity transformation with Attribute Value Templates, in order to add attributes to elements like &lt;p&gt; or &lt;l&gt; that calculate a paragraph or line number. As an optional extra challenge for this assignment, read about <a href="http://dh.obdurodon.org/avt.xhtml">Attribute Value Templates</a> and see if you can figure out how to add paragraph numbers in the Georg Forster file and try adding a template rule to do that here. (Hint: I've posted <a href="">an example ID-transform stylesheet</a> that adds line numbers to a series of sonnets here.) We will return to this later, since you will be working with Attribute Value Templates in a later homework exercise.</p>		
+      <p>We often use an Identity transformation with Attribute Value Templates, in order to add attributes to elements like <span class="code">&lt;p&gt;</span> or <span class="code">&lt;l&gt;</span> that calculate a paragraph or line number. We have already numbered the paragraphs in the Forster file, but as an optional extra challenge for this assignment, read about <a href="http://dh.obdurodon.org/avt.xhtml">Attribute Value Templates</a> and see if can write two more template rules to add <span class="code">@n</span> attributes to automatically number the <span class="code">&lt;div&gt;</span> elements for Books, and the <span class="code">&lt;div&gt;</span> elements for Chapters here. (Hint: Look at my old example ID-transform stylesheet that adds line numbers to a series of sonnets, downloadable from <a href="XSLT-XMLtoHTML-Model.xsl">here</a> if you didn't download it earlier.) We will return to this later, since you will be working with Attribute Value Templates in a later homework exercise.</p>		
       					
       	
    </body>
