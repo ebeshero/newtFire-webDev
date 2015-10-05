@@ -193,41 +193,31 @@
       			
       <p>The main part of the XSLT stylesheet are its template rules. When you write an <span class="code">xsl:template</span>, you specify an <span class="code">@match</span> attribute which calls out to particular elements. The value of
          				@match can be described as <em>“XPath-like”</em>: it’s not really a full
-         				XPath expression, but it uses XPath syntax. This is because we do not designate
-         the
+         				XPath expression, but it uses XPath syntax. This is because we do not designate the
          				template <span class="code">@match</span> to walk down the XML document tree. No.
          				Instead, the elements <em>come to the template rule</em>, and if you were to write a
          				full XPath expression with the leading // to designate walking down from the root,
-         				that would have no effect. With xsl:template rules, the elements in the input
-         XML
-         				are matched out of context with their hierarchy. For example, if you have written
-         a
+         				that would have no effect. With xsl:template rules, the elements in the input XML
+         				are matched out of context with their hierarchy. For example, if you have written a
          				template match for <span class="code">&lt;xsl:template match="div"&gt;</span>, that
          				rule is going to “fire” any time a <span class="code">div </span>comes
          				by from the source document. 
       </p>
       			
-      <p>That can be really useful if we want a template rule to match all the divs in the
-         				hierarchy and treat them the same way. But usually that is not what we want. This
-         is
-         				where the <em>“XPath-like”</em> syntax comes in: In the Hamlet XML file
-         				we sometimes work with in homework exercises, you may want to process Acts (<span class="code">&lt;div&gt;</span> elements directly under the <span class="code">&lt;body&gt;</span>) differently from Scenes (<span class="code">&lt;div&gt;</span> elements directly under Acts), and so, using XPath-like
-         				syntax for <span class="code">@match</span>, you can write one template rule for
+      <p>That can be really useful if we want a template rule to match all the divs in the hierarchy and treat them the same way. But usually that is not what we want. This is
+         where the <strong>“XPath-like”</strong> syntax comes in: In a file with a complex hierarchy, like one of our Pacific Voyage Narratives, you may want to process Book (<span class="code">&lt;div&gt;</span> elements directly under the <span class="code">&lt;body&gt;</span>) differently from Chapter (<span class="code">&lt;div&gt;</span> elements directly under Books), and so, using <strong>XPath-like</strong> syntax for <span class="code">@match</span>, you can write one template rule for
          					<span class="code">match="body/div"</span> and another for <span class="code">match="div/div"</span>. You can also use predicates; for example, to process
-         				only Hamlet’s speeches, you can write a rule for <span class="code">xsl:template
-            					match="sp[@who eq ’Hamlet’]"</span>. Those template rules will only match on
-         				special cases as they come up.
+         				only the date elements for the year 1769, you can write a rule for <span class="code">xsl:template
+            					match="date[contains(., '1769')]"</span>. Those template rules will only match on
+         				the special cases you designate as they come up, wherever they come up in the document.
       </p>
       			
-      <p>To write a complete template rule, you have to call for a particular kind of node
-         in
-         				your document (usually an element, but maybe other things), and then you have
-         to do
-         				some action with it. The action usually creates output nodes, and then goes on
-         to
-         					<strong>apply templates</strong> to the children of the current context node
-         				that has come by. So, to output a line of poetry in the form of an HTML paragraph,
-         				just to preserve the lines, you could write the following template rule:
+      <p>To write a complete template rule, you first have to <em>call</em> for a particular kind of node
+         in your document (usually an element, but maybe other things), and then you have
+         to <em>do some action with it</em>. The action usually creates output nodes, and then goes on
+         to <strong>apply templates</strong> to the children of the current context node
+         				that has come by. So, to output lines of poetry in the form of HTML paragraphs
+         				so you can preserve the line breaks, you could write the following template rule:
       </p>
       			
       <div class="code"> &lt;xsl:template match="line"&gt;<br />
@@ -238,11 +228,10 @@
       </div>
       			
       <p>Here is what happens when this rule fires: A <span class="code">&lt;line&gt;</span>
-         				element drifts by this template rule and is caught by the <span class="code">@match</span> attribute. The template takes its contents (basically consumes
-         				the node), and in its place it outputs an HTML <span class="code">&lt;p&gt;</span>.
+         element drifts by this template rule and is caught by the <span class="code">@match</span> attribute. The template takes its contents (basically <em>consumes</em> the node), and in its place it outputs an HTML <span class="code">&lt;p&gt;</span>.
          				What’s inside that <span class="code">&lt;p&gt;</span> element generates its
          				contents: <span class="code">&lt;xsl:apply-templates/&gt;</span> by itself with no
-         				attributes says, process the contents of this element it is consuming. <span class="code">&lt;xsl:apply-templates/&gt;</span> will process the contents of
+         				attributes says, process the contents (the text contents) of this element it is consuming. <span class="code">&lt;xsl:apply-templates/&gt;</span> will process the contents of
          					<span class="code">&lt;line&gt;</span> and pass its child nodes on to the
          				templates that apply to them. 
       </p>
@@ -251,9 +240,9 @@
          				to be consumed in this particular position: perhaps something specific you would
          want to see
          				next within the HTML element you are constructing, to restrict what comes next.
-         For example, say you are working with our <a href="ForsterGeorgComplete.xml">Georg Forster Pacific Voyage text coded in TEI</a>, and you only want output a list of place names (coded with <span class="code">&lt;placeName&gt;</span> in each chapter, inside an HTML unordered list (coded with an outer <span class="list">ul</span> and an inner series of <span class="list">li</span> (list items), with an outer list containing the Chapter headings and an inner list
+         For example, say you are working with our <a href="ForsterGeorgComplete.xml">Georg Forster Pacific Voyage text coded in TEI</a>, and you do not want to output the entire document. Say you only want to output a pair of nested HTML lists: Inside an outer list, we want to generate the chapter headings in the Forster file, and inside each chapter list entry, we want to make an inside list of each of the place names we have tagged inside that chapter (not worrying for the moment about whether those place names are repeated in the chapter). We will do this with an HTML unordered list (coded with an outer <span class="list">ul</span> and an inner series of <span class="list">li</span> (list items), with an outer list containing the Chapter headings and an inner list
          for each chapter holding the <span class="code">&lt;placeName&gt;</span> elements within it. For this transformation from TEI we are going to need three template
-         rules, to sit at different levels of our stylesheet. Here’s how we handled it:
+         rules, to sit at different levels of our stylesheet. Here’s how we wrote it:
       </p>
       			
       			
@@ -307,12 +296,10 @@
       </div>
       			
       <p>In the stylesheet above, notice that the <span class="code">@select</span> attribute on <span class="code">xsl:apply-templates</span> is a <strong>literal XPath expression</strong>. In the template rule matching <span class="code">div @type="chapter"</span> we see two ways of stepping down into a literal XPath from the current context node,
-         whatever it is. In the first <span class="code">xsl:apply-templates @select</span>, we step into a child node and then down another path step to the child of head:
-         <span class="code">head/l</span>. In the second <span class="code">xsl:apply-templates @select</span>, we use the "dot" notation to indicate the current context node, which is very important
+         whatever it is: In the <em>first</em> <span class="code">xsl:apply-templates @select</span>, we step into a child node and then down another path step to the <span class="code">&lt;l&gt;</span> (or line) element that is the child of head:
+         <span class="code">head/l</span>. In the <em>second</em> <span class="code">xsl:apply-templates @select</span>, we use the <strong>"dot" notation</strong> to indicate the current context node. This dot notation, <span class="code">.</span>, is very important
          because our <span class="code">//</span> descendent axis notation would otherwise be read as starting from the root of the
-         XML tree and heading all the way down, rather than reading within a specific chapter!
-         <span class="code">xsl:apply-templates @select</span> is a literal XPath expression, quite unlike what we described with the <em>“XPath-like”</em> syntax in
-         				the template’s <span class="code">@match</span>.
+         XML tree and heading all the way down, rather than reading within a specific chapter and looking all the way down through its children and children's children, but <em>only</em> within the chapter. Notice that we <em>do not need</em> to use the dot notation to designate <em>immediate children</em> of the current context node, but we <em>do</em> need the dot when we step down the descendent axis, because <span class="code">//</span> could otherwise indicate an XPath that begins at the root element of the document. This is because <span class="code">xsl:apply-templates @select</span> is a <strong>literal XPath expression</strong> that <em>must be defined in terms of the current context node</em>, quite unlike what we described with the <em>“XPath-like”</em> syntax in the template’s <span class="code">@match</span>.
       </p>
       			
       <h4>Calculating and Outputting XPath Functions</h4>
@@ -471,13 +458,14 @@
          				
          <li>Example XSLT Task: <a href="http://dh.obdurodon.org/count-acts-in-hamlet.html">Counting Speeches per Act in Hamlet, and Outputting to an HTML Table</a></li>
          				
-         <li><a href="http://dh.obdurodon.org/algorithms.html">Thinking in Algorithms</a></li>
-         				
-         <li><a href="http://dh.obdurodon.org/xslt-basics-2.html">Conditionals, and Push and Pull in XSLT</a></li>
-         				
-         <li><a href="http://dh.obdurodon.org/avt.html">Attribute Value Templates in XSLT</a></li>
-         				
+         <li><a href="http://dh.obdurodon.org/algorithms.xhtml">Thinking in Algorithms</a></li>
+        
+         <li><a href="http://dh.obdurodon.org/avt.xhtml">Attribute Value Templates in XSLT</a></li>
+         
          <li><a href="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</a></li>
+         				
+         <li><a href="http://dh.obdurodon.org/xslt-basics-2.xhtml">Variables, Keys, Conditionals, and Push vs. Pull Processing in XSLT</a></li>
+         				
          			
       </ul>
       			
