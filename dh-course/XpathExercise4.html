@@ -19,18 +19,9 @@
             <span class="banner">XPath Exercise 4</span>
         </h1>
 
-        <!--2015-09-29 ebb: Our Goal: We're revising this so that it applies many of the same tasks with XPath String Functions to a different file entirely, my syllabus file for the Fall 2015 Greensburg DH course. Our tasks probably won't look exactly the same as Obdurodon's XPath 4, but let's try to include
-            * tokenizing a string and selecting a part of it, 
-            * matching on something that contains a particular string (and possibly finding its neighboring element). 
-            * applying string-join() and concat()
-            * We can also adapt the Optional Challenge to try to output a numbered concatenated list in the XPath results window. 
-        -->
-
         <p>You can find an XML (TEI) version of our Fall 2015 DH class syllabus at <a
-                href="dhCDA-2015.xml">http://newtfire.org/dh/dhCDA-2015.xml</a>. Download
-            <!-- 2015-09-29 alk just a note to perhaps specify a right-click save
-            here since copying all the text over to Oxygen results in a damaged XML-->
-            this file to save locally on your computer, and open it in &lt;oXygen/&gt;.</p>
+                href="dhCDA-2015.xml">http://newtfire.org/dh/dhCDA-2015.xml</a>. Right-click to download and save
+this file locally on your computer, and open it in &lt;oXygen/&gt;.</p>
         <p>You should consult <cite class="sub"><a href="http://dh.obdurodon.org/functions.xhtml"
                     >The XPath Functions We Use Most</a></cite> page and especially its section III.
             on Strings. Also, if you have the Michael Kay text, it may be useful to you here. As
@@ -48,53 +39,45 @@
             in &lt;oXygen/&gt;, construct XPath expressions that will do the following (give the
             full XPath expressions in your answers, and not just the results):</p>
         <ol>
-            <!--2015-09-29 ebb: Okay! Here's here we have to start revising. Play around with the tasks being asked for, and hunt about
-            in my syllabus file to see if you can come up with similar tasks! Let me know how this goes or if you get stuck.-->
             <li>
-                <!--ebb: To begin, I was thinking of trying this with a list of Assignment URLs, or a list of all the websites in the Pitt domain, or even a list of the dates on the syllabus...Hunt about for something reasonably short that we can grab, that might look good in a comma or semicolon or hyphen separated list: what might work here?-->
-                There are two books referenced in the syllabus using the tag 'bibl'. What Xpath will
-                return a comma-seperated list of the authors?
-                <!-- alk: Use of string-join(). This might be a good start question because the concept scales but is only a small amount
-               of data. A: string-join(//bibl/author, ‘,’) -->
-            </li>
-
-
-            <li>There are multiple authors of the second book - let's refine the solution to the
-                first question by removing "Authors:" from that result. What Xpath function can we
-                use to seperate "Authors:" from the rest of the string, and throw it away, leaving "
-                Bruce Hyslop, Lenny Burdette, and Chris Casciano"? (hint: It will be helpful to
-                refer to punctuation here, and use a predicate to filter your final results.)
-                <!-- alk: Use of tokenize() at :, then a predicate to filter the results and return only the part they want
-                A: tokenize((//bibl)[2]/author, ':')[2] -->
-            </li>
-
-
-            <li> Which 'div' elements contain references to 'homework'? What Xpath tells us the
-                context of these references, the parent elements of the homework references?
-                <!-- alk: uses contains() and  then looks for parent element A: //div[contains(., 'homework')] -->
-            </li>
-
-            <li> How many 'div' elements of type 'assign' contain references to our sister site,
-                Obdurodon? Find the longest and shortest divs of this type in the document. How long
-                and short are they?
-                <!-- alk: contains() with 
-                with attrib added and then a simpler version of the challenge
-                A: //div[@type=“assign”][contains(., ‘Obdurodon’)] returns 9 (easy error - has to be captitalized)
+                There are two books referenced in the syllabus using the tag <code>&lt;bibl&gt;</code>. What Xpath will
+                return a comma-separated list of the authors?
                 
-               Longest: //div[@type="assign"][contains(., "Obdurodon")][string-length(.) eq max(//div[@type="assign"][contains(., "Obdurodon")]/string-length(.))]
-                Shortest is same thing with min instead of max
-                --></li>
+            </li>
 
-            <li> Let's concatente some dates! Can you smash together all of the 'date' elements in
-                the document into one giant disgusting string? <!-- alk: concat() --></li>
 
+            <li>There are multiple authors of the book designated in the second <code>bibl</code> element, and they are introduced with the string "Authors:" Let's work on using the tokenize() function to remove the "Authors:" string. What Xpath function can we use to separate "Authors:" from the rest of the string and throw it away, yielding only 
+                "Bruce Hyslop, Lenny Burdette, and Chris Casciano" in the result window? (Hints: You will need to refer to the colon punctuation here, and use parenthetical grouping with a predicate to first retrieve the second book only, and then to filter your final results.
             
-            <li>Optional (but reccomended!) challenge question: Using the function format-date(), 
+            </li>
+
+
+            <li><ol><li> Which 'div' elements contain references to 'homework'? How many results do you return?</li>
+                <li>Can you figure out how to retrieve the immediate parent element containing the word "homework"? (Hint: it involves looking for any element below the div and then its text() node, since we need the element whose *text* contains the word "homework.")</li>
+               </ol> 
+          
+            </li>
+            
+            <li><ol><li>What XPath returns all the Fridays on the syllabus? (Scroll through the document looking for the date elements to help determine this.)</li>
+                <li>Now, what if we want to return those dates in their ISO format, as yyyy-mm-dd? Can you retrieve that with XPath? </li>
+                <li>Return a string-joined list of all these dates, separated with a comma and a space.</li>
+                
+            </ol>  </li>
+
+            <li> <ol><li>How many <code>div</code> elements of @type 'assign' contain references to word "GitHub"?</li> 
+                <li>Find the longest and shortest div elements of this type (that contain the word "GitHub") in the document. How long
+                and short are they? Hint: You will need to use min(), max(), and the string-length() function here, as well as some complex predicates.</li></ol>
+</li>
+
+        
+
+            <!--  ebb:I'm not finding much documentation on format-date()! Save until we can actually *do* this one?-->
+            <!--<li>Optional (but reccomended!) Challenge Question: Using the function format-date(), 
                 Can you output all of the Friday dates on the syllabus? You’ll first need to change 
                 your Oxygen path version to 3.0 next to the search box if it’s not already 3.0. 
-                Then you’ll need to look up the details of format-date() on w3 schools. Be careful - 
-                not all of the dates in the xml file are uniform and suitable for processing - to 
-                simplify things you’ll want to look only in divs of type ‘day’.</li>
+                Then you’ll need to look up the details of format-date() on w3 schools. Be careful, because
+                not all of the dates in our syllabus XML file are uniform or suitable for processing this way. To 
+                simplify things you’ll want to look ONLY in divs of type ‘day’.</li>-->
             
             
         </ol>
