@@ -38,7 +38,7 @@
     
 &lt;/xsl:stylesheet&gt;</pre>
       <h3>Overview of the assignment</h3>
-      <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document that consists of a table of companies, addresses, and working conditions. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. You can
+      <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document that consists only of a table with companies, addresses, and working conditions. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. You can
          read more about HTML tables at 
          <a href="http://www.w3schools.com/html/html_tables.asp">http://www.w3schoos.com/html/html_tables.asp</a>.</p>
          <p>The desired output will look like:</p>
@@ -82,7 +82,53 @@
          
       </pre>
       
-      
+      <h3>Analysis of the task</h3>
+      <p>The information that you want to output is all found inside the <code>&lt;articleBody&gt;</code> element in our input document. For the moment we’re going to ignore
+         everything else inside of the <code>&lt;head&gt;</code> including the <code>&lt;headLine&gt;</code> elements. You want to generate one HTML
+         table to contain information that you’ll extract from the <code>@ref</code>
+         attributes associated with elements <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code>.  Your XSLT, then, should proceed along the following lines:</p>
+      <ol>
+         <li>In a template rule for the document node (<code>&lt;xsl:template
+            match="/"&gt;</code>), create the HTML superstructure. Between the start and end
+            <code>&lt;body&gt;</code> tags that you’ll be creating you should insert the
+            main tags for an HTML tables. Between the start and end <code>&lt;table&gt;</code> tags, you should then insert
+            <code>&lt;xsl:apply-template&gt;</code> elements that select the nodes you want
+            to process to build the table. Be careful, though; there may be
+            <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements
+            elsewhere in the document, such as inside <code>&lt;headLine&gt;</code> elements,
+            and for the tables you’re producing you want only the ones that are inside the
+            <code>&lt;articleBody&gt;</code> element.</li>
+         <li>In XSLT, processing something normally happens in two parts. You normally have an
+            <code>&lt;xsl:apply-templates&gt;</code> element that tells the system what
+            elements (or other nodes) you want to process, and you then have an
+            <code>&lt;xsl:template&gt;</code> element that tells the system exactly how you
+            want to process those elements, that is, what you want to do with them. If you find
+            the image helpful, you can think of this as a situation where the
+            <code>&lt;xsl:apply-templates&gt;</code> elements <em>throw some nodes out into
+               space and say <q>would someone please process these?</q>
+            </em>and the various <code>&lt;xsl:template&gt;</code> elements sit around watching
+            nodes fly by, and when they match something, they <em>grab it and process it</em>.
+            In this case, then, your <code>&lt;xsl:apply-template&gt;</code> elements inside the
+            template rule for the document node will tell the system that you want to process
+            <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements, at
+            which point the template rule for the document node will have done its work by
+            announcing what needs to be done. That work actually gets done by other
+            <code>&lt;xsl:template&gt;</code> rules, the ones that you’ve written that match
+            the <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements.</li>
+         <li>In the <code>&lt;xsl:template&gt;</code> rules for <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements you’ll need to output something for each one. That is, for each <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> element, you’ll need to output a line in your
+            table.</li>
+         <li>The values you use to populate your table cells come from attributes. Remember that
+            attributes are on the <dfn>attribute axis</dfn>, which you can address by prefixing
+            the name of the attribute with an <q>at</q> sign. For example, open NelsonArtical_1888-07-30.xml in
+            &lt;oXygen/&gt;, go into the XPath browser box in the upper left, and search for
+            <code>//articleBody/company/@ref</code>, and you’ll retrieve all of the
+            <code>@ref</code> attribute values associated with <code>&lt;company&gt;</code>
+            elements. You won’t use this exact XPath in your assignment, but it can serve to
+            remind you how you address an attribute in XPath.</li>
+      </ol>
+        <p>For your assignment, then, you need to create an HTML table with a header row that labels the
+            columns (Company Name | Address | Wage Description), and then create a separate row with data for each company.</p>
+            
       
       
      				
