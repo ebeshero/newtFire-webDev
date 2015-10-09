@@ -256,12 +256,12 @@
             <code>&lt;ul&gt;</code> element, we use an
             <code>&lt;xsl:apply-templates&gt;</code> rule to apply templates to (that is, to
             process) the scenes of that act.</li>
-         <li>We have a separate template rule that matches scenes, and that just applies
-            templates to the <code>&lt;head&gt;</code> element in each scene, which ultimately
-            causes the textual content of the <code>&lt;head&gt;</code> element to be output.
-            This rule will fire once for each scene in the play, and it will be called
-            separately for the scenes of each act, so that the scenes will be rendered properly
-            under their acts.</li>
+         <li>We have a separate template rule that matches the <code>&lt;org&gt;</code> elements, which make up the items in the list of organizations, 
+            and that just applies
+            templates to the <code>&lt;orgName&gt;</code> element within each <code>&lt;org&gt;</code>.
+            This rule will fire once for each <code>&lt;org&gt;</code> element inside the <code>&lt;listOrg&gt;</code>, and it will be called
+            separately for the <code>&lt;org&gt;</code> elements within each <code>&lt;listOrg&gt;</code>, so that the orgs will be rendered properly
+            in their respective lists.</li>
       </ol>
       <p>We don’t need a template rule for the <code>&lt;head&gt;</code> elements themselves
          because the built-in (default) template rule in XSLT for an <em>element</em> that
