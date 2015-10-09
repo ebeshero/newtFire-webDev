@@ -13,10 +13,10 @@
             <xsl:apply-templates select="node() | @*"/>
         </xsl:copy>
     </xsl:template>
-    <!--ebb: The above template rule makes this an Identity Transformation, exactly reproducing the entire XML file. We can now write rules to add or alter things in the XML document, such as to number lines. -->
+    <!--ebb: The above template rule makes this an Identity Transformation in XSLT version 2.0, exactly reproducing the entire XML file. We can now write rules to add or alter things in the XML document, such as to number lines. -->
     
    <xsl:template match="sonnet">
-        <sonnet number="{@number}">
+        <sonnet number="{count(preceding-sibling::sonnet) + 1}">
             <xsl:apply-templates select="line"/>
         </sonnet>
      
