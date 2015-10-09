@@ -37,6 +37,8 @@
          <span style="color:green;">&lt;xsl:output method="xhtml" doctype-system="about:legacy-compat"/&gt;</span>
     
 &lt;/xsl:stylesheet&gt;</pre>
+      
+      
       <h3>Overview of the assignment</h3>
       <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document that consists only of a table with companies, addresses, and working conditions. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. You can
          read more about HTML tables at 
@@ -119,12 +121,13 @@
             table.</li>
          <li>The values you use to populate your table cells come from attributes. Remember that
             attributes are on the <dfn>attribute axis</dfn>, which you can address by prefixing
-            the name of the attribute with an <q>at</q> sign. For example, open NelsonArtical_1888-07-30.xml in
+            the name of the attribute with an <q>at</q> sign. 
+            <p>Open <a href="NelsonArticle_1888-07-30.xml">NelsonArtical_1888-07-30.xml</a> in
             &lt;oXygen/&gt;, go into the XPath browser box in the upper left, and search for
             <code>//articleBody/company/@ref</code>, and you’ll retrieve all of the
             <code>@ref</code> attribute values associated with <code>&lt;company&gt;</code>
             elements. You won’t use this exact XPath in your assignment, but it can serve to
-            remind you how you address an attribute in XPath.</li>
+            remind you how you address an attribute in XPath.</p></li>
       </ol>
         <p>For your assignment, then, you need to create an HTML table with a header row that labels the
             columns (Company Name | Address | Wage Description), and then create a separate row with data for each company.</p>

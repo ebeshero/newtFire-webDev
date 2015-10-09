@@ -25,10 +25,13 @@
    <xsl:template match="articleBody">
         <tr>
             <td>
-               <xsl:apply-templates select="//company[@ref]"/>
+                <xsl:apply-templates select="distinct-values(//company/@ref)"/>
+               <!--<xsl:for-each select="company[@ref]">
+                    <xsl:value-of select="."/>
+                </xsl:for-each>-->
             </td>
             <td>
-                <xsl:apply-templates select="//location[@ref][@type='address']"/>
+                <xsl:apply-templates select="distinct-values(//location[@ref][@type='address'])"/>
             </td>
             <td>
                 <xsl:apply-templates select="//workingConditions[@ref][@category='wageDesc']"/>
