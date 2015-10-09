@@ -252,10 +252,10 @@
             that new list item we do two things. First, we apply templates to the
             <code>&lt;head&gt;</code> for the <code>&lt;listOrg&gt;</code>, which will cause its category description to
             be output when we run the transformation. Second, we create wrapper <code>&lt;ul&gt;</code> tags for the nested
-            list that will contain the titles of the scenes. Inside that new
+            list that will contain the names of the organizations within that category. Inside that new
             <code>&lt;ul&gt;</code> element, we use an
             <code>&lt;xsl:apply-templates&gt;</code> rule to apply templates to (that is, to
-            process) the scenes of that act.</li>
+            process) the <code>&lt;org&gt;</code> elements of that <code>&lt;listOrg&gt;</code>.</li>
          <li>We have a separate template rule that matches the <code>&lt;org&gt;</code> elements, which make up the items in the list of organizations, 
             and that just applies
             templates to the <code>&lt;orgName&gt;</code> element within each <code>&lt;org&gt;</code>.
