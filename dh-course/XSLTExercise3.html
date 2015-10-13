@@ -17,91 +17,440 @@
       			
       <h1><span class="banner">XSLT Exercise 3</span></h1>
      <h3>The input text</h3>
-         <p>For this assignment we’ll be using an XML file originally prepared by students in the Nell Nelson project team last fall. 
-            We’ve modified it for use as an XSLT exercise, and the new version
-            is available here at <a href="NelsonArticle_1888-07-30.xml">http://newtfire.org/dh/NelsonArticle_1888-07-30.xml</a>. You should
-            right-click on this link, download the file, and open it in &lt;oXygen/&gt;. We’ll be
+         <p>For this assignment we’ll be using an XML file containing data from The Resotration of Nell Nelson project. 
+            The source text can be found here:
+            <a href="WSGATableCh1.xml">WSGATableCh1.xml</a>. You should
+            right-click on this link, download the file, and open it in &lt;oXygen/&gt;. We’ll may be
             using it for subsequent XSLT assignments, so keep a copy when you’re done with this one.
          </p>
-      <p>Because this document (unlike our work with the Georg Forster Voyage File or the Digital Mitford Site Index) is not in a namespace,
-         you should not add the <code>@xpath-default-namespace</code> attribute, and we do not need to alter &lt;oXygen&gt;'s default XSLT stylesheet template at all this time unless you wish to alter the xsl:output.</p>
-      <p>To begin your XSLT stylesheet should look like this:</p>      
+      <p>This file is coded in the TEI namespace, which means that your XSLT stylesheet
+         must include an instruction at the top to specify that when it tries to match elements, it needs to
+         match them in that TEI namespace. When you create a new XSLT document in &lt;oXygen/&gt; it
+         won’t contain that instruction by default, so <em>whenever you are working with TEI</em> you need to add it (See the text in <span style="color:blue;">blue</span> below). We also need to make sure that our XSLT parser understands it is outputting results to the TEI namespace, so we change one more line (See the text in <span style="color:red;">red</span> below).Our modified stylesheet template looks like the following:</p>
       <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-      xmlns:xs="http://www.w3.org/2001/XMLSchema"
-         xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    exclude-result-prefixes="xs math"
-    <span style="color:purple;">xmlns="http://www.w3.org/1999/xhtml"</span>
-         version="3.0"&gt;
-    
-         <span style="color:red;">&lt;xsl:output method="xhtml" doctype-system="about:legacy-compat"/&gt;</span>
+    <span style="color:blue;">xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>
+    <span style="color:red;">xmlns="http://www.tei-c.org/ns/1.0"</span>
+    version="3.0">
     
 &lt;/xsl:stylesheet&gt;</pre>
       
       
       <h3>Overview of the assignment</h3>
-      <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document that consists only of a table with companies, addresses, and working conditions. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. You can
-         read more about HTML tables at 
+      <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document that consists only of a table. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. You can read more about HTML tables at 
          <a href="http://www.w3schools.com/html/html_tables.asp">http://www.w3schools.com/html/html_tables.asp</a>.</p>
          <p>The desired output will look like:</p>
          <div class="code">
-            <!-- RJP: this is temp. just to see how it looks while I finish the XSLT--><table>
-            
-               <!-- DATA BINDING -->
+            <h1>Sanitary Conditions of Workshops and Factories in New York City</h1>
+            <h2>Table 1: Yes or No Questions</h2>
+            <table>
                <tr>
-               <th>Company Name</th>
-               <th>Address</th>
-               <th>Working Conditions</th>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-            <tr>
-               <td></td>
-               <td></td>
-               <td></td>
-            </tr>
-         </table>
+                  <th>Number</th>
+                  <th>Question</th>
+                  <th>Yes</th>
+                  <th>Yes, but fined</th>
+                  <th>No</th>
+                  <th>Blank</th>
+                  <th>Total Responses</th>
+               </tr>
+               <tr>
+                  <td>1</td>
+                  <td>
+                     Is there free circulation of air through and about the building in which you work? 
+                     
+                  </td>
+                  <td>468</td>
+                  <td></td>
+                  <td>249</td>
+                  <td>93</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>
+                     Are there offensive odors in the rooms occupied by employes[?]
+                     
+                  </td>
+                  <td>342</td>
+                  <td></td>
+                  <td>233</td>
+                  <td>235</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>3</td>
+                  <td>
+                     Are there facilities for washing?
+                     
+                  </td>
+                  <td>460</td>
+                  <td>14</td>
+                  <td>124</td>
+                  <td>226</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>4</td>
+                  <td>
+                     Are seats provided, as prescribed by law?
+                     
+                  </td>
+                  <td>320</td>
+                  <td></td>
+                  <td>192</td>
+                  <td>298</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>5</td>
+                  <td>
+                     Are employes furnished with pure drinking water?
+                     
+                  </td>
+                  <td>527</td>
+                  <td></td>
+                  <td>102</td>
+                  <td>181</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>6</td>
+                  <td>
+                     Does the work require the employes to stoop over?
+                     
+                  </td>
+                  <td>587</td>
+                  <td></td>
+                  <td>116</td>
+                  <td>107</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>7</td>
+                  <td>
+                     Are there proper and separate facilities for change of dress by males and females?
+                     
+                  </td>
+                  <td>354</td>
+                  <td></td>
+                  <td>221</td>
+                  <td>235</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>8</td>
+                  <td>
+                     Are there separate water-closets for males and females[?]
+                     
+                  </td>
+                  <td>509</td>
+                  <td></td>
+                  <td>126</td>
+                  <td>175</td>
+                  <td>810</td>
+               </tr>
+               <tr>
+                  <td>9</td>
+                  <td>
+                     Are there stairways from the windows outside?
+                     
+                  </td>
+                  <td>350</td>
+                  <td></td>
+                  <td>318</td>
+                  <td>148</td>
+                  <td>816</td>
+               </tr>
+               <tr>
+                  <td>10</td>
+                  <td>
+                     Are the rooms supplied with water pipes?
+                     
+                  </td>
+                  <td>265</td>
+                  <td></td>
+                  <td>385</td>
+                  <td>165</td>
+                  <td>815</td>
+               </tr>
+               <tr>
+                  <td>11</td>
+                  <td>
+                     Are there hose attachments?
+                     
+                  </td>
+                  <td>224</td>
+                  <td></td>
+                  <td>375</td>
+                  <td>218</td>
+                  <td>817</td>
+               </tr>
+               <tr>
+                  <td>12</td>
+                  <td>
+                     Are there water tanks and buckets on each floor?
+                     
+                  </td>
+                  <td>236</td>
+                  <td></td>
+                  <td>387</td>
+                  <td>198</td>
+                  <td>821</td>
+               </tr>
+            </table>
+            <h2>Table 2: Sources of Offensive Odors</h2>
+            <table>
+               <tr>
+                  <th>Question</th>
+                  <th>Water Closet</th>
+                  <th>Other Sources</th>
+                  <th>Total Responses</th>
+               </tr>
+               <tr>
+                  <td>
+                     [If there are offensive odors in the rooms], from what causes?
+                     
+                  </td>
+                  <td>81</td>
+                  <td>73</td>
+                  <td>154</td>
+               </tr>
+            </table>
+            <h2>Table 3: Standing or Sitting at Work</h2>
+            <table>
+               <tr>
+                  <th>Question</th>
+                  <th>Sit</th>
+                  <th>Stand</th>
+                  <th>Optional</th>
+                  <th>Blank</th>
+                  <th>Total Responses</th>
+               </tr>
+               <tr>
+                  <td>
+                     Are employees compelled to stand or sit at their work?
+                     
+                  </td>
+                  <td>469</td>
+                  <td>175</td>
+                  <td>67</td>
+                  <td>99</td>
+                  <td>810</td>
+               </tr>
+            </table>
          </div>
       <p>The underlying raw HTML, which we generated by running XSLT, should look like this:</p>
       <pre>
-         
-         
-      </pre>
+  &lt;h1&gt;Sanitary Conditions of Workshops and Factories in New York City&lt;/h1&gt;
+      &lt;h2&gt;Table 1: Yes or No Questions&lt;/h2&gt;
+      &lt;table&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Number&lt;/th&gt;
+            &lt;th&gt;Question&lt;/th&gt;
+            &lt;th&gt;Yes&lt;/th&gt;
+            &lt;th&gt;Yes, but fined&lt;/th&gt;
+            &lt;th&gt;No&lt;/th&gt;
+            &lt;th&gt;Blank&lt;/th&gt;
+            &lt;th&gt;Total Responses&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;
+               Is there free circulation of air through and about the building in which you work? 
+               
+            &lt;/td&gt;
+            &lt;td&gt;468&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;249&lt;/td&gt;
+            &lt;td&gt;93&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;
+               Are there offensive odors in the rooms occupied by employes[?]
+               
+            &lt;/td&gt;
+            &lt;td&gt;342&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;233&lt;/td&gt;
+            &lt;td&gt;235&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;
+               Are there facilities for washing?
+               
+            &lt;/td&gt;
+            &lt;td&gt;460&lt;/td&gt;
+            &lt;td&gt;14&lt;/td&gt;
+            &lt;td&gt;124&lt;/td&gt;
+            &lt;td&gt;226&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;4&lt;/td&gt;
+            &lt;td&gt;
+               Are seats provided, as prescribed by law?
+               
+            &lt;/td&gt;
+            &lt;td&gt;320&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;192&lt;/td&gt;
+            &lt;td&gt;298&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;5&lt;/td&gt;
+            &lt;td&gt;
+               Are employes furnished with pure drinking water?
+               
+            &lt;/td&gt;
+            &lt;td&gt;527&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;102&lt;/td&gt;
+            &lt;td&gt;181&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;
+               Does the work require the employes to stoop over?
+               
+            &lt;/td&gt;
+            &lt;td&gt;587&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;116&lt;/td&gt;
+            &lt;td&gt;107&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;7&lt;/td&gt;
+            &lt;td&gt;
+               Are there proper and separate facilities for change of dress by males and females?
+               
+            &lt;/td&gt;
+            &lt;td&gt;354&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;221&lt;/td&gt;
+            &lt;td&gt;235&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;8&lt;/td&gt;
+            &lt;td&gt;
+               Are there separate water-closets for males and females[?]
+               
+            &lt;/td&gt;
+            &lt;td&gt;509&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;126&lt;/td&gt;
+            &lt;td&gt;175&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;9&lt;/td&gt;
+            &lt;td&gt;
+               Are there stairways from the windows outside?
+               
+            &lt;/td&gt;
+            &lt;td&gt;350&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;318&lt;/td&gt;
+            &lt;td&gt;148&lt;/td&gt;
+            &lt;td&gt;816&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;10&lt;/td&gt;
+            &lt;td&gt;
+               Are the rooms supplied with water pipes?
+               
+            &lt;/td&gt;
+            &lt;td&gt;265&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;385&lt;/td&gt;
+            &lt;td&gt;165&lt;/td&gt;
+            &lt;td&gt;815&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;11&lt;/td&gt;
+            &lt;td&gt;
+               Are there hose attachments?
+               
+            &lt;/td&gt;
+            &lt;td&gt;224&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;375&lt;/td&gt;
+            &lt;td&gt;218&lt;/td&gt;
+            &lt;td&gt;817&lt;/td&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;12&lt;/td&gt;
+            &lt;td&gt;
+               Are there water tanks and buckets on each floor?
+               
+            &lt;/td&gt;
+            &lt;td&gt;236&lt;/td&gt;
+            &lt;td&gt;&lt;/td&gt;
+            &lt;td&gt;387&lt;/td&gt;
+            &lt;td&gt;198&lt;/td&gt;
+            &lt;td&gt;821&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;h2&gt;Table 2: Sources of Offensive Odors&lt;/h2&gt;
+      &lt;table&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Question&lt;/th&gt;
+            &lt;th&gt;Water Closet&lt;/th&gt;
+            &lt;th&gt;Other Sources&lt;/th&gt;
+            &lt;th&gt;Total Responses&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;
+               [If there are offensive odors in the rooms], from what causes?
+               
+            &lt;/td&gt;
+            &lt;td&gt;81&lt;/td&gt;
+            &lt;td&gt;73&lt;/td&gt;
+            &lt;td&gt;154&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+      &lt;h2&gt;Table 3: Standing or Sitting at Work&lt;/h2&gt;
+      &lt;table&gt;
+         &lt;tr&gt;
+            &lt;th&gt;Question&lt;/th&gt;
+            &lt;th&gt;Sit&lt;/th&gt;
+            &lt;th&gt;Stand&lt;/th&gt;
+            &lt;th&gt;Optional&lt;/th&gt;
+            &lt;th&gt;Blank&lt;/th&gt;
+            &lt;th&gt;Total Responses&lt;/th&gt;
+         &lt;/tr&gt;
+         &lt;tr&gt;
+            &lt;td&gt;
+               Are employees compelled to stand or sit at their work?
+               
+            &lt;/td&gt;
+            &lt;td&gt;469&lt;/td&gt;
+            &lt;td&gt;175&lt;/td&gt;
+            &lt;td&gt;67&lt;/td&gt;
+            &lt;td&gt;99&lt;/td&gt;
+            &lt;td&gt;810&lt;/td&gt;
+         &lt;/tr&gt;
+      &lt;/table&gt;
+</pre>
       
       <h3>Analysis of the task</h3>
-      <p>The information that you want to output is all found inside the <code>&lt;articleBody&gt;</code> element in our input document. For the moment we’re going to ignore
-         everything else inside of the <code>&lt;head&gt;</code> including the <code>&lt;headLine&gt;</code> elements. You want to generate one HTML
-         table to contain information that you’ll extract from the <code>@ref</code>
-         attributes associated with elements <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code>.  Your XSLT, then, should proceed along the following lines:</p>
+      <p>The information that you want to output is all found inside the <code>&lt;div type="table"&gt;</code> element in our input document. For the moment we’re going to ignore
+         everything else inside of the <code>&lt;teiHeader&gt;</code>. You want to generate one HTML
+         table to contain all of the question that have the corresponding answers "Yes", "Yes, but fined", "No", and "Blank". The table should also contain the numerical values for each of those responses. Finally the table should include a total for each questions responses so we know how many people responded for each question. Your XSLT, then, should proceed along the following lines:</p>
       <ol>
          <li>In a template rule for the document node (<code>&lt;xsl:template
             match="/"&gt;</code>), create the HTML superstructure. Between the start and end
             <code>&lt;body&gt;</code> tags that you’ll be creating you should insert the
-            main tags for an HTML tables. Between the start and end <code>&lt;table&gt;</code> tags, you should then insert
+            main tags for the HTML tables. Between the start and end <code>&lt;table&gt;</code> tags, you should then insert
             <code>&lt;xsl:apply-template&gt;</code> elements that select the nodes you want
-            to process to build the table. Be careful, though; there may be
-            <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements
-            elsewhere in the document, such as inside <code>&lt;headLine&gt;</code> elements,
-            and for the tables you’re producing you want only the ones that are inside the
-            <code>&lt;articleBody&gt;</code> element.</li>
+            to process to build the table.</li>
          <li>In XSLT, processing something normally happens in two parts. You normally have an
             <code>&lt;xsl:apply-templates&gt;</code> element that tells the system what
             elements (or other nodes) you want to process, and you then have an
@@ -113,8 +462,9 @@
             </em>and the various <code>&lt;xsl:template&gt;</code> elements sit around watching
             nodes fly by, and when they match something, they <em>grab it and process it</em>.
             In this case, then, your <code>&lt;xsl:apply-template&gt;</code> elements inside the
-            template rule for the document node will tell the system that you want to process
-            <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements, at
+            template rule for the document node will tell the system that you want to process fs[f[@name='response'][@select='Yes']]
+            the <code>&lt;string&gt;</code> elements inside <code>&lt;f name="question"&gt;</code> and all of the corresponding respoonse (<code>&lt;f name="response"&gt;</code>) and the corresponding  <code>&lt;string&gt;</code> insides of the <code>&lt;f name="note"&gt;</code> element all sitting inside of the same <code>&lt;fs&gt;</code> element. In order to specify that you only want specific Yes or No Questions then the <code>&lt;xsl:apply-template&gt;</code> elements inside the
+            template rule for the document node will tell the system that you also want to process the following elements only when one of the <code>&lt;f name="response"&gt;</code> has an <code>@select="Yes"</code>, at
             which point the template rule for the document node will have done its work by
             announcing what needs to be done. That work actually gets done by other
             <code>&lt;xsl:template&gt;</code> rules, the ones that you’ve written that match
