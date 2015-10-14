@@ -462,9 +462,8 @@
             </em>and the various <code>&lt;xsl:template&gt;</code> elements sit around watching
             nodes fly by, and when they match something, they <em>grab it and process it</em>.
             In this case, then, your <code>&lt;xsl:apply-template&gt;</code> elements inside the
-            template rule for the document node will tell the system that you want to process fs[f[@name='response'][@select='Yes']]
-            the <code>&lt;string&gt;</code> elements inside <code>&lt;f name="question"&gt;</code> and all of the corresponding respoonse (<code>&lt;f name="response"&gt;</code>) and the corresponding  <code>&lt;string&gt;</code> insides of the <code>&lt;f name="note"&gt;</code> element all sitting inside of the same <code>&lt;fs&gt;</code> element. In order to specify that you only want specific Yes or No Questions then the <code>&lt;xsl:apply-template&gt;</code> elements inside the
-            template rule for the document node will tell the system that you also want to process the following elements only when one of the <code>&lt;f name="response"&gt;</code> has an <code>@select="Yes"</code>, at
+            template rule for the document node will tell the system that you want to process the <code>&lt;string&gt;</code> elements of the <code>&lt;f name="question"&gt;</code> and all of the corresponding respoonses (<code>&lt;f name="response"&gt;</code>) and the corresponding  <code>&lt;string&gt;</code> insides of the <code>&lt;f name="note"&gt;</code> element all sitting inside of the same <code>&lt;fs&gt;</code> element. In order to specify that you only want specific Yes or No Questions then the <code>&lt;xsl:apply-template&gt;</code> elements inside the
+            template rule for the document node will tell the system that you want to process the following elements only when one of the <code>&lt;f name="response"&gt;</code> has an <code>@select="Yes"</code>, at
             which point the template rule for the document node will have done its work by
             announcing what needs to be done. That work actually gets done by other
             <code>&lt;xsl:template&gt;</code> rules, the ones that you’ve written that match
