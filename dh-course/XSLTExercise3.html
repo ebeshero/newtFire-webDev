@@ -451,6 +451,7 @@
             main tags for the HTML tables. Between the start and end <code>&lt;table&gt;</code> tags, you should then insert
             <code>&lt;xsl:apply-template&gt;</code> elements that select the nodes you want
             to process to build the table.</li>
+         
          <li>In XSLT, processing something normally happens in two parts. You normally have an
             <code>&lt;xsl:apply-templates&gt;</code> element that tells the system what
             elements (or other nodes) you want to process, and you then have an
@@ -462,32 +463,35 @@
             </em>and the various <code>&lt;xsl:template&gt;</code> elements sit around watching
             nodes fly by, and when they match something, they <em>grab it and process it</em>.
             In this case, then, your <code>&lt;xsl:apply-template&gt;</code> elements inside the
-            template rule for the document node will tell the system that you want to process the <code>&lt;string&gt;</code> elements of the <code>&lt;f name="question"&gt;</code> and all of the corresponding respoonses (<code>&lt;f name="response"&gt;</code>) and the corresponding  <code>&lt;string&gt;</code> insides of the <code>&lt;f name="note"&gt;</code> element all sitting inside of the same <code>&lt;fs&gt;</code> element. In order to specify that you only want specific Yes or No Questions then the <code>&lt;xsl:apply-template&gt;</code> elements inside the
+            template rule for the document node will tell the system that you want to process the <code>&lt;string&gt;</code> elements of the <code>&lt;f name="question"&gt;</code> and all of the corresponding responses (<code>&lt;f name="response"&gt;</code>) and the corresponding  <code>&lt;string&gt;</code> insides of the <code>&lt;f name="note"&gt;</code> element all sitting inside of the same <code>&lt;fs&gt;</code> element. In order to specify that you only want specific Yes or No Questions then the <code>&lt;xsl:apply-template&gt;</code> elements inside the
             template rule for the document node will tell the system that you want to process the following elements only when one of the <code>&lt;f name="response"&gt;</code> has an <code>@select="Yes"</code>, at
             which point the template rule for the document node will have done its work by
             announcing what needs to be done. That work actually gets done by other
             <code>&lt;xsl:template&gt;</code> rules, the ones that you’ve written that match
-            the <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements.</li>
-         <li>In the <code>&lt;xsl:template&gt;</code> rules for <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> elements you’ll need to output something for each one. That is, for each <code>&lt;company&gt;</code>, <code>&lt;location&gt;</code>, and <code>&lt;workingConditions&gt;</code> element, you’ll need to output a line in your
-            table.</li>
-         <li>The values you use to populate your table cells come from attributes. Remember that
+            the <code>&lt;f name="response"&gt;</code> with <code>@select="Yes"</code></li>
+         
+         <li>In the <code>&lt;xsl:template&gt;</code> rules for <code>&lt;string&gt;</code> elements of the <code>&lt;f name="question"&gt;</code> you’ll need to output something for each one. That is, for each <code>&lt;f name="response"&gt;</code> inside of the same <code>&lt;fs&gt;</code> element as the <code>&lt;f name="response"&gt;</code> with <code>@select="Yes"</code>.</li>
+         
+         <li>The values you use to populate your table cells come from <code>@n</code> attributes. Remember that
             attributes are on the <dfn>attribute axis</dfn>, which you can address by prefixing
             the name of the attribute with an <q>at</q> sign. 
-            <p>Open <a href="NelsonArticle_1888-07-30.xml">NelsonArtical_1888-07-30.xml</a> in
+            <p>Open <a href="WSGATableCh1.xml">the XML</a> in
             &lt;oXygen/&gt;, go into the XPath browser box in the upper left, and search for
-            <code>//articleBody/company/@ref</code>, and you’ll retrieve all of the
-            <code>@ref</code> attribute values associated with <code>&lt;company&gt;</code>
+               <code>//f[@name="response"]/@n</code>, and you’ll retrieve all of the
+            <code>@n</code> attribute values associated with <code>&lt;f name="response"&gt;</code>
             elements. You won’t use this exact XPath in your assignment, but it can serve to
             remind you how you address an attribute in XPath.</p></li>
       </ol>
         <p>For your assignment, then, you need to create an HTML table with a header row that labels the
-            columns (Company Name | Address | Wage Description), and then create a separate row with data for each company.</p>
-            
+           columns according to all the responses that correspond with a possible answer of yes; therefore, <code>&lt;th&gt;Number&lt;/th&gt;
+              &lt;th&gt;Question&lt;/th&gt;
+              &lt;th&gt;Yes&lt;/th&gt;
+              &lt;th&gt;Yes, but fined&lt;/th&gt;
+              &lt;th&gt;No&lt;/th&gt;
+              &lt;th&gt;Blank&lt;/th&gt;
+              &lt;th&gt;Total Responses&lt;/th&gt;</code>, and then create a separate row with data for each number, question, and response.</p>
+         <p>Take this a step further and ouput the other tables for questions that require responses other than YES or NO.  Create a table for the question identifying source of smells and another table for the question regarding responses about sitting or standing. Perhaps create one large table that contains all of this date, but consider how some of those cells will have to be empty for specific questions that don't have other specific answers. </p>
       
-      
-     				
-    
-    
       <h3>Important</h3>
       <ul>
          <li><em>Before submitting your homework, you must run the transformation at home</em> to
