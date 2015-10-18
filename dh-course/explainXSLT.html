@@ -246,65 +246,66 @@
       </p>
       			
       			
-      <div class="code">
-         				&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />
-         				&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"<br />
-         					<span class="indent">xmlns:xs="http://www.w3.org/2001/XMLSchema"</span><br />
-         					<span class="indent">xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs
-            math"</span><br />
-         					<span class="indent">xmlns="http://www.w3.org/1999/xhtml" version="3.0"</span><br />
-         					<span class="indent">xpath-default-namespace="http://www.tei-c.org/ns/1.0"&gt;</span><br />
-         				
-         				&lt;xsl:output method="xhtml" indent="yes" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/&gt;<br />
-         					
-         					<span class="code">&lt;xsl:template match="/"&gt;</span><br />
-         					<span class="indent">&lt;html&gt;</span><br />
-         				<span class="indentMore">&lt;head&gt;</span><br />
-         				<span class="indentEvMore">&lt;title&gt;Places Mentioned in Georg Forster Account&lt;/title&gt;</span><br />
-         				<span class="indentMore">&lt;/head&gt;</span><br />
-         				<span class="indent">&lt;body&gt;</span><br />
-         				<span class="indentMore">&lt;h1&gt;Places Listed in Each Chapter of Georg Forster’s Voyage Record&lt;/h1&gt;</span><br />
-         								
-         				<span class="indentMore">&lt;ul&gt;</span><br />
-         				<span class="code"><span class="indentEvMore">&lt;xsl:apply-templates select="//text/body//div[@type=’chapter’]"/&gt;</span></span><br />
-         				<span class="indentMore">&lt;/ul&gt;</span><br />
-         				<span class="indent">&lt;/body&gt;</span><br />
-         							
-         				<span class="indent">&lt;/html&gt;</span><br />
-         							<span class="code">&lt;/xsl:template&gt;</span><br />
-         					
-         					<span class="code">&lt;xsl:template match="div[@type='chapter']"&gt;</span><br />
-         						
-         				<span class="indent">&lt;li&gt;</span><br />
-         							<span class="code"><span class="indentMore">&lt;xsl:apply-templates select="head/l"/&gt;</span></span><br />
-         							
-         				<span class="indentMore">&lt;ul&gt;</span><br />
-         							<span class="code"><span class="indentMore">&lt;xsl:apply-templates select=".//placeName"/&gt;</span></span><br />
-         				<span class="indentMore">&lt;/ul&gt;</span><br />	
-         							<span class="indent">&lt;/li&gt;</span><br />
-         						
-         						<span class="code">&lt;/xsl:template&gt;</span><br />
-         					
-         					<span class="code">&lt;xsl:template match="placeName"&gt;</span><br />
-         					
-         					<span class="indentMore">&lt;li&gt;<span class="code">&lt;xsl:apply-templates/&gt;</span>&lt;/li&gt;</span><br />
-         					
-         						
-         						&lt;/xsl:template&gt;<br />
-         						&lt;/xsl:stylesheet&gt; 			
+      <pre>
+         		&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
+    xmlns="http://www.w3.org/1999/xhtml" version="3.0"
+    xpath-default-namespace="http://www.tei-c.org/ns/1.0"&gt;
+    &lt;xsl:output method="xhtml" indent="yes" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/&gt;
+   <span class="code"> &lt;xsl:template match="/"&gt;</span>
+        &lt;html&gt;
+            &lt;head&gt;
+                &lt;title&gt;Places Mentioned in Georg Forster Account&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;h1&gt;Places Listed in Each Chapter of Georg Forster’s Voyage Record&lt;/h1&gt;
+                &lt;ul&gt;
+                    <span class="code">&lt;xsl:apply-templates select="//text/body//div[@type='chapter']"/&gt;</span>
+                &lt;/ul&gt;
+            &lt;/body&gt;
+        &lt;/html&gt;
+    <span class="code">&lt;/xsl:template&gt;</span>
+   <span class="code"> &lt;xsl:template match="div[@type='chapter']"&gt;</span>
+        &lt;li&gt;
+            <span class="code">&lt;xsl:apply-templates select="head/l"/&gt;</span>
+            &lt;ul&gt;
+                <span class="code">&lt;xsl:apply-templates select=".//p/placeName"/&gt;</span>
+                <span style="color:green;">&lt;!--ebb: In this stylesheet, we wanted to include only the placeName elements inside the body paragraphs of the chapters. 
+                   So we set our @select statement to step down and collect only these placeNames --&gt;</span>
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    <span class="code">&lt;/xsl:template&gt;</span>
+    <span class="code">&lt;xsl:template match="p/placeName"&gt;</span>
+        <span style="color:green;">&lt;!--ebb: This template rule matches on a pattern: 
+           Any time this rule is called, it finds a placeName that is the child of a body paragraph. In the previous template rule, we called for this template to be applied *only selectively* 
+           that is, *only to the placeNames inside the paragraphs within chapter div elements.* So this template rule will only fire under those selective conditions. --&gt;</span>
+        <span class="code">&lt;li&gt;&lt;xsl:apply-templates/&gt;</span>
+        <span style="color:green;">&lt;!--ebb: When we don't use an @select on apply-templates, we simply output the content of the element we're matching on, and we output it as plain text. 
+           Try copying and pasting this XSLT into oXygen, run it over the Georg Forster file, and study the output HTML. As you'll see from the output, perhaps we should consider modifying this rule! 
+           We seem to be outputting note elements that are children of placeName in this document, which introduces some clutter to our output results! 
+           Sometimes running a transformation can show us some things we may want to change about our source code, 
+           or things we can try to exclude or modify in our XSLT transformation. --&gt;</span>
+        &lt;/li&gt;
+    &lt;/xsl:template&gt;
+   
+&lt;/xsl:stylesheet&gt;			
          			
-      </div>
+      </pre>
       			
       <p>In the stylesheet above, the very first template rule matches on <span class="code">"/"</span>, and that indicates the XML root element. When we transform XML to HTML we begin with this 
-         template match on root, so that we say the basic structural elemetns of the XML file are to be replaced by the basic structural elements of an HTML document. 
-         We begin basically writing the document hierarchy of an HTML page, from its <span class="code">&lt;html&gt;</span> document node (or root) onward, any <strong>outer level</strong> element that we expect to appear only <strong>once</strong> in the document hierarchy. 
+         template match on root, so that we say the basic structural elements of the XML file are to be replaced by the basic structural elements of an HTML document. 
+         We begin basically writing the document hierarchy of an HTML page, from its <span class="code">&lt;html&gt;</span> document node (or root) onward, any <strong>outer level</strong> element that we expect to appear <strong>only once</strong> in the document hierarchy. 
          So up here in the template rule matching on the document node, we plot out the basic structural units of the HTML file and we set up the outer element that creates any unordered list or table we need. 
          Where we need to reach in and grab more deeply nested, repeating elements in the hierarchy, we need to invoke and fire new template rules, via <span class="code">xsl:apply-templates</span>, 
          which we can specify as needed with the <span class="code">@select</span> attribute to direct which parts of the XML file will be consumed and processed in particular lists or positions in the output HTML document. Notice that the <span class="code">@select</span> attribute on <span class="code">xsl:apply-templates</span> is a <strong>literal XPath expression</strong>. In the template rule matching <span class="code">div @type="chapter"</span> we see two ways of stepping down into a literal XPath from the current context node,
          whatever it is: In the <em>first</em> <span class="code">xsl:apply-templates @select</span>, we step into a child node and then down another path step to the <span class="code">&lt;l&gt;</span> (or line) element that is the child of head:
          <span class="code">head/l</span>. In the <em>second</em> <span class="code">xsl:apply-templates @select</span>, we use the <strong>"dot" notation</strong> to indicate the current context node. This dot notation, <span class="code">.</span>, is very important
-         because our <span class="code">//</span> descendent axis notation would otherwise be read as starting from the root of the
-         XML tree and heading all the way down, rather than reading within a specific chapter and looking all the way down through its children and children's children, but <em>only</em> within the chapter. Notice that we <em>do not need</em> to use the dot notation to designate <em>immediate children</em> of the current context node, but we <em>do</em> need the dot when we step down the descendent axis, because <span class="code">//</span> could otherwise indicate an XPath that begins at the root element of the document. This is because <span class="code">xsl:apply-templates @select</span> is a <strong>literal XPath expression</strong> that <em>must be defined in terms of the current context node</em>, quite unlike what we described with the <em>“XPath-like”</em> syntax in the template’s <span class="code">@match</span>.
+         because when there is nothing indicated to the left of it our <span class="code">//</span> descendent axis notation (or a <span class="code">/</span> child axis notation) would otherwise be read as starting from the root of the
+         XML tree and heading all the way down, rather than reading within a specific chapter and looking all the way down through its children and children ’s children <em>only within the chapter</em>.  This is because <span class="code">xsl:apply-templates @select</span> is a <strong>literal XPath expression</strong> that <em>must be defined in terms of the current context node</em>, quite unlike what we described with the <strong>“XPath-like”</strong> syntax in the template’s <span class="code">@match</span>. Notice that we only need to use the dot notation when we are designating the descendant axis from the current context node. We do not use it here to step down to the <em>immediate child</em>  or over to <em>an attribute</em> on the current context node: we can simply designate those by element name or by @attribute and no slash is necessary (so therefore no dot notation is necessary either). So that is why we wrote: <span class="code">&lt;xsl:apply-templates select="head/l"/&gt;</span> in the first template rule above; but we wrote <span class="code">&lt;xsl:apply-templates select=".//p/placeName"/&gt;</span> in the same rule, in order to step down the descendant axis from the context node. We do not need the dot unless we have to designate a path jump down the descendant axis from the current context. 
+         
+        
       </p>
       			
       <h4>Calculating and Outputting XPath Functions</h4>
