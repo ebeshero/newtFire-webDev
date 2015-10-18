@@ -1,0 +1,157 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>XSLT Exercise 5</title>
+    </head>
+    
+    
+    
+    <body>
+        <!--#include virtual="top.html" -->
+        
+        
+        <h1><span class="banner">XSLT Exercise 5</span></h1>
+        <h3>The input text</h3>
+        <p>For this assignment you will be working with a collection of Emily Dickinson's poems that she bound together. 
+            To access the collection you will need to use our DHClass-Hub, so you can work with <strong>a directory of files</strong> rather than just one at a time as we have been doing up to this point.  
+            download from <a href="shakespeare-sonnets.xml"
+                >http://dh.obdurodon.org/shakespeare-sonnets.xml</a>. You should right-click on this
+            link, download the file, and open it in &lt;oXygen/&gt;.</p>
+        <h3>Using modal XSLT</h3>
+        <p>What happens if you need to process the same nodes in your document in two different
+            ways? For example, what happens if you need to output them as list items in a table of
+            contents, but also as headers or text in the main body of your document, below the table
+            of contents? Wouldn’t it be handy to be able to have two completely different template
+            rules that match exactly the same elements, one rule to output the data as list items in
+            the table of contents and the other to output the same data as headers? You can write
+            two template rules that will match the same nodes (have the same value for their
+            <code>@match</code> attribute), but how do you make sure that the correct one is
+            handling the data in the correct place?</p>
+        <p>For this assignment we would like you to get some experience working with modal XSLT. As
+            is explained at <a href="modal-xslt.html">http://dh.obdurodon.org/modal-xslt.html</a>,
+            modal XSLT allows you to output the same parts of the input XML document in multiple
+            locations and treat them differently each time. That is, it lets you have two different
+            template rules for processing the same elements or other nodes in different ways, and
+            you use the <code>@mode</code> attribute to control how the elements are processed
+            <em>at a particular place</em> in the transformation.</p>
+        <h3>Overview of the assignment</h3>
+        <p>For this assignment you want to produce an HTML version of the sonnets with a table of
+            contents at the top. The table of contents should have one entry for each sonnet, which
+            gives the number of the sonnet and the first line. Below the full table of contents (one
+            line for each sonnet) you should render the complete text of all of the sonnets. You can
+            see our output at <a href="shakespeare-sonnets.xhtml"
+                >http://dh.obdurodon.org/shakespeare-sonnets.xhtml</a>.</p>
+        <h3>How to begin</h3>
+        <p>Begin by forgetting about the table of contents, and concentrate on just outputting the
+            full text of the sonnets. This is just like the XML-to-HTML transformations you have
+            already written, and you’ll use regular template rules (without a <code>@mode</code>
+            attribute) to perform the transformation. In <a href="shakespeare-sonnets.xhtml">our HTML
+                output</a> (scroll down past the table of contents, to where the full text of the
+            sonnets is rendered), the roman numeral before each sonnet is an HTML
+            <code>&lt;h2&gt;</code> element and the body of each sonnet is an HTML
+            <code>&lt;p&gt;</code> element. To make each line of the poems start on a new line,
+            we add an HTML empty <code>&lt;br/&gt;</code> (<q>[line] break</q>) element at the end
+            of each line within the stanza. If you don’t include the <code>&lt;br/&gt;</code>
+            elements, the lines will all wrap together in the browser. Here’s the HTML output for
+            one of our sonnets:</p>
+        <pre>&lt;h2&gt;VI&lt;/h2&gt;
+&lt;p&gt;Then let not winter's ragged hand deface,&lt;br/&gt;
+    In thee thy summer, ere thou be distill'd:&lt;br/&gt;
+    With beauty's treasure ere it be self-kill'd.&lt;br/&gt;
+    Make sweet some vial; treasure thou some place&lt;br/&gt;
+    That use is not forbidden usury,&lt;br/&gt;
+    Which happies those that pay the willing loan;&lt;br/&gt;
+    That's for thy self to breed another thee,&lt;br/&gt;
+    Or ten times happier, be it ten for one;&lt;br/&gt;
+    Ten times thy self were happier than thou art,&lt;br/&gt;
+    If ten of thine ten times refigur'd thee:&lt;br/&gt;
+    Then what could death do if thou shouldst depart,&lt;br/&gt;
+    Leaving thee living in posterity?&lt;br/&gt;
+    Be not self-will'd, for thou art much too fair&lt;br/&gt;
+    To be death's conquest and make worms thine heir.
+&lt;/p&gt;</pre>
+        <p style="font-size: smaller;"><strong>The fine print:</strong> Don’t worry if your HTML
+            output isn’t wrapped the same way ours is, if it puts the empty line break elements at
+            the beginnings of lines instead of at the ends, or if it serializes (spells out) those
+            empty line break elements as <code>&lt;br&gt;&lt;/br&gt;</code> instead of as
+            <code>&lt;br/&gt;</code>. Those differences are not <dfn>informational</dfn> in an
+            XML context. You can open your HTML output in &lt;oXygen/&gt; and pretty-print it if
+            you’d like, which may make it easier to read, but as long as what you’re producing is
+            valid HTML and renders the text appropriately, you don’t have to worry about
+            non-informational differences between your markup and ours.</p>
+        <p style="font-size: smaller;"><strong>More fine print:</strong> You need a line break only
+            between lines, which is to say that you don’t need a <code>&lt;br/&gt;</code> element at
+            the end of the last line of the sonnet because that’s the end of the containing
+            <code>&lt;p&gt;</code>, and not between lines. In our solution we used an
+            <code>&lt;xsl:if&gt;</code> element to check the position of the line and output the
+            <code>&lt;br/&gt;</code> only for non-final lines. If you’re feeling ambitious, you
+            can look up <code>&lt;xsl:if&gt;</code> at <a
+                href="http://www.w3schools.com/xsl/xsl_if.asp"
+                >http://www.w3schools.com/xsl/xsl_if.asp</a> or in Michael Kay and perform this
+            check yourself. If not, you can just output the <code>&lt;br/&gt;</code> element after
+            all lines of the sonnet, including the last. That’s not really considered good HTML
+            style, and you don’t want to do it in your own projects, but it won’t interfere with the
+            legibility in the browser and we’ll let it pass for homework purposes.</p>
+        <p>Once your sonnets are all being formatted correctly in HTML, you can add the
+            functionality to create the table of contents at the top.</p>
+        <h3>Adding the table of contents</h3>
+        <p>The template rule for the document node in our solution, revised to output a table of
+            contents before the text of the sonnets, looks like the following:</p>
+        <pre>&lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;title&gt;Shakespearean sonnets&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Shakespearean sonnets&lt;/h1&gt;
+            <span class="pre-highlight">&lt;h2&gt;Contents&lt;/h2&gt;
+            &lt;ul&gt;
+                &lt;xsl:apply-templates select="//sonnet" mode="toc"/&gt;
+            &lt;/ul&gt;
+            &lt;hr/&gt;</span>
+            &lt;xsl:apply-templates/&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+&lt;/xsl:template&gt;</pre>
+        <p>The highlighted code is what we added to include a table of contents, and the important
+            line is <code>&lt;xsl:apply-templates select="//sonnet" mode="toc"/&gt;</code>. This is
+            going to apply templates to each sonnet <em>with the <code>@mode</code> attribute value
+                set to <q>toc</q>.</em> The value of the <code>@mode</code> attribute is up to you
+            (we used <q>toc</q> for <q>table of contents</q>), but whatever you call it, setting the
+            <code>@mode</code> to any value means that only template rules that also specify a
+            <code>@mode</code> with that same value will fire in response to this
+            <code>&lt;xsl:apply-templates&gt;</code> element. Now we have to go write those
+            template rules!</p>
+        <p>What this means is that when you process the <code>&lt;sonnet&gt;</code> elements to
+            output the full poems, you use <code>&lt;xsl:apply-templates&gt;</code> and
+            <code>&lt;xsl:template&gt;</code> elements without any <code>@mode</code> attribute.
+            To create the table of contents, though, you can have
+            <code>&lt;xsl:apply-templates&gt;</code> and <code>&lt;xsl:template&gt;</code>
+            elements that select or match the same elements, but that specify a mode and apply
+            completely different rules. A template rule for <code>&lt;sonnet&gt;</code> elements in
+            table-of-contents mode will start with <code>&lt;xsl:template match="sonnet"
+                mode="toc"&gt;</code>, and you need to tell it to create an <code>&lt;li&gt;</code>
+            element that contains a roman numeral and a first line, both fetched from the sonnet in
+            the input XML file. The rule for those same elements not in any mode will start with
+            <code>&lt;xsl:template match="sonnet"&gt;</code> (without the <code>@mode</code>
+            attribute). That rule will create the <code>&lt;h2&gt;</code> header to hold the roman
+            numeral and then output the full text of the poem in a <code>&lt;p&gt;</code>, with
+            <code>&lt;br/&gt;</code> elements between the lines. In this way, you can have two
+            sets of rules for sonnets, one for the table of contents and one for the body, and use
+            modes to ensure that each is used only in the correct place.</p>
+        <p><em>Remember: both the <code>&lt;xsl:apply-templates&gt;</code>, which tells the system
+            to process certain nodes, and the <code>&lt;xsl:template&gt;</code> that responds to
+            that call and does the processing must agree on their mode values.</em> For the main
+            output of the full text of every poem, neither the
+            <code>&lt;xsl:apply-templates&gt;</code> nor the <code>&lt;xsl:template&gt;</code>
+            elements specifies a mode. To output the table of contents, both specify the same
+            mode.</p>
+        
+       
+    </body>
+</html>
