@@ -340,8 +340,8 @@
       			
       <div class="code">	&lt;xsl:template <span class="code">match="a-pattern-wherever-it-is-that-we-want-to-match"</span>&gt;<br />
          
-         					<span class="indent">INSIDE HERE we do stuff to process what we’ve matched, and we instruct XSLT what to
-            do next from this point in the document.</span><br />
+         					<span class="indent" style="color:green;">&lt;!--INSIDE HERE we write code to process what we’ve matched, and we instruct XSLT what to
+            do next from this point in the document.--&gt;</span><br />
          					
          					&lt;/xsl:template/&gt;<br />
          				
@@ -354,7 +354,7 @@
       				
       			
       <div class="code">			&lt;xsl:template match="wherever-it-is-that-we-want-to-match"&gt;<br/>	
-         					<span class="indent">&lt;newElement&gt; &lt;!--this is the new element we want to show up in the transformed document--&gt;</span><br />
+         					<span class="indent">&lt;newElement&gt; <span style="color:green;">&lt;!--This is the new element we want to show up in the transformed document--&gt;</span></span><br />
          					<span class="indentMore">&lt;xsl:apply-templates <span class="code">select="something-related-by-XPath-to-this-point-we’ve-matched</span>&gt;</span><br />
          				<span class="indent">&lt;/newElement&gt;</span><br/>
          				&lt;/xsl:template&gt;
