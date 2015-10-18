@@ -1,4 +1,3 @@
-<!--<?xml-model href="../Parker_NellNelsonProject_schema.rnc" type="application/relax-ng-compact-syntax"?>-->
 <root>
     <toneElements>
     <connotation id="sarcasmWit" tone="neutral"/>
@@ -20,16 +19,11 @@
     <workingCondition id="workDesc" tone="bad"/>
     <workingCondition id="descriptionNeutral" tone="neutral"/>
 </toneElements>
-    <!-- RJP: 2015-10-17: the <toneElements> element holds information needed to make this assignment compatible with newtfire.org XSLT Exercise 3: The contents of this element are not part of the transcription from the original article -->
+    <!-- RJP: 2015-10-17: The <toneElements> element holds information needed to make this assignment compatible with newtfire.org XSLT Exercise 4: The contents of this element are not part of the transcription from the original article. In fact this entire document is edited from the original and was simplified for use in this XSLT assignment. -->
    
-    <div type="newspaperArticle">
-     
-       <head>
-           <newspaperTitle> Chicago Times <date when="1888-07-30">Monday Morning, July 30, 1888</date>
-           Price <num type="price" amount=".02">2 CENTS</num></newspaperTitle>
+    <!-- RJP: 2015-10-17: Important Information to include in the head and/or <h1> element of XSLT Exercise 4 Html Output: Chicago Times July 30, 1888 CITY SLAVE GIRLS-->
 
-    <seriesTitle>CITY SLAVE GIRLS</seriesTitle>
-
+<head>
     <headLine>A <ref to="nellNelson">Lady Reporter</ref>’s Experience in the Shops with <desc
             of="workingClass">Sewing Serfs</desc>.</headLine>
 
@@ -40,18 +34,34 @@
     </headLine>
 
     <headLine>
-        <workingConditions category="wageDesc">A Poor Girl Who Worked from <date month="--01"
-                >January</date> to <date month="--07">July</date> to make <num type="wage"
+        <workingConditions category="wageDesc">A Poor Girl Who Worked from <date month="-\-01"
+                >January</date> to <date month="-\-07">July</date> to make <num type="wage"
                 amount="15.00">Fifteen Dollars</num>.</workingConditions>
     </headLine>
 
     <headLine>Making Shirts at <num type="wage" amount=".75">Seventy-Five Cents a Dozen</num> and
             <workingConditions category="negative">Finding Your Own Thread</workingConditions>.</headLine>
+    
+    <headLine>CLOAKS, OVERALLS, AND SHIRTS</headLine>
+    
+    <headLine><workingConditions category="negative">Put Through an Impudent Cross-Examination to Get to Sew <factoryItem>Cloaks</factoryItem> at <num type="wage" amount=".50">50 cents</num> Each
+        Making <factoryItem>Pants</factoryItem> and <factoryItem>Shirts</factoryItem> at <num type="wage" amount=".75">75 Cents</num> a Dozen and Find your Own Thread.</workingConditions></headLine> 
+    
+    <headLine>THE NEVER-RIP JERSEY.</headLine>
+    
+    <headLine>A Hard Day’s Work for <num type="wage" amount=".41">41 Cents</num></headLine>
+    
+    <headLine>Less Fortunate Workers Who Earned Only <num type="wage" amount=".11">11 Cents</num></headLine>
+    
+    <headLine>A Sick Girl’s Sad Story</headLine>
+    
+    <headLine><desc of="workingClass">The Hopeless Miss Who Longed to Be Married</desc>.</headLine>
 
     <headLine>The Trials of <desc of="workingClass">Poor Creatures</desc> Who Stitch the “Never
-        Rip Jersey.”</headLine>
+        Rip Jersey.”</headLine>   
+    
        
-       </head>
+</head>
 
 
     <articleBody>
@@ -209,12 +219,7 @@
         be-fore the law. All that can be done in the matter is to warn the public against a
             <unclear/> legally incorporated to grind the life out of the women and girls unfortunate
             enough to patronize it.
-    </articleBody>
-        <headLine>CLOAKS, OVERALLS, AND SHIRTS</headLine>
-        <headLine><workingConditions category="negative">Put Through an Impudent Cross-Examination to Get to Sew <factoryItem>Cloaks</factoryItem> at <num type="wage" amount=".50">50 cents</num> Each
-            Making <factoryItem>Pants</factoryItem> and <factoryItem>Shirts</factoryItem> at <num type="wage" amount=".75">75 Cents</num> a Dozen and Find your Own Thread.</workingConditions></headLine> 
-        <articleBody>At
-            <company name="identified">Rosenthal &amp; Co.’s and Rosenberg Bros</company>. I applied for work and was
+  At <company name="identified">Rosenthal &amp; Co.’s and Rosenberg Bros</company>. I applied for work and was
         told to report in the morning to sew on <factoryItem>cloaks</factoryItem>. The manager in
             <company name="identified">Stein’s</company>, on <location type="streetName">Market street</location>, wanted bands and
         offered to engage me at once. I was most impudently catechized some seven inquires requiring
@@ -240,8 +245,7 @@
         car-fare <num type="cost" amount=".10">10 cents</num>, and I should have <num type="wage" amount=".03">3 cents</num> after the job.</workingConditions> <persName>John</persName> said:
         <mascVoice>“That’s so, but I can’t help it. If the work is satisfactory you can have a six-dozen lot.”</mascVoice>
          It was very good of <persName>John</persName> to sympathise with me, but I thanked him and
-        said I would look a little further.</dialogue> <headLine>THE NEVER-RIP JERSEY.</headLine>
-        <headLine>A Hard Day’s Work for <num type="wage" amount=".41">41 Cents</num>—Less Fortunate Workers Who Earned Only <num type="wage" amount=".11">11 Cents</num>—A Sick Girl’s Sad Story—<desc of="workingClass">The Hopeless Miss Who Longed to Be Married</desc>.</headLine> At the
+        said I would look a little further.</dialogue> At the
                 <company name="identified">Never-Rip Jersey Company</company> I was told to
         apply at the factory <location type="address">133 West Washington street</location>. “Work is given out at
         7:30 a. m.,” the clerk informed me, “and if you have any snap about you you can make a good
@@ -407,23 +411,6 @@
         loss of an hour the pay of half a day is knocked off. Piece-workers who are late are kept
         idle form one to three hours. A girl who loses her ticket forfeits pay for the entire work,
         not withstanding the entry is on the books of the firm.</workingConditions> 
-    </articleBody>
-    <div type="advertisement">
-        <headLine>LIFE AMONG THE SLAVE GIRLS OF <placeName type="city">CHICAGO</placeName></headLine>
-        <headLine><ref to="theTimes">THE TIMES</ref></headLine> 
-        <articleBody>Will print tomorrow the second bath of facts concerning the
-        workings of some of the factories of <placeName type="city">Chicago</placeName> where girls and women are employed. <ref to="newspaperSeries">These
-        articles are written by a young lady who passed through the common experiences of those
-        unfortuantes of her own sex who are compelled to undergo the hardships and tortures of
-        factory life in this city. She tells plainly what she saw ad what she heard; gives names and
-        places whenever necessary, and backs up her statements with unquestionable proofs. These are
-        revelations as unexpected as they are unpleasant.</ref> It was necessary that <ref to="theTimes">The Times</ref> should
-        make them <desc of="upperClass">in order that the unthinking wealthy, well-to-do, and comfortable citizens of
-        Chicago should have their eyes opened</desc>. If the condition of the working women and girls of
-        this city is improved, even in a slight degree, by these exposures <ref to="theTimes">The Times</ref> will be fully
-        repaid. Read <ref to="theTimes">The Times</ref> every day this week. <num type="cost" amount=".02">Two cents</num> per copy. Delivered by carrier, <num type="cost" amount=".12">12
-            cents</num> per week for daily and <num type="cost" amount=".15">15 cents</num> per week for daily and Sunday. Order it by postal
-               card, letter, or telephone 1362.</articleBody> </div>
-   </div>
-  
+        </articleBody>
+
 </root>
