@@ -475,7 +475,7 @@
             template rule for the document node will tell the system that you want to process the following elements only when one of the <code>&lt;f name="response"&gt;</code> has an <code>@select="Yes"</code>, at
             which point the template rule for the document node will call out what portions of the document need to be processed at this particular point. That work actually gets done by other
             <code>&lt;xsl:template&gt;</code> rules, the ones that you’ve written that match
-            the <code>&lt;f name="response"&gt;</code> with <code>@select="Yes"</code></li>
+            the <code>&lt;f name="response"&gt;</code> with <code>@select="Yes"</code>.</li>
          
          <li>In the <code>&lt;xsl:template&gt;</code> rules for <code>&lt;string&gt;</code> elements of the <code>&lt;f name="question"&gt;</code> you’ll need to output something for each one, that is, each question that has a “Yes” answer (held inside the same <code>&lt;fs&gt;</code> element as the <code>&lt;f name="response"&gt;</code> with <code>@select="Yes"</code>).</li>
          
@@ -490,7 +490,7 @@
             remind you how you address an attribute in XPath.</p></li>
          <li>You will need to calculate two things to do a little bit more than just represent what is in the source XML. We are asking you to number the table cells for the Yes/No questions, and for that we recommend using the <code>count()</code> function, to count <em>all the preceding::sibling <code>&lt;fs&gt;</code> elements that contain a Yes/No response, and add <code>+ 1</code> to that count</em>, so each new question is designated the next higher number from the preceding. When we need to apply an XPath function to make a calculation, we use a special, different statement than the usual <code>&lt;xsl:apply-templates select="whatever"&gt;</code>. Instead, we use the <code>&lt;xsl:value-of&gt;</code> statement, and we position our XPath function inside its <code>@select</code> attribute. That code looks something like this: <code>&lt;xsl:value-of select="count(<em>XPath from the current context to the thing you want to count</em>) + 1"/&gt;</code></li>
          <li>The other calculation you need to make involves using <code>&lt;xsl:value-of&gt;</code> to output a total tally of answers to each survey question, and for this you write a simple series of things you need to add, using XPath statements to designate the numbers, like this:
-            <code>&lt;xsl:value-of select="<em>XPath to number you want</em> + <em>XPath to next number you want</em> + <em>XPath to next number you want</em> /&gt;</code>.
+            <code>&lt;xsl:value-of select="<em>XPath to number you want</em> + <em>XPath to next number you want</em> + <em>XPath to next number you want</em> "/&gt;</code>.
          </li>
       </ol>
         <p>For your assignment, then, you need to create an HTML table with a header row that labels the
