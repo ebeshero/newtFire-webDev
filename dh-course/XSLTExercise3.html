@@ -25,17 +25,26 @@
          </p>
       <p>This file is coded in the TEI namespace, which means that your XSLT stylesheet
          must include an instruction at the top to specify that when it tries to match elements, it needs to
-         match them in that TEI namespace. When you create a new XSLT document in &lt;oXygen/&gt; it
-         won’t contain that instruction by default, so <em>whenever you are working with TEI</em> you need to add it (See the text in <span style="color:blue;">blue</span> below). We also need to make sure that our XSLT parser understands it is outputting results to the TEI namespace, so we change one more line (See the text in <span style="color:red;">red</span> below).Our modified stylesheet template looks like the following:</p>
+         match them in that TEI namespace. When you create an new XSLT document in &lt;oXygen/&gt; it won’t contain that instruction by default, so whenever you are working with TEI you need to add it (See the text in blue below). To ensure that the output would be in the XHTML namespace, we
+         added a default namespace declaration (in <span style="color: purple;">purple</span>
+         below). To output the required DOCTYPE declaration, we also created
+         <code>&lt;xsl:output&gt;</code> element as the first child of our root
+         <code>&lt;xsl:stylesheet&gt;</code> element (in <span style="color: green;"
+            >green</span> below). Our modified stylesheet template and xsl:output line looks like this:</p>
+      
       <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
     <span style="color:blue;">xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>
-    <span style="color:red;">xmlns="http://www.tei-c.org/ns/1.0"</span>
-    version="3.0">
+         xmlns:math="http://www.w3.org/2005/xpath-functions/math"
+    exclude-result-prefixes="xs math"
+    <span style="color:purple;">xmlns="http://www.w3.org/1999/xhtml"</span>
+         version="3.0"&gt;
+    
+         <span style="color:green;">&lt;xsl:output method="xhtml" indent="yes"/&gt;</span>
     
 &lt;/xsl:stylesheet&gt;</pre>
-      
-      
+    
       <h3>Overview of the assignment</h3>
       <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document that consists only of a table. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. You can read more about HTML tables at 
          <a href="http://www.w3schools.com/html/html_tables.asp">http://www.w3schools.com/html/html_tables.asp</a>.</p>

@@ -20,10 +20,14 @@
     <workingCondition id="descriptionNeutral" tone="neutral"/>
 </toneElements>
     <!-- RJP: 2015-10-17: The <toneElements> element holds information needed to make this assignment compatible with newtfire.org XSLT Exercise 4: The contents of this element are not part of the transcription from the original article. In fact this entire document is edited from the original and was simplified for use in this XSLT assignment. -->
-   
-    <!-- RJP: 2015-10-17: Important Information to include in the head and/or <h1> element of XSLT Exercise 4 Html Output: Chicago Times July 30, 1888 CITY SLAVE GIRLS-->
-
 <head>
+    <newspaperTitle> Chicago Times </newspaperTitle> 
+    <seriesTitle>CITY SLAVE GIRLS</seriesTitle>
+    <date when="1888-07-30">Monday Morning, July 30, 1888.</date>
+    <byline>Nell Nelson</byline>
+    
+    <!-- RJP: 2015-10-18: The above four elements contained inside of head (besides the headlines) will be important to display in your output HTML for XSLT Exercise 4-->
+    
     <headLine>A <ref to="nellNelson">Lady Reporter</ref>’s Experience in the Shops with <desc
             of="workingClass">Sewing Serfs</desc>.</headLine>
 
@@ -42,18 +46,18 @@
     <headLine>Making Shirts at <num type="wage" amount=".75">Seventy-Five Cents a Dozen</num> and
             <workingConditions category="negative">Finding Your Own Thread</workingConditions>.</headLine>
     
-    <headLine>CLOAKS, OVERALLS, AND SHIRTS</headLine>
+    <headLine>CLOAKS, OVERALLS, AND SHIRTS.</headLine>
     
-    <headLine><workingConditions category="negative">Put Through an Impudent Cross-Examination to Get to Sew <factoryItem>Cloaks</factoryItem> at <num type="wage" amount=".50">50 cents</num> Each
-        Making <factoryItem>Pants</factoryItem> and <factoryItem>Shirts</factoryItem> at <num type="wage" amount=".75">75 Cents</num> a Dozen and Find your Own Thread.</workingConditions></headLine> 
+    <headLine><workingConditions category="negative">Put Through an Impudent Cross-Examination to Get to Sew <factoryItem>Cloaks</factoryItem> at <num type="wage" amount=".50">50 cents</num> Each.</workingConditions></headLine>
+        <headLine><workingConditions>Making <factoryItem>Pants</factoryItem> and <factoryItem>Shirts</factoryItem> at <num type="wage" amount=".75">75 Cents</num> a Dozen and Find your Own Thread.</workingConditions></headLine> 
     
     <headLine>THE NEVER-RIP JERSEY.</headLine>
     
-    <headLine>A Hard Day’s Work for <num type="wage" amount=".41">41 Cents</num></headLine>
+    <headLine>A Hard Day’s Work for <num type="wage" amount=".41">41 Cents</num>.</headLine>
     
-    <headLine>Less Fortunate Workers Who Earned Only <num type="wage" amount=".11">11 Cents</num></headLine>
+    <headLine>Less Fortunate Workers Who Earned Only <num type="wage" amount=".11">11 Cents</num>.</headLine>
     
-    <headLine>A Sick Girl’s Sad Story</headLine>
+    <headLine>A Sick Girl’s Sad Story.</headLine>
     
     <headLine><desc of="workingClass">The Hopeless Miss Who Longed to Be Married</desc>.</headLine>
 
