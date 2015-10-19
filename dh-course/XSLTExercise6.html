@@ -17,7 +17,7 @@
         
         <h1><span class="banner">XSLT Exercise 6</span></h1>
         <h3>The input collection on our DHClass-Hub</h3>
-        <p>You will be working with same digitized XML collection of Emily Dickinson's poems that you worked with in the last assignment, the collection we posted on our DHClass-Hub GitHub. If you need a new copy of the files, please refer to <a href="XSLTExercise5.html">our instructions on the previous exercise</a> for accessing them by syncing, cloning, and copying the directory out of your local GitHub directory. You will be building on our <a href="XSLTExercise5.html">XSLT Exercise 5</a>, and you can take your stylesheet from taht assignment and modify it for this one.</p>        
+        <p>You will be working with same digitized XML collection of Emily Dickinson's poems that you worked with in the last assignment, the collection we posted on our DHClass-Hub GitHub. If you need a new copy of the files, please refer to <a href="XSLTExercise5.html">our instructions on the previous exercise</a> for accessing them by syncing, cloning, and copying the directory out of your local GitHub directory. You will be building on our <a href="XSLTExercise5.html">XSLT Exercise 5</a>, and you can take your stylesheet from that assignment and modify it for this one.</p>        
         <h3>Overview of the assignment</h3>
         <p>For your last assignment you used the XSLT <code>@mode</code> attribute to create a table
             of contents for the Dickinson poems in Fascicle 16, using the poem number and first line of each poem as a
@@ -41,7 +41,7 @@
             following ways:</p>
         <ul>
             <li>We’re going to create links between the items in the table of contents and the
-                poems, so that you can click on a poeem's identifying information and be taken immediately to the
+                poems, so that you can click on a poem's identifying information and be taken immediately to the
                 corresponding poem.</li>
             <li>We’re going to produce a list of the poems organized by the total number of the variants that Dickinson marked in them, from most variants to least variants.</li>
             <li>We’re then going to alphabetize our list of first lines, so that the table of contents
@@ -151,7 +151,7 @@
             whether you can apply it to fixing this problem.</p>
         <p>Another Optional Challenge, for either of the table of contents or the body output, or both: You may have observed in your HTML output that some of our titles are inconsistently formatted. Some poem numbers have a period after them, and some only white space before the parenthetical information that summarizes each poem's publication history. You might see if you can find a way to:
             a) output only the poem and its number in the part of the document where you reproduce the poems, and/or
-            b) remove the rogue period from the output, using the <code>replace()</code> function, which takes three arguments: an XPath leading to a string you want to alter (your "haystack"), a regular expression you want to change, and whatever you wish to convert it to (including nothing, to delete it). Read about <code>replace()</code> in the Strings section of <a href="http://dh.obdurodon.org/functions.xhtml">The XPath functions we use the most</a> and learn about its syntax by looking it up in the index of the Michael Kay book.</p>
+            b) remove the rogue period from the output, using the <code>replace()</code> function, which takes three arguments (for "finding a needle in a haystack" and then changing or removing it): an XPath leading to a string you want to alter (your "haystack"), a regular expression for the "needle" you want to find and change, and whatever you wish to convert it to (including nothing, to delete it). Read about <code>replace()</code> in the Strings section of <a href="http://dh.obdurodon.org/functions.xhtml">The XPath functions we use the most</a> and learn about its syntax by looking it up in the index of the Michael Kay book.</p>
         <h3>Finishing touches</h3>
         <p>Some lists of first lines of poetry put quotation marks around the lines. We haven’t done
             that in our solution, but if you’d like to add it, you should use the HTML
