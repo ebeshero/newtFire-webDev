@@ -29,8 +29,8 @@
          added a default namespace declaration (in <span style="color: purple;">purple</span>
          below). To output the required DOCTYPE declaration, we also created
          <code>&lt;xsl:output&gt;</code> element as the first child of our root
-         <code>&lt;xsl:stylesheet&gt;</code> element (in <span style="color: green;"
-            >green</span> below). Our modified stylesheet template and xsl:output line looks like this:</p>
+         <code>&lt;xsl:stylesheet&gt;</code> element (in <span style="color:#006400;"
+            >green</span> below), and we needed to include an attribute there to omit the default XML declaration because if we output it that XML line in our XHTML output, it will not produce valid HTML with the w3C and might produce quirky problems with rendering in various web browsers. So, our modified stylesheet template and xsl:output line is this, and you should copy this into your stylesheet: </p>
       
       <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -41,7 +41,8 @@
     <span style="color:purple;">xmlns="http://www.w3.org/1999/xhtml"</span>
          version="3.0"&gt;
     
-         <span style="color:green;">&lt;xsl:output method="xhtml" indent="yes"/&gt;</span>
+         <span style="color:#006400;">&lt;xsl:output method="xhtml" encoding="utf-8" doctype-system="about:legacy-compat"
+        omit-xml-declaration="yes"/&gt;</span>
     
 &lt;/xsl:stylesheet&gt;</pre>
     
@@ -50,207 +51,215 @@
          <a href="http://www.w3schools.com/html/html_tables.asp">http://www.w3schools.com/html/html_tables.asp</a>.</p>
          <p>The desired output will look like:</p>
          <div class="code">
-            <h1>Sanitary Conditions of Workshops and Factories in New York City</h1>
-            <h2>Table 1: Yes or No Questions</h2>
-            <table>
-               <tr>
-                  <th>Number</th>
-                  <th>Question</th>
-                  <th>Yes</th>
-                  <th>Yes, but fined</th>
-                  <th>No</th>
-                  <th>Blank</th>
-                  <th>Total Responses</th>
-               </tr>
-               <tr>
-                  <td>1</td>
-                  <td>
-                     Is there free circulation of air through and about the building in which you work? 
-                     
-                  </td>
-                  <td>468</td>
-                  <td></td>
-                  <td>249</td>
-                  <td>93</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>2</td>
-                  <td>
-                     Are there offensive odors in the rooms occupied by employes[?]
-                     
-                  </td>
-                  <td>342</td>
-                  <td></td>
-                  <td>233</td>
-                  <td>235</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>3</td>
-                  <td>
-                     Are there facilities for washing?
-                     
-                  </td>
-                  <td>460</td>
-                  <td>14</td>
-                  <td>124</td>
-                  <td>226</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>4</td>
-                  <td>
-                     Are seats provided, as prescribed by law?
-                     
-                  </td>
-                  <td>320</td>
-                  <td></td>
-                  <td>192</td>
-                  <td>298</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>5</td>
-                  <td>
-                     Are employes furnished with pure drinking water?
-                     
-                  </td>
-                  <td>527</td>
-                  <td></td>
-                  <td>102</td>
-                  <td>181</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>6</td>
-                  <td>
-                     Does the work require the employes to stoop over?
-                     
-                  </td>
-                  <td>587</td>
-                  <td></td>
-                  <td>116</td>
-                  <td>107</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>7</td>
-                  <td>
-                     Are there proper and separate facilities for change of dress by males and females?
-                     
-                  </td>
-                  <td>354</td>
-                  <td></td>
-                  <td>221</td>
-                  <td>235</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>8</td>
-                  <td>
-                     Are there separate water-closets for males and females[?]
-                     
-                  </td>
-                  <td>509</td>
-                  <td></td>
-                  <td>126</td>
-                  <td>175</td>
-                  <td>810</td>
-               </tr>
-               <tr>
-                  <td>9</td>
-                  <td>
-                     Are there stairways from the windows outside?
-                     
-                  </td>
-                  <td>350</td>
-                  <td></td>
-                  <td>318</td>
-                  <td>148</td>
-                  <td>816</td>
-               </tr>
-               <tr>
-                  <td>10</td>
-                  <td>
-                     Are the rooms supplied with water pipes?
-                     
-                  </td>
-                  <td>265</td>
-                  <td></td>
-                  <td>385</td>
-                  <td>165</td>
-                  <td>815</td>
-               </tr>
-               <tr>
-                  <td>11</td>
-                  <td>
-                     Are there hose attachments?
-                     
-                  </td>
-                  <td>224</td>
-                  <td></td>
-                  <td>375</td>
-                  <td>218</td>
-                  <td>817</td>
-               </tr>
-               <tr>
-                  <td>12</td>
-                  <td>
-                     Are there water tanks and buckets on each floor?
-                     
-                  </td>
-                  <td>236</td>
-                  <td></td>
-                  <td>387</td>
-                  <td>198</td>
-                  <td>821</td>
-               </tr>
-            </table>
-            <h2>Table 2: Sources of Offensive Odors</h2>
-            <table>
-               <tr>
-                  <th>Question</th>
-                  <th>Water Closet</th>
-                  <th>Other Sources</th>
-                  <th>Total Responses</th>
-               </tr>
-               <tr>
-                  <td>
-                     [If there are offensive odors in the rooms], from what causes?
-                     
-                  </td>
-                  <td>81</td>
-                  <td>73</td>
-                  <td>154</td>
-               </tr>
-            </table>
-            <h2>Table 3: Standing or Sitting at Work</h2>
-            <table>
-               <tr>
-                  <th>Question</th>
-                  <th>Sit</th>
-                  <th>Stand</th>
-                  <th>Optional</th>
-                  <th>Blank</th>
-                  <th>Total Responses</th>
-               </tr>
-               <tr>
-                  <td>
-                     Are employees compelled to stand or sit at their work?
-                     
-                  </td>
-                  <td>469</td>
-                  <td>175</td>
-                  <td>67</td>
-                  <td>99</td>
-                  <td>810</td>
-               </tr>
-            </table>
+            
+                  <h1>Sanitary Conditions of Workshops and Factories in New York City</h1>
+                  <h2>Table 1: Yes or No Questions</h2>
+                  <table>
+                     <tr>
+                        <th>Number</th>
+                        <th>Question</th>
+                        <th>Yes</th>
+                        <th>Yes, but fined</th>
+                        <th>No</th>
+                        <th>Blank</th>
+                        <th>Total Responses</th>
+                     </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>
+                           Is there free circulation of air through and about the building in which you work? 
+                           
+                        </td>
+                        <td>468</td>
+                        <td></td>
+                        <td>249</td>
+                        <td>93</td>
+                        <td>810</td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td>
+                           Are there offensive odors in the rooms occupied by employes[?]
+                           
+                        </td>
+                        <td>342</td>
+                        <td></td>
+                        <td>233</td>
+                        <td>235</td>
+                        <td>810</td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>
+                           Are there facilities for washing?
+                           
+                        </td>
+                        <td>460</td>
+                        <td>14</td>
+                        <td>124</td>
+                        <td>226</td>
+                        <td>824</td>
+                     </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>
+                           Are seats provided, as prescribed by law?
+                           
+                        </td>
+                        <td>320</td>
+                        <td></td>
+                        <td>192</td>
+                        <td>298</td>
+                        <td>810</td>
+                     </tr>
+                     <tr>
+                        <td>5</td>
+                        <td>
+                           Are employes furnished with pure drinking water?
+                           
+                        </td>
+                        <td>527</td>
+                        <td></td>
+                        <td>102</td>
+                        <td>181</td>
+                        <td>810</td>
+                     </tr>
+                     <tr>
+                        <td>6</td>
+                        <td>
+                           Does the work require the employes to stoop over?
+                           
+                        </td>
+                        <td>587</td>
+                        <td></td>
+                        <td>116</td>
+                        <td>107</td>
+                        <td>810</td>
+                     </tr>
+                     <tr>
+                        <td>7</td>
+                        <td>
+                           Are there proper and separate facilities for change of dress by males and females?
+                           
+                        </td>
+                        <td>354</td>
+                        <td></td>
+                        <td>221</td>
+                        <td>235</td>
+                        <td>810</td>
+                     </tr>
+                     <tr>
+                        <td>8</td>
+                        <td>
+                           Are there separate water-closets for males and females[?]
+                           
+                        </td>
+                        <td>509</td>
+                        <td></td>
+                        <td>126</td>
+                        <td>175</td>
+                        <td>810</td>
+                     </tr>
+                     <tr>
+                        <td>9</td>
+                        <td>
+                           Are there stairways from the windows outside?
+                           
+                        </td>
+                        <td>350</td>
+                        <td></td>
+                        <td>318</td>
+                        <td>148</td>
+                        <td>816</td>
+                     </tr>
+                     <tr>
+                        <td>10</td>
+                        <td>
+                           Are the rooms supplied with water pipes?
+                           
+                        </td>
+                        <td>265</td>
+                        <td></td>
+                        <td>385</td>
+                        <td>165</td>
+                        <td>815</td>
+                     </tr>
+                     <tr>
+                        <td>11</td>
+                        <td>
+                           Are there hose attachments?
+                           
+                        </td>
+                        <td>224</td>
+                        <td></td>
+                        <td>375</td>
+                        <td>218</td>
+                        <td>817</td>
+                     </tr>
+                     <tr>
+                        <td>12</td>
+                        <td>
+                           Are there water tanks and buckets on each floor?
+                           
+                        </td>
+                        <td>236</td>
+                        <td></td>
+                        <td>387</td>
+                        <td>198</td>
+                        <td>821</td>
+                     </tr>
+                  </table>
+                  <h2>Table 2: Sources of Offensive Odors</h2>
+                  <table>
+                     <tr>
+                        <th>Question</th>
+                        <th>Water Closet</th>
+                        <th>Other Sources</th>
+                        <th>Total Responses</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           [If there are offensive odors in the rooms], from what causes?
+                           
+                        </td>
+                        <td>81</td>
+                        <td>73</td>
+                        <td>154</td>
+                     </tr>
+                  </table>
+                  <h2>Table 3: Standing or Sitting at Work</h2>
+                  <table>
+                     <tr>
+                        <th>Question</th>
+                        <th>Sit</th>
+                        <th>Stand</th>
+                        <th>Optional</th>
+                        <th>Blank</th>
+                        <th>Total Responses</th>
+                     </tr>
+                     <tr>
+                        <td>
+                           Are employees compelled to stand or sit at their work?
+                           
+                        </td>
+                        <td>469</td>
+                        <td>175</td>
+                        <td>67</td>
+                        <td>99</td>
+                        <td>810</td>
+                     </tr>
+                  </table>
+           
          </div>
       <p>The underlying raw HTML, which we generated by running XSLT, should look like this:</p>
       <pre>
-  &lt;h1&gt;Sanitary Conditions of Workshops and Factories in New York City&lt;/h1&gt;
+  &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+   &lt;head&gt;
+      &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+      &lt;title&gt;Sanitary Conditions of Workshops and Factories in New York City&lt;/title&gt;
+   &lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;Sanitary Conditions of Workshops and Factories in New York City&lt;/h1&gt;
       &lt;h2&gt;Table 1: Yes or No Questions&lt;/h2&gt;
       &lt;table&gt;
          &lt;tr&gt;
@@ -296,7 +305,7 @@
             &lt;td&gt;14&lt;/td&gt;
             &lt;td&gt;124&lt;/td&gt;
             &lt;td&gt;226&lt;/td&gt;
-            &lt;td&gt;810&lt;/td&gt;
+            &lt;td&gt;824&lt;/td&gt;
          &lt;/tr&gt;
          &lt;tr&gt;
             &lt;td&gt;4&lt;/td&gt;
@@ -447,6 +456,8 @@
             &lt;td&gt;810&lt;/td&gt;
          &lt;/tr&gt;
       &lt;/table&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
 </pre>
       
       <h3>Analysis of the task</h3>
@@ -488,9 +499,9 @@
             <code>@n</code> attribute values associated with <code>&lt;f name="response"&gt;</code>
             elements. You won’t use this exact XPath in your assignment, but it can serve to
             remind you how you address an attribute in XPath.</p></li>
-         <li>You will need to calculate two things to do a little bit more than just represent what is in the source XML. We are asking you to number the table cells for the Yes/No questions, and for that we recommend using the <code>count()</code> function, to count <em>all the preceding::sibling <code>&lt;fs&gt;</code> elements that contain a Yes/No response, and add <code>+ 1</code> to that count</em>, so each new question is designated the next higher number from the preceding. When we need to apply an XPath function to make a calculation, we use a special, different statement than the usual <code>&lt;xsl:apply-templates select="whatever"&gt;</code>. Instead, we use the <code>&lt;xsl:value-of&gt;</code> statement, and we position our XPath function inside its <code>@select</code> attribute. That code looks something like this: <code>&lt;xsl:value-of select="count(<em>XPath from the current context to the thing you want to count</em>) + 1"/&gt;</code></li>
-         <li>The other calculation you need to make involves using <code>&lt;xsl:value-of&gt;</code> to output a total tally of answers to each survey question, and for this you can write a simple series of things you need to add, using XPath statements to designate the numbers, like this:
-            <code>&lt;xsl:value-of select="<em>XPath to number you want</em> + <em>XPath to next number you want</em> + <em>XPath to next number you want</em> "/&gt;</code>.
+         <li>You will need to calculate two things to do a little bit more than just represent what is in the source XML. We are asking you to number the table cells for the Yes/No questions, and for that we recommend using the <code>count()</code> function, to count <em>all the preceding::sibling <code>&lt;fs&gt;</code> elements that contain a Yes/No response, and add <code>+ 1</code> to that count</em>, so each new question is designated the next higher number from the preceding. When we need to apply an XPath function to make a calculation, we use a special statement different from the usual <code>&lt;xsl:apply-templates select="whatever"&gt;</code>. Instead, we use the <code>&lt;xsl:value-of&gt;</code> statement, and we position our XPath function inside its <code>@select</code> attribute. That code looks something like this: <div class="code">&lt;xsl:value-of select="count(<em>XPath from the current context to the thing you want to count</em>) + 1"/&gt;</div></li>
+         <li>The other calculation you need to make involves using <code>&lt;xsl:value-of&gt;</code> to output a total sum of the answers to each survey question, and for this you should use the <code>sum()</code> function over all the <code>@n</code> attributes on the <code>&lt;f&gt;</code> elements bound together inside the particular <code>&lt;fs&gt;</code> set you have matched on:
+            <div class="code">&lt;xsl:value-of select="sum(<em>one-XPath-expression-that-reaches-all-the-values-you-want-to-add</em>)"/&gt;</div>.
          </li>
       </ol>
         <p>For your assignment, then, you need to create an HTML table with a header row that labels the

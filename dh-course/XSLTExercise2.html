@@ -18,7 +18,7 @@
       <h1><span class="banner">XSLT Exercise 2</span></h1>
       <h3>Overview of the Assignment</h3>
       <p>The Digital Mitford Site Index stores lists of names and information on people, places, organizations, and texts, among other kinds of named entities referenced in files throughout the Digital Mitford project. For this assignment, we will work with a slightly modified version of the Digital Mitford Site Index, which you should download <a href="si-modified.xml">from here</a> and open in &lt;oXygen&gt;. Our goal is to create a structured outline in HTML of all the information about organizations in the site index. We want to output that in HTML in the form of a list with nested lists inside, representing an outline of first the <em>categories</em> of organization, and then inside each category, a new list of the organization names.  This is something we actually need to do in the Mitford project: to process portions of the Site Index file to make it readable on the web as a list. One possible use of a webpage like this is as a list of links, so that each organization name might link to a page of information on each organization. We don't have to generate those links now. For this assignment, we just want to learn how to transform XSLT to HTML and to generate the lists themselves by pulling the right content out of our XML.</p>
-      <p>If you’re feeling adventurous, once you obtain the output we're seeking, you may go on to build other HTML lists, working with other portions of the XML document, such as the listBibl or listPerson sections, which are formatted a little differently. The only required content of your homework, though, is the HTML outline of <strong>organization types</strong> and <strong>organization names</strong>. For the organization types or categories, we need to pull from the <span class="code">&lt;head&gt;</span> element sitting inside at the top of each <span class="code">&lt;listOrg&gt;</span> elements in our TEI file. For the organization names, we reach in to find the individual entries for <span class="code">&lt;org&gt;</span> and their child <span class="code">&lt;orgName&gt;</span> elements inside each <span class="code">&lt;listOrg&gt;</span> element. Each <span class="code">&lt;org&gt;</span> element contains one <span class="code">&lt;orgName&gt;</span> inside that holds the best-known name of a particular organization. You may first want to experiment with XPath on the Site Index file to locate the <span class="code">&lt;listOrg&gt;</span> elements and study the XML hierarchy of the lists. Let’s make the outer list be <strong>ordered</strong> (or numbered) list in HTML, using the HTML <span class="code">&lt;ol&gt;</span> element, and then make the inner list be an <strong>unordered</strong> (bulleted) list, using the HTML <span class="code">&lt;ul&gt;</span> element.</p>
+      <p>If you’re feeling adventurous, once you obtain the output we're seeking, you may go on to build other HTML lists, working with other portions of the XML document, such as the <code>&lt;listBibl&gt;</code> or <code>&lt;listPerson&gt;</code> sections, which are formatted a little differently. The only required content of your homework, though, is the HTML outline of <strong>organization types</strong> and <strong>organization names</strong>. For the organization types or categories, we need to pull from the <span class="code">&lt;head&gt;</span> element sitting inside at the top of each <span class="code">&lt;listOrg&gt;</span> elements in our TEI file. For the organization names, we reach in to find the individual entries for <span class="code">&lt;org&gt;</span> and their child <span class="code">&lt;orgName&gt;</span> elements inside each <span class="code">&lt;listOrg&gt;</span> element. Each <span class="code">&lt;org&gt;</span> element contains one <span class="code">&lt;orgName&gt;</span> inside that holds the best-known name of a particular organization. You may first want to experiment with XPath on the Site Index file to locate the <span class="code">&lt;listOrg&gt;</span> elements and study the XML hierarchy of the lists. Let’s make the outer list be <strong>ordered</strong> (or numbered) list in HTML, using the HTML <span class="code">&lt;ol&gt;</span> element, and then make the inner list be an <strong>unordered</strong> (bulleted) list, using the HTML <span class="code">&lt;ul&gt;</span> element.</p>
       <p>Your lists in HTML should come out looking like this:</p>
 <div class="code">
    <ol>
@@ -217,25 +217,24 @@
       <p>In our ordered and unordered lists, the only element content permitted inside is list items or <span class="code">&lt;li&gt;</span> elements. We’ve nested them so that each list item in the outside numbered list contains a category type (designating what kind of organization), followed by an embedded <span class="code">&lt;ul&gt;</span> that contains, in turn, a separated bulleted list series, listing the name of each organization in the list.</p>
       			
       		<h3>Before You Begin: Set up the XSLT Stylesheet to Read TEI</h3>	
-      <p>The Digital Mitford's Site Index file is coded in the TEI namespace, which means that your XSLT stylesheet (much as in the last assignment) requires an instruction at the top to specify that when it tries to match elements, it needs to match them in the TEI namespace. (When you create an new XSLT document in &lt;oXygen/&gt; it won’t contain that instruction by default, so whenever you are working with TEI you need to add it (See the text in blue below). To ensure that the output would be in the XHTML namespace, we
+      <p>The Digital Mitford's Site Index file is coded in the TEI namespace, which means that your XSLT stylesheet (much as in the last assignment) requires an instruction at the top to specify that when it tries to match elements, it needs to match them in the TEI namespace. (When you create an new XSLT document in &lt;oXygen/&gt; it won’t contain that instruction by default, so whenever you are working with TEI you need to add it (See the text in <span style="color:blue;">blue</span> below). To ensure that the output would be in the XHTML namespace, we
          added a default namespace declaration (in <span style="color: purple;">purple</span>
          below). To output the required DOCTYPE declaration, we also created
          <code>&lt;xsl:output&gt;</code> element as the first child of our root
-         <code>&lt;xsl:stylesheet&gt;</code> element (in <span style="color: green;"
-            >green</span> below). Our modified stylesheet template and xsl:output line looks like this:</p>
+         <code>&lt;xsl:stylesheet&gt;</code> element (in <span style="color: #006400;"
+            >green</span> below), and we needed to include an attribute there to omit the default XML declaration because if we output it that XML line in our XHTML output, it will not produce valid HTML with the w3C and might produce quirky problems with rendering in various web browsers. So, our modified stylesheet template and xsl:output line is this, and you should copy this into your stylesheet:</p>
       
       <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-      xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    <span style="color:blue;">xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>
-         xmlns:math="http://www.w3.org/2005/xpath-functions/math"
-    exclude-result-prefixes="xs math"
+         &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
     <span style="color:purple;">xmlns="http://www.w3.org/1999/xhtml"</span>
-         version="3.0"&gt;
+   <span style="color:blue;"> xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>&gt;
     
-         <span style="color:green;">&lt;xsl:output method="xhtml" doctype-system="about:legacy-compat"/&gt;</span>
+   <span style="color:#006400;"> &lt;xsl:output method="xhtml" encoding="utf-8" doctype-system="about:legacy-compat"
+        omit-xml-declaration="yes"/&gt;</span>
     
-&lt;/xsl:stylesheet&gt;</pre>
+    &lt;/xsl:stylesheet&gt;
+      </pre>
+     
       
       <h3>Guide to Approaching the Problem</h3>
       <p>Our XSLT transformation (after all this housekeeping) has three template rules:</p>
