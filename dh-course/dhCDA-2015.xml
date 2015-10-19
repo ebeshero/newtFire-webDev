@@ -162,6 +162,13 @@
                   <item>
                      <ref target="explainXSLT.html">Introduction to XSLT</ref>
                   </item>
+                  <item>Schematron Tutorials and Examples: <list>
+                     <item>Obdurodon's <ref target="http://dh.obdurodon.org/schematron-intro.xhtml">Introduction to Schematron</ref></item>
+                     <item>Obdurodon's <ref target="http://dh.obdurodon.org/schematron-class-01.html">Examples of Schematron from our projects</ref></item>
+                     <item>Obdurodon's <ref target="http://dh.obdurodon.org/schematron-skyrim.xhtml">Validating References with Schematron</ref></item>
+                     <item><ref target="http://ebeshero.github.io/mitford/MRMvalidate.sch">Digital Mitford Project Schematron</ref></item>
+                     <item>GitHub: <ref target="https://github.com/ebeshero/Amadis-in-Translation/blob/master/XML-and-Schematron/Amadis.sch">Amadis-in-Translation Project Schematron</ref></item>
+                  </list></item>
                   <item>SVG Tutorials, Editors, and Ideas: <list>
                         <item>
                            <ref target="http://tutorials.jenkov.com/svg/index.html">Jakob Jenkov's
@@ -1403,7 +1410,10 @@
                      <note>TEI Conference</note>
                   </div>
                   <div type="assign">
-                     <list><item><hi rend="em"><ref target="XSLTExercise7.html">XSLT Exercise 7</ref></hi></item></list>
+                     <list><item><hi rend="em"><ref target="XSLTExercise7.html">XSLT Exercise 7</ref></hi></item>
+                        <item>Read Obdurodon's <ref target="http://dh.obdurodon.org/schematron-intro.xhtml">Introduction to Schematron</ref> and
+                           <ref target="http://dh.obdurodon.org/schematron-class-01.html">Examples of Schematron from Our Projects</ref></item>
+                     </list>
                   </div>
                </div>
             </div>
@@ -1413,10 +1423,16 @@
                      <date when="2015-11-02">M 11-02</date>
                   </head>
                   <div type="inclass">
-                     <p>Introducing Schematron, and Why We Use it with TEI</p>
+                     <p>Writing Schematron, and Why We Use it with Relax-NG and TEI</p>
+                     <p>Examples of Schematron in our TEI Projects</p>
+                     <list><item><ref target="http://ebeshero.github.io/MRMValidate.sch">Digital Mitford Schematron</ref></item>
+                        <item><ref target="https://github.com/ebeshero/Amadis-in-Translation/blob/master/XML-and-Schematron/Amadis.sch">Amadis-in-Translation Schematron</ref></item>
+                     </list>
                   </div>
                   <div type="assign">
-                     <p><hi rend="em">Schematron Exercise 1: [TBD]</hi></p>
+                     <list><item><hi rend="em"><ref target="http://dh.obdurodon.org/schematron-assignment-01.html">Schematron Exercise 1</ref></hi></item>
+                        <item>Read <ref target="http://dh.obdurodon.org/schematron-skyrim.xhtml">Validating References with Schematron</ref></item>
+                     </list>
                   </div>
                </div>
                <div type="day">
@@ -1427,7 +1443,10 @@
                      <p>Schematron in Projects</p>
                   </div>
                   <div type="assign">
-                    <p><hi rend="em">Schematron Exercise 2</hi>: [TBD]</p>
+                     <p><hi rend="em">Schematron Exercise 2: Choose one of the following options:</hi></p>
+                     <list><item>Try your hand at this <ref target="http://dh.obdurodon.org/schematron-class-02.html">Using Schematron for Editing exercise</ref></item>
+                       <item>or, Write a Schematron tp control or check for something you need in your project, remembering to apply the TEI namespace and prefixes if you are working in TEI (as explained in the <ref target="http://dh.obdurodon.org/schematron-intro.xhtml">Introduction to Schematron</ref>)</item>
+                    </list>
                   </div>
                </div>
                <div type="day">
@@ -1453,11 +1472,12 @@
                      <p>SVG from XSLT.</p>
                   </div>
                   <div type="assign">
+                     <!--ebb: IDEA: Develop SVG from the feature structure graph from the NElson project that we used in XSLT Ex 3!-->
                      <!--ebb: David has apparently jettisoned the Alice assignment we all used last year,
                      so these next two are all the graphing of US elections, again. These are familiar
                      assignments to me and Greg, but should we make a new SVG assignment of our own from our project data?-->
-                     <list> <item><ref target="http://dh.obdurodon.org/svg-assignment-02.xhtml"><hi rend="em">SVG Exercise 2</hi> (Electoral College Data)</ref></item>
-                        <item>See <ref target="BesheroSVGElectsOutput.xml">Elisa’s sample Elections output</ref> (a vertically stacked bar chart, as an example of one of the optional bonus layouts).</item></list>
+                     <list> <item>SVG Exercise 2: Design an SVG plot of the Data in the <ref target="WSGATableCh1.xml">Survey of Working Conditions TEI XML from the Nell Nelson Project</ref>: [TBD]</item>
+                     </list>
                   </div>
                </div>
                <div type="day">
@@ -1469,7 +1489,7 @@
                      <p>Creating Variables in XSLT for output in SVG</p>
                   </div>
                   <div type="assign">
-                     <p><ref target="http://dh.obdurodon.org/svg-assignment-03.html"><hi rend="em">SVG Exercise 3</hi> (Elections Graph)</ref> </p>
+                     <p><ref target="http://dh.obdurodon.org/svg-assignment-02.xhtml"><hi rend="em">SVG Exercise 3</hi> (Elections Graph)</ref> </p>
                   </div>
                </div>
                <div type="day">

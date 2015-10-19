@@ -7,7 +7,8 @@
     version="3.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
    
-    <xsl:output method="xhtml" doctype-system="about:legacy-compat"/> 
+    <xsl:output method="xhtml" doctype-system="about:legacy-compat" 
+        omit-xml-declaration="yes"/> 
     <!--<xsl:strip-space elements="*"/>-->
     
     <xsl:template match="/">

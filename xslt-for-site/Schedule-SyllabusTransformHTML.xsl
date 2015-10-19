@@ -5,7 +5,8 @@
     xmlns="http://www.w3.org/1999/xhtml" version="3.0"
     xpath-default-namespace="http://www.tei-c.org/ns/1.0">
 
-    <xsl:output method="xhtml" doctype-system="about:legacy-compat"/> 
+    <xsl:output method="xhtml" doctype-system="about:legacy-compat" 
+        omit-xml-declaration="yes"/> 
     <!--<xsl:strip-space elements="*"/>-->
    
     <xsl:template match="/">
@@ -20,7 +21,7 @@
                 <meta name="keywords"
                     content="Digital Humanities, Syllabus, XML, TEI, XSLT, XQuery, Schematron, Relax NG, SVG, digital scholarship, digital edition, electronic edition, electronic text, humanities computing, electronic editing, Beshero-Bondar"/>
                 <link rel="stylesheet" type="text/css" href="syllsched.css"/>
-                <script type="text/javascript" src="jumpingDateLinks.js">//</script>
+                <script type="text/javascript" src="jumpingDateLinks.js">/**/</script>
             </head>
             <body>
 
@@ -107,22 +108,22 @@
                     <tr>
                         <th id="Week{@n}">
                            
-                            <h4>
+                            <span class="h4">
                                 <em>
                                     <xsl:text>Week </xsl:text>
                                     <xsl:value-of select="@n"/>
                                 </em>
-                            </h4>
+                            </span>
                         </th>
                         <th>
-                            <h4>
+                            <span class="h4">
                                 <em>In Class</em>
-                            </h4>
+                            </span>
                         </th>
                         <th>
-                            <h4>
+                            <span class="h4">
                                 <em>Due Next Time</em>
-                            </h4>
+                            </span>
                         </th>
                     </tr>
                     <xsl:apply-templates select="div[@type='day']"/>
