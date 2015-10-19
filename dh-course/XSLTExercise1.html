@@ -39,7 +39,7 @@
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     <span style="color:blue;">xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>
     <span style="color:red;">xmlns="http://www.tei-c.org/ns/1.0"</span>
-    version="3.0">
+    <span style="color:purple;">version="3.0"</span>>
     
 &lt;/xsl:stylesheet&gt;</pre>
       
@@ -47,7 +47,8 @@
       <h3>Writing the Identity Transformation!</h3>
       
       
-     <ol> <li>We will give you your first template rule, to set this as an <em>identity transformation</em>. We’re going to use a new form for this in XSLT 3.0. <span class="smaller">(You can see an old form here in the first template rule of our Identity transformation of Shakespeare’s sonnets, which you can download, save and open from <a href="SonnetIDTransform.xsl">here</a>. That old first rule matches on all nodes, elements and attributes throughout the document and simply copies them. It’s perfectly fine to use that older template rule in place of the one we show you below, but we like the simplicity of this new form even better!)</span>.
+     <ol> <li>We will give you your first template rule, to set this as an <em>identity transformation</em>. We’re going to use a new form for this in version XSLT 3.0,
+        so that is why we have set <code>version="3.0"</code> in our stylesheet template above. On future assignments we are setting the default version 2.0 for tranforming to HTML mostly because the old version is better tested for processing HTML output, but for an identity transformation of XML to XML, we like the efficient new code we can write in version 3.0. <span class="smaller">(You can see an old form here in the first template rule of our Identity transformation of Shakespeare’s sonnets, which you can download, save and open from <a href="SonnetIDTransform.xsl">here</a>. That old first rule matches on all nodes, elements and attributes throughout the document and simply copies them. It’s perfectly fine to use that older template rule in place of the one we show you below, but we like the simplicity of this new form even better!)</span>.
       <div class="code">
          &lt;xsl:mode on-no-match="shallow-copy"/&gt; 
       </div>
@@ -59,7 +60,7 @@
       </ol>
       
       			
-      <p>We often use an Identity transformation with Attribute Value Templates, in order to add attributes to elements like <span class="code">&lt;p&gt;</span> or <span class="code">&lt;l&gt;</span> that calculate a paragraph or line number. We have already numbered the paragraphs in the Forster file, but as an <strong>optional extra challenge</strong> for this assignment, read about <a href="http://dh.obdurodon.org/avt.xhtml">Attribute Value Templates</a> and see if you can write two more template rules to add <span class="code">@n</span> attributes to automatically number the <span class="code">&lt;div&gt;</span> elements for Books, and the <span class="code">&lt;div&gt;</span> elements for Chapters here. (Hint: Look at my old example ID-transform stylesheet that adds line numbers to a series of sonnets, downloadable from <a href="SonnetIDTransform.xsl">here</a> if you didn’t download it earlier.) We will return to this later, since you will be working with Attribute Value Templates in a later homework exercise.</p>		
+      <p>We often use an Identity transformation with Attribute Value Templates, in order to add attributes to elements like <span class="code">&lt;p&gt;</span> or <span class="code">&lt;l&gt;</span> that calculate a paragraph or line number. We have already numbered the paragraphs in the Forster file, but as an <strong>optional extra challenge</strong> for this assignment, read about <a href="http://dh.obdurodon.org/avt.xhtml">Attribute Value Templates</a> and see if you can write two more template rules to add <span class="code">@n</span> attributes to automatically number the <span class="code">&lt;div&gt;</span> elements for Books, and the <span class="code">&lt;div&gt;</span> elements for Chapters here. (Hint: Look at my old example ID-transform stylesheet that adds line numbers to a series of sonnets, downloadable from <a href="SonnetIDTransform.xsl">here</a> if you didn’t download it earlier.) We will return to this later, since you will be working with Attribute Value Templates in later homework exercises.</p>		
       <p>When you are finished, save your XSLT file and your XML output of the Georg Forster file, following our usual <a href="http://dh.obdurodon.org/file-naming_conventions.xhtml">homework file naming conventions</a>, and upload these to the appropriate place in Courseweb.</p>					
     
    </body>
