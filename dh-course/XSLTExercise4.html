@@ -23,8 +23,17 @@
             We’ve modified it for use in this XSLT exercise, and the new version
             is available here at <a href="NelsonArticle_1888-07-30.xml">http://newtfire.org/dh/NelsonArticle_1888-07-30.xml</a>. You should
             right-click on this link, download the file, and open it in &lt;oXygen/&gt;.</p>
-        
-        <p>Because this document is not in a namespace, you should not add the <code>@xpath-default-namespace</code> attribute, and we do not need to alter &lt;oXygen&gt;'s default XSLT stylesheet template at all this time.</p>
+ <h3>The usual housekeeping:</h3>       
+        <p>Because this document is not in a namespace, we do not need the <code>@xpath-default-namespace</code> attribute, and the only thing we need to add to &lt;oXygen&gt;'s default XSLT stylesheet template is a namespace for the xhtml output. We also add our usual <code>&lt;xsl:output&gt;</code> line that we use when producing HTML (for making sure we produce valid HTML 5 in XHTML format). Here's what we need:</p>
+        <pre>
+          &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
+    <span class="color:blue;">xmlns="http://www.w3.org/1999/xhtml" version="3.0"</span>&gt;
+    <span class="color:purple;">&lt;xsl:output method="xhtml" encoding="utf-8" doctype-system="about:legacy-compat"
+        omit-xml-declaration="yes"/&gt;</span>
+            
+        </pre>
               
         <h3>Overview of the assignment</h3>
         
