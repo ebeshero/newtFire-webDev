@@ -201,6 +201,14 @@
             </td>
             				
          </tr>
+      	<tr>
+      		<td><span class="code">preceding::</span></td>
+      		<td>The preceding:: axis sends you on a longer path than the preceding::sibling axis, as it looks for <em>any</em> nodes that precede the current context node in the document order, which includes the preceding siblings as well as the preceding nodes that are not siblings. We commonly use this axis (or its mirror-image, the following:: axis) when we are looking for preceding instances of a particular element that are not siblings, but nested inside nodes that appear earlier in a document, like looking for all the preceding paragraphs, or lines of a poem when these are nested inside earlier div elements or earlier line-groups. If you think about this axis in terms of the nodes on the XML tree, ancestors of an element are NOT on the preceding axis, even though they begin before the current context! That is because the ancestor node <em>is still open around the current context node</em> while you are invoking it. The ancestor of the current context doesn't precede it because it is currently containing it.</td>
+      	</tr>
+      	<tr>
+      		<td><span class="code">following::</span></td>
+      		<td>The following:: axis is the mirror-image of the preceding::axis, so the following:: axis sends you to all the nodes that follow the current context in the document order, which includes the following sibilings as well as the following nodes that are not siblings.</td>
+      	</tr>
          				
          <tr>
             					
