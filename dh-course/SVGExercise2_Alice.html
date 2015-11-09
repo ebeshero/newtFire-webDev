@@ -39,6 +39,27 @@
                 href="alice_svg_output.svg">http://newtfire.org/dh/alice_svg_output.svg</a>. We are going to plot a line graph 
             (instead of something like a bar graph) because we want to indicate variation across a connected series (over time) from chapter to chapter. <span class="smaller">(When you think about SVG for your projects, 
         think about what kinds of plots make sense: For some kinds of data that aren't connected to each other, we might want side-by-side bars to compare.)</span></p>
+       
+        <h3>The XSLT Stylesheet Template for Outputting SVG</h3>
+        <p>To output SVG from XML, we need to make some modifications to the default xs:stylesheet and xsl:output statements, so that
+        the XSLT properly outputs valid W3c code that we can read in a web browser. Below is the code you need at the
+        top of your XSLT file for this assignment. The input XML is not in the TEI namesepace, so we use the defalut XML schema,
+        but we need to indicate the output SVG namespace (in the highlighted <span style="color: purple;">purple</span> line below.
+        The xsl:output method is set to "xml" as a default, classifying SVG as a kind of XML.
+        </p>
+        
+        
+        <pre>
+           &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    exclude-result-prefixes="xs"
+    <span style="color: purple;">xmlns="http://www.w3.org/2000/svg</span>"&gt;
+   
+    &lt;xsl:output method="xml" indent="yes"/&gt; 
+            
+        </pre>
+        
         <h3>Working with variables</h3>
         <p>Our solution uses <em>global variables</em> (variables that are defined once for the
             entire stylesheet) as well as variables that have different values for each chapter in
