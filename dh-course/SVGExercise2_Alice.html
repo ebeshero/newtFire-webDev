@@ -18,7 +18,7 @@
        
         <h3>The text</h3>
         <p>With this assignment, you will gain experience with writing XSLT to generate SVG. 
-            We will work with an XML document from a Pitt student project on Lewis Carroll's <cite>Alice in Wonderland</cite>, which you can
+            We will work with an XML document from a Pitt student project on Lewis Carroll’s <cite>Alice in Wonderland</cite>, which you can
             download by right-clicking on <a href="alice_quotes.xml">this.</a> (Don’t
             just click to open it in a browser and copy, which can add some browser rendering
             characters that will mess up your code; right click and download.)</p>
@@ -107,7 +107,7 @@
             sample output at the link above). If you calculate the position for each chapter once
             and stash it in a variable, you reuse the variable to position two things without having
             to redo the calculation.</p>
-        <h3>Before you start</h3>
+        <h3>Writing the XSLT</h3>
         <p>Writing SVG with XSLT almost always involves using the “pull” approach, which selects for just the bits of data you need. 
             After you create the SVG superstructure, plot the X and Y axes, and label the Y axis at intervals, you
             can draw the dots, the lines between dots, and the labels on the X axis either by
@@ -128,5 +128,8 @@
             differently from the others. For that reason, you may find it useful to test whether
             you’re at the beginning or end of the sequence of chapters with
                 <code>&lt;xsl:if&gt;</code>.</p>
+        <h3>What to Submit</h3>
+        <p>Turn in your XSLT file. We will generate your SVG output ourselves by running your XSLT. 
+            Remember to save and open your SVG output in oXygen and in a web browser to be sure it is valid and that it is rendering as you think it should be. </p>
     </body>
 </html>
