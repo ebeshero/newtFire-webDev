@@ -1,0 +1,110 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>SVG Exercise 3</title>
+    </head>
+
+    <body>
+        <!--#include virtual="top.html" -->
+        <h1><span class="banner">SVG Exercise 3</span></h1>
+    <h3>Overview</h3>
+    <p>In XSLT Exercise 3, you constructed an HTML table from survey data originally printed in a nineteenth-century table of interest to the Nell Nelson Project: </p>
+    <img src="originalWSGAch1_table.jpg"/>
+        The Nelson team has encoded a version of this table in TEI markup called <dfn>feature structures</dfn> designed for binding related data together, and from which
+        we extracted the HTML table data in our XSLT assignment. We now return to this file to plot the data again, writing XSLT to generate SVG in the form of a <dfn>stacked bar graph</dfn>. You may find it helpful to review your work and our solution to XSLT Exercise 3 as you begin this assignment.
+        
+        <h3>The text</h3>
+        <p>The source text can be found here:
+            <a href="WSGATableCh1.xml">WSGATableCh1.xml</a> if you misplaced the copy you worked with in XSLT Exercise 3. You should
+            right-click on this link, download the file, and open it in &lt;oXygen/&gt;. (We will plan to use this file at least one more time on a JavaScript exercise, so once again, you may wish to keep this file handy.) 
+            (As usual, if you are downloading, please do not
+            just click to open it in a browser and copy, which can add some browser rendering
+            characters that will mess up your code; instead, you need to right click and download the file to save it to your machine.)</p>
+
+        <p>Reviewing the contents of the TEI XML file, notice how the survey data is bound together in elements and attributes. 
+            Each <code>&lt;fs&gt;</code> element holds a series of <code>&lt;f&gt;</code> elements which contain a survey question and a series of responses including data in <code>@n</code> attributes on the number of people who responded. Here is a sample of our TEI source coding:</p>
+        <pre>
+            &lt;fs type="QandA"&gt;
+               &lt;f name="question"&gt;
+                  &lt;string&gt;Are there facilities for washing?&lt;/string&gt;
+               &lt;/f&gt;
+              &lt;f name="note"&gt;Fourteen answered yes, but if caught washing are fined.&lt;/f&gt;
+               &lt;f name="response" select="Yes" n="460"/&gt;
+               &lt;f name="response" select="No" n="124"/&gt;
+               &lt;f name="response" select="Blank" n="226"/&gt;
+               &lt;f name="response" select="Yes_but_fined" n="14"/&gt;
+            &lt;/fs&gt;
+        </pre>
+        <h3>Housekeeping: The XSLT Stylesheet and Output Statements</h3>
+        <p>Because you are reading from a TEI file, we need to identify the TEI as our xpath-default-namespace (highlighted in <span style="color:purple;">purple</span> below), and we need to indicate that we are outputting SVG in the SVG namespace (highlighted in <span style="color:#006400;">green</span> below. The output method is set to XML. So you should set your <code>xsl:stylesheet</code> and <code>xsl:output</code> statements thus: </p> 
+        <pre>
+       &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+   <span style="color:purple;"> xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>
+    exclude-result-prefixes="xs"
+    <span style="color:#006400;">xmlns="http://www.w3.org/2000/svg</span>"&gt;
+    &lt;xsl:output method="xml" indent="yes"/&gt;
+        </pre>
+        
+        <h3>The task</h3>
+        <p>Your goal is to present an effective visual summary of one portion of these survey responses: only the questions that could be answered with a <q>Yes</q> or a <q>No</q> (which includes the one distinctive question that could be answered <q>Yes but fined</q>). You will ultimately produce a stacked bar chart that represents the percentages of people who responded in each way to the twelve questions that involved <q>Yes</q> or <q>No</q> answers, which means that you will need to do some calculations in the XSLT you write. Here is <a href="ebbWSGAOutput.svg">a sample view of output</a> we would like to produce, though your graph does not have to look exactly like ours. We chose to sort our questions by the quantities of people who answered <q>Yes</q>, to present the questions and the survey data in order from those most frequently to least frequently answered with <q>Yes</q>. You may choose to sort your data a different way, such as by the quantity of Blank (missing) or <q>No</q> responses. You may, of course, also decide to scale and color your graph and bars differently than we did, and you will want to decide whether you prefer to use the SVG <code>&lt;rect&gt;</code> element or the SVG <code>&lt;line&gt;</code> element (which is what we used in our solution). While we leave it up to you to decide how you want to scale and color your graph or the fonts you want to use for your text, you will need to do the following:</p>
+        <ul>
+            <li>Plot only the data from the twelve questions that were answered with <q>Yes</q> or <q>No</q>. (For our purposes, you can ignore the other handful of survey questions that have a different set of responses.)</li>
+            <li>Do <em>not</em> plot the raw numbers, since the questions have an uneven total number of respondents (as we discovered when we plotted our HTML tables in XSLT Exercise 3). Instead, <strong>calculate the percentages</strong> of people who responded in a particular way. To calculate the percentage who answered <q>Yes</q> to a particular survey question, you will need to divide the <code>@n</code> of <q>Yes</q> answers by the <code>sum()</code> of all the <code>@n</code> who responded to that particular question and multiply the result by 100 to make a percent value.</li>
+            <li>Plot your graph working with global and local variables, as you did on the previous SVG assignment. You will need more variables with this exercise, to hold percentage information and to calculate the lengths of your bars.</li>
+            <li>We find it easiest to plot the entire graph inside a <code>&lt;g&gt;</code> (group) element in the upper right quadrant, to set our X axis and Y axis to meet at x=0 and y=0, and to plot all our y Values to start from a zero base point at the X axis and move up the screen into negative numbers. We then use the <code>&lt;g&gt;</code> element to shift this a little to the right and down into visible and workable coordinate space on the display monitor, by simply setting the <code>@transform</code> attribute with the <code>translate()</code> function. To do this:
+               <ul> <li>Stick a minus sign in front of all Y values. This will cause them to be plotted above the X axis, with larger negative values above smaller ones.</li>
+                <li>Configuring the <code>&lt;g&gt;</code> start tag as <code>&lt;g transform="translate(0, 600)"&gt;</code> will shift it down by 600 pixels (the first number is the amount to shift on the X axis and the second is the amount on the Y axis). You can hard-code the number of pixels to shift down, but a more elegant approach is to use XPath to calculate the height of the tallest bar and employ that calculation in setting the value for the shift. In our sample solution, note the &lt;g transform="translate(30, 400)"&gt; near the beginning, which shifts the image we’ve drawn a bit to the right (so that the percentage labels on the Y axis will be visible) and down (so that the whole chart will be visible).</li></ul>
+                    Alternatively, you can plot everything directly in the lower right quadrant, but we find that harder to manage. For this assignment you cannot have your bars grow downward! That would be easier to code, but, unfortunately, it isn’t the way humans expect a chart like this to look.</li>
+            <li>When you plot with percentages and create a stacked bar chart, each kind of response is plotted just on top of the other kinds, and the values stack up to 100. This means your highest plot (and lowest value) for y will be -100, plotting <em>upwards</em> from zero, before you multiply by a factor to scale your y axis values the way you wish). Save your file and open it in oXygen not only to check for validity but also to <em>check your arithmetic</em>, to be sure you are outputting the right kinds of values: nothing over 100 or less than zero (that is, before you convert the percentage to a negative value in plotting along the Y-axis).</li>
+            <li><strong>Important:</strong> You must use XSL conditionals (<code>xsl:choose</code>, <code>xsl:when</code>, and <code>xsl:otherwise</code> in order for your stacked bar plot calculations to work. This is because only one question includes the optional response <q>Yes but fined</q>. When the XSLT parser tries to generate a line for <q>Yes but fined</q> and does not find the attribute on a particular <code>&lt;fs&gt;</code> cluster of responses, it produces no output at all, making an empty value for your graph coordinate, and preventing all other bars that depend on an actual numerical value not to calculate either. Below is a sample of the bad code to show you why this produces an error. 
+            
+            <div class="badCode">
+                &lt;line class="Yes"<br/>
+                <span class="indent">x1="45"<br/></span>
+                <span class="indent">x2="45"<br/></span>
+                <span class="indent">y1="0"<br/></span>
+                <span class="indent">y2="-362.3456790123456"<br/></span>
+                <span class="indent">stroke="purple"<br/></span>
+                <span class="indent">stroke-width="40"/&gt;<br/></span>
+                <span class="indent">&lt;text x="45"<br/></span>
+                    <span class="indent">y="-181.1728395061728"<br/></span>
+                        <span class="indent">text-anchor="middle"<br/></span>
+                            <span class="indent">stroke="white"&gt;72%&lt;/text&gt;<br/></span>
+                &lt;line class="Yes_but_fined"<br/>
+                <span class="indent">x1="45"<br/></span>
+                <span class="indent">x2="45"<br/></span> 
+                    <span class="indent">y1="-362.3456790123456"<br/></span>
+                        <span class="indent">y2=""<br/></span>
+                    <span class="indent">stroke="orange"<br/></span>
+                        <span class="indent">stroke-width="40"/&gt;<br/></span>
+                &lt;line class="No"<br/>
+                <span class="indent">x1="45"<br/></span>
+                    <span class="indent">x2="45"<br/></span>
+                    <span class="indent">y1=""<br/></span>
+                    <span class="indent">y2=""<br/></span>
+                    <span class="indent">stroke="green"<br/></span>
+                    <span class="indent">stroke-width="40"/&gt;<br/></span>   
+            </div>
+               In the bad output we show you above, notice how the y1 and y2 values are rendered empty for the bar for <q>No</q> responses that is supposed to stack above <q>Yes but fined</q>. We deal with this problem by writing conditional statements to handle all the stacked bars differently when <q>Yes but fined</q> is present vs. when it is not present. (When this response is <em>not present</em>, you do not need or want to represent this bar in your output.)
+            </li>
+         
+            <li>Knowing that you are plotting percentages, and you are plotting stacked bars that represent the response to each of a set total of questions that can be answered with a <q>Yes</q>(and there should be twelve of these), plot an X and a Y axis that is appropriate to hold all your bar plots, and label your Y axis in some way that demonstrates you are working with percent values. (You may wish to draw a slashed line of some kind at the 50% mark as we did to lay overtop of your graph, or draw faint lines to sit in the background (like in this clickable, interactive example from an Obdurodon project: <a href="http://pavlova.obdurodon.org/character_chart.xhtml">http://pavlova.obdurodon.org/character_chart.xhtml</a>). Use global variables to help you space your bars evenly across the X axis.</li>
+            <li>As we mentioned before, you must ultimately create a stacked bar chart. Begin this by plotting just one set of responses, the responses you want to sit at the bottom of your stack, plotting upwards from the X axis and check to see that you are getting good results in a web browser. To plot the other rectangles on top of this, you will need to start drawing those from the top of a bar you have just drawn, which you do by <strong>adding</strong> the Y value for the top of the low bar to the height of the next bar that is to sit on top of it.</li>  
+            <li>Output the text of each question with its associated bar charts of responses, beneath the X axis. To plot this as we did in our sample output, it will help to study SVG <code>text</code> element formatting, and what attributes are used to control it. (There are a number that you might experiment with to rotate text and change its orientation, but we used the <code>@style="writing-mode: tb;"</code> attribute to make the text run vertically down the page.) Take a look at <a href="http://tutorials.jenkov.com/svg/text-element.html#text">Jakob Jenkov's SVG tutorial</a> for a good resource for learning about the range of attributes you can apply to SVG <code>text</code> and other SVG elements, and the various things they do. We find the <code>@text-anchor</code> attribute especially helpful to anchor the text’s X and Y coordinates either in the start, end, or exact center of the text string.</li>
+            <li>Label each of your bars with their percent value, but when you do this, suppress the raw form with the decimal places, and use the <code>round()</code>  or <code>format-number()</code> functions to remove the decimal places, or just use one or two decimal points in the tenths or hundredths. Look up these functions in the Michael Kay book if you have it, or look at w3schools' examples of <a href="http://www.w3schools.com/xsl/func_formatnumber.asp">format-number()</a> and <a href="http://www.w3schools.com/xsl/xsl_functions.asp">round()</a>, which simply takes a decimal number and rounds to the nearest integer. (For purposes of SVG plotting, you can have X or Y coordinates that go out to a large number of decimal places, so the only reason you have to think about rounding is that you may want to display numbers in a way that human readers will expect.)</li>
+            <li>We want you to sort your output using <code>&lt;xsl:sort&gt;</code> on a particular response of your choice. We usually recommend that you sort on the values that you put at the base of your stacked bars, but you can sort on any that you wish, and you may sort on a value that is set in the middle or at the top of your plot as you prefer.</li>
+            <li>You’ll have to decide how to space the bars along the X axis, and whether or how to use color or some other kind of fill to visually distinguish your stacked bars from each other. Whatever you decide, you need to plot an explanatory legend with your graph, like we did in our sample output.</li>
+            <li>As a bonus challenge, try flipping the graph so that you are plotting your bars horizontally across the X-axis instead of up the Y-axis. Is this a more intuitive way to present the text of each question in relation to the stacked bar of survey results?</li>
+        </ul>
+        
+        <h3>What to Submit</h3>
+        <p>Turn in your XSLT file. We will generate your SVG output ourselves by running your XSLT. 
+            Remember to save and open your SVG output in oXygen and in a web browser to be sure it is valid and that it is rendering as you think it should be. </p>
+    </body>
+</html>
