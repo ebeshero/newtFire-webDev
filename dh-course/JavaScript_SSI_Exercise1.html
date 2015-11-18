@@ -1,0 +1,71 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>SSI and JavaScript Exercise 1</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+      	
+      			
+      				
+      <h1><span class="banner">Server-Side Includes and JavaScript Exercise 1</span></h1>
+      				
+      	<p>This is a pair of short exercises to orient you to some helpful tools in developing websites: to learn to write and work with Server-Side Includes to help you manage features like a site menu that you would expect to appear on multiple pages of your website, and to learn to write JavaScript to add a dynamic effect when a site visitor accesses an HTML page. You can apply a Server-Side Include along with JavaScript (and CSS) in the same HTML file for the purposes of this homework assignment. To make sure the Server Side Includes are working, this assignment requires you to access and upload your homework files to your project space on newtFire.</p>			
+      		<h3>Server Side Includes (SSIs) Exercise</h3>
+      <p>We work with <dfn>server side includes</dfn> (SSIs) to help keep repeating portions of our pages uniform on a large website with multiple pages. For example, we are using it to generate our newtFire logo on the page you are reading and the entire top portion of the page you are reading, including the horizontal rule <code>&lt;hr&gt;</code> element that draws the line above the title of this page. Everything else, from the title ("Server-Side Includes and JavaScript Exercise 1") onwards is what is contained in this HTML file. If you view the page-source, you can see where we positioned a server-side include, just after the <code>&lt;body&gt;</code> element in our code. It looks like an HTML comment tag, and it functions as a special kind of comment to the server hosting our newtFire site: </p>
+     <div class="code">
+        &lt;!--#include virtual="top.html" --&gt;
+     </div>
+     <p>With the server-side include, I ask the server to include a small partial file named top.html at this point on my page. There are other forms a server-side include might take, but most often we use it for this purpose, and indeed my top.html file itself contains a server-side include that publishes the date on which I last modified my page. </p>
+      <p>With this exercise, we would like you to learn how to write and incorporate one (or more) server-side includes on an HTML page, working with your project webspace on newtFire where we have set up directories named SSI-Test for this purpose. See <a href="#upload">What to Upload</a> for instructions on how to access the page and to make a directory for yourself there. First, please read <a href="http://dh.obdurodon.org/ssi.xhtml">Obdurodon’s tutorial on Server Side Includes</a>, and if you would like to see more examples of server side includes, see <a href="https://httpd.apache.org/docs/2.4/howto/ssi.html">https://httpd.apache.org/docs/2.4/howto/ssi.html</a>. Then create a dummy HTML page, use a project HTML file, or work with the one given you in <a href="http://dh.obdurodon.org/javascript-assignment-01.xhtml">Obdurodon’s JavaScript Exercise 1</a> for the next stage of this assignment, and apply one or more server-side includes to it. You must modify the x-bit once you upload your file to the server, following Obdurodon’s instructions.</p>
+     <h3 id="JavaScript">JavaScript Exercise 1</h3>
+      <p>Begin this exercise by carefully reading and testing the examples on Obdurodon’s introductory
+         <cite class="sub"><a href="http://dh.obdurodon.org/javascript.html">JavaScript Overview page</a></cite>. When you reach the section titled, <q>Okay, Time to Write your First JavaScript</q>, we’d
+         like you to do just that: experiment with what you have learned so far by writing
+         some JavaScript code to work within an HTML page you have prepared. Your page could
+         be an HTML file you have generated for your project, or just a random page you write
+         on the fly for the purposes of this assignment, but should not simply be a repetition
+         of the model on the Obdurodon intro page. (Adapt what you’ve learned there to experiment
+         a little on your own.) For more examples to tinker with, have a look at <a href="http://www.w3schools.com/js/default.asp">the JavaScript tutorial pages at w3schools</a>. Don’t worry too much about making this complicated: We just want to see you write some functional JavaScript code.
+      </p>
+      			
+      				
+      <p>Now, go on and <a href="http://dh.obdurodon.org/javascript-assignment-01.xhtml">do Obdurodon's JavaScript Exercise 1</a>, and if you like, adapt the sample code to fit into the page on which you have been experimenting. (You may change the text of the paragraph in the homework assignment.) The goal here is to write a separate JavaScript file that you associate with your HTML (instead of applying JavaScript inline). If you have experimented with inline JavaScript as you were learning, see if you can express that JavaScript in functions in the separate file you are writing for this assignment. You may adapt this assignment as you wish to write some JavaScript for one of your project pages that makes something dynamic happen. (Note: we don’t permit the use of JavaScript libraries—just using
+         someone else’s JavaScript and force-fitting it to your HTML—because we want you to write your own code independently
+         and know what each line of it means. It is okay, though, to learn from JavaScript others have written and apply what you are learning to your project needs; in which case we want you to credit your source in comments in your JavaScript file (marked by <code>//</code> or within <code>/* comment */</code> and be able to explain how you are applying it to your project.)   
+      </p>
+      <p>For JavaScript reading and experimentation, see:</p>
+      <ul>
+         <li><a href="http://dh.obdurodon.org/javascript/classListToggle.xhtml">JavaScript toggling with classList and switch</a>: integrates JavaScript with CSS with values set on the HTML @class attribute</li>
+         <li><a href="http://dh.obdurodon.org/election.xhtml">JavaScript that helps integrate SVG and HTML, and illustrates JavaScript show/hide and innerHTML</a></li>
+         <li><a href="http://dh.obdurodon.org/javascript/multi_select/">JavaScript that activates on selecting values from dropdown lists</a></li>
+      </ul>
+      				
+     <h3 id="upload">What to upload, and where to upload it:</h3>
+         <p>This assignment involves working within your project webspace on newtFire, so that is where you will submit your homework for this assignment (instead of Courseweb). Use an SFTP program (the same you used for the HTML assignments earlier in this course), and</p>
+      <ol>
+         <li>Locate your project team’s folder (<code>dickinson16</code> or <code>nelson</code>) on newtFire. (If you have trouble locating this, ask on our DHClass-Hub.)</li>
+         <li>Inside each team’s directory, we have created a directly named <code>SSI-Test</code>. Enter that directory, and create your own new directory with your last name, for example: <code>Beshero</code>, entered with no white spaces.</li>
+         <li>Upload your files for this assignment: the HTML, the JavaScript, any associated CSS here.</li>
+         <li>Follow Obdurodon’s instructions for activating SSIs. You will need to <strong>change the x-bit</strong> on the HTML page for all users. We typically do this in the SFTP interface by right-clicking on a file to access its File Permissions, and clicking the boxes for each set of users to Execute the file. Note that changing the x-bit is <em>only necessary for the SSI, not for the JavaScript to function</em>. </li>
+      </ol>
+            <p>If you like, include some comments in your HTML and JavaScript files on what we should see and on what your SSI and your JavaScript should be doing. 
+      </p>
+      			
+      							
+      	
+   </body>
+   
+   
+   
+   
+</html>
