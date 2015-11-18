@@ -1,0 +1,174 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>Server Side Includes</title>
+    </head>
+
+
+
+    <body>
+        <!--#include virtual="top.html" -->
+        <h1><span class="banner">Server side includes (SSI)</span></h1>
+        <h3>Why use server side includes?</h3>
+        <span class="smaller">Adapted with thanks from Obdurodon, with local explanation added for
+            newtFire.</span>
+        <p><dfn>Server side includes</dfn> (SSIs) permit us to create (<dfn>boiler-plate</dfn>) text
+            in one place so that we can call it and reuse it as we wish in a set of web pages. We
+            often use SSIs to make a header or footer or menu bar to be positioned in the same place
+            on all of the pages across a project website. Where we might copy and paste that
+            information on every new page we build on a site, that becomes tedious and brittle as
+            our sites grow, and as we want to make a change to the organization of our site, say, to
+            add a new item on a menu bar, or to change the format of our site logo. Instead, if you
+            are working in a web server environment configured to accept SSIs, you can save the
+            piece that will repeat on all your pages separately in its own file and tell the web
+            server, with an SSI, to insert that file into all of your pages in the location you
+            designate. If you later make a change to the file you call with your include, you just
+            make the change in one place, the file to be inserted, and that change will propagate to
+            all the pages with an actively configured SSI in place.</p>
+        <h3>Creating a file to include in your site pages</h3>
+        <p>Here is an example of how to prepare a menu file in one place that you can use in all of
+            your webpages on a site. To do this, you create a separate file that contains only the
+            menu, which you upload to the server. This is not a complete file and on its own is not
+            going to be valid HTML, but when it is included into another HTML file, it will need to
+            be valid there (and not make the new page be invalid when the little include file is
+            added). For example, a menu might look like:</p>
+        <div class="pre-colored">
+            <hr />
+            <p><span style="color: blue;">Main</span> | <span style="color:blue;">About</span> |
+                    <span style="color: blue;">Texts</span> | <span style="color:blue;"
+                    >Analysis</span></p>
+            <hr />
+        </div>
+        <p>and be coded as:</p>
+        <pre>&lt;hr/&gt;
+&lt;p&gt;&lt;a href="index.html"&gt;Main&lt;/a&gt; | &lt;a href="about.html"&gt;About&lt;/a&gt; | 
+            &lt;a href="texts.html"&gt;Texts&lt;/a&gt; | &lt;a href="analysis.html"&gt;Analysis&lt;/a&gt;&lt;/p&gt;
+&lt;hr/&gt;</pre>
+        <p>Create this as a separate document and save it with its own filename, perhaps something
+            like <q>menu.html</q>.</p>
+        <p>About the <q>include file</q>:</p>
+        <ul>
+            <li>The <q>include file</q> does not have to be valid or well-formed HTML. For example,
+                a boilerplate header might contain an <code>&lt;hi&gt;</code> header and a
+                    <code>&lt;p&gt;</code>, with no common root elements. That isn’t well-formed XML
+                or HTML (which requires that everything be wrapped in a single root element), but
+                it’s fine for a file to be included. The menu above contains three sibling elements,
+                two horizontal rule (<code>&lt;hr&gt;</code>) elements with a <code>&lt;p&gt;</code>
+                between them.</li>
+            <li>The file to be inserted must not include an XML declaration (the line beginning
+                    <code>&lt;?xml</code> that &lt;oXygen/&gt; creates at the beginning of regular
+                XML or XHTML files) or other HTML boilerplate. <strong>What you are creating is some
+                    fragmentary HTML code; it is not an HTML page.</strong></li>
+        </ul>
+        <h3>Create a space in the other HTML pages for the <q>include file</q></h3>
+        <p>In each page where you want to insert your <q>include file</q> (in our example, a menu
+            named <q>menu.html</q>), insert the following line <em>in the place in the document
+                where you want the inclusion to appear</em>:</p>
+        <pre>&lt;!--#include virtual="menu.html" --&gt;</pre>
+        <p>This is an XML comment, but the hashtag makes it a special type of comment that will be
+            understood by the web server as an instruction to insert the contents of some other file
+            in place of the instruction. A few important details:</p>
+        <ul>
+            <li>The value in quotation marks should be the path to the file you want to include. If
+                it’s in the same directory as the file into which you are going to insert it, the
+                path consists of just the filename. If it is in another directory, you have to tell
+                the system where to find it. If you put your included files in their own
+                subdirectory (called <q>inc</q>) under your main project directory, the value you
+                would use is <q>inc/menu.html</q>. You can put your files wherever you want, but you
+                have to tell the system how to find them.</li>
+            <li>White space matters. There can be no space between the <dfn>comment start tag</dfn>
+                    (<code>&lt;!--</code>) and the <dfn>include instruction</dfn>
+                    (<code>#include</code>). There must be a space before the <dfn>comment end
+                    tag</dfn> (<code>--&gt;</code>).</li>
+        </ul>
+        <h3>Uploading the files to the web server</h3>
+        <p>In order for server side includes to work on our newtFire server, we need to save all of
+            the files involved with the <code>.html</code> extension (not as .xhtml). That has
+            nothing to do with how the file is encoded under the hood, and is simply a matter of
+            what file extensions our server recognizes as appropriate for use with SSIs. Once you’ve
+            created the HTML file in which you want to insert your <q>include file</q>, as well as
+            the <q>include file</q> itself, (<q>menu.html</q> in our example), upload them both to
+            your project directory on newtFire the way you usually upload files. If you have a
+            separate subdirectory for your included files, put the menu there and be sure that the
+            include instruction points to it. You will have to do one more thing to make sure that
+            your include is active:</p>
+        <h3>Tell the web server about the include</h3>
+        <p>By default the web server doesn’t process include instructions for all files, and
+            newtFire is configured to process include instructions only for files with a
+                <code>.html</code> extension. For your own future reference, how a server knows when to process
+            include instructions and when not to can vary from host to host, and it is something to inquire about if you set up web space elsewhere. Our newtFire server
+            is configured for your team project directoriees so that you need to set a special permissions configuration for the server to read SSI instsructions.
+            To do that for <em>an HTML file that contains an inclusion instruction</em>,
+            you need to <strong>set the x bit</strong>, which permits your file to execute a process (the including
+            of the HTML for your menu). When a user attempts to load a file with the x bit set, the
+            system knows that any include instructions inside it need to be processed. To do
+            that:</p>
+      <ul>
+          <li>Use WinSCP or FileZilla or SSH or whatever SFTP program you wish to access your project space on newtFire (see instructions posted on Courseweb). Navigate to your project space, which should involve your climbing a couple of steps above your home directory and then down into
+              <code>/var/www/html/projectdir</code>.</li>
+          <li>Once you are connected to your project space, upload your HTML file and your <q>include file</q>. Look at the permission attributes on your file in the space: most likely they are set to 
+          rw-r--r--, a sequence of nine characters that indicates the file permissions in three sets of three: The first three are for the owner of the directory, the second three are for the group sharing access to the directory, and the third three are for the public:
+          They may be set to rwx for the maximum permission, where <q>r</q> means <q>read</q> for reading access, <q>w</q> means <q>write</q> for permission to write or upload files to the directory space, and the last is the x-bit, or the <q>x</q>,
+          which means <q>execute</q> and this is the one we need to set for each class of user so that when the webpage in question loads, the server is told that regardless of who is accessing the page it is okay to execute a server instruction (our SSI) indicated in the comment tags 
+          within the page.</li>
+          <li>Right-click on your file, or (depending on your system and the SFTP software you are using) click on it so that you can access a menu with options to change Properties or File Permissions. Click the three boxes for <q>Execute</q> in Owner, Group, and Public permissions to set the x-bit which now permits the server to execute your SSI commands.
+          Here is an screen capture from FileZilla showing how the permissions should be set:
+          <img src="xbiitset.png" alt="setting the x-bit, FileZilla"/>
+          </li>
+      </ul>
+        
+  <!--ebb: David's command-line instructions for Obdurodon follow-->      
+        <!--        <p>To do that for a file with a different extension that contains an inclusion instruction,
+            you need to set the x bit, which permits your file to execute a process (the including
+            of the HTML for your menu). When a user attempts to load a file with the x bit set, the
+            system knows that any include instructions inside it need to be processed. To do
+            that:</p>
+        <ul>
+            <li>Create a command-line connection to Obdurodon. On a PC, you can do that with the SSH
+                client that you use to upload files. On a Mac, launch the <dfn>Terminal</dfn>
+                application, which will open a command-line session on your Mac. Inside that window,
+                type <q>ssh -l youruserid -p portnumber obdurodon.org</q> (replacing
+                    <q>youruserid</q> with your actual userid on Obdurodon and <q>portnumber</q>
+                with the port number you use for file transfers of Obdurodon [which we don’t
+                publicize for security reasons]). This will connect you to Obdurodon, where you’ll
+                be prompted for your password. If you are asked to accept the session, you should do
+                so.</li>
+            <li>Once you are connected to Obdurodon, you’ll see a <dfn>command line prompt.</dfn> At
+                the prompt, you need to move to your project directory, which you do by typing <q>cd
+                    /var/www/html/projectdir</q> and hitting the <q>Enter</q> key (<q>cd</q> stands
+                for <q>change directory</q>, and you’ll have to replace <q>projectdir</q> with the
+                actual name of your project directory). You can verify that you’ve landed there by
+                typing <q>pwd</q> (<dfn>print working directory</dfn>), which should display
+                    <q>/var/www/html/projectdir</q>.</li>
+            <li>Once you’ve moved to your project directory, type <q>chmod +x filename.html</q>,
+                replacing <q>filename.html</q> with the actual name of the file into which you would
+                like the system to insert your menu or other text. This step <q>sets the x bit</q>
+                on that file, telling the server <q>when someone asks for this page, process any
+                    inclusion instructions before you return the page to the user</q>.</li>
+        </ul>-->
+        <p>Once you’ve uploaded the files, you can test the results by loading the page in a web
+            browser. The text from the included file should appear in place of the include
+            instruction.</p>
+        <h3>Setting up SSIs in HTML files you create with XSLT</h3>
+        <p>The preceding strategy is fine when you type up your HTML directly in &lt;oXygen/&gt;,
+            but how about when you use XSLT to generate the HTML? You can’t just write the include
+            instruction like a literal result because the XSLT that does the processing will think
+            (correctly) that it’s a comment, and won’t copy it into the output.</p>
+        <p>The way you work around this is with a <dfn>comment constructor</dfn>, along the lines
+            of:</p>
+        <pre>&lt;xsl:comment&gt;#include virtual="menu.html" &lt;/xsl:comment&gt;</pre>
+        <p>The preceding code tells the XSLT processor <q>create an XML comment in the output at
+                this location, and set its contents to whatever the contents of the
+                    <code>&lt;xsl:comment&gt;</code> element might be</q>.</p>
+        <h3>Other SSI functionality, and a note about security</h3>
+        <p>The main use we make of SSIs involves inserted HTML fragments, as in the menu example
+            above, but SSIs have additional functionality, which you can read about at <a
+                href="https://httpd.apache.org/docs/2.4/howto/ssi.html"
+                >https://httpd.apache.org/docs/2.4/howto/ssi.html</a>. </p>
+    </body>
+</html>
