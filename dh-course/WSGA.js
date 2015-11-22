@@ -1,7 +1,7 @@
 /* 2015-11-21 ebb: JavaScript to respond on click of bars on SVG graph 
 to show/hide rows of associated HTML table. */
 
-var trow; // current one-question row in table
+//var trow; current one-question row in table
 
 function init() {
 //window.alert("hi!");
@@ -9,7 +9,7 @@ function init() {
   for (var i = 0; i < svgSelect.length; i++) {
     svgSelect[i].addEventListener('click', tableShow, false);
     } 
-    trow = document.getElementById('QA1');
+    var trow = document.getElementById('QA1');
   }
 
 function tableShow() {
