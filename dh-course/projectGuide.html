@@ -68,7 +68,7 @@
                					
                <li>Your site should include a page inviting visitors (especially those interested in
                   learning and applying your code) to view and study the forms of code you have been
-                  writing behind the scenes. Your Relax-NG schema files, for example, would be especially
+                  writing behind the scenes. Your Relax-NG or Schematron schema files, for example, would be especially
                   useful to feature as they help show some of your significant coding decisions (and
                   may be worth discussing on your site in relation to your research question). Sample
                   XSLT files and XQuery scripts are helpful too. One of your most important audiences
@@ -110,12 +110,12 @@
          				
          <li>
             <h4>Your research analysis and conclusions need to be clearly readable and discussed
-               					on your site.
+               					on your site. 
             </h4> 
             <ul>
                						
                <li>We expect you to use graphs, charts, and maps, or some other form of
-                  							efficient and well organizaed visualization. Graphs and charts need
+                  							efficient and well organized visualization. Graphs and charts need
                   							clear titles and labels, as well as discussion.
                </li>
                						
@@ -130,29 +130,35 @@
                   terms or specialized jargon, be sure to provide definitions and links to resources
                   for further information.
                </li>
+               <li>Cite your sources for images and material that you use that did not originate with you and your project team. Where appropriate, provide direct links to the main pages of these resources.
+                  Where these materials have been necessary for your project, citation may involve more than simply listing bibliography entries,
+                  but may involve writing sentences and paragraphs describing your work with these resources. </li>
             </ul>
             				
          </li>
          				
          <li>
-            <h4>Your project must meet the following XHTML Strict standards:</h4>
+            <h4>Your project must meet the following W3C standards for web design:</h4>
             				
             <ul>
                					
                <li>Each HTML page needs a doctype declaration and a namespace declaration. To add these
-                  where you need them (say from HTML generated in eXist), create a new HTML (XHTML strict,
-                  either XHTML 1.0 or XHTML 5) document in &lt;oXygen/&gt; and copy and paste the declarations
-                  in your HTML. Where you are writing XSLT to produce HTML, include the appropriate
-                  HTML namespace (<span class="code">http://www.w3.org/1999/xhtml</span>) in the <span class="code">&lt;xsl:stylesheet&gt;</span> root element at the top, as well as in the xsl:output line: For XHTML 1.0: 
-                  <div class="code">&lt;xsl:output method="xhtml" encoding="utf-8" indent="yes"
-                     						doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/&gt;
-                  </div> 
-                  					For the XHTML form of HTML 5 (newly available in late Fall 2014): use this line
-                  in XSLT:
-                  					
-                  <div class="code">
-                     						&lt;xsl:output method="xhtml" indent="yes"
-                     							doctype-system="about:legacy-compat"/&gt;
+                  where you need them, create a new HTML (XHTML 5) document in &lt;oXygen/&gt; and copy and paste the declarations
+                  in your HTML. (We do not recommend keeping the xml line at the very top, but just the DOCTYPE and the root html element pointing to the xhtml namespace.
+                  Or use our preferred code here: 
+                  <pre>
+                     &lt;!DOCTYPE html
+  SYSTEM "about:legacy-compat"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+                      
+                  </pre>
+                  
+                  
+                  Where you are writing XSLT to produce HTML, include the appropriate
+                  HTML namespace. For XHTML in the form of HTML 5, here are the codes to use to control the namespace and DOCTYPE definitions: (<span class="code">http://www.w3.org/1999/xhtml</span>) in the <span class="code">&lt;xsl:stylesheet&gt;</span> root element at the top, as well as in the xsl:output line: For XHTML 1.0: 
+                  <div class="code">&lt;xsl:output method="xhtml" doctype-system="about:legacy-compat"/&gt;
+                
+                     					
                      					
                   </div>
                   					
@@ -160,15 +166,11 @@
                </li>
                					
                					
-               <li>Your pages each need to be valid as either XHTML 1.1 strict of XHTML 5. You can check
+               <li>Your pages each need to be valid as HTML 5. You can check
                   your page validity in &lt;oXygen/&gt; or through the <a href="http://validator.w3.org/">W3 Consortiums's Markup Validation Service</a>.
                </li>
                					
-               <li> <strong>Note:</strong> When you <a href="http://dh.obdurodon.org/svg-embedding.xhtml">embed SVG on an XHTML page (which we encourage you to do)</a>, you will likely generate validation errors: Check with us instructors to make sure
-                  these are not serious problems (most likely they are not). Embedding SVG on your pages
-                  is a good idea because you can write JavaScript to make your visualizations interactive,
-                  so we encourage you to do it. 
-               </li>
+     
                					
                				
             </ul>
@@ -211,9 +213,10 @@
                   your sites for mobile reading. 
                </li>
                					
-               <li>As you develop your sites in the <a href="http://www.dhds.gds.pitt.edu/">Digital Sandbox (behind Greensburg's firewall)</a>, you will be working with your instructors in the last week of the course to migrate
-                  your files <a href="http://pacific.pitt.edu">to public-facing web space hosting our Pacific project</a>. Be sure to maintain clear communication with your instructors to transfer your files,
-                  so that we can help you with testing site functionality.
+               <li>You are developing your pages on public-facing webspace within our domain <a href="http://newtfire.org">http://newtfire.org</a>, provided by the Pittsburgh Supercomputing Center (<a href="http://psc.edu">http://psc.edu</a>) under the aegis of <a href="http://www.greensburg.pitt.edu/academics/integrated-digital-humanities">Digital Humanities at Pitt-Greensburg</a>. 
+                  Your work in this course and the final course project fulfills a core requirement in our new <a href="http://greensburg.pitt.edu/academics/info/digital-studies">Digital Studies Certificate program at Pitt-Greensburg</a>, and you may want to represent all of these entities in some way on your project pages.
+                  Be aware that your work is available in public space and may be discovered and cited by others (which should be good for you!) Be sure to maintain clear communication with your instructors to transfer your files,
+                  so that we can help you with testing site functionality and to help review your site content with you as you are working to complete a semester's work on your projects.
                </li>
                					
                <li><strong>To submit or turn in your project by the deadline</strong> (Thursday of Finals Week by 11:59 PM), complete your project website in our Digital
@@ -234,8 +237,13 @@
                      					
                   </ul>
                </li>
-               				
-               					
+               <li>Each of you pursuing the <a href="http://greensburg.pitt.edu/academics/info/digital-studies">Digital Studies Certificate</a> must link to your course project (and may link to other work you wish to feature) from this class on a website you develop as your online portfolio featuring your digital projects. 
+               	   This will eventually be reviewed by the faculty on the Digital Studies committee to ensure completion of graduation requirements for the certificate, and we hope will be useful for you in pursuing careers and graduate programs.
+               	Portfolios may be developed on your personal space in NewtFire, or your Pitt personal webspace, or elsewhere as you wish, but must meet our minimal standards as posted in our <a href="dsPortfolio.html">Portfolio Standards</a> page. 
+               	</li>			
+               	<li>Some student projects will be in active development over multiple semesters with new students joining to continue the work of previous semesters. 
+               	It is important that all students involved in a project and the semester of their involvement be documented on your project site. 
+               	</li>				
                					
                				
             </ul>
