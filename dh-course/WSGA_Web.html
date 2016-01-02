@@ -5,14 +5,23 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <title>Sanitary Conditions of Workshops and Factories in New York City</title>
-      <link rel="stylesheet" type="text/css" href="WSGA.css" /><script type="text/javascript" src="WSGA.js">/**/</script></head>
+      <link rel="stylesheet" type="text/css" href="WSGA.css" />
+     <script type="text/javascript" src="WSGA.js">/**/</script>
+   </head>
    <body>
       <h1>Sanitary Conditions of Workshops and Factories in New York City</h1>
+         
+  <div class="flex"> 
+        <!--ebb 2016-01-02: I've incorporated flexboxes into this design in order to control the relative positions of the major block elements on the page,
+              to balance the HTML tables on the right to with the SVG on the left, and to put the SVG and image in relation to each other vertically.
+        For information on flexboxes, see https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+        -->
+        <div id="charts">      
       <h2>Graph with Table Results</h2>
-     <div id="svg">
-         <!--
+ 
+<div id="svg">         <!--
          <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="800" preserveAspectRatio="xMinYMin meet">-->
-         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="800" viewBox="0 0 1200 1200" preserveAspectRatio="xMinYMin meet">
+         <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="525" viewBox="0 0 1200 800" preserveAspectRatio="xMinYMin meet">
             <!--ebb In setting the viewBox I was attempting to shrink the total area of the window taken up by the SVG. The higher the last two numbers, the smaller the image would scale.
             See Amelia Bellamy-Royds on scaling SVG with viewBox, preserveAspectRatio and meet: https://css-tricks.com/scale-svg/-->
   <g>
@@ -610,8 +619,9 @@
             fill="none"
             stroke="2"/>
    </g>
-</svg>
+</svg></div>
        
+        <img src="originalWSGAch1_table.jpg" alt="19th-century survey data"/>
       </div>
       <div id="Tables"><span class="instructions">Click on a bar on the graph to see the numerical breakdown of responses for each survey
          question.
@@ -773,9 +783,9 @@
             <td class="Total">821</td>
          </tr>
       </table>
+     <hr />
          <hr />
-         <hr />
-         <div id="otherTables">
+   
             <h2>Other Survey Questions:</h2>
             <h3>Sources of Offensive Odors</h3>
             <table id="T2">
@@ -822,6 +832,8 @@
                </tr>
             </table>
          </div>
-      </div><img src="originalWSGAch1_table.jpg" alt="19th-century survey data"/>
+   </div>
+   
+  
    </body>
 </html>
