@@ -1,0 +1,135 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>SVG Exercise 2</title>
+    </head>
+    
+    
+    
+    <body>
+        <!--#include virtual="top.html" -->
+        <h1><span class="banner">SVG Exercise 2</span></h1>
+        <span class="smaller">adapted with small revisions from Obdurodon.</span>
+       
+        <h3>The text</h3>
+        <p>With this assignment, you will gain experience with writing XSLT to generate SVG. 
+            We will work with an XML document from <a href="http://alice.obdurodon.org/">a Pitt student project</a> on Lewis Carroll’s <cite>Alice in Wonderland</cite>, and you can download
+            the file from here by right-clicking <a href="alice_quotes.xml">on this</a>. (Don’t
+            just click to open it in a browser and copy, which can add some browser rendering
+            characters that will mess up your code; right click and download.)</p>
+        <img src="aliceFlamingo.svg" width="200"/>
+        <p>Let’s analyze the Alice XML file. The root element, <code>&lt;alice&gt;</code>, contains
+                <code>&lt;cast&gt;</code> and <code>&lt;titlePage&gt;</code> child elements, both of
+            which you can ignore, followed by twelve child <code>&lt;chapter&gt;</code> elements.
+            The chapters are numbered with a <code>@which</code> attribute, e.g., <code>&lt;chapter
+                which="1"&gt;</code>. Chapters contain paragraph elements (<code>&lt;p&gt;</code>),
+            which contain various child elements and descendants. You are interested in the
+                <code>&lt;q&gt;</code> elements inside the chapters (at various depths), which are
+            used to tag quotes by characters in the story.</p>
+        <h3>The task</h3>
+        <p>Your goal is to create a line graph that charts the number of quotes by Alice herself in each chapter. You do not have to graph any
+            character except Alice. Your X axis marks the chapters and your Y values reflect the
+            number of <code>&lt;q&gt;</code> elements in each chapter that have an <code>@sp</code>
+            attribute equal to <q>alice</q>. A complete line graph might look something like <a
+                href="alice_svg_output.svg">http://newtfire.org/dh/alice_svg_output.svg</a>. We are going to plot a line graph 
+            (instead of something like a bar graph) because we want to indicate variation across a connected series (over time) from chapter to chapter. <span class="smaller">(When you think about SVG for your projects, 
+        think about what kinds of plots make sense: For some kinds of data that aren't connected to each other, we might want side-by-side bars to compare.)</span></p>
+       
+        <h3>The XSLT Stylesheet Template for Outputting SVG</h3>
+        <p>To output SVG from XML, we need to make some modifications to the default xs:stylesheet and xsl:output statements, so that
+        the XSLT properly outputs valid W3c code that we can read in a web browser. Below is the code you need at the
+        top of your XSLT file for this assignment. The input XML is not in the TEI namesepace, so we use the defalut XML schema,
+        but we need to indicate the output SVG namespace (in the highlighted <span style="color: purple;">purple</span> line below.
+        The xsl:output method is set to "xml" as a default, classifying SVG as a kind of XML.
+        </p>
+        
+        
+        <pre>
+           &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    exclude-result-prefixes="xs"
+    <span style="color: purple;">xmlns="http://www.w3.org/2000/svg</span>"&gt;
+   
+    &lt;xsl:output method="xml" indent="yes"/&gt; 
+            
+        </pre>
+        
+        <h3>Working with variables</h3>
+        <p>Our solution uses <em>global variables</em> (variables that are defined once for the
+            entire stylesheet) as well as variables that have different values for each chapter in
+            the book (that is, for each dot in the graph). We worked with variables already in the XSLT Exercises
+            5 and 6, but for a review, see <a
+                href="http://www.w3schools.com/xsl/el_variable.asp"
+                >http://www.w3schools.com/xsl/el_variable.asp</a> or look them up in the Michael Kay book. What is new here is that 
+            we are going to use multiple variables, and most of these will help us to generate the number values we need to plot our SVG graph.</p>
+        <p>As an example of a global variable, the amount of space between chapters on the X axis
+            (that is, the amount of horizontal space between dots) is constant for the entire SVG
+            graph. That is, each dot is the same distance from its neighbors as other dots are from
+            their neighbors. If we want that distance to be, say, 100 pixels, we can define a global
+            variable with something like:</p>
+        <pre>&lt;xsl:variable name="Xinterval" select="100"/&gt;</pre>
+        <p>We can then refer to the <code>$Xinterval</code> variable when we need to space out our
+            dots while plotting them. This is a <dfn>convenience variable</dfn>, which means that it
+            wasn’t absolutely necessary, since we could instead have written <q>100</q> wherever we
+            need it. What’s convenient about the variable is that if we later decide to change the
+            value, it could be hard to find a number inside XSLT or SVG code. If we’ve put the
+            number in a variable definition, we can find and change it more easily. Global variables
+            are defined as children of the root <code>&lt;xsl:stylesheet&gt;</code> element. We
+            usually write them immediately after our <code>&lt;xsl:output&gt;</code> element, so
+            that we can find them easily.</p>
+        <p>We can also set convenience variable values that may be different for different chapters
+            (different dots); these are not global variables because they don’t always have the same
+            value. For example, in the code that draws the dots for each chapter, we can set the X
+            position of a dot with something like:</p>
+        <pre>&lt;xsl:variable name="Xpos" select="position() * $Xinterval"/></pre>
+        <p>If we’ve previously defined <code>$Xinterval</code> as equal to <q>100</q>, this will set
+            the value of the <code>$Xpos</code> variable to <q>100</q> for chapter 1 (the first of
+            the twelve chapters, and therefore in position #1), to <q>200</q> for chapter 2, etc. We
+            can then plot the dot with something like (you will also already have calculated the Y
+            position and assigned that value to the variable <code>$Ypos</code>):</p>
+        <pre>&lt;circle cx="{$Xpos}" cy="{$Ypos} r="5" fill="red"&gt;</pre>
+        <p>Note the curly braces, which create an attribute value template (AVT) that causes the
+            variable to be interpreted and its value to be output. If you don’t use an AVT, you’ll
+            set your X position to a literal value of <q>$Xpos</q>, which is invalid because the X
+            position of an SVG <code>&lt;circle&gt;</code> element must be numeric. You don’t need
+            curly braces for the <code>@r</code> attribute (the radius of the circle) because that
+            value already is a number, and you don’t need it for the <code>@fill</code> (color)
+            because that value should be a literal color name or some other representation of a
+            color.</p>
+        <p>Putting the X position into a variable is handy because you're going to need it both to
+            position the dot and to position the chapter label (see the labels on the X axis on our
+            sample output at the link above). If you calculate the position for each chapter once
+            and stash it in a variable, you reuse the variable to position two things without having
+            to redo the calculation.</p>
+        <h3>Writing the XSLT</h3>
+        <p>Writing SVG with XSLT almost always involves using the “pull” approach, which selects for just the bits of data you need. 
+            After you create the SVG superstructure, plot the X and Y axes, and label the Y axis at intervals, you
+            can draw the dots, the lines between dots, and the labels on the X axis either by
+            applying templates to all <code>&lt;chapter&gt;</code> elements or by using
+                <code>&lt;xsl:for-each select="//chapter"&gt;</code>. If you use the
+                <code>&lt;xsl:for-each&gt;</code> strategy, you’ll need only one template for the
+            document node, and you’ll put the <code>&lt;xsl:for-each&gt;</code> inside that. If you
+            apply templates to chapters, you’ll need two templates: a template for the document
+            node, in which you’ll create the SVG superstructure, and a template that matches
+                <code>&lt;chapter&gt;</code> elements.</p>
+        <p>You can can draw the dot for each chapter when you process that chapter, but to draw
+            connecting lines between the dots, you’ll need to access information about two chapters
+            at once. One will be the one you’re processing; the other will be either the one before
+            or the one after. There are several ways to do that, and we’ll talk about them when we
+            go over the solution, but whatever you do, note that with twelve chapters you have
+            twelve dots but only eleven connecting lines. This means that one chapter (either the
+            first or the last, depending on how you structure your code) will have to be treated
+            differently from the others. For that reason, you may find it useful to test whether
+            you’re at the beginning or end of the sequence of chapters with
+                <code>&lt;xsl:if&gt;</code>.</p>
+        <h3>What to Submit</h3>
+        <p>Turn in your XSLT file. We will generate your SVG output ourselves by running your XSLT. 
+            Remember to save and open your SVG output in oXygen and in a web browser to be sure it is valid and that it is rendering as you think it should be. </p>
+    </body>
+</html>

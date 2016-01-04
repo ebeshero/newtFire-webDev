@@ -1,0 +1,126 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>SSI and JavaScript Exercise 3</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+      	
+      			
+      				
+      <h1><span class="banner">JavaScript Exercise 3</span></h1>
+      				
+      <p>We have been working with a table of nineteenth-century labor survey results from <a href="http://nelson.newtfire.org/">the Nell Nelson project</a> in our XSLT and SVG units, and we return to it now to integrate HTML with SVG, JavaScript, and CSS. This assignment will give you experience with designing a project HTML page to host SVG together with HTML, and to integrate information from an SVG chart with information retrieved on-click from an HTML table. In the process, you’ll return to the “drawing board” to output your HTML and SVG afresh, with a plan for setting attributes and elements for users to interact with in JavaScript. You will be reviewing much of what you have learned in this course and gaining experience we hope you will also apply to your project design work.</p>
+      <h3>Your task</h3>
+      <p>We began here, with a TEI XML file we created by transcribing this table, using feature structures markup in the TEI:</p>
+      <img src="originalWSGAch1_table.jpg" alt="19th-century labor survey from Nell Nelson project"/>
+      <p>Our goal has been to produce a readable web interface to make this table data more accessible to interested readers. We are now ready to work in stages from our TEI XML to produce something like <a href="WSGA_WebModel.html">this webpage, to set SVG elements in relation to HTML elements on a webpage</a>, and to take this one step further to add JavaScript and make the presentation dynamic. Our SVG on this page is pulled from a student homework assignment from the Fall 2015 class, and we have worked on fitting the SVG with HTML elements. In our fully functioning model (which we will show you in class and post on the NewtFire website after you have completed this assignment) we wrote JavaScript to script a series of events to occur with a site visitor clicks on a bar of the SVG graph: On click of a bar, the table to the right will change to reveal a currently hiddent table row that contains the survey result data for the particular survey question represented by that bar. You should not produce exactly the same design we did (which in some respects is a little visually repetitive since we reproduce the survey questions twice), and we expect that you will each come up with your own way to visually lay out the information on your solution page. For this assignment, then, we ask that you accomplish the following:</p>
+      <ul>
+         <li>Download and work with <a href="WSGATableCh1Num.xml">this slightly modified TEI XML file</a> we have created from the 19th-century labor survey data. We have added <code>@xml:id</code> attributes to the <code>&lt;fs&gt;</code> elements to simplify the identification of the survey question and answers.</li>
+         <li>Revisit your XSLT that produced HTML (from <a href="XSLTExercise3.html">XSLT Exercise 3</a>), and your XSLT that produced SVG (from <a href="http://newtfire.org/dh/SVGExercise3.html">SVG Exercise 3</a>), and rethink how to output your work, so you can use the new <code>@xml:id</code> attributes, but more importantly so that you can find a way to associate the HTML table information you output with the JavaScript on the page. We did this by making each bar on the stacked SVG bar graph respond on click by revealing its associated table row of survey response data, which we had started by <em>mostly</em> hiding from view (only permitting the first question’s results to be shown) with a couple of rules you can see in our CSS file. You might choose to do something different , perhaps to show or hide the bars on the SVG plot, and associate them with table information. You might even decide to play a little (once you have achieved basically functional JavaScript) to try something unusual. (For example, can you trigger an audio event such as a series of musical tones to play, one tone for each bar, treating each stacked bar like the keys of a sort of toy piano? For some guidance on this, have a look at this collection of posts on Stack Overflow: <a href="http://stackoverflow.com/questions/9419263/playing-audio-with-javascript">http://stackoverflow.com/questions/9419263/playing-audio-with-javascript</a>.) You don’t have to make your graph play music, but you could experiment with finding a way to make the bars change colors on click, or outline them (as we did in our solution) with a bright color when selected. However you decide to do this is up to you. </li>
+         <li>Since SVG requires different namespace and <code>xsl:stylesheet</code> input information than HTML does, we have not found a way to integrate the two outputs in one XSLT stylesheet. We recommend, then, that you output the SVG separately, but design your XSLT for HTML to hold a designated <code>&lt;div&gt;</code> element (like <code>&lt;div id="svg"&gt;</code>) to set the SVG apart and find a way to balance it in your HTML page layout with another <code>div</code> (or set of <code>div</code> elements) that you can manipulate with CSS styling together with SVG <code>@width</code>, <code>@height</code>, and <code>@viewBox</code> attributes to position on the page together in a user-friendly way. You will need to design your output SVG (using any strategy that works for you) to share space on an HTML page with table data. We recommend that you read and apply Amelia Bellamy-Royds’ tutorial on scaling SVG with <code>viewBox</code>, <code>preserveAspectRatio</code> and <code>meet</code>: <a href="https://css-tricks.com/scale-svg/">https://css-tricks.com/scale-svg/</a>. </li>
+         <li>Write JavaScript and associate it with your HTML page that holds SVG. Script out a series of animated events to occur on document objects on click, or on some other user interaction. To design our clickable bars, we studied and adapted <a href="http://dh.obdurodon.org/election.xhtml">Obdurodon’s clickable elections graph page</a>, and took it further to highlight a stack of bars so that on-click of a stacked bar, all of the inner elements of an SVG <code>&lt;g&gt;</code> are outlined with a red border (controlled with an SVG <code>stroke</code> property, which we wrote as a toggle in our JavaScript). To be sure, you have the benefit of our JavaScript to work on this assignment, but we had to do some unusual things to make it work and your reverse-engineering our code is fine with us, so long as you achieve results of your own, distinct in some way from ours.</li>
+         
+      </ul>
+      <h3>Some guidance with stepping your way to a solution</h3>
+      <p>We recommend you begin this assignment with a sheet of paper and a pencil, or something that helps you sketch out a <q>battle plan</q>. This is how we work on project design challenges: We start with a document analysis of our input XML and try to sketch something on paper about how we want to output and visualize information from that XML in a user-friendly website. With this assignment we wanted to model that process with specific task that might be like something you are working on for your projects. Here’s some guidance on what you will need to plan for and some strategies we used to develop our solution:</p>
+      <ul>
+         <li>Start by reviewing the input TEI XML file with its new <code>@xml:id</code> attributes. Review your HTML and SVG output, and think about what you will need to do to your original XSLT to output HTML and SVG in a new way that will allow you to <em>relate the SVG to the HTML</em>. Your output HTML table row data is analagous to your output of stacked bars, so we recommend you find a way to create a system of <code>@id</code> attributes that will help you to correlate the two kinds of elements. But there will be a problem with this that you must anticipate: When you put SVG on the same page with your HTML, you <em>cannot have the same</em> <code>@id</code> <em>attributes on the SVG</em> <code>&lt;g&gt;</code> <em>elements that you use on the HTML</em>  <code>&lt;tr&gt;</code> <em>elements!</em> How will you deal with this? In order to make the two sets of elements relate to each other, you need to have each one <strong>contain</strong> (as in a string) the relevant contents of the other, and we recommend you use our <code>@xml:id</code> attributes that we added to the input TEI XML for this purpose. One of your sets of <code>@id</code> attributes can contain an extra string of information separated from the rest with something like a punctuation mark (hyphen, underscoree, etc, whatever makes sense). You want to plan on having to tokenize one set of @id attributes to find out where the relevant portion of them matches to the other set. In our solution, we used Attribute Value Templates to grab the <code>@xml:ids</code> from the XML for both sets of SVG and HTML <code>@ids</code>, and we set up the SVG to hold a little extra information in front, positioning our curly braces like so:  <code>"svg-{AVT here}"</code>.</li>
+         <li>We recommend writing your XSLT that produces HTML, so that it contains an empty <code>&lt;div&gt;</code> element with a special @id (like <code>&lt;div id="svg"&gt;</code> that will house your separately output SVG. You should also plan out other <code>&lt;div&gt;</code> container elements (or devise some other good strategy) to hold the HTML table or tables. In our solution, we output three separate HTML tables just as we did in XSLT Exercise 3, but if you do not want to include the other tables that aren’t represented in the SVG graph, you don’t have to. Alternatively, you could decide to output two additional SVG graphs to hold the information from the other two questions that we didn’t plot in our SVG Exercise 3. That is up to you. If you would like to include the image of the original 19th-century table in your output, you may download it from <a href="originalWSGAch1_table.jpg">here</a>.</li>
+         <li>You will need to tinker a while with fitting the SVG on the HTML page once you paste it into your <code>&lt;div&gt;</code>, and there are a number of strategies available to work with this, involving attributes you will want to write into your SVG and rules for width and height in CSS. Feel free to use our model solution here as a guide to developing your own layout. We consulted Amelia Bellamy-Royds’ brief and very informative tutorial on scaling SVG with <code>viewBox</code>, <code>preserveAspectRatio</code> and <code>meet</code>: <a href="https://css-tricks.com/scale-svg/">https://css-tricks.com/scale-svg/</a> to develop our solution, and we recommend strongly that you spend time with this tutorial not only for this assignment but for your project development.</li>
+         <li>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:
+         <ul>
+            <li>On load of the window, you will want to fire a function, the one we typically call <code>init()</code>. That init() (or initial()) function should add event listeners on the elements you expect your site visitors to interact with. This is familiar territory, but we found ourselves writing the element selection a little differently than we have done in the past: In our SVG, we set <code>@id</code> attributes on each <code>&lt;g&gt;</code> element, and there was at least one outer <code>&lt;g&gt;</code> containing an entire graph. We only wanted something to happen on click of each stacked bar, so we wanted the inner <code>&lt;g&gt;</code>  elements to be made <q>clickable</q>. To do that we used a handy selector in JavaScript that uses CSS syntax to identify <em>elements that hold a specific attribute</em> called <code>querySelectorAll()</code>: We wrote it like this to define an array of elements:
+            <pre>
+                var svgSelect = document.querySelectorAll('g[id]');
+               
+            </pre>
+               That code creates an array of all the <code>&lt;g&gt;</code> elements that hold an @id attribute. After this we set up a for-loop with the range variable <code>i</code> to step through each member of the array of <code>svgSelect.length</code>, and then we set up our <code>addEventListener()</code> to run on the <code> svgSelect[i]</code> (or the svgSelect variable at position i), and to fire the next function() in sequence in the event of <code>'click'</code>, just as you have already done on previous assignments. <strong>Note:</strong> If you use the @id in other ways on your outer wrapper <code>&lt;g&gt;</code> elements, you will need to do something more, perhaps to set a <code>@class</code> attribute on just the <code>&lt;g&gt;</code> elements you want to grab here. (Modifying your code to suit your specific plan is part of this assignment!)</li>
+            <li>Our JavaScript defines two more functions after <code>function init()</code>, and remember that each function needs to call the others in turn for your JavaScript to work. We devised a couple of simultaneous toggling effects, and though we did not use the @classList toggle, we might have done so and perhaps written this differently. But our solution involves one function that fires on click to highlight a stacked bar in the SVG and at the same time expose a previously concealed HTML table row (concealed with the CSS <code>display:none</code>. To initiate the sequence and make a table of one set of survey results visible <em>at the moment when the page loads</em>, note that we must first of all define an exception for one row to be visible from the start, in both our CSS and our JavaScript. First, we had to define a <code>global variable</code> for a table row <strong>that sits above all the functions</strong> so that we can call it and redefine it in <strong>each one of our functions in turn</strong>. We do not really define it at first, we just <strong>name</strong> it at the top of our JavaScript file, and then inside <code>function init()</code> (that fires when the window loads) we set a variable connected with our <strong>default</strong> table row. Our CSS also contains two rules: one to conceal all the table rows, and one after it that exposes just the <strong>one, single row</strong> that we want to show when the page first loads. We know this is a little confusing, but it is going to be necessary to have something visible to start with and then on click, to set the function that replaces the @id of that initial row by redefining that variable for the table row in your next JavaScript function, the one that fires on click of a new bar. Here is how we did it. <ul><li>First, in the CSS: 
+           <pre>
+              
+table#graphData tr[id] {display: none; height:100px; width:300px;}
+table#graphData tr[id="QA1"] {display: table-row;}
+           </pre>
+           
+          Here we define two rules for the <code>&lt;tr&gt;</code> (table row) elements with @id attributes that are inside <code>table</code> element with the <code>@id</code> of graphData (the table we output to correlate with our SVG bar graph. (Note how the CSS selectors work to step down the tree from a parent table element to the child tr elements.) We set the general rule to conceal all of the rows, and then we write a new rule that exposes <em>just one row</em> for the specific <code>@id="QA1"</code>, so that it will be showing when we first load the page. This might look like a contradiction in terms, but it works because CSS permits a more specific rule to override a more general one.</li>
+           <li>Now, for the JavaScript, above all of our functions, we first name the <code>global variable</code> for the table row, and then  in our <code>function init()</code> we give it a definition connected with the only visible table row defined in our CSS:
+           <pre>
+      <code>var trow;</code> //Here we name the global variable for the current one-question row in table, which we will call and redefine in each of our JavaScript functions. This makes the variable available to invoke in all of the functions.
+
+       function init() {
+//other stuff for adding event listeners to the SVG bars goes here 
+  
+   <code>trow = document.getElementById('QA1');</code> //Here we have called the global variable and we have given the specific definition for it that applies in function init()
+  }
+              
+              
+              
+              var trow = document.getElementById('QA1');
+           </pre>
+           By doing this, we create a variable set to the only value that will be showing at the load of the HTML page, and that variable can then be <em>passed</em> to our next function, which fires on click of a stacked bar. What should happen, if you click on, say, the second stacked bar of the SVG plot, is that the currently-showing table information from the first stacked bar will disappear and be replaced by the table row information from that second SVG bar stack. To make this happen, we first need to call a function that will <em>cause the previously displaying table (and any associated highlights)</em> to disappear. We called that our <code>hide-last()</code> function, and it is supposed to fire <strong>first of all</strong> when a visitor clicks, so we call it like this:
+              
+              <pre>
+        function tableShow() {
+                 hide_last();
+    
+                  /*The rest of your function variables and events will go here */
+               }
+    
+    function hide_last() {
+            /*define the concealing events here */
+        }
+        
+              </pre>
+           </li>              
+              
+           
+           </ul>
+              
+             
+           </li>
+            <li>A key JavaScript challenge for this assignment is to find a way to connect an event on a specific <code>&lt;g id="SomethingSpecific"&gt;</code> with an associated <code>&lt;tr id="SomethingElseSpecific"&gt;</code>, however you have defined that relationship. We have to set this up so that each set of <code>@id</code> attributes will contain the same string of text pulled from the <code>@xml:id</code> attributes from our TEI XML. To do this, you will either need to match on a split portion of the @id, or add something missing to that @id to complete the match. Our solution (which does not have to be yours) involves taking an SVG attribute in this form: <code>id="svg-ID</code> and splitting it after the hyphen to match the second part of it with an HTML <code>id="ID"</code>. We did that with a nifty JavaScript operation called split(), like this:
+            <pre>
+               trow = document.getElementById(this.id.split("-")[1]);
+               trow.style.display = "table-row";
+               
+            </pre>
+               Let's look at this from the inside out: Here, the word <code>this</code> in JavaScript <em>always refers to the currently selected thing, whatever it is with the event listener that the visitor has clicked on</em>. In this case that's a single SVG stack of bars. Our variable <code>trow</code> is redefined from what it meant in our <code>function init()</code> so that it now holds an array of, <em>not</em> the full @id attrribute, but rather the piece of it that sits <em>after the hyphen (<code>"-"</code>)</em> inside the @id. You can read about and experiment with the JavaScript <code>split()</code> function here on w3schools: <a href="http://www.w3schools.com/jsref/jsref_split.asp">http://www.w3schools.com/jsref/jsref_split.asp</a>. Basically <code>split()</code> involves creating a little array of two (or more) pieces depending on the character you designate as the point of a split or division: so in our case we have a piece before a hyphen and a piece after it. Remember that JavaScript counts from zero, so we can <em>identify which piece to match on based on its position in the JavaScript array, either 0 or 1</em>. Since we want the piece after the hyphen, we grab the piece (or token) at position <code>[1]</code>. What we say here in re-defining our variable <code>trow</code> is: Go into the document and get the <strong>single, particular element</strong> that holds the @id equal to the <em>second half of the split of <strong>this</strong> @id (from our SVG bar stack)</em>. And that element with that @id will be our HTML table row. 
+            
+            </li>
+            <li>Our model for designing our clickable SVG bar plot was <a href="http://dh.obdurodon.org/election.xhtml">Obduron’s bar graph of the 2008 Presidential elections</a>, where the matching worked a little differently. In that example, you can see another way to match on an @id by <em>adding somethign to it</em>: The SVG @ids were simply an @ID, and the table @ids had added text: "tbody-" in front of them. They did not use split() to match up the @ids, but instead had to <em>add</em> a string of text to this.id. To see how they did it, inspect their code by viewing the page source and accessing the associated JavaScript file. Either strategy will work, depending entirely on how you output your @ids for the SVG and HTML elements.</li>
+            <li>We added some functionality that we did not find in the Obdurodon example, to find a way to change the <code>stroke</code> attribute (or border) of all the child elements of an SVG <code>&lt;g&gt;</code> element, by adding it to "this" in the function that fires after a click: <code>this.style.stroke = 'red';</code>. The real challenge here is to figure out how to remove that highlighting, which we did in our <code>hide-last()</code> function. We cannot refer to "this" in <code>hide-last()</code> because it is supposed to refer to anything that was selected <em>before</em>, so we needed just to look for <em>any and all g elements with @id attributes that might have highlighting around them</em>, and for that we used <code>querySelectorAll()</code> to find those by their CSS selectors, as we did earlier when we defined our elements to add event listeners in our <code>function init()</code>.
+            
+            </li>
+            
+         </ul>
+         
+         </li>
+        
+      </ul>
+      
+      <h3>What to submit for your homework</h3>
+      	<p>You will need to submit multiple files to complete this assignment:</p>
+      <ul>
+         <li>Your <strong>XSLT files</strong> to produce HTML and SVG</li>
+         <li>Your <strong>HTML file</strong> containing your SVG. (You may also include, if you like, the separate SVG and HTML files you first output from XSLT, but you don’t really need to do that since we can run your XSLT to generate them directly.</li>
+         <li>Your <strong>CSS file</strong> to style and proportion the SVG and HTML elements on your page, and to control colors and display options together with your JavaScript</li>
+         <li>Your <strong>JavaScript file</strong> to script and control a sequence of events that should happen when a visitor interacts with your pages.</li>
+         
+      </ul>
+      <p>We ask that you associate your files with relative URLs so that you can upload them to Courseweb or put them in place (in relation to each other) on whatever web server you wish to use. Submit this on Courseweb, but if you like, you may also mount your files on your newtFire or GitHub io webspace.</p>
+   </body>
+   
+   
+   
+   
+</html>

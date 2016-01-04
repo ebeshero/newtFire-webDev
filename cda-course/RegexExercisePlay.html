@@ -1,0 +1,80 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>Regex Exercise: Convert a Play to XML</title>
+   </head>
+
+
+
+   <body>
+      <!--#include virtual="top.html" -->
+      <h1><span class="banner">Regex Exercise 4: Convert a Play to XML</span></h1>
+      <h2>The Text:</h2>
+      <p>For this assignment, work with the plain-text Project Guteberg file of <a
+            href="shawPygmalion.txt">George Bernard Shaw's play, <i>Pygmalion</i></a>. Download the
+         file, open it in &lt;oXygen/&gt;, and remove the Project Gutenberg boilerplate at the top
+         and bottom of the file, so that you have only the text of the play to work with. </p>
+      <h2>Your Task:</h2>
+      <p>Your goal is to use Find/Replace operations to prepare an XML-encoded digital edition of
+         the play. This time, the specific markup tags you use are up to you, but we expect to see
+         specific structural distinctions marked in your XML. These include the following: </p>
+      <ul>
+
+         <li>major structural divisions: including Shaw's preface, his epilogue, and each of the
+            five acts</li>
+
+         <li>speeches</li>
+
+         <li>speaker's names with each speech</li>
+
+         <li>stage directions (cues for the actors and stage managers)</li>
+         <li>paragraphs of text, where these appear</li>
+
+
+
+      </ul>
+      <p>Your goal is to use Find and Replace operations, with or without regular expression
+         patterns, to create <em>descriptive</em> (rather than presentational) XML markup. We would
+         write an XSLT transformation to convert this to an HTML digital edition for presentation.
+         But this particular task is to make the XML that identifies, holds, and nests the
+         structural units of the play (Acts holding scene descriptions and speeches, speeches
+         holding info identifying speakers and stage directions etc.). You should not use manual
+         tagging except in situations that occur so rarely that there is really no point in using an
+         autotagging solution. (For example, you do not need to use an autotagging strategy to tag
+         the title of the whole play or to create a root element for your XML: just do that
+         manually.) </p>
+      <p>Consult our <a href="explainRegex.html">Guide to Autotagging with Regular Expressions</a> and notes from class on regular expressions as you work. The TEI provides some helpful guidelines for tagging the structural units of plays, and <a href="https://docs.google.com/document/d/1r-8NGPJL1pZ20pnfvoX5OT0DkcDi-NBp5urJiZwx1sY/pub#id.jsipg2iggqrf">the
+         Digital Mitford project's Codebook</a> lists some of the basic elements that you may
+         wish to apply in this assignment. If you choose to follow the Mitford Codebook's model template for a TEI encoded play, don't worry about the cast list portion, since that is missing in this edition of Shaw's play, and you don't need to worry about fine-tuning the attributes and values. Just concentrate on encoding the different structural parts of the play using appropriate elements.</p>
+      <ul>
+
+
+
+         <li><strong>Record each step of your process carefully</strong>, in a separate document
+            (ideally a plain text file), since this is the file we will be grading. These will
+            include global Find-and-Replace operations or Regular Expressions in oXygen (using
+            Ctrl-F on Windows or command-F on Mac). Your goal is to produce a well-formed XML document, but even if you have have trouble, what's most important is that you document the
+            steps you took. </li>
+
+         <li><strong>Upload two files on Courseweb for this exercise:</strong>
+            <ol>
+               <li>a plain-text file in which you recorded your steps </li>
+
+               <li>your end result: the XML file you create</li>
+            </ol>
+         </li>
+
+
+      </ul>
+   </body>
+
+
+
+
+</html>
