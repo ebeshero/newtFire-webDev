@@ -1169,11 +1169,13 @@
                <p>XPath Functions: some common functions we use and how to write them:
                   <hi rend="em">count(), not(), distinct-values()</hi>. XPath for the <hi rend="em">text() node</hi> to grab
                   strings: <hi rend="em">string-join()</hi>, <hi rend="em">contains(string 1, string 2)</hi>. </p>
+               <p>Using Regular Expressions in XPath.</p>
             </div>
             <div type="assign">
                <list>
                   <item>Read (and consult) <title level="a"><ref target="http://dh.obdurodon.org/functions.xhtml">The Xpath Functions We Use Most</ref></title> </item>
                   <item><ref target="XPathExercise3.html"><hi rend="em">XPath Exercise 3:</hi> experimenting with functions</ref></item>
+                  <item>Read Wendell Piez's <ref target="http://www.balisage.net/Proceedings/vol13/html/Piez01/BalisageVol13-Piez01.html">Hierarchies within range space: From LMNL to OHCO</ref>, and post on the DHClass-Hub Issues Board Discussion.</item>
                   
                </list>
             </div>
@@ -1182,7 +1184,8 @@
                <date when="2016-02-17">W 02-17</date>
             </head>
             <div type="inclass">
-               <p>Work on XPath and manipulating text strings. Using Regular Expressions in XPath.</p>
+               <p>[TBD]Guest lecture by Wendell Piez (Piez Consulting Services) about overlapping hierarchies and markup possibilities</p>
+              
             </div>
             <div type="assign">
                <list><item>
@@ -1257,7 +1260,9 @@
                <p>Introducing XQuery and eXist, the XML database. XQuery in eXist and in oXygen</p>
             </div>
             <div type="assign">
-               <p>Work with <ref target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay's XQuery Tutorial</ref> and our <ref target="http://newtfire.org/dh/explainXQuery.html">Introduction to XQuery and the eXist XML Database</ref> as you orient yourself to XQuery and the eXist database environment on the first XQuery exercise. </p>
+               <list><item>Work with <ref target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay's XQuery Tutorial</ref> and our <ref target="http://newtfire.org/dh/explainXQuery.html">Introduction to XQuery and the eXist XML Database</ref> as you orient yourself to XQuery and the eXist database environment.</item>
+                  <item><hi><ref target="XQueryExercise1.html">XQuery Exercise 1</ref></hi></item>
+               </list>
             </div>
          </div></div>
         <div type="week" n="9">  <div type="day">
@@ -1265,30 +1270,32 @@
                <date when="2016-02-29">M 02-29</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>XQuery: Writing FLWOR statements and outputting HTML</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></hi></p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-03-02">W 03-02</date>
+               <!--ebb: Sigma Tau Delta Conference 3/2 - 3/5 Consider introducing SVG here!-->
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements, and screen grid coordinates.  </p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-03-04">F 03-04</date>
+               <!--ebb: Sigma Tau Delta Conference 3/2 - 3/5 -->
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>XQuery to SVG </p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi>XQuery to SVG Exercise 1 [TBD] </hi></p>
             </div>
          </div></div>
         <div type="week" n="10">  <div type="day">
@@ -1308,30 +1315,31 @@
                <date when="2016-03-14">M 03-14</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>More XQuery to SVG</p>
+               <p>XQuery: Nesting FLWORS: when and why </p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi>XQuery to SVG Exercise 2 [TBD] </hi></p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-03-16">W 03-16</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Pulling data, choosing visualization formats: Timelines</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p>XQuery to SVG Exercise 3 (Timeline plot) [TBD]</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-03-18">F 03-18</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>More SVG from XQuery: projects</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p>XQuery to SVG Exercise 4 (Timeline plot) [TBD]</p>
             </div>
          </div></div>
         <div type="week" n="12">  <div type="day">
@@ -1339,30 +1347,32 @@
                <date when="2016-03-21">M 03-21</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <list><item>XQuery to output KML </item>
+                  <item> 
+                     Our KML Google Earth output: <ref target="http://pacific.pitt.edu/maps.html">Digital Archives and Pacific Cultures: Maps</ref></item></list>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi><ref target="XQueryExercise3.html">XQuery GIS Exercise</ref></hi>: Mapping to KML! </p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-03-23">W 03-23</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>XQuery to Text Outputs: generating network data for Cytoscape</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi>XQuery to Network Analysis: Exercise Part 1</hi> [TBD]</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-03-25">F 03-25</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Network Analysis Processing and Filtering; Running the Network Analyzer. Common Network stats: degree centrality, node centrality, edge betweenness, shortest paths</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi>XQuery to Network Analysis: Exercise Part 2</hi> [TBD]</p>
             </div>
          </div></div>
         <div type="week" n="13">  <div type="day">
@@ -1370,30 +1380,39 @@
                <date when="2016-03-28">M 03-28</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>XQuery from eXist to Web: Building the Database into the Web Project</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <list><item><hi>XQuery for Project Assignment</hi> [TBD]</item>
+                  <item>Read Obdurodon's <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</ref></item>
+               </list>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-03-30">W 03-30</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+              <list> <item>Server Side Includes and our newtFire server</item>
+               <item>How JavaScript works (client side), and how to write it.</item></list>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi><ref target="JavaScript_SSI_Exercise1.html">Server Side Includes and JavaScript Exercise 1</ref></hi></p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-04-01">F 04-01</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>More JavaScript! Writing JavaScript functions.</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <list>
+                  
+                  <item>Read Oburodon's <ref target="javascript_piece-by-piece.xhtml">JavaScript Piece By Piece tutorial</ref></item>
+                  <item>Read Elisa's Obdurodon tutorial, <ref target="http://dh.obdurodon.org/javascript/classListToggle.xhtml">JavaScript Toggling with classList and switch</ref></item>
+                  <item><hi><ref target="JavaScriptExercise2.html">Javascript Exercise 2</ref></hi></item>
+                  
+               </list>
             </div>
          </div></div>
         <div type="week" n="14">  <div type="day">
@@ -1401,30 +1420,33 @@
                <date when="2016-04-04">M 04-04</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <list>
+                  <item>JavaScript with SVG for Dynamic Activity on an Image</item>
+                  <item>JavaScript, SVG, and CSS with your HTML: Putting it All Together</item>
+               </list>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi><ref target="JavaScript_Exercise3.html">JavaScript Exercise 3</ref> [TBD] <!--ebb: REHASH THIS ASSIGNMENT TO PULL FROM XQUERY--></hi>: JavaScript with SVG</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-04-06">W 04-06</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>More JavaScript with SVG. SVG in Projects</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi>JavaScript Exercise 4</hi> [TBD]</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-04-08">F 04-08</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Projects and Portfolios. <ref target="https://creativecommons.org/">Creative Commons Licenses</ref></p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi>Website Development and Review</hi> Exercise [TBD]</p>
             </div>
          </div></div>
         <div type="week" n="15">  <div type="day">
@@ -1432,30 +1454,33 @@
                <date when="2016-04-11">M 04-11</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Catch-Up Day</p>
+               <p>Web Development: Projects</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p>Project Design Work</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-04-13">W 04-13</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Web Development: Projects</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p>Project Design Work</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-04-15">F 04-15</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <list><item>Set Project Presentation Schedule</item>
+               <item>Web Development: Projects</item>
+               </list>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p>Project Design Work</p>
             </div>
          </div></div>
         <div type="week" n="16">  <div type="day">
@@ -1463,32 +1488,44 @@
                <date when="2016-04-18">M 04-18</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Web Development: Projects</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p>Project Design Work</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-04-20">W 04-20</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Project Presentations and Review</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p>
             </div>
          </div>  <div type="day">
             <head>
                <date when="2016-04-22">F 04-22</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Project Presentations and Review</p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p>
             </div>
          </div></div>
+            <div type="week">
+               <div type="day">
+                  <head><date>Thurs. 4/28 by 11:59 PM</date></head>
+                  <div type="assign">
+                     <p>
+                        <hi>Projects due.</hi>
+                     </p>
+                  </div>
+               </div>
+            </div>
+            
+            
     </div>
 
 
