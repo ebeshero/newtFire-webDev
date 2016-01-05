@@ -9,27 +9,28 @@
             Paste in template xml file and autotag day and week divs. 
             Then manually correct with holidays and Fall Break, etc.-->
          <titleStmt>
-            <title>Syllabus: Coding and Digital Archives</title>
+            <title>Syllabus: Coding and Data Visualization</title>
             <author>Elisa E. Beshero-Bondar</author>
             <author>Gregory H. Bondar</author>
             <sponsor>The University of Pittsburgh at Greensburg</sponsor>
          </titleStmt>
          <editionStmt>
-            <edition>First digital edition in TEI, date: <date from="2015-08" to="2015-12">Fall
-                  2015</date>. P5.</edition>
+            <edition>First digital edition in TEI, date: <date from="2016-01" to="2016-04">Spring
+                  2016</date>. P5.</edition>
          </editionStmt>
          <publicationStmt>
             <authority>University of Pittsburgh at Greensburg</authority>
             <pubPlace>Greensburg, PA, USA</pubPlace>
-            <date>2014</date>
+            <date>2016</date>
             <availability>
                <licence>Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike
                   4.0 International License</licence>
             </availability>
          </publicationStmt>
          <seriesStmt>
-            <p>Fall 2015 is the third time a version of this course has been taught, and this is the
-               second XML edition of the syllabus. The first edition of this course syllabus was in
+            <p>Spring 2016 is the fourth time a version of this course has been taught, and this is the
+               third XML edition of the syllabus. This course is a new alternate course to the Coding and Digital Archives course
+               taught in Fall 2015. The first edition of this course syllabus was in
                Fall 2013, in HTML only at <ptr target="http://www.pitt.edu/~ebb8/DHDS/"/>.</p>
          </seriesStmt>
          <sourceDesc>
@@ -41,8 +42,8 @@
    <text>
       <front>
          <div type="courseID" style="outer">
-            <head>Coding and Digital Archives</head>
-            <p>Humanities 1030 / Social Sciences 1031</p>
+            <head>Coding and Data Visualization</head>
+            <p>Humanities 1050 / Social Sciences 1051</p>
             <div type="logo">
                <head>
                   <graphic url="blue-eye-icon-transMed.png" mimeType="image/png"/>
@@ -52,23 +53,23 @@
 
             <div type="meetTimes">
                <p>
-                  <hi rend="em">Autumn 2015:</hi> Classes meet M W F 10:30 - 11:20 AM, 116 Cassell
+                  <hi rend="em">Spring 2016:</hi> Classes meet M W F 10:30 - 11:20 AM, 210 Cassell
                   Hall</p>
             </div>
             <div type="CRN">
                <p>Course Enrollment and Electives Info: </p>
                <list>
-                  <item>Hum 1030: (Digital Humanities) course registration number:
-                        <idno>21120</idno>
+                  <item>Hum 1050: (Digital Humanities) course registration number:
+                        <idno>29922</idno>
                   </item>
-                  <item>Socsci 1031: (Digital Studies) course registration number:
-                        <idno>24531</idno>
+                  <item>Socsci 1051: (Digital Studies) course registration number:
+                        <idno>29923</idno>
                   </item>
                   <item>Satisfies a core course requirement for <ref
                         target="http://greensburg.pitt.edu/academics/info/digital-studies"
                         >Pitt-Greensburg's Digital Studies Certificate</ref>
                   </item>
-                  <item>Fulfills HM, NS, Q2, and SS General Electives at Pitt-Greensburg</item>
+                  <item>Fulfills HM, Q2, or SS General Electives at Pitt-Greensburg</item>
                </list>
             </div>
             <div type="faculty">
@@ -81,16 +82,15 @@
                </p>
                <list>
                   <!--ebb: check this!-->
-                  <item>Wed. 11:30 AM -12:30 PM</item>
-                  <item>Thurs. 3-6 PM</item>
-                  <item>and by appointment</item>
+                  <item>Mon. 4-5:30 PM</item>
+                  <item>Thurs. 4-5:30 PM</item>
+                  <item>after class in our computer lab, and by appointment (such as T or H between 10:30 AM and 1:30 PM)</item>
                </list>
                <p>Greg's Office Hours in <hi rend="em">FOB 104</hi>
                </p>
                <!--ebb: Check with Greg about this! -->
                <list>
-                  <item>Mon. 11:30 AM - 12:30 PM</item>
-                  <item>Mon., Wed., and Fri. 2 - 3 PM</item>
+                  <item>Mon. and Wed., 2 - 4 PM</item>
                   <item>and by appointment</item>
                </list>
 
@@ -99,7 +99,7 @@
                <head>The Webs Where We Work:</head>
                <list>
                   <item>
-                     <ref target="http://newtfire.org/dh/CDA.html">Course Home Website:
+                     <ref target="http://newtfire.org/dh/CDV.html">Course Home Website:
                         http://newtfire.org/dh/CDA.html</ref> Home of our syllabus and
                      schedule.</item>
                   
@@ -258,8 +258,7 @@
             <p>Our class is one of the core courses of <ref
                   target="http://greensburg.pitt.edu/academics/info/digital-studies"
                   >Pitt-Greensburg's Digital Studies Certificate</ref>, and it satisifes a range of
-               general education requirements in quantitative reasoning, natural sciences,
-               behavioral sciences, and humanities. That is because this course is distinctively
+               general education requirements in quantitative reasoning, behavioral sciences, and humanities. That is because this course is distinctively
                interdisciplinary, one of a very few available at Pitt, in engaging formal and
                quantitative reasoning through computer coding in ways that matter to students in
                humanities and social sciences who are not training to be computer scientists.
@@ -809,10 +808,49 @@
                <date when="2016-01-06">W 01-06</date>
             </head>
             <div type="inclass">
-               <p>. . . .</p>
+               <p>Welcome! Intro to the course, and Intro to XML and working in
+                  &lt;oXygen/&gt;: Write your first XML. <hi>Mindful File Management</hi>
+                  (<ref target="http://dh.obdurodon.org/file-naming_conventions.xhtml">how
+                     to name</ref>, store, share, and submit files in this course). Setting up
+                  accounts for web server and for GitHub. <ref
+                     target="http://www.simplyrecipes.com/recipes/gazpacho">Gazpacho
+                     Soup</ref>
+               </p>
             </div>
             <div type="assign">
-               <p>. . . .</p>
+               <list><item>By Fri. 1/8: Install &lt;oXygen/&gt; software on your own computers.
+                  <ref target="https://courseweb.pitt.edu">Instructions and license key
+                     posted on Courseweb</ref>.</item>
+                  <item>Read our <title level="a"><ref target="explainXML.html">Introduction to XML</ref></title>, and
+                     read <title level="a"><ref target="http://dh.obdurodon.org/file-naming_conventions.xhtml"
+                        >File-Naming Conventions for Courseweb Homework
+                        Submissions</ref></title>.</item>
+                  <item><hi rend="strong">First XML exercise for New Students:</hi> Look at this recipe for
+                     <ref target="http://www.simplyrecipes.com/recipes/gazpacho">gazpacho soup</ref>. What if you were running a restaurant and needed to create
+                     a system to file it according to ingredients to purchase, to track
+                     quantities per unit serving--and this recipe were one of, say, 100 other
+                     recipes you're keeping on file? Or, what if you needed to adapt it with
+                     markup to fit a system like we see at the GitHub-based recipe center <ref
+                        target="http://forkthecookbook.com/">ForktheCookbook.com</ref>? Think
+                     about a good system for tagging the file for this long-term situation,
+                     and mark up your file accordingly. Experiment with this and write a
+                     complete XML file in a way that makes sense to represent the recipe, and
+                     try to make use of elements as well as attributes in your markup. There
+                     is no single way to do this exercise, but we want you to think about how
+                     you nest levels of information (elements within elements), and the
+                     relationship between elements and attributes in XML: Can the attributes
+                     hold information from the main text, perhaps removing it from the body of
+                     the text?) Submit the results on Courseweb, in the folder labelled
+                     "Upload Assignments Here," before our next class.</item>
+               <item><hi rend="strong">Continuing Students:</hi> Work on project code or your choice of an interesting XML coding challenge.</item>
+                  <item><hi rend="em">By Fri. 1/8 or Mon. 1/11:</hi> Read <ref
+                     target="http://dh.obdurodon.org/github.xhtml">the Obdurodon GitHub
+                     tutorial</ref>, then create your GitHub account. Clone <ref
+                        target="https://github.com/ebeshero/DHClass-Hub">our class GitHub
+                        repository</ref> to your local machine(s). Practice opening an
+                     Issue and pushing files to the Sandbox directory.</item>
+               
+               </list>
             </div>
          </div>  <div type="day">
             <head>
