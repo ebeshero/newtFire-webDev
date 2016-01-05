@@ -10,7 +10,8 @@
     <!--<xsl:strip-space elements="*"/>-->
     
     <!--2016-01-05 ebb: Check and revise links to the Course Description from this page 
-        as we alternate between courses. Link alternates from CDA.html for Fall to CDV.html for Spring.-->
+        as we alternate between courses. Link alternates from CDA.html for Fall to CDV.html for Spring. 
+        Change title in Banner to Spring (or Fall) of the appropriate year. -->
    
     <xsl:template match="/">
 
@@ -40,7 +41,7 @@
                             <span class="banner">
                                 <xsl:apply-templates
                                     select="//text/front/div[@type='courseID']/p/text()"/>
-                                <xsl:text>: Autumn 2015 Syllabus</xsl:text>
+                                <xsl:text>: Spring 2016 Syllabus</xsl:text>
                             </span>
                         </h2>
                         

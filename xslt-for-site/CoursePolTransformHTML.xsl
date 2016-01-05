@@ -38,7 +38,7 @@
              <div id="main">   <div id="courseInfo">
                    <xsl:apply-templates select="//div[@type='meetTimes']"/>
                     
-                 <h2><a href="CDASyll.html">Syllabus: Autumn 2014</a></h2><!--ebb: Check link URL! -->
+                 <h2><a href="CDVSyll.html">Syllabus: Spring 2016</a></h2><!--ebb: Check link URL! -->
                     
                     <xsl:apply-templates select="//div[@type='CRN']"/>
                  
