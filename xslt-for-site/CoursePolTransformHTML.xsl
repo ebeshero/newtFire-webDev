@@ -33,7 +33,7 @@
 
                 <h1><span class="banner"><xsl:apply-templates select="//text/front/div[@type='courseID']/head"/></span></h1>
                     
-                    <h2><span class="banner"><xsl:apply-templates select="//text/front/div[@type='courseID']/p/text()"/><xsl:text>: Autumn 2015</xsl:text></span></h2>
+                    <h2><span class="banner"><xsl:apply-templates select="//text/front/div[@type='courseID']/p/text()"/><xsl:text>: Spring 2016</xsl:text></span></h2>
                    
                    
              <div id="main">   <div id="courseInfo">
