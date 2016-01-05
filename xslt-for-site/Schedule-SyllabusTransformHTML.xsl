@@ -8,6 +8,9 @@
     <xsl:output method="xhtml" doctype-system="about:legacy-compat" 
         omit-xml-declaration="yes"/> 
     <!--<xsl:strip-space elements="*"/>-->
+    
+    <!--2016-01-05 ebb: Check and revise links to the Course Description from this page 
+        as we alternate between courses. Link alternates from CDA.html for Fall to CDV.html for Spring.-->
    
     <xsl:template match="/">
 
@@ -45,7 +48,7 @@
                     <div id="main">
                         <div id="courseInfo">
                          <!-- <h3>
-                                <a href="CDA.html"> Course Description and Policies</a>
+                                <a href="CDV.html"> Course Description and Policies</a>
                             </h3>-->
 
                             <xsl:apply-templates select="//div[@type='meetTimes']"/>
