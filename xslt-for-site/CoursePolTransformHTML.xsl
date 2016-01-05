@@ -28,7 +28,8 @@
             </head>
             <body>
                 
-                <xsl:comment>#include virtual="top-index.html" </xsl:comment>
+                <xsl:comment>#include virtual="top-indexCDV16.html" </xsl:comment>
+                <!--ebb: make a new top for each XML for each new semester course-->
 
                 <h1><span class="banner"><xsl:apply-templates select="//text/front/div[@type='courseID']/head"/></span></h1>
                     
