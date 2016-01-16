@@ -1,0 +1,107 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>Explain Git Shell</title>
+    </head>
+
+
+
+    <body>
+        <!--#include virtual="topAuthorRJP43.html" -->
+        <h1><span class="banner">Guide to Git Shell:</span></h1>
+        <h2>the basics of operating GitHub using command line</h2>
+        <h3>Quick Reference:</h3>
+        <ul>
+            <li><a href="#account">Creating an account</a></li>
+            <li><a href="#setup">Downloading Git Shell</a></li>
+            <li><a href="#repo">Creating a repository</a></li>
+            <li><a href="#collaborators">Adding and deleting collaborators</a></li>
+            <li><a href="#cloning">Cloning and working in a cloned repository</a></li>
+            <li><a href="#working">Adding, editing, and deleting files</a></li>
+            <li><a href="#commit">Committing changes</a></li>
+            <li><a href="#branch">Creating and deleting a Branch</a></li>
+            <li><a href="#fork">Creating a Forked Repository and staying keeping a fork up-to-date
+                    with source repository</a></li>
+        </ul>
+        <h3>Why use Git?</h3>
+        <p><a href="https://git-scm.com/book/en/v2/Getting-Started-Git-Basics">Version Control
+                Diagram</a>
+            <!-- ref the top portion: https://git-scm.com/book/en/v2/Getting-Started-Git-Basics --></p>
+        <h4>The three parts of Git (important in using Git Shell)</h4>
+        <ol>
+            <!--analogy: the wall, the nail and picture, the hammer -->
+            <li><!--this is the wall-->GitHub server - explain the online version of GitHub and
+                why/when need to navigate to the web to do work in Git Shell (ie. creating an
+                account, forking, etc.), hub of repo accessible to team and public</li>
+            <li><!--this is the nail and picture-->local file directory - where repos on local
+                machine are stored, importance of good file management, where all the changes
+                happen</li>
+            <li><!-- this is the hammer -->Git Shell - tool for accessing local repos and remote
+                repos, tool for merging versions, explain differences with GUI <a
+                    href="https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line"
+                    >https://git-scm.com/book/en/v2/Getting-Started-The-Command-Line</a></li>
+        </ol>
+        <h2>Getting started using GitHub:</h2><!-- intro. paragraph with link to our other tutorial -->
+        <h3 id="account">How to create a GitHub account</h3>
+        <p>Process done on GitHub web version. Images.</p>
+        <h2>Getting started using Git Shell:</h2>
+        <h3 id="setup"><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
+                >Downloading Git Shell</a> on</h3><!-- ref: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git-->
+        <ul>
+            <li>Linux</li>
+            <li>Mac</li>
+            <li>Windows</li>
+            <!-- ease of dual download from desktop.github.com for Mac and Windows: GUI and Git Shell and the benefits of accessing three parts of Git previously mentioned through the GUI right click on repo. -->
+        </ul>
+        <p>Configuring Git Shell</p><!-- ref: https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#telling-git-your-name and https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup -->
+        <p>Open Git Shell (command line) and begin with the following commands:</p>
+        <span class="code"> $ git config --global user.name "John Doe" <br /> $ git config --global
+            user.email yourEmail@example.com</span>
+        <!-- need image -->
+        <p>mention <code>$ git config --list</code> to verify information</p>
+        <p>or Use GUI to do configuration - this is in the settings, then options (see original
+            tutorial when explaining and use image from there)</p>
+        <h3 id="repo">Creating a Repository</h3>
+        <h4>What is a repo (aka repository)</h4>
+        <h4>How to create a repo</h4>
+        <p>ease to do so from online version
+            <!-- ref: https://help.github.com/articles/creating-a-new-repository/ --> to later <a
+                href="#cloning">clone</a> with images</p>
+        <p>Command: <code>$ git init</code> initializes a git repository. This creates the initial
+            ‘.git’ directory in a new or in an existing project pending on what directory the user
+            precedes the command with. Example: <code>$ /home/user/my_new_git_folder/git
+            init</code>. In this example, the portion before the command <code>git init</code>
+            designates a local file path.</p>
+        <p>links for command line setup <a
+                href="https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#creating-a-new-repository"
+                >https://www.kernel.org/pub/software/scm/git/docs/user-manual.html#creating-a-new-repository</a>
+            and <a href="https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository"
+                >https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository</a></p>
+        <h3 id="collaborators">Adding and deleting project collaborators</h3>
+        <p>online steps</p>
+        <p>Handling collaborators from command line:</p>
+        <a href=" https://developer.github.com/v3/repos/collaborators/"
+            >https://developer.github.com/v3/repos/collaborators/</a>
+        <p>Commands:</p>
+        <span class="code"></span>
+        <!-- need images -->
+        <h3 id="cloning">Cloning an existing repo</h3> <!-- ref: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository and https://git-scm.com/docs/git-clone -->
+        <p><code>git clone</code> followed by the url of the repo you wish to clone a space and then the filename for the folder you wish to clone the repo in to</p><!-- needs image -->
+        <h3>Basic Git workflow:</h3><!-- ref the bottom portion: https://git-scm.com/book/en/v2/Getting-Started-Git-Basics -->
+        <ol>
+            <li>You modify files in your working directory. <!-- add some explaination and an image of saving a file in designated directory --></li>
+            <li>You stage the files, adding snapshots of them to your staging area. This is done with the command <code>git add</code>. <!-- image --></li>
+            <li>You do a commit, which takes the files as they are in the staging area and stores
+                that snapshot permanently to your local Git directory. This is done with the command <code>git commit</code>.</li>
+            <li>You push local changes to GitHub server, with the command <code>git push</code>.</li>
+        </ol>
+        <p>Commands:</p>
+        <span class="code"> $ <br /> $ </span>
+        <!-- need images -->
+    </body>
+</html>
