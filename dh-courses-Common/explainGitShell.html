@@ -448,9 +448,9 @@
             branch is good practice. When working in a forked repo, branching becomes even more
             important and practical. The master branch is better to be left free of
             developmental/experimental changes so that it can be used to sync with the upstream
-            (source repo). Therefore it is best to add and change files in branches of your fork.
+            (source repo). Therefore, it is best to add and change files in branches of your fork.
             After you have created a branch, modified files, and commited said changes use the
-            command <code>git log</code> to see a listing of commits made on a selected branch.
+            command <code>git log --pretty=short</code> to see a listing of commits.
             Finally, to push all the local branches and change to the forked remote use the command
                 <code>git push --all -u</code>. This command also sets up upstream tracking on all
             of the branches.</p>
@@ -460,7 +460,9 @@
             new branch with changes to the source repo's code. GitHub presents us with a big green
             button to compare our changes and open a Pull Request to the original project. You can
             alternatively go to the "Branches" page at https://github.com/[user]/[project]/branches
-            to locate your branch and open a new Pull Request from there. If we click that green
+            to locate your branch and open a new Pull Request from there.</p>
+        <div class="accountImg"><img src="git_shell/pullRequest_01.jpg" alt="creating a pull request" /></div>
+        <p>If we click that green
             button, we'll see a screen that asks us to give our Pull Request a title and
             description. It is almost always worthwhile to put some effort into this, since a good
             description helps the owner of the original project determine what you were trying to
@@ -468,7 +470,7 @@
             improve the original project or not. We also see a list of the commits in our forked
             repo's branch that are "ahead" of the master branch. Should this branch get merged by
             the project owner, a unified diff of all the changes will be made.</p>
-        <div class="accountImg"><img src="git_shell/pullRequest.jpg" alt="creating a pull request" /></div>
+        <div class="accountImg"><img src="git_shell/pullRequest_02.jpg" alt="creating a pull request" /></div>
         <p>When you hit the create pull request button, the owner of the project you forked from
             will get a notification that someone is suggesting a change with a link to a page that
             has all of the information you provided on it. At this point, the project owner can look
