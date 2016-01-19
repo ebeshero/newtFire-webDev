@@ -192,8 +192,8 @@
                 >https://help.github.com/articles/create-a-repo/</a>. If a repo is created through
             the web interface it will need to be <a href="#cloning">cloned</a> in order for you to
             access it and begin working on your local computer.</p>
-        <span class="smaller">(If you wish to create a repo by using Git Shell you only need to know one
-            command: <code>$ git init</code>. This initializes a git repository by creating the
+        <span class="smaller">(If you wish to create a repo by using Git Shell you only need to know
+            one command: <code>$ git init</code>. This initializes a git repository by creating the
             initial .git directory in a new or an existing project pending on the directory
             preceding the command.)</span>
         <!-- rjp:2016-1-15: we need to test how to link local repos created with "git init" to the remote GitHub server. git remote add [shortname] [url] seems to be what all of the documentation point to; however, when I attempted to do this it didn't work (for the url I copy and pasted in the HTTP for my GitHub profile) -->
@@ -214,7 +214,7 @@
                 <p><img src="git_shell/addCollaborator_01.jpg" alt="Adding a Collaborator" /></p>
             </li>
             <li><p>Select <q>Settings</q> at the top of the screen.</p>
-                 <p><img src="git_shell/addCollaborator_02.jpg" alt="Adding a Collaborator"
+                <p><img src="git_shell/addCollaborator_02.jpg" alt="Adding a Collaborator"
                  /></p></li>
             <li><p>On the Settings page, move to the menu on the left side of the page, and select
                         <q>Collaborators</q></p>
@@ -244,6 +244,13 @@
             access to the files, and when you’re ready to share your work with your project
             partners, you sync (upload) it explicitly to the server.</p>
         <h4>How to clone an existing repo:</h4>
+        <h5 id="nav">Navigating Directories</h5>
+        <p>Before you clone a repo, you need to understand how to navigate between directories using
+            Git Shell. When opening Git Shell from a shortcut link you will be placed in the main
+            configuration folder you set up when installing Git. The following image explains how
+            you navigate between directories:</p>
+        <div class="commandImg"><img src="git_shell/navDirectory.jpg"
+                alt="navigating through directories" /></div>
         <p>To clone a repo from the remote online server using command line you use one easy
             command: <code>git clone</code>. After <code>git clone</code> you copy the url of the
             repo you wish to clone, a space, and then a name for the folder where the cloned repo
@@ -308,10 +315,6 @@
                 command <code>git push</code>.<br />
                 <img src="git_shell/gitPush.jpg" alt="git push" /></li>
         </ol>
-        <h3 id="nav">Navigating Directories</h3>
-        <p>When opening Git Shell from a shortcut link you will be placed in the main configuration folder you set up when installing Git. The following image explains how you navigate between directories:</p>
-        <div class="commandImg"><img src="git_shell/navDirectory.jpg"
-            alt="navigating through directories" /></div>
         <h3 id="branch">Branching: what is it, and why do we do it?</h3>
         <p>Branching means you diverge from the main line of development and continue to do work
             without messing with that main line. The master branch is the main branch of a project.
@@ -375,9 +378,9 @@
                 just get a list of the files changed between the two branches you can change the
                 command to <code>git diff --name-only</code> again followed by the names of the two
                 branches you wish to compare.</li>
-            <li>Then use <code>git status</code> or <code>git branch</code> to verify what branch you
-                are currently working in. If you are not on the master branch you should switch to
-                it using <code>git checkout master</code>.</li>
+            <li>Then use <code>git status</code> or <code>git branch</code> to verify what branch
+                you are currently working in. If you are not on the master branch you should switch
+                to it using <code>git checkout master</code>.</li>
             <li>Once you have reviewed the differences you will want to merge the two branches. This
                 is done with the <code>git merge</code> command followed by the name of the branch
                 being merged into the master branch. For example: <code>git merge
@@ -434,10 +437,12 @@
                 upstream</code> followed by the HTTPS of the source repo. Use the command <code>git
                 remote</code> or <code>git remote -v</code> to show all of the remote versions of
             your repository. You should see "origin" (the direct remote version of the forked repo)
-            and the upstream you just created. When you want to sync your forked repo with the
-            source repo you can use the following commands to do so: <code>git fetch upstream</code>
-            and <code>git merge upstream</code>. These command function the same way in a fork as
-            they did in the cloned repo (reference above for more detail).</p>
+            and the upstream you just created. When you want to bring any new changes made on the
+            source repo into your forked repo, you can use the following commands to do so:
+                <code>git fetch upstream</code> and <code>git merge
+            upstream</code><!-- rjp:2016-01-19: having a conflict with merge upstream need to verify this command -->.
+            These commands function the same way in a fork as they did in the cloned repo (reference
+            above for more detail).</p>
         <div class="commandImg"><img src="git_shell/forking_03.jpg" alt="forking a repo" /></div>
         <p>In the <a href="#branch">branching section</a> of this tutorial we discussed why using a
             branch is good practice. When working in a forked repo, branching becomes even more
