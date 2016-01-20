@@ -1,0 +1,137 @@
+head {background-color: #B4D6B4;
+;}
+
+body {background-color: #B4D6B4; color: #031B3F; font-family: arial, helvetica, sans-serif; padding:15px; line-height:1.3em;}
+/*div#space {background-color:#FFFFFF; width:99%; margin:auto; padding: 20px; line-height:1.2em; } */
+
+div#top {width:100%}
+div#bannerImage {float:left}
+div#bannerImage img {width:150px}
+div#title{font-size:30px; font-weight:bold; color:#FF0000;}
+div#title a { text-decoration:none;}
+
+div.boilerplate span {text-indent:5px;
+    color:#63604F;
+    margin-left:1em;
+    display:block;
+    font-size:smaller;
+    line-height:1.4em;}
+    
+div.boilerplate img {position: relative; top:7px; right: -2px }
+
+
+div.image {background-color:#B4D6B4; float:left; width:40%}
+div.wideImage {float:left; width:100%; padding:25px}
+div.explan{background-color:#3F4F3F; float:right; width:60%; padding:15px;}
+
+
+div.imageAlt {float:right; width:35%; margin-left: auto;
+    margin-right: auto; padding:15px;}
+div.explanAlt{background-color:#B4D6B4; float:left; width:65%; padding:15px;}
+div.container {background-color:#B4D6B4; width:100%; }
+
+h1 {color:#AA0000; letter-spacing:1.1px; display:inline; font-size: 2.3em; text-align:center; padding: 10px}
+h2 {color:#005BEB; font-family:arial, helvetica, sans-serif; font-size: 1.3em; text-align:left; 
+}
+h3 {color:#5F0000;
+ font-family:arial, helvetica, sans-serif; font-size: 1.1em; text-align:left; padding:3px
+}
+h4{color:#5F0000; display:inline-block; font-family:"Trebuchet MS", Helvetica, sans-serif; font-size: 1em; text-align:left;
+    
+}
+span.h4 {color:#5F0000; display:inline-block; font-family:"Trebuchet MS", Helvetica, sans-serif; font-size: 1em; text-align:left;   
+} /*ebb: Needed for styling headings in table header cells. h4 is invalid as a descendant of th. */
+
+q {quotes:'“' '”' '‘' '’'; 
+}
+
+cite.sub {font-style:normal;}
+cite.sub::before {content:'“'; 
+}
+cite.sub::after {content:'”';
+}
+
+q cite.sub::before {content: '‘'}
+q cite.sub::after {content: '’'}
+cite.sub cite.sub::before {content: '‘'}
+cite.sub cite.sub::after {content: '’'}
+
+img
+{padding:5px;}
+
+p {display:block; padding:2px 2px 2px 2px}
+
+hr { display: block; height: 1px;
+    border: 0; border-top: 1px solid #AA0000;
+    margin: 1em 0; padding: 0; }
+    
+span.smaller {display:inline-block;; font-size:0.8em; line-height:1.2em; padding:2px}
+
+span.red {color: #AA0000; font-weight:bold;}
+span.green {color: #004C00; font-weight:bold;}
+span.purple {color:#6600FF; font-weight:bold;}
+
+span.code {color:#AA0000; font-weight:bold; width: 60%; margin:auto;}
+
+div.code {background-color: #9EA9B9; color:#000; border:1px navy dashed; padding:10px; line-height:1.5em; width:60%; margin:auto;}
+span.badCode {color:#5F0000; background-color: #FFD6D6; width: 60%; margin:auto;  }
+
+div.badCode {background-color: #FFD6D6; border:1px red dashed; padding:10px; line-height:1.5em; width:60%; margin:auto; }
+
+span.indent {margin-left: 2em;}
+
+span.indentMore {margin-left:5em;}
+
+span.indentEvMore {margin-left:7em}
+
+
+ul {list-style-type: circle;}
+
+ul li { padding: 1px}
+
+
+ol li { padding: 1px}
+
+ol.d {list-style-type: lower-alpha; display: block; padding: 10px 10px 20px 20px}
+
+a:link {color:#AA0000;}      /* unvisited link */
+a:visited {color:#660066
+;}  /* visited link */
+a:hover {color:#FF0000;}  /* mouse over link */
+a:active {color:#FF0000;}  /* selected link */
+
+table { border-collapse: collapse; width: 100%;
+border: 2px solid #BF9E7D;
+/*border: 0*/
+}
+
+tr {border-collapse: collapse; border: 0}
+
+th
+{ border-collapse: collapse;
+border: 1px solid  #000066;
+background-color: #7E967E;
+padding: 1px;
+vertical-align:top;
+}
+
+td 
+{ border-collapse: collapse;
+border: 1px solid #000066;
+padding: 7px;
+vertical-align:top;
+}
+
+
+th:nth-child(1), td:nth-child(1) {
+width:12%; text-align:center;   
+}
+
+th:nth-child(2), td:nth-child(2) {
+width:44%;  
+}
+
+th:nth-child(3), td:nth-child(3) {
+width:44%;  
+}
+
