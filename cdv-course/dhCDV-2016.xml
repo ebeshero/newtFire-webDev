@@ -150,6 +150,13 @@
                   <item>
                      <ref target="explainRNG.html">Guide to Schema Writing with Relax NG</ref>
                   </item>
+                  <item>GitHub Tutorials:
+                  <list>
+                     <item><ref target="http://newtfire.org/dh/explainGitShell.html">Our orientation ti GitHub via Command Line</ref></item>
+                     <item><ref target="http://dh.obdurodon.org/github.xhtml">Obdurodon's orientation via Desktop Client</ref></item>
+                     
+                  </list>
+                  </item>
                   <item>
                      <ref target="explainHTML.html">Introduction to XHTML (and HTML)</ref>
                   </item>
@@ -1073,29 +1080,49 @@
                      <date when="2016-01-22">F 01-22</date>
                   </head>
                   <div type="inclass">
-                     <p>Projects Designed by students: <ref
-                           target="http://bamfs.obdurodon.org/index.xhtml">Profanities in Quentin
-                           Tarantino’s Screenplays</ref> (with network analysis), and <ref
-                           target="http://translate.obdurodon.org/">Divergences in Machine
-                           Translation: Examining Harry Potter texts processed by Google Translate
-                           across multiple language families</ref>
-                     </p>
+                     <list>
+                        <item>Relax NG issues</item>
+                        <item>Projects Designed by students: <ref
+                              target="http://bamfs.obdurodon.org/index.xhtml">Profanities in Quentin
+                              Tarantino’s Screenplays</ref> (with network analysis), and <ref
+                              target="http://translate.obdurodon.org/">Divergences in Machine
+                              Translation: Examining Harry Potter texts processed by Google
+                              Translate across multiple language families</ref></item>
+                     </list>
                   </div>
                   <div type="assign">
-                     <p><hi rend="em">Relax NG exercise 3:</hi> Choose a small text of a different
-                        type or genre than last time, perform document analysis, write a schema, and
-                        mark up the text according to the schema.</p>
-                     <p>Read my blog on an XML network analysis project: <ref
-                           target="https://digitalromanticist.wordpress.com/2013/08/23/spectacular-intersections-of-place-in-southeys-thalaba-the-destroyer/"
-                           >Spectacular intersections of place in Southey’s <hi rend="em">Thalaba
-                              the Destroyer</hi></ref> and submit a 300- to 400-word response paper.
-                        In your response, reflect on the network analysis represented here and how
-                        it works, what patterns it might be revealing, and what questions or ideas
-                        it raises for you regarding digital methods to analyze texts.</p>
-                     <p><hi rend="em"><ref
-                              target="https://github.com/ebeshero/DHClass-Hub/issues/16">GitHub Post
-                              and Discussion: Project Proposal Ideas.</ref>
-                        </hi></p>
+                     <list>
+                        <item><hi rend="em">Relax NG exercise 3:</hi> Choose a small text of a
+                           different type or genre than last time, perform document analysis, write
+                           a schema, and mark up the text according to the schema.</item>
+                        <item><hi rend="em">GitHub Discussion: Network Analysis</hi> Read my blog on an XML-based network analysis project I am working on: <ref
+                              target="https://digitalromanticist.wordpress.com/2013/08/23/spectacular-intersections-of-place-in-southeys-thalaba-the-destroyer/"
+                              >Spectacular intersections of place in Southey’s <hi rend="em">Thalaba
+                                 the Destroyer</hi></ref> and <ref target="https://github.com/ebeshero/DHClass-Hub/issues/117">take part in a DHClass-Hub Discussion</ref> to reflect on the network analysis represented here
+                           and how it works, what patterns it might be revealing, and what questions
+                           or ideas it raises for you regarding digital methods to analyze
+                           texts.</item>
+                        <item><ref target="https://github.com/ebeshero/DHClass-Hub/issues/116"><hi
+                                 rend="em">DHClass-Hub Post and Discussion on Project
+                              Proposals:</hi></ref><list>
+                              <item>Beginning this weekend, through next Wed. 1/27: Post proposal
+                                 ideas for team projects to work on this semester. Each student
+                                 should post an idea for the class to consider: a project involving
+                                 XML markup to be managed within a team of 2-4 students to
+                                 investigate something we could study and visualize from our markup
+                                 more effectively with computers than with human reading and
+                                 description alone. All projects must involve a team of at least two
+                                 persons, but this first exploratory proposal is an individual
+                                 assignment.</item>
+                              <item>Each of you must respond to at least one of the proposed ideas
+                                 from another student and indicate suggestions or further ideas. You
+                                 may respond to more than one if you like, and indicate which
+                                 proposals interest you to work on. </item>
+                                 <item>Proposal discussions will run through next week, until class time on Friday 1/29 when we will form project teams.</item>
+
+                           </list>
+                        </item>
+                     </list>
                   </div>
                </div>
             </div>
@@ -1106,11 +1133,12 @@
                   </head>
                   <div type="inclass">
                      <p>Network Analysis with XML: Discussion of Thalaba project</p>
-                     <p>
-                        <hi rend="em">Form project teams (today or W 1/27)</hi></p>
+                   
                   </div>
                   <div type="assign">
-                     <p>[TBD]: Exercise on Graphing and Validity</p>
+                     <p><hi rend="em">DHClass-Hub Discussion Exercise on Graphing and Validity:</hi> 
+                        Review some good and some problematic graphs together and discuss issues with accuracy and bias in representing information</p>
+                     <p>Discussion Board posts and responses on project project proposals</p>
 
                   </div>
                </div>
@@ -1123,14 +1151,17 @@
                            target="http://homes.cs.washington.edu/~jheer//files/zoo/">A Tour Through
                            the Visualization Zoo</ref>.</p>
                      <p>Review of Relax-NG</p>
+                     <p>
+                        <hi rend="em">Form project teams (today or F 1/29)</hi></p>
                      <p>If time, introduce regular expression matching (Regex)</p>
                   </div>
                   <div type="assign">
-                     <p>Review Relax-NG homeworks in preparation for test.</p>
+                     <p>Review our comments on your Relax NG homeworks and practice writing Relax NG in preparation for test.</p>
                      <p>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular
                               Expressions</ref></title> and start looking at <ref
                            target="http://www.regular-expressions.info/quickstart.html">the Regular
                            Expressions Quick Start</ref> in prep for next class.</p>
+                     <p>Discussion Board posts and responses on project project proposals</p>
                   </div>
                </div>
                <div type="day">
@@ -1358,10 +1389,13 @@
                      <date when="2016-02-22">M 02-22</date>
                   </head>
                   <div type="inclass">
-                     <list><item>Schematron in Projects</item>
-                     <item>Using Personographies, Placeographies, Prosopographies: Keeping track of
-                        xml:ids with Schematron</item>
-                        <item><hi>Decide on / Review for</hi> XPath or Schematron exam later this week</item></list>
+                     <list>
+                        <item>Schematron in Projects</item>
+                        <item>Using Personographies, Placeographies, Prosopographies: Keeping track
+                           of xml:ids with Schematron</item>
+                        <item><hi>Decide on / Review for</hi> XPath or Schematron exam later this
+                           week</item>
+                     </list>
                   </div>
 
                   <div type="assign">
@@ -1416,48 +1450,52 @@
                   </head>
                   <div type="inclass">
                      <p><hi rend="em">XPath or Schematron Exam</hi></p>
-                     <p>XSLT to HTML: How it works: the template rule for the document node, and succeeding template rules.</p>
+                     <p>XSLT to HTML: How it works: the template rule for the document node, and
+                        succeeding template rules.</p>
                      <p>What happens with <hi>xsl:apply-templates</hi>.</p>
 
                   </div>
                   <div type="assign">
                      <list>
-                     <item>XSLT Exercise 2</item>
+                        <item>XSLT Exercise 2</item>
                         <item>Read / review:<list>
                               <item><title level="a"><ref
-                                 target="http://dh.obdurodon.org/developing-xslt.xhtml"
-                                 >Developing an XSLT Stylesheet</ref></title></item>
+                                       target="http://dh.obdurodon.org/developing-xslt.xhtml"
+                                       >Developing an XSLT Stylesheet</ref></title></item>
                               <item><title level="a"><ref
-                                 target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in
-                                 algorithms</ref></title></item>
-                        </list>
+                                       target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in
+                                       algorithms</ref></title></item>
+                           </list>
                         </item>
-                        <item>In prep for next class, read about <ref target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value Templates</ref></item>
+                        <item>In prep for next class, read about <ref
+                              target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                              Templates</ref></item>
                      </list>
-                     </div>
-                   
+                  </div>
+
                </div>
             </div>
-         
+
             <div type="week" n="9">
                <div type="day">
                   <head>
                      <date when="2016-02-29">M 02-29</date>
                   </head>
                   <div type="inclass">
-                     <p>XSLT: Attribute Value Templates. Pull vs. Push processing (and why we tend to work with XQuery for Pull processing)</p>
+                     <p>XSLT: Attribute Value Templates. Pull vs. Push processing (and why we tend
+                        to work with XQuery for Pull processing)</p>
                   </div>
                   <div type="assign">
                      <list>
-                        
+
                         <item>(Consult <ref target="http://dh.obdurodon.org/avt.xhtml">XSLT
-                           Attribute Value Templates</ref> as you work on the coding
+                              Attribute Value Templates</ref> as you work on the coding
                            exercise.)</item>
                         <item><hi rend="em"><ref target="XSLTExercise4.html">XSLT Exercise
-                           4</ref></hi></item>
+                              4</ref></hi></item>
                         <item><!--ebb: Update the XQUERY MATERIALS for PSC eXist!-->Read <ref
-                           target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay's
-                           XQuery Tutorial</ref> and our <ref
+                              target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay's
+                              XQuery Tutorial</ref> and our <ref
                               target="http://newtfire.org/dh/explainXQuery.html">Introduction to
                               XQuery and the eXist XML Database</ref> in preparation for the next
                            class.</item>
@@ -1476,15 +1514,16 @@
                   <div type="assign">
                      <list>
                         <item>Work with <ref target="http://www.stylusstudio.com/xquery-primer.html"
-                           >Michael Kay's XQuery Tutorial</ref> and our <ref
+                              >Michael Kay's XQuery Tutorial</ref> and our <ref
                               target="http://newtfire.org/dh/explainXQuery.html">Introduction to
                               XQuery and the eXist XML Database</ref> as you orient yourself to
                            XQuery and the eXist database environment.</item>
-                        <item><hi><ref target="XQueryExercise1.html">XQuery Exercise 1</ref></hi></item>
+                        <item><hi><ref target="XQueryExercise1.html">XQuery Exercise
+                           1</ref></hi></item>
                      </list>
                   </div>
-                  </div>
-             
+               </div>
+
                <div type="day">
                   <head>
                      <date when="2016-03-04">F 03-04</date>
@@ -1546,12 +1585,16 @@
                   </div>
                   <div type="assign">
                      <list>
-                     <item><hi>XQuery to SVG Exercise 2 [TBD] </hi></item>
+                        <item><hi>XQuery to SVG Exercise 2 [TBD] </hi></item>
                         <item>Read <ref
-                           target="https://web.archive.org/web/20140604085234/http://www.playingwithhistory.com/wp-content/uploads/2010/04/hermeneutics.pdf">
-                           <title level="a">The hermeneutics of screwing around</title></ref> or <ref
+                              target="https://web.archive.org/web/20140604085234/http://www.playingwithhistory.com/wp-content/uploads/2010/04/hermeneutics.pdf">
+                              <title level="a">The hermeneutics of screwing around</title></ref> or
+                              <ref
                               target="http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1056&amp;context=englishfacpubs">
-                              <title level="a">In praise of pattern</title></ref> over this weekend and begin posting to our <ref target="https://github.com/ebeshero/DHClass-Hub/issues/">DHClass-Hub Discussion of Steve Ramsay’s work</ref> [TBD]</item>
+                              <title level="a">In praise of pattern</title></ref> over this weekend
+                           and begin posting to our <ref
+                              target="https://github.com/ebeshero/DHClass-Hub/issues/">DHClass-Hub
+                              Discussion of Steve Ramsay’s work</ref> [TBD]</item>
                      </list>
                   </div>
                </div>
@@ -1559,9 +1602,9 @@
             <div type="week" n="12">
                <div type="day">
                   <head>
-                     <date when="2016-03-21">M 03-21 
-                        <note>Steve Ramsay is in Pittsburgh this week. May visit Greensburg.
-                        <!--2016-01-10 ebb: Post link to schedule here. And let's see about bringing some students to the Pgh events. -->
+                     <date when="2016-03-21">M 03-21 <note>Steve Ramsay is in Pittsburgh this week.
+                           May visit Greensburg.
+                           <!--2016-01-10 ebb: Post link to schedule here. And let's see about bringing some students to the Pgh events. -->
                         </note>
                      </date>
                   </head>
@@ -1581,8 +1624,8 @@
                      <list>
                         <item>XQuery to output KML </item>
                         <item> Our KML Google Earth output: <ref
-                           target="http://pacific.pitt.edu/maps.html">Digital Archives and
-                           Pacific Cultures: Maps</ref></item>
+                              target="http://pacific.pitt.edu/maps.html">Digital Archives and
+                              Pacific Cultures: Maps</ref></item>
                      </list>
                   </div>
                   <div type="assign">
@@ -1627,8 +1670,8 @@
                      <list>
                         <item><hi>XQuery for Project Assignment</hi> [TBD]</item>
                         <item>Read Obdurodon's <ref
-                           target="http://dh.obdurodon.org/javascript.xhtml">Introduction to
-                           Javascript</ref></item>
+                              target="http://dh.obdurodon.org/javascript.xhtml">Introduction to
+                              Javascript</ref></item>
                      </list>
                   </div>
                </div>
@@ -1644,7 +1687,7 @@
                   </div>
                   <div type="assign">
                      <p><hi><ref target="JavaScript_SSI_Exercise1.html">Server Side Includes and
-                        JavaScript Exercise 1</ref></hi></p>
+                              JavaScript Exercise 1</ref></hi></p>
                   </div>
                </div>
             </div>
@@ -1658,15 +1701,15 @@
                   </div>
                   <div type="assign">
                      <list>
-                        
+
                         <item>Read Oburodon's <ref target="javascript_piece-by-piece.xhtml"
-                           >JavaScript Piece By Piece tutorial</ref></item>
+                              >JavaScript Piece By Piece tutorial</ref></item>
                         <item>Read Elisa's Obdurodon tutorial, <ref
-                           target="http://dh.obdurodon.org/javascript/classListToggle.xhtml"
-                           >JavaScript Toggling with classList and switch</ref></item>
+                              target="http://dh.obdurodon.org/javascript/classListToggle.xhtml"
+                              >JavaScript Toggling with classList and switch</ref></item>
                         <item><hi><ref target="JavaScriptExercise2.html">Javascript Exercise
-                           2</ref></hi></item>
-                        
+                              2</ref></hi></item>
+
                      </list>
                   </div>
                </div>
@@ -1683,7 +1726,7 @@
                   </div>
                   <div type="assign">
                      <p><hi><ref target="JavaScript_Exercise3.html">JavaScript Exercise 3</ref>
-                        [TBD] <!--ebb: REHASH THIS ASSIGNMENT TO PULL FROM XQUERY--></hi>:
+                           [TBD] <!--ebb: REHASH THIS ASSIGNMENT TO PULL FROM XQUERY--></hi>:
                         JavaScript with SVG</p>
                   </div>
                </div>
@@ -1706,12 +1749,12 @@
                   </head>
                   <div type="inclass">
                      <p>Projects and Portfolios. <ref target="https://creativecommons.org/">Creative
-                        Commons Licenses</ref></p>
-                    
+                           Commons Licenses</ref></p>
+
                   </div>
                   <div type="assign">
                      <p><hi>Website Development and Review</hi> Exercise [TBD]</p>
-                     
+
                   </div>
                </div>
                <div type="day">
