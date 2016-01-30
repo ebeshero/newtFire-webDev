@@ -1,0 +1,334 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>Regex Exercise: Blithedale</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="topAuthorDJB.html" -->
+      		
+      		
+      		
+      <h1><span class="banner">Regex Exercise: Convert the text of a novel into XML</span></h1>
+      			
+    <p>Consult the following resources as you work with Regular Expressions:</p> 
+   	<ul>
+         			  
+      	<li><a href="http://newtfire.org/dh/explainRegex.html">Our newtFire tutorial
+                  			    on Autotagging with Regular Expressions (Regex)</a> 
+         </li>
+   		<li><a href="http://www.regular-expressions.info/tutorial.html">Regular-Expressions.info Tutorial</a>: a mine of helpful detail on regular expression matching,</li>
+         			  
+      </ul>
+   	  <h3>The task</h3>
+        <p>We begin with a plain-text file, the Project Gutenberg EBook of <a
+        	href="blithedale.txt"><cite>The Blithedale
+                    Romance</cite></a>, by Nathaniel Hawthorne. We want to convert this file to XML
+            but we don’t want to type all of the angle brackets manually. So what can we tag
+            automatically, with global find-and-replace operations? Some of the markup we might want
+            to introduce for analytical purposes might require us to touch every word of the text,
+            but, at a minimum, we can autotag chapters, chapter titles, paragraphs, and quotations
+            using regex tools, and that’s the goal of the present assignment.</p>
+        <h3>Preliminaries</h3>
+       <ul> <li>Select the plain-text version of the document and open it in &lt;oXygen/&gt; as a plain
+            text file. Then cut out the front matter (before the main title title) and the back
+            matter (after the last line of the text of the novel, which is <q>I--I myself--was in
+                love--with--Priscilla! </q>). In Real Life we might want to mark those parts up
+            eventually and reintroduce them into the XML as metadata, but for this assignment we’ll
+            just delete everything that isn’t part of the text of the novel.</li>
+       <li>Open Notepad or another plain-text editor on your computer and carefully record each step you take in writing patterns in the Find and Replace windows in &lt;oXygen/&gt;.
+           (Please do not use Microsoft Word or a word-processing program for this 
+           because you will have to struggle with the autocorrect functions in your word processor!). Save your file the usual way for homework exercises and use the file extension <code>.txt</code> (for example: RegexEx1_ebb.txt)
+       for your text file that records your steps. Submit this file to Courseweb. This is how you will prepare this set of homework assignments for the Regular Expressions unit.
+       </li>
+       </ul>
+        <h3>Step by step</h3>
+        <p>There’s more than one way to accomplish this task, but one way to approach the problem is
+            as follows:</p>
+        <h4>Reserved characters</h4>
+        <p>The plain text file could, at least in principle, contain characters that have special
+            meaning in XML: the ampersand and the angle brackets. You need to search for those and
+            replace them with their corresponding XML entities; if you don’t remember the entity
+            strings, you can look them up in the <q>Entities and numerical character references</q>
+            section of <a href="http://dh.obdurodon.org/what-is-xml.xhtml"
+                >http://dh.obdurodon.org/what-is-xml.xhtml</a>. Note that you need to process them
+            in the correct order. What is that order, and why is it important?</p>
+        <h4>Extra blank lines</h4>
+        <p>The blank lines are pseudo-markup that tell us where titles and paragraphs begin and end,
+            but in some cases there are multiple blank lines in a row (for example, there are two
+            blank lines between the title and the word <q>by</q>). Those extra blank lines don’t
+            tell us anything useful, so we’ll start by getting rid of them. We want to retain one
+            blank line between titles and paragraphs, etc., but not more than one.</p>
+        <p>To perform regex searching, you need to check the box labeled <q>Regular expression</q>
+            at the bottom of the &lt;oXygen/&gt; find-and-replace dialog box, which you open with
+            Control-f (Windows) or Command-f (Mac). If you don’t check the <q>Regular expression</q>
+            box, &lt;oXygen/&gt; will just search for what you type literally, and it won’t
+            recognize that some characters in regex have special meaning. You don’t have to check
+            anything else yet.</p>
+        <p>The regex escape code that matches a new line is <code>\n</code>, so you want to search
+            for more than two of those in succession, and you want to replace them with exactly two.
+            You can search for three blank lines and replace them with two and then keep repeating
+            the process until there are no instances of three blank lines left, or, more elegantly
+            and efficiently, you can search for <code>\n{3,}</code>, which matches three or more new
+            line characters in succession (see the <q>Limiting repetition</q> section of <a
+                href="http://www.regular-expressions.info/repeat.html"
+                >http://www.regular-expressions.info/repeat.html</a>) and replace them with
+                <code>\n\n</code> (the quantifiers work only in matches, but not in replacements, so
+            you have to write it this way).</p>
+        <p>Note that a transformation that searches for a sequence of two end-of-line characters
+            depends on their being immediately adjacent to each other. If what looks like a blank
+            line to you actually has (invisible) spaces or tabs, the pattern won’t match and the
+            replacement won’t happen because there will be spaces or tabs between the end-of-line
+            characters, which is to say that they won’t be adjacent. If you think that might be the
+            case, you can make those characters visible by going into the &lt;oXygen/&gt;
+            preferences (Preferences → Editor) and checking the boxes labeled <q>Show
+                TAB/NBSP/EOL/EOF marks</q> and <q>Show SPACE marks</q> under Whitespaces. If you do
+            have whitespace characters interfering with your ability to find a blank line (that is,
+            two consecutive new line characters), you can use regex processing to replace them: the
+            pattern <code>\t</code> matches a tab character, a space matches a space, and
+                <code>\s+</code> matches one or more white-space characters of any sort (including
+            new lines). You can use the <q>Find</q> or <q>Find all</q> options in the
+            find-and-replace dialog to explore the document and make sure that you’re matching what
+            you want to match before you use <q>Replace all</q> to make the changes.</p>
+        <h4>Paragraphs</h4>
+        <p>What’s left after deleting the beginning and ending metadata and extra blank lines is
+            mostly (except for the stuff at the top) a bunch of chapter titles and paragraphs,
+            separated from one another by a single blank line, and we can use a regex to find all
+            blank lines and replace them with the sequence <code>&lt;/p&gt;&lt;p&gt;</code>. XML
+            doesn’t care about the following, but for human legibility, we’d suggest inserting a new
+            line character between the tags, instead of just outputting the end tag followed
+            immediately by the start tag, so that each paragraph will start on a new line. You’ll
+            have to add the <code>&lt;p&gt;</code> start tag before the first paragraph and the
+                <code>&lt;/p&gt;</code> end tag after the last one manually, but you can enter all
+            of the rest automatically with a single regex-aware find-and-replace operation. At this
+            point the document looks like a bunch of <code>&lt;p&gt;</code> elements. Some may
+            contain chapter titles, rather than paragraphs. We’ll fix that below. At the top of the
+            file, the title, author, and list of chapter titles will need special handling. We’ll
+            talk about those below, too.</p>
+        <h4>Chapter titles</h4>
+        <p>The title of the first chapter within the body looks like:</p>
+        <pre>&lt;p&gt;I. OLD MOODIE&lt;/p&gt;</pre>
+        <p>the second looks like:</p>
+        <pre>&lt;p&gt;II. BLITHEDALE&lt;/p&gt;</pre>
+        <p>and we can see easily, from the list of chapter titles at the top, that there are
+            twenty-nine chapter titles, each of which begins with a Roman numeral, then a period,
+            and then a single space character, and each of which runs until the end of the line. No
+            real textual paragraph looks like that, although some paragraphs could begin with the
+            pronoun <q>I</q>, which looks like a Roman numeral, and some paragraphs might be only
+            one line long. If we can write a regex that matches chapter titles and only chapter
+            titles, then, we can replace the paragraph markup with title markup, retaining the part
+            in the middle.</p>
+        <p>We’re not going to write that regex for you, but we will tell you the pieces we used. Try
+            building a regex and running <q>Find all</q> to verify that it is matching all of the
+            chapter titles and nothing else. When you can match what you need, then you can think
+            about how to craft the replacement string. Here are the pieces:</p>
+        <ul>
+            <li><p>First make sure that, under <q>Options</q>, <q>Case sensitive</q> is checked and
+                        <q>Dot matches all</q> is unchecked. You want to do case sensitive matching
+                    because the Roman numeral characters here are all upper case, so you want to be
+                    able to distinguish those from lower case <q>i</q>, <q>v</q>, <q>x</q>, etc.
+                    We’ll discuss when to use <q>Dot matches all</q> below, but for now, make sure
+                    that it’s unchecked.</p></li>
+            <li><p>You want to match the entire content of a line, and you can do that by using the
+                        <code>^</code> (line start) and <code>$</code> (line end) <dfn>anchor</dfn>
+                    metacharacters. If you type, say, <q>A</q> into the <q>Find</q> box and hit
+                        <q>Find all</q>, you’ll match every upper-case <q>A</q> in the document (try
+                    it). But if you type <q>^A</q>, you’ll only find an <q>A</q> at the very
+                    beginning of a line. In other words <code>^</code> doesn’t match a caret
+                    character; what it does is anchor the match so that it succeeds only if it falls
+                    at the beginning of a line. Similarly, the <code>$</code> doesn’t match a
+                    literal dollar sign; what it does instead is anchor a match so that it succeeds
+                    only if it falls at the end of a line. This also means that <code>^A$</code>
+                    will match only lines that consist of nothing except the letter <q>A</q>. You
+                    don’t want to match lines that consist of nothing but the letter <q>A</q>, but
+                    with the two anchors (<code>^</code>, <code>$</code>), the knowledge that the
+                    dot (<code>.</code>) matches any character except a new line, andyour knowledge
+                    of the regex repetition indicators (<code>?</code>, <code>+</code>,
+                        <code>*</code>), you have all the pieces you need to craft a regular
+                    expression that will match an entire line, no matter what the contents.</p></li>
+            <li><p>A chapter title is (now) wrapped (misleadingly) in <code>&lt;p&gt;</code> tags
+                    and fills a single line. That may not always be the case with other texts you’ll
+                    need to process, but you can see that it is here, and you can take advantage of
+                    that fact by searching for lines that begin with <code>&lt;p&gt;</code> and end
+                    with <code>&lt;/p&gt;</code> (using the line start and line end metacharacters
+                    to match those tags only at the beginning and end of lines). But you also need
+                    to match the stuff between the tags, and that’s different for every chapter. You
+                    can handle that situation, as you did when you matched entire lines above, by
+                    using the regex dot (<code>.</code>) metacharacter, which matches any character
+                    except a new line. And since you don’t know the exact number of characters in
+                    each title, you can match one or more characters by using the plus sign
+                        (<code>+</code>) <dfn>repetition indicator</dfn>, which means <q>one or
+                        more</q>. Now try putting these pieces together and matching all lines that
+                    begin with a <code>&lt;p&gt;</code> start tag, continue with one or more
+                    characters (any characters except a new line), and end with a
+                        <code>&lt;/p&gt;</code> end tag. When you look at the results, you’ll see
+                    that you’ve matched all of the chapter titles, but also all other one-line
+                    paragraphs. You’ve also matched the title, author, and a few other lines near
+                    that top, but you’ll need to repair those manually at the end anyway.</p></li>
+            <li><p>You now need to refine your regex so that you’ll continue to match chapter
+                    titles, but not other one-line paragraphs. Since chapter titles begin with a
+                    Roman numeral, you can modify your regex to match only if a Roman numeral
+                    immediately follows the <code>&lt;p&gt;</code> start tag. To do that you’ll use
+                    a <dfn>character class</dfn>, which you can read about at <a
+                        href="http://www.regular-expressions.info/charclass.html"
+                        >http://www.regular-expressions.info/charclass.html</a>. You want to match
+                    any sequence of <q>I</q>, <q>V</q>, and <q>X</q> characters in any order. This
+                    will match sequences that aren’t Roman numerals, like <q>XVX</q>, but those
+                    don’t occur, so you don’t have to worry about them. This illustrates a useful
+                    strategy: a simple regex that overgeneralizes vacuously may be more useful than
+                    a complex one that avoids matching things that won’t occur anyway. You can use
+                    the character class (wrapped in square brackets) followed by a plus sign
+                    (meaning <q>one or more</q>) to enhance your regex and match only one-line
+                    paragraphs that begin with something that looks like a Roman numeral. Try
+                    it.</p></li>
+            <li><p>This almost works, but it also matches one-line paragraphs that begin with the
+                    first person singular pronoun <q>I</q>, such as:</p>
+                <pre>&lt;p&gt;I mentioned those rumors to Hollingsworth in a playful way.&lt;/p&gt;</pre>
+                <p>To weed those out, you want to match a Roman numeral only if it’s followed
+                    immediately by a period. Since the dot in regex is a metacharacter that matches
+                    any character except a new line, if you want to match a literal period, you have
+                    to <dfn>escape</dfn> the dot character by preceding it with a backslash
+                        (<code>\</code>). Add that after the Roman numeral part of your regex, and
+                    you should be matching only the twenty-nine chapter-title lines.</p>
+            </li>
+            <li><p>Matching the chapter titles is necessary but not sufficient: you now need to
+                    replace the paragraph tags with <code>&lt;title&gt;</code> tags. To do that we
+                    need to <dfn>capture</dfn> the part of the title line that’s between the
+                    paragraph tags and write that captured text into the replacement. To capture
+                    part of a regex, you wrap it in parentheses; this doesn’t match parenthesis
+                    characters, but it does make the part of the regex that’s between the
+                    parentheses available for reuse in the replacement string. For example,
+                        <code>a(b)c</code> would match the sequence <q>abc</q> and capture the
+                        <q>b</q> in the middle, so that it could be written into the replacement.
+                    Capturing a single literal character value isn’t very useful because you could
+                    have just written the <q>b</q> into the replacement literally, but you can also
+                    capture wildcard matches. For example, <code>a(.)c</code> matches a sequence of
+                    a literal <q>a</q> character followed by any single character except a new line
+                    followed by a literal <q>c</q> character. You can use that information to
+                    capture everything between the paragraph tags in the matched string. To write a
+                    captured pattern into the replacement, use a backslash followed by a digit,
+                    where <code>\1</code> means the first capture group, <code>\2</code> means the
+                    second, etc. In this case you’re capturing only one group, so you can build a
+                    replacement string that starts with <code>&lt;title&gt;</code>, ends with
+                        <code>&lt;/title&gt;</code>, and puts <code>\1</code> between them. You
+                    don’t need to do anything about the line start and line end anchors; since
+                    you’ve matched an entire line, the replacement will automatically be an entire
+                    line.</p></li>
+            <li>Putting this all together, you should be able to retag your titles automatically,
+                distinguishing them from the paragraphs. Try it.</li>
+        </ul>
+        <h4>Chapters</h4>
+        <p>A book isn’t just a series of paragraphs with titles strewn among them; the book has
+            logical chapters, which must begin with a title, and you want to represent this part of
+            the logical document hierarchy in your markup by inserting <code>&lt;chapter&gt;</code>
+            tags. Much as you used blank lines as <dfn>milestone</dfn> delimiters between paragraphs
+            earlier, you can now use your <code>&lt;title&gt;</code> elements as delimiters between
+            chapters. Use a find-and-replace operation to do this; you’ll have to clean up the
+            markup before the first chapter and after the last one manually, since in those cases
+            the <code>&lt;title&gt;</code> element doesn’t have the same milestone function as
+            elsewhere.</p>
+        <h4>Quotes</h4>
+        <p>How are quotations represented in the plain text? How would you find the text of a
+            quotation, that is, how would you find where it starts, where it ends, and what goes
+            between the start and the end? Files on the Internet sometimes have errors and
+            inconsistencies; if you’re relying on cues in the text to identify the beginnings and
+            ends of quotations, what can happen if you miss one?</p>
+        <p>If we assume that a quotation is text between opening and closing quotation marks (which
+            are the same in this text, which has straight quotation marks, instead of the curly
+            typographic ones where the opening and closing shapes are different), we have at least
+            two concerns:</p>
+        <ul>
+            <li>A line may have more than one quotation. If we write a regex like <code>".+"</code>
+                (including the quotation marks), will we match each quotation individually, or will
+                we match the first quotation mark on the line and the last, erroneously gobbling up
+                everything between into one spurious quotation? Try it and see.</li>
+            <li>Some quotations span multiple lines. Since the dot matches any character except a
+                new line, if we write <code>".+"</code> and the start and end quotation marks are on
+                different lines, we’ll fail to match those quotations, and we may erroneously match
+                material between ending and starting quotation marks, instead of only between
+                starting and ending ones. Try it and see.</li>
+        </ul>
+        <p>Let’s address the second problem first. There’s a line in the text that reads:</p>
+        <pre>without further question, only," added she, "it would be a convenience</pre>
+        <p>which represents the end of one quotation and the beginning of another. If we write
+                <code>".+"</code>, the system will incorrectly think that the first quotation mark
+            opens a quotation and the second closes one, and it will also fail to recognize that the
+            material before and after that line is really part of a quotation. We can fix this by
+            checking the <q>Dot matches all</q> box, which changes the meaning of the dot
+            metacharacter from <q>any character except a new line</q> to <q>any character including
+                a new line</q>. This means that we should be able to match quotations that cross
+            line boundaries. Try it and notice the different results. Uh-oh!</p>
+        <p>So what went wrong? By default regular expressions are <dfn>greedy</dfn>, which means
+            that they make the longest possible match. Turning on <dfn>dot all</dfn> mode causes the
+            regex to match everything from the very first quotation mark in the entire text through
+            the very last (since quotation mark characters are also characters, the dot in the regex
+                <code>".+"</code> matches the quotation marks between the first and last ones in the
+            document, just like it matches any other character). Turning off dot all mode won’t fix
+            this because some quotations do cross line boundaries, and we need to be able to
+            recognize and match them.</p>
+        <p>We can resolve the problem by turning on dot-all mode (since we have to match quotations
+            that span line breaks) but also specifying that the match should be
+                <dfn>non-greedy</dfn>, that is, that we should make the <em>shortest</em> possible
+            match (instead of the longest, which is the default), and we do this by following the
+            repetition indicator (the plus sign) with a question mark. (Note that the question mark
+            you met earlier is a repetition indicator that means <q>zero or one instance</q> of
+            whatever it follows. Here is isn’t a repetition indicator, though; here it means
+                <q>don’t be greedy</q>. So if the same symbol can have two such different meanings,
+            how does a regex processor know which meaning to apply?) In other words
+                <code>".+?"</code> will correctly treat two full quotations on the same line as
+            separate quotations. Try it. You should now correctly be matching each quotation fully,
+            regardless of whether it spans a new line character and regardless of the number of
+            quotations on a line.</p>
+        <p>Once you can do that, you can capture the text between the quotation marks and write it
+            into the output between <code>&lt;quote&gt;</code> tags. Don’t include the quotation
+            mark characters themselves in the capture group; those are plain-text pseudo-markup, and
+            now that you’re going to be tagging quotations with real markup, you don’t want the
+            quotation mark characters included.</p>
+        <h4>Cleanup</h4>
+        <p>At this point you can fix the title and author lines manually (we’d just delete the line
+            that reads <q>by</q>, since the new <code>&lt;author&gt;</code> tags will make that
+            explicit), as well as the table of contents, and you need to wrap the entire document in
+            a root element (such as <code>&lt;book&gt;</code>). If you’d like a little more regex
+            practice, instead of fixing the table of contents manually, you can use regex
+            find-and-replace to tag it. If you select the table of contents and then open the
+            find-and-replace dialog, you can check the <q>Only selected lines</q> box under
+                <q>Scope</q> to say that instead of applying find-and replace operations to the
+            entire file, you’ll apply them only to the selected lines. You may want to start by
+            stripping out incorrect markup that you’ve inserted when your global find-and-replace
+            operations earlier changed these lines, as well—and of course you’ll want to do that
+            with a regex that matches any tag and replaces it with nothing (that is, deletes it).
+            Once you’ve done that, these lines look like title lines, except that they have space
+            characters before them, and you can use a regex that matches one or more space
+            characters to help match them. You can then capture each line (throwing away the leading
+            white space by excluding it from the capture) and wrap it in <code>&lt;title&gt;</code>
+            tags. You’ll want to get rid of the paragraph tags that are wrapping the whole table of
+            contents, since it isn’t a paragraph, and replace it with something like
+                <code>&lt;toc&gt;</code> (for <q>table of contents</q>).</p>
+        <h4>Checking your results</h4>
+        <p>Although you’ve added XML markup to the document, &lt;oXygen/&gt; remembers that you
+            opened it as plain text, which means that you can’t check it for well-formedness. To fix
+            that, save it as XML with File → Save as and give it the extension <q>.xml</q>. Even
+            that doesn’t tell &lt;oXygen/&gt; that you’ve changed the file type, though; you have to
+            close the file and reopen it. When you do that, &lt;oXygen/&gt; now knows that it’s XML,
+            so you can verify that it’s well formed in the usual way: Control+Shift+W on Windows,
+            Command+Shift+W on Mac, or click on the arrow next to the red check mark in the icon bar
+            at the top and choose <q>Check well-formedness</q>.</p>
+        <h3>What to submit</h3>
+        <p>We don’t need to see the XML that you produce as the output of your transformation
+            because we’re going to recreate it ourselves anyway, but you do need to upload a
+            step-by-step description of what you did. Your write-up can be brief and concise, but it
+            should provide enough information to enable us to duplicate the procedure you
+            followed.</p>
+        <p>If you don’t get all the way to a solution, just upload the description of what you did,
+            what the output looked like, and why you were not able to proceed any further. As
+            always, you’re encouraged to post any questions on our <a href="https://github.com/ebeshero/DHClass-Hub/issues/">DHClass-Hub Issues board</a>!</p>
+    </body>
+</html>
