@@ -15,8 +15,7 @@
                 href="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</a>". It will
             benefit you to keep these tutorials open while you work on this assignment. To begin,
             open a new XHTML file in &lt;oXygen/&gt; under <strong>File → New → Framework Templates
-                → (scroll to XHTML in the alphabetized list) → XHTML 5</strong>. (We do not recommend keeping the xml line at the very top, but just the DOCTYPE and the root html element pointing to the xhtml namespace.)
-            You can copy and paste our preferred code here (over the declarations that &lt;oXygen/&gt; automatically provides):</p> 
+                → (scroll to XHTML in the alphabetized list) → XHTML 5</strong>. We do not recommend keeping the xml line at the very top, but just the DOCTYPE and the root html element pointing to the xhtml namespace; therefore, the top of your file should look like this:</p> 
             <pre>
                      &lt;!DOCTYPE html
   SYSTEM "about:legacy-compat"&gt;
@@ -27,7 +26,7 @@
             to open a new CSS file in &lt;oXygen/&gt; under <strong>File → New → New Document →
                 CSS</strong>.</p>
         <h3>Analysis of the task</h3>
-        <p>The goal of this assignment is to create a very basic personal webpage. If you view page source on this page you can see examples of how we added headings, paragraphs, lists,  an image, and links to other pages within the same directory. You can also view the corresponding CSS and how we linked our CSS with this page.</p>
+        <p>The goal of this assignment is to create a very basic personal webpage. If you <em>view page source</em> on this page you can see examples of how we added headings, paragraphs, lists,  an image, and links to other pages within the same directory. You can also view the corresponding CSS and how we linked our CSS with this page. Mac users to view page source we recommend that you use Firefox or Chrome because Safari will require you to change browser preferences to see the page source. In Firefox and Chrome simply <em>right-click</em> and click <em>view page source</em>.</p>
         <p>The key components of your first basic webpage that we will be looking for are:</p>
         <ul>
             <li>Heading elements (with any variation of heading levels)</li>
@@ -50,8 +49,8 @@
         </ol>
         <h3>Submitting your work</h3>
         <p><em>A note on mindful file management:</em> We recommend you save your CSS stylesheet in
-        the same directory with your HTML pages, because then you simply need to indicate the filename in the style link that sits in the head of each HTML page. The same applies for pages that are linked from other pages. Otherwise, you will need to declare the folder (directory) followed by a <strong>/</strong> and then the filename. Mindful file management is a key component of creating a well organized website.</p>
-        <p>Access your personal web space accounts at newtFire.org on the Pittsburgh Supercomputing Center using your preferred file transfer program. Move all of your developed HTML pages and your CSS file into the <code>public_html</code> folder. Be sure the file permissions on your main folder allow the group and others to Read and Execute. You (the owner) should be the only one able to write to this directory. The following image shows how to access file permissions and our recommended settings using WinSCP on a Windows machine; however, the setup should be similar on other platforms and in other file transfer programs.</p>
+            the same directory with your HTML pages, because then you simply need to indicate the filename in the <code>&lt;link&gt;</code> element that sits in the <code>&lt;head&gt;</code> element of each HTML page. The same applies for pages that are linked from other pages. Otherwise, you will need to declare the folder (directory) followed by a <strong>/</strong> and then the filename. Mindful file management is a key component of creating a well organized website.</p>
+        <p>Access your personal web space accounts at newtFire.org on the Pittsburgh Supercomputing Center using your preferred file transfer program. Refer to CourseWeb for how to access your your accounts. Move all of your developed HTML pages and your CSS file into the <code>public_html</code> folder. Be sure the file permissions on your main folder allow the group and others to Read and Execute. You (the owner) should be the only one able to write to this directory. The following image shows how to access file permissions and our recommended settings using WinSCP on a Windows machine; however, the setup should be similar on other platforms and in other file transfer programs.</p>
         <img src="filePermissions.jpg" alt="WinScp Changing File Permissions" />
         
     </body>
