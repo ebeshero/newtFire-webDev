@@ -39,8 +39,8 @@
             using regex tools, and that’s the goal of the present assignment.</p>
         <h3>Preliminaries</h3>
        <ul> <li>Select the plain-text version of the document and open it in &lt;oXygen/&gt; as a plain
-            text file. Then cut out the front matter (before the main title title) and the back
-            matter (after the last line of the text of the novel, which is <q>I--I myself--was in
+            text file. Then cut out the front matter (before the main title) and the back
+            matter (after the last line of the novel’s text, which is <q>I--I myself--was in
                 love--with--Priscilla! </q>). In Real Life we might want to mark those parts up
             eventually and reintroduce them into the XML as metadata, but for this assignment we’ll
             just delete everything that isn’t part of the text of the novel.</li>
@@ -54,13 +54,15 @@
         <p>There’s more than one way to accomplish this task, but one way to approach the problem is
             as follows:</p>
         <h4>Reserved characters</h4>
-        <p>The plain text file could, at least in principle, contain characters that have special
-            meaning in XML: the ampersand and the angle brackets. You need to search for those and
-            replace them with their corresponding XML entities; if you don’t remember the entity
-            strings, you can look them up in the <q>Entities and numerical character references</q>
-            section of <a href="http://dh.obdurodon.org/what-is-xml.xhtml"
-                >http://dh.obdurodon.org/what-is-xml.xhtml</a>. Note that you need to process them
-            in the correct order. What is that order, and why is it important?</p>
+       <p>The plain text file could, at least in principle, contain characters that have special
+           meaning in XML: the ampersand and the angle brackets. You need to search for those and
+           replace them with their corresponding XML entities. (These are those character strings that start with an <code>&amp;</code> character.) 
+           You can read some detailed information about entity strings and what they are for on Obdurodon’s <q>Entities and numerical character references</q>
+           section of <a href="http://dh.obdurodon.org/what-is-xml.xhtml"
+               >http://dh.obdurodon.org/what-is-xml.xhtml</a>, but for just a quick list, see <q>Special Reserved Characters</q> at the bottom of our <a href="explainXML.html">Introducing XML tutorial</a>. Note that you need to process them
+           in the correct order, because of the ampersand (<code>&amp;</code>) in each one! 
+           Think about this carefully: You <strong>always</strong> want to replace the &amp; characters first. (Why? Explain in your homework write-up.)</p>
+     
         <h4>Extra blank lines</h4>
         <p>The blank lines are pseudo-markup that tell us where titles and paragraphs begin and end,
             but in some cases there are multiple blank lines in a row (for example, there are two
