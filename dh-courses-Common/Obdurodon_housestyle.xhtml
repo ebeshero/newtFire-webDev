@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    
+    <head>
+        <title>Obdurodon style manual</title>
+        <!--<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>-->
+<link href="http://www.obdurodon.org/css/style.css" rel="stylesheet" type="text/css"/>
+<link href="http://dh.obdurodon.org/projects.css" rel="stylesheet" type="text/css"/>
+<!--<meta http-equiv="Content-Script-Type" content="text/javascript"/>
+<meta http-equiv="Content-Style-Type" content="text/css"/>-->
+
+    </head>
+    <body>
+        <h1><a class="logo" href="http://www.obdurodon.org">&lt;oo&gt;</a>&#x2192;<a
+    href="http://dh.obdurodon.org" class="logo">&lt;dh&gt;</a> Digital humanities</h1>
+<hr />
+<p class="boilerplate">
+    
+    
+    <span><strong>Maintained by:</strong> David J. Birnbaum (<a
+        href="mailto:djbpitt@gmail.com">djbpitt@gmail.com</a>) <a
+            href="http://creativecommons.org/licenses/by-nc-sa/3.0/" style="outline: none;">
+            <img src="http://www.obdurodon.org/images/cc/88x31.png"
+                alt="[Creative Commons BY-NC-SA 3.0 Unported License]"
+                title="Creative Commons BY-NC-SA 3.0 Unported License"
+                style="height: 1em; vertical-align: text-bottom;" />
+        </a>
+    </span>
+    <span><strong>Last modified:</strong>
+        
+        2015-08-30T21:04:31+0000</span>
+</p>
+<p>
+</p>
+<hr />
+<h2>Obdurodon style manual</h2>
+
+
+
+        <p>This is a style guide for authoring course materials for <a
+                href="http://dh.obdurodon.org">Computational methods in the humanities</a>.</p>
+        <dl class="normal">
+            <dt>Boilerplate</dt>
+            <dd><p>Boilerplate at the top of the page is managed with SSIs. Here’s a skeleton:</p>
+                <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;!--#set var="author" value="David J. Birnbaum" --&gt;
+    &lt;!--#set var="author_email" value="djbpitt@gmail.com" --&gt;
+    &lt;!--#set var="title" value="Page title goes here" --&gt;
+    &lt;!--#config timefmt="%Y-%m-%dT%X%z" --&gt;
+    &lt;head&gt;
+        &lt;title&gt;&lt;!--#echo var="title" --&gt;&lt;/title&gt;
+        &lt;!--#include virtual="inc/dh-header.html" --&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;!--#include virtual="inc/dh-boilerplate.html" --&gt;</pre>
+                <p>Type the page title only in the <q>title</q> variable configuration; it will be
+                    inserted automatically as an <code>&lt;h2&gt;</code> when the SSI is resolved.
+                    See below about authors.</p>
+                <p>When you create a new page, copy and paste the preceding template at the top.
+                    When you edit an old page, open it from Dropbox instead of viewing the source in
+                    your browser and copying it. The source in your browser has SSIs already
+                    resolved, so the beginning of your file will be wrong.</p></dd>
+            <dt>Authors</dt>
+            <dd><p>We don't normally identify the authors of course materials because those
+                    materials are most generally the work of a collective, but we often do for
+                    tutorials. If there’s a single author, give the name and, optionally, the email
+                    address in the appropriate places. If there is more than one author, omit the
+                        <q>author</q> and <q>author_email</q> variables and instead use:</p>
+                <pre>&lt;!--#set var="authors" value="David J. Birnbaum and Gabi Kirilloff" --&gt;</pre>
+                <p class="note">The only reason we don’t handle multiple authors more gracefully is
+                    because I haven’t gotten around to revising the SSI processing. If anyone would
+                    like to do that, the contribution would be welcome.</p></dd>
+            <dt>Sections and section titles</dt>
+            <dd>
+                <p>HTML5 has <code>&lt;section&gt;</code> elements, which are helpful to users with
+                    disabilities, so you should wrap <code>&lt;section&gt;</code> around each
+                    section (see <a
+                        href="http://www.smashingmagazine.com/2013/01/the-importance-of-sections/"
+                        >http://www.smashingmagazine.com/2013/01/the-importance-of-sections/</a>).
+                    The <code>&lt;section&gt;</code> element has no effect on normal browser
+                    rendering.</p>
+                <p>The main page title, configured in the SSI described above, will be tagged as an
+                        <code>&lt;h2&gt;</code>, which means that top-level section titles should be
+                    tagged as <code>&lt;h3&gt;</code>, with <code>&lt;h4&gt;</code>, etc. used for
+                    levels of subsections.</p>
+                <p>We capitalize only the first word of a section title, plus any word that must
+                    always be capitalized (<q>sentence case</q>), and we do the same for book,
+                    article, and other publication titles when we refer to them. That is, we don’t
+                    capitalize every word, or every significant word (<q>title case</q>).</p></dd>
+            <dt>Apostrophes</dt>
+            <dd><p>For apostrophes in text we use curly, rather than straight apostrophes (except in
+                    code examples, of course).</p></dd>
+            <dt>Quotation marks</dt>
+            <dd><p>For text that should be rendered in quotation marks we use the HTML
+                        <code>&lt;q&gt;</code> element. The Obdurodon CSS renders this as curly
+                    quotation marks, and it will properly nest single quotation marks inside double
+                    ones if we have nested quotations.</p></dd>
+            <dt>Presentational elements</dt>
+            <dd><p>We don't usually use the <code>&lt;i&gt;</code> or <code>&lt;b&gt;</code>
+                    elements. For emphasis use <code>&lt;em&gt;</code> and
+                        <code>&lt;strong&gt;</code>. For terms being introduced use
+                        <code>&lt;dfn&gt;</code>. For book titles use
+                <code>&lt;cite&gt;</code>.</p></dd>
+            <dt>Hyphens and dashes</dt>
+            <dd><p>We distinguish hyphen (-), en dash (–), and em dash (—). Hyphen is used for
+                    hyphenated words, en dash is used for numerical ranges, and em dash is used to
+                    separate clauses.</p></dd>
+            <dt>Horizontal ellipsis (…)</dt>
+            <dd><p>If we use a horizontal ellipsis, we use the raw Unicode character for it, rather
+                    than three periods.</p></dd>
+            <dt>White space</dt>
+            <dd><p>Watch out for extraneous space characters at the beginnings and ends of
+                    paragraphs, etc.</p></dd>
+            <dt>Element names and other bits of inline code</dt>
+            <dd><p>We write element names without a trailing slash, even if it’s an empty element,
+                    unless we need to emphasize that it’s an empty element. Element names are
+                    surrounded by angle brackets and attribute names are preceded by an at-sign, and
+                    both are tagged as <code>&lt;code&gt;</code> elements. Attribute values are
+                    quoted using the <code>&lt;q&gt;</code> element.</p></dd>
+            <dd></dd>
+            <dt>Code blocks using <code>&lt;pre&gt;</code></dt>
+            <dd><p>To avoid having extra blank lines inside a <code>&lt;pre&gt;</code> element, we
+                    write the <code>&lt;pre&gt;</code> start tag and <code>&lt;/pre&gt;</code> end
+                    tag alongside the relevant text, on the same line as the text. In other words,
+                    instead of:</p>
+                <pre>&lt;pre&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;</pre>
+                <p>we write:</p>
+                <pre>&lt;pre&gt;&lt;?xml version="1.0" encoding="UTF-8"?&gt;</pre>
+                <p>Likewise, instead of:</p>
+                <pre>&lt;/TEI&gt;
+
+        &lt;/pre&gt;</pre>
+                <p>we write:</p>
+                <pre>&lt;/TEI&gt;&lt;pre&gt;</pre></dd>
+            <dt>Highlighting inside code blocks</dt>
+            <dd><p>When we post incrementally updated code and in some other situations, we may want
+                    to emphasize the new material visually. We do that by tagging the code that we
+                    want to emphasize within the <code>&lt;pre&gt;</code> element as a
+                        <code>&lt;span&gt;</code> and setting the value of its <code>@class</code>
+                    attribute to <q>pre-highlight</q>. We don't usually use the <code>@style</code>
+                    attribute to set the color explicitly except in situations where the
+                        <q>pre-highlight</q> strategy isn't capable of meeting our output
+                    requirements. If you need line numbering in your code block samples you can add
+                    the following two lines to the <code>&lt;head&gt;</code> element <em>after the
+                        line where you include the dh-header.html boilerplace</em>:</p>
+                <pre>
+        &lt;link href="http://www.obdurodon.org/css/numberlines.css" rel="stylesheet" type="text/css" /&gt;
+&lt;script type="text/javascript" src="http://www.obdurodon.org/js/numberlines.js"&gt;/**/&lt;/script&gt;</pre>
+                <p>You can use the <q>pre-highlight</q>
+                    <code>@class</code> value together with line numbering if you need it.</p></dd>
+            <dt>How to spell <q>&lt;oXygen/&gt;</q></dt>
+            <dd><p>We write the name of our XML editor as &lt;oXygen/&gt;, with the angle brackets
+                    and slash.</p></dd>
+        </dl>
+    </body>
+</html>
