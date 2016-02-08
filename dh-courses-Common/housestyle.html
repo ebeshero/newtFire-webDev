@@ -14,10 +14,10 @@
 
 
 
-        <p>This is our style guide for use in writing tutorials and exercises for <a href="http://newtfire.org/dh/">the digital humanities courses on newtfire</a>.</p>
+        <p>This is our style guide for use in writing tutorials and exercises for <a href="http://newtfire.org/dh/">the digital humanities courses on newtfire</a>. We have taken <a href="http://dh.obdurodon.org/house-style.xhtml">Obdurodon’s style guide</a> as our model with some alterations.</p>
         <dl class="normal">
             <dt>Creating the file and file name:</dt>
-            <dd><p>Begin with another similar file from anywhere in newtFire’s course pages for digital humanities, which you should pull from our <a href="https://github.com/ebeshero/newtFire-webDev">newtfire-webDev GitHub repository</a>. If your file is going to be a tutorial, its file name should always begin with the word <q>explain</q> and continue in camelCase with the topic, like this: <code>explainXpath.html</code> or <strong>explainGitShell.html</strong>.</p></dd>
+            <dd><p>Begin with another similar file from anywhere in newtFire’s course pages for digital humanities, which you should pull from our <a href="https://github.com/ebeshero/newtFire-webDev">newtfire-webDev GitHub repository</a>. If your file is going to be a tutorial, its file name should always begin with the word <q>explain</q> and continue in camelCase with the topic, like this: <code>explainXpath.html</code> or <code>explainGitShell.html</code>.</p></dd>
             <dt>Indicating the page title:</dt>
             <dd><p>Update the page title in the <code>&lt;title&gt;</code> element inside the <code>&lt;head&gt;</code> with the title of your page as it will appear in the tab above the browser. In the tab, for example, our CSS tutorial is titled simply <q>Explain CSS.</q></p>
                 <p>Include the full version of the title in <code>&lt;h1&gt;</code> tags as it will appear in the body of the webpage inside the body element, just after the SSI line. The full version of the title of our CSS page is <q>Introduction to Cascading Stylesheets</q>.</p>
@@ -52,7 +52,7 @@
                     rendering. <span class="smaller">Note: I have not yet begun implementing <code>&lt;section&gt;</code> elements on my older pages, so you may not see them, but we should begin implementing them.</span></p>
                 <p>Top-level section titles should be tagged as <code>&lt;h3&gt;</code>, with <code>&lt;h4&gt;</code>, etc. used for levels of subsections.</p>
                 <p>As a rule, we will capitalize only the first word of a section or subsection title, plus any word that must always be capitalized (<q>sentence case</q>). That is, we don’t
-                    capitalize every word, or every significant word (<q>title case</q>). <span class="smaller">Note: Our older pages are inconsistent in implementing this rule, so you can help by flagging the inconsistencies where you see them.</span></p></dd>
+                    capitalize every word, or every significant word in subsection headings. <span class="smaller">Note: Our older pages are inconsistent in implementing this rule, so you can help by flagging the inconsistencies where you see them.</span></p></dd>
             <dt>Apostrophes</dt>
             <dd><p>For apostrophes in text we use curly, rather than straight apostrophes (except in
                     code examples, of course).</p></dd>
@@ -64,7 +64,7 @@
             <dd><p>For website and book titles, use the <code>&lt;cite&gt;</code> element, which will properly render the title in italics wtih a semantic element designed for citation in HTML5.</p>
                 <p>For titles of articles, short poems, or subsections of a website or book that would normally take quotations marks, add an @class attribute, thus: <code>&lt;cite class="sub"&gt;</code>, which our CSS will render inside curly quotation marks.</p>
                 <p>For subtitles or quoted material inside a title (with a set of internal single-quotation marks), set a second <code>&lt;cite class="sub"&gt;</code> inside the first, and our CSS will properly render this in curly single quotation marks.</p>
-                <p>Capitalize the first word and subsequently the important words in the title of websites or books or other texts, as in these examples: <cite>Shelley and his Circle</cite> and <cite>The Dictionary of Imaginary Places</cite>. Always capitalize the first word after an internal colon in a title: <cite>The Lord Chamberlain Regrets: A History of British Theatre Censorship</cite>. When presenting titles of books or websites, include a year of publication if available in parentheses following the title and outside of the <code>&lt;cite&gt;</code> tags the first time you present it in the page, like this: <cite>The Lord Chamberlain Regrets: A History of British Theatre Censorship</cite> (2004).</p>
+                <p>Use <q>title case</q> on titles of works outside of newtFire. That means you should capitalize the first word and subsequently the important words in the title of websites or books or other texts, as in these examples: <cite>Shelley and his Circle</cite> and <cite>The Dictionary of Imaginary Places</cite>. Always capitalize the first word after an internal colon in a title: <cite>The Lord Chamberlain Regrets: A History of British Theatre Censorship</cite>. When presenting titles of books or websites, include a year of publication if available in parentheses following the title and outside of the <code>&lt;cite&gt;</code> tags the first time you present it in the page, like this: <cite>The Lord Chamberlain Regrets: A History of British Theatre Censorship</cite> (2004).</p>
             </dd>
             <dt>Presentational elements</dt>
             <dd><p>We don’t usually use the <code>&lt;i&gt;</code> or <code>&lt;b&gt;</code>
@@ -79,7 +79,7 @@
             <dd><p>If we use a horizontal ellipsis, we should use the raw Unicode character for it (given above), rather
                     than three periods. <span class="smaller">Note: We need to apply this on our older pages.</span></p></dd>
             <dt>White space</dt>
-            <dd><p>Eliminate extraneous space characters at the beginnings and ends of
+            <dd><p>Eliminate extra space characters at the beginnings and ends of
                     paragraphs, etc.</p></dd>
             <dt>Fine print</dt>
             <dd><p>Occasionally, as in this house style guide, we indicate some specialized information as an aside, using smaller text. For this purpose, surround text in <code>&lt;span class="smaller"&gt;</code>.</p></dd>
