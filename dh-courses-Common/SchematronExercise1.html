@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>Schematron Exercise 1</title>
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+    </head>
+    <body>
+        <!--#include virtual="topAuthorNLL29-BAS160.html" -->
+        <section title="exerciseName"><h1><span class="banner">Schematron Exercise 1</span></h1></section>
+        <section title="preliminaries">
+            <h3>Preliminaries</h3>
+            <p>Before beginning this assignment, please thoroughly read our tutorial: <a href="http://newtfire.org/dh/explainSchematron.html">Schematron</a>. This tutorial will be very useful to you during this assignment and the <a href="http://newtfire.org/dh/SchematronExercise2.html">Schematron Exercise 2</a>.  To begin this assignment, you will need to open a new Schematron document in &lt;oXygen/&gt; under <strong>File &#8594; New &#8594; New Document &#8594; (scroll to Schematron in the alphabetized list) &#8594; Schematron</strong>. Once opened, you will keep the default xml line at the top, but you will delete everything from <code>&lt;sch:schema&gt;</code> down. You will then replace this with:</p>
+            <pre>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
+    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+    xmlns="http://purl.oclc.org/dsdl/schematron"&gt;
+        &lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;
+        
+        &lt;/schema&gt;</pre>
+            <p><span class="smaller">You will be writing your Schematron <strong>before</strong> <code>&lt;/schema&gt;</code>.</span></p>
+        </section>
+        <section title="analysisOfTask">
+            <h3>Analysis of the task</h3>
+            <section title="background"><h4>Background:</h4>
+            <p>For this assignment, we are looking at votes for what place the Pitt-Greensburg DH Class will go for Spring Break. The options include: New York City, Mexico, London, and Rome. Each place gets between 0% and 100% of the votes. Assume here that this is the final voting poll, and there are no other options. This means that when you add the four percentages together, the result must be exactly 100%. Also assume that this is recording the already calculated percentage of the votes, not the raw count of the votes. All of these percentages are to be integer values.</p>
+            <p>Here is a Relax NG schema for the results of the Spring Break votes:</p>
+            <pre>start = results
+results = element results {place+}
+place = element place {name, xsd:int}
+name = attribute name {"NYC" | "Mexico" | "London" | "Rome"}</pre>
+            <p>Here is a sample XML document that is valid against the above schema:</p>
+            <pre>&lt;results&gt;
+    &lt;place name="NYC"&gt;24&lt;/place&gt;
+    &lt;place name="Mexico"&gt;34&lt;/place&gt;
+    &lt;place name="London"&gt;12&lt;/place&gt;
+    &lt;place name="Rome"&gt;30&lt;/place&gt;
+&lt;/results&gt;</pre>
+            <p><span class="smaller">Note: You will want to copy and paste this XML into an XML document so you can associate your Schematron and make sure that it is working correctly.</span></p>
+            <p>The Relax NG schema that we wrote above could have been better, but it's, of course, not. This means that our schema works, but it also allows incorrect results like the following:</p>
+            <pre><span class="badCode">&lt;results&gt;
+    &lt;place name="NYC"&gt;27&lt;/place&gt;
+    &lt;place name="Mexico"&gt;39&lt;/place&gt;
+    &lt;place name="London"&gt;15&lt;/place&gt;
+    &lt;place name="Rome"&gt;12&lt;/place&gt;
+&lt;/results&gt;</span><!-- 2016-02-08: nll: I don't know if I like what this span does to this because it looks odd, but it is faulty code so....--></pre>
+            <p>The problem here is that the four percentage values only total 93%. No matter how good our coding is, it is not possible to keep this type of error from happening by using Relax NG alone.</p></section>
+            <section title="task">
+                <h4>Task:</h4>
+                <p>Your task is to write a Schematron schema that makes sure the four percentages always equal 100%. Test your results by creating the Relax NG schema, your Schematron, and a sample XML document that is validated against both of the schemas in &lt;oXygen/&gt;. Play with the XML a little bit to make sure your Schematron is firing by entering correct and incorrect values into the XML. [You can stop here for a complete assignment or complete the optional part of this assignment for more practice, which may enhance your grade.]</p>
+                <p><strong>OPTIONAL:</strong> The following errors could have been corrected by writing a better Relax NG schema, but to help you learn how to use Schematron schemas, try it in Schematron:</p>
+                <ul>
+                    <li>There should be exactly four percentages of votes, with exactly one for each location. No votes should be duplicated or missing.</li>
+                    <li>Each location's voting percentage should range from 0 to 100. There should be no negative integers and no integers greater than 100. (The Relax NG schema states that these values must be integers, so you will not have to worry about making sure of that.)</li>
+                </ul>
+            </section>
+        </section>
+        <section title="uploading">
+            <h3>Upload your completed Schematron schema on Courseweb for this exercise.</h3>
+        </section>
+    </body>
+</html>
