@@ -17,7 +17,7 @@
         &lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;
         
         &lt;/schema&gt;</pre>
-            <p><span class="smaller">You will be writing your Schematron <strong>before</strong> <code>&lt;/schema&gt;</code>.</span></p>
+            <p><span class="smaller">You will be writing your Schematron <strong>inside</strong> the <code>&lt;schema&gt;</code> root element.</span></p>
         </section>
         <section title="analysisOfTask">
             <h3>Analysis of the task</h3>
@@ -36,21 +36,21 @@ name = attribute name {"NYC" | "Mexico" | "London" | "Rome"}</pre>
     &lt;place name="Rome"&gt;30&lt;/place&gt;
 &lt;/results&gt;</pre>
             <p><span class="smaller">Note: You will want to copy and paste this XML into an XML document so you can associate your Schematron and make sure that it is working correctly.</span></p>
-            <p>The Relax NG schema that we wrote above could have been better, but it's, of course, not. This means that our schema works, but it also allows incorrect results like the following:</p>
+                <p>Our Relax NG schema is a little sloppy and could have been better written (as we will discuss below). It lets us set a rule that the content of the element <code>&lt;place&gt;</code> must be a number (or xsd:int for integer), but the rule isn’t really good enough as we will see from the from the following example:</p>
             <pre><span class="badCode">&lt;results&gt;
     &lt;place name="NYC"&gt;27&lt;/place&gt;
     &lt;place name="Mexico"&gt;39&lt;/place&gt;
     &lt;place name="London"&gt;15&lt;/place&gt;
     &lt;place name="Rome"&gt;12&lt;/place&gt;
-&lt;/results&gt;</span><!-- 2016-02-08: nll: I don't know if I like what this span does to this because it looks odd, but it is faulty code so....--></pre>
-            <p>The problem here is that the four percentage values only total 93%. No matter how good our coding is, it is not possible to keep this type of error from happening by using Relax NG alone.</p></section>
+&lt;/results&gt;</span></pre>
+            <p>Do you see the problem? The four percentage values only total 93%! No matter how good our coding is, it is not possible to keep this type of error from happening by using Relax NG alone. That is why we use Schematron.</p></section>
             <section title="task">
                 <h4>Task:</h4>
                 <p>Your task is to write a Schematron schema that makes sure the four percentages always equal 100%. Test your results by creating the Relax NG schema, your Schematron, and a sample XML document that is validated against both of the schemas in &lt;oXygen/&gt;. Play with the XML a little bit to make sure your Schematron is firing by entering correct and incorrect values into the XML. [You can stop here for a complete assignment or complete the optional part of this assignment for more practice, which may enhance your grade.]</p>
                 <p><strong>OPTIONAL:</strong> The following errors could have been corrected by writing a better Relax NG schema, but to help you learn how to use Schematron schemas, try it in Schematron:</p>
                 <ul>
-                    <li>There should be exactly four percentages of votes, with exactly one for each location. No votes should be duplicated or missing.</li>
-                    <li>Each location's voting percentage should range from 0 to 100. There should be no negative integers and no integers greater than 100. (The Relax NG schema states that these values must be integers, so you will not have to worry about making sure of that.)</li>
+                    <li>There should be exactly four different places with votes. It should not be possible for there to be any places missing, or any places that appear twice in the XML.</li>
+                    <li>Each location’s voting percentage should range from 0 to 100. There should be no negative integers and no integers greater than 100. (The Relax NG schema states that these values must be integers, so you will not have to worry about making sure of that.)</li>
                 </ul>
             </section>
         </section>
