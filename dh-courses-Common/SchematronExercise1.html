@@ -37,12 +37,12 @@ name = attribute name {"NYC" | "Mexico" | "London" | "Rome"}</pre>
 &lt;/results&gt;</pre>
             <p><span class="smaller">Note: You will want to copy and paste this XML into an XML document so you can associate your Schematron and make sure that it is working correctly.</span></p>
                 <p>Our Relax NG schema is a little sloppy and could have been better written (as we will discuss below). It lets us set a rule that the content of the element <code>&lt;place&gt;</code> must be a number (or xsd:int for integer), but the rule isn’t really good enough as we will see from the from the following example:</p>
-            <pre><span class="badCode">&lt;results&gt;
-    &lt;place name="NYC"&gt;27&lt;/place&gt;
-    &lt;place name="Mexico"&gt;39&lt;/place&gt;
-    &lt;place name="London"&gt;15&lt;/place&gt;
-    &lt;place name="Rome"&gt;12&lt;/place&gt;
-&lt;/results&gt;</span></pre>
+            <div class="badCode">&lt;results&gt;<br/>
+                <span class="indent">&lt;place name="NYC"&gt;27&lt;/place&gt;</span><br/>
+                <span class="indent">&lt;place name="Mexico"&gt;39&lt;/place&gt;</span><br/>
+                <span class="indent">&lt;place name="London"&gt;15&lt;/place&gt;</span><br/>
+                <span class="indent">&lt;place name="Rome"&gt;12&lt;/place&gt;</span><br/>
+&lt;/results&gt;</div>
             <p>Do you see the problem? The four percentage values only total 93%! No matter how good our coding is, it is not possible to keep this type of error from happening by using Relax NG alone. That is why we use Schematron.</p></section>
             <section title="task">
                 <h4>Task:</h4>
