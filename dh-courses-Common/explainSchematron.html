@@ -29,10 +29,7 @@
    	<p>As we learned in the Relax NG tutorial, we write and associate schema to constrain the rules of an XML document. This helps when working on lots of files or on large teams to stay consistent across an entire project. Relax NG is a <dfn>grammar-based schema language</dfn>, which means that it defines the hierarchical relationship of elements and attributes in an entire document from its starting root to all its branches. It may seem like Relax NG ought to be able to govern everything we need, but there are certain kinds of rules it can’t handle. For these we need to add a <dfn>rule-based schema</dfn> to function alongside our grammar-based schema in order to fine-tune and specify relationships between elements and attributes. Enter: Schematron, a rule-based constraint language that uses XPath expressions to <em>assert</em> or <em>report</em> on the presence or absence of patterns. Rule-based schemas like Schematron typically do not contain rules for every element and attribute like our Relax NG Schemas. Instead, when we write Schematron, we usually concentrate on just a few things that we need to control for very precisely, as we will show you here.</p>
    	
    	<p><strong>Relax NG</strong> and <strong>Schematron</strong> are commonly used together. For example, let’s say we are collecting data from 100 people and want to know what their favorite ice cream flavor is: vanilla, chocolate, or strawberry. Limiting our attributes to those three flavors and defining the responses as integers would not be difficult using Relax NG. But what if, instead of 31 votes for chocolate, I accidentally entered 131 votes? A basic Relax NG schema wouldn’t catch that. What if I wanted to make sure all three numbers add up to 100? Schematron is perfect for these types of constraints.</p>
-   	
-   	
-   	<br/>
-   	
+   	   	
    	<h3>Superstructure and namespaces (the stuff at the top of the document)</h3>
    	
    	<p>When you open a new <strong>Schematron</strong> file in &lt;oXygen/&gt;, you will see the following <strong>superstructure</strong>:</p>
