@@ -26,23 +26,23 @@
       <!--<h3>subheadings.</h3>-->
       			
       			
-   	<p>As we learned in the Relax NG tutorial, we write and associate schema to constrain the rules of an XML document. This helps when working on lots of files or on large teams to stay consistent across an entire project. Relax NG is easy to read and write; however, it is a grammar-based schema language, which sometimes makes certain rules difficult to define. Enter: <strong>Schematron</strong>, a constraint language that asserts or reports on the presence or absence of patterns using elements of XPath.</p>
+   	<p>As we learned in the Relax NG tutorial, we write and associate schema to constrain the rules of an XML document. This helps when working on lots of files or on large teams to stay consistent across an entire project. Relax NG is a <dfn>grammar-based schema language</dfn>, which means that it defines the hierarchical relationship of elements and attributes in an entire document from its starting root to all its branches. It may seem like Relax NG ought to be able to govern everything we need, but there are certain kinds of rules it can’t handle. For these we need to add a <dfn>rule-based schema</dfn> to function alongside our grammar-based schema in order to fine-tune and specify relationships between elements and attributes. Enter: Schematron, a rule-based constraint language that uses XPath expressions to <em>assert</em> or <em>report</em> on the presence or absence of patterns. Rule-based schemas like Schematron typically do not contain rules for every element and attribute like our Relax NG Schemas. Instead, when we write Schematron, we usually concentrate on just a few things that we need to control for very precisely, as we will show you here.</p>
    	
-   	<p><strong>Relax NG</strong> and <strong>Schematron</strong> are commonly used together. For example, let's say we are collecting data from 100 people and want to know what their favorite ice cream flavor is: vanilla, chocolate, or strawberry. Limiting our attributes to those three flavors and defining the responses as integers would not be difficult using Relax NG. But what if, instead of 31 votes for chocolate, I accidentally entered 131 votes? A basic Relax NG schema wouldn't catch that. What if I wanted to make sure all three numbers add up to 100? Schematron is perfect for these types of constraints.</p>
+   	<p><strong>Relax NG</strong> and <strong>Schematron</strong> are commonly used together. For example, let’s say we are collecting data from 100 people and want to know what their favorite ice cream flavor is: vanilla, chocolate, or strawberry. Limiting our attributes to those three flavors and defining the responses as integers would not be difficult using Relax NG. But what if, instead of 31 votes for chocolate, I accidentally entered 131 votes? A basic Relax NG schema wouldn’t catch that. What if I wanted to make sure all three numbers add up to 100? Schematron is perfect for these types of constraints.</p>
    	
    	
    	<br/>
    	
-   	<h3>Superstructure (the stuff at the top of the document)</h3>
+   	<h3>Superstructure and namespaces (the stuff at the top of the document)</h3>
    	
-   	<p>When you make a new <strong>Schematron</strong> in oXygen, you will get the following <strong>superstructure</strong>:</p>
+   	<p>When you open a new <strong>Schematron</strong> file in &lt;oXygen/&gt;, you will see the following <strong>superstructure</strong>:</p>
    	<pre><span class="code">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 	&lt;sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
 	xmlns:sqf="http://www.schematron-quickfix.com/validator/process"&gt;
 
 &lt;/sch:schema&gt;</span></pre>
    	
-   	<p>We can set the <strong>Schematron</strong> namespace as a default so we don't have to type <strong>sch:</strong> in front of all of our elements</p>
+   	<p>We will set the <strong>Schematron</strong> namespace as a default so we don’t have to type <strong>sch:</strong> in front of all of our Schematron elements</p>
    	
    	<pre>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
 	xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
@@ -50,7 +50,7 @@
 
 &lt;/schema&gt;</pre>
    	
-   	<p>If your XMl document you're trying to constrain is in a specific namespace, you must identify that namespace with a specific self-closing element called <code>&lt;ns&gt;</code>. The next box shows how to define the TEI namespace. If you don't define your namespace, the schematron rules will not fire (the Schematron parser won't know where to look). In this case, because we have defined a namespace within the TEI, all elements in the schema must start with <code>tei:</code> so our schema recognizes them (this is called a <strong>namespace prefix</strong>). For example, if you are looking for <code>&lt;div&gt;</code> elements within <code>&lt;body&gt;</code> elements: <code>//body/div</code> would NOT find you what you are looking for; <strong>//tei:body/tei:div</strong> would. This is only true for elements, not attributes. So to find <code>@ref</code> attributes on the <code>&lt;div&gt;</code> elements, it would look lik this: <code>//tei:body/tei:div/@ref</code>.</p>
+   	<p>If your XMl document you’re trying to constrain is in a specific namespace, such as the TEI, you must identify that namespace with a specific self-closing element called <code>&lt;ns&gt;</code>. The next box shows how to define the TEI namespace. If you are writing TEI XML and don’t define your namespace, the schematron rules will not fire (the Schematron parser won’t know where to look). In this case, because we have defined a namespace within the TEI, all elements in the schema must start with <code>tei:</code> so our schema recognizes them (this is called a <strong>namespace prefix</strong>). For example, if you are looking for <code>&lt;div&gt;</code> elements within <code>&lt;body&gt;</code> elements: <code>//body/div</code> would NOT find you what you are looking for; <strong>//tei:body/tei:div</strong> would. This is only true for elements, not attributes. So to find <code>@ref</code> attributes on the <code>&lt;div&gt;</code> elements, it would look lik this: <code>//tei:body/tei:div/@ref</code>.</p>
    	
    	<pre>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
    		xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
@@ -74,7 +74,7 @@
 	&lt;/rule&gt;
 &lt;/pattern&gt;</span></pre>
    	
-   	<p>For each new thing we want to test, we make a new <span class="code">&lt;pattern&gt;</span> element which contains a <span class="code">&lt;rule&gt;</span> element and <span class="code">@context</span>. The value of <span class="code">@context</span> is specifically where in your XML the rule will alert you. Basically, this is where oXygen will let you know if the rule is firing or not. It works like pseudo-XPath; you can specify location context (<span class="code">body/said</span> will work for any <span class="code">&lt;said&gt;</span> elements within a <span class="code">&lt;body&gt;</span> element) and use predicates (<span class="code">said[@who]</span> would match on any <span class="code">@who</span> attributes on <span class="code">&lt;said&gt;</span> elements).</p>
+   	<p>For each new thing we want to test, we make a new <span class="code">&lt;pattern&gt;</span> element which contains a <span class="code">&lt;rule&gt;</span> element and <span class="code">@context</span>. The value of <span class="code">@context</span> is specifically where in your XML the rule will alert you. Basically, this is where &lt;oXygen/&gt; will let you know if the rule is firing or not. It works like pseudo-XPath; you can specify location context (<span class="code">body/said</span> will work for any <span class="code">&lt;said&gt;</span> elements within a <span class="code">&lt;body&gt;</span> element) and use predicates (<span class="code">said[@who]</span> would match on any <span class="code">@who</span> attributes on <span class="code">&lt;said&gt;</span> elements).</p>
    	
    	
    	<h4>Assert or Report</h4>
@@ -87,7 +87,7 @@
 	&lt;/rule&gt;
 &lt;/pattern&gt;</pre>
    	
-   	<p>The value of <span class="code">@test</span> is an XPath statement that checks the validity of the context whether the statement is true or false. Basically, <span class="code">@context</span> tells oXygen where to look, and <span class="code">@test</span> tells oXygen what to test when it gets there. You then type a message inside the <span class="code">&lt;assert&gt;</span> or <span class="code">&lt;report&gt;</span> element explaining the reason the rule is firing. When a rule fires, it will generate an alert message in oXygen just like a message from Relax NG, although in Schematron, it's your own message that fires.</p>
+   	<p>The value of <span class="code">@test</span> is an XPath statement that checks the validity of the context whether the statement is true or false. Basically, <span class="code">@context</span> tells &lt;oXygen/&gt; where to look, and <span class="code">@test</span> tells &lt;oXygen/&gt; what to test when it gets there. You then type a message inside the <span class="code">&lt;assert&gt;</span> or <span class="code">&lt;report&gt;</span> element explaining the reason the rule is firing. When a rule fires, it will generate an alert message in &lt;oXygen/&gt; just like a message from Relax NG, although in Schematron, it’s your own message that fires.</p>
    	
    	
    	<br/>
@@ -96,7 +96,7 @@
    	
    	<h4>Writing an Assert Rule</h4>
    	
-   	<p>Okay, now that we understand the structure, let's construct some example rules so we understand how and why they function. Let's say you're keeping track of points in a game where the goal is to get as many points as possible. The person in first place got 23 points, second place got 16, and third place got 12. Let's construct a basic XML document to store the results:</p>
+   	<p>Okay, now that we understand the structure, let’s construct some example rules so we understand how and why they function. Let’s say you’re keeping track of points in a game where the goal is to get as many points as possible. The person in first place got 23 points, second place got 16, and third place got 12. Let’s construct a basic XML document to store the results:</p>
    	
    	<pre><span class="code">&lt;gameResults&gt;
 	&lt;first&gt;23&lt;/first&gt;
@@ -104,7 +104,7 @@
 	&lt;third&gt;12&lt;/third&gt;
 &lt;/gameResults&gt;</span></pre>
    	
-   	<p>If the goal is to get the highest number of points, the person in first place should always have more points than the person in second place. Let's write a <strong>Schematron</strong> rule to make sure. First, let's start by writing the <span class="code">&lt;pattern&gt;</span>, <span class="code">&lt;rule&gt;</span>, and <span class="code">@context</span>. We want the rule to fire (or alert the user) on the <span class="code">&lt;first&gt;</span> element.</p>
+   	<p>If the goal is to get the highest number of points, the person in first place should always have more points than the person in second place. Let’s write a <strong>Schematron</strong> rule to make sure. First, let’s start by writing the <span class="code">&lt;pattern&gt;</span>, <span class="code">&lt;rule&gt;</span>, and <span class="code">@context</span>. We want the rule to fire (or alert the user) on the <span class="code">&lt;first&gt;</span> element.</p>
    	
    	<pre>&lt;pattern&gt;
 	&lt;rule <span class="code">context="first"</span>&gt;
@@ -122,7 +122,7 @@
    	
    	<h4>Writing a Report Rule</h4>
    	
-   	<p>Now that we have a working schema rule to test the difference between the first- and second- place scores, let's make a rule that tests the results between the second- and third-place scores. The rule is essentially the same (the second-place score is always greater than the third-place score), but we'll use the report element instead. Again, let's write the <span class="code">&lt;pattern&gt;</span>, <span class="code">&lt;rule&gt;</span>, and <span class="code">@context</span>:</p>
+   	<p>Now that we have a working schema rule to test the difference between the first- and second- place scores, let’s make a rule that tests the results between the second- and third-place scores. The rule is essentially the same (the second-place score is always greater than the third-place score), but we’ll use the report element instead. Again, let’s write the <span class="code">&lt;pattern&gt;</span>, <span class="code">&lt;rule&gt;</span>, and <span class="code">@context</span>:</p>
    	
    	<pre>&lt;pattern&gt;
 	&lt;rule <span class="code">context="second"</span>&gt;
@@ -142,11 +142,11 @@
    	<br/>
    	
    	<h3>Associating a Schematron Schema</h3>
-   <p>Associating a <strong>Schematron</strong> schema is a lot like associating a Relax NG schema. While viewing your XML document, in the taskbar, click on Document -&gt; Schema -&gt; Associate Schema... From there, locate your schema file (the file should end in <strong>.sch</strong>). The schema type should automatically change to Schematron. <em>A note on mindful file management:</em> Remember to save your Schematron in a place where you can easily locate. Finalize that, and oXygen should insert a superscript that looks like this:</p>
+   <p>Associating a <strong>Schematron</strong> schema is a lot like associating a Relax NG schema. While viewing your XML document, in the taskbar, click on Document -&gt; Schema -&gt; Associate Schema... From there, locate your schema file (the file should end in <strong>.sch</strong>). The schema type should automatically change to Schematron. <em>A note on mindful file management:</em> Remember to save your Schematron in a place where you can easily locate. Finalize that, and &lt;oXygen/&gt; should insert a superscript that looks like this:</p>
    	
    	<pre><span class="code">&lt;?xml-model href="YOUR_FILE_NAME.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;</span></pre>
    	
-   	<p>If you also have a Relax NG schema associated, you will have two different lines at the top of your XML document.</p>
+   	<p>If you also have a Relax NG schema associated, you will have two different schema lines at the top of your XML document. The two can function together, so as you code, the red square in &lt;oXygen/&gt; will appear and messages will show up in the bottom window whenever you break Relax NG rules and also the messages you wrote in Schematron will appear when your <code>assert</code> rules are violated and when your <code>report</code> rules are met.</p>
    	
    	<h3>For More Information</h3>
    	
