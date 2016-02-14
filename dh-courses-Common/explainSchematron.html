@@ -55,7 +55,7 @@
    		<code>&lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;</code>
 
 &lt;/schema&gt;</pre>
-   	<span class="smaller"><strong>A Long Note on Namespaces for the Curious:</strong> In XML and its family of languages, all elements and attributes always exist in some kind of namespace, even an <dfn>empty (default or no)</dfn> namespace.  Namespaces are designed to distinguish different uses of the same element names, so when we are working with a document in a defined namespace, we must specify them and use prefixes where necessary to make sure our code functions properly. Namespace differentiation is absolutely critical in forms of code that <strong>read</strong> and <strong>map to</strong> other kinds of code, like Schematron reading and governing TEI XML. Schematron's handling of namespaces is different from XSLT, where we will not have to set a namespace prefix on TEI (or other namespaced) elements once we set a special xpath-default-namespace, but we <em>will</em> ahve to use the special xsl: namespace prefix on every XSLT element. These are coding conventions that vary from language to language, so when you write these coding languages you look up what the appropriate rules and conventions are for working with namespaces in each. We have learned to accept the differences in namespace specifications, and if you find them confusing (as we do sometimes) you are certainly not alone! See <a href="http://www.w3schools.com/xml/xml_namespaces.asp">w3Schools explanation of namespaces and their prefixes</a>: this simple explanation helps to show that the URI (the part that looks like a website address in the namespace declaration) is actually  a standardized string of text that differentiates one namespace from another and does not actually have to point to an actual web resource at all (though sometimes it can if a code developer wants to share information publicly about the namespace). Jeni Tennison helpfully explains <a href="http://www.jenitennison.com/2007/07/01/the-perils-of-default-namespaces">in a 2007 blog post</a> what people tend to find confusing and tend to get wrong about namespaces and something more about why they are critcially important for our code to work. </span>
+   	<span class="smaller"><strong>A Long Note on Namespaces for the Curious:</strong> In XML and its family of languages, all elements and attributes always exist in some kind of namespace, even an <dfn>empty (default or no)</dfn> namespace.  Namespaces are designed to distinguish different uses of the same element names, so when we are working with a document in a defined namespace, we must specify them and use prefixes where necessary to make sure our code functions properly. Namespace differentiation is absolutely critical in forms of code that <strong>read</strong> and <strong>map to</strong> other kinds of code, like Schematron reading and governing TEI XML. Schematron's handling of namespaces is different from XSLT, where we will not have to set a namespace prefix on TEI (or other namespaced) elements once we set a special xpath-default-namespace, but we <em>will</em> have to use the special xsl: namespace prefix on every XSLT element. These are coding conventions that vary from language to language, so when you write these coding languages you look up what the appropriate rules and conventions are for working with namespaces in each. We have learned to accept the differences in namespace specifications, and if you find them confusing (as we do sometimes) you are certainly not alone! See <a href="http://www.w3schools.com/xml/xml_namespaces.asp">w3Schools explanation of namespaces and their prefixes</a>: this simple explanation helps to show that the URI (the part that looks like a website address in the namespace declaration) is actually  a standardized string of text that differentiates one namespace from another and does not actually have to point to an actual web resource at all (though sometimes it can if a code developer wants to share information publicly about the namespace). Jeni Tennison helpfully explains <a href="http://www.jenitennison.com/2007/07/01/the-perils-of-default-namespaces">in a 2007 blog post</a> what people tend to find confusing and tend to get wrong about namespaces and something more about why they are critically important for our code to work. </span>
    	
    	<h3>The skeleton of a Schematron rule</h3>
    	
@@ -85,10 +85,7 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
 &lt;/pattern&gt;</pre>
    	
    	<p>The value of <code>@test</code> is a literal XPath statement <em>defined in immediate relation to the current XPath location of <code>@context</code>, wherever this is</em>. The <code>@test</code> sets a condition for the True or False value of something you write here: For example, does particular string pattern exist here? Does the numerical value of this equal  the preceding::sibling of the current context? Imagine the <dfn>current context</dfn> to be shifting with each discovery of the XPath pattern. As the validation checker lands on each new instance, it runs your <code>@test</code> and checks for some condition, true or false, that hinges on that pattern in some way.  Basically, <code>@context</code> tells &lt;oXygen/&gt; where to look, and <code>@test</code> tells &lt;oXygen/&gt; what to test when it gets there. You then type a message, your very own customized validation error message, inside the <code>&lt;assert&gt;</code> or <code>&lt;report&gt;</code> element as its text content, and explain (to yourself and/or your project team) the reason the rule is firing. When a rule fires, it will generate an alert message in &lt;oXygen/&gt; just like a message from Relax NG, although in Schematron, it’s your own custom-made message that fires.</p>
-   	
-   	
-   	<br/>
-   	
+   
    	<h3>Writing the rules</h3>
    	
    	<h4>An assert rule</h4>
@@ -129,10 +126,8 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
    	<h4>A report rule</h4>
    	
    	<p>Now that we have a working schema rule to test the difference between the first- and second- place scores, let’s make a rule that tests the second- and third-place scores. The rule is essentially the same (the second-place score is always greater than the third-place score), but we’ll use the <code>report</code> element instead to demonstrate how it works. We must add a new test within our rule since it shares the same @context in the <code>gameResults</code> element.  <strong>Note:</strong> If we attempt to define a new rule with the <em>same</em>:<code>@context</code> as the first, one of the two rules will be applied and the other ignored! So within a given rule @context, we need to define all our assert and report tests together.</p>
-   	
-
-   	
-   	<p>When we write a <code>report</code>element, we are saying to tell us (flag or report) when a particular condition in an @test is met. The difference between assert and report then, is that an <code>assert</code> test fires and error when its assertion is violated, while a <code>report</code> test fires and error when its condition is met. In this case, we call for a report when the second-place score (or current context) <em>is less than or equal to</em> the third-place score. Using <code>report</code> in our second test in the example below, the rule will fire when these conditions <strong>are</strong> met.</p>
+  
+   	<p>When we write a <code>report</code> element, we are saying to tell us (flag or report) when a particular condition in an @test is met. The difference between assert and report then, is that an <code>assert</code> test fires and error when its assertion is violated, while a <code>report</code> test fires and error when its condition is met. In this case, we call for a report when the second-place score (or current context) <em>is less than or equal to</em> the third-place score. Using <code>report</code> in our second test in the example below, the rule will fire when these conditions <strong>are</strong> met.</p>
    	
    	<pre>&lt;pattern&gt;
 	    &lt;rule context="gameResults"&gt;
@@ -140,14 +135,14 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
             &lt;assert test="number(first) gt number(second)"&gt;
                 The first-place score must be greater than the second-place score.
             &lt;/assert&gt;
-            &lt;report test="number(second) le number(third)"&gt;
+            <code>&lt;report test="number(second) le number(third)"&gt;
                 The second-place score must be greater than the  third-place score.
-            &lt;/report&gt;
+            &lt;/report&gt;</code>
         &lt;/rule&gt;
 &lt;/pattern&gt;</pre>
    	
    	<p>Here is another way we might write that report statement, to illustrate how we might use the XPath function <code>not()</code> wrapped around a test value:</p>
-   	<pre> &lt;report test="not(number(second) gt number(third))"&gt;
+   	<pre> &lt;report test="<code>not(number(second) gt number(third))</code>"&gt;
                 The second-place score must be greater than the  third-place score.
             &lt;/report&gt;
    	</pre>
@@ -155,7 +150,7 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
    	<h3>Associating a Schematron schema with your XML and testing it</h3>
    <p>Associating a <strong>Schematron</strong> schema is a lot like associating a Relax NG schema. While viewing your XML document, in the taskbar, click on Document -&gt; Schema -&gt; Associate Schema. From there, locate your schema file (the file extension should be <strong>.sch</strong>). When you associate a .sch file, &lt;oXygen/&gt; should automatically set the schema type to Schematron. <em>A note on mindful file management:</em> Remember to save your Schematron in a directory where you can easily and consistently locate it. Finalize that, and &lt;oXygen/&gt; should insert a superscript that looks like this:</p>
    	
-   	<pre><code>&lt;?xml-model href="your_file_name.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;</code></pre>
+   	<pre>&lt;?xml-model href=<code>"your_file_name.sch"</code> type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;</pre>
    	
    	<p>If you also have a Relax NG schema associated, you will have two different schema lines at the top of your XML document. The two different kinds of schema will function together so that as you code the red square in &lt;oXygen/&gt; will appear as validation errors. The bottom window will feature messages associated with these validation errors, and this will include the messages you write in the text content of your Schematron <code>assert</code> and <code>report</code> elements.</p>
    	<p>When you associate your schema, <strong>always tinker with your XML</strong> to create conditions that will cause your Schematron rules to fire! Testing your schema code should be a back-and-forth process to ensure that your assert and report tests are functioning as you want them to. </p>
