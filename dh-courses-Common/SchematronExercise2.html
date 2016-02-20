@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)file:///C:/Users/Brooke/Downloads/SchematronExercise2%20(1).html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Schematron Exercise 2</title>
+        <link rel="stylesheet" type="text/css" href="explain.css"/>
+    </head>
+    <body>
+        <!--#include virtual="topAuthorNLL29-BAS160.html" -->
+        <section title="exerciseName"><h1><span class="banner">Schematron Exercise 2</span></h1></section>
+        <section title="preliminaries">
+            <h3>Preliminaries</h3>
+            <p>Again, before beginning this assignment, please thoroughly read our tutorial: <a href="http://newtfire.org/dh/explainSchematron.html">Schematron</a>. This tutorial will be very useful to you during this assignment. You will need to save and open in &lt;oXygen/&gt; the collection of <a href="DickinsonFullWithErrors.xml">Dickinson’s Fascicle 16 poems</a>. You will also need to open a new Schematron document in &lt;oXygen/&gt; under <strong>File → New → New Document → (scroll to Schematron in the alphabetized list) → Schematron</strong>. Once opened, you will keep the default xml line at the top, but you will delete everything from <code>&lt;sch:schema&gt;</code> down. To write Schematron rules for a document in the TEI namespace, you will then replace this with:</p>
+            <pre>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
+    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+    xmlns="http://purl.oclc.org/dsdl/schematron"&gt;
+        &lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;
+        
+        &lt;/schema&gt;</pre>
+            <p><span class="smaller">You will be writing your Schematron <strong>inside</strong> the <code>&lt;/schema&gt;</code> root element. <br/> You will also need to use the <code>tei:</code> indicator before each of your elements for this exercise since we are working in TEI based documents.</span></p>
+        </section>
+        <section title="analysisOfTask">
+            <h3>Analysis of the task</h3>
+            <section title="background">
+                <h4>Background:</h4>
+                <p>For this assignment, you will be creating a Schematron for a collection of Emily Dickinson’s poems. You will need to make a few rules so that we can make sure all of the elements within the poems are uniform and contain the correct attributes and attribute values. We will also be creating a rule to make sure that all of the poems are in the correct reading order (Poem 1 to Poem 11).</p>
+            </section>
+            <section title="steps">
+                <h4>Creating the rules step by step:</h4>
+                <section title="rule1">
+                    <p><strong>1. Making sure each <code>&lt;rdg&gt;</code> element has an <code>@wit</code></strong></p>
+                    <p>For this rule, we want to make sure that the <code>&lt;rdg&gt;</code> element has nothing but a <code>wit</code> attribute, but it <em>must</em> have this attribute. This will be a little different than the assert rule because we want the Schematron to tell us when <code>@wit</code> is <em>not</em> happening. This introduces us to use the <code>not()</code> function in our XPath expression, which will make your Schematron rule fire when your <code>&lt;rdg&gt;</code> does not have <code>@wit</code> or if it has anything other than <code>@wit</code>.</p>
+                    <p><span class="smaller"><strong>**Remember to use the TEI prefix before your element name. (tei:app and tei:rdg)</strong></span></p>
+                </section>
+                <section title="rule2">
+                    <p><strong>2. Making sure there are at least one or more than one <code>&lt;rdg&gt;</code> element in an <code>&lt;app&gt;</code> element</strong></p>
+                    <p>For this next rule, we want to make sure that an <code>&lt;app&gt;</code> element has a <em>count</em> of at least one or more than one <code>&lt;rdg&gt;</code> element. </p>
+                </section>
+                <section title="rule3">
+                    <p><strong>3. Making sure all of the poems are in the correct counting order within the document</strong></p>
+                    <p>When transferring all of the poems in Dickinson’s Fascicle 16 into one document, they may not have transferred over in order. For example, maybe Poem 6 comes after Poem 7 instead of coming directly after Poem 5. This rule that we will create now will make sure the poems are in order. There are a few steps to do on our way to our finished rule:</p>
+                    <ul>
+                        <li><p>First we need to look over our XML document that is holding all of the poems and find out <em>where</em> all of the poem titles are located in the hierarchy. We know that these <code>&lt;title&gt;</code> elements are contained within the <code>&lt;head&gt;</code> element.</p></li>
+                        <li><p>Now we are going to create an XPath that will go to the <strong>ancestor</strong> of <code>div[@type=’poem’]</code>, step down to the <strong>following</strong> <code>div[@type=’poem’]</code>, and then step down into the <code>&lt;title&gt;</code> element. We want to make sure that our <code>&lt;title&gt;</code> <strong>matches</strong> the number we found in our variable. To do this, we will be using the <code>matches()</code> function. The <code>matches()</code> function tests whether or not a string matches a particular expression. There are, again, two arguments within the <code>matches()</code> function. The first is the string that we are currently looking up, which is represented with "<code>.</code>". The second is what we are comparing this string to, which is what we are going to define next.</p>
+                            <p>We are now going to define our second argument in our <code>matches()</code> function. We are looking for the <em>number</em> that is in the <em>text node</em> of the <code>&lt;title&gt;</code> elements. Because the number of the poems resides within this text, we will have to look into this text. This will require the following functions: <code>current()</code>, <code>substring()</code>, <code>number()</code>, and <code>string()</code>. The <code>current()</code> function gives us the original context item. The <code>substring()</code> function, much like <code>substring-after</code>, will return a specific string of characters. The <code>number()</code> function is used to convert any value (which will be the number of characters of we are finding in our <code>substring()</code> function) to a numerical value. And the <code>string()</code> function converts this number to a string of characters. Okay, so let’s now start to define what we are looking for.</p>
+                            <p>First we need to define that we are looking for the <em>number</em> of the poem within the text, so this is where <code>substring()</code> comes into play. The <code>substring()</code> function must have three arguments. The first argument is going to represent our current node, so <code>current()</code>. Our second argument is going to represent on which character we want the string to begin at, which is the number of characters <em>before and including</em> the number (the numerical value) of the poem. Our final argument is how many characters we want the string to include, and because there are eleven poems, we want to include two characters (to capture both double and single digits).</p>
+                        <p>Now we want to turn this <code>substring()</code> into a <em>number</em>. To do this, you need to wrap the entire <code>substring()</code> function with the <code>number()</code> function.</p>
+                            <p>This will give us a number to work with so that we can determine that the poems are in the correct numeric counting order.</p>
+                            <p>Now we are going to state that the poem that comes <em>immediately after</em> what we are looking for is the number of the current poem <em>plus one</em>. In order to do this, we need to use the <code>string()</code> function to combine the number we just found with one. Your expression will look very similar to a mathematical expression.</p>
+                            <p>Test your rule. Is it firing correctly? Is it firing for the last poem listed? It should be firing here because whatever is following this poem, which is nothing, does not match the preceding number plus one! This is perfect, because you know that your rule is working! We need to fix this, though, so we need to go back up into the <code>@context</code> of the <code>&lt;rule&gt;</code> element. What we need to add is a predicate to the <code>&lt;title&gt;</code> element. We need our predicate to say that the <code>&lt;title&gt;</code> must have an <strong>ancestor</strong> that is a <code>&lt;div&gt;</code> element with an <code>@type=’poem’</code>, and this ancestor must have a <strong>following</strong> <code>&lt;div&gt;</code> element. (Hint: Be mindful of where you place the square brackets!) Now try your rule out. It should not fire for the last poem title.</p></li>
+                    </ul>
+                </section>
+                <section title="uploading">
+                    <h3>Submission</h3>
+                    <p>Upload your completed Schematron schema AND the Dickinson poems XML <strong><em>with your Schematron associated</em></strong> to Courseweb (and follow our <a href="http://dh.obdurodon.org/file-naming_conventions.xhtml">standard filenaming conventions for homework assignments uploaded to Courseweb</a>).</p>
+                </section>
+            </section>
+        </section>
+    
+</body></html>
