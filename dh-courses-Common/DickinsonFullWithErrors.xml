@@ -1,26 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 
+<?xml-model href="SchematronEx2-testerebb.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
       <fileDesc>
          <titleStmt>
             <title>Fascicle 16</title>
             <author>Emily Dickinson</author>
+            <editor>Brooke Lawrence</editor>
+            <editor>Alexander Mielnicki</editor>
+            <editor>Nicole Lottig</editor>
+            <editor>Brooke Stewart</editor>
+            <sponsor><orgName>newtFire.org</orgName>: a home for digital humanities projects at the <orgName>Pittsburgh Supercomputing Center</orgName></sponsor>
+            <sponsor>University of Pittsburgh at Greensburg</sponsor>
          </titleStmt>
          <publicationStmt>
-            <p>Fascicle 16: Dickinson's variants and published versions</p>
+            <p>Fascicle 16: Dickinson's variants and published versions.</p>
+            <p>This born-digital XML project was repurposed and corrected with permission from Michele Ierardi's source files
+               <ref target="http://www.cs.virginia.edu/~ajf2j/emily/"/>.</p>
          </publicationStmt>
          <sourceDesc>
-            <msDesc>
-               <msIdentifier>
-                  <repository/>
-                  <idno>FS16all</idno>
-               </msIdentifier>
-            </msDesc>
-            <bibl>
-               <ref target="http://www.cs.virginia.edu/~ajf2j/emily/"/>
-            </bibl>
+            <listWit>
+               <witness xml:id="df16">
+                  <bibl>
+                     <title>ORIGINAL POEMS</title>
+                     <author>Emily Dickinson</author>
+                  </bibl>
+               </witness>
+               <witness xml:id="var0">
+                  <desc>'var0' is the first variant text/line listed in Dickinson's manuscript.</desc>
+               </witness>
+               <witness xml:id="var1">
+                  <desc>'var1' is the second variant text/line listed in Dickinson's manuscript.</desc>
+               </witness>
+               <witness xml:id="var2">
+                  <desc>'var2' is the third variant text/line listed in Dickinson's manuscript.</desc>
+               </witness>
+               <witness xml:id="poems1">
+                  <bibl>
+                     <title>Poems, First Series</title>
+                     <author>Emily Dickinson</author>
+                     <editor>Mabel loomis Todd and Thomas Wentworth Higginson</editor>
+                     <pubPlace>Boston</pubPlace>
+                     <publisher>Roberts Brothers</publisher>
+                     <date>1890</date>
+                     <ref target="http://www.ibiblio.org/ebooks/Dickinson/Dickinson_Poems1.htm">oems by Emily Dickinson, First Series (html version)</ref>
+                  </bibl>
+               </witness>
+               <witness xml:id="poems2">
+                  <bibl>
+                     <title>Poems, Second Series</title>
+                     <author>Emily Dickinson</author>
+                     <editor>Thomas Wentworth Higginson and Mabel Loomis Todd</editor>
+                     <pubPlace>Boston</pubPlace>
+                     <publisher>Roberts Brothers</publisher>
+                     <date>1891</date>
+                     <ref target="http://www.ibiblio.org/ebooks/Dickinson/Dickinson_Poems2.htm#copy">Poems by Emily Dickinson, Second Series (html version)</ref>
+                  </bibl>
+               </witness>
+               <witness xml:id="poems3">
+                  <bibl>
+                     <title>Poems, Third Series</title>
+                     <author>Emily Dickinson</author>
+                     <editor>Mabel Loomis Todd</editor>
+                     <pubPlace>Boston</pubPlace>
+                     <publisher>Little, Brown and Company</publisher>
+                     <date>1896</date>
+                     <ref target="http://catalog.hathitrust.org/Record/100654113">Hathi Trust Digital Library</ref>
+                  </bibl>
+               </witness>
+               <witness xml:id="ce">
+                  <bibl>
+                     <title>The Poems of Emily Dickinson: Centenary Edition</title>
+                     <author>Emily Dickinson</author>
+                     <editor>Martha Dickinson Bianchi and Alfred Leete Hampson</editor>
+                     <pubPlace>Boston</pubPlace>
+                     <publisher>Little, Brown and Company</publisher>
+                     <date>1930</date>
+                  </bibl>
+               </witness>
+               <witness xml:id="fh">
+                  <bibl>
+                     <title>Final Harvest: Emily Dickinson's Poems</title>
+                     <author>Emily Dickinson</author>
+                     <editor>Thomas H. Johnson</editor>
+                     <pubPlace>Boston</pubPlace>
+                     <publisher>Little, Brown and Company</publisher>
+                     <date>1961</date>
+                  </bibl>
+               </witness>
+               <witness xml:id="fp">
+                  <bibl>
+                     <title>Further Poems</title>
+                     <author>Emily Dickinson</author>
+                     <editor>Martha Dickinson Bianchi</editor>
+                     <pubPlace>Boston</pubPlace>
+                     <publisher>Little, Brown and Company</publisher>
+                     <date>1929</date>
+                  </bibl>
+               </witness>
+               <witness xml:id="am">
+                  <bibl>
+                     <title>Atlantic Monthly</title>
+                     <author>Enily Dickinson</author>
+                     <date>February 1929</date>
+                  </bibl>
+               </witness>
+               <witness xml:id="bm">
+                  <bibl>
+                     <title>Bolts of Melody: New Poems of Emily Dickinson</title>
+                     <author>Emily Dickinson</author>
+                     <editor>Mabel Loomis Todd and Millicent Todd Bingham</editor>
+                     <pubPlace>New York</pubPlace>
+                     <publisher>Harper and Brothers</publisher>
+                     <date>1945</date>
+                  </bibl>
+               </witness>
+               <witness xml:id="lSD">
+                  <bibl>
+                     <title>LETTER TO SISTER-IN-LAW</title>
+                     <author>Emily Dickinson</author>
+                  </bibl>
+               </witness>
+            </listWit>
          </sourceDesc>
       </fileDesc>
    </teiHeader>
@@ -32,7 +135,7 @@
             </head>
             <lg>
                <l n="1">Before I got my eye put out<app>
-                     <rdg wit="#df16">—</rdg>
+                     <rdg wit="#df1">—</rdg>
                      <rdg wit="#ce #poems2">,</rdg>
                   </app>
                </l>
@@ -85,7 +188,7 @@
                <l n="9">
                   <app>
                      <rdg wit="#df16 #fh">The Meadows—mine—</rdg>
-                     <rdg wit="#ce #poems2">The meadows mine, the mountains mine,—</rdg>
+                     <rdg wit="#c2 #poems2">The meadows mine, the mountains mine,—</rdg>
                   </app>
                </l>
                <l n="10">
@@ -157,7 +260,7 @@
                   </app>
                </l>
                <l n="20">Where other <app>
-                     <rdg wit="#df16 #fh">Creatures</rdg>
+                     <rdg wit="#df16 #f5">Creatures</rdg>
                      <rdg wit="#ce #poems2">creatures</rdg>
                   </app> put their <app>
                      <rdg wit="#df16">Eyes</rdg>
@@ -514,7 +617,7 @@
                      <rdg wit="#ce">Morning's nest,</rdg>
                   </app>
                </l>
-               <l n="7">The <app>
+               <l n="7">The<app>
                   <rdg wit="#df16 #lSD">Rope the</rdg>
                   <rdg wit="#ce">rope that</rdg>
                </app> Nights were put across—</l>
@@ -1006,7 +1109,7 @@
             </head>
             <lg>
                <l n="1">'Twas just this <app>
-                     <rdg wit="#df16 #fh">time, last year, I died.</rdg>
+                     <rdg wit="#df16 #fh"> time, last year, I died.</rdg>
                      <rdg wit="#poems3 #ce">time last year I died.</rdg>
                   </app>
                </l>
