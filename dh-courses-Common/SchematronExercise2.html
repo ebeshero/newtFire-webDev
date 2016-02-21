@@ -77,7 +77,7 @@ To control for white space, we created a pattern with a single rule set on the <
                          </li>   
                         <li>You need to isolate just the number after the word "Poem" in the title, and to do this you need the <code>substring()</code> function (which you may wish to look up in Michael Kay or <a href="http://www.w3schools.com/xsl/xsl_functions.asp">w3schools</a> to see how this is formatted). The <code>substring()</code> function takes three arguments. The first argument indicates the XPath node (so if you set your rule context at the title, you would just invoke the self:: or dot(<code>.</code>) as the first argument). The second and third arguments are numbers: The second argument gives the numerical position of the character in the whole string of text that indicates the point where you want to start extracting your substring (so for this, count over from the start of the title to the first digit you want). The third argument indicates <em>how many</em> characters you want to extract into your substring. So the function is set up like this:
                             <pre><code>substring(XPath, character-position-number-to-start, number-of-characters-to-extract)</code></pre>
-Note: since we have 11 poems, we are going to need to extract two characters for Poem 10 and Poem 11.</li> 
+Note: since we have 11 poems, we are going to need to extract two characters to deal with Poem 10 and Poem 11.</li> 
 
 <li>Wrap your substring() in a number() function to convert it, and now work with it <em>as</em> a number. Add + 1 to it, and see if that value, (substring() + 1) equals the substring() in the title of <em>just</em> the very next poem in the sequence.</li>                     
     
