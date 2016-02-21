@@ -44,7 +44,7 @@
            
                     <li><strong>Make sure there are one or more <code>&lt;rdg&gt;</code> elements inside an <code>&lt;app&gt;</code> element.</strong> For this rule we want to check that an <code>&lt;app&gt;</code> element has a <em>count</em> of at least one or more than one <code>&lt;rdg&gt;</code> element. <strong>Note:</strong> For every new rule that matches in some way on the <code>&lt;rdg&gt;</code> context, you need to position it inside a new Schematron <code>pattern</code> element because otherwise only the first rule at a given context will fire and the others will remain passive.</li>
                 
-                 <li><strong>Control the white space around the <code>&lt;app&gt;</code> and <code>&lt;rdg&gt;</code> elements in a line of poetry.</strong> When the team worked on coding these poems, it was very easy for them to accidentally remove or add white space in applying app and rdg elements. It is very easy to make two words run together by accident, for example, by coding like this:
+                 <li><strong>Control the white space around the <code>&lt;app&gt;</code> and <code>&lt;rdg&gt;</code> elements in a line of poetry.</strong> As the team works on coding these poems, it is very easy for them to accidentally remove or add white space in applying app and rdg elements. It is very easy to make two words run together by accident, for example, by coding like this:
                <pre>
                     &lt;l n="1"&gt;When we stand on the tops of&lt;app&gt;
                      &lt;rdg wit="#df16"&gt;Things—&lt;/rdg&gt;
@@ -83,6 +83,8 @@ Note: since we have 11 poems, we are going to need to extract two characters for
     
                             <li>Test your rule. Our file is deliberately out of sequence, so you can expect to see errors if your rule is firing correctly.</li>
                     </ul></li>
+                 
+                 <li>We have left out a very important test in this Schematron. We really need to test the values of the <code>@wit</code> attributes sitting on the <code>rdg</code> elements. This is something you are likely to need in your projects, so we direct you to our special Schematron Tutorial [under development] on working with <code>@xml:id</code>s (unique identifiers) and their corresponding referencing attributes.</li>
              
              </ol>
                 
