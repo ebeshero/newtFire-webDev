@@ -32,9 +32,47 @@
        </section>
         <section title="SchematronCheckingRefs">
             <h3>How to write Schematron to check hashtagged attributes against <code>@xml:id</code> values</h3>
-            <p>Since it is very easy to mistype an attribute value as we are coding our project files, we can either embed our <code>@xml:id</code> values in a Relax NG file, or write Schematron rules to help us check their values against our standard list, wherever we have placed it in relation to our project files. We can also write Schematron rules to make sure we remember to include a hashtag at the start of each value when it is in a pointer <code>@ref</code> or other attribute that points to an <code>@xml:id</code>. the   That way we can point to those identifiers as a handy abbreviation whenever we are referring to them, as many times as we need to in the document. We show you how to do with an example from the <a href="http://dickinson16.newtfire.org">Emily Dickinson Fascicle 16 project</a>.</p>
-            <p>The Dickinson team prepared a list of published editions of Dickinson's poems with <code>@xml:id</code> attributes and detailed bibliography information about each, and they presented this in a TEI <code>listWit</code> element or a list of witnesses, each one holding distinct identifying information about a different "witness" or editors' representation of Emily Dickinson's manuscript poems. Each edition produced distinct "variants" or different readings of the same document, as the editors "normalized" and changed Dickinson's poems in the different published editions. The Dickinson team needed to mark the different <dfn>variants</dfn> (or different versions of words and phrases and punctuation) within particular lines in each poem, and they referred to the source of each variant with a hashtagged <code>@wit</code> attribute pointing to the <code>@xml:id</code> in the <code>listWit</code> up in their <code>teiHeader</code> element.</p>    
-<p>Schematron can be used to constrain the writing of <code>@xml:id</code> values to project specifications. For example, the Dickinson team will want to make sure their <code>@xml:ids</code> do not contain hashtags: </p>
+            <p>Since it is very easy to mistype an attribute value as we are coding our project files, we can either embed our <code>@xml:id</code> values in a Relax NG file, or write Schematron rules to help us check their values against our standard list, wherever we have placed it in relation to our project files. We can also write Schematron rules to make sure we remember to include a hashtag at the start of each value when it is in a pointer <code>@ref</code> or other attribute that points to an <code>@xml:id</code>. That way we can point to those identifiers as many times as we need to in the document. We show you how to do with an example from the <a href="http://dickinson16.newtfire.org">Emily Dickinson Fascicle 16 project</a>.</p>
+            <p>The Dickinson team prepared a list of published editions of Dickinson’s poems with <code>@xml:id</code> attributes and detailed bibliography information about each, and they compiled each entry inside a TEI <code>&lt;listWit&gt;</code> element or a list of witnesses. Each entry on the list holds distinct identifying information about a different <dfn>witness</dfn> that produced a distinct published representation of Emily Dickinson’s manuscript poems. The witnesses produced <dfn>variants</dfn> or different readings of the same document, and coding these variant readings in the lines of poetry helped the Dickinson team to study how published editions normalized or otherwise altered Dickinson’s poems in the different published editions. To mark the different <dfn>variants</dfn> (or different versions of words and phrases and punctuation) within particular lines in each poem, and the Dickinson team referred to the source of each variant with a hashtagged <code>@wit</code> attribute pointing to the <code>@xml:id</code> in the <code>&lt;listWit&gt;</code> up in their <code>teiHeader</code> element. Here is an abbreviated view of their list of witnesses:</p>  
+            <pre>
+&lt;listWit&gt;
+   [. . .]
+      &lt;witness xml:id="poems3"&gt;
+        &lt;bibl&gt;
+            &lt;title&gt;Poems, Third Series&lt;/title&gt;
+            &lt;author&gt;Emily Dickinson&lt;/author&gt;
+            &lt;editor&gt;Mabel Loomis Todd&lt;/editor&gt;
+            &lt;pubPlace&gt;Boston&lt;/pubPlace&gt;
+            &lt;publisher&gt;Little, Brown and Company&lt;/publisher&gt;
+            &lt;date&gt;1896&lt;/date&gt;
+            &lt;ref target="http://catalog.hathitrust.org/Record/100654113"&gt;Hathi Trust Digital Library&lt;/ref&gt;
+        &lt;/bibl&gt;
+    &lt;/witness&gt;
+    &lt;witness xml:id="ce"&gt;
+        &lt;bibl&gt;
+            &lt;title&gt;The Poems of Emily Dickinson: Centenary Edition&lt;/title&gt;
+            &lt;author&gt;Emily Dickinson&lt;/author&gt;
+            &lt;editor&gt;Martha Dickinson Bianchi and Alfred Leete Hampson&lt;/editor&gt;
+            &lt;pubPlace&gt;Boston&lt;/pubPlace&gt;
+            &lt;publisher&gt;Little, Brown and Company&lt;/publisher&gt;
+            &lt;date&gt;1930&lt;/date&gt;
+        &lt;/bibl&gt;
+    &lt;/witness&gt;
+    &lt;witness xml:id="fh"&gt;
+        &lt;bibl&gt;
+            &lt;title&gt;Final Harvest: Emily Dickinson's Poems&lt;/title&gt;
+            &lt;author&gt;Emily Dickinson&lt;/author&gt;
+            &lt;editor&gt;Thomas H. Johnson&lt;/editor&gt;
+            &lt;pubPlace&gt;Boston&lt;/pubPlace&gt;
+            &lt;publisher&gt;Little, Brown and Company&lt;/publisher&gt;
+            &lt;date&gt;1961&lt;/date&gt;
+        &lt;/bibl&gt;
+        [. . .]
+    &lt;/witness&gt;             
+&lt;/listWit&gt;
+            </pre>
+            
+<p>Schematron can be used to constrain the writing of <code>@xml:id</code> values in this list to meet project specifications. For example, the Dickinson team will want to make sure their <code>@xml:ids</code> do not begin with hashtags: </p>
 <pre>&lt;pattern&gt;
      &lt;rule context="@xml:id"&gt;
             &lt;report test="starts-with(., '#')"&gt;
@@ -44,7 +82,7 @@
     &lt;/pattern&gt; 
 </pre>
             
-            <p>The Dickinson team uses an <code>@wit</code> attribute with a hashtag in the body of the poem to point to <em>one or more</em> identified published editions. Often a particular variant is displayed in three or four published editions, and when that is the case, the project team separates each distinct hashtagged identifier with a white space, like this: <code>&lt;rdg wit="#ce #poems2 #fh"&gt;</code>. These point to <code>@xml:id</code> values defined up in the TEI header as: df16, fh, and poems. It is very easy to mistype these ids, so we need a good schema rule to ensure they are correct. Here is how we do this in Schematron:</p>
+            <p>The Dickinson team uses an <code>@wit</code> attribute with a hashtag in the body of the poem to point to <em>one or more</em> identified published editions. Often a particular variant is displayed in three or four published editions, and when that is the case, the project team separates each distinct hashtagged identifier with a white space, like this: <code>&lt;rdg wit="#ce #poems2 #fh"&gt;</code>. These point to <code>@xml:id</code> values defined up in the TEI header and its <code>&lt;listWit&gt;</code> as: df16, fh, and poems. It is very easy to mistype these ids, so we need a good schema rule to ensure they are correct. Here is how we prepared our rule for the <code>@wit</code> attribute</p>
 
             <pre>&lt;pattern&gt;
                 &lt;rule context="@wit"&gt;
@@ -57,7 +95,7 @@
             
             <p>This complex rule permits us to use white space as a separator, so we can refer to multiple published editions that represent a particular variant in the text. </p> 
       <p>The rule accomplishes several things:</p> 
-      <ol><li>The "let" statement: This defines a *variable* in Schematron, and gives it a name ("tokens") which we can quickly refer to with a dollar-sign in front of it ("$token"). We can define a variable inside a rule to make it local (in which case the parser only "knows" about it and reads it within the context of a particular rule), OR we can define it *globally* and set it outside the patterns so it can be invoked everywhere. We make global variables when we need to write Schematron rules that point to other files, to see if a value of an attribute matches an xml:id defined in a separate project file, for example.</li>  
+      <ol><li>The "let" statement: This defines a <dfn>variable</dfn> in Schematron, and gives it a name ("tokens") which we can quickly refer to with a dollar-sign in front of it ("$token"). We can define a variable inside a rule to make it local (in which case the parser only "knows" about it and reads it within the context of a particular rule), OR we can define it *globally* and set it outside the patterns so it can be invoked everywhere. We make global variables when we need to write Schematron rules that point to other files, to see if a value of an attribute matches an xml:id defined in a separate project file, for example.</li>  
       
       <li>Dealing with multiple values: First, in our variable, we tokenized our @wit attribute on white space, and that created multiple values or token. So if we *do* use one or more white spaces in a @wit attribute, we use those white spaces as a dividing point: we separate the value into "tokens": so <code>&lt;rdg wit="#ce #poems2 #fh"&gt;</code> would be tokenized into three pieces. Our language, <code>for $w in tokenize(., '\s+')</code>, defines a separate variable <em>for each one of these tokens</em>, since we need to look at them one by one. For each of these, we need to cut off the leading hashtag, so we do one more thing: return the <code>substring-after($w, '#')</code>.
 This creates three tokens in this format: 
@@ -67,8 +105,22 @@ This creates three tokens in this format:
       </li>     
 <li>Now our assert test needs to do something more, so it can deal with a situation in which there's only one token OR multiple tokens. We can't just test ALL the tokens at once against each xml:id: Schematron needs to look at them one at a time: first ce, then poems2, then fh. For that we use this syntax:
 <code>&lt;assert test="every $token in $tokens satisfies $token = //tei:TEI//tei:listWit//@xml:id"&gt;</code>
-The work of this is done by the language, <code>every [singular] in [plural] satisfies [a test you design for the singular value]</code>. </li>
-<p><strong>Note:</strong> Due to the distinctive "butterfly" structure of TEI (with its two-part TEI-header vs. Text structure) , we had to set our listWit up in the teiHeader, so we have to reach ALL the way back to the TEI root element and step down the tree to check in on those xml:ids. </p></ol>
+The work of this is done by the structure: <code>every [singular] in [plural] satisfies [a test you design for the singular value]</code>. 
+   <p>If the Dickinson team members move their <code>&lt;listWit&gt;</code> to separate file of prosopography lists, like <a href="http://digitalmitford.org/si.xml">the site index of the Mitford project</a>, they would define a variable with another <code>let</code> statement pointing to a file in its location relative to the Dickinson project files. The file can be served on the web and pointed to with an absolute web address, or referenced by a relative address as we do here:</p>
+    <pre><code>&lt;let name="si" value="doc('Dickinson_listIds.xml')//@xml:id"</code>/&gt;
+    &lt;pattern&gt;
+                &lt;rule context="@wit"&gt;
+                    &lt;let name="tokens" value="for $w in tokenize(., '\s+') return substring-after($w, '#')"/&gt;
+                    &lt;assert test="every $token in $tokens satisfies $token = <code>$si</code>"&gt;
+                        Every reading witness (@wit) after the hashtag must match an xml:id defined in the list of witnesses in this file!
+                    &lt;/assert&gt;
+                &lt;/rule&gt;
+            &lt;/pattern&gt;
+    
+    </pre>
+Defining the variable <code>$si</code> above a <code>&lt;pattern&gt;</code> element makes it a <dfn>global variable</dfn> in Schematron, which means it can be referenced in multiple <code>pattern</code> elements. We could also define it <em>inside</em> the <code>&lt;rule&gt;</code> if we only need to represent the variable within this particular rule. Defining variables as filepaths in Schematron is a convenient way to make your schema rules cross-check values between multiple files. Here it permits us to use one file as a way to validate the attribute values in use on any project file associated with this Scheamtron file.
+</li>
+</ol>
 
                 
 
