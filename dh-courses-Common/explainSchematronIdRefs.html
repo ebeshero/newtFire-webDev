@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Explain @xml:id Lists and Testing with Schematron</title>
+        <link rel="stylesheet" type="text/css" href="explain.css"/>
+    </head>
+    <body>
+        <!--#include virtual="top.html" -->
+        <section title="tutorialName"><h1>Coding with Unique Identifiers and How to Test for them with Schematron</h1></section>
+       <section title="Coding_with_ids"><h3>Why and how we use unique identifiers in XML</h3>
+           <p>Most of our projects demand that we compile <dfn>prosopography</dfn> data, that is, a standard list of unique identifiers for people, places, books, and other named entities. We might compile a prosopography list in a <code>header</code> element holding metadata in a project file, or perhaps in a separate file altogether if our project contains multiple XML files and we just want one document to store all the detailed prosopography information relevant anywhere and everywhere throughout our project. Storing a list of prosopography entries involves creating something like a contacts list of everyone you know with their contact information and unique identification information. In XML prosopography lists, we apply the <code>@xml:id </code> attribute to hold a unique string of text, different from any other <code>@xml:id</code> in your project, designed to identify a particular person, place, or any named thing that you need to distinguish from other named things. In Relax NG, the <code>@xml:id</code> is coded to have an <code>xsd:ID</code> datatype, which requires a unique string of text for each distinct <code>@xml:id</code> and permits no duplicates. The <code>xsd:ID</code> datatype permits text only or a combination of text and numbers, but it must not be a string of numbers alone and it must not contain any white space.</p>
+           <p>A common standardized format for prosopography data is defined by TEI Guidelines, specifically <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPERSbp">Chapter 13: Names, Dates, People, and Places</a>  which provides helpful examples and useful things to think about when distinguishing among proper names. The Digital Mitford project's <a href="http://digitalmitford.org/si.xml">Site Index file</a> offers several lists combined together in one file, lists of historical people, fictional characters, real and fictional places, books, journal publications, works of art, and more, and it serves as a kind of backbone for all of the project XML files. Each XML file representing a writing by or about the nineteenth-century author Mary Russell Mitford, say, a letter, a poem, a play, or some other kind of text, makes reference to named entities, often several of the kinds we have mentioned, and we are coding them in a way to help keep track of particular people, fictional characters, places, books, etc. whenever they appear (in whatever form they appear) in our files. Think about why we need to do this. One person might be called several different names in different places, so Mitford sometimes affectionately referred to her father as “Drum” or “Papa” while another text in our project might refer to him more formally as “Dr. Mitford” or “George Mitford”. The same person might have several nicknames, and in the case of women, their surnames might change in marriage, but we still need a way to track these names and trace them to the same person when Mitford knew them before and after they were married. Here is an example of an entry for Mary Ann Harvey or Mary Ann Davenport from the Digital Mitford site index:</p>
+               <pre>&lt;person xml:id="Davenport_MA" sex="2"&gt;
+                    &lt;persName&gt;
+                        &lt;surname type="maiden"&gt;Harvey&lt;/surname&gt;
+                        &lt;surname type="married"&gt;Davenport&lt;/surname&gt;
+                        &lt;forename&gt;Mary&lt;/forename&gt;
+                        &lt;forename&gt;Ann&lt;/forename&gt;
+                    &lt;/persName&gt;
+                   &lt;occupation&gt;actor&lt;/occupation&gt;
+                   &lt;note type="bio" resp="#lmw"&gt;English actor (1759-1843).&lt;/note&gt;
+&lt;/person&gt; 
+               </pre>
+               
+ <p>We could add other <code>&lt;persName&gt;</code> elements inside this entry if we discover that Mary Ann Harvey used a pseudonym or fake name, or had a nickname. We add as much or as little information as we can find and as seems necessary to our project, and our entries are always in a state of development as we keep working on our project. In the body of a Mitford letter, if she mentions that her father has seen Mary Davenport perform in a play, we encode Mary's name like this:</p>
+     
+     <pre>&lt;p&gt;&lt;persName ref="Mitford_Geo"&gt;Drum&lt;/persName&gt; saw &lt;persName ref="#Davenport_MA"&gt;Mary Davenport&lt;/persName&gt; perform in &lt;title ref="#TwelfthNight_Shkspr"&gt;Twelfth Night&lt;/title&gt; last week.&lt;/p&gt;</pre>
+     
+     <p>Because we are only permitted to use an <code>@xml:id</code> attribute value <em>once</em> in our entire project, we place a hashtag on all attributes (like <code>@ref</code>, <code>@wit</code>, <code>@corresp</code> that <em>refer</em> or <em>point to</em> that <code>@xml:id</code>. The use of the hashtag permits us to invoke the identifying string as often as we need to, and it permits us to pull up more information about a given name by pointing to information in our site index file.</p>
+
+       </section>
+        <section title="SchematronCheckingRefs">
+            <h3>How to write Schematron to check hashtagged attributes against <code>@xml:id</code> values</h3>
+            <p>Since it is very easy to mistype an attribute value as we are coding our project files, we can either embed our <code>@xml:id</code> values in a Relax NG file, or write Schematron rules to help us check their values against our standard list, wherever we have placed it in relation to our project files. We can also write Schematron rules to make sure we remember to include a hashtag at the start of each value when it is in a pointer <code>@ref</code> or other attribute that points to an <code>@xml:id</code>. the   That way we can point to those identifiers as a handy abbreviation whenever we are referring to them, as many times as we need to in the document. We show you how to do with an example from the <a href="http://dickinson16.newtfire.org">Emily Dickinson Fascicle 16 project</a>.</p>
+            <p>The Dickinson team prepared a list of published editions of Dickinson's poems with <code>@xml:id</code> attributes and detailed bibliography information about each, and they presented this in a TEI <code>listWit</code> element or a list of witnesses, each one holding distinct identifying information about a different "witness" or editors' representation of Emily Dickinson's manuscript poems. Each edition produced distinct "variants" or different readings of the same document, as the editors "normalized" and changed Dickinson's poems in the different published editions. The Dickinson team needed to mark the different <dfn>variants</dfn> (or different versions of words and phrases and punctuation) within particular lines in each poem, and they referred to the source of each variant with a hashtagged <code>@wit</code> attribute pointing to the <code>@xml:id</code> in the <code>listWit</code> up in their <code>teiHeader</code> element.</p>    
+<p>Schematron can be used to constrain the writing of <code>@xml:id</code> values to project specifications. For example, the Dickinson team will want to make sure their <code>@xml:ids</code> do not contain hashtags: </p>
+<pre>&lt;pattern&gt;
+     &lt;rule context="@xml:id"&gt;
+            &lt;report test="starts-with(., '#')"&gt;
+                xml:id attributes must not begin with a hashtag!
+            &lt;/report&gt;
+        &lt;/rule&gt;
+    &lt;/pattern&gt; 
+</pre>
+            
+            <p>The Dickinson team uses an <code>@wit</code> attribute with a hashtag in the body of the poem to point to <em>one or more</em> identified published editions. Often a particular variant is displayed in three or four published editions, and when that is the case, the project team separates each distinct hashtagged identifier with a white space, like this: <code>&lt;rdg wit="#ce #poems2 #fh"&gt;</code>. These point to <code>@xml:id</code> values defined up in the TEI header as: df16, fh, and poems. It is very easy to mistype these ids, so we need a good schema rule to ensure they are correct. Here is how we do this in Schematron:</p>
+
+            <pre>&lt;pattern&gt;
+                &lt;rule context="@wit"&gt;
+                    &lt;let name="tokens" value="for $w in tokenize(., '\s+') return substring-after($w, '#')"/&gt;
+                    &lt;assert test="every $token in $tokens satisfies $token = //tei:TEI//tei:listWit//@xml:id"&gt;
+                        Every reading witness (@wit) after the hashtag must match an xml:id defined in the list of witnesses in this file!
+                    &lt;/assert&gt;
+                &lt;/rule&gt;
+            &lt;/pattern&gt;</pre>
+            
+            <p>This complex rule permits us to use white space as a separator, so we can refer to multiple published editions that represent a particular variant in the text. </p> 
+      <p>The rule accomplishes several things:</p> 
+      <ol><li>The "let" statement: This defines a *variable* in Schematron, and gives it a name ("tokens") which we can quickly refer to with a dollar-sign in front of it ("$token"). We can define a variable inside a rule to make it local (in which case the parser only "knows" about it and reads it within the context of a particular rule), OR we can define it *globally* and set it outside the patterns so it can be invoked everywhere. We make global variables when we need to write Schematron rules that point to other files, to see if a value of an attribute matches an xml:id defined in a separate project file, for example.</li>  
+      
+      <li>Dealing with multiple values: First, in our variable, we tokenized our @wit attribute on white space, and that created multiple values or token. So if we *do* use one or more white spaces in a @wit attribute, we use those white spaces as a dividing point: we separate the value into "tokens": so <code>&lt;rdg wit="#ce #poems2 #fh"&gt;</code> would be tokenized into three pieces. Our language, <code>for $w in tokenize(., '\s+')</code>, defines a separate variable <em>for each one of these tokens</em>, since we need to look at them one by one. For each of these, we need to cut off the leading hashtag, so we do one more thing: return the <code>substring-after($w, '#')</code>.
+This creates three tokens in this format: 
+     <ul> <li>token 1: ce</li>
+      <li>token 2: poems2</li>
+      <li>token 3: fh</li></ul>
+      </li>     
+<li>Now our assert test needs to do something more, so it can deal with a situation in which there's only one token OR multiple tokens. We can't just test ALL the tokens at once against each xml:id: Schematron needs to look at them one at a time: first ce, then poems2, then fh. For that we use this syntax:
+<code>&lt;assert test="every $token in $tokens satisfies $token = //tei:TEI//tei:listWit//@xml:id"&gt;</code>
+The work of this is done by the language, <code>every [singular] in [plural] satisfies [a test you design for the singular value]</code>. </li>
+<p><strong>Note:</strong> Due to the distinctive "butterfly" structure of TEI (with its two-part TEI-header vs. Text structure) , we had to set our listWit up in the teiHeader, so we have to reach ALL the way back to the TEI root element and step down the tree to check in on those xml:ids. </p></ol>
+
+                
+
+        </section>
+    
+</body></html>
