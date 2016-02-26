@@ -37,7 +37,7 @@
             
         </pre>
         <h3>Overview of the assignment</h3>
-        <p>For this assignment we’re going to work with this entire XML document (on all levels of the
+        <p>We’re going to work with this entire XML document (on all levels of the
             hierarchy), concentrating on processing the XML “salad” of mixed text and in-line elements to style them for presentation on the web
             in HTML’s limited tagset. You can use some of the basic HTML in-line elements, like
                 <code>&lt;em&gt;</code> for emphasis or <code>&lt;strong&gt;</code> for strong
@@ -224,10 +224,10 @@
             also ways to assign arbitrary style to a snippet of in-line text, changing fonts or
             colors or other features in mid-stream. To do that:</p>
         <ol>
-            <li><p>Before you read any further in this page, read Obdurodon’s <a
+            <li>Before you read any further in this page, read Obdurodon’s <a
                         href="http://dh.obdurodon.org/class-and-span.html">Using
                             <code>&lt;span&gt;</code> and <code>@class</code> to style your HTML</a>
-                    page.</p></li>
+                    page.</li>
 
             <li><p>To use the strategies described at that page, create an XSLT template rule that
                     transforms the element you want to style to an HTML <code>&lt;span&gt;</code>
@@ -272,7 +272,7 @@
                 A similar <dfn>dereference</dfn> can be made with the <code>@connotation</code>
                 attribute on the variety of voice tags (<code>&lt;femVoice&gt;</code>,
                     <code>&lt;nellVoice&gt;</code>, <code>&lt;mascVoice&gt;</code>).</li>
-            <li><p>Setting the <code>@class</code> attributes in the output HTML makes it possible
+            <li>Setting the <code>@class</code> attributes in the output HTML makes it possible
                     to style the various <code>&lt;span&gt;</code> elements differently according to
                     the value of those attributes, but you need to create a CSS stylesheet to do
                     that. Create the stylesheet (just as you’ve created CSS in the past), and
@@ -280,8 +280,8 @@
                     CSS stylesheet to the XSLT by creating the appropriate <code>&lt;link&gt;</code>
                     element inside of the HTML <code>&lt;head&gt;</code> element of your XSLT (you
                     can remind yourself of the <code>&lt;link&gt;</code> element format by
-                    referencing our <a href="explainCSS.html">CSS Tutorial</a>).</p></li>
-            <li><p>Besides wrapping your <code>&lt;xsl:apply-templates/&gt;</code> in
+                    referencing our <a href="explainCSS.html">CSS Tutorial</a>).</li>
+            <li>Besides wrapping your <code>&lt;xsl:apply-templates/&gt;</code> in
                         <code>&lt;span&gt;</code> elements and other HTML elements (Hint: including
                     HTML heading elements say if you want each of your <code>&lt;headLine&gt;</code>
                     elements to appear as individual headings instead of block text) you might
@@ -291,9 +291,9 @@
                     Nelson was the speaker is indicated). Also we added double
                         <code>&lt;br/&gt;</code> elements to add space around the blocks of
                     dialogue. Use what you think looks best and provides the most readable HTML
-                    output. </p></li>
-        </ol>
-        <p>The element <code>&lt;unclear&gt;</code> will need a slightly different rule
+                    output. </li>
+       
+        <li>The element <code>&lt;unclear&gt;</code> will need a slightly different rule
                 <strong>matching</strong> on it. If you refer back to the source document and XPath
             your way to the empty self-closing <code>&lt;unclear/&gt;</code> elements, you might
             notice that the purpose of this element in the original document was to take place for
@@ -307,10 +307,11 @@
             text ourselves. To remedy this we want to write a template rule <strong>matching on
                     <code>&lt;unclear&gt;</code></strong>, and inside of that rule we want to include
             some placeholder informational text, a kind of <dfn>pseudomarkup</dfn>, just to indicate there is a word missing. 
-            Here’s how we chose to present it (and you may choose to do this differently):</p> 
+            Here’s how we chose to present it (and you may choose to do this differently):</li> 
+        </ol>
             
             <pre><code>&lt;xsl:text&gt;</code>[missing word(s)]<code>&lt;/unclear&gt;</code></pre>
-             <p>Check out our sample output to see the result of that template rule more clearly.</p>
+        <p>Check out <a href="1888-07-30_XSLTresults.html">our sample output</a> to see the result of that template rule more clearly.</p>
         <h3>Your Final Results</h3>
         <p>What you should produce, then, is:</p>
         <ul>
@@ -333,8 +334,7 @@
 
             <li>You need to create a CSS file, <strong>linked to your output HTML</strong>, that
                 specifies how to style the output document. You can look up the most useful of the
-                available CSS properties at <a href="http://www.w3schools.com/css/"
-                    >http://www.w3schools.com/css/</a>. We’d suggesting following the links on the
+                available CSS properties at <a href="http://www.w3schools.com/css/">http://www.w3schools.com/css/</a>. We’d suggesting following the links on the
                 left under <q>CSS styling</q> for styling backgrounds, text, and fonts, as well as
                 the link for borders under <q>CSS box model</q>.</li>
 
