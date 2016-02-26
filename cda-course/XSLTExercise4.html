@@ -15,9 +15,9 @@
         <!--#include virtual="topAuthorRJP43.html" -->
         <h1><span class="banner">XSLT Exercise 4</span></h1>
         <h3>The input text</h3>
-        <p>For this assignment we’ll be using an XML file originally prepared by students in the
-            Nell Nelson project team in the fall of 2015. We’ve modified it for use in this XSLT
-            exercise, and the new version is available here at <a
+        <p>For this assignment we’ll be producing HTML from an XML file originally prepared by students in the
+            Nell Nelson project team in the fall of 2015 and modified for use in this XSLT
+            exercise. The XML file is available here: <a
                 href="NelsonArticle_1888-07-30.xml"
                 >http://newtfire.org/dh/NelsonArticle_1888-07-30.xml</a>. You should right-click on
             this link, download the file, and open it in &lt;oXygen/&gt;.</p>
@@ -37,9 +37,9 @@
             
         </pre>
         <h3>Overview of the assignment</h3>
-        <p>For this assignment we’re going to work with this entire document (on all levels of the
-            hierarchy), concentrating on processing the in-line elements to style the XML coded text
-            in the HTML. You can use some of the basic HTML in-line elements, like
+        <p>We’re going to work with this entire XML document (on all levels of the
+            hierarchy), concentrating on processing the XML “salad” of mixed text and in-line elements to style them for presentation on the web
+            in HTML’s limited tagset. You can use some of the basic HTML in-line elements, like
                 <code>&lt;em&gt;</code> for emphasis or <code>&lt;strong&gt;</code> for strong
             emphasis, but you’ll also want to use CSS to set some elements to have different colors
             or background colors or to alter borders or fonts or font sizes or font styles (e.g.,
@@ -105,7 +105,7 @@
                 the <code>&lt;dialogue&gt;</code>, etc.</q> That is, most programming languages have
             to tell you what to look for at every step. The elegance of XSLT when dealing with this
             type of data is that all you have to say inside paragraphs and other elements is <q>I’m
-                not worried about what I'll find here; just process <strong>(apply templates
+                not worried about what I’ll find here; just process <strong>(apply templates
                     to)</strong> all my children, whatever they might be.</q></p>
         <p>The way to deal with mixed content in XSLT is to have a template rule for every element
             and use it to output whatever HTML markup you want for that element and then, inside
@@ -147,10 +147,10 @@
             add heading elements in the HTML portion of our XSLT to indicate placement of the
                 <code>&lt;newspaperTitle&gt;</code>, <code>&lt;seriesTitle&gt;</code>,
                 <code>&lt;date&gt;</code>, and <code>&lt;byline&gt;</code> elements. Consider where
-            each of these elements' placements make sense in relation to the
+            each of these elements’ placements make sense in relation to the
                 <code>&lt;headline&gt;</code> elements and the <code>&lt;p&gt;</code> element
             containing the text from the <code>&lt;articleBody&gt;</code> element. <span
-                class="smaller">Don't forget what is represented in the <code>&lt;html&gt;</code>
+                class="smaller">Don’t forget what is represented in the <code>&lt;html&gt;</code>
                 element of your XSLT is the basic superstructure of your output HTML document;
                 therefore, the content inside of the <code>&lt;head&gt;</code> element, including
                 the <code>&lt;title&gt;</code> element, will not appear unless the underlying HTML
@@ -183,7 +183,7 @@
             also ways to assign arbitrary style to a snippet of in-line text, changing fonts or
             colors or other features in mid-stream. To do that:</p>
         <ol>
-            <li><p>Before you read any further in this page, read Obdurodon's <a
+            <li><p>Before you read any further in this page, read Obdurodon’s <a
                         href="http://dh.obdurodon.org/class-and-span.html">Using
                             <code>&lt;span&gt;</code> and <code>@class</code> to style your HTML</a>
                     page.</p></li>
@@ -206,7 +206,7 @@
                     expression to match <code>&lt;workingConditions&gt;</code> elements only if they
                     have a <code>@category</code> attribute with the value <q>positive</q>. So
                     within that matching template rule you create a <code>&lt;span&gt;</code>
-                    element with a logical <code>@class</code> (let's say positive) and then simply
+                    element with a logical <code>@class</code> (let’s say positive) and then simply
                     place the <code>&lt;xsl:apply-templates/&gt;</code> inside of the span. Then in
                     the CSS make reference to the <code>@class</code>, again as described in the
                     page we link to above.</p></li>
@@ -251,8 +251,8 @@
                         <code>&lt;br/&gt;</code> elements to add space around the blocks of
                     dialogue. Use what you think looks best and provides the most readable HTML
                     output. </p></li>
-        </ol>
-        <p>The element <code>&lt;unclear&gt;</code> will need a slightly different rule
+        
+        <li>The element <code>&lt;unclear&gt;</code> will need a slightly different rule
                 <strong>matching</strong> on it. If you refer back to the source document and XPath
             your way to the empty self-closing <code>&lt;unclear/&gt;</code> elements, you might
             notice that the purpose of this element in the original document was to take place for
@@ -264,11 +264,12 @@
                 <code>&lt;unclear&gt;</code> is an empty element, it contains no text of its own to
             process, so if we want to output anything in our HTML for it, we need to generate that
             text ourselves. To remedy this we want to write a template rule <strong>matching on
-                    <code>&lt;unclear&gt;</code></strong> and inside of that rule we want to include
-            text to indicate there is a word missing, like this: <code>&lt;xsl:text&gt;</code>THEN
-            TYPE WHATEVER TEXT/CHARACTERS TO INDICATE THE MISSING WORD(S)... we chose to write
-            [missing word(s)]...<code>&lt;/unclear&gt;</code>. Check out our output to see the
-            result of that template rule more clearly.</p>
+                <code>&lt;unclear&gt;</code></strong>, and inside of that rule we want to include
+            some placeholder informational text, a kind of <dfn>pseudomarkup</dfn>, just to indicate there is a word missing. 
+            Here’s how we chose to present it (and you may choose to do this differently):
+            <pre><code>&lt;xsl:text&gt;</code>[missing word(s)]<code>&lt;/unclear&gt;</code></pre>
+            Check out <a href="1888-07-30_XSLTresults.html">our sample output</a> to see the result of that template rule more clearly.</li>
+        </ol>
         <h3>Your Final Results</h3>
         <p>What you should produce, then, is:</p>
         <ul>
@@ -315,11 +316,9 @@
                 make sure the results are what you expect them to be. There’s a guide to running
                 XSLT transformations inside &lt;oXygen/&gt; on Obdurodon at <a
                     href="http://dh.obdurodon.org/oxygen-xslt-configuration.html"
-                    title="How to run a transformation in oXygen"
-                    >http://dh.obdurodon.org/oxygen-xslt-configuration.html</a>. If you don’t get
+                    title="How to run a transformation in oXygen">http://dh.obdurodon.org/oxygen-xslt-configuration.html</a>. If you don’t get
                 the results you expect and can’t figure out what you’re doing wrong, remember that
-                you can post a query to our <a href="https://github.com/ebeshero/DHClass-Hub/issues"
-                    >DHClass-Hub Issues board</a>. You can’t just ask for the answer, though; you
+                you can post a query to our <a href="https://github.com/ebeshero/DHClass-Hub/issues">DHClass-Hub Issues board</a>. You can’t just ask for the answer, though; you
                 need to describe what you tried, what you expected, what you got, and what you think
                 the problem is. We often find, just as we’re preparing to post our own queries to
                 coding discussion boards, that having to write up a description of the problem helps
