@@ -1,20 +1,19 @@
 <!DOCTYPE html
   SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml">
-    
-    
+
+
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="explain.css" />
-        <title>XSLT Exercise 6</title>
+        <title>XSLT Exercise 4 (CDV)</title>
+        <!--ebb 2016-02-26: This assignment corresponds to XSLT Exercise 6 in CDA-->
     </head>
-    
-    
-    
+
+
+
     <body>
         <!--#include virtual="top.html" -->
-        
-        
         <h1><span class="banner">XSLT Exercise 6</span></h1>
         <h3>The input collection on our DHClass-Hub</h3>
         <p>You will be working with same digitized XML collection of Emily Dickinson’s poems that you worked with in the last assignment, the collection we posted on our DHClass-Hub GitHub. If you need a new copy of the files, please refer to <a href="XSLTExercise5.html">our instructions on the previous exercise</a> for accessing them by syncing, cloning, and copying the directory out of your local GitHub directory. You will be building on our <a href="XSLTExercise5.html">XSLT Exercise 5</a>, and you can take your stylesheet from that assignment and modify it for this one.</p>        
@@ -46,7 +45,7 @@
             <li>We’re going to produce a list of the poems organized by the total number of the variants that Dickinson marked in them, from most variants to least variants.</li>
             <li>We’re then going to alphabetize our list of first lines, so that the table of contents
                 will be sorted alphabetically, instead of in numerical order.</li>
-          
+            
         </ul>
         <p>Our HTML output for this assignment is at <a href="dickinson-output.html"
             >http://newtfire.org/dh/dickinson-6.html</a>.</p>
@@ -127,7 +126,7 @@
             <code>&lt;xsl:sort&gt;</code> to sort a set of items by properties other than
             alphabetic order of their textual content, which is what we will be doing in sorting on a <code>count()</code> of the <code>&lt;rdg&gt;</code> elements that we used to signal variant words and phrases in Dickinson’s text.</p>
         <!--<h3>After the sort</h3>-->
-    <!--    <p>At this point we’d make other adjustments in the output. The original table of contents
+        <!--    <p>At this point we’d make other adjustments in the output. The original table of contents
             begins with a roman numeral, but if you’re going to sort the table of contents, you want
             the text of the first line of the poem at the left side of the line, not preceded by the
             roman numeral, so that you can see the alphabetic order easily. Putting the roman
@@ -160,5 +159,8 @@
         <p>Oh, and did we mention CSS? Can you attach a CSS stylesheet to your output to make it
             look more interesting than what you get by default in a web browser? See if you can find an interesting way to style the <code>&lt;span&gt;</code> elements surrounding the variants.</p>
         
+      
+      
+      
     </body>
 </html>
