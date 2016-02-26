@@ -15,9 +15,9 @@
         <!--#include virtual="topAuthorRJP43.html" -->
         <h1><span class="banner">XSLT Exercise 2</span></h1>
         <h3>The input text</h3>
-        <p>For this assignment we’ll be using an XML file originally prepared by students in the
-            Nell Nelson project team in the fall of 2015. We’ve modified it for use in this XSLT
-            exercise, and the new version is available here at <a
+        <p>For this assignment we’ll be producing HTML from an XML file originally prepared by students in the
+            Nell Nelson project team in the fall of 2015 and modified for use in this XSLT
+            exercise. The XML file is available here: <a
                 href="NelsonArticle_1888-07-30.xml"
                 >http://newtfire.org/dh/NelsonArticle_1888-07-30.xml</a>. You should right-click on
             this link, download the file, and open it in &lt;oXygen/&gt;.</p>
@@ -37,16 +37,16 @@
             
         </pre>
         <h3>Overview of the assignment</h3>
-        <p>For this assignment we’re going to work with this entire document (on all levels of the
-            hierarchy), concentrating on processing the in-line elements to style the XML coded text
-            in the HTML. You can use some of the basic HTML in-line elements, like
+        <p>For this assignment we’re going to work with this entire XML document (on all levels of the
+            hierarchy), concentrating on processing the XML “salad” of mixed text and in-line elements to style them for presentation on the web
+            in HTML’s limited tagset. You can use some of the basic HTML in-line elements, like
                 <code>&lt;em&gt;</code> for emphasis or <code>&lt;strong&gt;</code> for strong
             emphasis, but you’ll also want to use CSS to set some elements to have different colors
             or background colors or to alter borders or fonts or font sizes or font styles (e.g.,
             italic) or font weights (e.g., bold) or add text decoration (e.g., underlining) or text
             transformation (e.g., convert to all upper case) … well … really anything stylistically
             possible.</p>
-        <p>There are several types of in-line elements in our input XML document, for the purposes
+        <p>There are several types of in-line elements in our input XML document, but for the purposes
             of this assignment we will focus on these few:</p>
         <ul>
             <li><code>&lt;unclear&gt;</code> This element will require special attention (described
@@ -305,11 +305,12 @@
                 <code>&lt;unclear&gt;</code> is an empty element, it contains no text of its own to
             process, so if we want to output anything in our HTML for it, we need to generate that
             text ourselves. To remedy this we want to write a template rule <strong>matching on
-                    <code>&lt;unclear&gt;</code></strong> and inside of that rule we want to include
-            text to indicate there is a word missing, like this: <code>&lt;xsl:text&gt;</code>THEN
-            TYPE WHATEVER TEXT/CHARACTERS TO INDICATE THE MISSING WORD(S)... we chose to write
-            [missing word(s)]...<code>&lt;/unclear&gt;</code>. Check out our output to see the
-            result of that template rule more clearly.</p>
+                    <code>&lt;unclear&gt;</code></strong>, and inside of that rule we want to include
+            some placeholder informational text, a kind of <dfn>pseudomarkup</dfn>, just to indicate there is a word missing. 
+            Here’s how we chose to present it (and you may choose to do this differently):</p> 
+            
+            <pre><code>&lt;xsl:text&gt;</code>[missing word(s)]<code>&lt;/unclear&gt;</code></pre>
+             <p>Check out our sample output to see the result of that template rule more clearly.</p>
         <h3>Your Final Results</h3>
         <p>What you should produce, then, is:</p>
         <ul>
