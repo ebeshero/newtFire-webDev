@@ -122,6 +122,7 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
    			<li>greater than or equal to: <code>ge</code></li>
    			<li>less than: <code>lt</code> or <code>&amp;lt;</code></li>
    			<li>less than or equal to: <code>le</code></li>
+   			<li>not equal to: <code>ne</code> or <code>!=</code></li>
    		</ul>
    	<span class="smaller"><strong>A note on inconsistency between Relax NG and Schematron:</strong> Even if you write <a href="gameResults.rnc">a Relax NG schema</a> as we did for our gameResults.xml file to define and xsd:integer data type for the element contents of <code>first</code>, <code>second</code>, and <code>third</code>, we discover that <a href="gameResults.sch">our Schematron</a> still reads the contents of those elements as a string of text until we convert them to a number in XPath. The Relax NG grammar constructs a numerical data format, then, that is nevertheless not read as a number by an XPath parser unless it is prompted to do so. (We provide links to our sample Relax NG and Schematron files so you can test this for yourself.)</span>	
    	
