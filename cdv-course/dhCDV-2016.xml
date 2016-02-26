@@ -1434,24 +1434,23 @@
                      <p><hi rend="em">XPath or Schematron Exam</hi></p>
                      <p>XSLT to HTML: How it works: the template rule for the document node, and
                         succeeding template rules.</p>
-                     <p>What happens with <hi>xsl:apply-templates</hi>.</p>
+                     <p>What happens with <hi>xsl:apply-templates</hi>, <hi>xsl:value-of</hi>, and Attribute Value Templates.</p>
 
                   </div>
                   <div type="assign">
                      <list>
-                        <item>XSLT Exercise 2</item>
-                        <item>Read / review:<list>
+                        <item><ref target="XSLTExercise2_CDV.html">XSLT Exercise 2</ref></item>
+                        <item>To help guide you with XSLT and prepare for next class, read and consult:<list>
                               <item><title level="a"><ref
                                        target="http://dh.obdurodon.org/developing-xslt.xhtml"
                                        >Developing an XSLT Stylesheet</ref></title></item>
                               <item><title level="a"><ref
                                        target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in
                                        algorithms</ref></title></item>
+                           <item><ref target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref></item>
                            </list>
                         </item>
-                        <item>In prep for next class, read about <ref
-                              target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
-                              Templates</ref></item>
+                       
                      </list>
                   </div>
 
@@ -1464,15 +1463,15 @@
                      <date when="2016-02-29">M 02-29</date>
                   </head>
                   <div type="inclass">
-                     <p>XSLT: Attribute Value Templates. Pull vs. Push processing (and why we tend
+                     <p>Pull vs. Push processing (and why we tend
                         to work with XQuery for Pull processing)</p>
                   </div>
                   <div type="assign">
                      <list>
 
-                        <item>(Consult <ref target="http://dh.obdurodon.org/avt.xhtml">XSLT
-                              Attribute Value Templates</ref> as you work on the coding
-                           exercise.)</item>
+                        <item>Review and consult <ref target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref> and <ref target="http://dh.obdurodon.org/avt.xhtml">XSLT
+                              Attribute Value Templates</ref> tutorials as you work on the coding
+                           exercise.</item>
                         <item><hi rend="em"><ref target="XSLTExercise4.html">XSLT Exercise
                               3<!--ebb: Note that this is numbered 4 within the assignment and in the fall course sequencing. --></ref></hi></item>
                         <item><!--ebb: Update the XQUERY MATERIALS for PSC eXist!-->Read <ref
