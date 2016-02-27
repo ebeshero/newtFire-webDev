@@ -24,7 +24,7 @@
       			
       			
       			
-      <h3>What is XPath and How Does It Work?</h3>
+  <section>    <h3>What is XPath and How Does It Work?</h3>
       			
       <p>Remember how we’ve described XML as like “nested boxes” or a “tree”? (Review that,
          if
@@ -55,8 +55,8 @@
          to XML
          				files. Before you can write these transformations, you need to learn XPath. 
       </p>
-      			
-      <h3>XML is Made of Nodes</h3>
+      		</section>	
+   <section>   <h3>XML is Made of Nodes</h3>
       			
       <p>Think of our nested boxes in XML as made of <b>nodes</b>. A <b>node</b> is a position
          				on the XML tree, and can be one of three things:
@@ -125,8 +125,8 @@
          </p>
          			
       </div>
-      			
-      <h3 id="axes">Axes in XPath</h3>
+      		</section>	
+<section>      <h3 id="axes">Axes in XPath</h3>
       			
       <p>What we’ve just been describing about family relationships is closely connected to
          					<b>axes</b> in XPath. XPath’s default is to locate the <b>child</b> of the
@@ -240,8 +240,8 @@
          				can be handy to know what these are and what they mean. Use whatever form of these
          				makes the most sense to you as you’re writing your XPath expressions. 
       </p>
-      			
-      <h3 id="write">How to Write an XPath Expression</h3>
+      		</section>	
+      <section><h3 id="write">How to Write an XPath Expression</h3>
       			
       <p>So you want to start writing an XPath expression already! Here we go. <b>Use the
             					XPath 2.0 window</b> in the upper left of your &lt;oXygen/&gt; screen. An XPath
@@ -338,7 +338,7 @@
          				XPath, click on the results in the bottom view window, and they’ll highlight just
          				the attribute portions of their elements. 
       </p>
-      			
+      </section><section>			
       <h3 id="predicates">Predicates, the Filters of XPath: <span class="code">[ ]</span></h3>
       			
       <p><b>Predicates</b> in XPath are filtering tools. When we write these, we want to keep
@@ -392,7 +392,7 @@
          				filtered by <span class="code">@type="poem"</span>, and then filter those results to
          				give me just the <b>fifth</b> one in the sequence. 
       </p>
-      			
+      </section><section>		
       <h3 id="functions">Functions, How to Do Things with XPath: <span class="code">( )</span>
          			
       </h3>
@@ -518,14 +518,122 @@
          			
       </ul>
       			
-      <p>Finally, here’s a link to <a href="http://dh.obdurodon.org/introduction-xpath.xhtml#terms">a handy quick
-            					review of terms and symbols</a>, thanks to David Birnbaum! Check out his
-         				combination of predicates and functions in the expression with string-length()
-         just
-         				above the review: See if you can follow it.
-      </p>
+      <p>Here is a <a href="http://dh.obdurodon.org/introduction-xpath.xhtml#terms">handy quick
+            					review of terms and symbols</a>. Check out the
+         				combination of predicates and functions here in the expression with string-length()
+         just above the review: See if you can follow it.
+      </p></section>
       		
-      	
+   <section><h3>Testing for Comparisons with XPath</h3>
+   	<p>We often write XPath predicates to find out where a <code>count()</code> of something is no higher than X number, or where an attribute value in one position (say <code>//sp[@who="#NelsonNell"]</code> is equal to a value in another position (say <code>//persName[@ref="#NelsonNell"]</code> in our XML documents. To express conditions of comparison, where one value compares a certain way with another value, we use <strong>comparison operators</strong>. XPath can express two types of comparison: <dfn>value comparison</dfn> and <dfn>general comparison</dfn>. We reproduce here with thanks Obdurodon's explanation of value comparison and general comparison with examples of each. The next sections on value comparison and general comparison are quoted from the indispensable resource, <a href="http://dh.obdurodon.org/functions.xhtml">The Xpath functions we use the most</a>.</p>
+   	<h4>Value comparison</h4>
+   	<p>The value comparison operators are:</p>
+   	<ul>
+   		<li><strong>eq</strong> equal to</li>
+   		<li><strong>ne</strong> not equal to</li>
+   		<li><strong>gt</strong> greater than</li>
+   		<li><strong>ge</strong> greater than or equal to (not less than)</li>
+   		<li><strong>lt</strong> less than</li>
+   		<li><strong>le</strong> less than or equal to (not greater than)</li>
+   	</ul>
+   	<p>Value comparison can be used only to compare exactly one item to exactly one other
+   		item. For example, to create a predicate that will filter <code>&lt;sp&gt;</code>
+   		elements to keep only those where the value of the associated <code>@who</code>
+   		attribute is equal to the string <q>hamlet</q>, we can write:</p>
+   	<pre>//sp[@who eq 'hamlet']</pre>
+   	<p>Since each <code>&lt;sp&gt;</code> has exactly one <code>@who</code> attribute and
+   		since we are comparing it to a single string, the test will return True or False for
+   		each <code>&lt;sp&gt;</code> in the document. Because the <q>exactly one item</q>
+   		can be an empty sequence (technically no items), the test will also work (and return
+   		False) when an <code>&lt;sp&gt;</code> element has no <code>@who</code> attribute.
+   		It is, however, an error if either side of the comparison contains a sequence of
+   		more than one item.</p>
+   	<p>Value comparison is often used for numerical values. To keep all of the speeches
+   		(<code>&lt;sp></code> elements) with more than 8 line (<code>&lt;l></code>)
+   		descendants, we can write:</p>
+   	<pre>//sp[count(descendant::l) gt 8]</pre>
+   	<p>In the preceding example, the output of the <code>count()</code> function is a single
+   		item, an integer, and it is being compared to another single item, the integer value
+   		8.</p>
+   	<h4>General comparison</h4>
+   	<p>The general comparison operators are:</p>
+   	<ul>
+   		<li><strong>=</strong> equal to</li>
+   		<li><strong>!=</strong> not equal to</li>
+   		<li><strong>&gt;</strong> greater than (may also be written
+   			<strong>&amp;gt;</strong>)</li>
+   		<li><strong>&gt;=</strong> greater than or equal to (not less than; may also be
+   			written <strong>&amp;gt;=</strong>)</li>
+   		<li><strong>&lt;</strong> less than (may also be written
+   			<strong>&amp;lt;</strong>)</li>
+   		<li><strong>&lt;=</strong> less than or equal to (not greater than; may also be
+   			written <strong>&amp;lt;=</strong>)</li>
+   	</ul>
+   	<p>While value comparison operators can compare only one thing on the left to one thing
+   		on the right, general comparison operators can have one or more items on either side
+   		of the comparison (also zero items, since the empty sequence is also allowed). For
+   		example:</p>
+   	<pre>//sp[@who = ('hamlet', 'ophelia')]</pre>
+   	<p>will retain all <code>&lt;sp&gt;</code> elements where the <code>@who</code>
+   		attribute is equal to <em>either</em>
+   		<q>hamlet</q> or <q>ophelia</q>. This makes general comparison a convenient
+   		alternative to a complex predicate like:</p>
+   	<pre>//sp[@who eq 'hamlet' or @who eq 'ophelia']</pre>
+   	<p>In comparisons with exactly one item on either side of the comparison operator, value
+   		comparison and general comparison are equivalent.</p>
+   	<p>One possibly surprising feature of general comparison is the way it behaves with
+   		negation. Consider:</p>
+   	<pre>//sp[@who != ('hamlet', 'ophelia')]</pre>
+   	<p><em>This does not find all speeches by anyone other than Hamlet or Ophelia!</em> It
+   		finds all speeches where the <code>@who</code> attribute is not equal to <em>any
+   			one</em> of the individual items in the sequence on the right. This means that
+   		it finds all speeches without exception, since the ones by Hamlet are not by Ophelia
+   		(the test succeeds because <code>@who</code> is not equal to <q>ophelia</q> in
+   		situations where it is equal to <q>hamlet</q>) and vice versa.</p>
+   	<p>So how <em>do</em> you find all speeches by anyone other than Hamlet or Ophelia?
+   		Try:</p>
+   	<pre>//sp[not(@who = ('hamlet', 'ophelia'))]</pre>
+   	<p>The preceding predicate says that we want to keep all speeches where it is not the
+   		case that the <code>@who</code> attribute is equal to either <q>hamlet</q> or
+   		<q>ophelia</q>.</p>
+   	<h4>Summary of comparison operators</h4>
+   	<table>
+   		<tr>
+   			<th>Description</th>
+   			<th>Value</th>
+   			<th>General</th>
+   		</tr>
+   		<tr>
+   			<td>Equal to</td>
+   			<td>eq</td>
+   			<td>=</td>
+   		</tr>
+   		<tr>
+   			<td>Not equal to</td>
+   			<td>ne</td>
+   			<td>!=</td>
+   		</tr>
+   		<tr>
+   			<td>Greater than</td>
+   			<td>gt</td>
+   			<td>&gt;<br />(&amp;gt;)</td>
+   		</tr>
+   		<tr>
+   			<td>Greater than or equal to<br />(not less than)</td>
+   			<td>ge</td>
+   			<td>>=<br />(&amp;gt;=)</td>
+   		</tr>
+   		<tr>
+   			<td>Less than</td>
+   			<td>lt</td>
+   			<td>&lt;<br />(&amp;lt;)</td>
+   		</tr>
+   		<tr>
+   			<td>Less than or equal to<br />(not greater than)</td>
+   			<td>le</td>
+   			<td>&lt;=<br />(&amp;lt;=)</td>
+   		</tr>
+   	</table></section>
    </body>
    
    
