@@ -583,7 +583,7 @@
    		comparison and general comparison are equivalent.</p>
    	<p>One possibly surprising feature of general comparison is the way it behaves with
    		negation. Consider:</p>
-   	<pre>//sp[@who != ('hamlet', 'ophelia')]</pre>
+   	<div class="badCode">//sp[@who != ('hamlet', 'ophelia')]</div>
    	<p><em>This does not find all speeches by anyone other than Hamlet or Ophelia!</em> It
    		finds all speeches where the <code>@who</code> attribute is not equal to <em>any
    			one</em> of the individual items in the sequence on the right. This means that
