@@ -26,11 +26,11 @@
       <!--<h3>subheadings.</h3>-->
       			
       			
-   	<p>As we learned in the Relax NG tutorial, we write and associate schema to constrain the content of an XML document. This helps if you are working with  many  complex files or trying to coordinate a team of coders to maintain consistency across an entire project. Relax NG is a <dfn>grammar-based schema language</dfn>, which means that it defines the hierarchical relationship of elements and attributes in an entire document from its starting root to all its branches. It may seem like Relax NG ought to be able to govern everything we need, but there are certain kinds of constraints that it can’t handle. For these we apply a <dfn>rule-based schema</dfn> to function alongside our grammar-based schema in order to fine-tune precise relationships among elements and attributes.  We work with Schematron, a rule-based constraint language that uses XPath expressions to <em>assert</em> or <em>report</em> on the presence or absence of patterns. Rule-based schema languages like Schematron typically do not constrain every element and attribute like our Relax NG Schemas. Instead, when we write Schematron, we usually concentrate on just a few things that we need to control very precisely, as we will show you here.</p>
+<section>   	<p>As we learned in the Relax NG tutorial, we write and associate schema to constrain the content of an XML document. This helps if you are working with  many  complex files or trying to coordinate a team of coders to maintain consistency across an entire project. Relax NG is a <dfn>grammar-based schema language</dfn>, which means that it defines the hierarchical relationship of elements and attributes in an entire document from its starting root to all its branches. It may seem like Relax NG ought to be able to govern everything we need, but there are certain kinds of constraints that it can’t handle. For these we apply a <dfn>rule-based schema</dfn> to function alongside our grammar-based schema in order to fine-tune precise relationships among elements and attributes.  We work with Schematron, a rule-based constraint language that uses XPath expressions to <em>assert</em> or <em>report</em> on the presence or absence of patterns. Rule-based schema languages like Schematron typically do not constrain every element and attribute like our Relax NG Schemas. Instead, when we write Schematron, we usually concentrate on just a few things that we need to control very precisely, as we will show you here.</p>
    	
-   	<p><strong>Relax NG</strong> and <strong>Schematron</strong> are commonly used together. For example, let’s say we are collecting data from 100 people and want to record their votes for their favorite ice cream flavor: vanilla, chocolate, or strawberry. Limiting our attributes to those three flavors and defining the responses as integers would not be difficult using Relax NG. But what if, instead of 31 votes for chocolate, I accidentally entered 131 votes? A basic Relax NG schema that defines the element vote this way <code>vote = element vote {type, xsd:integer}</code> and <code>type = attribute type {"chocolate" | "vanilla" | "strawberry" }</code> wouldn’t catch any problems with the specific numbers I enter, because the data type for integer is not something we can set to specific numerical values in relation to a total. If we want to make sure that the numerical values of all <code>&lt;vote&gt;</code> elements add up to 100, Schematron is the tool we need. More generally, we use Schematron if we need to define rules that assert relationships in the content of our elements and attributes, such as (among other things) to make sure that the preceding-sibling::header does not contain the identical text of a following-sibling header, to check that elements holding page number values appear in the correct order, or to flag every time we are missing a punctuation mark that is supposed to appear inside a sentence element.</p>
+   	<p><strong>Relax NG</strong> and <strong>Schematron</strong> are commonly used together. For example, let’s say we are collecting data from 100 people and want to record their votes for their favorite ice cream flavor: vanilla, chocolate, or strawberry. Limiting our attributes to those three flavors and defining the responses as integers would not be difficult using Relax NG. But what if, instead of 31 votes for chocolate, I accidentally entered 131 votes? A basic Relax NG schema that defines the element vote this way <code>vote = element vote {type, xsd:integer}</code> and <code>type = attribute type {"chocolate" | "vanilla" | "strawberry" }</code> wouldn’t catch any problems with the specific numbers I enter, because the data type for integer is not something we can set to specific numerical values in relation to a total. If we want to make sure that the numerical values of all <code>&lt;vote&gt;</code> elements add up to 100, Schematron is the tool we need. More generally, we use Schematron if we need to define rules that assert relationships in the content of our elements and attributes, such as (among other things) to make sure that the preceding-sibling::header does not contain the identical text of a following-sibling header, to check that elements holding page number values appear in the correct order, or to flag every time we are missing a punctuation mark that is supposed to appear inside a sentence element.</p></section>
    	   	
-   	<h3>Superstructure and namespaces (the stuff at the top of the document)</h3>
+  <section> 	<h3>Superstructure and namespaces (the stuff at the top of the document)</h3>
    	
    	<p>When you open a new <strong>Schematron</strong> file in &lt;oXygen/&gt;, you will see the following <strong>superstructure</strong>:</p>
    	<pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
@@ -57,11 +57,11 @@
 &lt;/schema&gt;</pre>
    	
    	<!--For example, if you are looking for <code>&lt;div&gt;</code> elements within <code>&lt;body&gt;</code> elements: <code>//body/div</code> would <strong>not</strong> find you what you are looking for; <strong>//tei:body/tei:div</strong> would. <strong>Note: This is only true for elements, not attributes, which exist outside of namespaces.</strong> Putting it all  together, in a Schematron rule referring to <code>@ref</code> attributes on TEI <code>&lt;div&gt;</code> elements, we would write: <code>//tei:body/tei:div/@ref</code>.-->
-   	<p><strong>About namespaces:</strong> Documents are in a namespace or in no namespace, as signaled in their root element. We can see in the code above that a Schematron document has a special <code>xmlns</code>  (or XML namespace) attribute that seems to point to a web address.  This is not really a website (though sometimes developers put up placeholder websites at namespace URIs): it's simply a unique uniform resource identifier (that is what URI stands for) and it is simply a unique string of characters used to identify the Schematron namespace.  The TEI has its own namespace URI too, and so do other forms of XML (like  XSLT) that we are presenting in this course. If your input document is in the TEI namespace (that is, the root element is <code>&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"></code>, you have to include the <code>&lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;</code> element we illustrated above in your Schematron and you must use the <code>tei:</code> prefix before all references to elements <strong>(but not attributes)</strong> from the input TEI document in your Schematron file. That means you need to write <code>//tei:body/tei:div</code> and not just <code>//body/div</code>. Attributes are special because they exist in <strong>no namespace</strong>, so they do not take a prefix (and you will not be able to find them if you apply the prefix). So if we are looking for <code>@ref</code> attributes on TEI <code>&lt;div&gt;</code> elements, we would write: <code>//tei:body/tei:div/@ref</code>. You can think of this as a magic incantation that’s needed for Schematron to match just the elements in the TEI document, but if you’d like more explanation of how namespaces work, see http://www.w3schools.com/xml/xml_namespaces.asp.</p>
+   	<p><strong>About namespaces:</strong> Documents are in a namespace or in no namespace, as signaled in their root element. We can see in the code above that a Schematron document has a special <code>xmlns</code>  (or XML namespace) attribute that seems to point to a web address.  This is not really a website (though sometimes developers put up placeholder websites at namespace URIs): it's simply a unique uniform resource identifier (that is what URI stands for) and it is simply a unique string of characters used to identify the Schematron namespace.  The TEI has its own namespace URI too, and so do other forms of XML (like  XSLT) that we are presenting in this course. If your input document is in the TEI namespace (that is, the root element is <code>&lt;TEI xmlns="http://www.tei-c.org/ns/1.0"></code>, you have to include the <code>&lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;</code> element we illustrated above in your Schematron and you must use the <code>tei:</code> prefix before all references to elements <strong>(but not attributes)</strong> from the input TEI document in your Schematron file. That means you need to write <code>//tei:body/tei:div</code> and not just <code>//body/div</code>. Attributes are special because they exist in <strong>no namespace</strong>, so they do not take a prefix (and you will not be able to find them if you apply the prefix). So if we are looking for <code>@ref</code> attributes on TEI <code>&lt;div&gt;</code> elements, we would write: <code>//tei:body/tei:div/@ref</code>. You can think of this as a magic incantation that’s needed for Schematron to match just the elements in the TEI document, but if you’d like more explanation of how namespaces work, see http://www.w3schools.com/xml/xml_namespaces.asp.</p></section>
    	
    	<h3>The skeleton of a Schematron rule</h3>
    	
-   	<h4>Pattern, Rule, and Context</h4>
+   <section>	<h4>Pattern, Rule, and Context</h4>
    	
    	<p>Each new schema rule starts with a <code>&lt;pattern&gt;</code> element. Inside the <code>&lt;pattern&gt;</code> is a <code>&lt;rule&gt;</code> element with an <code>@context</code> attribute. It looks like this:</p>
    	
@@ -73,10 +73,10 @@
    	
    	<p>We can set as many rules as we wish inside a <code>pattern</code> element, which simply works as a convenient organizing structure for you to put related rules together. A <code>pattern</code> element may contain one or multiple <code>rule</code> elements as you wish. A <code>rule</code> element must have a <code>@context</code> attribute that is distinct from other <code>rule</code> elements in your Schematron file. 
 The value of <code>@context</code> is the specific place in your XML document where the rule applies. (When you have associated your Schematron file with your XML and do validation checking in &lt;oXygen/&gt;, the XPath pattern defined by your <code>@context</code> is where &lt;oXygen/&gt; will mark a validation error triggered by a test of your Schematron rule.) The form this takes is called an <strong><dfn>XPath pattern</dfn></strong> and we also use it in XSLT: it is a pattern of elements and/or attributes set in relation to each other that might appear at any level of your document hierarchy: For example, if you write the XPath pattern <code>p/said</code> as the value of <code>@context</code>,  rule context will apply to <em>any</em> <code>&lt;said&gt;</code> elements within a <code>&lt;p&gt;</code> element positioned at any level in the XML document hierarchy, whether the parent <code>p</code> element is sitting inside a TEI header in an outer level of the hierarchy or deeply nested inside a <code>note</code> element inside another body <code>p</code>. <strong>XPath pattern expressions</strong> let us locate particular patterned relationships <em>wherever they sit in the document hierarchy</em> so they can be a powerful tool to keep our Schematron and XSLT code tidy and efficient. Why is this more efficient? Because we do not have to write the same rule for <code>said</code> elements over and over again depending on the different XPath positions of <code>p</code>, and we may save computer parsing time by not starting our searches over and over again from the document node were we to begin with <code>//p/said</code>. Constructing an <strong>XPath pattern</strong>, <code>p/said</code> takes advantage of the relational patterns that rule-based  schema languages are designed for.  
-XPath patterns can also be set to use predicates, so that, for example, <code>said[@who]</code> matches on any <code>&lt;said&gt;</code> elements that have <code>@who</code> attributes anywhere they are sitting in our XML document.</p>
+XPath patterns can also be set to use predicates, so that, for example, <code>said[@who]</code> matches on any <code>&lt;said&gt;</code> elements that have <code>@who</code> attributes anywhere they are sitting in our XML document.</p></section>
    	
    	
-   	<h4>Assert or Report</h4>
+   	<section><h4>Assert or Report</h4>
    	
    	<p>The <code>&lt;assert&gt;</code> or <code>&lt;report&gt;</code> element is the heart of each <strong>Schematron</strong> rule. Within each <code>&lt;rule&gt;</code> element we can set one or more <code>&lt;assert&gt;</code> or <code>&lt;report&gt;</code> elements, which contain an attribute called <code>@test</code>. With all of these pieces together, here is the basic skeleton of a <strong>Schematron</strong> rule using <code>&lt;assert&gt;</code>:</p>
    	
@@ -86,11 +86,11 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
 	&lt;/rule&gt;
 &lt;/pattern&gt;</pre>
    	
-   	<p>The value of <code>@test</code> is a literal XPath statement <em>defined in immediate relation to the current XPath location of <code>@context</code>, wherever this is</em>. The <code>@test</code> sets a condition for the True or False value of something you write here: For example, does particular string pattern exist here? Does the numerical value of this equal  the preceding::sibling of the current context? Imagine the <dfn>current context</dfn> to be shifting with each discovery of the XPath pattern. As the validation checker lands on each new instance, it runs your <code>@test</code> and checks for some condition, true or false, that hinges on that pattern in some way.  Basically, <code>@context</code> tells &lt;oXygen/&gt; where to look, and <code>@test</code> tells &lt;oXygen/&gt; what to test when it gets there. You then type a message, your very own customized validation error message, inside the <code>&lt;assert&gt;</code> or <code>&lt;report&gt;</code> element as its text content, and explain (to yourself and/or your project team) the reason the rule is firing. When a rule fires, it will generate an alert message in &lt;oXygen/&gt; just like a message from Relax NG, although in Schematron, it’s your own custom-made message that fires.</p>
+   	<p>The value of <code>@test</code> is a literal XPath statement <em>defined in immediate relation to the current XPath location of <code>@context</code>, wherever this is</em>. The <code>@test</code> sets a condition for the True or False value of something you write here: For example, does particular string pattern exist here? Does the numerical value of this equal  the preceding::sibling of the current context? Imagine the <dfn>current context</dfn> to be shifting with each discovery of the XPath pattern. As the validation checker lands on each new instance, it runs your <code>@test</code> and checks for some condition, true or false, that hinges on that pattern in some way.  Basically, <code>@context</code> tells &lt;oXygen/&gt; where to look, and <code>@test</code> tells &lt;oXygen/&gt; what to test when it gets there. You then type a message, your very own customized validation error message, inside the <code>&lt;assert&gt;</code> or <code>&lt;report&gt;</code> element as its text content, and explain (to yourself and/or your project team) the reason the rule is firing. When a rule fires, it will generate an alert message in &lt;oXygen/&gt; just like a message from Relax NG, although in Schematron, it’s your own custom-made message that fires.</p></section>
    
-   	<h3>Writing the rules</h3>
+   	<section><h3>Writing the rules</h3>
    	
-   	<h4>An assert rule</h4>
+   	<section><h4>An assert rule</h4>
    	
    	<p>Okay, now that we understand the structure, let’s construct some sample rules so we understand how and why they function. Let’s say you’re keeping track of points in a game where the goal is to get as many points as possible. The person in first place got 23 points, second place got 16, and third place got 12. Let’s construct <a href="gameResultsSch.xml">a basic XML document</a> to store the results:</p>
    	
@@ -115,18 +115,11 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
 		<code>&lt;assert test="number(first) gt number(second)"&gt;The first-place score must be greater than the second-place score.&lt;/assert&gt;</code>
 	&lt;/rule&gt;
 &lt;/pattern&gt;</pre>
-   	<p>When we associate our schema, if we have entered 116 instead of 16 for the second place score, our schema will fire an error because what we typed fails to fulfill our Schematron assert test. Notice that we need to use an Xpath <code>number() </code>function for our rule to treat the contents of the <code>first</code> and <code>second</code> elements as a numerical value to be compared. Note: XPath functions that return numerical values are frequently used in Schematron for comparison tests.  Some of these functions operate over text content that needs to be converted to numbers as we did here, and some of them calculate and measure things (like string-length() to return a numerical value.  Here are the standard wyas to indicate comparisons in XPath and Schematron:</p> 
-   		<ul>
-   			<li>equality: <code>eq</code> or <code>=</code></li>
-   			<li>greater than: <code>gt</code> or <code>&amp;gt;</code> </li>
-   			<li>greater than or equal to: <code>ge</code></li>
-   			<li>less than: <code>lt</code> or <code>&amp;lt;</code></li>
-   			<li>less than or equal to: <code>le</code></li>
-   			<li>not equal to: <code>ne</code> or <code>!=</code></li>
-   		</ul>
-   	<span class="smaller"><strong>A note on inconsistency between Relax NG and Schematron:</strong> Even if you write <a href="gameResults.rnc">a Relax NG schema</a> as we did for our gameResults.xml file to define and xsd:integer data type for the element contents of <code>first</code>, <code>second</code>, and <code>third</code>, we discover that <a href="gameResults.sch">our Schematron</a> still reads the contents of those elements as a string of text until we convert them to a number in XPath. The Relax NG grammar constructs a numerical data format, then, that is nevertheless not read as a number by an XPath parser unless it is prompted to do so. (We provide links to our sample Relax NG and Schematron files so you can test this for yourself.)</span>	
+   	<p>When we associate our schema, if we have entered 116 instead of 16 for the second place score, our schema will fire an error because what we typed fails to fulfill our Schematron assert test. Notice that in this example we need to use an Xpath <code>number() </code>function for our rule to treat the contents of the <code>first</code> and <code>second</code> elements as a numerical value to be compared. This is because we are using a <dfn>value comparison operator</dfn> which we discuss in more detail in the section on comparison operators later in this tutorial.</p>    	
+   	<span class="smaller"><strong>A note on inconsistency between Relax NG and Schematron:</strong> Even if you write <a href="gameResults.rnc">a Relax NG schema</a> as we did for our gameResults.xml file to define and xsd:integer data type for the element contents of <code>first</code>, <code>second</code>, and <code>third</code>, we discover that <a href="gameResults.sch">our Schematron</a> still reads the contents of those elements as a string of text until we convert them to a number in XPath. The Relax NG grammar constructs a numerical data format, then, that is nevertheless not read as a number by an XPath parser unless it is prompted to do so. (We provide links to our sample Relax NG and Schematron files so you can test this for yourself.)</span>
+   		</section>
    	
-   	<h4>A report rule</h4>
+   <section>	<h4>A report rule</h4>
    	
    	<p>Now that we have a working schema rule to test the difference between the first- and second- place scores, let’s make a rule that tests the second- and third-place scores. The rule is essentially the same (the second-place score is always greater than the third-place score), but we’ll use the <code>report</code> element instead to demonstrate how it works. We must add a new test within our rule since it shares the same @context in the <code>gameResults</code> element.  <strong>Note:</strong> If we attempt to define a new rule with the <em>same</em>:<code>@context</code> as the first, one of the two rules will be applied and the other ignored! So within a given rule @context, we need to define all our assert and report tests together.</p>
   
@@ -149,16 +142,58 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
                 The second-place score must be greater than the  third-place score.
             &lt;/report&gt;
    	</pre>
-   	
-   	<h3>Associating a Schematron schema with your XML and testing it</h3>
+   </section>
+   		<section>
+   			<h3>Testing for comparison</h3>
+   			<p>XPath functions that return numerical values are frequently used in Schematron for comparison tests. Some of these functions operate over text content that needs to be converted to numbers as we did here, and some of them calculate and measure things (like string-length() to return a numerical value.  Here are the standard ways to indicate comparisons in XPath and Schematron, with <dfn>value comparison</dfn> and with <dfn>general comparison</dfn>. These function a little differently, as we note below:</p> 
+   			<h4>Value comparison</h4>
+   			<p>The operators below only work to compare <strong>exactly one</strong> item to <strong>exactly one</strong> other item: they are for one-to-one comparison only:</p>
+   			<ul>
+   				<li>equality: <code>eq</code> or <code>=</code></li>
+   				<li>greater than: <code>gt</code> or <code>&amp;gt;</code> </li>
+   				<li>greater than or equal to: <code>ge</code></li>
+   				<li>less than: <code>lt</code> or <code>&amp;lt;</code></li>
+   				<li>less than or equal to: <code>le</code></li>
+   				<li>not equal to: <code>ne</code> or <code>!=</code></li>
+   			</ul>
+   			<p>Note: Value comparison of numbers may require you to use the <code>number()</code> function to convert a number string in your element content into an integer. That will not be necessary in using <code>count()</code> or <code>sum()</code> functions, however. For example, we can write a <code>report</code> test to fire if there is a count of more than three instances of a <code>&lt;geo&gt;</code> element inside a <code>&lt;p&gt;</code> (or paragraph), with:</p>
+   			<pre>&lt;rule context="p"&gt;
+   		&lt;report test="count(geo) gt 3">
+   		There should never be more than three geo elements inside a paragraph!
+   		&lt;/report&gt;
+   	&lt;/rule&gt;
+   	</pre>
+   			<p>This works because the output of the <code>count()</code> function is a single
+   				item, an integer, and it is being compared to another single item, the integer value
+   				3.</p>
+   			<p>You can also use value comparison operators to compare strings of text (not just numbers). For example, we could make a report test for <code>&lt;place&gt;</code> elements with an <code>@name</code> attribute set to "london" to help us catch this in replace it with "London" instead. This works because each <code>&lt;place&gt;</code>  element can contain only one <code>@name</code> attribute to compare to a single string of text, "london". It also works (and returns false) if there is no <code>@name</code> attribute because it permits an empty sequence (no items). But if there is more than one of either item the comparison cannot be made and throws an XPath syntax error.</p>	
+   			<h4>General comparison</h4>
+   			<p>While <dfn>value comparison operators</dfn> can compare only one thing on the left to one thing
+   				on the right, <dfn>general comparison operators</dfn> can have one or more items on either side
+   				of the comparison (also zero items, since the empty sequence is also allowed). The general comparison operators are:</p>
+   			<ul>
+   				<li><strong>=</strong> equal to</li>
+   				<li><strong>!=</strong> not equal to</li>
+   				<li><strong>&gt;</strong> greater than (may also be written
+   					<strong>&amp;gt;</strong>)</li>
+   				<li><strong>&gt;=</strong> greater than or equal to (not less than; may also be
+   					written <strong>&amp;gt;=</strong>)</li>
+   				<li><strong>&lt;</strong> less than (may also be written
+   					<strong>&amp;lt;</strong>)</li>
+   				<li><strong>&lt;=</strong> less than or equal to (not greater than; may also be
+   					written <strong>&amp;lt;=</strong>)</li>
+   			</ul>
+  <p>These operators are more commonly used than value comparisons in Schematron expressions because they have broader applicability (for one-to-one and many-to-one comparisons. When testing numerical strings as element content, general comparison operators also do not seem to require conversion with the <code>number()</code> function. For more detailed discussion of comparison operators in XPath, please see our <q><a href="explainXPath.html">Follow the XPath!</a></q> tutorial.</p> 			
+   		</section>
+   		<section>   	<h3>Associating a Schematron schema with your XML and testing it</h3>
    <p>Associating a <strong>Schematron</strong> schema is a lot like associating a Relax NG schema. While viewing your XML document, in the taskbar, click on Document -&gt; Schema -&gt; Associate Schema. From there, locate your schema file (the file extension should be <strong>.sch</strong>). When you associate a .sch file, &lt;oXygen/&gt; should automatically set the schema type to Schematron. <em>A note on mindful file management:</em> Remember to save your Schematron in a directory where you can easily and consistently locate it. Finalize that, and &lt;oXygen/&gt; should insert a superscript that looks like this:</p>
    	
    	<pre>&lt;?xml-model href=<code>"your_file_name.sch"</code> type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?&gt;</pre>
    	
    	<p>If you also have a Relax NG schema associated, you will have two different schema lines at the top of your XML document. The two different kinds of schema will function together so that as you code the red square in &lt;oXygen/&gt; will appear as validation errors. The bottom window will feature messages associated with these validation errors, and this will include the messages you write in the text content of your Schematron <code>assert</code> and <code>report</code> elements.</p>
-   	<p>When you associate your schema, <strong>always tinker with your XML</strong> to create conditions that will cause your Schematron rules to fire! Testing your schema code should be a back-and-forth process to ensure that your assert and report tests are functioning as you want them to. </p>
+   	<p>When you associate your schema, <strong>always tinker with your XML</strong> to create conditions that will cause your Schematron rules to fire! Testing your schema code should be a back-and-forth process to ensure that your assert and report tests are functioning as you want them to. </p></section>
    	
-   	<h3>More information and examples</h3>
+  <section> 	<h3>More information and examples</h3>
    	<ul>
    		<li>Wendell Piez and Debbie Lapeyre’s <a href="http://www.mulberrytech.com/papers/schematron-Philly.pdf">Introduction to Schematron</a>: a very detailed and engaging tutorial with many examples.</li>
    		<li>Obdurodon’s <a href="http://dh.obdurodon.org/schematron-class-01.html">Examples of Schematron from our projects</a>: See if you can figure out Schematron rules that would constrain the sample cases described here.</li>
@@ -168,6 +203,6 @@ XPath patterns can also be set to use predicates, so that, for example, <code>sa
    		<li><a href="https://github.com/ebeshero/Amadis-in-Translation/blob/master/XML-and-Schematron/Amadis.sch">Amadis in Translation project Schematron</a>: a wide range of sample rules to study.</li>
    		<li>The <a href="http://www.schematron.com">Schematron</a> website</li>
    		
-   	</ul>
+   	</ul></section></section>
    </body>
 </html>
