@@ -27,7 +27,7 @@
       <p>XQuery is one of the XML family of languages, and it builds on what you’ve learned
          of XPath. We use XQuery to work with databases of stored and indexed XML files. XML
          databases  basically work by storing XML files and building "persistent indexes" for
-         them--and this indexing capacity makes it quick and efficient to search for elements,
+         them—and this indexing capacity makes it quick and efficient to search for elements,
          attribute values (and the other things we’ve been doing with XPath expressions) across
          collections of files, by effectively reviewing the index that the database builds
          for each file, so that the computer doesn’t have to review the entire file. Basically
@@ -109,11 +109,11 @@
       
       <h3>How the database is organized: </h3>
       			
-      <p>eXist is set up like a file directory with a hierarchical order--a little like a massive
-         XML file with subfiles! So there’s a single root directory called <strong>"db"</strong>, with subfolders containing folders (or collections), which may in turn contain their
+      <p>eXist holds file directories, or <dfn>>collections</dfn> in a hierarchical structure, so that you can access and query a collection of XML files all together. Think of a collection as a big
+         XML file with subfiles inside, and you can step up and down the file directory structure just as you step up and down the directory structure using the same XPath axes you use to search within a single XML document. In the eXist database there is a single root directory called <strong><code>db</code></strong>, with subfolders containing folders (or collections), which may in turn contain their
          own subfolders (more collections), and finally files.  I’ve installed a copy of our
-         Georg Forster XML file here, in a collection called "voyages," inside a directory
-         called "pacific", which is so its address is <code>/db/pacific/voyages/ForsterGeorgComplete.xml</code> . 
+         Georg Forster XML file here, in a collection called <q>voyages</q>, inside a directory
+         called <q>pacific</q>, and that means that its address in our database is <code>/db/pacific/voyages/ForsterGeorgComplete.xml</code>, starting from the root <code>db</code> directory. 
       </p>
       			
       <p>As we work on project development, you may find that you want to upload your own collection
@@ -149,7 +149,7 @@
             
          </li>
          
-         <li>Try accessing other files in this same collection space: HwksV2Ch4-8PNum.xml and cookVoy2Pnum.xml<br />
+         <li>Try accessing other files in this same <code>voyages</code> collection space: <code>HwksV2Ch4-8PNum.xml</code> and <code>cookVoy2Pnum.xml</code><br />
             <br />
             
          </li>
@@ -171,8 +171,8 @@
          Encoding Initiative, or TEI. This a language of XML with designated rules and tag
          sets for coding digital versions of literary, linguistic, historical, and cultural
          texts, and it represents an international standard for coding work consistently for
-         long-term, sustainable archives. TEI is also a community (of which I’m a member),
-         and people serve on its ruling Council to make judgment calls on best practices and
+         long-term, sustainable archives. TEI is also a community
+         and people (like me) serve on its Technical Council to make judgment calls on best practices and
          coding guidelines. We use TEI to build digital archives that can "talk to" each other
          around the world, and follow recognizable, standard patterns. We <em>could</em> make up our
          own XML tag sets, but when coding cultural resources, it’s a good idea to make your
@@ -183,8 +183,8 @@
          element: <code>&lt;TEI&gt;</code> .
       </p>
       
-      <p>XQuery needs something called a <b>namespace declaration</b> when we use the TEI, in order to properly follow its index and in order to follow
-         the schema rules for TEI (to determine if your file is <b>valid</b> as a TEI document). Similarly, we use a namespace declaration for HTML, to say there
+      <p>XQuery requires a <strong>namespace declaration</strong> when we use the TEI in order to properly follow its index and in order to follow
+         the schema rules for TEI (to determine if your file is <b>valid</b> as a TEI document). Similarly, we also use a namespace declaration for HTML, to say there
          are certain rules governing the relationship of tags, their organization, etc.  When
          we query our TEI files, we’ll need to include the following namespace declaration
          as the first statement of our XQuery: <code>declare default element namespace "http://www.tei-c.org/ns/1.0";<br />
@@ -198,11 +198,11 @@
       <p><code>declare default element namespace "http://www.tei-c.org/ns/1.0";<br />
             collection('/db/pacific/literary')/distinct-values(.//body//persName)</code></p>
       
-      <h3><a id="FLWOR"></a>"FLWOR" Expressions in XQuery
+      <h3><a id="FLWOR"></a><q>FLWOR</q> Expressions in XQuery
       </h3>
       
       <p><q>Flower</q> or FLWOR expressions are a powerful tool in XQuery, letting us work in more
-         complex ways with querying and remixing information in files and collections--sometimes
+         complex ways with querying and remixing information in files and collections—sometimes
          both in the same expression! Here's a primer on FLWOR (or really, LFWOR!):
       </p>
       
