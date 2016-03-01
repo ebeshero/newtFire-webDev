@@ -1,0 +1,43 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+<head><title>Popular People of Mitford Collection: Table of Person References Occuring More Than 15 Times in the Collection </title></head>
+<body>
+    <table>
+{
+let $mitford :=  collection('/db/mitford')
+let $mitfordText :=  $mitford/* 
+let $baseURI := $mitford/base-uri()
+(:let $countURI := count($baseURI):)
+let $title := $mitford//titleStmt/title/string()
+let $body := $mitford//text/body
+let $persRefs := data($mitford//body//persName/@ref)
+let $persRef := distinct-values($persRefs)
+for $i in $persRef
+let $translation := translate($i, '#' , '')
+let $popPers := $mitfordText[.//persName/@ref= $i] 
+let $Title :=  $popPers//titleStmt/title
+let $Uri :=  $popPers/base-uri()
+let $countMatch := count($popPers)
+where $countMatch gt 15 
+order by $translation descending
+(:return string-join(($translation, $Title), "; ") :)
+return
+<tr>
+<td>{$translation}</td>
+<td>
+    <table>
+    {
+        for $u in $Uri
+        return
+            <tr>
+                <td>{$u}</td>
+            </tr>
+    }   
+    </table>
+</td>
+</tr>
+}
+</table>
+</body>
+</html>

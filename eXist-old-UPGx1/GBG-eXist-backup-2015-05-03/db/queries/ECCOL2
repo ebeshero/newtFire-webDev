@@ -1,0 +1,44 @@
+xquery version "3.0";
+<eccoLocation>
+    <listBibl>
+ {       
+let $coll:= collection ('/db/ECCO2/')
+let $bibls:= $coll//bibl
+let $authors := distinct-values($bibls/author/normalize-space(text()))
+for $author at $pos in $authors
+
+where $author
+order by $pos descending
+return
+
+  <bibl n="{$pos}">
+<author>
+{$author}</author>
+
+{
+let $titles := distinct-values($bibls/author[.=$author]/following-sibling::title/normalize-space(text()))
+let $dates:=distinct-values($bibls/author[.=$author]/following-sibling::date/normalize-space(text()))
+
+for $title in $titles
+for $date in $dates
+
+where string-length($date) lt 12 
+order by $date
+    return 
+    <pub> 
+   <title>{$title}</title>
+        
+       <date>{$date}</date>
+       
+       {let $notes:=$bibls/title[.=$title]/following-sibling::note/text()
+       for $note in $notes
+       where string-length($note) gt 0
+       return
+       <note>{$note}</note>
+       }     
+</pub>
+}
+</bibl>
+}
+</listBibl>
+</eccoLocation>

@@ -1,0 +1,16 @@
+xquery version "3.0";
+
+<ul>
+    {
+let $nelson := collection('/db/NellNelson')/*
+let $book := collection('/db/NellNelson/book')/*
+let $articles := collection('/db/NellNelson/articles')/*
+
+let $locations := distinct-values($nelson//location/string())
+for $i in $locations
+
+return
+    
+    <li>{$i}</li>
+    }
+    </ul>

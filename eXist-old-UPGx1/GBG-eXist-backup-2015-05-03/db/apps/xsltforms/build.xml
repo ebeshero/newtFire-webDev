@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="xar" name="xsltforms"><property name="project.version" value="565"/><property name="project.app" value="xsltforms"/><property name="build.dir" value="build"/><target name="xar"><mkdir dir="${build.dir}"/><zip basedir="." destfile="${build.dir}/${project.app}-${project.version}.xar" excludes="${build.dir}/*"/></target></project>

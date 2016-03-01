@@ -1,0 +1,49 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+    <head><title>Index of People Mentiond in the Pacific Poetry Collection</title></head>
+<body>
+    <table>
+        <tr>
+            <th>PERSON</th>
+            <th>POEM</th>
+            <th>LINE</th>
+            <th>PARAGRAPH</th>
+        </tr>
+    {
+let $collection := collection('/db/pacific/literary')/*
+let $collectionText := $collection//text
+let $people1 := $collectionText//persName
+let $peep2 := $collectionText//rs[@type="person"]
+let $people2 := $peep2/@ana
+let $allMyPeep :=($people1, $people2)
+let $people := distinct-values($allMyPeep)
+for $i in $people
+let $people1Title :=$people1[./normalize-space() = $i]/ancestor::TEI//titleStmt/title/string()
+let $people2Title := $peep2[@ana/string() = $i]/ancestor::TEI//titleStmt/title/string()
+let $poem := ($people1Title, $people2Title)
+let $poemTitle := distinct-values($poem)
+for $j in $poemTitle
+let $people1Line := $collection//text//l[.//persName = $i]/@n
+let $people2Line := $collection//text//l[.//rs[@type="person"][@ana/string() = $i] ]/@n
+let $people1Paragraph := $collection//text//p[.//persName = $i]/position()
+let $people2Paragraph := $collection//text//p[.//rs[@type="person"][@ana/string() = $i]]/position()
+return
+<tr>
+<td>{$i}</td>
+<td>{$j}</td>
+<td>{
+    let $line:= ($people1Line, $people2Line)
+    return string-join($line,",")
+    }
+</td>
+<td>{
+    let $paragraph := ($people1Paragraph, $people2Paragraph)
+    return $paragraph
+    }
+</td>
+</tr>
+}
+</table>
+</body>
+</html>

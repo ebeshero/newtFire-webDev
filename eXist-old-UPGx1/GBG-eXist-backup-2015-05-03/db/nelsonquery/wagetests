@@ -1,0 +1,4 @@
+let $schism := collection('/db/NellNelson/book')/*
+let $wage := $schism//num[@type="wage"]//@amount/string()
+let $cost := $schism//num[@type="cost"]//@amount/string()
+return $cost

@@ -1,0 +1,45 @@
+xquery version "3.0";
+xquery version "1.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+<head><title>Cast List of Characters in "The Injured Islanders" and "The Elegy on Captain Cook"</title></head>
+ <body>
+<table>       
+{
+let $coll := collection ('/db/greensburg/pacific/literary')
+
+let $texts := $coll//TEI
+let $body := $texts//body
+let $persName := $body//persName
+let $rsName := $body//rs[@type="person"]/@ana
+
+let $AllNames := $persName | $rsName
+
+let $distinctNames := distinct-values($AllNames)
+
+(:let $title := $text//titleStmt/title:)
+
+for $name in $distinctNames
+for $text in $texts
+let $title := $text//titleStmt/title
+let $line := $text//body//l
+
+(:let $lnumber := $rsName/parent::l/@n | $persName/parent::l/@n:)
+
+(:let $matchtitle := $title[$body//$name]:)
+where $name = $body//persName | $body//rs[@type="person"]/@ana
+
+(:return $match :)
+order by $name, $title 
+
+return 
+    
+<tr>
+<td>{$text[$name = $body//persName | $body//rs[@type="person"]/@ana]//$title}</td>
+<td>{$name}</td>
+<td>Line numbers: {string-join(($text//l[persName | rs[@type="person"] eq $name]/@n), ", ")}</td>
+</tr>
+}
+</table>
+</body>
+</html>

@@ -1,0 +1,291 @@
+xquery version "3.0";
+
+let $nelson := collection('/db/NellNelson')/*
+let $book := collection('/db/NellNelson/book')/*
+let $articles := collection('/db/NellNelson/articles')/*
+
+let $vall := distinct-values($nelson//@connotation/string())
+for $i in $vall
+
+(: NELL Voice: sarcasmWit :)
+let $nvBsarcasmWit := $book//nellVoice[@connotation="sarcasmWit"]
+let $countnvBsarcasmWit := count($nvBsarcasmWit)
+
+let $nvAsarcasmWit := $articles//nellVoice[@connotation="sarcasmWit"]
+let $countnvAsarcasmWit:= count($nvAsarcasmWit)
+
+(: Nell Voice: pity :)
+let $nvBpity := $book//nellVoice[@connotation="pity"]
+let $countnvBpity := count($nvBpity)
+
+let $nvApity := $articles//nellVoice[@connotation="pity"]
+let $countnvApity:= count($nvApity)
+
+(: Nell Voice: positive :)
+let $nvBpositive := $book//nellVoice[@connotation="positive"]
+let $countnvBpositive := count($nvBpositive)
+
+let $nvApositive := $articles//nellVoice[@connotation="positive"]
+let $countnvApositive:= count($nvApositive)
+
+(: Nell Voice: negative :)
+let $nvBnegative := $book//nellVoice[@connotation="negative"]
+let $countnvBnegative := count($nvBnegative)
+
+let $nvAnegative := $articles//nellVoice[@connotation="negative"]
+let $countnvAnegative:= count($nvAnegative)
+
+(: Nell Voice: woe :)
+let $nvBwoe := $book//nellVoice[@connotation="woe"]
+let $countnvBwoe := count($nvBwoe)
+
+let $nvAwoe := $articles//nellVoice[@connotation="woe"]
+let $countnvAwoe:= count($nvAwoe)
+
+(: Nell Voice: descriptionNeutral :)
+let $nvBdescriptionNeutral := $book//nellVoice[@connotation="descriptionNeutral"]
+let $countnvBdescriptionNeutral := count($nvBdescriptionNeutral)
+
+let $nvAdescriptionNeutral := $articles//nellVoice[@connotation="descriptionNeutral"]
+let $countnvAdescriptionNeutral:= count($nvAdescriptionNeutral)
+
+(: Nell Voice: intimidated :)
+let $nvBintimidated := $book//nellVoice[@connotation="intimidated"]
+let $countnvBintimidated := count($nvBintimidated)
+
+let $nvAintimidated := $articles//nellVoice[@connotation="intimidated"]
+let $countnvAintimidated:= count($nvAintimidated)
+
+(: Nell Voice: angry :)
+let $nvBangry := $book//nellVoice[@connotation="angry"]
+let $countnvBangry := count($nvBangry)
+
+let $nvAangry := $articles//nellVoice[@connotation="angry"]
+let $countnvAangry:= count($nvAangry)
+
+(: Nell Voice: Sexual :)
+let $nvBsexual := $book//nellVoice[@connotation="sexual"]
+let $countnvBsexual := count($nvBsexual)
+
+let $nvAsexual := $articles//nellVoice[@connotation="sexual"]
+let $countnvAsexual:= count($nvAsexual)
+
+(: Nell Voice: offended :)
+let $nvBoffended := $book//nellVoice[@connotation="offended"]
+let $countnvBoffended := count($nvBoffended)
+
+let $nvAoffended := $articles//nellVoice[@connotation="offended"]
+let $countnvAoffended:= count($nvAoffended)
+
+(: Nell Voice: prayer :)
+let $nvBprayer := $book//nellVoice[@connotation="prayer"]
+let $countnvBprayer := count($nvBprayer)
+
+let $nvAprayer := $articles//nellVoice[@connotation="prayer"]
+let $countnvAprayer := count($nvAprayer)
+
+(: NELL VOICE ENDS HERE :)
+
+
+(: FEMININE Voice: sarcasmWit :)
+let $fvBsarcasmWit := $book//femVoice[@connotation="sarcasmWit"]
+let $countfvBsarcasmWit := count($fvBsarcasmWit)
+
+let $fvAsarcasmWit := $articles//femVoice[@connotation="sarcasmWit"]
+let $countfvAsarcasmWit:= count($fvAsarcasmWit)
+
+(: Feminine Voice: pity :)
+let $fvBpity := $book//femVoice[@connotation="pity"]
+let $countfvBpity := count($fvBpity)
+
+let $fvApity := $articles//femVoice[@connotation="pity"]
+let $countfvApity:= count($fvApity)
+
+(: Feminine Voice: positive :)
+let $fvBpositive := $book//femVoice[@connotation="positive"]
+let $countfvBpositive := count($fvBpositive)
+
+let $fvApositive := $articles//femVoice[@connotation="positive"]
+let $countfvApositive:= count($fvApositive)
+
+(: Feminine Voice: negative :)
+let $fvBnegative := $book//femVoice[@connotation="negative"]
+let $countfvBnegative := count($fvBnegative)
+
+let $fvAnegative := $articles//femVoice[@connotation="negative"]
+let $countfvAnegative:= count($fvAnegative)
+
+(: Feminine Voice: woe :)
+let $fvBwoe := $book//femVoice[@connotation="woe"]
+let $countfvBwoe := count($fvBwoe)
+
+let $fvAwoe := $articles//femVoice[@connotation="woe"]
+let $countfvAwoe:= count($fvAwoe)
+
+(: Feminine Voice: descriptionNeutral :)
+let $fvBdescriptionNeutral := $book//femVoice[@connotation="descriptionNeutral"]
+let $countfvBdescriptionNeutral := count($fvBdescriptionNeutral)
+
+let $fvAdescriptionNeutral := $articles//femVoice[@connotation="descriptionNeutral"]
+let $countfvAdescriptionNeutral:= count($fvAdescriptionNeutral)
+
+(: Feminine Voice: intimidated :)
+let $fvBintimidated := $book//femVoice[@connotation="intimidated"]
+let $countfvBintimidated := count($fvBintimidated)
+
+let $fvAintimidated := $articles//femVoice[@connotation="intimidated"]
+let $countfvAintimidated:= count($fvAintimidated)
+
+(: Feminine Voice: angry :)
+let $fvBangry := $book//femVoice[@connotation="angry"]
+let $countfvBangry := count($fvBangry)
+
+let $fvAangry := $articles//femVoice[@connotation="angry"]
+let $countfvAangry:= count($fvAangry)
+
+(: Feminine Voice: Sexual :)
+let $fvBsexual := $book//femVoice[@connotation="sexual"]
+let $countfvBsexual := count($fvBsexual)
+
+let $fvAsexual := $articles//femVoice[@connotation="sexual"]
+let $countfvAsexual:= count($fvAsexual)
+
+(: Feminine Voice: offended :)
+let $fvBoffended := $book//femVoice[@connotation="offended"]
+let $countfvBoffended := count($fvBoffended)
+
+let $fvAoffended := $articles//femVoice[@connotation="offended"]
+let $countfvAoffended:= count($fvAoffended)
+
+(: Feminine Voice: prayer :)
+let $fvBprayer := $book//femVoice[@connotation="prayer"]
+let $countfvBprayer := count($fvBprayer)
+
+let $fvAprayer := $articles//femVoice[@connotation="prayer"]
+let $countfvAprayer := count($fvAprayer)
+
+(: FEMININE VOICE ENDS HERE :)
+
+
+(: MASCULINE VOICE STARTS HERE :)
+
+(: Masculine Voice: sarcasmWit :)
+let $mvBsarcasmWit := $book//mascVoice[@connotation="sarcasmWit"]
+let $countmvBsarcasmWit := count($mvBsarcasmWit)
+
+let $mvAsarcasmWit := $articles//mascVoice[@connotation="sarcasmWit"]
+let $countmvAsarcasmWit:= count($mvAsarcasmWit)
+
+(: Masculine Voice: pity :)
+let $mvBpity := $book//mascVoice[@connotation="pity"]
+let $countmvBpity := count($mvBpity)
+
+let $mvApity := $articles//mascVoice[@connotation="pity"]
+let $countmvApity:= count($mvApity)
+
+(: Masculine Voice: positive :)
+let $mvBpositive := $book//mascVoice[@connotation="positive"]
+let $countmvBpositive := count($mvBpositive)
+
+let $mvApositive := $articles//mascVoice[@connotation="positive"]
+let $countmvApositive:= count($mvApositive)
+
+(: Masculine Voice: negative :)
+let $mvBnegative := $book//mascVoice[@connotation="negative"]
+let $countmvBnegative := count($mvBnegative)
+
+let $mvAnegative := $articles//mascVoice[@connotation="negative"]
+let $countmvAnegative:= count($mvAnegative)
+
+(: Masculine Voice: woe :)
+let $mvBwoe := $book//mascVoice[@connotation="woe"]
+let $countmvBwoe := count($mvBwoe)
+
+let $mvAwoe := $articles//mascVoice[@connotation="woe"]
+let $countmvAwoe:= count($mvAwoe)
+
+(: Masculine Voice: descriptionNeutral :)
+let $mvBdescriptionNeutral := $book//mascVoice[@connotation="descriptionNeutral"]
+let $countmvBdescriptionNeutral := count($mvBdescriptionNeutral)
+
+let $mvAdescriptionNeutral := $articles//mascVoice[@connotation="descriptionNeutral"]
+let $countmvAdescriptionNeutral:= count($mvAdescriptionNeutral)
+
+(: Masculine Voice: intimidated :)
+let $mvBintimidated := $book//mascVoice[@connotation="intimidated"]
+let $countmvBintimidated := count($mvBintimidated)
+
+let $mvAintimidated := $articles//mascVoice[@connotation="intimidated"]
+let $countmvAintimidated:= count($mvAintimidated)
+
+(: Masculine Voice: angry :)
+let $mvBangry := $book//mascVoice[@connotation="angry"]
+let $countmvBangry := count($mvBangry)
+
+let $mvAangry := $articles//mascVoice[@connotation="angry"]
+let $countmvAangry:= count($mvAangry)
+
+(: Masculine Voice: Sexual :)
+let $mvBsexual := $book//mascVoice[@connotation="sexual"]
+let $countmvBsexual := count($mvBsexual)
+
+let $mvAsexual := $articles//mascVoice[@connotation="sexual"]
+let $countmvAsexual:= count($mvAsexual)
+
+(: Masculine Voice: offended :)
+let $mvBoffended := $book//mascVoice[@connotation="offended"]
+let $countmvBoffended := count($mvBoffended)
+
+let $mvAoffended := $articles//mascVoice[@connotation="offended"]
+let $countmvAoffended:= count($mvAoffended)
+
+(: Masculine Voice: prayer :)
+let $mvBprayer := $book//mascVoice[@connotation="prayer"]
+let $countmvBprayer := count($mvBprayer)
+
+let $mvAprayer := $articles//mascVoice[@connotation="prayer"]
+let $countmvAprayer := count($mvAprayer)
+
+(: MASCULINE VOICE ENDS HERE :)
+
+let $interval := 5
+let $barSets := 15
+
+(:   :let $xPos := position(//[@connotation=$i]) * $barSets :)
+
+return 
+    
+
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g transform="translate(200,400)">
+                <line x1="40" y1="0" x2="1400" y2="0" stroke="black" stroke-width="1"/>
+                <line x1="40" y1="0" x2="40" y2="-200" stroke="black" stroke-width="1"/>
+                
+                <line x1="40" y1="-200" x2="1400" y2="-200" style=" stroke: black; stroke-dasharray: 10 10; stroke-width: 3; "/>
+                
+               
+                
+              <text x="0" y="-200" text-anchor="middle">25</text>
+
+               
+                
+                <text x="-100" y="-200" text-anchor="middle">Number of Occurances</text>
+                <text x="400" y="160" text-anchor="middle">Connotations</text>
+                
+                <text x="120" y="50" text-anchor="middle">negative</text>
+                    <line x1="{100}" y1="0" x2="{100}" y2="-{$countnvAnegative * 8}" stroke="green" stroke-width="30"/>
+                    <line x1="{130}" y1="0" x2="{130}" y2="-{$countfvAnegative * 8}" stroke="red" stroke-width="30"/>
+                    <line x1="{160}" y1="0" x2="{160}" y2="-{$countmvAnegative * 8}" stroke="blue" stroke-width="30"/>
+                    
+                    
+                    
+                    <text x="220" y="50" text-anchor="middle">positive</text>
+                    <line x1="{200}" y1="0" x2="{200}" y2="-{$countnvApositive * 8}" stroke="green" stroke-width="30"/>
+                    <line x1="{230}" y1="0" x2="{230}" y2="-{$countfvApositive * 8}" stroke="red" stroke-width="30"/>
+                    <line x1="{260}" y1="0" x2="{260}" y2="-{$countmvApositive * 8}" stroke="blue" stroke-width="30"/>
+                    
+
+</g>
+        </svg>
+

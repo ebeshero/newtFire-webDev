@@ -1,0 +1,74 @@
+xquery version "3.0";
+
+<svg>
+        <g transform="translate(200,250)">
+            <line x1="40"  y1="0"  x2="500"  y2="0"  stroke="black"  stroke-width="1"/>
+            <line x1="40"  y1="0"  x2="40"  y2="-200"  stroke="black"  stroke-width="1"/>
+            <line x1="40"  y1="-200"  x2="500"  y2="-200"  style=" stroke: black; stroke-dasharray: 10 10; stroke-width: 1; "/>
+            <line x1="40"  y1="-100"  x2="500"  y2="-100"  style=" stroke: black; stroke-dasharray: 10 10; stroke-width: 1; "/>
+            <text x="0"  y="-200"  text-anchor="middle">25</text>
+            <text x="0"  y="-100"  text-anchor="middle">12.5</text>
+            <text x="-100"  y="-200"  text-anchor="middle">Number of Occurrences</text>
+            <text x="250"  y="100"  text-anchor="middle">Connotations</text>
+            <text x="120"  y="50"  text-anchor="middle">(Book)</text>
+            <text x="350"  y="50"  text-anchor="middle">(Articles)</text>
+
+{
+let $nelson := collection('/db/NellNelson')/*
+let $book := collection('/db/NellNelson/book')/*
+let $articles := collection('/db/NellNelson/articles')/*
+
+let $vall := distinct-values($nelson//@connotation)
+for $i in $vall
+
+
+
+(: NELL Voice :)
+ 
+let $nvBook := $book//nellVoice[@connotation = $i]
+let $countnvB := count($nvBook)
+
+
+let $nvArticle := $articles//nellVoice[@connotation=$i]
+let $countnvA := count($nvArticle)
+
+(: FEM Voice :)
+ 
+let $fvBook := $book//femVoice[@connotation = $i]
+let $countfvB := count($fvBook)
+
+
+let $fvArticle := $articles//femVoice[@connotation=$i]
+let $countfvA := count($fvArticle)
+
+(: NELL Voice :)
+ 
+let $mvBook := $book//mascVoice[@connotation = $i]
+let $countmvB := count($mvBook)
+
+
+let $mvArticle := $articles//mascVoice[@connotation=$i]
+let $countmvA := count($mvArticle)
+
+let $interval := 5
+let $barSets := 15
+
+return 
+<g class="{$i}">
+    
+                <text x="120" y="25" text-anchor="middle">{$i}</text>
+                    <line x1="{100}" y1="0" x2="{100}" y2="-{$countnvB *8}" stroke="green" stroke-width="30"/>
+                    <line x1="{130}" y1="0" x2="{130}" y2="-{$countmvB *8}" stroke="blue" stroke-width="30"/>
+                    <line x1="{160}" y1="0" x2="{160}" y2="-{$countfvB *8}" stroke="red" stroke-width="30"/>
+                    
+                    <text x="350" y="25" text-anchor="middle">{$i}</text>
+                    <line x1="{320}" y1="0" x2="{320}" y2="-{$countnvA * 8}" stroke="green" stroke-width="30"/>
+                   <line x1="{350}" y1="0" x2="{350}" y2="-{$countmvA * 8}" stroke="blue" stroke-width="30"/>
+                    <line x1="{380}" y1="0" x2="{380}" y2="-{$countfvA * 8}" stroke="red" stroke-width="30"/>
+                   
+                   
+</g>
+}
+</g>
+        </svg>
+

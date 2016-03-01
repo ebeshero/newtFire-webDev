@@ -1,0 +1,10 @@
+xquery version "3.0";
+<xml>
+{let $schism := collection('/db/Schism')/*
+let $location := distinct-values($schism//location)
+for $i in $location
+return 
+
+<thing>{string-join($i, "&#10;")}</thing>}
+
+</xml>

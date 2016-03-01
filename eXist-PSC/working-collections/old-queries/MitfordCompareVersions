@@ -1,0 +1,17 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $coll := collection('/db/mitford')
+
+let $texts := $coll/TEI
+let $title := $coll/TEI/teiHeader//titleStmt/title
+
+(:  :let $attid := $texts//text//@xml:id
+let $dstids := distinct-values($attid)
+(: let $title := $texts[$attid]/ancestor::teiHeader//titleStmt/title :)
+for $dstid in $dstids
+
+(:  where count($texts[$attid = $dstid]) gt 1) :):)
+return $dstids
+
+
+

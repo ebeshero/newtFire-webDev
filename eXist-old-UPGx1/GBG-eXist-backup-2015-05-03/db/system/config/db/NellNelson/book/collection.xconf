@@ -1,0 +1,17 @@
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+    <index>
+        <!-- Lucene index is configured below -->
+        <lucene>
+            <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+            <analyzer id="ws" class="org.apache.lucene.analysis.WhitespaceAnalyzer"/>
+            <text qname="root">
+            <text qname="title">
+            <text qname="p"/>
+            
+        </lucene>
+        <ngram qname="root"/>
+        <ngram qname="title"/>
+        <ngram qname="p"/>
+       
+    </index>
+</collection>

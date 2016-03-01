@@ -1,0 +1,9 @@
+xquery version "3.0";
+(:doc('/db/shakespeare/plays/hamlet.xml')/*:)
+let $plays := collection('/db/shakespeare/plays')
+(:let $title := $plays/PLAY/TITLE/string():)
+for $i in $plays//PLAY
+let $speaker := distinct-values($i//SPEAKER)
+let $title := $i/TITLE/string()
+where count($speaker) gt 40
+return $title

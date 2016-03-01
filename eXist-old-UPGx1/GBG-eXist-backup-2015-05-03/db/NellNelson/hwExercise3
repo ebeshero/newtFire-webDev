@@ -1,0 +1,20 @@
+xquery version "3.0";
+<kml>
+    {
+let $schism := collection('/db/Schism')/*
+let $location := distinct-values($schism//location)
+for $i in $location
+(:return string-join($i, "&#10;"):)
+let $description := //p[location = $i][1]/string()
+(:return string-join(($i, $description), ":"):)
+return
+<Placemark>
+        <name>
+            {$i}
+        </name>
+        <description>
+            {$description}
+        </description>
+    </Placemark>
+    }
+</kml>
