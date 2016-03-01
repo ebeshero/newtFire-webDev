@@ -38,7 +38,12 @@
       <h3>How to Access our eXist XML database: </h3>
       			
       <p>We are working with a particular XML database installed at the Pittsburgh Supercomputing Center(PSC) called eXist. Usually when we work on homework exercises and on project development, we will be working on the PSC eXist installation, but we can also write and run XQuery locally inside &lt;oXygen/&gt; by clicking on the little <q>XQuery Debugger</q> button right next to the <q>XSLT debugger</q> button in the top right of the &lt;oXygen/&gt; window to work with a batch of files we have saved locally. We tend to use the eXist installation on a server in our projects because a) eXist has indexing tools that we use to make it more efficient to run over multiple collections stored on a remote server, and b) we can connect the XQuery scripts and XML files we have stored in eXist to our project websites. Here’s how to access our eXist database at the PSC:</p>
-      		  
+      	<ol>
+      	   <li>In a web browser, go to <a href="http://dxcvm05.psc.edu:8080/">http://dxcvm05.psc.edu:8080/</a></li>
+      	   <li>Wait for eXist to load, and it will show you a page of several icons/images.</li>
+      	   <li>Look for the eXide button in the second row of icons and click on it. An interface will open where you can input XQuery code and work with the collections of files we have stored here.</li>
+      	   <li>For our first assignments, a login is not strictly necessary, but as you work on projects or if you wish to save your XQuery code to a directory you create here, you will need to log in with a username and password. If you are an enrolled student in one of my digital humanities courses, I will likely have created a login for you, and for details please see Courseweb.</li>
+      	</ol>  
       		  
       		  
       <!--2016-03-01 ebb: OLD MODE OF ACCESS from 2013
@@ -139,8 +144,8 @@
          
          <li>To return a complete single document so you can browse through its coding and structure,
             write an expression in this form: 
-            <code>doc('/db/pacific/voyages/ForsterGeorgComplete.xml')/* </code>  <br />
-            <br />
+            <code>doc('/db/pacific/voyages/ForsterGeorgComplete.xml')/* </code>  
+    <p>Enter this code and see what happens in the eXide window. You should see the complete XML text of the Georg Forster Pacific voyage narrative.</p>
             
          </li>
          
