@@ -1,0 +1,84 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>XQuery Exercise 1</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+      	
+      		
+      <h1><span class="banner">XQuery Exercise 1</span></h1>
+      		    		
+      			
+      <p>For our first XQuery exercise we’ll be working with a collection of Shakespeare’s
+         plays (actually <em>not</em> coded in TEI). We have uploaded these into <a href="http://dxcvm05.psc.edu:8080/">our eXist XML database</a>, and you can locate them in this collection: <code>collection('/db/shakespeare/plays')</code></p>
+      			
+      <p>Write XQuery expressions for each of the following tasks using the eXide window in our eXist database, and test them by hitting the <q>Eval</q> button. Then paste your XQuery expressions into a text
+         file, adding comments as needed. When you are finished, upload your assignment to Courseweb. 
+      </p>
+      			
+      <ol>
+         			
+         <li>Find all of the titles of all of the Shakespeare plays in the collection. You will
+            need to read our <strong><a href="explainXQuery.html">Guide to XQuery and eXist</a></strong> for information about how to address the collection of plays. The Guide will also
+            help you figure out  how to retrieve the full text of one of the plays so that you
+            can look at it and see where the <code>&lt;TITLE&gt;</code> element is, which you will need to know in order to construct the XPath to retrieve
+            it. The simplest answer is a single XPath expression. The output should look something
+            like:
+            			  
+            <pre>&lt;TITLE&gt;The Tragedy of Hamlet, Prince of Denmark&lt;/TITLE&gt; 
+               &lt;TITLE&gt;The Tragedy of Macbeth&lt;/TITLE&gt; 
+               &lt;TITLE&gt;The Tragedy of Romeo and Juliet&lt;/TITLE&gt;
+            </pre>
+            			  
+         </li>
+         			
+         <li>Modify your XPath above to return just the text of the titles, without the tags. You
+            can do that by using <code>text() </code>or <code>data() </code>or <code>string()</code> . Your output should look something like:
+            
+            <pre>The Tragedy of Hamlet, Prince of Denmark
+               	The Tragedy of Macbeth 
+               	The Tragedy of Romeo and Juliet
+            </pre>
+            			
+         </li>
+         				
+         				
+         				
+         <li>Find the play that contains a count of more than 40 unique (distinct) speakers and
+            then return its <code>&lt;TITLE&gt;</code> element. You will need to use <code>count()</code> and <code>distinct-values()</code>, and you’ll need a construction involving 
+            <strong>count(of something) gt 40</strong> . 
+            				<p>Find the collection, drill down to the <code>&lt;PLAY&gt;</code> elements in the collection (you know there are three of them), then filter them based
+            on whether or not they contain more than 40 <code>&lt;SPEAKER&gt;</code> elements. Once you’re getting the one play that meets that description, you can add
+            a path step to retrieve its <code>&lt;TITLE&gt;</code>.</p> 
+            				 
+            			  
+         </li>
+         				
+         <li>Modify your solution to the preceding question #3 to return <strong>just the text of the play title, without the &lt;TITLE&gt; tags</strong>. You can take the same approach as you did for the transition from question #1 to
+            question #2.				
+         </li>
+         			  
+         <li><strong>FLWOR Statement or XPath expression?:</strong> Did you write your XQuery for number 4 with a long XPath expression (from left to
+            right)? Or did you write it up as a FLWOR statement? (Review <a href="explainXQuery.html">our tutorial</a> for details and examples on writing FLWOR statements using variables.) Whichever way you chose to write your XQuery in the previous steps, try the other way and see if you can duplicate your results.
+            			  
+         </li>
+         			
+      </ol>
+      		
+      	
+   </body>
+   
+   
+   
+   
+</html>
