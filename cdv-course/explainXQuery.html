@@ -128,26 +128,29 @@
          
          <li>The <code>doc()</code> function in XQuery finds a single document, and inside the parentheses goes the path
             to the document within the database, including the filename. To retrieve our Georg
-            Forster XML file, use: <code>doc('/db/pacific/voyages/ForsterGeorgComplete.xml')</code> . <br /><br /> 
+            Forster XML file, use: <pre><code>doc('/db/pacific/voyages/ForsterGeorgComplete.xml')</code></pre> . 
          </li>
          
          <li>The <code>collection()</code> function finds a directory (or collection) that holds XML files. We’ve uploaded two
             other voyage files to sit in the same collection with our Georg Forster file, and
             we can run a  query of the ENTIRE group of files, instead of looking through each,
-            one by one. To query this collection of files, we use <code>collection('/db/pacific/voyages')</code>.<br /><br /> 
+            one by one. To query this collection of files, we use <pre><code>collection('/db/pacific/voyages')</code></pre>.
          </li>
          
          <li>To return a complete single document so you can browse through its coding and structure,
             write an expression in this form: 
-            <code>doc('/db/pacific/voyages/ForsterGeorgComplete.xml')/* </code>  
-    <p>Enter this code, click on the <strong><q>Eval</q></strong> button at the top of the eXide interface, and see what happens in the return window. You should see the complete XML text of the Georg Forster Pacific voyage narrative.</p>
+            <pre><code>doc('/db/pacific/voyages/ForsterGeorgComplete.xml')/* </code></pre>  
+    <p>Enter this code, click on the <strong><q>Eval</q></strong> button at the top of the eXide interface, and see what happens in the return window. In the Return Window, notice that you have options for setting and formatting the output: to view the XML code, you need to have <q>XML Output</q> selected. You should see the complete XML text of the Georg Forster Pacific voyage narrative in the output window. (Note: You can also set <q>Live Query</q> to automatically run and update your results as you are typing XQuery. We do not typically use this since it seems to introduce lag in typing in the eXide window, but your experience may vary from ours. Experiment! You can also click to move the output window to the side instead of bottom of the screen.)
+    </p>
             
          </li>
          
          <li>Try accessing other files in this same <code>voyages</code> collection space: 
-            <pre><code>HwksV2Ch4-8PNum.xml</code> and <code>cookVoy2Pnum.xml</code></pre>
+          <code>HwksV2Ch4-8PNum.xml</code> and <code>cookVoy2Pnum.xml</code>. Note: you can also browse through the XML code of all the files in the collection at once with:
+            <pre><code>collection('/db/pacific/voyages')/*</code></pre>
             
          </li>
+      
          
          <li>To write comments (or <q>comment out</q> some lines in XQuery), use <code>(: comment :) </code></li>
          
