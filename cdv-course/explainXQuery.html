@@ -236,7 +236,7 @@
       <pre>
       declare default element namespace "http://www.tei-c.org/ns/1.0";
       let $pacific := collection('/db/pacific/voyages')/*
-      let $GeorgFile := $pacific[<code>.</code>//author[contains(., 'Georg')]]//titleStmt/title
+      let $GeorgFile := $pacific<code>[.//author[contains(., 'Georg')]]</code>//titleStmt/title
       return $GeorgFile
       </pre>
      
