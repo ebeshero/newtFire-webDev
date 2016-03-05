@@ -213,8 +213,8 @@
          <li><code>Let:</code> establishes variables which may be single values or arrays of multiple values (single
          or multiple)</li>
       
-        <li> <code>For:</code> establishes a <i>range variable</i> that moves step by step from one value to the next and the next in a long list of
-         values defined by a a Let statement. (single ONLY)</li>
+        <li> <code>For:</code> establishes a <strong><dfn>range variable</dfn></strong> that moves step by step from one value to the next and the next in a long list of
+         values defined by a Let statement. The <dfn>range variable</dfn> is designed to process and return a single value at a time, and we say that it <q><em>loops through</em></q> a list of multiple values.</li>
      
          <li><code>Where</code> (optional): filtering; analogous to predicates</li>
          <li><code>Order by</code> (optional): alphabatize, etc. Always appears after a <code>Where</code> statement</li>
@@ -228,7 +228,31 @@
       <pre><code> let $hamlet := doc('/db/shakespeare/plays/hamlet.xml')
             return $hamlet   </code></pre>
       
-      <h4>Examples of two related FLWOR Expressions, to demonstrate <code>For</code> and <code>Where</code> statements</h4>
+      <h4>Another simple FLWOR: processing a collection of files to return information from a single document</h4>
+      <p>Here is an example to demonstrate how we can start with a variable defining a collection of files, and reach into it to retrieve information from a particular special file inside. 
+      <strong>Note:</strong> this particular collection, our Pacific voyage collection, is in the <strong>TEI namespace</strong>, so we require a special namespace declaration line.</p>
+      
+     
+      <pre>
+      declare default element namespace "http://www.tei-c.org/ns/1.0";
+      let $pacific := collection('/db/pacific/voyages')/*
+      let $GeorgFile := $pacific[<code>.</code>//author[contains(., 'Georg')]]//titleStmt/title
+      return $GeorgFile
+      </pre>
+     
+      
+      <p>This returns just one result in the eXide output window:</p>
+     
+      <pre>
+       1
+      &lt;title xmlns="http://www.tei-c.org/ns/1.0"&gt;A Voyage Round the World in His Majesty's Sloop, Resolution, commanded by Capt. James Cook, during the Years 1772, 3, 4, 5.&lt;/title&gt;
+      </pre>
+     
+     <p> Notice how we used <strong>the dot</strong> (<code>.</code>) in our XQuery FLWOR. We require the first dot in the variable <code>$GeorgFile</code> to set a starting point at the <code>self::*</code> axis, to indicate that we are stepping down <strong>from the position defined by the <code>$pacific</code> variable</strong>. 
+        (If we do not use the dot, we return zero results because the starting position of the XPath in the predicate is unclear to the computer parser! Try it yourself and notice what happens if you remove the dot from the expression.)</p>
+      
+      
+      <h4>Examples of two related FLWOR Expressions, to demonstrate <code>Where</code> and <code>For</code> statements</h4>
       
       
     <ol>  <li>No <code>For</code> statement here):
@@ -243,7 +267,7 @@
             return $p</code></pre></li>
       
       <li>Using a "For" statement, with an XQuery comment.<br/> 
-         Note; An XQuery comment is formatted inside <q>smiley faces</q> <code>(: your comment here :)</code>
+         Note: An XQuery comment is formatted inside <q>smiley faces</q> <code>(: your comment here :)</code>
 
          <pre><code>declare default element namespace "http://www.tei-c.org/ns/1.0";
             let $cook := doc('/db/pacific/voyages/cookVoy2Pnum.xml') 
