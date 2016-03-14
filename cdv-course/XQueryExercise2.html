@@ -93,16 +93,15 @@
                <li>Define a variable to collect a list of the distinct values of this <code>@ref</code> attribute. <strong>Note:</strong> To get output in XQuery when you collect a list of attribute values, you need to
                   return the <code>string()</code> value of the attribute.
                </li>
-               <li>Then we’ll need to test each entry in that list (<code>$i</code>) to see if it can be found by an XPath walking through all the files in the collection,
-                  building a predicate expression to filter the files to see if they contain our match.
-                  (You are looking to see if a file contains a <code>persName @ref</code> that matches each single entry in that list of distinct values.) 
+               <li>Then we’ll need to test each entry in that list (using a <strong><q>for loop</q></strong>) to see if it can be found by an XPath walking through each file in the collection, and building a filter to isolate which files contain our match.
+                  (You are looking to see if a file contains a <code>&lt;persName @ref&gt;</code> that matches each single entry in that list of distinct values.) 
                </li>
                				
                <li>Use the <code>where</code> statement in the FLWOR to filter your results so that you return only the distinct
-                  @ref attributes that are seen in more than 15 files. 
+                  <code>@ref</code> attributes that are seen in more than 15 files. 
                </li>
                					
-               <li>We’d like to return the output without the hashtag (<strong>#</strong>) in front, and we want to output the results in alphabetical order by the @ref (without
+               <li>We’d like to return the output without the hashtag (<code>#</code>) in front, and we want to output the results in alphabetical order by the <code>@ref</code> (without
                   hashtag). To eliminate the hashtag, we recommend either the <code>tokenize()</code> function we used in the previous assignment, or the <code>translate()</code> function (read about it in Michael Kay or look it up in <a href="http://dh.obdurodon.org/functions.xhtml">The XPath Functions We Use the Most</a>. (You may remember that we’ve used it before in our XSLT exercises.)
                </li>
                					
