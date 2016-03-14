@@ -65,8 +65,7 @@
                <li>the particular texts in the collection, starting from the <code>&lt;body&gt;</code> element in our TEI files. (You’ll need this later.)
                </li>
                
-               <li>the main title of the files (as described in #2: up in the TEI header, inside the
-                  titleStmt).
+               <li>the main title of the files (as described in #2: up in the <code>&lt;teiHeader&gt;</code>, inside the <code>&lt;titleStmt&gt;</code>).
                   
                </li>
                <li>Write a return statement to return the text ONLY of the main titles of the files in
@@ -134,14 +133,12 @@ declare namespace tei="http://www.tei-c.org/ns/1.0";
 &lt;body&gt;
     
         
-{ 
-. . . FLWOR HERE. . . 
+<code>{</code>
+<strong>. . . FLWOR HERE. . . 
 [use the tei:prefix on any TEI element names here]
-Return $something
+Return $something</strong>
 
-
-
-}
+<code>}</code>
 &lt;/body&gt;
 &lt;/html&gt;   
 </pre>
