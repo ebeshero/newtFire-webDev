@@ -92,12 +92,11 @@
                <li>Define a variable to collect a list of the distinct values of this <code>@ref</code> attribute. <strong>Note:</strong> To get output in XQuery when you collect a list of attribute values, you need to
                   return the <code>string()</code> value of the attribute. (Check your results here. We returned 707 distinct values of the <code>@ref</code> attribute on the <code>&lt;persName&gt;</code> element across the collection.)
                </li>
-               <li>What we need to do next is something like building an index in a book. We have isolated the 707 distinct values of all the identifiers for people across the collection. We now need a way to check and see if a file contains a <code>&lt;persName @ref&gt;</code> that matches each single entry in that list of distinct values, since those entries are now just a simple <em>dereferenced</em> list, and pulled out of their XPath context. A good example of what we are doing is the index of a printed book: You go to the back of a book and look up a word or phrase that is only listed once, and find out all the different places in the body of the book that mention it, so you can flip back and find what you need. What we are doing here is similar: We want XQuery to look up for us <em>which files are holding each entry</em> on our list of distinct values. We’ll need to test each entry in our list of distinct values (using a <strong><q>for loop</q></strong>) and <em>map it back into the XML tree</em> to locate the files holding it. You will need a predicate expression that uses a comparison operator (and we used a General Comparison operator, the equal sign <code>=</code> to filter <em>which files contain <code>&lt;persName&gt;</code> elements with <code>@ref</code> attributes <strong>equal to</strong> the current distinct value in the <q>for loop</q>.</em> Here is <a href="http://newtfire.org/dh/explainXPath.html#comparison">a review of comparison operators</a>, which you used in the Schematron assignments.
-                  
+               <li>What we need to do next is something like building an index in a book. We have isolated the 707 distinct values of all the identifiers for people across the collection. We now need a way to check and see if a file contains a <code>&lt;persName @ref&gt;</code> that matches each single entry in that list of distinct values, since those entries are now just a simple <em>dereferenced</em> list, and pulled out of their XPath context. A good example of what we are doing is the index of a printed book: You go to the back of a book and look up a word or phrase that is only listed once, and find out all the different places in the body of the book that mention it, so you can flip back and find what you need. What we are doing here is similar: We want XQuery to look up for us <em>which files are holding each entry</em> on our list of distinct values. We’ll need to test each entry in our list of distinct values (using a <strong><q>for loop</q></strong>) and <em>map it back into the XML tree</em> to locate the files holding it. You will need a predicate expression that uses a comparison operator (and we used a General Comparison operator, the equal sign <code>=</code> to filter <em>which files contain <code>&lt;persName&gt;</code> elements with <code>@ref</code> attributes <strong>equal to</strong> the current distinct value in the <q>for loop</q>.</em> Here is <a href="http://newtfire.org/dh/explainXPath.html#comparison">a review of comparison operators</a>, which you used in the Schematron assignments.         
                </li>
                				
                <li>Now, use the <code>where</code> statement in the FLWOR to filter your results so that you return <em>only the distinct
-                  <code>@ref</code> attributes that are seen in more than 15 files</em>. <strong>Hint:</strong> You should return a list of 10 name ids, a <q>top ten</q> list of popular names in the Digital Mitford collection.
+                  <code>@ref</code> attributes that are seen in more than 15 files</em>. <strong>Note:</strong> This make take about 15 seconds to run, so do not be alarmed if eXist seems to pause a little while. Our collection of files is pretty large and you are testing a list of 707 distinct values in your <q>for loop</q>! When the dust settles, you should return a list of 10 name ids, a <q>top 10</q> list of popular names in the Digital Mitford collection.
                </li>
                					
                <li>We’d like to return the output without the hashtag (<code>#</code>) in front, and we want to output the results in alphabetical order by the <code>@ref</code> (without
@@ -116,20 +115,54 @@
             			  
          </li>
          			
-         <li> Finally, we will build an HTML file around your XQuery results using curly braces <code>{ }</code> where necessary. Consult our <strong><a href="explainXQuery.html#Curly">XQuery Intro Guide on building HTML with Curly Braces</a>.</strong></li>
+         <li> Finally, we will build an HTML file around your XQuery results using curly braces <code>{ }</code> where necessary. Consult our <strong><a href="explainXQuery.html#Curly">XQuery Intro Guide on building HTML with Curly Braces</a>.</strong>  We need to make some changes to our file, though, because we are working with two different namespaces now, HTML and TEI. Alter the top lines of the XQuery so they look like this:
+         <pre>
+            xquery version "3.0";
+declare default element namespace "http://www.w3.org/1999/xhtml";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+ 
+         </pre>   
+            
+And begin building your HTML around your FLWOR so the basic outermost structure of the file is set:
+
+<pre>
+   xquery version "3.0";
+declare default element namespace "http://www.w3.org/1999/xhtml";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+  &lt;html&gt;
+&lt;head&gt;&lt;title&gt;Top Ten Most Referenced People in the Digital Mitford Project&lt;/title&gt;&lt;/head&gt;
+&lt;body&gt;
+    
+        
+{ 
+. . . FLWOR HERE. . . 
+[use the tei:prefix on any TEI element names here]
+Return $something
+
+
+
+}
+&lt;/body&gt;
+&lt;/html&gt;   
+</pre>
+            
+            </li>
          				
-         <li>Build an HTML table in the HTML body part of the file to contain table rows and a
-            two columns of cells (two cells side by side in each column) that will contain in
-            one cell the translated and sorted @ref (without hashtag). You’ll need to write a
-            new XQuery line or two to generate the results in the cell next to it. In that cell,
-            return a string-joined list of the <code>base-uri()</code> or filenames of each file that contains the match, separated by commas.
-            			  
+         <li>Build an HTML table in the HTML body part of the file to contain table rows and
+            two columns of cells (two cells side by side in each column). <ul><li>The first cell will contain each of the top ten
+           the translated and sorted <code>@ref</code> value (without hashtag) that you retrieved in number 4. </li>
+            <li>In the other cell, return a string-joined list of the <code>base-uri()</code> or filenames of each file that contains the match, 
+               separated by commas. You might just want to trim down that <code>base-uri()</code> so you only return the filename at the end (like we did in <a href="XQueryExercise1.html">XQuery Exercise 1</a>.
+               Here is <a href="http://dxcvm10.psc.edu:8080/exist/rest/db/output/TopTenPeopleString.html">our HTML table output</a> to view in a web browser. (View Page Source to look under the hood at the HTML code.)
+            </li>
+            			  </ul>
          </li>
          				
-         <li><strong>Bonus</strong>: If you don’t like the look of that string-joined output in your second table cell,
-            can you work out how to output it in its own table, nested inside the table cell?
+         <li><strong>Bonus</strong>: Instead of using <code>string-join()</code> to list out the multiple filenames in your second table cell,
+            can you work out how to output that list of names in its own table, nested inside that second table cell?
             Inside the table cell, you will need to nest a new FLWOR statement inside a new set
             of curly braces, in which you’ll make another <code>for</code> statement. Return your output in table rows with a single column of cells.
+            Here is <a href="http://dxcvm10.psc.edu:8080/exist/rest/db/output/TopTenPeople.html">our HTML table output</a> to view in a web browser. (View Page Source to look under the hood at the HTML code.)
          </li>
          					
          			
