@@ -22,7 +22,7 @@
       	
       		
       <p>Our second XQuery homework exercise works with our Digital Mitford project files,
-         coded in TEI. Here’s how to locate this collection in <a href="http://dxcvm05.psc.edu:8080/">our eXist at the Pittsburgh Supercomputing Center</a>: <span class="code">collection('/db/mitford')</span>.
+         coded in TEI. Here’s how to locate this collection in <a href="http://dxcvm05.psc.edu:8080/">our eXist at the Pittsburgh Supercomputing Center</a>: <code>collection('/db/mitford')</code>.
       </p>
       				
       			
@@ -43,14 +43,14 @@
          				
          <li>First, let’s do some exploring. This is a large collection of files, so we might want
             to look at a complete list of their file names and get a count of the number of files.
-            For this, we use the XPath function <span class="code">base-uri()</span>. Write a statement in XQuery that returns the base-uri() (or filename) for each file
+            For this, we use the XPath function <code>base-uri()</code>. Write a statement in XQuery that returns the base-uri() (or filename) for each file
             in the Mitford collection. How many files are there? (Record the number.) Wrap the expression in a <code>count()</code>
             function so you return the number, and record the expression you used.
          </li>
          				
          				
          <li> Starting from the <code>collection()</code>, write a basic XQuery expression to show you the coding
-            of the files, using <span class="code">/*</span>, so that you can see how to locate the <span class="code">&lt;title&gt;</span> element inside the <span class="code">&lt;teiHeader&gt;</span> and <span class="code">&lt;titleStmt&gt;</span>. Copy this into your text file recording this homework exercise.
+            of the files, using <code>/*</code>, so that you can see how to locate the <code>&lt;title&gt;</code> element inside the <code>&lt;teiHeader&gt;</code> and <code>&lt;titleStmt&gt;</code>. Copy this into your text file recording this homework exercise.
             			
          </li>
          			
@@ -62,7 +62,7 @@
                
                <li>the whole collection</li>
                
-               <li>the particular texts in the collection, starting from the <span class="code">&lt;body&gt;</span> element in our TEI files. (You'll need this later.)
+               <li>the particular texts in the collection, starting from the <code>&lt;body&gt;</code> element in our TEI files. (You'll need this later.)
                </li>
                
                <li>the main title of the files (as described in #2: up in the TEI header, inside the
@@ -81,32 +81,32 @@
          </li>
          				
          <li>Build on your FLWOR expression. We are looking for some very important personal contacts
-            of Mitford whose names turn up in the <span class="code">//body</span> of <strong>more than 15 files</strong> in the Digital Mitford collection. Note: 
+            of Mitford whose names turn up in the <code>//body</code> of <strong>more than 15 files</strong> in the Digital Mitford collection. Note: 
             <ul>
                					
                <li>We don't want results from the TEI Header because that would include the current Mitford
-                  editors, so we want to define our variable with an XPath that drills into the <span class="code">body</span> element of each file.
+                  editors, so we want to define our variable with an XPath that drills into the <code>body</code> element of each file.
                </li> 
-               <li>Each person is coded with a distinct identifier held in an @ref attribute: <span class="code">&lt;persName ref="#id"&gt;</span>, which helps us to keep track of people when they are referred to by different names
+               <li>Each person is coded with a distinct identifier held in an @ref attribute: <code>&lt;persName ref="#id"&gt;</code>, which helps us to keep track of people when they are referred to by different names
                   in the archive.
                </li> 
-               <li>Define a variable to collect a list of the distinct values of this <span class="code">@ref</span> attribute. <strong>Note:</strong> To get output in XQuery when you collect a list of attribute values, you need to
-                  return the <span class="code">string()</span> value of the attribute.
+               <li>Define a variable to collect a list of the distinct values of this <code>@ref</code> attribute. <strong>Note:</strong> To get output in XQuery when you collect a list of attribute values, you need to
+                  return the <code>string()</code> value of the attribute.
                </li>
-               <li>Then we'll need to test each entry in that list (<span class="code">$i</span>) to see if it can be found by an XPath walking through all the files in the collection,
+               <li>Then we'll need to test each entry in that list (<code>$i</code>) to see if it can be found by an XPath walking through all the files in the collection,
                   building a predicate expression to filter the files to see if they contain our match.
-                  (You are looking to see if a file contains a <span class="code">persName @ref</span> that matches each single entry in that list of distinct values.) 
+                  (You are looking to see if a file contains a <code>persName @ref</code> that matches each single entry in that list of distinct values.) 
                </li>
                				
-               <li>Use the <span class="code">where</span> statement in the FLWOR to filter your results so that you return only the distinct
+               <li>Use the <code>where</code> statement in the FLWOR to filter your results so that you return only the distinct
                   @ref attributes that are seen in more than 15 files. 
                </li>
                					
                <li>We'd like to return the output without the hashtag (<strong>#</strong>) in front, and we want to output the results in alphabetical order by the @ref (without
-                  hashtag). To eliminate the hashtag, we recommend the <span class="code">translate()</span> function (read about it in Michael Kay or look it up in <a href="http://dh.obdurodon.org/functions.html">The XPath Functions We Use the Most</a>. (You may remember that we've used it before in our XSLT exercises.)
+                  hashtag). To eliminate the hashtag, we recommend either the <code>tokenize()</code> function we used in the previous assignment, or the <code>translate()</code> function (read about it in Michael Kay or look it up in <a href="http://dh.obdurodon.org/functions.xhtml">The XPath Functions We Use the Most</a>. (You may remember that we've used it before in our XSLT exercises.)
                </li>
                					
-               <li>Reading our <a href="explainXQuery.html">Explain XQuery Guide</a> to look up the details, write the FLOWR statement to <span class="code">order</span> results alphabetically.
+               <li>Reading our <a href="explainXQuery.html">Explain XQuery Guide</a> to look up the details, write the FLOWR statement to <code>order</code> results alphabetically.
                </li>
                					
                <li>Add the appropriate word to the "order" statement to generate these results in reverse
@@ -125,14 +125,14 @@
             two columns of cells (two cells side by side in each column) that will contain in
             one cell the translated and sorted @ref (without hashtag). You'll need to write a
             new XQuery line or two to generate the results in the cell next to it. In that cell,
-            return a string-joined list of the <span class="code">base-uri()</span> or filenames of each file that contains the match, separated by commas.
+            return a string-joined list of the <code>base-uri()</code> or filenames of each file that contains the match, separated by commas.
             			  
          </li>
          				
          <li><strong>Bonus</strong>: If you don't like the look of that string-joined output in your second table cell,
             can you work out how to output it in its own table, nested inside the table cell?
             Inside the table cell, you will need to nest a new FLWOR statement inside a new set
-            of curly braces, in which you'll make another <span class="code">for</span> statement. Return your output in table rows with a single column of cells.
+            of curly braces, in which you'll make another <code>for</code> statement. Return your output in table rows with a single column of cells.
          </li>
          					
          			
