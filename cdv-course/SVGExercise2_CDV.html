@@ -1,0 +1,54 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>SVG Exercise 2 (CDV)</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+      	
+      	
+      <h1><span class="banner">SVG Exercise 2: Plotting a Timeline</span></h1>
+      	
+      	
+      	
+      		
+      <p>In this exercise, we will write XQuery to output SVG in the form of a timeline, working with our Digital Mitford collection of letters, coded in TEI. You will also learn how to create and save a directory of your XQuery scripts on our eXist database, and to save your output results to the database to view in a browser. 
+         Here’s how to locate the Mitford letters collection in <a href="http://dxcvm05.psc.edu:8080/">our eXist at the Pittsburgh Supercomputing Center</a>: <code>collection('/db/mitford/letters')</code>.
+      </p>
+      				
+      			
+      <h3>Namespace declarations: Output SVG from input TEI</h3>		
+      <p>In order for us to build functional XQuery that reads TEI and outputs SVG, we need to declare two namespaces:</p>
+         <ul>
+            <li>The <strong>default</strong> element namespace will control the output, so we will define the SVG namespace here.
+            </li>
+            <li>Since we are reading from the TEI, we also need to distinguish its namespace, so we will add another namespace line that we will reference with the <code>tei:</code> namespace prefix in our XQuery code.</li>
+         </ul>
+        <p>Here are the two namespace lines that we need:</p>
+      <pre>
+      declare default element namespace <span style="color: purple;">"http://www.w3.org/2000/svg"</span>; 
+      declare namespace <span style="color:#006400;">tei="http://www.tei-c.org/ns/1.0"</span>;      
+      </pre>
+      			
+   
+    <h3>Saving your XQuery and your Output files in eXist, and accessing them on the web</h3>  
+      <!--2016-03-20 ebb: ADD TO OUR XQUERY TUTORIAL: -->
+      <p> If you are one of my enrolled students and I have given you write access to the database, you will be able to log in to the database using a username and password I have provided you in Courseweb. Once you are logged in you will be able to create a new directory and save your input scripts in the eXide window. You will also be able to write your scripts so that they create an output file that saves inside the database. </p>
+      <p>SAVE AND VIEW YOUR SVG! (EXPLAIN HOW).  and FLWOR constructions into your document to upload to Courseweb.</p>
+      		
+      	
+   </body>
+   
+   
+   
+   
+</html>
