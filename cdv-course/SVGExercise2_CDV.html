@@ -40,7 +40,7 @@
       <h3>Our task</h3>
       <p>Our task with this homework assignment is to plot in SVG a timeline representing with a hashmark each year, and providing space for 365 days in between. Ultimately we want to be able to position specific letter dates on this timeline or mark specific date ranges, like 1819-01-12 to 1822-06-23, in reference to our timeline. For right now, though, we want to concentrate on plotting each year in a set interval along a vertical line. Once we plot the dates, we want to retrieve a count of letters written in a given year, and output a circle of a size determined by the count of the letters. We will also output text in SVG to mark each year and record the counts of coded letters in the collection for each year.</p>
       			
-   <h3>Working with Global Variables</h3>
+   <h3>Working with global variables</h3>
    <p>We are going to bootstrap some of this for you to show you some new things in XQuery, so you can see how <strong><dfn>global variables</dfn> </strong>are defined and so we can concentrate on outputting SVG in this homework exercise. <dfn>Global variables</dfn> are available throughout an XQuery document, inside its nested queries, at any level, so when you define them, you can call them anywhere where you need them. Think of them as similar to Let statements in a FLWOR, but Let statements define a condition that lasts only inside a particular FLWOR and if you need to call them in a new FLWOR at another point in your XQuery, you would need to define them again. </p>
       <p>We are giving you some XQuery code written for the Digital Mitford project to begin. Notice how we have set some global variables to read the Mitford collection and reach into its TEI header. What we are doing here is grabbing the official dates that we set deep in the TEI headers of the Mitford files. These are formatted as <code>yyyy-mm-dd</code>, and we are tokenizing the date string on the hyphen (<code>-</code>) to return just the first token, which is the four-digit year. (You will find yourself needing to apply this tokenize function to compare and evaluate years throughout the assignment.)</p>
       
@@ -62,11 +62,36 @@ return $distinctYear
       </pre>
 <p>Notice how we have set up a list of global variables, followed by a simple FLWOR with a <q>for loop</q>. Go ahead and copy this into your eXist window, run it and view the results. We begin here because we want to survey how long a time span we will be plotting in our SVG, so this will give us just a handful of distinct years in order. If you like, add a few more diagnostic variables to return, say, a count of the letter files or anything else that interests you. Remember that <strong>you need to use the <code>tei:</code> namespace prefix</strong> before every TEI element, but not the attributes.</p> 
       
-      <h3></h3>
+      <h3>Plotting the timeline</h3>
+      <p>In plotting a vertical line that runs from top to bottom in chronological order, we take advantage of the y-coordinate space that increases as we move <em>down</em> the screen with SVG. First of all, we need to know how long our line should be. To measure it, remember that we want to mark a small set of years separated from each other by 365 days. We need to write variables to determine how many years we need to plot, and then separate them by an interval of 365. We could do this by hand, and pound this out point by point, but since our letters collection is going to change as more and more letters are coded, it would be better to write code that searches for the <strong>maximum</strong> and <strong>minimum</strong> year represented in the collection at any given time. You should to use the XPath <code>min()</code> and <code>max()</code> functions to define variables identifying the earliest and latest years in our series. </p>
+      <p>How will you determine the length of the line? Define variables to determine the number of years to plot (a simple subtraction). To stretch out the years by 365 days or pixels apart, you need to multiply by 365. (Note; XQuery variable can hold the results of simple arithmetic calculations. The operators +, -, *, and div are used for addition, subtraction, multiplication, and division. We can't use a forward slash for division because that has an XPath meaning.) At some point in this process, you will need to convert the year strings into integers in order to do basic calculations. In XQuery, you must do this by wrapping the <code>xs:integer()</code> function around your code holding a year.</p>
+      <p>Now that you have defined the variables you need to measure the line, we can begin plotting SVG! This is much like what we have done with plotting an HTML file around an XQuery script. The only difference is that you are writing SVG, and you are working with global variable that appear at the top of your file. You can begin writing SVG elements right after your list of global variables, and set up the outer layer of elements, the SVG root node and a <code>&lt;g&gt;</code> element that we will use for grouping and scaling the whole SVG image to be visible in a web browser. Your code should be structured like this:</p>
+      
+      <pre>
+         declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $countLetterFiles := count($letterFiles);
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when;
+declare variable $letterYears := $letterDates/tokenize(string(), '-')[1];
+<!--ebb: MORE GLOBAL VARIABLES AS YOU KEEP WORKING-->
+
+&lt;svg&gt;
+   &lt;g&gt;
+      &lt;line x1="??" y1="??" x2="??" y2="??" style="??;??;"/&gt;
+      
+      
+   &lt;/g&gt;
+   
+&lt;/svg&gt;
+  
+      </pre>
 
     <h3>Saving your XQuery and your Output files in eXist, and accessing them on the web</h3>  
       <!--2016-03-20 ebb: ADD TO OUR XQUERY TUTORIAL: -->
-      <p>SAVE AND VIEW YOUR SVG! (EXPLAIN HOW).  If you are one of my enrolled students and I have given you write access to the database, you will be able to log in to the database using a username and password I have provided you in Courseweb. Once you are logged in you will be able to create a new directory and save your input scripts in the eXide window. You will also be able to write your scripts so that they create an output file that saves inside the database. </p>
+      <p>If you are one of my enrolled students and I have given you write access to the database, you will be able to log in to the database with a username and password I have provided you in Courseweb. Once you are logged in you will be able to create a new directory and save your input scripts in the eXide window. You will also be able to write your scripts so that they create an output file that saves inside the database. In the eXide workspace window, go to File and Manage, and create a folder for yourself (with one word, no spaces) using part of your name or userid. </p>
    
       		
       	
