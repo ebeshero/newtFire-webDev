@@ -16,14 +16,13 @@
       <!--#include virtual="top.html" -->
       	
       	
-      <h1><span class="banner">SVG Exercise 2: Plotting a Timeline</span></h1>
+      <h1><span class="banner">SVG Exercise 2: Plotting a Timeline, Part 1</span></h1>
       	
       	
       	
       		
-      <p>In this exercise, we will write XQuery to output SVG in the form of a timeline, working with our Digital Mitford collection of letters, coded in TEI. You will also learn how to create and save a directory of your XQuery scripts on our eXist database, and to save your output results to the database to view in a browser. 
-         Here’s how to locate the Mitford letters collection in <a href="http://dxcvm05.psc.edu:8080/">our eXist at the Pittsburgh Supercomputing Center</a>: <code>collection('/db/mitford/letters')</code>.
-      </p>
+      <p>In this two-part homework exercise, we will write XQuery to output SVG in the form of a timeline, working with our Digital Mitford collection of letters, coded in TEI. The end result of the two exercises will look <a href="http://dxcvm10.psc.edu:8080/exist/rest/db/output/timeline.svg">something like this</a> (with the colors, text positioning, fonts, and styling up to you). After the first exercise, we'll have plotted the line on the left with the circles inside. You will also learn how to create and save a directory of your XQuery scripts on our eXist database, and to save your output results to the eXist database to view in a browser.</p> 
+         <p>Here’s how to locate the Mitford letters collection in <a href="http://dxcvm05.psc.edu:8080/">our eXist at the Pittsburgh Supercomputing Center</a>: <code>collection('/db/mitford/letters')</code>.</p>
       				
       			
       <h3>Namespace declarations: Output SVG from input TEI</h3>		
@@ -38,12 +37,37 @@
       declare default element namespace <span style="color: purple;">"http://www.w3.org/2000/svg"</span>; 
       declare namespace <span style="color:#006400;">tei="http://www.tei-c.org/ns/1.0"</span>;      
       </pre>
+      <h3>Our task</h3>
+      <p>Our task with this homework assignment is to plot in SVG a timeline representing with a hashmark each year, and providing space for 365 days in between. Ultimately we want to be able to position specific letter dates on this timeline or mark specific date ranges, like 1819-01-12 to 1822-06-23, in reference to our timeline. For right now, though, we want to concentrate on plotting each year in a set interval along a vertical line. Once we plot the dates, we want to retrieve a count of letters written in a given year, and output a circle of a size determined by the count of the letters. We will also output text in SVG to mark each year and record the counts of coded letters in the collection for each year.</p>
       			
-   
+   <h3>Working with Global Variables</h3>
+   <p>We are going to bootstrap some of this for you to show you some new things in XQuery, so you can see how <strong><dfn>global variables</dfn> </strong>are defined and so we can concentrate on outputting SVG in this homework exercise. <dfn>Global variables</dfn> are available throughout an XQuery document, inside its nested queries, at any level, so when you define them, you can call them anywhere where you need them. Think of them as similar to Let statements in a FLWOR, but Let statements define a condition that lasts only inside a particular FLWOR and if you need to call them in a new FLWOR at another point in your XQuery, you would need to define them again. </p>
+      <p>We are giving you some XQuery code written for the Digital Mitford project to begin. Notice how we have set some global variables to read the Mitford collection and reach into its TEI header. What we are doing here is grabbing the official dates that we set deep in the TEI headers of the Mitford files. These are formatted as <code>yyyy-mm-dd</code>, and we are tokenizing the date string on the hyphen (<code>-</code>) to return just the first token, which is the four-digit year. (You will find yourself needing to apply this tokenize function to compare and evaluate years throughout the assignment.)</p>
+      
+      <pre>
+         xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+<code>declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];</code>
+
+let $distinctYears := distinct-values($letterDates)
+for $distinctYear in $distinctYears
+order by $distinctYear
+return $distinctYear
+              
+      </pre>
+<p>Notice how we have set up a list of global variables, followed by a simple FLWOR with a <q>for loop</q>. Go ahead and copy this into your eXist window, run it and view the results. We begin here because we want to survey how long a time span we will be plotting in our SVG, so this will give us just a handful of distinct years in order. If you like, add a few more diagnostic variables to return, say, a count of the letter files or anything else that interests you. Remember that <strong>you need to use the <code>tei:</code> namespace prefix</strong> before every TEI element, but not the attributes.</p> 
+      
+      <h3></h3>
+
     <h3>Saving your XQuery and your Output files in eXist, and accessing them on the web</h3>  
       <!--2016-03-20 ebb: ADD TO OUR XQUERY TUTORIAL: -->
-      <p> If you are one of my enrolled students and I have given you write access to the database, you will be able to log in to the database using a username and password I have provided you in Courseweb. Once you are logged in you will be able to create a new directory and save your input scripts in the eXide window. You will also be able to write your scripts so that they create an output file that saves inside the database. </p>
-      <p>SAVE AND VIEW YOUR SVG! (EXPLAIN HOW).  and FLWOR constructions into your document to upload to Courseweb.</p>
+      <p>SAVE AND VIEW YOUR SVG! (EXPLAIN HOW).  If you are one of my enrolled students and I have given you write access to the database, you will be able to log in to the database using a username and password I have provided you in Courseweb. Once you are logged in you will be able to create a new directory and save your input scripts in the eXide window. You will also be able to write your scripts so that they create an output file that saves inside the database. </p>
+   
       		
       	
    </body>
