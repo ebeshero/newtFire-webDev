@@ -49,7 +49,7 @@ declare variable $HaydonDates :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:h
             <pre><code>format-date($yourDateVariable, '[?]')</code></pre>
          We discovered that we need to convert that date to an integer in order to use it for calculation later, since it output a number formatted as a string.</li>
          <li>Calculate a value to plot on the SVG to represent (the earliest year point) + (the day of the year), each part of which must be converted at some point into integers.</li>
-         <li>Do the same to calculate the latest date</li>
+         <li>Do the same to calculate the latest date.</li>
          <li>Plot your SVG line with the appropriate coordinates to start and end it, based on the variables you have calculated. Position it in your code (and in the output) so it is plotted right next to your main timeline, so we can see how the Haydon correspondence sits in relationship to all of the correspondence. Label it with SVG text elements.</li>  
       </ol>
       <p>Voila! You have prepared a timeline and learned how to convert dates into points on graphics in SVG coordinate space! Copy and paste your XQuery code into a text file, name it according to our standard homework conventions, and upload it to Courseweb. </p>
