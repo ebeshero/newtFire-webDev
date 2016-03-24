@@ -1,0 +1,58 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>SVG Exercise 2 (CDV)</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+      	
+      	
+      <h1><span class="banner">SVG Exercise 3: Plotting a Timeline, Part 2</span></h1>
+      	
+      	
+      <p>This is the second part of our task to plot a timeline. You need to begin with a working timeline plotted with hashtags and text (and other elements) marking each year. Your timeline does not need to look exactly like ours (posted <a href="http://dxcvm10.psc.edu:8080/exist/rest/db/output/timeline.svg">here</a>), and you may style it differently, skew it so it isn’t vertical, experiment with its dimensions, plot other shapes besides circles, etc. If you did not succeed with plotting your timeline in <a href="SVGExercise2_CDV.html">the first exercise</a>. be sure to review <a href="https://github.com/ebeshero/DHClass-Hub/tree/master/Solutions/SVG_Exercise_Solutions">our posted solution on the DHClass-Hub</a> and make the necessary adjustments to your code before you begin this exercise.  
+      </p>	
+      		
+      <p>We continue to work with our Digital Mitford collection of TEI-encoded letters in <a href="http://dxcvm05.psc.edu:8080/">our eXist database at the Pittsburgh Supercomputing Center</a>: <code>collection('/db/mitford/letters')</code>. After the first exercise, we’ll have plotted the line on the left with the circles (or your variation on this) inside to record comparative counts of letters per year. You will also have created and saved your work in the eXist database to view it in a browser.</p> 
+ 			
+     
+      <h3>Our task</h3>
+      <p>With part 2 of this assignment, we want to plot a span of time when Mitford corresponded with the artist Benjamin Robert Haydon, based on the letters we have encoded in our eXist database. We do not actually have firm dates for this correspondence yet until we have coded more letters, but we can at least plot a timeline based on what we know from the letters currently in the database. To write good XQuery that we can use in the future, it is best if we write variables that will always retrieve the earliest and latest dates, whatever they are. And of course, once we plot this graphic for one historic person in our project, we can continue with plotting dates for other people  as well, just by altering the variable that identifies a person Mitford corresponded with. For now, our immediate task is to plot and label <em>one</em> timespan, and if we can code this to represent the letters to Benjamin Haydon, we can apply the same code to anyone else we care to look up.</p>
+    <p>Work within the XQuery script that produced your timeline for the first part of this exercise. You will be adding to it to plot a second, shorter line (the one in green in our sample output) next to the first one you drew, and positioned so that its dates align with the dates on the original timeline. You can label this line as we did to identify Haydon, and output the dates of the first and last letter we have in the collection addressed to him, at the top and bottom of your new line. To begin, here are two global variables that will locate the letters to Haydon and their dates (formatted as <code>yyyy-mm-dd</code> in the TEI headers of our files:</p>
+    <pre>
+declare variable $HaydonLetters := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $HaydonDates :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string();  
+    </pre>
+
+     <h3>Thinking about how to code the new line</h3> 			
+   <p>The challenge in this assignment involves the need to convert dates in <code>yyyy-mm-dd</code> format into simpler numbers that we can use to plot our lines. In the previous assignment, we did that step-by-step, thus:</p>
+      <ol>
+         <li>We retrieved only the years in the collection: Tokenize the date, and take only the <code>yyyy</code> part of it, as the first token before the hyphen (-). </li>
+         <li>We used the <code>max()</code> and <code>min()</code> functions, and subtracted the minumum (or earliest) year from the maximum (or latest) year, to give us a variable holding a simple number of years that represents how long a period is represented in our database of letters. We used that number multiplied by 365 to help measure out and plot our line.</li>
+         <li>After that we worked <em>inside</em> the time span, divided it with a <q>for loop</q> into a set of integers, so that for each unit year in the span of years, we output a hashmark, as well as a circle (or other shape), and some text elements to help label the timeline.</li>
+      </ol>
+    <p>Here our goal, in a way, is comparatively simple. Do we need to write this within a <q>for loop</q>? We considered this when we first experimented with with this plot, and soon realized that was not what we needed to do. We are not outputting anything per unit year this time. We are simply marking a single span of years, but we <em>do</em> need to plot it so it aligns with our master timeline, so that if the first Haydon letter is dated, say, on February 13, 1819, our line should begin at just the right point for February 13 in our lineup of 365 days (pixels) in between each year.  </p>
+      <p>Because each year on our plot is divided from the others by 365 pixels, we created room for ourselves to plot things with specific dates in the midranges. How do we do that? We need to work with date functions and take our full dates more seriously than we did in the first assignment. We need to actually begin plotting from the "y" location that corresponds to the <strong>specific day of the year</strong> of the minimum (earliest) and maximum (latest) letter from Mitford to Haydon.</p>
+      <p>Of course you will begin by declaring some new global variables that will identify the earliest and latest letter to Haydon, and convert those values into integers (with <code>xs:integer</code>). But then we will need to do something new: </p>
+      <ol>
+         <li>Calculate where the year should be positioned in relation to the master timeline. We did this by subtracting the minimum year of the main timeline from the minimum year of the Haydon line and multiplying by 365. That will give us the literal distance in SVG coordinates (or pixels) from the starting point of the master timeline to begin plotting the Haydon line, but it will only give us the year, so we need something more.</li>
+         <li>Since we spaced 365 pixels between each date, we now can use that information. If we have converted the minimum start year to a position in our SVG coordinate system, we would need to add to it the number of days from the start of the year. There is an XPath function for that, which you have seen before in a homework exercise in this course: <code>format-date()</code>. Read about this in the Michael Kay book, pp. 781-788 or <a href="https://www.w3.org/TR/xpath-functions-30/#rules-for-datetime-formatting">online from the WWW consortium here</a>. (At the time Kay wrote his book, this function was not available in XQuery but it is now!) There are so many different ways to format dates, but one of them, just the one we need, tells you how to output <em>the number of a day in a 365-day year</em> (so that for February 15, it will output 46, as it is the 46th day of a 365-day year, and for 23 March, it will output the number 83, for the 83rd day of the year). Be careful to write this unusual function correctly with its distinctive <q>picture string</q> argument inside single quotes <strong>and</strong> square brackets, like this:
+            <pre><code>format-date($yourDateVariable, '[?]')</code></pre>
+         We discovered that we need to convert that date to an integer in order to use it for calculation later, since it output a number formatted as a string.</li>
+         <li>Calculate a value to plot on the SVG to represent (the earliest year point) + (the day of the year), each part of which must be converted at some point into integers.</li>
+         <li>Do the same to calculate the latest date.</li>
+         <li>Plot your SVG line with the appropriate coordinates to start and end it, based on the variables you have calculated. Position it in your code (and in the output) so it is plotted right next to your main timeline, so we can see how the Haydon correspondence sits in relationship to all of the correspondence. Label it with SVG text elements.</li>  
+      </ol>
+      <p>Voila! You have prepared a timeline and learned how to convert dates into points on graphics in SVG coordinate space! Copy and paste your XQuery code into a text file, name it according to our standard homework conventions, and upload it to Courseweb. </p>
+   </body>
+
+</html>
