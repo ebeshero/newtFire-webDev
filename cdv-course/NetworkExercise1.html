@@ -88,13 +88,39 @@ declare default element namespace "http://www.tei-c.org/ns/1.0";</code></pre>
       <p>This is an exercise in nesting a pair of <code>For Loops</code>. Let’s think about why. You need to output each Node-1 or Source-Node, so you want an outer <code>For Loop</code> to generate this (together with any information you want to share about that node, called a <dfn>node attribute</dfn>), and hold its edge information too: anything you need that is in a one-to-one relationship with the Source Node. But in order to retrieve the Target-Nodes, you need to realize that <em>for each single Source Node, there may several other nodes that co-occur with it in the same space.</em> That means that you need to define a variable that will catch <strong>the whole series</strong>  of target nodes, and then walk through them one at a time, so that you produce each separate line of text to match on <strong>each Target node</strong>. That means that each Source Node will need to be output several times, each time for every Target. Return everything in a <code>concat()</code> using the tab characters we described above, and bundle that in a <code>string-join()</code> with the line-feed return character, aslo described above.</p>
       <h4>Using <code>distinct-values()</code> for Source and Target Nodes?</h4>
       <p>Think about whether you want to network every single time your node appears with every other node in your document. Your resulting graph will have many edge lines, and you will produce many duplicate lines of data: Bergamino may appear in the same place with Lauretta over and over and over again. Is that data relevant to your network? You could simplify by taking <code>distinct-values()</code>, and then you would only be noting whether or not two characters appear together at all in a  given location, not how many times they appear together.</p>
-      <h4>Making Choices in XQuery using <code>if () then ()</code> and <code>else</code></h4>
+      <h4>Making choices in XQuery using <code>if () then ()</code> and <code>else</code></h4>
       <p>Depending on what you are plotting in your network, you may want to distinguish among different kinds of nodes or different kinds of edge locations. In our example from <cite>The Decameron</cite> we output three different words to indicate whether an interaction occurred in floatingText, in the outer frame around the stories, or inside the stories themselves. We also needed to determine the peers of each distinct character who are mentioned in the same layer of text, and that meant looking only inside the appropriate <code>ancestor::div[1]</code> or <code>ancestor::floatingText</code> element that contains the characters in question, all the persName elements <em>that are not equal to the Source Node</em>. To output different kinds of information based on the distinct locations of these elements will require a <strong>conditional</strong> series of <code>if () then ()</code> and <code>else</code> statements to determine the output of a variable. Here is how to work with iffy conditionals. These sit inside a variable definition to control <em>how</em> it may be defined based on the conditions you set:</p>
-      <pre>
-<code>let $variable:=
+      <pre><code>let $variable:=
+                     if (XPath condition 1) then (output something--either XPath or "text string")
+                     else if (XPath condition 2) then (output something--either XPath or "text string")
+                     else output-without-parentheses
+      </code></pre>
+         
+  So, in something more like the variables we prepared for network analysis:
+      
+      <pre><code>let $edge:=
          if ($treeWalker[. = $distinctValue]/ancestor::whatEver) then ("whatEver")
          else if ($treeWalker[. = $distinctValue]/ancestor::somethingElse) then ("somethingElse")
          else "remainingOption"</code></pre>
+<p>In this example, we involved a <code>$treeWalker</code> variable that we set earlier in the XQuery to walk the tree of the XML file(s) before we took <code>distinct-values()</code>. In order to check for the peers and to look up the edge data for our network, we need to check each name element in the XML to see if it corresponds to the current entry in our list of <code>distinct-values</code>, and when it does, check to see which conditions it meets. It should output a different condition depending on its placement, and if we do this right, we will identify every condition that matters to us. The final <code>else</code> statement could be left empty, or could be given a value to output to account for <em>any other case</em> that we didn't define in the preceding conditionals. We can have as many <code>else if</code> statements as we like and make a long running list of conditionals, but for the purpose of our network we decided to keep this simple: The words we output in this variable will signal three different states that ultimately we will be able to color-code or plot distinctly in our network graph, </p>
+      <h4>Putting it all together in a TSV file</h4>
+      <p>When you are retrieving good output, you need to pack this up into a TSV file that we can import into Cytoscape. This is a little tricky with outputting a plain text file, because every line of returned text seems like a separate thing to XQuery, and eXist will throw an error when you try to save your output as a single file. To bind all the lines together so it can be read as one united piece of text, you need to position a <code>string join()</code> around the whole FLOWR and return, so that the concat() function in the return is actually the first argument in the <code>string-join()</code>, which then has the second argument be a line-feed (or hard-return) character. And one more thing! To make sure that the output is understood to be plain text and not the default XML format that eXist expects to be producing, just a <code>"text/plain"</code> assertion to the end of the <code>xmldb:store()</code> function. Here's how that should look:</p>
+      <pre>
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0"; 
+<code>declare variable $ThisFileContent:=
+string-join(</code>
+    FLWOR-with-nested-for-loops
+  return
+  concat($SourceNode, "&amp;#x9;", $EdgeType, "&amp;#x9;", $TargetNode)<code>, "&amp;#10;") ;</code>
+
+let $filename := "MyNetworkData.tsv"
+let $doc-db-uri := xmldb:store("/db/myOutput", $filename, $ThisFileContent, <code>"text/plain"</code>)
+return $doc-db-uri
+(: output at :http://dxcvm05.psc.edu:8080/exist/rest/db/myOutput/MyNetworkData.tsv ) :)        
+      </pre>
+ <p>View your data in the browser and you should be able to download it from there and save it locally. Or navigate your way to it in your output directory in eXist, and use the File menu there to download it.</p>
+ <h3>Test your TSV: Import into Cytoscape</h3>
       
    </body>
 
