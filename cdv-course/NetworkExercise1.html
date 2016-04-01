@@ -17,36 +17,59 @@
     	
       <h1><span class="banner">Network Analysis Exercise, Part 1 (XQuery to Network)</span></h1>
       <figure><img src="JA-N1trns.svg" alt="Jane Austen in a network of real people and fictional characters as mentioned in Mary Russell Mitford's writings"/>
-         <figcaption>Jane Austen as she is networked with other historical people and fictional characters in Mary Russell Mitford’s web of writings. For details, please see <cite>Visualizing the Worlds of Mary Mitford</cite></figcaption>
+         <figcaption>SVG figure: Jane Austen as she is networked with other historical people and fictional characters in Mary Russell Mitford’s web of writings. For details on how to read this network graph, please see <cite><a href="http://digitalmitford.org/visual.html">Visualizing the Worlds of Mary Mitford</a></cite>.</figcaption>
       </figure>
-      <p>With this pair of assignments you will learn how to extract data from your XML in a special tabular plain text format called a <dfn><strong>TSV file</strong></dfn>, which you can import into the Cytoscape network analysis software. Learning how to output and work with a <strong>TSV</strong> file will give you options for working with a wide range of data analysis and visualization and mapping software, so Cytoscape is just one example of what you can do with this simple, handy data format. <strong>TSV</strong> stands for <strong>T</strong>ab <strong>S</strong>eparated <strong>V</strong>alues, and it applies a <strong>tab</strong> control character with the unicode special entity notation <code>&#x9;</code>, which signals a movement to the next tab stop, the location the cursor jumps to when you hit the tab key. Basically a TSV presents a table layout in plain text. Actually, any plain text file can represent a tabular column format just by using a regularly repeating pattern of characters, such a white space or a comma and a space (the comma plus space separated output is known as a <strong>CSV</strong> file).</p>
-    
-         <p>I have loaded your project files into <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a>, so you may access them from the following locations:</p>
+      <p>With this pair of assignments you will first learn (in Part 1) how to extract data from your XML in a special tabular plain text format called a <dfn><strong>TSV file</strong></dfn>, which you will then import into the network analysis software, Cytoscape. In Part 2, you will learn how to analyze and organize your data as a network graph working in Cytoscape. What you are learning here will prepare you for other kinds of data analysis and visualization work, because this simple, handy data format can be read by spreadsheets and web mapping applications, too. <strong>TSV</strong> stands for <strong>T</strong>ab <strong>S</strong>eparated <strong>V</strong>alues, and it applies a <strong>tab</strong> control character with the unicode special entity notation <code>&#x9;</code>, which signals a movement to the next tab stop, the location the cursor jumps to when you hit the tab key. Basically a TSV presents a table layout in plain text, and actually, <em>any</em> plain text file can represent a tabular column format just by using a regularly repeating pattern of characters, such a white space or a comma and a space (the comma plus space separated output is known as a <strong>CSV</strong> file). You should save these files with a <code>.tsv</code> (or a <code>.csv</code>) extension depending on whether you use a comma or a tab separator. Here is some sample TSV output from the Decameron project in <strong>TSV</strong> format:</p>
+     <pre>
+Stratilia	frame	Pampinea 
+Stratilia	frame	Fiammetta 
+Stratilia	frame	Filomena 
+Stratilia	frame	Emilia 
+Stratilia	frame	Lauretta 
+Stratilia	frame	Neifile 
+Stratilia	frame	Filostrato 
+Stratilia	frame	Dioneo 
+Stratilia	frame	Parmeno 
+Stratilia	frame	Sirisco 
+Stratilia	frame	Tindaro 
+Stratilia	frame	Misia 
+Stratilia	frame	Licisca 
+Stratilia	frame	Chimera 
+Bergamino	floatingFrame	Filostrato 
+Bergamino	floatingFrame	Lauretta 
+Martellino	floatingFrame	Filostrato 
+Martellino	floatingFrame	Neifile 
+Marchese	novella	Martellino 
+Marchese	novella	Agolanti 
+Agolanti	novella	Martellino 
+Agolanti	novella	Marchese 
+Agolanti	novella	Pampinea 
+Agolanti	novella	Filostrato 
+Agolanti	novella	Lamberti 
+Lamberti	novella	Pampinea 
+Lamberti	novella	Filostrato 
+</pre>
+      <p>This is a portion of a much larger TSV file that represents <dfn><strong>co-occurrence network data</strong></dfn>, that is, it shows individual characters from <cite>The Decameron</cite> who are connected with each other by being present in the same portion of the text, whether in the introduction or concluding <q>frame</q> portions of each day of storytelling, the <q>floatingFrame</q> sections in which the frame narrators provide commentary inside the story sections, and the stories themselves in the story or <q>novella</q> level. These characters <em>appear together in the same locations</em> in the text, and this is a typical co-occurrence relationship for network analysis, which connects <code>nodes</code> (the characters, here) and <code>edges</code> (what they share or what location host them both, whether that is inside a <code>&lt;floatingText&gt;</code> or <code>&lt;div type="novella"&gt;</code> here). For more on networks of co-occurrence see our <cite><a href="http://ebeshero.github.io/thalaba/cytosc.html">Introduction to Network Analysis and Cytoscape for XML Coders</a></cite>. That is the kind of network you will be plotting from XML in this exercise.</p>    
+         <p>You may work with any of our student project files to plot a network of co-occurrence of any kind that interests you, but keep in mind our advice in our tutorial: <strong>keep it simple</strong> with just one kind of node (say, individual names, place names, reading witnesses, etc.) and some unit of co-occurence drawn from the structure of your XML files. Your project files are loaded into <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a>, so you may access them from the following locations:</p>
       <ul>
-         <li>Decameron project: You can choose to work with the English Decameron TEI file by itself: 
-         <pre>
-            <code>doc('/db/decameron/engDecameronTEI.xml')</code>
-         </pre>
+         <li>Decameron project (GitHub: <a href="https://github.com/jlm323/DecameronProject">https://github.com/jlm323/DecameronProject</a>): You can choose to work with the English Decameron TEI file by itself: 
+         <pre><code>doc('/db/decameron/engDecameronTEI.xml')</code></pre>
             or with the collection of the pair of English and Italian files, if you want to plot a graph that compares something between the two:
-           <pre>
-             <code>collection('/db/decameron/')</code>
-           </pre> 
+           <pre><code>collection('/db/decameron/')</code></pre> 
          </li>
-         <li>City Slave Girls project: 
+         <li>City Slave Girls project (GitHub: <a href="https://github.com/RJP43/CitySlaveGirls">https://github.com/RJP43/CitySlaveGirls</a>): 
          <pre><code>collection('/db/Nelson/ChicagoTimes_XML_grammar/')</code></pre></li>
-         <li>Emily Dickinson project (fascicle 16 files):
+         <li>Emily Dickinson project, fascicle 16 files (GitHub: <a href="https://github.com/ebeshero/EmilyDickinson16">https://github.com/ebeshero/EmilyDickinson16</a>): 
          <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
       </ul>
- <p>Each of these projects are using TEI code. To read from the TEI and to output in the SVG namespace, you will need to declare your namespaces and work with the <code>tei:</code> prefix for all TEI elements.</p>     	
+      <p>Each of these projects are using TEI code. Since we are outputting into plain text and not a namespace, we can simplify our XQuery by declaring the TEI as the default namespace at he top of the file (so that you will not need to use the <code>tei:</code> prefix in referring to elements). To explore the code and look for things to try plotting, we recommend you pull from the GitHub projects to open the files in &lt;oXygen/&gt; to study, using XPath and the Outline view (<code>Window → Show View → Outline</code>).</p>     	
       	<pre>
 xquery version "3.0";
-declare default element namespace "http://www.tei-c.org/ns/1.0"; 
-      	</pre>
+declare default element namespace "http://www.tei-c.org/ns/1.0";</pre>
       
-      <p>Open one of the files in these projects in eXide (with file-->open, and browse your way to it), and spend a few minutes studying the code. Look for something interesting to count and plot. For example, you might plot something that you can count within each of the ten days of the Decameron, knowing that days are held within <code>&lt;div[@type="Day"]&gt;</code> elements: perhaps the number of times a particular character appears, or how many places are marked. Because the XML texts that we are using here are under development, they may be inconsistently or incompletely marked up. They are all well formed, however, which means that they can be explored with XML tools, including XQuery.</p>
-      <p>To plot your graph (or other visualization) in SVG from XQuery, apply what you have been learning about SVG in the previous assignments. For example, when you plotted the timeline, you learned how to code a viewport in the SVG root element, and you learned how to plot from x=0 and y=0 so that your plot is visible in the SVG coordinate space, using <code>transform="translate(x, y)"</code>. You also learned how to plot and space hashmarks at regular intervals along a line. Your plot doesn’t need to contain hashmarks that look like the timeline plot, but at the very least you may want to space bars on a  bar graph at regular intervals, based on a maximum value. Keep in  mind that when you output multiple SVG elements in a return, you will want to bundle them together in a single group, or <code>&lt;g&gt;</code>.</p>
-   <p>The dimensions and style of your plot are up to you, though we recommend a bar graph be used for most plots of counts. Save your SVG output in eXist, but paste a copy of your XQuery script in a text file, save it according to our usual homework file naming conventions, and upload it to Coursweb.</p>
-
+      <p>You may wish to update your project files in our eXist database (and as you review and plot your output data you will almost certainly see evidence of tagging errors like extra spaces in elements that might yield two separate nodes with the same name, etc.). To update the file, go to <code>File → Manage</code>, browse for your project directory and locate the file you want to change, and delete it from the database by selecting it and clicking on the trashcan symbol. Upload your new file by clicking on the upload button to the left of the trashcan.) </p>
+      <img src="eXideManage.png" alt="location of trashcan and upload buttons in the eXist DB Manager"/>
+     
    </body>
 
 </html>
