@@ -1,0 +1,52 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>Network Analysis Exercise, Part 1 (XQuery to Network)</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+    	
+      <h1><span class="banner">Network Analysis Exercise, Part 1 (XQuery to Network)</span></h1>
+      <figure><img src="JA-N1trns.svg" alt="Jane Austen in a network of real people and fictional characters as mentioned in Mary Russell Mitford's writings"/>
+         <figcaption>Jane Austen as she is networked with other historical people and fictional characters in Mary Russell Mitford’s web of writings. For details, please see <cite>Visualizing the Worlds of Mary Mitford</cite></figcaption>
+      </figure>
+      <p>With this pair of assignments you will learn how to extract data from your XML in a special tabular plain text format called a <dfn><strong>TSV file</strong></dfn>, which you can import into the Cytoscape network analysis software. Learning how to output and work with a <strong>TSV</strong> file will give you options for working with a wide range of data analysis and visualization and mapping software, so Cytoscape is just one example of what you can do with this simple, handy data format. <strong>TSV</strong> stands for <strong>T</strong>ab <strong>S</strong>eparated <strong>V</strong>alues, and it applies a <strong>tab</strong> control character with the unicode special entity notation <code>&#x9;</code>, which signals a movement to the next tab stop, the location the cursor jumps to when you hit the tab key. Basically a TSV presents a table layout in plain text. Actually, any plain text file can represent a tabular column format just by using a regularly repeating pattern of characters, such a white space or a comma and a space (the comma plus space separated output is known as a <strong>CSV</strong> file).</p>
+    
+         <p>I have loaded your project files into <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a>, so you may access them from the following locations:</p>
+      <ul>
+         <li>Decameron project: You can choose to work with the English Decameron TEI file by itself: 
+         <pre>
+            <code>doc('/db/decameron/engDecameronTEI.xml')</code>
+         </pre>
+            or with the collection of the pair of English and Italian files, if you want to plot a graph that compares something between the two:
+           <pre>
+             <code>collection('/db/decameron/')</code>
+           </pre> 
+         </li>
+         <li>City Slave Girls project: 
+         <pre><code>collection('/db/Nelson/ChicagoTimes_XML_grammar/')</code></pre></li>
+         <li>Emily Dickinson project (fascicle 16 files):
+         <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
+      </ul>
+ <p>Each of these projects are using TEI code. To read from the TEI and to output in the SVG namespace, you will need to declare your namespaces and work with the <code>tei:</code> prefix for all TEI elements.</p>     	
+      	<pre>
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0"; 
+      	</pre>
+      
+      <p>Open one of the files in these projects in eXide (with file-->open, and browse your way to it), and spend a few minutes studying the code. Look for something interesting to count and plot. For example, you might plot something that you can count within each of the ten days of the Decameron, knowing that days are held within <code>&lt;div[@type="Day"]&gt;</code> elements: perhaps the number of times a particular character appears, or how many places are marked. Because the XML texts that we are using here are under development, they may be inconsistently or incompletely marked up. They are all well formed, however, which means that they can be explored with XML tools, including XQuery.</p>
+      <p>To plot your graph (or other visualization) in SVG from XQuery, apply what you have been learning about SVG in the previous assignments. For example, when you plotted the timeline, you learned how to code a viewport in the SVG root element, and you learned how to plot from x=0 and y=0 so that your plot is visible in the SVG coordinate space, using <code>transform="translate(x, y)"</code>. You also learned how to plot and space hashmarks at regular intervals along a line. Your plot doesn’t need to contain hashmarks that look like the timeline plot, but at the very least you may want to space bars on a  bar graph at regular intervals, based on a maximum value. Keep in  mind that when you output multiple SVG elements in a return, you will want to bundle them together in a single group, or <code>&lt;g&gt;</code>.</p>
+   <p>The dimensions and style of your plot are up to you, though we recommend a bar graph be used for most plots of counts. Save your SVG output in eXist, but paste a copy of your XQuery script in a text file, save it according to our usual homework file naming conventions, and upload it to Coursweb.</p>
+
+   </body>
+
+</html>
