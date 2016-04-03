@@ -1,0 +1,69 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>Network Analysis Exercise, Part 2 (XQuery to Network)</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+    	
+      <h1><span class="banner">Network Analysis Exercise, Part 2 (Graphing a Network in Cytoscape)</span></h1>
+      <figure><img src="JA-N1trns.svg" alt="Jane Austen in a network of real people and fictional characters as mentioned in Mary Russell Mitford's writings"/>
+         <figcaption>SVG figure: Jane Austen as she is networked with other historical people and fictional characters in Mary Russell Mitford’s web of writings. For details on how to read this network graph, please see <cite><a href="http://digitalmitford.org/visual.html">Visualizing the Worlds of Mary Mitford</a></cite>.</figcaption>
+      </figure>
+      <h3>The graphing task of part 2</h3>
+      <p>If you completed <a href="NetworkExercise1.html">Part 1 of this assignment</a>, you have prepared a <dfn><strong>TSV file</strong></dfn>, and made sure you could import it into the network analysis software Cytoscape. In Part 2, we will work with TSV data that you import into Cytoscape. As you explore what you can do with graphing your network, we encourage you to return to your XQuery and output more data to provide more information on your nodes and edges. You can import this data as node attribute and edge attribute columns, and use the information in these columns to map distinctions like node size, shape, and color, as well as edge thickness (or <q>weight</q>) and color. For our sample files in this exercise we will continue to work with networking character names from the <cite>Decameron</cite> project, and you should continue to work with your own extracted data from whatever project you are working on. Your design decisions need not (and probably should not) mirror ours, which are just providing as guiding examples to help you understand key concepts and how to work in Cytoscape.</p>
+      
+      <h3>Importing the data: Source node, Edge (shared interaction), Target node, and attribute column(s)</h3>
+   <p>After completing part 1 of this exercise, we produced a TSV file containing four columns of data pulled from the Decameron project:</p>
+     <pre>
+Stratilia	frame	45	Pampinea 
+Stratilia	frame	45	Fiammetta 
+Stratilia	frame	45	Filomena 
+Stratilia	frame	45	Emilia 
+Stratilia	frame	45	Lauretta 
+Stratilia	frame	45	Neifile 
+Stratilia	frame	45	Filostrato 
+Stratilia	frame	45	Dioneo 
+Stratilia	frame	45	Parmeno 
+Stratilia	frame	45	Sirisco 
+Stratilia	frame	45	Tindaro 
+Stratilia	frame	45	Misia 
+Stratilia	frame	45	Licisca 
+Stratilia	frame	45	Chimera 
+Bergamino	floatingFrame	2	Filostrato 
+Bergamino	floatingFrame	2	Lauretta 
+Martellino	floatingFrame	4	Filostrato 
+Martellino	floatingFrame	4	Neifile 
+Marchese	novella	18	Martellino 
+Marchese	novella	18	Agolanti 
+Agolanti	novella	29	Martellino 
+Agolanti	novella	29	Marchese 
+Agolanti	novella	29	Pampinea 
+Agolanti	novella	29	Filostrato</pre>
+      
+      
+      <p>As before in part 1, we are showing you a portion of a much larger TSV file that represents <dfn><strong>co-occurrence network data</strong></dfn>, that is, it shows individual characters from <cite>The Decameron</cite> who are connected with each other by being present in the same portion of the text, whether in the introduction or concluding <q>frame</q> portions of each day of storytelling, the <q>floatingFrame</q> sections in which the frame narrators provide commentary inside the story sections, and the stories themselves in the story or <q>novella</q> level. These characters <em>appear together in the same locations</em> in the text, and this is a typical co-occurrence relationship for network analysis, which connects <code>nodes</code> (the characters, here) and <code>edges</code> (what they share or what location host them both, whether that is inside a <code>&lt;floatingText&gt;</code> or <code>&lt;div type="novella"&gt;</code> here). For more on networks of co-occurrence see our <cite><a href="http://ebeshero.github.io/thalaba/cytosc.html">Introduction to Network Analysis and Cytoscape for XML Coders</a></cite>.</p>
+      <p>The difference between this TSV and <a href="NetworkExercise1.html">the one we showed you in Part 1</a> is that we've added one more column, just to the right of the Shared Interaction (edge) column: to output a number. That number represents the <code>count()</code> of all the times in which a particular Target Node appears in a given Shared location with a Source Node. We output this number because we took <code>distinct-values()</code> of our source and target nodes, indicating only <em>whether</em> a particular character turns up with another character in a place. Adding the <code>count()</code> is a convenient and human-readable way to store that additional information, and it provides information we can use in weighting our edge connections: How many times did a Shared Interaction occur in the <q>frame</q>, <q>floatingFrame</q>, or <q>novella</q> locations? We will import that numerical count into Cytoscape as an <strong>Edge Attribute</strong>.</p>    
+      
+       
+      <h3>What to submit</h3>
+      <h4>Upload three things to Courseweb:</h4>
+      <ul>
+         <li>your current XQuery script (in a text file) that generates your TSV file</li>
+         <li>your current TSV file</li>
+         <li>a graphic you have output from Cytoscape in <code>SVG</code> and/or <code>PNG</code>formats. <strong>Or</strong> if you wish, provide us in your XQuery script file a link to an HTML page on which you have embedded an output Network Analysis graphic.</li>
+      </ul>
+      <h4>Upload one thing to your Graded Homework folder in Pitt’s Box Network:</h4>
+      <p>Upload your modified XQuery script (in a text file) and your TSV file to the Courseweb upload point for this assignment, and upload your <code>.cys</code> Cytoscape Session file to the Homework Return folder we share with you in Pitt’s Box at <a href="http://pitt.box.com/">http://pitt.box.com/</a>. (We do not think you will be able to upload the .cys file to Courseweb.)</p>
+   </body>
+
+</html>
