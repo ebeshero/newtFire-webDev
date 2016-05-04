@@ -87,11 +87,11 @@
       			
       <h3>Basic Requirements of XHTML</h3>
       			
-      <p><strong>Valid XHTML 5 syntax</strong> requires the following structure,
+      <p><strong>Valid XHTML 5 syntax</strong> requires the following basic structure,
          				beginning with a <span class="code">&lt;!DOCTYPE&gt;</span> declaration: 
       </p>
       		
-      <div class="code"> &lt;?xml version="1.0" encoding="UTF-8"?&gt;<br /> &lt;!DOCTYPE html&gt;<br /> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;<br />
+      <div class="code">  &lt;!DOCTYPE html&gt;<br /> &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;<br />
          				<span class="indent">&lt;head&gt;</span><br />
          				<span class="indentMore">&lt;title&gt;A Title Here&lt;/title&gt;</span><br />
          				<span class="indent">&lt;/head&gt;</span><br />
@@ -99,6 +99,7 @@
          				<span class="indent">&lt;/body&gt;</span><br /> &lt;/html&gt;<br />
          			
       </div>
+   	<p><strong>Note:</strong> We will make some modifications to this in the next section to adapt it to newtFire's server environment.</p>
       			
       <p>The <span class="code">&lt;!DOCTYPE&gt;</span> and namespace declarations tell the web browser what
          				version of HTML you’re working with. 
@@ -121,6 +122,7 @@
                						Service</a>.</span>
          			
       </p>
+
       			
       <p>The <span class="code">head</span> element is always required and must contain a
          					<span class="code">title</span> element, but note that this does not display on
@@ -143,7 +145,24 @@
          				web page, try selecting “View Page Source” (by right-clicking in your
          				browser window, or locating it in your browser menu options.
       </p>
-      			
+   	<h3>How to Set up Save Your Work for Your Server Environment (with newtFire Protocols)</h3>
+      			<p>Note that different server environments have different protocols and ways of handling XHTML Doctype declaration and file extensions, so you want to find out the specific protocols for file extensions and posting files from your network administrator. You may save HTML files with either of the following extensions: <code>.xhtml</code> or <code>.html</code>. For us working together on the newtFire server, we need to save our work as <code>.html</code> for some of our web development technologies to function (more on this later), and we also use a distinctive protocol for ensuring that UTF-8 characters are always served in every browser. <strong>If you are developing a newtFire project,</strong> then you will need to save your work as <code>.html</code> and apply the following setup for your <code>Doctype declaration</code> and <code>&lt;head&gt;</code> element:</p>
+   	<div class="code">
+   		&lt;!DOCTYPE html<br/>
+  SYSTEM "about:legacy-compat"&gt;<br/>
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;<br/>
+ <br/>  
+   	
+   &lt;head&gt;<br/>
+      &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;<br/>
+      		
+      &lt;link rel="stylesheet" type="text/css" href="explain.css" /&gt;<br/>
+      		
+      &lt;title&gt;Your page title here (to appear in the browser tab, but not on the page)&lt;/title&gt;<br/>
+      	
+   &lt;/head&gt;
+   		
+   	</div>
       <h3>Block-Level Body Elements</h3>
       			
       <p><strong>Block-level</strong> elements are the major structural components of an XHTML
