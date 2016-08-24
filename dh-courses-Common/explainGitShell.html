@@ -26,7 +26,7 @@
                 <li><a href="#nav">Navigating Directories</a></li>
                 <li><a href="#working">Basic Git Workflow: pulling, staging, committing, and
                         pushing</a></li>
-                <li><a href="#cheatSheet">Quick Reference of Common Commands</a></li>
+                <li><a href="#cheatSheet">Common Commands</a></li>
             </ul> Advanced Project Management: <ul>
                 <li><a href="#branch">Creating and Deleting a Branch</a></li>
                 <li><a href="#fork">Creating and Maintaining a Forked Repo</a></li>
@@ -47,19 +47,19 @@
             reliability of being able to revert back to an exact moment in a project, for any given
             file or the project in its entirety, much more stable than other VCSs.</p>
         <p>So let's say you and a team member are both updating the same XML document inside of your
-            shared <dfn>repository</dfn> <span class="smaller">(directory of files)</span>. You make your
-            changes, save them, and upload them back to the shared repository. So far, so good. The
-            problem, for most VCSs, comes when your team member is working on the same document as
-            you at the same time. One of you is about to have your work overwritten and erased;
-            however, Git keeps that from happening. You and your fellow team member can each upload
-            your revisions to the same document, and Git will save two versions of the file. If you
-            both were working on different parts of the same document Git will automatically
-                <dfn>merge</dfn> your changes together without losing any work along the way. If you
-            both happen to edit the exact same segment of code Git will issue a <dfn>merge
-                conflict</dfn> to point out where the two files differ allowing you and your team to
-            decide what version to keep. You can even revert to an earlier version at any time,
-            because Git keeps a <q>snapshot</q> of every change ever made by all project
-            collaborators.</p>
+            shared <dfn>repository</dfn>
+            <span class="smaller">(directory of files)</span>. You make your changes, save them, and
+            upload them back to the shared repository. So far, so good. The problem, for most VCSs,
+            comes when your team member is working on the same document as you at the same time. One
+            of you is about to have your work overwritten and erased; however, Git keeps that from
+            happening. You and your fellow team member can each upload your revisions to the same
+            document, and Git will save two versions of the file. If you both were working on
+            different parts of the same document Git will automatically <dfn>merge</dfn> your
+            changes together without losing any work along the way. If you both happen to edit the
+            exact same segment of code Git will issue a <dfn>merge conflict</dfn> to point out where
+            the two files differ allowing you and your team to decide what version to keep. You can
+            even revert to an earlier version at any time, because Git keeps a <q>snapshot</q> of
+            every change ever made by all project collaborators.</p>
         <p>Another great aspect of Git is the emphasis on local operation. Git doesn't need to go
             out to the server to get the history of a project and display it for you – it simply
             reads it directly from your local computer. This means you see the project history
@@ -76,110 +76,126 @@
             <span class="smaller">(an entire how-to guide on Git written by Scott Chacon and Ben
                 Straub)</span>.</p>
         <h4>Why use Git Shell (command line)?</h4>
-        <p>Unlike the Graphical User Interfaces (GUIs), the command line is the only place you can
-            take advantage of all the functions Git has to offer. The GUIs only implement the
-            simplistic functionality of Git as a means to use Git at the most basic level. Click <a
+        <p>Unlike the Graphical User Interfaces (GUIs), the command line / terminal is the only
+            place you can take advantage of all the functions Git has to offer. The GUIs only
+            implement the simplistic functionality of Git as a means to use Git at the most basic
+            level. For most of you command line / terminal will be a foreign interface. Think of it
+            as a way to navigate your computer's files and systems by typing commands (strings of
+            text) at prompts, instead of using the mouse. Click <a
                 href="http://try.github.io/levels/1/challenges/1">here</a> for GitHub's helpful,
-            interactive tutorial on using the Git command-line interface.</p>
-        <h3 id="terms">Key Terms to Understanding Git and GitHub</h3>
+            interactive tutorial on using the Git command-line interface.</p><!-- RJP:2016-08-24: Should we link to our GUI tutorial here? I think better not send students down a path we don't encourage. Just in case: http://dh.obdurodon.org/github.xhtml -->
+        <h3 id="terms">Basic Terms to Understanding Git and GitHub</h3>
+        <p>Below is a list of key terms you will need to understand while using Git and GitHub. Each
+            of these terms will be discussed in greater detail throughout this tutorial, but think
+            of this as your quick reference guide to the basics.</p>
         <ul style="list-style-type:none">
-            <li><dfn></dfn>:</li>
-            <li><dfn></dfn>:</li>
-            <li><dfn></dfn>:</li>
-            <li><dfn></dfn>:</li>
-            <li><dfn></dfn>:</li>
-            <li><dfn></dfn>:</li>
-            <li><dfn></dfn>:</li>
-            <li><dfn></dfn>:</li>
-            <!--<li>The online GitHub interface - located at <a href="http://github.com"
-                    >www.github.com</a>. GitHub is a social network site built on top of Git, which
-                developers can use to collaborate on projects while using Git for version control
-                purposes. The web interface is where the remote version of your project will exist.
-                This is the hub where project collaborators push change to and pull changes
-                from.</li>
-            <li>Your local file directory - this is where repositories on the local machine, of a
-                single developer (you), are stored and edited. Git relies on users practicing good
-                file management. It is important to take note where you configure Git to on you
-                local computer in order to know where local changes to repositories are made.</li>
-            <li>Git Shell - this is the tool used for accessing the local repositories and their
-                remote counterparts. Through a series of Git Shell commands you can create, clone,
-                and edit your GitHub repositories.</li>-->
+            <li><dfn><strong>Repository</strong></dfn> (repo): a project's folder. A repository
+                contains all of the project files (including documentation), and stores each file's
+                revision history. Repositories can have multiple collaborators and can be either
+                public or private.</li>
+            <li><dfn><strong>GitHub</strong></dfn>: web-based Git repository hosting service. It
+                offers all of the distributed revision control and source code management (SCM)
+                functionality of Git as well as its own social network features. This is the web
+                interface for the remote, shared version of your project(s). Think of this as your
+                projects' central hub where project collaborators are able to discuss development
+                and share project files. <a href="https://github.com/">GitHub.com</a></li>
+            <li><dfn><strong>Clone</strong></dfn>: a copy of a repository that lives on your
+                computer instead of on GitHub's server, or the act of making that copy. With your
+                clone you can edit the files in &lt;oXygen/&gt; and use Git to keep track of your
+                changes without having to be online. It is, however, connected to the remote version
+                so that changes can be synced between the two. You can push your local changes to
+                the remote to keep them synced when you're online.</li>
+            <li><dfn><strong>Remote</strong></dfn>: this is the version of a repo that is hosted on
+                GitHub's server. It can be connected to local clones so that changes can be
+                synced.</li>
+            <li><dfn><strong>Working Directory</strong></dfn>: your local verson of files on your
+                computer, where you make changes. All Git files have a three part working directory:
+                    <dfn>unstaged</dfn>, <dfn>staged</dfn>, <dfn>committed</dfn>. If you make edits
+                to a repo those changes sit unstaged until you have consciously added those changes
+                to the staging area. Staging changes allows you to review before commiting.</li>
+            <li><dfn><strong>Commit</strong></dfn>: a.k.a. <q>revision</q>, this is an individual
+                change to a file (or set of files). It's like when you save a file, except with Git,
+                every time you save it creates a unique ID <span class="smaller">(the <q>SHA</q> or
+                        <q>hash</q>)</span> that allows you to keep record of what changes were made
+                when and by who. Commits usually contain a commit message which is a brief
+                description of what changes were made.</li>
+            <li><dfn><strong>Pushing</strong></dfn>: refers to sending your committed changes to a
+                remote repository such as GitHub.com. For instance, if you change something locally,
+                you'd want to then push those changes so that others may access them.</li>
+            <li><dfn><strong>Pulling</strong></dfn>: is the combined process of
+                        <dfn><strong>fetching</strong></dfn> (getting the latest changes from a
+                remote repo without merging them in order to compare them to the code residing on
+                your local machine) and <dfn><strong>merging</strong></dfn> (applying the changes
+                from one file to another). For instance, if someone has edited the remote file
+                you're both working on, you'll want to pull in those changes to your local copy so
+                that it's up to date.</li>
+            <!--<li><dfn><strong></strong></dfn>:</li>-->
+            <!--RJP:2016-08-24: We should add more as we see necessary. I didn't want to overload with terms especially since each of these terms comes up in greater detail throughout the tutorial, but we could add more to this list if we later think it is necessary. -->
         </ul>
+        <p><span class="smaller">The above definitions are compiled from the following three sites,
+                which can be visited for definitions of even more Git terms: <a
+                    href="https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html"
+                    >https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html</a>, <a
+                    href="https://betterexplained.com/articles/aha-moments-when-learning-git/"
+                    >https://betterexplained.com/articles/aha-moments-when-learning-git/</a>, and <a
+                    href="https://help.github.com/articles/github-glossary/"
+                    >https://help.github.com/articles/github-glossary/</a></span></p>
+        <br />
         <h1>Let's get started!</h1>
         <h3 id="account">How to create a GitHub account:</h3>
         <p>Because GitHub is a social networking site, where people post their code so that it will
             be accessible to others, using it requires creating an account. You can create a free
             account by navigating to <a href="https://www.github.com">https://www.github.com</a>.
-            You are not required to create an account using your pitt.edu address, although if you
-            associate an educational email address with your account, GitHub will give you
-            additional benefits.</p>
-        <div class="accountImg">
-            <img src="git_shell/creatingAccount_01.jpg" alt="Creating An Account" />
-        </div>
+            You are not required to create an account using your pitt.edu address; however,
+            associating an educational email address with your account may give you additional
+            benefits <span class="smaller">(including five free private repos)</span>.</p>
         <p>To create your account, enter a user name, email address, and password and then click the
-            green button that says Sign up for GitHub.</p>
-        <div class="accountImg">
-            <img src="git_shell/creatingAccount_02.jpg" alt="Creating An Account" />
-        </div>
-        <p>Keep the free option, which is the default, and then click the green button that says
-            Finish sign up.</p>
-        <div class="accountImg">
-            <img src="git_shell/creatingAccount_03.jpg" alt="Creating An Account" />
-        </div>
-        <p>After creating your account, GitHub will prompt you to verify your email address.</p>
-        <div class="accountImg">
-            <img src="git_shell/creatingAccount_04.jpg" alt="Creating An Account" />
-        </div>
-        <p>Make sure to follow the link in the verification email.</p>
-        <p>You will then be directed back to your account:</p>
-        <div class="accountImg">
-            <img src="git_shell/creatingAccount_05.jpg" alt="Creating An Account" />
-        </div>
-        <p>Note: You would benefit from exploring the sections from the above image that are
-            surrounded in red. Now navigate to your account profile:</p>
-        <div class="accountImg">
-            <img src="git_shell/creatingAccount_06.jpg" alt="Creating An Account" />
-        </div>
-        <p>The following image highlights the basic functions that can be found by navigating
-            through your account profile.</p>
-        <div class="accountImg">
+            green button that says <q>Sign up for GitHub</q>.<br />
+            <img src="git_shell/creatingAccount_01.jpg" alt="Creating An Account" /><br />Be sure to
+            select the free option, and then click the green button that says <q>Finish sign up</q>.<br />
+            <img src="git_shell/creatingAccount_02.jpg" alt="Creating An Account" /><br /> After
+            creating your account, GitHub will prompt you to verify your email address and decide on
+            notification frequency. Make sure to follow the link in the verification email. It is
+            important while you are enrolled in this coding course that you regularly checking
+            GitHub so you may decide to allow all notifications <span class="smaller">(knowing you
+                can change this later)</span> You will then be directed back to your account.<br />
+            <img src="git_shell/creatingAccount_03.jpg" alt="Creating An Account" /><br />
+            <img src="git_shell/creatingAccount_04.jpg" alt="Creating An Account" /><br />
+            <img src="git_shell/creatingAccount_05.jpg" alt="Creating An Account" /><br />
+            <strong>Note: We have highlighted some recommended features of your GitHub account that
+                you should take some time exploring further.</strong><br />
+            <img src="git_shell/creatingAccount_06.jpg" alt="Creating An Account" /><br />
             <img src="git_shell/creatingAccount_07.jpg" alt="Creating An Account" />
-        </div>
+        </p>
         <h3 id="setup">Downloading Git Shell</h3>
         <p>Git is available for <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">download</a> on
-            all three of these platforms: </p>
+            all three of these platforms: Linux, Mac, and Windows. To download Git on your local
+            machine follow the instructions available <a
+                href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">here</a>. Since
+            platform downloads differ we are not going to go through a step-by-step installation
+            process. However, our suggested settings are as follows:</p>
         <ul>
-            <li>Linux</li>
-            <li>Mac</li>
-            <li>Windows</li>
+            <li>If the download asks about <q>Adjusting your PATH environment</q>, we recommend
+                selecting <q>Use Git Bash only</q> as it provides an unmodified PATH.</li>
+            <li>If the download asks about <q>Configuring the line ending conversations</q>, we
+                recommend chosing the option of <q>Checkout Windows-style, commit Unix-style line
+                    endings</q>.</li>
+            <li>When the download asks where you want Git saved and/or where to save future repos
+                you NEED to browse your computer and save to a logical place on your local machine
+                that you know how to access easily.</li>
         </ul>
-        <p>To download Git on your local machine follow the instructions available at this link <a
-                href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git"
-                >https://git-scm.com/book/en/v2/Getting-Started-Installing-Git</a>.</p>
-        <p>When considering if you want to download the desktop GUI client, in addition to Git
-            Shell, it might be worth noting that some of the general functionality and ease of
-            access through the GUI may be beneficial and useful to you. For example: configuring
-            your local Git machine with your online account can be done through a few simple steps
-            using the GUI. Seen in the image below:</p>
-        <div class="clientImg">
-            <img src="git_shell/desktopClientDownload_05.jpg" alt="configuring account using GUI" />
-        </div>
-        <p>The GUI also offers ease of entry to a repository's file directory and git shell access
-            simply by right clicking on the desired repository's name. Again, see the image
-            below:</p><div class="clientImg">
-            <img src="git_shell/rightClick_repoONdesktop.jpg" alt="using GUI right click" />
-        </div>
-        <p>If you have decided not to use the GUI client to configure your local git you can do the
-            configuration by opening Git shell and entering the following commands:</p>
-        <span class="code">$ git config --global user.name 'Your Name Comes Here'<br /> $ git config
-            --global user.email 'you@yourdomain.example.com'</span>
-        <p> This will add the following to a file named .gitconfig in your home directory:</p>
-        <span class="code">[user]<br /> name = Your Name Comes Here<br /> email =
-            you@yourdomain.example.com</span>
-        <p>To verify that you entered your information correctly use the command <code>$ git config
-                --list</code>.</p>
-        <h3 id="repo">Creating a Repository</h3>
+        <p>After you have completed the download you will need to configure your local machine's Git
+            with your online GitHub account. Begin configuration by opening Git shell and entering
+            the following commands <span class="smaller">(after the <span class="code"
+                >$</span>)</span>:</p>
+        <span class="code">$ git config --global user.name "YOUR NAME"</span>
+        <br />
+        <span class="code">$ git config --global user.email "YOUR EMAIL ADDRESS"</span>
+        <p>Be sure to use the same email address you used when signing up for your GitHub account.
+            This will add your name and email to a file named <dfn>.gitconfig</dfn> in your home
+            directory. To verify that you entered your information correctly use the command:</p>
+        <span class="code">$ git config --list</span>. <h3 id="repo">Creating a Repository</h3>
         <h4>What is a repo?</h4>
         <p>Projects on GitHub are stored in repos (short for repositories), which you can think of
             as equivalent to folders or directories on your computer. Repos can contain plain files
@@ -444,7 +460,7 @@
         <div class="commandImg">
             <img src="git_shell/deleteBranch.jpg" alt="deleting a branch" />
         </div>
-        <h3>Forking: what is it and why do we do it?</h3>
+        <h3 id="fork">Forking: what is it and why do we do it?</h3>
         <p>Part of the open-source etiquette of GitHub is that developers are encouraged to copy and
             then improve code originally created by others. GitHub supports the creation of derived
             projects through forking. When you fork a repo, you create a copy of it under your own
