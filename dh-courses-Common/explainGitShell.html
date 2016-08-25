@@ -18,7 +18,7 @@
         <div id="quickRef">
             <h3>Quick Reference:</h3> The Basics:<ul>
                 <li><a href="#terms">Key Terms</a></li>
-                <li><a href="#account">Creating an Account on Github</a></li>
+                <li><a href="#account">Creating an Account on GitHub</a></li>
                 <li><a href="#setup">Downloading Git Shell</a></li>
                 <li><a href="#repo">Creating a Repo</a></li>
                 <li><a href="#collaborators">Adding and Deleting Collaborators</a></li>
@@ -110,11 +110,11 @@
             <li><dfn><strong>Remote</strong></dfn>: this is the version of a repo that is hosted on
                 GitHub's server. It can be connected to local clones so that changes can be
                 synced.</li>
-            <li><dfn><strong>Working Directory</strong></dfn>: your local verson of files on your
+            <li><dfn><strong>Working Directory</strong></dfn>: your local version of files on your
                 computer, where you make changes. All Git files have a three part working directory:
                     <dfn>unstaged</dfn>, <dfn>staged</dfn>, <dfn>committed</dfn>. If you make edits
                 to a repo those changes sit unstaged until you have consciously added those changes
-                to the staging area. Staging changes allows you to review before commiting.</li>
+                to the staging area. Staging changes allows you to review before committing.</li>
             <li><dfn><strong>Commit</strong></dfn>: a.k.a. <q>revision</q>, this is an individual
                 change to a file (or set of files). It's like when you save a file, except with Git,
                 every time you save it creates a unique ID <span class="smaller">(the <q>SHA</q> or
@@ -184,7 +184,7 @@
             <li>If the download asks about <q>Adjusting your PATH environment</q>, we recommend
                 selecting <q>Use Git Bash only</q> as it provides an unmodified PATH.</li>
             <li>If the download asks about <q>Configuring the line ending conversations</q>, we
-                recommend chosing the option of <q>Checkout Windows-style, commit Unix-style line
+                recommend choosing the option of <q>Checkout Windows-style, commit Unix-style line
                     endings</q>.</li>
             <li>When the download asks where you want Git saved and/or where to save future repos
                 you NEED to browse your computer and save to a logical place on your local machine
@@ -200,7 +200,9 @@
         <p>Be sure to use the same email address you used when signing up for your GitHub account.
             This will add your name and email to a file named <dfn>.gitconfig</dfn> in your home
             directory. To verify that you entered your information correctly use the command:</p>
-        <span class="code">$ git config --list</span>. <h3 id="repo">Creating a Repository</h3>
+        <span class="code">$ git config --list</span>. For more information on the <code>git
+            config</code> command click <a href="https://git-scm.com/docs/git-config"
+            target="_blank">here</a>. <h3 id="repo">Creating a Repository</h3>
         <h4>What is a repo?</h4>
         <p>Projects on GitHub are stored in repos (short for repositories), which you can think of
             as equivalent to folders or directories on your computer. Repos can contain plain files
@@ -290,8 +292,7 @@
             development on your local machine, where only you have access to the files, and when
             you’re ready to share your work with your project partners, you sync (upload) it
             explicitly to the server.</p>
-        <h4>How to clone an existing repo:</h4>
-        <h5 id="nav">Navigating Directories</h5>
+        <h4 id="nav">Navigating Directories</h4>
         <p>Before you clone a repo, you need to understand how to navigate between directories using
             Git Shell. When opening Git Shell from a shortcut link you will be placed in the main
             configuration folder you set up when installing Git. The following image explains how
@@ -299,6 +300,7 @@
         <div class="commandImg">
             <img src="git_shell/navDirectory.jpg" alt="navigating through directories" />
         </div>
+        <h4>How to clone an existing repo:</h4>
         <p>To clone a repo from the remote online server using command line you use one easy
             command: <code>git clone</code>. After <code>git clone</code> you copy the url of the
             repo you wish to clone, a space, and then a name for the folder where the cloned repo
@@ -318,9 +320,9 @@
             <dfn>committed</dfn>. If you make edits to a repo those changes sit unstaged until you
             have consciously added those changes to the staging area. This mean you could modify a
             file multiple times without documenting every single keystroke before asking Git to
-            track those chages. Once you have added changes to the staging area Git will monitor if
+            track those changes. Once you have added changes to the staging area Git will monitor if
             any new changes differ from what was added and mark those changes as unstaged. Staging
-            changes allows you to review before commiting.</p>
+            changes allows you to review before committing.</p>
         <p><img src="git_shell/gitWorkflow.jpg" alt="git workflow" /></p>
         <ol>
             <li>Before you begin working you <strong>ALWAYS</strong> need to be sure your local repo
@@ -394,7 +396,7 @@
             Once you are in our <a href="https://github.com/ebeshero/DHClass-Hub/issues"
                 target="_blank">DHClass-Hub Issues Board</a> notice there are open issues and closed
             issues. Search through the open issues for an issue where others are asking to be added
-            as a collaboator. If there is such an issue already existing click on it. If there is
+            as a collaborator. If there is such an issue already existing click on it. If there is
             not an existing issue click the <q>New issue</q> button at the top of the page.</p>
         <p><img src="git_shell/issue_01.jpg" alt="GitHub Issues Board" /></p>
         <p>Creating an issue and commenting on an issue are very similar. Issues on GitHub are
@@ -408,10 +410,56 @@
             Microsoft Word that can be toggled to have a specific styling applied to your text.
             Leave us a comment in either the existing <q>add as collaborator</q> issue or one you
             create to inform us you are ready to add files to the DHClass-Hub.</p>
-        <h1>Common Commands:</h1>
-        <p>Here is a list of commands used most frequently, and some options to modify the results of each command. Some of the commands listed here are associated with <a href="#advanced">advanced project management</a> while others are more basic. We have not listed every possible command; however we can recommend these sites to review more commands: <a href="https://git-scm.com/docs" target="_blank">https://git-scm.com/docs</a>, <a href="https://www.siteground.com/tutorials/git/commands.htm" target="_blank">https://www.siteground.com/tutorials/git/commands.htm</a>, and <a href="https://orga.cat/posts/most-useful-git-commands" target="_blank">https://orga.cat/posts/most-useful-git-commands</a>. Another really great thing about Git is that it has been in existence since 2005 and is widely used about computer programs; therfore, the resources on Git and Git commands is vast!</p>
-        <ul> </ul>
-        <h2 id="advanced">Advanced Project Management:</h2>
+        <h1 id="cheatSheet">Common Commands:</h1>
+        <p>Here is a list of commands used most frequently, and some options to modify the results
+            of each command. Some of the commands listed here are associated with <a
+                href="#advanced">advanced project management</a> while others are more basic. We
+            have not listed every possible command; however we can recommend these sites to review
+            more commands: <a href="https://git-scm.com/docs" target="_blank"
+                >https://git-scm.com/docs</a>, <a
+                href="https://www.siteground.com/tutorials/git/commands.htm" target="_blank"
+                >https://www.siteground.com/tutorials/git/commands.htm</a>, and <a
+                href="https://orga.cat/posts/most-useful-git-commands" target="_blank"
+                >https://orga.cat/posts/most-useful-git-commands</a>. Another really great thing
+            about Git is that it has been in existence since 2005 and is used widely among computer
+            programers; therefore, the resources on Git and Git commands is vast!</p>
+        <ul style="list-style-type:none">
+            <li><a href="https://git-scm.com/docs/git-help" target="_blank"><code>git
+                    help</code></a>: possibly the most useful Git command, this command allows you
+                to search the most common Git commands in the command/terminal shell. If you follow
+                this command with another command or concept <span class="smaller">(ie. <code>git
+                        help push</code>)</span> Git generates a html page detailing the command or
+                concept as well as possible options for its use.</li>
+            <li><a href="https://git-scm.com/docs/git-init" target="_blank"><code>git
+                    init</code></a>: initializes a git repository by creating the initial .git
+                directory in a new or in an existing project.</li>
+            <li><a href="https://git-scm.com/docs/git-clone" target="_blank"><code>git
+                    clone</code></a>: copies an existing GitHub repo to local machine.</li>
+            <li><a href="https://git-scm.com/docs/git-status" target="_blank"><code>git
+                        status</code></a>: checks the working directory to see if up-to-date with
+                remote
+                repo.<!-- By adding <code>-v</code> <span class="smaller">(<code>git status -v</code>)</span>, you get a more <dfn>verbose</dfn> description; therefore, in addition to the names of files that have been changed Git also shows the textual changes that are staged to be committed. By adding <code>-u</code> <span class="smaller">(<code>git status -u</code>)</span>, you get the names of files that have not been staged <span class="smaller">(unstaged)</span>. You can combine <code>-v</code> and <code>-u</code> <span class="smaller">(<code>git status -u -v</code>)</span> to get a more verbose description of the unstaged changes.--></li>
+            <li><a href="https://git-scm.com/docs/git-add" target="_blank"><code>git add</code></a>:
+                a.k.a. staging changes, adds changes to staging area of the working directory. This
+                command is the first step in committing changes to your local version of the repo
+                before pushing them to the remote GitHub version of the repo. By adding
+                    <code>-A</code>
+                <span class="smaller">(<code>git add -A</code>)</span> Git adds, modifies, and
+                removes ALL entries to match the working directory. To specify that you only want to
+                stage a certain type of file you use an asterisk. <span class="smaller">For example: to stage all of the
+                .html files you type <code>git add *.html</code>.</span> If there is only a single file you
+                want to stage you can type the filename after the command. <span class="smaller">For example: <code>git
+                    add index.html</code></span></li>
+            <li><a href="https://git-scm.com/docs/git-commit" target="_blank"><code>git commit</code></a>: tells Git to record the changes made to your version of the repo. Every commit needs to have a message that explains what files have been edited/added. After this command add <code>-m</code> and then the commit message in quotes <span class="smaller">(<code>git commit -m "This is where your message goes"</code>)</span>.</li>
+            <li><a href="" target="_blank"><code></code></a>:</li>
+            <li><a href="" target="_blank"><code></code></a>:</li>
+            <li><a href="" target="_blank"><code></code></a>:</li>
+            <li><a href="" target="_blank"><code></code></a>:</li>
+            <li><a href="" target="_blank"><code></code></a>:</li>
+            <li><a href="" target="_blank"><code></code></a>:</li>
+            <li><a href="" target="_blank"><code></code></a>:</li>
+        </ul>
+        <h1 id="advanced">Advanced Project Management</h1>
         <h3 id="branch">Branching: what is it, and why do we do it?</h3>
         <p>Branching means you diverge from the main line of development and continue to do work
             without messing with that main line. The master branch is the main branch of a project.
@@ -596,6 +644,25 @@
             This is not a problem! The following link will take you to a very thorough YouTube video
             on how to do this: <a href="https://www.youtube.com/watch?v=M7ZYkjOWr6g"
                 >https://www.youtube.com/watch?v=M7ZYkjOWr6g</a>.</p>
+        <h3 id="data">Preserving and Mining GitHub Repo Data</h3>
+        <p>An important aspect of project management is data preservation. Long-term preservation
+            can be defined as the ability to provide continued access to digital materials, or at
+            least to the information contained in them, indefinitely. A sustainable preservation
+            program should address organizational issues, technological concerns and the digital
+            curation/data management process. Using Git and GitHub already provides one means of
+            data preservation; however, it is important to realize that all of the data collected
+            through the use of Git / GitHub is also important to preserve alongside the literal
+            files of your project. The two options we have researched to be most viable for creating
+            a backup of your Git and GitHub data are <a href="https://backhub.co/" target="_blank"
+                >https://backhub.co/</a> and <a target="_blank"
+                href="https://github.com/vsespb/mt-aws-glacier">Amazon AWS Glacier</a>. Another
+            nifty tool that we recommend you update frequently is the <a
+                href="https://archive.org/web/" target="_blank">online digital archive of
+                websites</a>. By adding updates to this site you can go back and review previous
+            saved versions of how your site looked. Besides data preservation it is important to
+            also be able to mine your GitHub data. The GitHub interface makes this really simple. In
+            any repo, at the top of the page, there are two tabs that are particularly useful for
+            mining your GitHub data: <q>Pulse</q> and <q>Graphs</q>.</p>
         <h3>TAKING IT FURTHER...</h3>
         <p>Git and GitHub can be a bit confusing for new users, but it makes project management much
             more robust than the available alternatives, and learning to use it is worth the effort.
@@ -610,7 +677,7 @@
                     Manual</a></li>
             <li><a href="https://www.siteground.com/tutorials/git/commands.htm">Git: Tutorial
                     Commands</a></li>
-            <li><a href="http://rogerdudler.github.io/git-guide/">git - the simple guide</a></li>
+            <li><a href="http://rogerdudler.github.io/git-guide/">Git - the simple guide</a></li>
             <li><a href="https://gist.github.com/hofmannsven/6814451">A simple Git cheatsheet
                     (hosted on GitHub Gist)</a></li>
         </ul>
