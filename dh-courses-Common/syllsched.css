@@ -85,10 +85,11 @@ span.indentMore {margin-left:5em;}
 span.indentEvMore {margin-left:7em}
 
 
-ul {list-style-type: circle;}
+ul {list-style-type: none;}
 
-ul li { padding: 1px}
-
+ul li {padding: 10px;}
+ul li ul {list-style-type: circle; padding: 5px;}
+ul li ul li { padding: 1px; margin-left:20px; font-size: smaller;}
 
 ol li { padding: 1px}
 

@@ -29,7 +29,7 @@
             </head>
             <body>
 
-                <xsl:comment>#include virtual="top-indexCDV16.html" </xsl:comment>
+                <xsl:comment>#include virtual="top-indexCDA16.html" </xsl:comment>
                 <!--ebb: make a new top for each XML for each new semester course-->
                         <h1>
                             <span class="banner">
@@ -42,7 +42,7 @@
                             <span class="banner">
                                 <xsl:apply-templates
                                     select="//text/front/div[@type='courseID']/p/text()"/>
-                                <xsl:text>: Spring 2016 Syllabus</xsl:text>
+                             
                             </span>
                         </h2>
                         
