@@ -31,7 +31,7 @@
                     in
                     any order. (Pursuing the second course allows students a review of fundamentals learned
                     in the first one, but offers experience with a different set of processing tools for
-                    humanities research.
+                    humanities research).
                 </p>
                 <ul>
                     <li><a href="CDASyll.html"><strong>Coding and Digital Archives</strong></a> 
@@ -41,7 +41,7 @@
                 </ul>
                 <h3>Course Projects</h3>
                 <p>In alternating semesters, the two coding courses will either involve students contributing
-                    to faculty-led research projects, or building their own proposed research projects.
+                    to faculty-led research projects or building their own proposed research projects.
                     All projects investigate a research question using digital methods.
                 </p>
                 <ul>
