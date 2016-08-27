@@ -178,16 +178,15 @@
         </ul>
         <p>When downloading Git on a Windows computer and/or if you are less experienced Mac user we
             suggest downloading <a href="https://desktop.github.com/" target="_blank">GitHub
-                Desktop</a> because the storing of configuration information is made simplier
-            through the GUI client that is installed with GitHub Desktop. Once download of GitHub
-            Desktop is complete you should open the GUI client (the icon with the purple cat head)
-            and to the gear symbol in the top right of the client. From there click on
-                <q>Options</q>. This is where you can configure your local Git setup with your
-            GitHub account.</p>
+                Desktop</a> because the storing of configuration information is made simpler through
+            the GUI client that is installed with GitHub Desktop. Once download of GitHub Desktop is
+            complete you should open the GUI client (the icon with the purple cat head) and to the
+            gear symbol in the top right of the client. From there click on <q>Options</q>. This is
+            where you can configure your local Git setup with your GitHub account.</p>
         <p><img src="git_shell/desktopClientDownload_05.jpg" alt="Using GUI to Configure Account"
              /></p>
-        <p>After you have completed configuraition using the GUI client exit the client and remove
-            the shortcut from your desktop. Do not uninstall the GUI in case you descide to change
+        <p>After you have completed configuration using the GUI client exit the client and remove
+            the shortcut from your desktop. Do not uninstall the GUI in case you decide to change
             your configuration in the future, but remove any created shortcuts because the Git Shell
             will be where you will do the rest of your Git interactions. If you choose to <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
@@ -204,7 +203,7 @@
             directory. To verify that you entered your information correctly use the command:</p>
         <span class="code">$ git config --list</span>. <p>For more information on the <code>git
                 config</code> command visit <a href="https://git-scm.com/docs/git-config"
-                target="_blank">the Pro Git guide on configuration</a>. Note: in oder to cache your
+                target="_blank">the Pro Git guide on configuration</a>. Note: in order to cache your
             username and password, if you have downloading Git without the GUI client, you will need
             to follow further directions found on <a
                 href=" https://help.github.com/articles/caching-your-github-password-in-git/#platform-all"
@@ -369,7 +368,7 @@
                 will need to check frequently with your project team to be sure new changes they may
                 have made will not cause the files you are editing a merge conflict. For example:
                 you are editing an XML transcription and one of your team members is going through
-                all of the XML documents and replacing hyphens with the unicode. Your partner edits
+                all of the XML documents and replacing hyphens with the Unicode. Your partner edits
                 many portions of the same document you are working in and pushes those changes to
                 the GitHub repo. Since you're not sure if those changes will cause a merge conflict
                 or not you need to store your changes without adding them to the staging area so you
@@ -424,34 +423,32 @@
                 href="https://backhub.co/" target="_blank">backhub.co</a>. Another nifty tool that
             we recommend you update frequently is the <a href="https://archive.org/web/"
                 target="_blank">online digital archive of websites</a>. By adding updates to this
-            site you can go back and review previous saved versions of how your websites looked.
+            site you can go back and review previous saved versions of how your website(s) looked.
             Besides data preservation it is important to also be able to mine your GitHub data. The
             GitHub interface makes this really simple. In any repo, at the top of the page, there
             are two tabs that are particularly useful for mining your GitHub data: <q>Pulse</q> and
-                <q>Graphs</q>. A repo's pulse visualizes the activity of the GitHub repo, while
-            Graphs visualize everything from specific user contributions to the types of files
-            stored in the repo. These visualizations can be useful when trying to determine details
-            about how the repo (and therefore project) grows and changes over time.</p>
+                <q>Graphs</q>. A repo's <dfn>Pulse</dfn> visualizes the activity of the GitHub repo,
+            while <dfn>Graphs</dfn> visualize everything from specific user contributions to the
+            types of files stored in the repo. These visualizations can be useful when trying to
+            determine details about how the repo (and therefore project) grows and changes over
+            time.</p>
         <h1 id="cheatSheet">Common Git Commands:</h1>
         <p>Here is a list of commands used most frequently, and some options to modify the results
             of each command. Some of the commands listed here are associated with <a
                 href="#advanced">advanced project management</a> while others are more basic. We
             have not listed every possible command; however we can recommend these sites to review
-            more commands: <a href="https://git-scm.com/docs" target="_blank"
-                >the Pro Git Guide</a>, <a
-                href="https://www.siteground.com/tutorials/git/commands.htm" target="_blank"
-                    >siteground.com</a>, <a
-                        href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
-                        >atlassian.com</a>, and <a
-                href="https://orga.cat/posts/most-useful-git-commands" target="_blank"
-                >orga.cat</a>. Another really great thing
-            about Git is that it has been in existence since 2005 and is used widely among computer
-            programers; therefore, the resources on Git and Git commands are vast!</p>
+            more commands: <a href="https://git-scm.com/docs" target="_blank">the Pro Git Guide</a>,
+                <a href="https://www.siteground.com/tutorials/git/commands.htm" target="_blank"
+                >siteground.com</a>, <a href="https://www.atlassian.com/git" target="_blank"
+                >atlassian.com</a>, and <a href="https://orga.cat/posts/most-useful-git-commands"
+                target="_blank">orga.cat</a>. Another really great thing about Git is that it has
+            been in existence since 2005 and is used widely among computer programers; therefore,
+            the resources on Git and Git commands are vast!</p>
         <ul style="list-style-type:none">
             <li><a href="https://git-scm.com/docs/git-help" target="_blank"><code>git
                     help</code></a>: possibly the most useful Git command, this command allows you
                 to search the most common Git commands in the command/terminal shell. If you follow
-                this command with another command or concept <span class="smaller">(ie. <code>git
+                this command with another command or concept <span class="smaller">(i.e.. <code>git
                         help push</code>)</span> Git generates a html page detailing the command or
                 concept as well as possible options for its use.</li>
             <li><a href="https://git-scm.com/docs/git-init" target="_blank"><code>git
@@ -483,15 +480,71 @@
                     <code>git commit -a -m</code> followed by your commit message. However, best
                 practice is to add and commit in separate steps so you are aware of the files being
                 added before making the commit.</li>
-            <li><a href="https://git-scm.com/docs/git-stash" target="_blank"><code>git stash</code></a>: used when you want to record the current changes to the working directory, but want to go back to a clean working directory without forever losing those changes and without adding them to the staging area. This command saves your local modifications away and reverts the working directory to match the last commit <span class="smaller">(typically so you can pull in remote changes to a clean directory and avoid possible merge conflicts while also keeping your changes)</span>.</li>
-            <li><a href="" target="_blank"><code></code></a>:</li>
-            <li><a href="" target="_blank"><code></code></a>:</li>
-            <li><a href="" target="_blank"><code></code></a>:</li>
-            <li><a href="" target="_blank"><code></code></a>:</li>
-            <li><a href="" target="_blank"><code></code></a>:</li>
-            <li><a href="" target="_blank"><code></code></a>:</li>
+            <li><a href="https://git-scm.com/docs/git-stash" target="_blank"><code>git
+                    stash</code></a>: used when you want to record the current changes to the
+                working directory, but want to go back to a clean working directory without forever
+                losing those changes and without adding them to the staging area. This command saves
+                your local modifications temporarily outside of your working directory and reverts
+                the working directory to match the last commit <span class="smaller">(typically used
+                    so you can pull in remote changes to a clean directory while avoiding possible
+                    merge conflicts and keeping your changes available)</span>. The modifications
+                stashed away by this command can be listed with <code>git stash list</code>,
+                inspected with <code>git stash show</code>, and restored (potentially on top of a
+                different commit) with <code>git stash apply</code>. </li>
+            <li><a href="https://git-scm.com/docs/git-pull" target="_blank"><code>git
+                    pull</code></a>: this command is made up of two other commands (<code>git
+                    fetch</code> and <code>git merge</code>) and is used to fetch the data from a
+                remote repository and merge it into your local computer's version of the repository.
+                If working in a fork it is important to remember that changes are pulled from the
+                original remote repo the fork is made from: <code>git pull upstream master</code>.
+                When pulling from the original repo of a fork it is necessary to set that original
+                repo as a remote origin (called <q>upstream</q> in the previous example).
+                    <q>Master</q> refers to the branch of the original repo of which the changes are
+                being pulled from, and can be changed to any branch name of that original repo that
+                the desired changes reside in.</li>
+            <li><a href="https://git-scm.com/docs/git-remote" target="_blank"><code>git
+                        remote</code></a>: used to get a list of remote repositories associated with
+                local repository. To create a new remote association use <code>git remote add</code>
+                followed by a name for the remote branch (i.e. upstream) and then the URL of the
+                remote repo no GitHub. <code>git remote -v</code> displays a verbose list of the
+                associated remote repos with the remote URL after the repo name.</li>
+            <li><a href="https://git-scm.com/docs/git-push" target="_blank"><code>git
+                    push</code></a>: updates remote repos to match commits made on local machine. If
+                working in specific branches you can designate the branch name (that you wish to
+                push) after the command, or use <code>git push -all</code> to add commits from all
+                local branches.</li>
+            <li><a href="https://git-scm.com/docs/git-branch" target="_blank"><code>git
+                        branch</code></a>: used to work inside of branches. This command followed by
+                a branch name creates a new branch. For a list of both remote-tracking branches and
+                local branches use <code>git branch --list</code>. Frequently branches are used for
+                experimental development that may or may not be incorporated into the master branch
+                of the repo. Having these changes in a branch prevents the master branch from bad
+                commits and uncertain files.</li>
+            <li><a href="https://git-scm.com/docs/git-checkout" target="_blank"><code>git
+                        checkout</code></a>: followed by a branch name allows you to switch into the
+                working directory of a specific branch. </li>
+            <li><a href="https://git-scm.com/docs/git-diff" target="_blank"><code>git
+                    diff</code></a>: followed by the names of two branches allows you to compare the
+                differences between the two branches. For example: <code>git diff master
+                    development</code> will show the differences between the master branch and the
+                development branch. If you want to just get a list of the files changed between the
+                two branches you can change the command to <code>git diff --name-only</code> again
+                followed by the names of the two branches you wish to compare.</li>
         </ul>
+        <p>For commands to correct merge conflicts and bad commits please refer to our <a
+                href="#trouble">troubleshooting section</a>.</p>
         <h1 id="advanced">Advanced Project Management</h1>
+        <h3 id="trouble">Troubleshooting: Merge Conflicts and Bad Commits</h3>
+        <p>Since Git and GitHub are used in collaboration with others sometimes the changes made by
+            different project members overlap and a merge conflict is created. The <a
+                href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
+                >atlassian.com tutorial on undoing changes</a> is our go-to source for fixing and
+            preventing merge conflicts.
+        
+        
+        
+        
+        </p>
         <h3 id="branch">Branching: what is it, and why do we do it?</h3>
         <p>Branching means you diverge from the main line of development and continue to do work
             without messing with that main line. The master branch is the main branch of a project.
@@ -533,21 +586,20 @@
             branch name indicates where you are working, and this can be verified with <code>git
                 status</code>. When you run <code>git status</code> Git Shell should return a line
             listing what branch you are on. For example: if you are working on the master branch Git
-            will return the line <q>On branch master</q>.</p><div class="commandImg">
+            will return the line <q>On branch master</q>.</p><p>
             <img src="git_shell/createBranch.jpg" alt="creating a branch" />
-        </div>
+        </p>
         <h4>How to switch between branches:</h4>
         <p>If you want work to appear under a specific branch you will need to switch to the desired
             branch before committing changes. To switch branches use the command <code>git
                 checkout</code> followed by the name of the branch you wish to switch to. For
             example: <code>git checkout development</code> will switch you over to the
-                <q>development</q> branch.<br />
-            <img src="git_shell/switchBranch_01.jpg" alt="switching branches to change files" />
-            <br /> You can verify that you have successfully switched branches by using either of
-            the previously explained commands: <code>git branch</code> or <code>git
-            status</code>.</p><div class="commandImg">
+                <q>development</q> branch.</p>
+        <p><img src="git_shell/switchBranch_01.jpg" alt="switching branches to change files" /></p>
+        <p>You can verify that you have successfully switched branches by using either of the
+            previously explained commands: <code>git branch</code> or <code>git status</code>.</p><p>
             <img src="git_shell/switchBranch_02.jpg" alt="switching between branches" />
-        </div>
+        </p>
         <h4>How to merge branches and push changes to remote:</h4>
         <p>Once there have been changes made via a branch and you wish to combine those changes with
             the main (master) branch, you will need to do the following:</p>
@@ -565,24 +617,24 @@
                 is done with the <code>git merge</code> command followed by the name of the branch
                 being merged into the master branch. For example: <code>git merge
                 development</code>.</li>
-            <li>To verify the merge was successful you can run <code>git diff</code> again, and if
-                Git does not return anything that means there are no differences between the two
-                branches.</li>
+            <li>To verify the merge was successful you can run <code>git diff</code> again with the
+                two branch names, and if Git does not return anything that means there are no
+                differences between the two branches.</li>
             <li>Now when you run <code>git status</code> it will show that local master is ahead of
                 the remote origin. To fix this and bring the remote origin repo up to date with your
                 local master, run the <code>git push</code> command.</li>
         </ol>
-        <div class="commandImg">
+        <p>
             <img src="git_shell/mergeBranch.jpg" alt="merging branches" />
-        </div>
+        </p>
         <p>If you have done work in a branch, and you do not want to merge the changes into the
             master branch until others on your team have reviewed it you can push the branch and its
             changes before merging. As long as you have the branch selected in Git Shell, you can
             use the command <code>git push origin</code> followed by the name of the branch to
             update the remote repo with the new branch. For example: <code>git push origin
                 development</code> will push the development branch and its changes to the remote
-            origin. Now if another collaborator wish to clone the repo, and bring in your branch to
-            their local repo they will be able to do so.</p>
+            origin. Now if another collaborator wishes to clone the repo, and bring in your branch
+            to their local repo they will be able to do so.</p>
         <h4>How to delete a branch:</h4>
         <p>Some branches are created only temporarily; therefore, you may desire to delete a branch
             before or after merging. The command <code>git branch -d</code> followed by the branch
@@ -592,47 +644,47 @@
             command will go through and the branch will be removed. Use <code>git branch</code> to
             verify deletion. If you wish to remove the branch whether it has been merged or not the
             command is altered slightly: <code>git branch -D</code> followed by the branch name.</p>
-        <div class="commandImg">
+        <p>
             <img src="git_shell/deleteBranch.jpg" alt="deleting a branch" />
-        </div>
+        </p>
         <h3 id="fork">Forking: what is it and why do we do it?</h3>
         <p>Part of the open-source etiquette of GitHub is that developers are encouraged to copy and
-            then improve code originally created by others. GitHub supports the creation of derived
-            projects through forking. When you fork a repo, you create a copy of it under your own
-            account, where it acquires an independent identity. You can do anything with a repo you
-            created by forking someone else’s project that you can with a repo you created from
-            scratch. The moment that you create the fork, your new repo is no longer synchronized
-            with changes in the repo from which you copied it originally. If you fork a repo and
-            make changes that you would then like to contribute to the original source, you can
-            issue a pull request, inviting the developers of the original repo to merge your forked
-            repo's changes into their original project.</p>
+            then improve code originally created by others in a separate <dfn>forked repo</dfn>.
+            GitHub supports the creation of derived projects through forking. When you fork a repo,
+            you create a copy of it under your own account, where it acquires an independent
+            identity. You can do anything with a repo you created by forking someone else’s project
+            that you can with a repo you created from scratch. The moment that you create the fork,
+            your new repo is no longer synchronized with changes in the repo from which you copied
+            it originally. If you fork a repo and make changes that you would then like to
+            contribute to the original source, you can issue a <dfn>pull request</dfn>, inviting the
+            developers of the original repo to merge your forked repo's changes into their original
+            project.</p>
         <h4>How to fork and how to work in a fork:</h4>
         <p>To begin forking you need to navigate to the repo you wish to fork, and select the
-                <q>fork</q> button in the top right of the screen.</p>
-        <div class="accountImg">
+                <q>fork</q> button in the top right of the page.</p>
+        <p>
             <img src="git_shell/forking_01.jpg" alt="forking a repo" />
-        </div>
+        </p>
         <p>Next, you will need to navigate to the new forked repo created on your account. From
             here, follow the steps above on <a href="#cloning">cloning</a>, and clone the repo using
                 <code>git clone</code> and the HTTPS of the forked repo. Make sure you are cloning
             the repo that is located on your account and not the source repo you forked from.</p>
-        <div class="accountImg">
+        <p>
             <img src="git_shell/forking_02.jpg" alt="forking a repo" />
-        </div>
+        </p>
         <p>In order for the forked repo to reference the source repo, you will need to set up the
             remote upstream. Do this with the following command: <code>git remote add
                 upstream</code> followed by the HTTPS of the source repo. Use the command <code>git
                 remote</code> or <code>git remote -v</code> to show all of the remote versions of
             your repository. You should see <q>origin</q> (the direct remote version of the forked
             repo) and the upstream you just created. When you want to bring any new changes made on
-            the source repo into your forked repo, you can use the following commands to do so:
-                <code>git fetch upstream</code> and <code>git merge
-            upstream</code><!-- rjp:2016-01-19: having a conflict with merge upstream need to verify this command -->.
-            These commands function the same way in a fork as they did in the cloned repo (reference
-            above for more detail).</p>
-        <div class="commandImg">
+            the source repo's master branch into your forked repo, you can use the following
+            commands to do so: <code>git fetch upstream master</code> will show the changes able to
+            be brought in and <code>git pull upstream master</code> will bring the changes in. These
+            commands function the same way in a fork as they do in any cloned repo.</p>
+        <p>
             <img src="git_shell/forking_03.jpg" alt="forking a repo" />
-        </div>
+        </p>
         <p>In the <a href="#branch">branching section</a> of this tutorial we discussed why using a
             branch is good practice. When working in a forked repo, branching becomes even more
             important and practical. The master branch is better to be left free of
@@ -641,41 +693,41 @@
             After you have created a branch, modified files, and committed said changes use the
             command <code>git log --pretty=short</code> to see a listing of commits. Finally, to
             push all the local branches and change to the forked remote use the command <code>git
-                push --all -u</code>. This command also sets up upstream tracking on all of the
-            branches.</p>
-        <div class="commandImg">
+                push --all</code>.</p>
+        <p>
             <img src="git_shell/forking_04.jpg" alt="forking a repo" />
-        </div>
+        </p>
         <h4>How to issue a pull request:</h4>
-        <p>Now if we go back to our fork on GitHub, we can see that GitHub noticed that we pushed a
-            new branch with changes to the source repo's code. GitHub presents us with a big green
-            button to compare our changes and open a Pull Request to the original project. You can
-            alternatively go to the <q>Branches</q> page at
-            https://github.com/[user]/[project]/branches to locate your branch and open a new Pull
-            Request from there.</p>
-        <div class="accountImg">
+        <p>Now if you go back to your fork on GitHub, you can see that GitHub noticed that we pushed
+            a new branch with changes to the source repo's code. GitHub presents us with a big green
+            button to compare our changes and open a <dfn>Pull Request</dfn> to the original
+            project. You can alternatively go to the <q>Branches</q> page at
+            https://github.com/[username]/[repo name]/branches to locate your branch and open a new
+            Pull Request from there.</p>
+        <p>
             <img src="git_shell/pullRequest_01.jpg" alt="creating a pull request" />
-        </div>
-        <p>If we click that green button, we'll see a screen that asks us to give our Pull Request a
-            title and description. It is almost always worthwhile to put some effort into this,
-            since a good description helps the owner of the original project determine what you were
-            trying to do, whether your proposed changes are correct, and whether accepting the
-            changes would improve the original project or not. We also see a list of the commits in
-            our forked repo's branch that are <q>ahead</q> of the master branch. Should this branch
-            get merged by the project owner, a unified diff of all the changes will be made.</p>
-        <div class="accountImg">
+        </p>
+        <p>If you click that green <q>Pull Request</q> button, you'll see a screen that asks you to
+            give your Pull Request a title and description. It is always worthwhile to put some
+            effort into this, since a good description helps the owner of the original project
+            determine what you were trying to do, whether your proposed changes are correct, and
+            whether accepting the changes would improve the original project or not. You can also
+            see a list of the commits in your forked repo's branch that are <q>ahead</q> of the
+            master branch. Should this branch get merged by the project owner, a unified <q>diff</q>
+            of all the changes will be made.</p>
+        <p>
             <img src="git_shell/pullRequest_02.jpg" alt="creating a pull request" />
-        </div>
+        </p>
         <p>When you hit the create pull request button, the owner of the project you forked from
             will get a notification that someone is suggesting a change with a link to a page that
-            has all of the information you provided on it. At this point, the project owner can look
-            at the suggested changes and merge it, reject it or comment on it. It is possible that
-            the owner will ask you to <q>rebase from master</q> and resubmit a pull request. This
-            might happen if a series of changes were made on the source repo's master branch that
-            you had failed to fetch or if such changes were made after you submitted your request.
-            This is not a problem! The following link will take you to a very thorough YouTube video
-            on how to do this: <a href="https://www.youtube.com/watch?v=M7ZYkjOWr6g"
-                >https://www.youtube.com/watch?v=M7ZYkjOWr6g</a>.</p>
+            has all of the information you provided. At this point, the project owner can look at
+            the suggested changes and merge it, reject it or comment on it. It is possible that the
+            owner will ask you to <q>rebase from master</q> and resubmit a pull request. This might
+            happen if a series of changes were made on the source repo's master branch that you had
+            failed to fetch or if such changes were made after you submitted your request. This is
+            not a problem! Use this very thorough <a
+                href="https://www.youtube.com/watch?v=M7ZYkjOWr6g" target="_blank">YouTube video</a>
+            to guide you through how to do this.</p>
         <h3>In conclusion...</h3>
         <p>Git and GitHub can be a bit confusing for new users, but it makes project management much
             more robust than the available alternatives, and learning to use it is worth the effort.
@@ -686,12 +738,14 @@
         <ul>
             <li><a href="https://git-scm.com/">Pro Book (online version)</a></li>
             <li><a href="http://gitref.org/">Git Reference</a></li>
+            <li><a href="https://www.atlassian.com/git" target="_blank">Getting Git Right @
+                    atlassian.com</a></li>
             <li><a href="https://www.kernel.org/pub/software/scm/git/docs/user-manual.html">Git User
                     Manual</a></li>
             <li><a href="https://www.siteground.com/tutorials/git/commands.htm">Git: Tutorial
                     Commands</a></li>
             <li><a href="http://rogerdudler.github.io/git-guide/">Git - the simple guide</a></li>
-            <li><a href="https://gist.github.com/hofmannsven/6814451">A simple Git cheatsheet
+            <li><a href="https://gist.github.com/hofmannsven/6814451">A simple Git cheat-sheet
                     (hosted on GitHub Gist)</a></li>
         </ul>
     </body>
