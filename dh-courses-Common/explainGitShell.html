@@ -25,8 +25,8 @@
                 <li><a href="#cheatSheet">Common Git Commands</a></li>
             </ul> Advanced Project Management: <ul>
                 <li><a href="#trouble">Troubleshooting: Merge Conflicts and Bad Commits</a></li>
-                <li><a href="#branch">Creating and Deleting a Branch</a></li>
-                <li><a href="#fork">Creating and Maintaining a Forked Repo</a></li>
+                <li><a href="#branch">Branches: Creating and Deleting</a></li>
+                <li><a href="#fork">Forks: Creating and Maintaining</a></li>
             </ul>
         </div>
         <h3>What is Git? And why do we use it?</h3>
@@ -270,12 +270,12 @@
             <li>Select the repo to which you want to add a collaborator.</li>
             <li>Select <q>Settings</q> at the top of the screen.</li>
             <li>On the Settings page, move to the menu on the left side of the page, and select
-                <q>Collaborators</q>. <p><img src="git_shell/addCollaborator_03.jpg"
+                    <q>Collaborators</q>. <p><img src="git_shell/addCollaborator_03.jpg"
                         alt="Adding a Collaborator" /></p></li>
-            <li>Type the user name of the collaborator you want to add. (This means that you’ll
-                need to ask your collaborators to tell you their GitHub user names in advance.) As
-                you type, a drop down list will be generated matching what you have typed. Select
-                the user you would like to add from the list. Then click Add collaborator.</li>
+            <li>Type the user name of the collaborator you want to add. (This means that you’ll need
+                to ask your collaborators to tell you their GitHub user names in advance.) As you
+                type, a drop down list will be generated matching what you have typed. Select the
+                user you would like to add from the list. Then click Add collaborator.</li>
         </ol>
         <p>In the future, if collaborators need to be removed simply navigate this same path and
             there will be an option beside each collaborator to remove them.</p>
@@ -316,8 +316,8 @@
             location as a remote so you can pull from it again and push to it if you have
             permissions. Note: you will only be able to directly push changes to the GitHub server
             if you have been added as a project collaborator. Later in this tutorial we will discuss
-            how you can contribute to other GitHub projects that you are not a collaborator on via a
-                <dfn>forking</dfn> and a <dfn>pull request</dfn>.</p>
+            how you can contribute to other GitHub projects that you are not a collaborator on via
+                    <dfn><a href="#fork">forking</a></dfn> and a <dfn>pull request</dfn>.</p>
         <h3 id="working">Basic Git workflow:</h3>
         <p>When making changes to a repo it is important to remember the three parts or your Git
             repo on your local machine: <dfn>unstaged</dfn>, <dfn>staged</dfn>,
@@ -337,14 +337,16 @@
                 local repo (or <dfn>fetched</dfn>) from the remote repo. This allows for you to,
                 upon review, make the decision to <dfn>merge</dfn> those remote changes with your
                 local repo. The command <code>git pull</code> combines the two previously mentioned
-                commands into one step, which is convenient yet dangerous. <p><img
-                        src="git_shell/gitFetchANDgitMerge.jpg" alt="git fetch and git merge" />
+                commands into one step, which can be convenient yet dangerous if there is a
+                possibility of the changes coming in to conflict with files you may have edited
+                without committing. <p><img src="git_shell/gitFetchANDgitMerge.jpg"
+                        alt="git fetch and git merge" />
                     <span class="smaller">Some believe it is best practice to review all of the
-                        remote files you are bringing into your local repo. before merging. A
-                        detailed argument for always using <code>git fetch</code> and <code>git
-                            merge</code> over <code>git pull</code> can be found <a
+                        remote files you are bringing into your local repo before merging. A <a
                             href="http://longair.net/blog/2009/04/16/git-fetch-and-merge/"
-                            target="_blank">here</a>.</span></p>
+                            target="_blank">detailed argument</a> for always using <code>git
+                            fetch</code> and <code>git merge</code> over <code>git pull</code> has
+                        been made.</span></p>
             </li>
             <li>Begin working by modifying files in your <dfn>working directory</dfn>. When you want
                 to change a file, edit your local copy. You can do this by accessing the files on
@@ -355,22 +357,29 @@
                 Git that you saved the files in the git configured directory with purpose and tell
                 git to take a snapshot of the changes. Unlike other VCSs, Git has something called
                 the <q>staging area</q> or <q>index</q>. This is an intermediate area where commits
-                can be formatted and reviewed before completing the commit. One thing that sets Git
-                apart from other tools is that it's possible to quickly stage some of your files and
-                commit them without committing all of the other modified files in your working
-                directory or having to list them on the command line during the commit. This allows
-                you to stage only portions of a modified file. Gone are the days of making two
-                logically unrelated modifications to a file before you realized that you forgot to
-                commit one of them. Now you can just stage the change you need for the current
-                commit and stage the other change for the next commit. This feature scales up to as
-                many different changes to your file as needed. To stage a file, use the command
-                    <code>git add</code>. If you want to stage all of the changed or newly created
-                files stored in the working directory you can type <code>git add -A</code>. To
-                specify that you only want to stage a certain type of file you use an asterisk. For
-                example: to stage all of the .html files you type <code>git add *.html</code>. If
-                there is only a single file you want to stage you can type the filename after the
-                command. For example: <code>git add index.html</code>. <p><img
-                        src="git_shell/gitAdd.jpg" alt="staging files" /></p></li>
+                can be formatted and reviewed before completing the commit. To stage a file, use the
+                command <code>git add</code>. If you want to stage all of the changed or newly
+                created and deleted files stored in the working directory you can type <code>git add
+                    -A</code>. To specify that you only want to stage a certain type of file you use
+                an asterisk. For example: to stage all of the .html files you type <code>git add
+                    *.html</code>. If there is only a single file you want to stage you can type the
+                filename after the command. For example: <code>git add index.html</code>. <p><img
+                        src="git_shell/gitAdd.jpg" alt="staging files" /></p> As you are working on
+                files it is important to always remember that although you are working locally you
+                will need to check frequently with your project team to be sure new changes they may
+                have made will not cause the files you are editing a merge conflict. For example:
+                you are editing an XML transcription and one of your team members is going through
+                all of the XML documents and replacing hyphens with the unicode. Your partner edits
+                many portions of the same document you are working in and pushes those changes to
+                the GitHub repo. Since you're not sure if those changes will cause a merge conflict
+                or not you need to store your changes without adding them to the staging area so you
+                can pull your partner's changes in first. Git allows you to do this very simply with
+                the command <code>git stash</code>. This command stashes your changes outside of
+                your working directory while you pull in your partner's remote changes. You then can
+                return your stashed files to your working directory and continue by adding your
+                changes to the staging area. For more information on <code>git stash</code> visit <a
+                    href="https://git-scm.com/docs/git-stash" target="_blank">the Pro Git guide on
+                    stashing</a></li>
             <li>When you reach a point where you want to sum up the progress of your work in
                 preparation for sharing, you do a commit. This takes the files as they are in the
                 staging area and stores the staged snapshot permanently to your local Git directory.
@@ -385,48 +394,59 @@
                 command <code>git push</code>. <p><img src="git_shell/gitPush.jpg" alt="git push"
                      /></p></li>
         </ol>
-        <h3>Almost done...</h3>
-        <p id="issue">At this point in the tutorial you now know the basics of collaborating on a
-            Git / GitHub project. We recommend you clone our <a
-                href="https://github.com/ebeshero/DHClass-Hub" target="_blank">DHClass-Hub</a>. Once
-            you have cloned it explore the repo through your local machine's file explorer. Then add
-            a file to our sandbox folder. In order for you to push that file we will need to add you
-            as a collaborator. This is the perfect moment to create a GitHub issue. Navigate to the
-                <a href="https://github.com/ebeshero/DHClass-Hub" target="_blank">DHClass-Hub GitHub
-                page</a>. At the top of the page, under <q>ebeshero/DHClass-Hub</q> you will see a
-            tab that says <q>Issues</q>. When you create your own repo you may need to change the
-            settings to include an issues board; follow directions <a target="_blank"
-                href="https://help.github.com/articles/managing-projects-with-issues/">here</a>.
-            Once you are in our <a href="https://github.com/ebeshero/DHClass-Hub/issues"
-                target="_blank">DHClass-Hub Issues Board</a> notice there are open issues and closed
-            issues. Search through the open issues for an issue where others are asking to be added
-            as a collaborator. If there is such an issue already existing click on it. If there is
-            not an existing issue click the <q>New issue</q> button at the top of the page.</p>
-        <p><img src="git_shell/issue_01.jpg" alt="GitHub Issues Board" /></p>
-        <p>Creating an issue and commenting on an issue are very similar. Issues on GitHub are
-            written in <dfn>Markdown Language</dfn>. In fact, <dfn>markdown</dfn> is used for
-            styling all forms of writing on the GitHub platform <span class="smaller">(including
-                issues, readme files, and <a target="_blank"
-                    href="https://help.github.com/articles/about-github-wikis/">wikis</a>)</span>.
+        <h3 id="issue">GitHub as Social Media: Issues and Wikis</h3>
+        <p>As discussed above, GitHub serves as a social media network that stores and talks to Git
+            repositories. The GitHub interface is useful for many aspects of project management. The
+            key parts of GitHub's interface besides the remote storage of project files are the
+            issues boards, wikis, and data visualizations. <a target="_blank"
+                href="https://help.github.com/articles/about-github-wikis/">Wikis</a> and <a
+                href="https://guides.github.com/features/issues/" target="_blank">issues</a> are
+            often used in projects to manage tasks and communicate between project team members and
+            the GitHub community with project problems and updates. The data visualizations are
+            helpful in mining a project's information on collaborators and development.</p>
+        <p>To create or comment on an issue navigate to the desired repo and click on the
+                <q>Issues</q> tab near the top of the page; notice there is also a tab for Wikis.
+            Issues and Wikis on GitHub are written in <dfn>Markdown Language</dfn>. In fact,
+                <dfn>markdown</dfn> is used for styling all forms of writing on the GitHub platform.
             GitHub offers a <a href="https://guides.github.com/features/mastering-markdown/"
                 target="_blank">comprehensive guide to writing markdown</a> that we recommend you
             review; however, when writing on the GitHub interface there are options similar to
-            Microsoft Word that can be toggled to have a specific styling applied to your text.
-            Leave us a comment in either the existing <q>add as collaborator</q> issue or one you
-            create to inform us you are ready to add files to the DHClass-Hub.</p>
-        <h1 id="cheatSheet">Common Commands:</h1>
+            Microsoft Word that can be toggled to have a specific styling applied to your text.</p>
+        <p>Besides project team communication, another important aspect of project management is
+            data preservation. Long-term preservation can be defined as the ability to provide
+            continued access to digital materials, or at least to the information contained in them,
+            indefinitely. A sustainable preservation program should address organizational issues,
+            technological concerns and the digital curation/data management process. Using Git and
+            GitHub already provides one means of data preservation; however, it is important to
+            realize that all of the data collected through the use of Git / GitHub is also important
+            to preserve alongside the literal files of your project. One option we have researched
+            to be viable for creating a backup of your Git and GitHub data is <a
+                href="https://backhub.co/" target="_blank">backhub.co</a>. Another nifty tool that
+            we recommend you update frequently is the <a href="https://archive.org/web/"
+                target="_blank">online digital archive of websites</a>. By adding updates to this
+            site you can go back and review previous saved versions of how your websites looked.
+            Besides data preservation it is important to also be able to mine your GitHub data. The
+            GitHub interface makes this really simple. In any repo, at the top of the page, there
+            are two tabs that are particularly useful for mining your GitHub data: <q>Pulse</q> and
+                <q>Graphs</q>. A repo's pulse visualizes the activity of the GitHub repo, while
+            Graphs visualize everything from specific user contributions to the types of files
+            stored in the repo. These visualizations can be useful when trying to determine details
+            about how the repo (and therefore project) grows and changes over time.</p>
+        <h1 id="cheatSheet">Common Git Commands:</h1>
         <p>Here is a list of commands used most frequently, and some options to modify the results
             of each command. Some of the commands listed here are associated with <a
                 href="#advanced">advanced project management</a> while others are more basic. We
             have not listed every possible command; however we can recommend these sites to review
             more commands: <a href="https://git-scm.com/docs" target="_blank"
-                >https://git-scm.com/docs</a>, <a
+                >the Pro Git Guide</a>, <a
                 href="https://www.siteground.com/tutorials/git/commands.htm" target="_blank"
-                >https://www.siteground.com/tutorials/git/commands.htm</a>, and <a
+                    >siteground.com</a>, <a
+                        href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
+                        >atlassian.com</a>, and <a
                 href="https://orga.cat/posts/most-useful-git-commands" target="_blank"
-                >https://orga.cat/posts/most-useful-git-commands</a>. Another really great thing
+                >orga.cat</a>. Another really great thing
             about Git is that it has been in existence since 2005 and is used widely among computer
-            programers; therefore, the resources on Git and Git commands is vast!</p>
+            programers; therefore, the resources on Git and Git commands are vast!</p>
         <ul style="list-style-type:none">
             <li><a href="https://git-scm.com/docs/git-help" target="_blank"><code>git
                     help</code></a>: possibly the most useful Git command, this command allows you
@@ -441,8 +461,7 @@
                     clone</code></a>: copies an existing GitHub repo to local machine.</li>
             <li><a href="https://git-scm.com/docs/git-status" target="_blank"><code>git
                         status</code></a>: checks the working directory to see if up-to-date with
-                remote
-                repo.<!-- By adding <code>-v</code> <span class="smaller">(<code>git status -v</code>)</span>, you get a more <dfn>verbose</dfn> description; therefore, in addition to the names of files that have been changed Git also shows the textual changes that are staged to be committed. By adding <code>-u</code> <span class="smaller">(<code>git status -u</code>)</span>, you get the names of files that have not been staged <span class="smaller">(unstaged)</span>. You can combine <code>-v</code> and <code>-u</code> <span class="smaller">(<code>git status -u -v</code>)</span> to get a more verbose description of the unstaged changes.--></li>
+                the remote repo.</li>
             <li><a href="https://git-scm.com/docs/git-add" target="_blank"><code>git add</code></a>:
                 a.k.a. staging changes, adds changes to staging area of the working directory. This
                 command is the first step in committing changes to your local version of the repo
@@ -460,7 +479,10 @@
                 the repo. Every commit needs to have a message that explains what files have been
                 edited/added. After the command add <code>-m</code> and then the commit message in
                 quotes <span class="smaller">(<code>git commit -m "This is where your message
-                        goes"</code>)</span>.</li>
+                        goes"</code>)</span>. You can skip the command <code>git add</code> by using
+                    <code>git commit -a -m</code> followed by your commit message. However, best
+                practice is to add and commit in separate steps so you are aware of the files being
+                added before making the commit.</li>
             <li><a href="" target="_blank"><code></code></a>:</li>
             <li><a href="" target="_blank"><code></code></a>:</li>
             <li><a href="" target="_blank"><code></code></a>:</li>
@@ -654,26 +676,7 @@
             This is not a problem! The following link will take you to a very thorough YouTube video
             on how to do this: <a href="https://www.youtube.com/watch?v=M7ZYkjOWr6g"
                 >https://www.youtube.com/watch?v=M7ZYkjOWr6g</a>.</p>
-        <h3 id="data">Preserving and Mining GitHub Repo Data</h3>
-        <p>An important aspect of project management is data preservation. Long-term preservation
-            can be defined as the ability to provide continued access to digital materials, or at
-            least to the information contained in them, indefinitely. A sustainable preservation
-            program should address organizational issues, technological concerns and the digital
-            curation/data management process. Using Git and GitHub already provides one means of
-            data preservation; however, it is important to realize that all of the data collected
-            through the use of Git / GitHub is also important to preserve alongside the literal
-            files of your project. The two options we have researched to be most viable for creating
-            a backup of your Git and GitHub data are <a href="https://backhub.co/" target="_blank"
-                >https://backhub.co/</a> and <a target="_blank"
-                href="https://github.com/vsespb/mt-aws-glacier">Amazon AWS Glacier</a>. Another
-            nifty tool that we recommend you update frequently is the <a
-                href="https://archive.org/web/" target="_blank">online digital archive of
-                websites</a>. By adding updates to this site you can go back and review previous
-            saved versions of how your site looked. Besides data preservation it is important to
-            also be able to mine your GitHub data. The GitHub interface makes this really simple. In
-            any repo, at the top of the page, there are two tabs that are particularly useful for
-            mining your GitHub data: <q>Pulse</q> and <q>Graphs</q>.</p>
-        <h3>TAKING IT FURTHER...</h3>
+        <h3>In conclusion...</h3>
         <p>Git and GitHub can be a bit confusing for new users, but it makes project management much
             more robust than the available alternatives, and learning to use it is worth the effort.
             This tutorial is designed to get you started, and your instructors (and mentors) are
