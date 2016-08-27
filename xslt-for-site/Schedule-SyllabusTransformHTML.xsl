@@ -26,8 +26,10 @@
                     content="Digital Humanities, Syllabus, XML, TEI, XSLT, XQuery, Schematron, Relax NG, SVG, digital scholarship, digital edition, electronic edition, electronic text, humanities computing, electronic editing, Beshero-Bondar"/>
                 <link rel="stylesheet" type="text/css" href="syllsched.css"/>
                 <script type="text/javascript" src="jumpingDateLinks.js">/**/</script>
+
             </head>
             <body>
+              
 
                 <xsl:comment>#include virtual="top-indexCDA16.html" </xsl:comment>
                 <!--ebb: make a new top for each XML for each new semester course-->
@@ -91,10 +93,7 @@
 
               
                 <hr/>
-
-
-
-
+  
             </body>
 
         </html>

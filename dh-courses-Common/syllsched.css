@@ -1,6 +1,8 @@
+@page {margin: 2cm} 
+@media screen{
 head {background-color: #B4D6B4;
 ;}
-
+#print-head {display:none}
 body {background-color: #B4D6B4; color: #031B3F; font-family: arial, helvetica, sans-serif; padding:15px; line-height:1.3em;}
 /*div#space {background-color:#FFFFFF; width:99%; margin:auto; padding: 20px; line-height:1.2em; } */
 
@@ -30,13 +32,13 @@ div.imageAlt {float:right; width:35%; margin-left: auto;
 div.explanAlt{background-color:#B4D6B4; float:left; width:65%; padding:15px;}
 div.container {background-color:#B4D6B4; width:100%; }
 
-h1 {color:#AA0000; letter-spacing:1.1px; display:inline; font-size: 2.3em; text-align:center; padding: 10px}
-h2 {color:#005BEB; font-family:arial, helvetica, sans-serif; font-size: 1.3em; text-align:left; 
+h1 {color:#AA0000; letter-spacing:1.1px; display:inline; font-size: 2.3em; text-align:center; padding: 10px; line-height: 1.12;}
+h2 {color:#005BEB; font-family:arial, helvetica, sans-serif; font-size: 1.3em; text-align:left; line-height: 1.12;
 }
 h3 {color:#5F0000;
- font-family:arial, helvetica, sans-serif; font-size: 1.1em; text-align:left; padding:3px
+ font-family:arial, helvetica, sans-serif; font-size: 1.1em; text-align:left; padding:3px; line-height: 1.12;
 }
-h4{color:#5F0000; display:inline-block; font-family:"Trebuchet MS", Helvetica, sans-serif; font-size: 1em; text-align:left;
+h4{color:#5F0000; display:inline-block; font-family:"Trebuchet MS", Helvetica, sans-serif; font-size: 1em; text-align:left; line-height: 1.12;
     
 }
 span.h4 {color:#5F0000; display:inline-block; font-family:"Trebuchet MS", Helvetica, sans-serif; font-size: 1em; text-align:left;   
@@ -135,4 +137,22 @@ width:44%;
 th:nth-child(3), td:nth-child(3) {
 width:44%;  
 }
-
+}
+@media print {
+ body {color: #000;
+ background: #fff; 
+ font: 12pt;
+ line-height: 1.12;
+ }   
+ h1, h2, h3, h4 {page-break-after: avoid; 
+ page-break-inside: avoid;}
+ tr, td, ul, li {page-break-inside: avoid;}
+ 
+tr {border-collapse: collapse; border: 0} 
+table, td, th {border-collapse: collapse;
+border: 1px solid black;
+padding: 2px;
+vertical-align:top; }
+  
+}
+ 
