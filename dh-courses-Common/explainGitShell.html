@@ -37,12 +37,10 @@
                 <span class="smaller">(Example: DropBox)</span> store information as a set of files
             with a means to reference the changes made to each file over time. Git, on the other
             hand, thinks of its data more like a set of snapshots of a miniature file system. Every
-            time you commit, or save the state of your project in Git, it basically takes a picture
-            of what all your files look like at that moment and stores a reference to that snapshot.
-            To be efficient, if files have not changed, Git doesn’t store the file again, just a
-            link to the previous identical file it has already stored. This aspect of Git makes the
-            reliability of being able to revert back to an exact moment in a project, for any given
-            file or the project in its entirety, much more stable than other VCSs.</p>
+            time you save the state of your project in Git, it basically takes a picture of what all
+            your files look like at that moment and stores a reference to that snapshot. To be
+            efficient, if files have not changed, Git doesn’t store the file again, just a link to
+            the previous identical file it has already stored.</p>
         <p>So let's say you and a team member are both updating the same XML document inside of your
             shared <dfn>repository</dfn>
             <span class="smaller">(directory of files)</span>. You make your changes, save them, and
@@ -69,16 +67,16 @@
             your local machine. So as long as you have recently pulled in any changes you can work
             offline until you are ready to push your changes. For more information regarding what
             Git is and the benefits of using Git please visit the online version of <a
-                href="http://git-scm.com/" target="_blank">Pro Git</a>, a how-to guide to Git.</p>
+                href="http://git-scm.com/" target="_blank">Pro Git</a>, a Git how-to guide.</p>
         <h4>Why use Git Shell (command line)?</h4>
         <p>Unlike the Graphical User Interfaces (GUIs), the command line / terminal is the only
             place you can take advantage of all the functions Git has to offer. The GUIs only
             implement the simplistic functionality of Git as a means to use Git at the most basic
             level. For most of you command line / terminal will be a foreign interface. Think of it
             as a way to navigate your computer's files and systems by typing commands (strings of
-            text) at prompts, instead of using the mouse. Click <a
-                href="http://try.github.io/levels/1/challenges/1" target="_blank">here</a> for
-            GitHub's helpful, interactive tutorial on using the Git command-line interface.</p><!-- RJP:2016-08-24: Should we link to our GUI tutorial here? I think better not send students down a path we don't encourage. Just in case: http://dh.obdurodon.org/github.xhtml -->
+            text) at prompts, instead of using the mouse. GitHub offers a helpful, <a
+                href="http://try.github.io/levels/1/challenges/1" target="_blank">interactive
+                tutorial</a> on using the Git command-line interface.</p><!-- RJP:2016-08-24: Should we link to our GUI tutorial here? I think better not send students down a path we don't encourage. Just in case: http://dh.obdurodon.org/github.xhtml -->
         <h3 id="terms">Basic Terms to Understanding Git and GitHub</h3>
         <!-- RJP:2016-08-26: Needs edited to correspond with edits made in first few paragraphs -->
         <p>Below is a list of key terms you will need to understand while using Git and GitHub. Each
@@ -180,32 +178,31 @@
             suggest downloading <a href="https://desktop.github.com/" target="_blank">GitHub
                 Desktop</a> because the storing of configuration information is made simpler through
             the GUI client that is installed with GitHub Desktop. Once download of GitHub Desktop is
-            complete you should open the GUI client (the icon with the purple cat head) and to the
-            gear symbol in the top right of the client. From there click on <q>Options</q>. This is
-            where you can configure your local Git setup with your GitHub account.</p>
+            complete you should open the GUI client (the icon with the purple cat head) and navigate
+            to the gear symbol in the top right of the client. From there click on <q>Options</q>.
+            This is where you can configure your local Git setup with your GitHub account.</p>
         <p><img src="git_shell/desktopClientDownload_05.jpg" alt="Using GUI to Configure Account"
              /></p>
         <p>After you have completed configuration using the GUI client exit the client and remove
             the shortcut from your desktop. Do not uninstall the GUI in case you decide to change
-            your configuration in the future, but remove any created shortcuts because the Git Shell
-            will be where you will do the rest of your Git interactions. If you choose to <a
+            your configuration in the future, but remove any created shortcuts to it because the Git
+            Shell will be where you will do the rest of your Git interactions. If you choose to <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
                 >download</a> without the GUI you will need to configure your local machine's Git
             with your online GitHub account. Begin configuration by opening Git Shell <span
                 class="smaller">(might be called Git Bash on your computer)</span> and entering the
-            following commands <span class="smaller">(after the <span class="code"
-            >$</span>)</span>:</p>
-        <span class="code">$ git config --global user.name "YOUR NAME"</span>
+            following commands:</p>
+        <span class="code">git config --global user.name "YOUR NAME"</span>
         <br />
-        <span class="code">$ git config --global user.email "YOUR EMAIL ADDRESS"</span>
+        <span class="code">git config --global user.email "YOUR EMAIL ADDRESS"</span>
         <p>Be sure to use the same email address you used when signing up for your GitHub account.
             This will add your name and email to a file named <dfn>.gitconfig</dfn> in your home
             directory. To verify that you entered your information correctly use the command:</p>
-        <span class="code">$ git config --list</span>. <p>For more information on the <code>git
+        <span class="code">git config --list</span>. <p>For more information on the <code>git
                 config</code> command visit <a href="https://git-scm.com/docs/git-config"
                 target="_blank">the Pro Git guide on configuration</a>. Note: in order to cache your
-            username and password, if you have downloading Git without the GUI client, you will need
-            to follow further directions found on <a
+            username and password, if downloading Git without the GUI client, you will need to
+            follow further directions found on <a
                 href=" https://help.github.com/articles/caching-your-github-password-in-git/#platform-all"
                 target="_blank">help.github.com</a>.</p>
         <h3 id="repo">Creating a Repository</h3>
@@ -506,7 +503,7 @@
                         remote</code></a>: used to get a list of remote repositories associated with
                 local repository. To create a new remote association use <code>git remote add</code>
                 followed by a name for the remote branch (i.e. upstream) and then the URL of the
-                remote repo no GitHub. <code>git remote -v</code> displays a verbose list of the
+                remote repo on GitHub. <code>git remote -v</code> displays a verbose list of the
                 associated remote repos with the remote URL after the repo name.</li>
             <li><a href="https://git-scm.com/docs/git-push" target="_blank"><code>git
                     push</code></a>: updates remote repos to match commits made on local machine. If
@@ -535,13 +532,34 @@
                 href="#trouble">troubleshooting section</a>.</p>
         <h1 id="advanced">Advanced Project Management</h1>
         <h3 id="trouble">Troubleshooting: Merge Conflicts and Bad Commits</h3>
-        <p>Since Git and GitHub are used in collaboration with others sometimes the changes made by
-            different project members overlap and a merge conflict is created. The <a
-                href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
+        <p>The <a href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
                 >atlassian.com tutorial on undoing changes</a> is our go-to source for fixing and
-            preventing merge conflicts.
-        
-        
+            preventing merge conflicts and bad commits. A merge conflict occurs when two branches
+            have changed the same part of the same file, and then those branches are merged
+            together. For example, if you make a change on a particular line in a file, and a fellow
+            project team member makes a change on the exact same line, a merge conflict occurs when
+            both parties push their changes to the same remote repo branch. Git does not
+            automatically assume the last person to push changes is correct and should override the
+            other's changes, so it asks you to help out by issuing a merge conflict when the second
+            person attempts to push. When this sort of conflict occurs, Git writes a special block
+            into the file that contains the contents of both versions where the conflict occurred.
+            To complete this type of merge, use &lt;oXygen&gt; to resolve the conflict, then add the
+            file and commit it to complete the merge. In the file, Git automatically adds conflict
+            markers to the affected areas. A conflict-marked area begins with
+                <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and ends with
+                <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. The two conflicting blocks themselves are
+            divided by a <code>=======</code>. You have several options here. You can either keep
+            your changes, take your partner's changes, or make a brand new change. Whatever you do,
+            you need to make sure to resolve the conflict such that the file makes sense, and
+            everyone is happy. The goal is to get the file to look exactly how you want it. You'll
+            delete the conflict markers, and just type out a new change. Once you have made those
+            changes you can use <code>git add</code> and follow through with making a new
+            commit.</p>
+        <p>Let's say however that it is not just one single line of code that differs between the
+            files or even just one single file. When this happens the best option might be to
+                <dfn>revert</dfn> the repo locally and/or remotely back to before the conflict
+            occured.
+        <!-- RJP:2016-08-27: still working left off here -->
         
         
         </p>
