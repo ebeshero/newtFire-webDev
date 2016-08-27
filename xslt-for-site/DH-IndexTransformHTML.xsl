@@ -34,9 +34,9 @@
                     humanities research.
                 </p>
                 <ul>
-                    <li><a href="CDASyll.html"><strong>Coding and Digital Archives</strong></a> [Fall 2015] 
+                    <li><a href="CDASyll.html"><strong>Coding and Digital Archives</strong></a> 
                     </li>
-                    <li><strong><a href="CDVSyll.html">Coding and Data Visualization</a></strong> [Spring 2016]
+                    <li><strong><a href="CDVSyll.html">Coding and Data Visualization</a></strong> 
                     </li>
                 </ul>
                 <h3>Course Projects</h3>
