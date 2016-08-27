@@ -18,23 +18,19 @@
         <div id="quickRef">
             <h3>Quick Reference:</h3> The Basics:<ul>
                 <li><a href="#terms">Key Terms</a></li>
-                <li><a href="#account">Creating an Account on GitHub</a></li>
-                <li><a href="#setup">Downloading Git Shell</a></li>
-                <li><a href="#repo">Creating a Repo</a></li>
-                <li><a href="#collaborators">Adding and Deleting Collaborators</a></li>
-                <li><a href="#cloning">Cloning a Repo</a></li>
-                <li><a href="#nav">Navigating Directories</a></li>
-                <li><a href="#working">Basic Git Workflow: pulling, staging, committing, and
-                        pushing</a></li>
-                <li><a href="#issue">Creating and Commenting on GitHub Issues</a></li>
-                <li><a href="#cheatSheet">Common Commands</a></li>
+                <li><a href="#account">Getting Started</a></li>
+                <li><a href="#repo">Repositories: Creating, Cloning, Adding Collaborators</a></li>
+                <li><a href="#nav">Working With Directories</a></li>
+                <li><a href="#issue">GitHub as Social Media: Issues and Wikis</a></li>
+                <li><a href="#cheatSheet">Common Git Commands</a></li>
             </ul> Advanced Project Management: <ul>
+                <li><a href="#trouble">Troubleshooting: Merge Conflicts and Bad Commits</a></li>
                 <li><a href="#branch">Creating and Deleting a Branch</a></li>
                 <li><a href="#fork">Creating and Maintaining a Forked Repo</a></li>
-                <li><a href="#data">Preserving and Mining GitHub Repo Data</a></li>
             </ul>
         </div>
         <h3>What is Git? And why do we use it?</h3>
+        <!-- RJP:2016-08-26: Needs edited to include more info about VCSs and what makes Git Different -->
         <p>Git is a free, open-source version control system (VCS) designed to handle everything
             from small tasks to major projects. The major difference between Git and any other VCS
             is the way Git thinks about its data. Conceptually, most other version control systems
@@ -72,10 +68,8 @@
             periodically <dfn>pulling</dfn> changes made by your project team from the server to
             your local machine. So as long as you have recently pulled in any changes you can work
             offline until you are ready to push your changes. For more information regarding what
-            Git is and the benefits of using Git please visit <a href="http://git-scm.com/"
-                target="_blank">this online version of Pro Git</a>
-            <span class="smaller">(an entire how-to guide on Git written by Scott Chacon and Ben
-                Straub)</span>.</p>
+            Git is and the benefits of using Git please visit the online version of <a
+                href="http://git-scm.com/" target="_blank">Pro Git</a>, a how-to guide to Git.</p>
         <h4>Why use Git Shell (command line)?</h4>
         <p>Unlike the Graphical User Interfaces (GUIs), the command line / terminal is the only
             place you can take advantage of all the functions Git has to offer. The GUIs only
@@ -86,6 +80,7 @@
                 href="http://try.github.io/levels/1/challenges/1" target="_blank">here</a> for
             GitHub's helpful, interactive tutorial on using the Git command-line interface.</p><!-- RJP:2016-08-24: Should we link to our GUI tutorial here? I think better not send students down a path we don't encourage. Just in case: http://dh.obdurodon.org/github.xhtml -->
         <h3 id="terms">Basic Terms to Understanding Git and GitHub</h3>
+        <!-- RJP:2016-08-26: Needs edited to correspond with edits made in first few paragraphs -->
         <p>Below is a list of key terms you will need to understand while using Git and GitHub. Each
             of these terms will be discussed in greater detail throughout this tutorial, but think
             of this as your quick reference guide to the basics.</p>
@@ -132,46 +127,37 @@
                 you're both working on, you'll want to pull in those changes to your local copy so
                 that it's up to date.</li>
             <!--<li><dfn><strong></strong></dfn>:</li>-->
-            <!--RJP:2016-08-24: We should add more as we see necessary. I didn't want to overload with terms especially since each of these terms comes up in greater detail throughout the tutorial, but we could add more to this list if we later think it is necessary. -->
+            <!--RJP:2016-08-24: We should add more as we see necessary. I didn't want to overload with terms especially since each of these terms comes up in greater detail throughout the rest of the tutorial, but we could add more to this list as we see necessary. -->
         </ul>
         <p><span class="smaller">The above definitions are compiled from the following three sites,
                 which can be visited for definitions of even more Git terms: <a
                     href="https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html"
-                    target="_blank"
-                    >https://www.kernel.org/pub/software/scm/git/docs/gitglossary.html</a>, <a
+                    target="_blank">kernel.org</a>, <a
                     href="https://betterexplained.com/articles/aha-moments-when-learning-git/"
-                    target="_blank"
-                    >https://betterexplained.com/articles/aha-moments-when-learning-git/</a>, and <a
+                    target="_blank">betterexplained.com</a>, and <a
                     href="https://help.github.com/articles/github-glossary/" target="_blank"
-                    >https://help.github.com/articles/github-glossary/</a></span></p>
+                    >help.github.com</a></span></p>
         <br />
-        <h1>Let's get started!</h1>
-        <h3 id="account">How to create a GitHub account:</h3>
+        <h1 id="account">Let's get started!</h1>
+        <h3>How to create a GitHub account:</h3>
         <p>Because GitHub is a social networking site, where people post their code so that it will
             be accessible to others, using it requires creating an account. You can create a free
             account by navigating to <a href="https://www.github.com" target="_blank"
-                >https://www.github.com</a>. You are not required to create an account using your
-            pitt.edu address; however, associating an educational email address with your account
-            may give you additional benefits <span class="smaller">(including five free private
-                repos)</span>.</p>
-        <p>To create your account, enter a user name, email address, and password and then click the
-            green button that says <q>Sign up for GitHub</q>.<br />
-            <img src="git_shell/creatingAccount_01.jpg" alt="Creating An Account" /><br />Be sure to
-            select the free option, and then click the green button that says <q>Finish sign up</q>.<br />
-            <img src="git_shell/creatingAccount_02.jpg" alt="Creating An Account" /><br /> After
-            creating your account, GitHub will prompt you to verify your email address and decide on
-            notification frequency. Make sure to follow the link in the verification email. It is
-            important while you are enrolled in this coding course that you regularly checking
+            >github.com</a>. You are not required to create an account using your pitt.edu address;
+            however, associating an educational email address with your account may give you
+            additional benefits <span class="smaller">(including five free private repos)</span>. To
+            create your account, enter a user name, email address, and password and then click the
+            green button that says <q>Sign up for GitHub</q>. Be sure to select the free option, and
+            then click the green button that says <q>Finish sign up</q>. After creating your
+            account, GitHub will prompt you to verify your email address and decide on the frequency
+            of GitHub email notifications. Make sure to follow the link in the verification email.
+            It is important while you are enrolled in this coding course that you regularly checking
             GitHub so you may decide to allow all notifications <span class="smaller">(knowing you
-                can change this later)</span> You will then be directed back to your account.<br />
-            <img src="git_shell/creatingAccount_03.jpg" alt="Creating An Account" /><br />
-            <img src="git_shell/creatingAccount_04.jpg" alt="Creating An Account" /><br />
-            <img src="git_shell/creatingAccount_05.jpg" alt="Creating An Account" /><br />
-            <strong>Note: We have highlighted some recommended features of your GitHub account that
-                you should take some time exploring further.</strong><br />
-            <img src="git_shell/creatingAccount_06.jpg" alt="Creating An Account" /><br />
-            <img src="git_shell/creatingAccount_07.jpg" alt="Creating An Account" />
-        </p>
+                can change this later)</span>. You will then be directed back to your account.</p>
+        <p><img src="git_shell/creatingAccount_05.jpg" alt="Creating An Account" /></p>
+        <p><strong>Note: We have highlighted some recommended features of your GitHub account that
+                you should take some time exploring further.</strong></p>
+        <p><img src="git_shell/creatingAccount_07.jpg" alt="Creating An Account" /></p>
         <h3 id="setup">Downloading Git Shell</h3>
         <p>Git is available for <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
@@ -190,19 +176,40 @@
                 you NEED to browse your computer and save to a logical place on your local machine
                 that you know how to access easily.</li>
         </ul>
-        <p>After you have completed the download you will need to configure your local machine's Git
-            with your online GitHub account. Begin configuration by opening Git shell and entering
-            the following commands <span class="smaller">(after the <span class="code"
-                >$</span>)</span>:</p>
+        <p>When downloading Git on a Windows computer and/or if you are less experienced Mac user we
+            suggest downloading <a href="https://desktop.github.com/" target="_blank">GitHub
+                Desktop</a> because the storing of configuration information is made simplier
+            through the GUI client that is installed with GitHub Desktop. Once download of GitHub
+            Desktop is complete you should open the GUI client (the icon with the purple cat head)
+            and to the gear symbol in the top right of the client. From there click on
+                <q>Options</q>. This is where you can configure your local Git setup with your
+            GitHub account.</p>
+        <p><img src="git_shell/desktopClientDownload_05.jpg" alt="Using GUI to Configure Account"
+             /></p>
+        <p>After you have completed configuraition using the GUI client exit the client and remove
+            the shortcut from your desktop. Do not uninstall the GUI in case you descide to change
+            your configuration in the future, but remove any created shortcuts because the Git Shell
+            will be where you will do the rest of your Git interactions. If you choose to <a
+                href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
+                >download</a> without the GUI you will need to configure your local machine's Git
+            with your online GitHub account. Begin configuration by opening Git Shell <span
+                class="smaller">(might be called Git Bash on your computer)</span> and entering the
+            following commands <span class="smaller">(after the <span class="code"
+            >$</span>)</span>:</p>
         <span class="code">$ git config --global user.name "YOUR NAME"</span>
         <br />
         <span class="code">$ git config --global user.email "YOUR EMAIL ADDRESS"</span>
         <p>Be sure to use the same email address you used when signing up for your GitHub account.
             This will add your name and email to a file named <dfn>.gitconfig</dfn> in your home
             directory. To verify that you entered your information correctly use the command:</p>
-        <span class="code">$ git config --list</span>. For more information on the <code>git
-            config</code> command click <a href="https://git-scm.com/docs/git-config"
-            target="_blank">here</a>. <h3 id="repo">Creating a Repository</h3>
+        <span class="code">$ git config --list</span>. <p>For more information on the <code>git
+                config</code> command visit <a href="https://git-scm.com/docs/git-config"
+                target="_blank">the Pro Git guide on configuration</a>. Note: in oder to cache your
+            username and password, if you have downloading Git without the GUI client, you will need
+            to follow further directions found on <a
+                href=" https://help.github.com/articles/caching-your-github-password-in-git/#platform-all"
+                target="_blank">help.github.com</a>.</p>
+        <h3 id="repo">Creating a Repository</h3>
         <h4>What is a repo?</h4>
         <p>Projects on GitHub are stored in repos (short for repositories), which you can think of
             as equivalent to folders or directories on your computer. Repos can contain plain files
@@ -212,36 +219,37 @@
             your project becomes more complex, you can think about creating subdirectories and
             distributing the files among them according to file type or other criteria. Your project
             mentor will advise you about how to structure the directory space for your project.</p>
-        <p>Your main project repo will reside on the GitHub server, which is the remote server that
-            is accessible to others. It is possible to edit files directly on the server using the
-            GitHub interface, but our suggested way to interact with GitHub is to work on copies of
-            the project files on your own machine and then, when you are satisfied with the state of
-            your work, to push (upload) your new or modified files to the remote server so that your
-            project partners will have access to them. Similarly, when your project partners push
-            their changes to the server, those won’t be reflected in the copies on your local
-            machine until you pull (download) them. The process of uploading files you have modified
-            from your local machine to the GitHub server, and of downloading from the GitHub server
-            files that your project partners may have developed or modified and uploaded, is called
-            syncing (short for synchronization). Syncing with command line requires two basic
-            commands: <code>git pull</code> and <code>git push</code>. The command <code>git
-                pull</code> can be broken down into <code>git fetch</code> and <code>git
-                merge</code>, but we will discuss the distinction later in this tutorial. When you
-            begin a work session, you should start by syncing your local project space with the
-            server using <code>git pull</code>, so that you’ll catch up on any changes other project
-            contributors have made. When you reach a stopping point in your work <span
-                class="smaller">(when you have new or updated files that your project partners need
-                to see)</span>, you should commit (<code>git commit</code>) and sync again, but this
-            time using <code>git push</code>. You don’t have to push after every keystroke, but you
-            should commit regularly and push whenever you reach a reasonably stable intermediate
-            point to which your project partners should have access.</p>
+        <p>Your remote project repo will reside on the GitHub server, which is the remote server
+            that is accessible to others. It is possible to edit files directly on the server using
+            the GitHub interface, but the typical interaction with GitHub is to work on copies of
+            the project files <span class="smaller">a.k.a. repo clone</span> on your own machine and
+            then, when you are satisfied with the state of your work, to push (upload) your new or
+            modified files to the remote server so that your project partners will have access to
+            them. Similarly, when your project partners push their changes to the server, those
+            won’t be reflected in the copies on your local machine until you pull (download) them.
+            The process of uploading files you have modified from your local machine to the GitHub
+            server, and of downloading from the GitHub server files that your project partners may
+            have developed or modified and uploaded, is called syncing (short for synchronization).
+            Syncing with command line requires two basic commands: <code>git pull</code> and
+                <code>git push</code>. The command <code>git pull</code> can be broken down into
+                <code>git fetch</code> and <code>git merge</code>, but we will discuss the
+            distinction later in this tutorial. When you begin a work session, you should start by
+            syncing your local project space with the server using <code>git pull</code>, so that
+            you’ll catch up on any changes other project contributors have made. When you reach a
+            stopping point in your work <span class="smaller">(when you have new or updated files
+                that your project partners need to see)</span>, you should commit (<code>git
+                commit</code>) and sync again, but this time using <code>git push</code>. You don’t
+            have to push after every keystroke, but you should commit regularly and push whenever
+            you reach a reasonably stable intermediate point to which your project partners should
+            have access.</p>
         <h4>How to create a repo:</h4>
         <p>The best way to initiate a new repo, for our group projects, will be to create it through
             the online web interface. Easy to follow instructions on how to do this can be found <a
-                href="https://help.github.com/articles/create-a-repo/" target="_blank">here</a>. If
-            a repo is created through the web interface it will need to be <a href="#cloning"
-                >cloned</a> in order for you to access it and begin working on your local computer.
-            Only one member of your project team will need to create the project repo, and all other
-            team members will <a href="#cloning">clone</a> from that repo.</p>
+                href="https://help.github.com/articles/create-a-repo/" target="_blank">on
+                help.github.com</a>. If a repo is created through the web interface it will need to
+            be <a href="#cloning">cloned</a> in order for you to access it and begin working on your
+            local computer. Only one member of your project team will need to create the project
+            repo, and all other team members will <a href="#cloning">clone</a> from that repo.</p>
         <span class="smaller">(If you wish to create a repo by using Git Shell you only need to know
             one command: <code>$ git init</code>. This initializes a git repository by creating the
             initial .git directory in a new or an existing project pending on the directory
@@ -258,17 +266,13 @@
             <li>Sign in and navigate to your profile. <p><img src="git_shell/addCollaborator_00.jpg"
                         alt="Adding a Collaborator" /></p>
             </li>
-            <li>Choose the repositories tab from your profile. </li>
-            <li>Select the repo to which you want to add a collaborator. <p><img
-                        src="git_shell/addCollaborator_01.jpg" alt="Adding a Collaborator" /></p>
-            </li>
-            <li>Select Settings at the top of the screen. <p><img
-                        src="git_shell/addCollaborator_02.jpg" alt="Adding a Collaborator"
-                 /></p></li>
+            <li>Choose the repositories tab from your profile.</li>
+            <li>Select the repo to which you want to add a collaborator.</li>
+            <li>Select <q>Settings</q> at the top of the screen.</li>
             <li>On the Settings page, move to the menu on the left side of the page, and select
-                Collaborators <p><img src="git_shell/addCollaborator_03.jpg"
+                <q>Collaborators</q>. <p><img src="git_shell/addCollaborator_03.jpg"
                         alt="Adding a Collaborator" /></p></li>
-            <li> Type the user name of the collaborator you want to add. (This means that you’ll
+            <li>Type the user name of the collaborator you want to add. (This means that you’ll
                 need to ask your collaborators to tell you their GitHub user names in advance.) As
                 you type, a drop down list will be generated matching what you have typed. Select
                 the user you would like to add from the list. Then click Add collaborator.</li>
