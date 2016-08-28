@@ -541,7 +541,7 @@
             occur on a single user's local machine. In Git, <dfn>merging</dfn> is the act of
             integrating another branch into your current working branch: most often taking changes
             from a remote branch and combining them with your current working directory on your
-            local machine. Typically Git can seamlessly intergrate multiple changes from multiple
+            local machine. Typically Git can seamlessly integrate multiple changes from multiple
             collaborators; yet, occasionally Git runs into a scenario where the changes overlap thus
             causing a <dfn>merge conflict</dfn>.</p>
         <p>When faced with a merge conflict, the first step is to understand what happened. Did one
@@ -587,16 +587,16 @@
                 left off. To get a list of all your <q>stashes</q> use the command <code>git stash
                     list</code>. When you're ready to restore a saved Stash, you have two options:
                 use <code>git stash pop</code> to apply the latest <q>stash</q> and clear it from
-                your stash clipboard or use <code>git stash apply</code> followed by the stashname
+                your stash clipboard or use <code>git stash apply</code> followed by the stash name
                 to apply that specified <q>stash</q>. The second option keeps the stash on the
                 clipboard, and it can be deleted later via <code>git stash drop</code> followed by
-                the stashname. </li>
+                the stash name. </li>
             <li><dfn><code><a href="https://git-scm.com/docs/git-revert" target="_blank">git
                             revert</a></code></dfn>: is used to undo a previous commit(s) by
                 introducing a new commit that reverses an earlier one. This doesn’t change the project history, which makes it a <q>safe</q> operation for commits that have already been published to a shared repository (i.e. the GitHub remote repo).</li>
             <li><dfn><code><a href="https://git-scm.com/docs/git-reset" target="_blank">git
                             reset</a></code></dfn>: is used to undo changes in your working
-                directory that haven't been comitted yet. If you do not want to loose your local
+                directory that haven't been committed yet. If you do not want to loose your local
                 changes or the changes from the commits being rolled back use <code>git reset
                     --keep</code> followed by <code>HEAD</code> or the commit hash ID. If you have
                 decided you want to be rid of all current local changes use <code>git reset
