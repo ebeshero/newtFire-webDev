@@ -146,13 +146,22 @@ width:44%;
  }   
  h1, h2, h3, h4 {page-break-after: avoid; 
  page-break-inside: avoid;}
- tr, td, ul, li {page-break-inside: avoid;}
+ tr, td {page-break-inside: avoid;}
  
 tr {border-collapse: collapse; border: 0} 
 table, td, th {border-collapse: collapse;
 border: 1px solid black;
-padding: 2px;
 vertical-align:top; }
+th:nth-child(1), td:nth-child(1) {
+width:10%; text-align:center;   
+}
+
+th:nth-child(2), td:nth-child(2) {
+width:45%;  
+}
+
+th:nth-child(3), td:nth-child(3) {
+width:45%; }
 div#bannerImage {float:left}
 div#bannerImage img {width:150px}
 }
