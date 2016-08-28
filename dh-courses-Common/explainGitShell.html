@@ -14,7 +14,7 @@
     <body>
         <!--#include virtual="topAuthorRJP43.html" -->
         <h1><span class="banner">Guide to Git Shell:</span></h1>
-        <h2>operating Git using command line</h2>
+        <h2>Git and GitHub command line</h2>
         <div id="quickRef">
             <h3>Quick Reference:</h3> The Basics:<ul>
                 <li><a href="#terms">Key Terms</a></li>
@@ -31,19 +31,13 @@
         </div>
         <h3>What is Git? And why do we use it?</h3>
         <!-- RJP:2016-08-26: Needs edited to include more info about VCSs and what makes Git Different -->
-        <p>Git is a free, open-source version control system (VCS) designed to handle everything
-            from small tasks to major projects. The major difference between Git and any other VCS
-            is the way Git thinks about its data. Conceptually, most other version control systems
-                <span class="smaller">(Example: DropBox)</span> store information as a set of files
-            with a means to reference the changes made to each file over time. Git, on the other
-            hand, thinks of its data more like a set of snapshots of a miniature file system. Every
-            time you save the state of your project in Git, it basically takes a picture of what all
-            your files look like at that moment and stores a reference to that snapshot. To be
+        <p>Git is a <dfn>version control system</dfn>, or a system designed to manage changes to files by storing a memory of each form they have taken. Some version control systems (like DropBox) do this in a centralized way, by keeping one master copy of a file and storing all history of its changes in a single location in the cloud. If two users share a file directory that tracks version history in a centralized way, and each attempts to modify the the same file and save changes to that location at the same time, the centralized system creates a copy of one of the files with an altered file name, and the owners of the directory must then decide which version to keep or how best to reconcile the two versions. Git, by contrast, would record the differences between the files as a new state of the file’s existence, and that is because it is a <dfn>distributed</dfn> or <dfn>decentralized</dfn> version control system, a system in which each storage repository carries its own distinct history. People who collaborate on a project upload and download shared versions of files from a web-based storage space called a <dfn>remote origin repository</dfn>, but when they work with those remote files they create copies of them on their own computers in a location known as a <dfn>master repository</dfn>, and Git manages information about their local version history.</p>
+        <p>Git basically tracks each change you have deliberately <dfn>committed</dfn> to a directory, like taking a set of snapshots to record the condition of each significant state change that you record every time you <dfn>make a commit</dfn>. Every time you <dfn>commit</dfn> (or save) the state of your project in Git, it basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be
             efficient, if files have not changed, Git doesn’t store the file again, just a link to
-            the previous identical file it has already stored.</p>
-        <p>So let's say you and a team member are both updating the same XML document inside of your
-            shared <dfn>repository</dfn>
-            <span class="smaller">(directory of files)</span>. You make your changes, save them, and
+            the previous identical file it has already storedAdvanced Git users may quite deliberately try to keep their local working repository different from the shared remote repository because they are working on something unstable that may not be usable by their team yet. When such an advanced user is finally ready to commit a change to the remote repository, their team members may review and reject the commit if they find something wrong with it. Git connects multiple local repositories but preserves each one’s distinct version history, adn the way in which Git users interact with each other through remote repositories is sometimes described as a <dfn>web of trust</dfn>, in which files can be developed in multiple locations and shared with others based on their merit, and can be denied or rejected when they cause problems.</p>
+
+        <p>So let’s say you and a team member are both updating the same XML document inside of your
+            shared repository. You make your changes, save them, and
             upload them back to the shared repository. So far, so good. The problem, for most VCSs,
             comes when your team member is working on the same document as you at the same time. One
             of you is about to have your work overwritten and erased; however, Git keeps that from
@@ -53,16 +47,15 @@
             changes together without losing any work along the way. If you both happen to edit the
             exact same segment of code Git will issue a <dfn>merge conflict</dfn> to point out where
             the two files differ allowing you and your team to decide what version to keep. You can
-            even revert to an earlier version at any time, because Git keeps a <q>snapshot</q> of
-            every change ever made by all project collaborators.</p>
-        <p>Another great aspect of Git is the emphasis on local operation. Git doesn't need to go
+            even revert to an earlier version at any time, relying on the <q>snapshot</q> that Git preserved of every change ever committed by all project collaborators.</p>
+        <p>One of the most important aspects of Git is its emphasis on local operation. Git doesn’t need to go
             out to the server to get the history of a project and display it for you – it simply
             reads it directly from your local computer. This means you see the project history
             almost instantly, without having to wait for server network lag. This also means that
-            there is very little you can't do if you're offline. When you manage a project using
+            there is very little you can’t do if you’re offline. When you manage a project using
             Git, you keep copies of all the project files on both your local machine and the online
             GitHub server. You work on your local machine, periodically <dfn>pushing</dfn> your
-            changes onto the server so they'll be accessible to your project partners, and
+            changes onto the server so they’ll be accessible to your project partners, and
             periodically <dfn>pulling</dfn> changes made by your project team from the server to
             your local machine. So as long as you have recently pulled in any changes you can work
             offline until you are ready to push your changes. For more information regarding what
@@ -73,35 +66,35 @@
             place you can take advantage of all the functions Git has to offer. The GUIs only
             implement the simplistic functionality of Git as a means to use Git at the most basic
             level. For most of you command line / terminal will be a foreign interface. Think of it
-            as a way to navigate your computer's files and systems by typing commands (strings of
+            as a way to navigate your computer’s files and systems by typing commands (strings of
             text) at prompts, instead of using the mouse. GitHub offers a helpful, <a
                 href="http://try.github.io/levels/1/challenges/1" target="_blank">interactive
-                tutorial</a> on using the Git command-line interface.</p><!-- RJP:2016-08-24: Should we link to our GUI tutorial here? I think better not send students down a path we don't encourage. Just in case: http://dh.obdurodon.org/github.xhtml -->
+                tutorial</a> on using the Git command-line interface.</p><!-- RJP:2016-08-24: Should we link to our GUI tutorial here? I think better not send students down a path we don’t encourage. Just in case: http://dh.obdurodon.org/github.xhtml -->
         <h3 id="terms">Basic Terms to Understanding Git and GitHub</h3>
         <!-- RJP:2016-08-26: Needs edited to correspond with edits made in first few paragraphs -->
         <p>Below is a list of key terms you will need to understand while using Git and GitHub. Each
             of these terms will be discussed in greater detail throughout this tutorial, but think
             of this as your quick reference guide to the basics.</p>
         <ul style="list-style-type:none">
-            <li><dfn><strong>Repository</strong></dfn> (repo): a project's folder. A repository
-                contains all of the project files (including documentation), and stores each file's
+            <li><dfn><strong>Repository</strong></dfn> (repo): a project’s folder. A repository
+                contains all of the project files (including documentation), and stores each file’s
                 revision history. Repositories can have multiple collaborators and can be either
                 public or private.</li>
             <li><dfn><strong>GitHub</strong></dfn>: web-based Git repository hosting service. It
                 offers all of the distributed revision control and source code management (SCM)
                 functionality of Git as well as its own social network features. This is the web
                 interface for the remote, shared version of your project(s). Think of this as your
-                projects' central hub where project collaborators are able to discuss development
+                projects’ central hub where project collaborators are able to discuss development
                 and share project files. <a href="https://github.com/" target="_blank"
                     >GitHub.com</a></li>
             <li><dfn><strong>Clone</strong></dfn>: a copy of a repository that lives on your
-                computer instead of on GitHub's server, or the act of making that copy. With your
+                computer instead of on GitHub’s server, or the act of making that copy. With your
                 clone you can edit the files in &lt;oXygen/&gt; and use Git to keep track of your
                 changes without having to be online. It is, however, connected to the remote version
                 so that changes can be synced between the two. You can push your local changes to
-                the remote to keep them synced when you're online.</li>
+                the remote to keep them synced when you’re online.</li>
             <li><dfn><strong>Remote</strong></dfn>: this is the version of a repo that is hosted on
-                GitHub's server. It can be connected to local clones so that changes can be
+                GitHub’s server. It can be connected to local clones so that changes can be
                 synced.</li>
             <li><dfn><strong>Working Directory</strong></dfn>: your local version of files on your
                 computer, where you make changes. All Git files have a three part working directory:
@@ -109,23 +102,23 @@
                 to a repo those changes sit unstaged until you have consciously added those changes
                 to the staging area. Staging changes allows you to review before committing.</li>
             <li><dfn><strong>Commit</strong></dfn>: a.k.a. <q>revision</q>, this is an individual
-                change to a file (or set of files). It's like when you save a file, except with Git,
+                change to a file (or set of files). It’s like when you save a file, except with Git,
                 every time you save it creates a unique ID <span class="smaller">(the <q>SHA</q> or
                         <q>hash</q>)</span> that allows you to keep record of what changes were made
                 when and by who. Commits usually contain a commit message which is a brief
                 description of what changes were made.</li>
             <li><dfn><strong>Pushing</strong></dfn>: refers to sending your committed changes to a
                 remote repository such as GitHub.com. For instance, if you change something locally,
-                you'd want to then push those changes so that others may access them.</li>
+                you’d want to then push those changes so that others may access them.</li>
             <li><dfn><strong>Pulling</strong></dfn>: is the combined process of
                         <dfn><strong>fetching</strong></dfn> (getting the latest changes from a
                 remote repo without merging them in order to compare them to the code residing on
                 your local machine) and <dfn><strong>merging</strong></dfn> (applying the changes
                 from one file to another). For instance, if someone has edited the remote file
-                you're both working on, you'll want to pull in those changes to your local copy so
-                that it's up to date.</li>
+                you’re both working on, you’ll want to pull in those changes to your local copy so
+                that it’s up to date.</li>
             <!--<li><dfn><strong></strong></dfn>:</li>-->
-            <!--RJP:2016-08-24: We should add more as we see necessary. I didn't want to overload with terms especially since each of these terms comes up in greater detail throughout the rest of the tutorial, but we could add more to this list as we see necessary. -->
+            <!--RJP:2016-08-24: We should add more as we see necessary. I didn’t want to overload with terms especially since each of these terms comes up in greater detail throughout the rest of the tutorial, but we could add more to this list as we see necessary. -->
         </ul>
         <p><span class="smaller">The above definitions are compiled from the following three sites,
                 which can be visited for definitions of even more Git terms: <a
@@ -136,7 +129,7 @@
                     href="https://help.github.com/articles/github-glossary/" target="_blank"
                     >help.github.com</a></span></p>
         <br />
-        <h1 id="account">Let's get started!</h1>
+        <h1 id="account">Let’s get started!</h1>
         <h3>How to create a GitHub account:</h3>
         <p>Because GitHub is a social networking site, where people post their code so that it will
             be accessible to others, using it requires creating an account. You can create a free
@@ -188,7 +181,7 @@
             your configuration in the future, but remove any created shortcuts to it because the Git
             Shell will be where you will do the rest of your Git interactions. If you choose to <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
-                >download</a> without the GUI you will need to configure your local machine's Git
+                >download</a> without the GUI you will need to configure your local machine’s Git
             with your online GitHub account. Begin configuration by opening Git Shell <span
                 class="smaller">(might be called Git Bash on your computer)</span> and entering the
             following commands:</p>
@@ -246,13 +239,13 @@
             be <a href="#cloning">cloned</a> in order for you to access it and begin working on your
             local computer. Only one member of your project team will need to create the project
             repo, and all other team members will <a href="#cloning">clone</a> from that repo.</p>
-        <span class="smaller">(If you wish to create a repo by using Git Shell you only need to know
+       <!--ebb 2016-08-28 : I’m commenting out because a) this doesn’t really work for *GitHub* and b) you indicated trouble with it. <span class="smaller">(If you wish to create a repo by using Git Shell you only need to know
             one command: <code>$ git init</code>. This initializes a git repository by creating the
             initial .git directory in a new or an existing project pending on the directory
-            preceding the command.)</span>
-        <!-- rjp:2016-1-15: we need to test how to link local repos created with "git init" to the remote GitHub server. git remote add [shortname] [url] seems to be what all of the documentation point to; however, when I attempted to do this it didn't work (for the url I copy and pasted in the HTTP for my GitHub profile) -->
+            preceding the command.)</span>-->
+        <!-- rjp:2016-1-15: we need to test how to link local repos created with "git init" to the remote GitHub server. git remote add [shortname] [url] seems to be what all of the documentation point to; however, when I attempted to do this it didn’t work (for the url I copy and pasted in the HTTP for my GitHub profile) -->
         <h3 id="collaborators">Adding and Deleting project collaborators</h3>
-        <p>Alongside version control, one of GitHub's most useful features is that it supports
+        <p>Alongside version control, one of GitHub’s most useful features is that it supports
             collaboration. Forget the days of emailing a file back and forth between group members
             as it is updated, or waiting to edit a document for fear of losing simultaneous edits.
             GitHub allows multiple collaborators to manage a repository. The only way to handle
@@ -367,11 +360,11 @@
                 you are editing an XML transcription and one of your team members is going through
                 all of the XML documents and replacing hyphens with the Unicode. Your partner edits
                 many portions of the same document you are working in and pushes those changes to
-                the GitHub repo. Since you're not sure if those changes will cause a merge conflict
+                the GitHub repo. Since you’re not sure if those changes will cause a merge conflict
                 or not you need to store your changes without adding them to the staging area so you
-                can pull your partner's changes in first. Git allows you to do this very simply with
+                can pull your partner’s changes in first. Git allows you to do this very simply with
                 the command <code>git stash</code>. This command stashes your changes outside of
-                your working directory while you pull in your partner's remote changes. You then can
+                your working directory while you pull in your partner’s remote changes. You then can
                 return your stashed files to your working directory and continue by adding your
                 changes to the staging area. For more information on <code>git stash</code> visit <a
                     href="https://git-scm.com/docs/git-stash" target="_blank">the Pro Git guide on
@@ -393,13 +386,13 @@
         <h3 id="issue">GitHub as Social Media: Issues and Wikis</h3>
         <p>As discussed above, GitHub serves as a social media network that stores and talks to Git
             repositories. The GitHub interface is useful for many aspects of project management. The
-            key parts of GitHub's interface besides the remote storage of project files are the
+            key parts of GitHub’s interface besides the remote storage of project files are the
             issues boards, wikis, and data visualizations. <a target="_blank"
                 href="https://help.github.com/articles/about-github-wikis/">Wikis</a> and <a
                 href="https://guides.github.com/features/issues/" target="_blank">issues</a> are
             often used in projects to manage tasks and communicate between project team members and
             the GitHub community with project problems and updates. The data visualizations are
-            helpful in mining a project's information on collaborators and development.</p>
+            helpful in mining a project’s information on collaborators and development.</p>
         <p>To create or comment on an issue navigate to the desired repo and click on the
                 <q>Issues</q> tab near the top of the page; notice there is also a tab for Wikis.
             Issues and Wikis on GitHub are written in <dfn>Markdown Language</dfn>. In fact,
@@ -424,7 +417,7 @@
             Besides data preservation it is important to also be able to mine your GitHub data. The
             GitHub interface makes this really simple. In any repo, at the top of the page, there
             are two tabs that are particularly useful for mining your GitHub data: <q>Pulse</q> and
-                <q>Graphs</q>. A repo's <dfn>Pulse</dfn> visualizes the activity of the GitHub repo,
+                <q>Graphs</q>. A repo’s <dfn>Pulse</dfn> visualizes the activity of the GitHub repo,
             while <dfn>Graphs</dfn> visualize everything from specific user contributions to the
             types of files stored in the repo. These visualizations can be useful when trying to
             determine details about how the repo (and therefore project) grows and changes over
@@ -493,7 +486,7 @@
             <li><a href="https://git-scm.com/docs/git-pull" target="_blank"><code>git
                     pull</code></a>: this command is made up of two other commands (<code>git
                     fetch</code> and <code>git merge</code>) and is used to fetch the data from a
-                remote repository and merge it into your local computer's version of the repository.
+                remote repository and merge it into your local computer’s version of the repository.
                 If working in a fork it is important to remember that changes are pulled from the
                 original remote repo the fork is made from: <code>git pull upstream master</code>.
                 When pulling from the original repo of a fork it is necessary to set that original
@@ -502,7 +495,7 @@
                 being pulled from, and can be changed to any branch name of that original repo that
                 the desired changes reside in.</li>
             <li><a href="https://git-scm.com/docs/git-remote" target="_blank"><code>git
-                        remote</code></a>: used to get a list of remote repositories associated with
+                        remote</code></a>: used to retrieve a list of remote repositories associated with
                 local repository. To create a new remote association use <code>git remote add</code>
                 followed by a name for the remote branch (i.e. upstream) and then the URL of the
                 remote repo on GitHub. <code>git remote -v</code> displays a verbose list of the
@@ -538,7 +531,7 @@
             back to the state before the conflict occurred. Another benefit of using Git over many
             other VCSs is that a merge conflict will not bring your complete team to a halt or
             cripple your remote project repository. This is because, in Git, conflicts can only
-            occur on a single user's local machine. In Git, <dfn>merging</dfn> is the act of
+            occur on a single user’s local machine. In Git, <dfn>merging</dfn> is the act of
             integrating another branch into your current working branch: most often taking changes
             from a remote branch and combining them with your current working directory on your
             local machine. Typically Git can seamlessly integrate multiple changes from multiple
@@ -551,7 +544,7 @@
             conflicts. The most common conflict occurs when one partner makes a change on a
             particular line in a file, and a fellow team member makes a change on the exact same
             line. Git does not automatically assume the last person to push changes is correct and
-            should over-write the other's changes. When this sort of conflict occurs, Git writes a
+            should over-write the other’s changes. When this sort of conflict occurs, Git writes a
             special block into the file that contains the contents of both versions where the
             conflict occurred. To complete this type of merge, use &lt;oXygen&gt; <span
                 class="smalelr">(or other text editor)</span> to resolve the conflict, then add the
@@ -560,9 +553,9 @@
                 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and ends with
                 <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>. The two conflicting blocks themselves are
             divided by a <code>=======</code>. You have several options here. You can either keep
-            your changes, take your partner's changes, or make a brand new change. Whatever you do,
+            your changes, take your partner’s changes, or make a brand new change. Whatever you do,
             you need to make sure to resolve the conflict such that the file makes sense, and
-            everyone is happy. The goal is to get the file to look exactly how you want it. You'll
+            everyone is happy. The goal is to get the file to look exactly how you want it. You’ll
             delete the conflict markers, and just type out a new change or remove the unwanted/wrong
             lines. Once you have made those changes you can use <code>git add</code> and follow
             through with making a new commit to push to the remote. Opening the file in your editor
@@ -572,7 +565,7 @@
                     href="http://www.kaleidoscopeapp.com/" target="_blank">Kaleidoscope</a>)</span>
             can make this easier <span class="smaller">(if you have one installed)</span>. You can
             configure your tool of choice using the <code>git config</code> command. Consult your
-            tool's documentation for detailed instructions. Then, in case of a conflict, you can
+            tool’s documentation for detailed instructions. Then, in case of a conflict, you can
             later invoke it by simply typing <code>git mergetool</code>.</p>
         <p>Outside of the above solution there are a few other ways of fixing possible merge
             conflicts and getting rid of bad commits. The need-to-know Git commands for merge
@@ -585,7 +578,7 @@
                 clean; you have no more local changes. Later, at any time, you can restore the
                 changes from that clipboard in your working directory and continue working where you
                 left off. To get a list of all your <q>stashes</q> use the command <code>git stash
-                    list</code>. When you're ready to restore a saved Stash, you have two options:
+                    list</code>. When you’re ready to restore a saved Stash, you have two options:
                 use <code>git stash pop</code> to apply the latest <q>stash</q> and clear it from
                 your stash clipboard or use <code>git stash apply</code> followed by the stash name
                 to apply that specified <q>stash</q>. The second option keeps the stash on the
@@ -596,7 +589,7 @@
                 introducing a new commit that reverses an earlier one. This doesn’t change the project history, which makes it a <q>safe</q> operation for commits that have already been published to a shared repository (i.e. the GitHub remote repo).</li>
             <li><dfn><code><a href="https://git-scm.com/docs/git-reset" target="_blank">git
                             reset</a></code></dfn>: is used to undo changes in your working
-                directory that haven't been committed yet. If you do not want to loose your local
+                directory that haven’t been committed yet. If you do not want to loose your local
                 changes or the changes from the commits being rolled back use <code>git reset
                     --keep</code> followed by <code>HEAD</code> or the commit hash ID. If you have
                 decided you want to be rid of all current local changes use <code>git reset
@@ -635,7 +628,7 @@
             because a branch is an inalienable part of the repo in which it is created in; thus,
             working in a branch requires you to already have a cloned repo. Just to be clear, when
             you clone a repo that has existing branches the entire repo gets cloned including all of
-            the repo's existing branches.</p>
+            the repo’s existing branches.</p>
         <p>To really understand the way Git does branching, we need to take a step back and examine
             how Git stores its data. As stated above, Git doesn’t store data as a series of
             changesets or differences, but instead as a series of snapshots. When you make a commit,
@@ -731,7 +724,7 @@
             your new repo is no longer synchronized with changes in the repo from which you copied
             it originally. If you fork a repo and make changes that you would then like to
             contribute to the original source, you can issue a <dfn>pull request</dfn>, inviting the
-            developers of the original repo to merge your forked repo's changes into their original
+            developers of the original repo to merge your forked repo’s changes into their original
             project.</p>
         <h4>How to fork and how to work in a fork:</h4>
         <p>To begin forking you need to navigate to the repo you wish to fork, and select the
@@ -752,7 +745,7 @@
                 remote</code> or <code>git remote -v</code> to show all of the remote versions of
             your repository. You should see <q>origin</q> (the direct remote version of the forked
             repo) and the upstream you just created. When you want to bring any new changes made on
-            the source repo's master branch into your forked repo, you can use the following
+            the source repo’s master branch into your forked repo, you can use the following
             commands to do so: <code>git fetch upstream master</code> will show the changes able to
             be brought in and <code>git pull upstream master</code> will bring the changes in. These
             commands function the same way in a fork as they do in any cloned repo.</p>
@@ -773,7 +766,7 @@
         </p>
         <h4>How to issue a pull request:</h4>
         <p>Now if you go back to your fork on GitHub, you can see that GitHub noticed that we pushed
-            a new branch with changes to the source repo's code. GitHub presents us with a big green
+            a new branch with changes to the source repo’s code. GitHub presents us with a big green
             button to compare our changes and open a <dfn>Pull Request</dfn> to the original
             project. You can alternatively go to the <q>Branches</q> page at
             https://github.com/[username]/[repo name]/branches to locate your branch and open a new
@@ -781,12 +774,12 @@
         <p>
             <img src="git_shell/pullRequest_01.jpg" alt="creating a pull request" />
         </p>
-        <p>If you click that green <q>Pull Request</q> button, you'll see a screen that asks you to
+        <p>If you click that green <q>Pull Request</q> button, you’ll see a screen that asks you to
             give your Pull Request a title and description. It is always worthwhile to put some
             effort into this, since a good description helps the owner of the original project
             determine what you were trying to do, whether your proposed changes are correct, and
             whether accepting the changes would improve the original project or not. You can also
-            see a list of the commits in your forked repo's branch that are <q>ahead</q> of the
+            see a list of the commits in your forked repo’s branch that are <q>ahead</q> of the
             master branch. Should this branch get merged by the project owner, a unified <q>diff</q>
             of all the changes will be made.</p>
         <p>
@@ -797,7 +790,7 @@
             has all of the information you provided. At this point, the project owner can look at
             the suggested changes and merge it, reject it or comment on it. It is possible that the
             owner will ask you to <q>rebase from master</q> and resubmit a pull request. This might
-            happen if a series of changes were made on the source repo's master branch that you had
+            happen if a series of changes were made on the source repo’s master branch that you had
             failed to fetch or if such changes were made after you submitted your request. This is
             not a problem! Use this very thorough <a
                 href="https://www.youtube.com/watch?v=M7ZYkjOWr6g" target="_blank">YouTube video</a>
