@@ -432,10 +432,12 @@
         <h1 id="cheatSheet">Common Git Commands:</h1>
         <p>Here is a list of commands used most frequently, and some options to modify the results
             of each command. Some of the commands listed here are associated with <a
-                href="#advanced">advanced project management</a> while others are more basic. We
-            have not listed every possible command; however we can recommend these sites to review
-            more commands: <a href="https://git-scm.com/docs" target="_blank">the Pro Git Guide</a>,
-                <a href="https://www.siteground.com/tutorials/git/commands.htm" target="_blank"
+                href="#advanced">advanced project management</a> while others are more basic. For
+            commands to correct merge conflicts and bad commits please refer to our <a
+                href="#trouble">troubleshooting section</a>. We have not listed every possible
+            command; however we can recommend these sites to review more commands: <a
+                href="https://git-scm.com/docs" target="_blank">the Pro Git Guide</a>, <a
+                href="https://www.siteground.com/tutorials/git/commands.htm" target="_blank"
                 >siteground.com</a>, <a href="https://www.atlassian.com/git" target="_blank"
                 >atlassian.com</a>, and <a href="https://orga.cat/posts/most-useful-git-commands"
                 target="_blank">orga.cat</a>. Another really great thing about Git is that it has
@@ -528,22 +530,31 @@
                 two branches you can change the command to <code>git diff --name-only</code> again
                 followed by the names of the two branches you wish to compare.</li>
         </ul>
-        <p>For commands to correct merge conflicts and bad commits please refer to our <a
-                href="#trouble">troubleshooting section</a>.</p>
         <h1 id="advanced">Advanced Project Management</h1>
         <h3 id="trouble">Troubleshooting: Merge Conflicts and Bad Commits</h3>
-        <p>The <a href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
-                >atlassian.com tutorial on undoing changes</a> is our go-to source for fixing and
-            preventing merge conflicts and bad commits. A merge conflict occurs when two branches
-            have changed the same part of the same file, and then those branches are merged
-            together. For example, if you make a change on a particular line in a file, and a fellow
-            project team member makes a change on the exact same line, a merge conflict occurs when
-            both parties push their changes to the same remote repo branch. Git does not
-            automatically assume the last person to push changes is correct and should override the
-            other's changes, so it asks you to help out by issuing a merge conflict when the second
-            person attempts to push. When this sort of conflict occurs, Git writes a special block
-            into the file that contains the contents of both versions where the conflict occurred.
-            To complete this type of merge, use &lt;oXygen&gt; to resolve the conflict, then add the
+        <p>If you are reading this section you probably are at a fearful state of emergency with
+            your project repo due to a <dfn>merge conflict</dfn>. The first thing that you should
+            keep in mind however is that you can always undo the changes causing a conflict and go
+            back to the state before the conflict occurred. Another benefit of using Git over many
+            other VCSs is that a merge conflict will not bring your complete team to a halt or
+            cripple your remote project repository. This is because, in Git, conflicts can only
+            occur on a single user's local machine. In Git, <dfn>merging</dfn> is the act of
+            integrating another branch into your current working branch: most often taking changes
+            from a remote branch and combining them with your current working directory on your
+            local machine. Typically Git can seamlessly intergrate multiple changes from multiple
+            collaborators; yet, occasionally Git runs into a scenario where the changes overlap thus
+            causing a <dfn>merge conflict</dfn>.</p>
+        <p>When faced with a merge conflict, the first step is to understand what happened. Did one
+            of your team partners edit the same file on the same lines as you? Did they delete a
+            file that you modified? Did you both add a file with the same name? Using the command
+                <code>git status</code> will tell you where you have <q>unmerged paths</q> or
+            conflicts. The most common conflict occurs when one partner makes a change on a
+            particular line in a file, and a fellow team member makes a change on the exact same
+            line. Git does not automatically assume the last person to push changes is correct and
+            should over-write the other's changes. When this sort of conflict occurs, Git writes a
+            special block into the file that contains the contents of both versions where the
+            conflict occurred. To complete this type of merge, use &lt;oXygen&gt; <span
+                class="smalelr">(or other text editor)</span> to resolve the conflict, then add the
             file and commit it to complete the merge. In the file, Git automatically adds conflict
             markers to the affected areas. A conflict-marked area begins with
                 <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and ends with
@@ -552,17 +563,62 @@
             your changes, take your partner's changes, or make a brand new change. Whatever you do,
             you need to make sure to resolve the conflict such that the file makes sense, and
             everyone is happy. The goal is to get the file to look exactly how you want it. You'll
-            delete the conflict markers, and just type out a new change. Once you have made those
-            changes you can use <code>git add</code> and follow through with making a new
-            commit.</p>
-        <p>Let's say however that it is not just one single line of code that differs between the
-            files or even just one single file. When this happens the best option might be to
-                <dfn>revert</dfn> the repo locally and/or remotely back to before the conflict
-            occured.
-        <!-- RJP:2016-08-27: still working left off here -->
+            delete the conflict markers, and just type out a new change or remove the unwanted/wrong
+            lines. Once you have made those changes you can use <code>git add</code> and follow
+            through with making a new commit to push to the remote. Opening the file in your editor
+            and cleaning it up there is perfectly valid, but can be jarring and difficult to
+            distinguish the changes. Using a dedicated merge tool <span class="smaller">(like <a
+                    href="http://meldmerge.org/" target="_blank">Meld</a> or <a
+                    href="http://www.kaleidoscopeapp.com/" target="_blank">Kaleidoscope</a>)</span>
+            can make this easier <span class="smaller">(if you have one installed)</span>. You can
+            configure your tool of choice using the <code>git config</code> command. Consult your
+            tool's documentation for detailed instructions. Then, in case of a conflict, you can
+            later invoke it by simply typing <code>git mergetool</code>.</p>
+        <p>Outside of the above solution there are a few other ways of fixing possible merge
+            conflicts and getting rid of bad commits. The need-to-know Git commands for merge
+            conflicts and bad commits based on the conflict and state of the local repo are:</p>
+        <ul>
+            <li><dfn><code><a target="_blank"
+                            href="https://www.git-tower.com/learn/git/ebook/en/command-line/branching-merging/stashing#start"
+                            >git stash</a></code></dfn>: this takes all the changes in your working
+                directory and saves them on a new clipboard. Leaves the local working directory
+                clean; you have no more local changes. Later, at any time, you can restore the
+                changes from that clipboard in your working directory and continue working where you
+                left off. To get a list of all your <q>stashes</q> use the command <code>git stash
+                    list</code>. When you're ready to restore a saved Stash, you have two options:
+                use <code>git stash pop</code> to apply the latest <q>stash</q> and clear it from
+                your stash clipboard or use <code>git stash apply</code> followed by the stashname
+                to apply that specified <q>stash</q>. The second option keeps the stash on the
+                clipboard, and it can be deleted later via <code>git stash drop</code> followed by
+                the stashname. </li>
+            <li><dfn><code><a href="https://git-scm.com/docs/git-revert" target="_blank">git
+                            revert</a></code></dfn>: is used to undo a previous commit(s) by
+                introducing a new commit that reverses an earlier one. This doesn’t change the project history, which makes it a <q>safe</q> operation for commits that have already been published to a shared repository (i.e. the GitHub remote repo).</li>
+            <li><dfn><code><a href="https://git-scm.com/docs/git-reset" target="_blank">git
+                            reset</a></code></dfn>: is used to undo changes in your working
+                directory that haven't been comitted yet. If you do not want to loose your local
+                changes or the changes from the commits being rolled back use <code>git reset
+                    --keep</code> followed by <code>HEAD</code> or the commit hash ID. If you have
+                decided you want to be rid of all current local changes use <code>git reset
+                    --hard</code>. This will cause you to loose all current local changes. If you
+                are unsure that you want those files best bet is to be safe and use <code>git
+                    stash</code> before this command.</li>
+            <li><dfn><code><a href="https://git-scm.com/docs/git-clean" target="_blank">git clean</a></code></dfn>: removes untracked files from your working directory. This command is often executed in conjunction with <code>git reset --hard</code>. Remember that resetting only affects tracked files, so a separate command is required for cleaning up untracked ones. Combined, these two commands let you return the working directory to the exact state of a particular commit.</li>
+        </ul>
+        <p>Note: When resetting or reverting a repo you can chose the commit to reset/revert back to
+            by grabbing the commit hash ID from that commit. A simple way to find commit hash IDs is
+            to use the GitHub interface by viewing all of the commits in a repo. If you simply want
+            to go back to the last commit use <code>HEAD</code> after the command instead of the
+            commit hash ID.</p>
+        <p><img src="git_shell/findCommit.jpg" alt="locating repo commits" /></p>
+        <p><img src="git_shell/commitHash.jpg" alt="copying commit hasd ID" /></p>
+        <p><span class="smaller">The <a
+                    href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
+            >atlassian.com tutorial on undoing changes</a>, the <a href="https://git-scm.com/blog" target="_blank">Pro Git blog titled <em>Reset Demystified</em></a> and the <a
+                    href="https://www.git-tower.com/learn/git/ebook/en/command-line/introduction#start"
+                    target="_blank">git-tower.com ebook</a> are our go-to sources for fixing and
+                preventing merge conflicts and bad commits.</span></p>
         
-        
-        </p>
         <h3 id="branch">Branching: what is it, and why do we do it?</h3>
         <p>Branching means you diverge from the main line of development and continue to do work
             without messing with that main line. The master branch is the main branch of a project.
