@@ -8,7 +8,6 @@
          <titleStmt>
             <title>Syllabus: Coding and Digital Archives</title>
             <author>Elisa E. Beshero-Bondar</author>
-            <author>Gregory H. Bondar</author>
             <sponsor>The University of Pittsburgh at Greensburg</sponsor>
          </titleStmt>
          <editionStmt>
@@ -137,7 +136,9 @@
                   <item>
                      <ref target="explainXML.html">Introduction to XML</ref>
                   </item>
-                  <item><ref target="explainGitShell.html">Guide to GitHub and Git Shell</ref> with our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref></item>
+                  <item><ref target="explainGitShell.html">Guide to GitHub and Git Shell</ref> with our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>
+                      <list><item><ref target="GitExercise1.html">Git xercise 1</ref></item></list>
+                  </item>
                   <item>
                      <ref target="explainRNG.html">Guide to Schema Writing with Relax NG</ref>
                   </item>
@@ -873,16 +874,13 @@
                   info.</p>
             </div>
             <div type="assign">
-               <p><hi rend="em">Set up your GitHub account by the next class</hi>, and post a
-                  test file (anything) into the DHClass-Hub Sandbox. Join in discussion of an
-                  Issue.</p>
-               <p><hi rend="em">XML Exercise 2:</hi> Choose the text of one letter linked on  one of
+                <list> <item><hi rend="em"><ref target="GitExercise1.html">Git Exercise 1</ref></hi>: Read and consult our <ref target="explainGitShell.html">Guide to Git Shell</ref> as you complete this exercise.</item>
+                <item><hi rend="em">XML Exercise 2:</hi> Choose the text of one letter linked on  one of
                   the following websites (click through until you see a complete letter), and
                   copy its text into &lt;oXygen/&gt;. Then, mark it up in XML, using your own
                   system of tagging, as seems appropriate, to code the structure and the
-                  content of the document. Save and name your document according to the
-                  File-Naming Conventions (which hold for all coding homework in this course),
-                  and upload to Courseweb. Options:</p>
+                  content of the document. Important: Save and name your document according to the
+                    <ref target="explainFileNames.html">File Conventions</ref> (which hold for all coding homework in this course) before you upload to Courseweb! Options:
                <list>
                   <item>
                      <ref target="http://glc.yale.edu/harriet-jacobs-selected-writings-and-correspondence-documents"> Harriet Jacobs: Selected Writings and Correspondence </ref>
@@ -894,7 +892,7 @@
                   <item>
                      <ref target="http://www.woolfonline.com/timepasses/?q=letters/overview">Virginia Woolf letters</ref>
                   </item>
-               </list>
+               </list></item></list>
             </div>
         </div>
         <div type="day">
