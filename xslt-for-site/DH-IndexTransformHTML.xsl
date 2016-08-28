@@ -19,7 +19,7 @@
             </head>
             <body>
                 
-                <xsl:comment>#include virtual="top-index.html" </xsl:comment>
+                <xsl:comment>#include virtual="top.html" </xsl:comment>
                 <h1><span class="banner">Digital Humanities Courses</span></h1>
                 <!--<h3> for subheadings when you need them.</h3>-->
                 <p>This site hosts Elisa Beshero-Bondar's courses in coding for the Digital Humanities.
