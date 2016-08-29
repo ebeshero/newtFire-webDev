@@ -125,11 +125,45 @@
          values must be enclosed inside quotation marks—These can either be double straight
          quotation marks (") or single straight apostrophes (’). either one works, but try to use
          them consistently. Later on, when we’re writing other kinds of code that reads and extracts
-         from your XML, you’ll find you’ll find that you need to work with single quotes to refer to
+         from your XML, you’ll find that you need to work with single quotes to refer to
          attribute values—more on that later. For now, as you write XML, double quotes are what we
          commonly use. Note that these are straight quotation marks (") and not the curly ones that
          you see in a word processor. </p>
-      <h3>"Well Formed" and <q>Well Formedness</q> in XML</h3>
+      <h4>Self-closing elements</h4>
+      <p>In special cases, XML elements can actually have <em>no text content at all</em>! 
+         These are called <dfn>self-closing elements</dfn> and they have a special syntax so that they open and close inside a single tag. Here is an example:</p>
+         <div class="code">
+            <span class="code">&lt;lb n="2"/&gt;</span>
+         </div>
+      <p>Here is one use-case for a self-closing tag: We are using it to contain information about where a line of poetry ends, because our XML markup would not make that clear.
+         The line numbering is not literally in the poem we are coding, but we want to record the information about the line ending in the appropriate place:</p>
+         <pre>
+            <span class="code">&lt;poem&gt;</span> 
+               I think that I shall never see<span class="code">&lt;lb n="1"/&gt;</span>
+               A poem lovely as a tree<span class="code">&lt;lb n="2"/&gt;</span>
+            <span class="code">&lt;/poem&gt;</span>
+         </pre>
+      
+      <p>This shows us a use of markup that does not simply wrap around text, but stores information that will be useful to us later in processing the file.
+         Note that we could also have chosen to code the lines like this:</p>
+      
+      <pre>
+            <span class="code">&lt;poem&gt;</span> 
+               <span class="code">&lt;line n="1"&gt;</span>I think that I shall never see<span class="code">&lt;/line&gt;</span>
+               <span class="code">&lt;line n="2"&gt;</span>A poem lovely as a tree<span class="code">&lt;/line&gt;</span>
+            <span class="code">&lt;/poem&gt;</span>
+         </pre>
+         
+      <p>Both ways of coding the lines of poetry are correct, and might be used for different reasons. 
+         If we didn’t hold the information about the lines in <em>some</em> way, whether wrapping each line, or using self-closing tags at the end of the line, the computer parser would simply see an uninterrupted single line of text, with no notion of the meaningful nature of line breaks. Usually we decide to write self-closing tags when we want to note simple pieces of information and where wrapping the text in open and close tags would cause a problem. 
+            We will be discussing cases where we might want to use self-closing elements as we proceed in the course. Often they have to do with preserving <q>well formedness</q>, which we discuss in the next section.</p>
+            
+           
+      <div class="badCode">&lt;poem&gt;I think that I shall never see A poem lovely as a tree&lt;/poem&gt;</div>
+  <p>Even though you have spaced this out with hard returns in your oXygen XML editor, to a computer parser, the text itself is a single 
+     undifferentiated <dfn>string</dfn>
+      </p>
+      <h3><q>Well Formed</q> and <q>Well Formedness</q> in XML</h3>
       <p>XML must be <strong>"well formed"</strong> in order to be parsed by a computer. That means
          it must follow the syntax rules for writing XML: It must have <strong>a single root
             element</strong>, and its <strong>elements must be nested, without any overlap</strong>.
@@ -155,6 +189,7 @@
                language="french"&gt;oui&lt;/emph&gt;&lt;/foreign&gt;!&lt;/paragraph&gt; <br />
             </span></p>
       </div>
+      
       <h3>Special Reserved Characters in XML</h3>
       <p>Computers (as well as people) need to be able to read XML and tell tags apart from text, to
          distinguish elements from their content. So, we run into formedness problems (problems with
@@ -198,6 +233,15 @@
          like you to get used to the actual writing of XML code and to learn some key concepts about
          it: well-formedness, nesting hierarchy, working around special reserved characters, and
          validity. </p>
+      <h3>The XML Comment: Writing Comments on your Code</h3>
+      <p>One last thing: In real life, coders write comments to themselves and each other in a special way that sets those comments apart from the code they are writing. As you write XML to share with others (whether for turning in assignments to the instructors of this course or for sharing code with team members or interested people on the web) you can document the decisions you made by writing little messages designed to be ignored by the computer parsing your document, but meant for human readers. Here is how to write a comment in XML:</p>
+         <div class="code">
+           
+           <span class="code">&lt;!--</span>Here is an XML comment I am making right now! <span class="code">--&gt;</span>   
+         </div>
+         
+      <p>The only rule for writing comments is that you cannot use angle brackets or double hyphens <em>inside</em> the comment because the computer parser will not be able to tell where your comment starts and ends. It is excellent practice in coding to write messages in comments to remind yourself of a decision or alert someone you are working with about a question or a problem you, and we strongly encourage such documentation on every piece of code you write.</p>
+      
    </body>
 
 
