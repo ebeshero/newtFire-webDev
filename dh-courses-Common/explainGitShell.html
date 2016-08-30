@@ -30,45 +30,85 @@
             </ul>
         </div>
         <h3>What is Git? And why do we use it?</h3>
-        <p>Git is a <dfn>version control system</dfn>, or a system designed to manage changes to files by storing a memory of each form they have taken. Some version control systems (like Dropbox) do this in a <dfn>centralized</dfn> way by keeping one master copy of a file and storing all history of its changes in a single location in the cloud (remotely). If two users share a file directory that tracks version history in a centralized way, and each attempts to modify the same file and save changes to that location at the same time, the centralized system creates a copy of one of the files with an altered file name (usually by putting a (1) or a (2) at the end of the original filename in Dropbox), and the owners of the directory must then decide which version to keep or how best to reconcile the two versions. Git, by contrast, would record the differences between the files as a new state of the file’s existence, and that is because it is a <dfn>distributed</dfn> or <dfn>decentralized</dfn> version control system, a system in which each storage repository carries its own distinct history. People who collaborate on a project upload and download shared versions of files from a web-based storage space called a <dfn>remote origin repository</dfn>, but when they work with those remote files they create copies of them on their own computers in a location known as a <dfn>master repository</dfn>, and Git manages information about their local version history as well as their remote history.</p>
-        <p>Git basically tracks each change you have deliberately <dfn>committed</dfn> to a directory, like taking a set of snapshots to record the condition of each significant state change that you record every time you <dfn>make a commit</dfn>. Every time you <dfn>commit</dfn> (or save) the state of your project with Git, it basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be
-            efficient, if files have not changed, Git doesn’t store the file again, just a link to
-            the previous identical file it has already stored. Advanced Git users may <em>quite deliberately</em> try to keep their local working repository different from the shared remote repository because they are working on something unstable that may not be usable by their team yet. When such an advanced user is finally ready to commit a change to the remote repository, their team members may review and reject the commit if they find something wrong with it. Git connects multiple local repositories but preserves each one’s distinct version history, and when GitHub users push their local repository files to a remote repository, they make it possible for other GitHub users to <dfn>pull in</dfn> those files and continue to work with them, giving them new homes and local histories. The way in which Git users interact with each other and make files available through remote repositories is sometimes described as a <dfn>web of trust</dfn>, in which files can be developed in multiple locations and shared with others based on their merit, and can be denied or rejected when they cause problems.</p>
-
+        <p>Git is a <dfn>version control system</dfn>, or a system designed to manage changes to
+            files by storing a memory of each form they have taken. Some version control systems
+            (like Dropbox) do this in a <dfn>centralized</dfn> way by keeping one master copy of a
+            file and storing all history of its changes in a single location in the cloud
+            (remotely). If two users share a file directory that tracks version history in a
+            centralized way, and each attempts to modify the same file and save changes to that
+            location at the same time, the centralized system creates a copy of one of the files
+            with an altered file name (usually by putting a (1) or a (2) at the end of the original
+            filename in Dropbox), and the owners of the directory must then decide which version to
+            keep or how best to reconcile the two versions. Git, by contrast, would record the
+            differences between the files as a new state of the file’s existence, and that is
+            because it is a <dfn>distributed</dfn> or <dfn>decentralized</dfn> version control
+            system, a system in which each storage repository carries its own distinct history.
+            People who collaborate on a project upload and download shared versions of files from a
+            web-based storage space called a <dfn>remote origin repository</dfn>, but when they work
+            with those remote files they create copies of them on their own computers in a location
+            known as a <dfn>master repository</dfn>, and Git manages information about their local
+            version history as well as their remote history.</p>
+        <p>Git basically tracks each change you have deliberately <dfn>committed</dfn> to a
+            directory, like taking a set of snapshots to record the condition of each significant
+            state change that you record every time you <dfn>make a commit</dfn>. Every time you
+                <dfn>commit</dfn> (or save) the state of your project with Git, it basically takes a
+            picture of what all your files look like at that moment and stores a reference to that
+            snapshot. To be efficient, if files have not changed, Git doesn’t store the file again,
+            just a link to the previous identical file it has already stored. Advanced Git users may
+                <em>quite deliberately</em> try to keep their local working repository different
+            from the shared remote repository because they are working on something unstable that
+            may not be usable by their team yet. When such an advanced user is finally ready to
+            commit a change to the remote repository, their team members may review and reject the
+            commit if they find something wrong with it. Git connects multiple local repositories
+            but preserves each one’s distinct version history, and when GitHub users push their
+            local repository files to a remote repository, they make it possible for other GitHub
+            users to <dfn>pull in</dfn> those files and continue to work with them, giving them new
+            homes and local histories. The way in which Git users interact with each other and make
+            files available through remote repositories is sometimes described as a <dfn>web of
+                trust</dfn>, in which files can be developed in multiple locations and shared with
+            others based on their merit, and can be denied or rejected when they cause problems.</p>
         <p>So let’s say you and a team member are both updating the same XML document inside of your
-            shared repository. You make your changes, save them, and
-            upload them back to the shared repository. The problem, for most VCSs,
-            comes when your team member is working on the same document as you at the same time. One
-            of you is about to have your work overwritten; however, Git keeps that from
-            happening. You and your fellow team member can each upload your revisions to the same
-            document, and Git will save two versions of the file. If you both were working on
-            different parts of the same document Git will automatically <dfn>merge</dfn> your
-            changes together without losing any work along the way. If you both happen to edit the
-            exact same segment of code Git will issue a <dfn>merge conflict</dfn> to point out where
-            the two files differ allowing you and your team to decide what version to keep. You can
-            even revert to an earlier version at any time, relying on the <q>snapshot</q> that Git preserved of every change ever committed by all project collaborators.</p>
-        <p>One of the most important aspects of Git is its emphasis on local operation. Git doesn’t need to go
-            out to the server to get the history of a project and display it for you – it simply
-            reads it directly from your local computer. This means you see the project history
-            almost instantly, without having to wait for server network lag. This also means that
-            there is very little you can’t do if you’re offline. When you manage a project using
-            Git, you keep copies of all the project files on both your local machine and the online
-            GitHub server. You work on your local machine, periodically <dfn>pushing</dfn> your
-            changes onto the server so they’ll be accessible to your project partners, and
+            shared repository. You make your changes, save them, and upload them back to the shared
+            repository. The problem, for most VCSs, comes when your team member is working on the
+            same document as you at the same time. One of you is about to have your work
+            overwritten; however, Git keeps that from happening. You and your fellow team member can
+            each upload your revisions to the same document, and Git will save two versions of the
+            file. If you both were working on different parts of the same document Git will
+            automatically <dfn>merge</dfn> your changes together without losing any work along the
+            way. If you both happen to edit the exact same segment of code Git will issue a
+                <dfn>merge conflict</dfn> to point out where the two files differ allowing you and
+            your team to decide what version to keep. You can even revert to an earlier version at
+            any time, relying on the <q>snapshot</q> that Git preserved of every change ever
+            committed by all project collaborators.</p>
+        <p>One of the most important aspects of Git is its emphasis on local operation. Git doesn’t
+            need to go out to the server to get the history of a project and display it for you – it
+            simply reads it directly from your local computer. This means you see the project
+            history almost instantly, without having to wait for server network lag. This also means
+            that there is very little you can’t do if you’re offline. When you manage a project
+            using Git, you keep copies of all the project files on both your local machine and the
+            online GitHub server. You work on your local machine, periodically <dfn>pushing</dfn>
+            your changes onto the server so they’ll be accessible to your project partners, and
             periodically <dfn>pulling</dfn> changes made by your project team from the server to
             your local machine. So as long as you have recently pulled in any changes you can work
             offline until you are ready to push your changes. For more information regarding what
             Git is and the benefits of using Git please visit the online version of <a
                 href="http://git-scm.com/" target="_blank">Pro Git</a>, a Git how-to guide.</p>
         <h4>Why use Git Shell (command line)?</h4>
-        <p>Unlike the Graphical User Interfaces (GUIs), the command line (sometimes called the <dfn>shell</dfn> or <dfn>terminal</dfn>) is the only
-            place you can take advantage of all the functions Git has to offer. The GUIs only
-            implement the simplistic functionality of Git as a means to use Git at the most basic
-            level. For many of us the command line is strange and unfamiliar, but it used to be the main way that people interacted with computers before GUIs came to dominate the computer experience. The command line is a place where people can work more freely and have many powers to process files, powers that are usually not available or far more difficult to access in software GUI interfaces. Think of the command line
-            as a way to navigate and work with your computer’s files and systems by typing commands (strings of
-            text) at prompts, instead of using the mouse. GitHub offers a helpful, <a
-                href="http://try.github.io/levels/1/challenges/1" target="_blank">interactive
-                tutorial</a> on using the Git command-line interface. To learn more about the power tools you can work with at command line, see Lifehacker’s <a href="http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything"><q>A Command Line Primer for Beginners</q></a>.  </p>
+        <p>Unlike the Graphical User Interfaces (GUIs), the command line (sometimes called the
+                <dfn>shell</dfn> or <dfn>terminal</dfn>) is the only place you can take advantage of
+            all the functions Git has to offer. The GUIs only implement the simplistic functionality
+            of Git as a means to use Git at the most basic level. For many of us the command line is
+            strange and unfamiliar, but it used to be the main way that people interacted with
+            computers before GUIs came to dominate the computer experience. The command line is a
+            place where people can work more freely and have many powers to process files, powers
+            that are usually not available or far more difficult to access in software GUI
+            interfaces. Think of the command line as a way to navigate and work with your computer’s
+            files and systems by typing commands (strings of text) at prompts, instead of using the
+            mouse. GitHub offers a helpful, <a href="http://try.github.io/levels/1/challenges/1"
+                target="_blank">interactive tutorial</a> on using the Git command-line interface. To
+            learn more about the power tools you can work with at command line, see Lifehacker’s <a
+                href="http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything"
+                    ><q>A Command Line Primer for Beginners</q></a>. </p>
         <h3 id="terms">Basic Terms to Understanding Git and GitHub</h3>
         <!-- RJP:2016-08-26: Needs edited to correspond with edits made in first few paragraphs -->
         <p>Below is a list of key terms you will need to understand while using Git and GitHub. Each
@@ -166,19 +206,26 @@
                 you NEED to browse your computer and save to a logical place on your local machine
                 that you know how to access easily.</li>
         </ul>
-        <p>When downloading Git on a Windows computer and/or if you are less experienced Mac user we
-            suggest downloading <a href="https://desktop.github.com/" target="_blank">GitHub
+        <p>When downloading Git on a Windows computer and/or if you are a less-experienced Mac user
+            we suggest downloading <a href="https://desktop.github.com/" target="_blank">GitHub
                 Desktop</a> because the storing of configuration information is made simpler through
-            the GUI client that is installed with GitHub Desktop. Once download of GitHub Desktop is
-            complete you should open the GUI client (the icon with the purple cat head) and navigate
-            to the gear symbol in the top right of the client. From there click on <q>Options</q>.
-            This is where you can configure your local Git setup with your GitHub account.</p>
+            the GUI client that is installed with GitHub Desktop. GitHub Desktop downloads Git, a
+            GUI to interact with Git, and Git Shell (or terminal/command line access of Git). Once
+            download of GitHub Desktop is complete you should open the GUI client (the icon with the
+            purple cat head). On a Windows computer navigate to the gear symbol in the top right of
+            the client. From there click on <q>Options</q>. This is where you can configure your
+            local Git setup with your GitHub account. If working on a Mac, open the GUI client and
+            click on the application name (<q>GitHub Desktop</q>) in the application tool bar at the
+            top of the screen. From there click on <q>Preferences</q> and then <q>Accounts</q>. You will be prompted to enter your GitHub account information and this will configure your local Git setup (in both the GUI and Git Shell) with your online GitHub account. The following image is what your configuration process will look like on a Windows computer inside of the GUI.</p>
         <p><img src="git_shell/desktopClientDownload_05.jpg" alt="Using GUI to Configure Account"
              /></p>
-        <p>After you have completed configuration using the GUI client exit the client and remove
+        <p id="openGit">After you have completed configuration using the GUI client exit the client and remove
             the shortcut from your desktop. Do not uninstall the GUI in case you decide to change
             your configuration in the future, but remove any created shortcuts to it because the Git
-            Shell will be where you will do the rest of your Git interactions. If you choose to <a
+            Shell will be where you will do the all future Git interactions. Before you remove the shortcut make sure you know how to navigate to the Git Shell access of your GitHub Desktop installation. For Windows, there is likely a shortcut added to your desktop that looks like this:</p>
+        <p><img src="git_shell/GitShell_Icon.jpg" alt="Git Shell Icon"></img></p>
+        Mac users should be able to find Git Shell in <q>Applications</q>. If you cannot find your terminal/command line access (Git Shell) you should keep your shortcut to the GUI because you can access Git Shell through there. On a Windows computer you can <q>Open in Git Shell</q> from the same gear symbol mentioned above. On a Mac go to <q>Repository</q> on the application toolbar of the GUI. Then click <q>Terminal</q>. Once you have Git Shell open you should bookmark the application, and close the GUI.
+        <p>If you choose to <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
                 >download</a> without the GUI you will need to configure your local machine’s Git
             with your online GitHub account. Begin configuration by opening Git Shell <span
@@ -238,10 +285,6 @@
             be <a href="#cloning">cloned</a> in order for you to access it and begin working on your
             local computer. Only one member of your project team will need to create the project
             repo, and all other team members will <a href="#cloning">clone</a> from that repo.</p>
-       <!--ebb 2016-08-28 : I’m commenting out because a) this doesn’t really work for *GitHub* and b) you indicated trouble with it. <span class="smaller">(If you wish to create a repo by using Git Shell you only need to know
-            one command: <code>$ git init</code>. This initializes a git repository by creating the
-            initial .git directory in a new or an existing project pending on the directory
-            preceding the command.)</span>-->
         <!-- rjp:2016-1-15: we need to test how to link local repos created with "git init" to the remote GitHub server. git remote add [shortname] [url] seems to be what all of the documentation point to; however, when I attempted to do this it didn’t work (for the url I copy and pasted in the HTTP for my GitHub profile) -->
         <h3 id="collaborators">Adding and Deleting project collaborators</h3>
         <p>Alongside version control, one of GitHub’s most useful features is that it supports
@@ -286,13 +329,14 @@
             explicitly to the server.</p>
         <h4 id="nav">Navigating Directories</h4>
         <p>Before you clone a repo, you need to understand how to navigate between directories using
-            Git Shell. When opening Git Shell from a shortcut link you will be placed in the main
+            Git Shell. To begin you will open your Git Shell (command line / terminal interface with Git). We explain in detail how to open this <a href="#openGit">above</a>. When opening Git Shell from a shortcut link you will be placed in the main
             configuration folder you set up when installing Git. The following image explains how
             you navigate between directories:</p>
         <div class="commandImg">
             <img src="git_shell/navDirectory.jpg" alt="navigating through directories" />
         </div>
         <h4>How to clone an existing repo:</h4>
+        <p>Again, to begin, open your Git Shell (command line / terminal interface). We explain in detail how to open this <a href="#openGit">above</a>.</p>
         <p>To clone a repo from the remote online server using command line you use one easy
             command: <code>git clone</code>. After <code>git clone</code> you copy the url of the
             repo you wish to clone, a space, and then a name for the folder where the cloned repo
@@ -494,11 +538,11 @@
                 being pulled from, and can be changed to any branch name of that original repo that
                 the desired changes reside in.</li>
             <li><a href="https://git-scm.com/docs/git-remote" target="_blank"><code>git
-                        remote</code></a>: used to retrieve a list of remote repositories associated with
-                local repository. To create a new remote association use <code>git remote add</code>
-                followed by a name for the remote branch (i.e. upstream) and then the URL of the
-                remote repo on GitHub. <code>git remote -v</code> displays a verbose list of the
-                associated remote repos with the remote URL after the repo name.</li>
+                        remote</code></a>: used to retrieve a list of remote repositories associated
+                with local repository. To create a new remote association use <code>git remote
+                    add</code> followed by a name for the remote branch (i.e. upstream) and then the
+                URL of the remote repo on GitHub. <code>git remote -v</code> displays a verbose list
+                of the associated remote repos with the remote URL after the repo name.</li>
             <li><a href="https://git-scm.com/docs/git-push" target="_blank"><code>git
                     push</code></a>: updates remote repos to match commits made on local machine. If
                 working in specific branches you can designate the branch name (that you wish to
@@ -585,7 +629,9 @@
                 the stash name. </li>
             <li><dfn><code><a href="https://git-scm.com/docs/git-revert" target="_blank">git
                             revert</a></code></dfn>: is used to undo a previous commit(s) by
-                introducing a new commit that reverses an earlier one. This doesn’t change the project history, which makes it a <q>safe</q> operation for commits that have already been published to a shared repository (i.e. the GitHub remote repo).</li>
+                introducing a new commit that reverses an earlier one. This doesn’t change the
+                project history, which makes it a <q>safe</q> operation for commits that have
+                already been published to a shared repository (i.e. the GitHub remote repo).</li>
             <li><dfn><code><a href="https://git-scm.com/docs/git-reset" target="_blank">git
                             reset</a></code></dfn>: is used to undo changes in your working
                 directory that haven’t been committed yet. If you do not want to loose your local
@@ -595,7 +641,12 @@
                     --hard</code>. This will cause you to loose all current local changes. If you
                 are unsure that you want those files best bet is to be safe and use <code>git
                     stash</code> before this command.</li>
-            <li><dfn><code><a href="https://git-scm.com/docs/git-clean" target="_blank">git clean</a></code></dfn>: removes untracked files from your working directory. This command is often executed in conjunction with <code>git reset --hard</code>. Remember that resetting only affects tracked files, so a separate command is required for cleaning up untracked ones. Combined, these two commands let you return the working directory to the exact state of a particular commit.</li>
+            <li><dfn><code><a href="https://git-scm.com/docs/git-clean" target="_blank">git
+                            clean</a></code></dfn>: removes untracked files from your working
+                directory. This command is often executed in conjunction with <code>git reset
+                    --hard</code>. Remember that resetting only affects tracked files, so a separate
+                command is required for cleaning up untracked ones. Combined, these two commands let
+                you return the working directory to the exact state of a particular commit.</li>
         </ul>
         <p>Note: When resetting or reverting a repo you can chose the commit to reset/revert back to
             by grabbing the commit hash ID from that commit. A simple way to find commit hash IDs is
@@ -606,11 +657,12 @@
         <p><img src="git_shell/commitHash.jpg" alt="copying commit hasd ID" /></p>
         <p><span class="smaller">The <a
                     href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
-            >atlassian.com tutorial on undoing changes</a>, the <a href="https://git-scm.com/blog" target="_blank">Pro Git blog titled <em>Reset Demystified</em></a> and the <a
+                    >atlassian.com tutorial on undoing changes</a>, the <a
+                    href="https://git-scm.com/blog" target="_blank">Pro Git blog titled <em>Reset
+                        Demystified</em></a> and the <a
                     href="https://www.git-tower.com/learn/git/ebook/en/command-line/introduction#start"
                     target="_blank">git-tower.com ebook</a> are our go-to sources for fixing and
                 preventing merge conflicts and bad commits.</span></p>
-        
         <h3 id="branch">Branching: what is it, and why do we do it?</h3>
         <p>Branching means you diverge from the main line of development and continue to do work
             without messing with that main line. The master branch is the main branch of a project.
@@ -810,7 +862,9 @@
                     Manual</a></li>
             <li><a href="https://www.siteground.com/tutorials/git/commands.htm">Git: Tutorial
                     Commands</a></li>
-            <li>Lifehacker's <a href="http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything">A Command Line Primer for Beginners</a></li>
+            <li>Lifehacker's <a
+                    href="http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything"
+                    >A Command Line Primer for Beginners</a></li>
             <li><a href="http://rogerdudler.github.io/git-guide/">Git - the simple guide</a></li>
             <li><a href="https://gist.github.com/hofmannsven/6814451">A simple Git cheat-sheet
                     (hosted on GitHub Gist)</a></li>
