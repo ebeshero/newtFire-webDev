@@ -155,14 +155,15 @@
          </pre>
          
       <p>Both ways of coding the lines of poetry are correct, and might be used for different reasons. 
-         If we didn’t hold the information about the lines in <em>some</em> way, whether wrapping each line, or using self-closing tags at the end of the line, the computer parser would simply see an uninterrupted single line of text, with no notion of the meaningful nature of line breaks. Usually we decide to write self-closing tags when we want to note simple pieces of information and where wrapping the text in open and close tags would cause a problem. 
-            We will be discussing cases where we might want to use self-closing elements as we proceed in the course. Often they have to do with preserving <q>well formedness</q>, which we discuss in the next section.</p>
+         If we didn’t hold the information about the lines in <em>some</em> way, whether wrapping each line, or using self-closing tags at the end of the line, the computer parser would simply see an uninterrupted single line of text, with no notion of the meaningful nature of line breaks.</p> 
             
            
-      <div class="badCode">&lt;poem&gt;I think that I shall never see A poem lovely as a tree&lt;/poem&gt;</div>
+      <div class="badCode">&lt;poem&gt;I think that I shall never see     A poem lovely as a tree&lt;/poem&gt;</div>
   <p>Even though you have spaced this out with hard returns in your oXygen XML editor, to a computer parser, the text itself is a single 
-     undifferentiated <dfn>string</dfn>
-      </p>
+     undifferentiated <dfn>string</dfn>, because in XML hard returns and extra spaces appear as meaningless space and are not meant to be treated as stable formatting.</p>
+      <p>Usually we decide to write self-closing tags when we want to note simple pieces of information and where wrapping the text in open and close tags would actually cause a problem in nesting our elements. 
+     We will be discussing cases where we might want to use self-closing elements as we proceed in the course. Often they have to do with preserving <q>well formedness</q>, which we discuss in the next section.</p>
+  
       <h3><q>Well Formed</q> and <q>Well Formedness</q> in XML</h3>
       <p>XML must be <strong>"well formed"</strong> in order to be parsed by a computer. That means
          it must follow the syntax rules for writing XML: It must have <strong>a single root
