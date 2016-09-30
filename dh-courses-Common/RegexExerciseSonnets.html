@@ -7,7 +7,7 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <link rel="stylesheet" type="text/css" href="explain.css" />
-      <title>Regex Exercise: Blithedale</title>
+      <title>Regex Exercise: Sonnets</title>
    </head>
    
    
@@ -17,7 +17,7 @@
       		
       		
       		
-      <h1><span class="banner">Regex Exercise: Convert the text of a novel into XML</span></h1>
+       <h1><span class="banner">Regex Exercise: Convert the text of Shakespeare’s sonnets into XML</span></h1>
       			
     <p>Consult the following resources as you work with Regular Expressions:</p> 
    	<ul>
@@ -30,15 +30,18 @@
       </ul>
    	  <h3>The input text</h3>
        <p>The text we’ll be using as input for the first regex homework assignment is a plain-text
-           version of Shakespeare’s sonnets, which you should download from <a
-               href="http://www.gutenberg.org/cache/epub/1041/pg1041.txt"
-               >http://www.gutenberg.org/cache/epub/1041/pg1041.txt</a> and open in
-           &lt;oXygen/&gt;. (Note that this site sometimes shows you a pop-up welcome screen and a
-           list of different versions of the file, instead of taking you to the plain text one
-           directly. If that happens, click OK on the Welcome pop-up and then select the version
-           labeled Plain Text UTF-8.) You should manually delete any of the Project Gutenberg
+           version of Shakespeare’s sonnets produced by Project Gutenberg, which you can download from our site here: <a
+               href="shakeSonnets.txt"
+               >shakeSonnets.txt</a>.</p>
+           
+           <ul><li>To download the file,  go to File and Save as in your web browser, and choose a useful name and location on your computer to save the file.
+           We typically keep the <code>.txt</code> extension, and you might rename this as <code>YourName_Regex1_sonnets.txt</code>.)
+           </li>
+           <li>Then open &lt;oXygen/&gt;, and open the file you saved. </li>
+            <li>You should manually delete any of the Project Gutenberg
            information from the beginning and end of this file, so that what you’re left with is
-           just the sonnets in order, with roman numerals before each one.</p>
+           just the sonnets in order, with roman numerals before each one.</li>
+           </ul>
        <p>If you find it easier to work with a small amount of text, you can make yourself a
            document that contains just a few sonnets and use that during development. Once you
            think you’re getting the results you want, you can then try applying the same strategy
@@ -181,7 +184,7 @@
        <h4>Checking your results</h4>
        <p>Although you’ve added XML markup to the document, &lt;oXygen/&gt; remembers that you
            opened it as plain text, which means that you can’t check it for well-formedness. To fix
-           that, save it as XML with File → Save as and give it the extension <q>.xml</q>. Even
+           that, save it as XML with File → Save as and give it the extension <code>.xml</code>. Even
            that doesn’t tell &lt;oXygen/&gt; that you’ve changed the file type, though; you have to
            close the file and reopen it. When you do that, &lt;oXygen/&gt; now knows that it’s XML,
            so you can verify that it’s well formed in the usual way: Control+Shift+W on Windows,
