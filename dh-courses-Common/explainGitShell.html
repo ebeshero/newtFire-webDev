@@ -192,45 +192,45 @@
         <p>Git is available for <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
                 >download</a> on all three of these platforms: Linux, Mac, and Windows. To download
-            Git on your local machine follow the instructions available <a
+            Git on your local machine follow the instructions available on the<a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
-                >here</a>. Since platform downloads differ we are not going to go through a
-            step-by-step installation process. However, our suggested settings are as follows:</p>
+                >git-scm.com</a> site. Since platform downloads differ we are not going to go
+            through a step-by-step installation process.</p>
+        <p id="windows">Our suggested settings for a Windows installation are as follows:</p>
         <ul>
-            <li>If the download asks about <q>Adjusting your PATH environment</q>, we recommend
+            <li>When the download asks about <q>Adjusting your PATH environment</q>, we recommend
                 selecting <q>Use Git Bash only</q> as it provides an unmodified PATH.</li>
             <li>If the download asks about <q>Configuring the line ending conversations</q>, we
-                recommend choosing the option of <q>Checkout Windows-style, commit Unix-style line
+                recommend choosing the option to <q>Checkout Windows-style, commit Unix-style line
                     endings</q>.</li>
-            <li>When the download asks where you want Git saved and/or where to save future repos
-                you NEED to browse your computer and save to a logical place on your local machine
-                that you know how to access easily.</li>
+            <li>For ALL other settings choose the default selection.</li>
+            <li>Once installation is complete you will be asked if you want a desktop shortcut for
+                    <q>Git Bash</q>; make sure the box to create this shortcut is checked.</li>
         </ul>
-        <p>When downloading Git on a Windows computer and/or if you are a less-experienced Mac user
-            we suggest downloading <a href="https://desktop.github.com/" target="_blank">GitHub
-                Desktop</a> because the storing of configuration information is made simpler through
-            the GUI client that is installed with GitHub Desktop. GitHub Desktop downloads Git, a
-            GUI to interact with Git, and Git Shell (or terminal/command line access of Git). Once
-            download of GitHub Desktop is complete you should open the GUI client (the icon with the
-            purple cat head). On a Windows computer navigate to the gear symbol in the top right of
-            the client. From there click on <q>Options</q>. This is where you can configure your
-            local Git setup with your GitHub account. If working on a Mac, open the GUI client and
-            click on the application name (<q>GitHub Desktop</q>) in the application tool bar at the
-            top of the screen. From there click on <q>Preferences</q> and then <q>Accounts</q>. You will be prompted to enter your GitHub account information and this will configure your local Git setup (in both the GUI and Git Shell) with your online GitHub account. The following image is what your configuration process will look like on a Windows computer inside of the GUI.</p>
-        <p><img src="git_shell/desktopClientDownload_05.jpg" alt="Using GUI to Configure Account"
-             /></p>
-        <p id="openGit">After you have completed configuration using the GUI client exit the client and remove
-            the shortcut from your desktop. Do not uninstall the GUI in case you decide to change
-            your configuration in the future, but remove any created shortcuts to it because the Git
-            Shell will be where you will do the all future Git interactions. Before you remove the shortcut make sure you know how to navigate to the Git Shell access of your GitHub Desktop installation. For Windows, there is likely a shortcut added to your desktop that looks like this:</p>
-        <p><img src="git_shell/GitShell_Icon.jpg" alt="Git Shell Icon"></img></p>
-        Mac users should be able to find Git Shell in <q>Applications</q>. If you cannot find your terminal/command line access (Git Shell) you should keep your shortcut to the GUI because you can access Git Shell through there. On a Windows computer you can <q>Open in Git Shell</q> from the same gear symbol mentioned above. On a Mac go to <q>Repository</q> on the application toolbar of the GUI. Then click <q>Terminal</q>. Once you have Git Shell open you should bookmark the application, and close the GUI.
-        <p>If you choose to <a
-                href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
-                >download</a> without the GUI you will need to configure your local machine’s Git
-            with your online GitHub account. Begin configuration by opening Git Shell <span
-                class="smaller">(might be called Git Bash on your computer)</span> and entering the
-            following commands:</p>
+        <p id="mac">Installation on a Mac is much simpler. For a detailed installation guide, we
+            suggest following <a
+                href="http://burnedpixel.com/blog/setting-up-git-and-github-on-your-mac/"
+                target="_blank">this tutorial</a> for assistance while setting up Git on a Mac.</p>
+        <h4>After installation:</h4>
+        <p>Now that you have Git on your computer you can access it through command line. On a
+            Windows installation you will be using the <q>Git Bash command shell</q> and on a Mac
+            installation you will be using <q>Terminal</q>.</p>
+        <p>The key thing to working with Git is always knowing where to find your files in the
+            Finder (on Mac) / File Explorer (on Windows) and in the Terminal/Git Bash Shell. So you
+            need to save directories in a place where you can easily see them. In your Finder/File
+            Explorer, make yourself a <q>GitHub</q> directory that lives inside <q>Documents</q> (or
+            on your desktop if that is a more logical place for you). Inside the <q>GitHub</q>
+            directory you will clone each of your project repositories. In the Terminal/Git Bash
+            Shell), you can navigate to your <q>GitHub</q> directory from the computer's root by
+            typing: <code>cd Documents/GitHub/</code> if stored in documents or <code>cd
+                Desktop/GitHub/</code> if stored on your desktop <code>cd</code> means "change
+            directories" and in the above command you are stepping down into Documents (or Desktop)
+            and into the <q>GitHub</q> folder. Use <code>ls</code> to list out the contents of the
+            directory you have stepped down into.</p>
+        <p>When you first use your command shell you will need to configure Git to recognize you
+            local computer as a correspondent to your remote GitHub account. Use the following
+            commands to configure your local Git installation (these command can be done in
+            Terminal/Git Bash Shell without needing to specify a directory):</p>
         <span class="code">git config --global user.name "YOUR NAME"</span>
         <br />
         <span class="code">git config --global user.email "YOUR EMAIL ADDRESS"</span>
@@ -240,10 +240,11 @@
         <span class="code">git config --list</span>. <p>For more information on the <code>git
                 config</code> command visit <a href="https://git-scm.com/docs/git-config"
                 target="_blank">the Pro Git guide on configuration</a>. Note: in order to cache your
-            username and password, if downloading Git without the GUI client, you will need to
-            follow further directions found on <a
+            username and password, you may need to follow further directions found on <a
                 href=" https://help.github.com/articles/caching-your-github-password-in-git/#platform-all"
-                target="_blank">help.github.com</a>.</p>
+                target="_blank">help.github.com</a>. To test if your information has been cached try
+            pushing to remote repositories that you have been added as a collaborator to on
+            GitHub.</p>
         <h3 id="repo">Creating a Repository</h3>
         <h4>What is a repo?</h4>
         <p>Projects on GitHub are stored in repos (short for repositories), which you can think of
@@ -329,16 +330,19 @@
             explicitly to the server.</p>
         <h4 id="nav">Navigating Directories</h4>
         <p>Before you clone a repo, you need to understand how to navigate between directories using
-            Git Shell. To begin you will open your Git Shell (command line / terminal interface with Git). We explain in detail how to open this <a href="#openGit">above</a>. When opening Git Shell from a shortcut link you will be placed in the main
-            configuration folder you set up when installing Git. The following image explains how
-            you navigate between directories:</p>
+            Git Shell. To begin you will open your Git Shell (command line / terminal interface with
+            Git). We explain in detail how to open this <a href="#openGit">above</a>. When opening
+            Git Shell from a shortcut link you will be placed in the main configuration folder you
+            set up when installing Git. The following image explains how you navigate between
+            directories:</p>
         <div class="commandImg">
             <img src="git_shell/navDirectory.jpg" alt="navigating through directories" />
         </div>
         <h4>How to clone an existing repo:</h4>
-        <p>Again, to begin, open your Git Shell (command line / terminal interface). We explain in detail how to open this <a href="#openGit">above</a>.</p>
+        <p>Again, to begin, open your Git Shell (command line / terminal interface). We explain in
+            detail how to open this <a href="#openGit">above</a>.</p>
         <p>To clone a repo from the remote online server using command line you use one easy
-            command: <code>git clone</code>. After <code>git clone</code> you copy the url of the
+            command: <code>git clone</code>. After <code>git clone</code> you copy the URL of the
             repo you wish to clone, a space, and then a name for the folder where the cloned repo
             will exist.</p>
         <div class="commandImg">
@@ -420,7 +424,12 @@
                 message in quotes. Git requires a commit message when committing. Think of commit
                 messages as the breadcrumbs of your project for yourself and your team members;
                 every commit message documents changes to the project with an author and time stamp.
-                        <p><img src="git_shell/gitCommit.jpg" alt="git commit" /></p></li>
+                        <p><img src="git_shell/gitCommit.jpg" alt="git commit" /></p> Writing good
+                commit messages matters when you work on a team, or even when you're working on your
+                own because each commit you make to your repository helps to generate a log of your
+                activities. Think about this as you're writing your commits, and check out <a
+                    href="http://chris.beams.io/posts/git-commit" target="_blank">this helpful
+                    guide</a> on how to write good commit messages!</li>
             <li>Once you are ready to share your changes with the rest of your project team you need
                 to push your local changes to the remote GitHub server. This is done with the
                 command <code>git push</code>. <p><img src="git_shell/gitPush.jpg" alt="git push"
@@ -444,6 +453,7 @@
                 target="_blank">comprehensive guide to writing markdown</a> that we recommend you
             review; however, when writing on the GitHub interface there are options similar to
             Microsoft Word that can be toggled to have a specific styling applied to your text.</p>
+        <!--RJP:2016-09-29: Should add something here about GitHub pages and ability to host repos as websites. More info for further investigation https://help.github.com/categories/github-pages-basics/-->
         <p>Besides project team communication, another important aspect of project management is
             data preservation. Long-term preservation can be defined as the ability to provide
             continued access to digital materials, or at least to the information contained in them,
@@ -466,6 +476,9 @@
             determine details about how the repo (and therefore project) grows and changes over
             time.</p>
         <h1 id="cheatSheet">Common Git Commands:</h1>
+        <p>We recommend our <a
+                href="https://github.com/ebeshero/DHClass-Hub/blob/master/Git_BasicCommands.md"
+                target="_blank">DHClass-Hub Quick Reference Guide</a>.</p>
         <p>Here is a list of commands used most frequently, and some options to modify the results
             of each command. Some of the commands listed here are associated with <a
                 href="#advanced">advanced project management</a> while others are more basic. For
@@ -514,7 +527,11 @@
                         goes"</code>)</span>. You can skip the command <code>git add</code> by using
                     <code>git commit -a -m</code> followed by your commit message. However, best
                 practice is to add and commit in separate steps so you are aware of the files being
-                added before making the commit.</li>
+                added before making the commit. If you ever find yourself annoyed with your own
+                commit message, before you push you can actually amend your commit using: <code>git
+                    commit --amend</code>. Don't use this after you've pushed (it's like revising
+                history then--it would tangle up everyone's repo histories to amend once you've
+                pushed).</li>
             <li><a href="https://git-scm.com/docs/git-stash" target="_blank"><code>git
                     stash</code></a>: used when you want to record the current changes to the
                 working directory, but want to go back to a clean working directory without forever
@@ -659,7 +676,9 @@
                     href="https://www.atlassian.com/git/tutorials/undoing-changes/" target="_blank"
                     >atlassian.com tutorial on undoing changes</a>, the <a
                     href="https://git-scm.com/blog" target="_blank">Pro Git blog titled <em>Reset
-                        Demystified</em></a> and the <a
+                        Demystified</em></a>, <a
+                    href="https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/"
+                    target="_blank">GitHub help guide to merge conflicts</a>, and the <a
                     href="https://www.git-tower.com/learn/git/ebook/en/command-line/introduction#start"
                     target="_blank">git-tower.com ebook</a> are our go-to sources for fixing and
                 preventing merge conflicts and bad commits.</span></p>
@@ -856,7 +875,7 @@
         <ul>
             <li><a href="https://git-scm.com/">Pro Book (online version)</a></li>
             <li><a href="http://gitref.org/">Git Reference</a></li>
-            <li><a href="https://www.atlassian.com/git" target="_blank">Getting Git Right @
+            <li><a href="https://www.atlassian.com/git" target="_blank"><q>Getting Git Right</q> @
                     atlassian.com</a></li>
             <li><a href="https://www.kernel.org/pub/software/scm/git/docs/user-manual.html">Git User
                     Manual</a></li>
@@ -865,7 +884,8 @@
             <li>Lifehacker's <a
                     href="http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything"
                     >A Command Line Primer for Beginners</a></li>
-            <li><a href="http://rogerdudler.github.io/git-guide/">Git - the simple guide</a></li>
+            <li><a href="http://rogerdudler.github.io/git-guide/"><q>Git - the simple
+                guide</q></a></li>
             <li><a href="https://gist.github.com/hofmannsven/6814451">A simple Git cheat-sheet
                     (hosted on GitHub Gist)</a></li>
         </ul>

@@ -26,22 +26,14 @@
             <h3>Analysis of the task</h3>
             <p>The goals of this assignment are:</p>
             <ol>
-                <li>Create a GitHub account.</li>
-                <li>Download Git and set up GitHub on a local computer.</li>
-                <li>Clone and navigate locally our <a target="_blank"
-                        href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</a>
-                    repository.</li>
-                <li>Create a personal remote repository on GitHub via website, and make a local clone.</li>
-                <li>Add a file to a repository using Git and push it to your remote repository.</li>
+                <li>Create a GitHub account</li>
+                <li>Download Git on a local computer</li>
+                <li>Understand where and how to access command line / terminal / git shell on your
+                    local computer</li>
+                <li>Navigate our <a target="_blank" href="https://github.com/ebeshero/DHClass-Hub"
+                        >DHClass-Hub</a> repository on GitHub's web interface</li>
                 <li>Comment and/or create an Issue on GitHub.</li>
             </ol>
-            <p>Upon completion of this assignment you should feel confident about <dfn>pushing</dfn>
-                and <dfn>pulling</dfn> files using Git and interacting on GitHub. Our courses
-                require weekly, even daily, Git activity; therefore, if you still feel uncertain on
-                how to use Git or GitHub after completing this assignment please meet with an
-                instructor. We will gladly assist you so that you feel comfortable using Git and
-                GitHub on a regular basis.</p>
-
         </section>
         <section title="step_by_step">
             <h3>Step By Step</h3>
@@ -53,21 +45,13 @@
                     href="http://www.newtfire.org/dh/explainGitShell.html#setup" target="_blank"
                     >download Git Shell</a>. <strong>Do not rush through this process and be sure to
                     read thoroughly.</strong></p>
-            <p>Once you have completed these two tasks navigate to our <a target="_blank"
+            <!-- RJP:2016-09-08: Add here link back to tutorial (section being developed) that discusses opening Command line based on platform and brief instructions to explore computer directories using command line. REVISED: THIS IS PART OF THE SETUP SECTION ON THE TUTORIAL.  -->
+            <p>Once you have completed the above tasks navigate to our <a target="_blank"
                     href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</a> repository. First
                 read through the README.md file that displays at the bottom of the repo. This is a
                 general welcome to the DHClass-Hub and details the basic workflow of using this
                 repo.</p>
-            <p>Next, you should <dfn>clone</dfn> the DHClass-Hub to your local computer. Follow our
-                    <a href="explainGitShell.html#cloning"
-                    target="_blank">tutorial steps on cloning</a>. Once you have the DHClass-Hub
-                cloned navigate to the repo on your local computer. Search through the directory and
-                find the folder called <q>sandbox</q>. The sandbox directory is a space for you to
-                practice adding, committing, and pushing files to. Go ahead and add ANY file to the
-                sandbox by dragging a file into that directory or saving a file from &lt;oXygen&gt;
-                there. Notice others have added pictures, text files, and a variety of code files.
-                You can open any of these files, but try not to delete any files you have not
-                created yourself. In order for you to push that file we will need to add you as a
+            <p>In order for you to contribute to the DHClass-Hub we will need to add you as a
                 collaborator. This is the perfect moment to create and/or comment on a GitHub issue.
                 Navigate to the <a href="https://github.com/ebeshero/DHClass-Hub" target="_blank"
                     >DHClass-Hub GitHub page</a>. At the top of the page, under
@@ -80,10 +64,9 @@
                 comment. If there is not an existing issue click the <q>New issue</q> button at the
                 top of the page.</p>
             <p><img src="NewIssue_GitEx1.jpg" alt="GitHub Issues Board" /></p>
-            <p>As mentioned in our tutorial section <a
-                    href="explainGitShell.html#issue" target="_blank"
-                        ><q>GitHub as Social Media</q></a>, issues and their comments are written in
-                    <dfn>markdown language</dfn>. GitHub offers a comprehensive <a
+            <p>As mentioned in our tutorial section <a href="explainGitShell.html#issue"
+                    target="_blank"><q>GitHub as Social Media</q></a>, issues and their comments are
+                written in <dfn>markdown language</dfn>. GitHub offers a comprehensive <a
                     href="https://guides.github.com/features/mastering-markdown/" target="_blank"
                     >guide to writing markdown</a> that you should reference as you find the
                 necessity to create and comment on issues (especially when you want you to include
@@ -98,54 +81,21 @@
                 leave a link to their profile for the instances that you may be trying to designate
                 credit to them. Your issue comment for this assignment should resemble this:</p>
             <p><img src="CommentIssue_GitEx1.jpg" alt="GitHub Issues Board Example Comment" /></p>
-            <p>We will be monitoring the issue board to add collaborators so that you can complete
-                your push to the Sandbox. If you have to wait a bit for us to add you, you can take some time to read our <q><a target="_blank"
-                        href="https://github.com/ebeshero/DHClass-Hub/issues/">Welcome to the
-                        Issues Board</a></q> issue and our <a
+            <p>We will be monitoring the issue board to add collaborators as they come in. As you
+                wait for us to add you, take some time to read our <q><a target="_blank"
+                        href="https://github.com/ebeshero/DHClass-Hub/issues/">Welcome to the Issues
+                        Board</a></q> issue and our <a
                     href="https://github.com/ebeshero/DHClass-Hub/blob/master/Troubleshooting/Troubleshooting-Readme.md"
                     target="_blank">Troubleshooting-Readme</a>
                 <span class="smaller">(which explains how to use the Troubleshooting folder in our
                     DHClass-Hub)</span>.</p>
-            <p>At this point, if you have been notified that you were added as a collaborator, go
-                ahead with the steps using Git Shell to <a
-                    href="explainGitShell.html#working" target="_blank"
-                    >add, commit, and push</a> your sandbox file to the DHClass-Hub. If you are
-                still waiting to be added continue with the rest of this assignment, and finish your
-                sandbox push once you have been added.</p>
-            <p>Next, we want you to create your own repository. Later in this course you will be
-                creating a personal website; therefore, we are having you create a Git repo that
-                will correlate with the development of said site. To create a new repo go to your
-                GitHub profile, select the <q>Repositories</q> tab, and click <q>New</q>.</p>
-            <p><img src="NewRepo_GitEx1.jpg" alt="GitHub Create Repo" /></p>
-            <p>Give your repo a logical name (i.e. my_page), a brief description, and select
-                    <q>public</q>. During this course we ask you to keep this repo public so we can
-                view each other’s site development without everyone in the course having to be added
-                as a collaborator; however, you can switch this to private in the future. Now that
-                you have created the repo on GitHub you need to <dfn><a
-                        href="explainGitShell.html#cloning"
-                        target="_blank">clone</a></dfn> it to your local computer (just like you
-                cloned the DHClass-Hub above). After you have the repo cloned you can make some
-                edits to your README.md file using markdown and/or add more files. Feel free to
-                reference my <a href="https://github.com/RJP43/personalWebpage" target="_blank"
-                    >GitHub repo</a> used for the development of my <a
-                    href="http://newtfire.org/~rjp43/" target="_blank">personal website</a>. If for
-                some reason you have not been added to the DHClass-Hub, to push your sandbox file,
-                by the time this assignment is due make sure you practice adding, committing, and
-                pushing a file using your personal page repo.</p>
-            <p>Your final task is to navigate on GitHub to your personal page repo, and follow our
-                    <a href="explainGitShell.html#collaborators"
-                    target="_blank">tutorial steps to add a collaborator</a>. Add your instructor(s)
-                to your repo. After the completion of this course you can remove any unwanted
-                collaborators; however, for this assignment we want you to practice adding at least
-                one collaborator. Also when creating your own repo you may need to change the
-                settings to include an issues board; follow these <a target="_blank"
-                    href="https://help.github.com/articles/managing-projects-with-issues/"
-                    >help.github.com directions</a> to do so.</p>
         </section>
         <section title="conclusion">
-            <h3>Congratulations!</h3>
-            <p>Welcome to the Git community! You have successfully completed the basic tasks of
-                using a Git repository locally and remotely.</p>
+            <h3>Taking it further...</h3>
+            <p>Great Job! You now know how to use the GitHub interface and how to navigate around
+                our DHClass-Hub. You also have started the process of being a Git user by downloading Git
+                locally. Go to <a href="GitExercise2.html" target="_blank">Git Exercise 2</a> to
+                learn more on using Git at command line!</p>
         </section>
     </body>
 </html>
