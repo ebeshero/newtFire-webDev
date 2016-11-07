@@ -87,8 +87,9 @@
             value. For example, in the code that draws the dots for each chapter, we can set the X
             position of a dot with something like:</p>
         <pre>&lt;xsl:variable name="Xpos" select="position() * $Xinterval"/></pre>
-        <p>This is using the symbol for multiplication (<code>*</code>). Note: We can use the following basic <dfn>numeric operators</dfn> in XSLT (and XPath): <code>+</code> (for adding one value to another), <code>-</code> (for subtracting one value from another), and <code>*</code> (for multiplying one value by another). For division, we cannot use the forward slash because that literally means taking an XPath step, so we use <code>div</code> (to divide one value by another), and one more: <code>mod</code> to return the remainder after dividing one value by another. 
-            (Here is <a href="https://www.safaribooksonline.com/library/view/xpath-and-xpointer/0596002912/ch04s03.html">a handy page to look at examples of each notation</a>.) If we’ve previously defined <code>$Xinterval</code> as equal to <q>100</q>, this will set
+        <p>This is using the symbol for multiplication (<code>*</code>). We can use the following basic <dfn>numeric operators</dfn> in XPath and XSLT: <code>+</code> (for adding one value to another), <code>-</code> (for subtracting one value from another), and <code>*</code> (for multiplying one value by another). For division, we cannot use the forward slash because that literally means taking an XPath step, so we use <code>div</code> (to divide one value by another), and one more: <code>mod</code> to return the remainder after dividing one value by another. 
+            (Here is <a href="https://www.safaribooksonline.com/library/view/xpath-and-xpointer/0596002912/ch04s03.html">a handy page to look at examples of each notation</a>.) 
+            In our example above, if we’ve previously defined <code>$Xinterval</code> as equal to <q>100</q>, our code for multiplication will set
             the value of the <code>$Xpos</code> variable to <q>100</q> for chapter 1 (the first of
             the twelve chapters, and therefore in position #1), to <q>200</q> for chapter 2, etc. (You will also calculate the Y
             position and assign that value to the variable <code>$Ypos</code>.) We
@@ -98,9 +99,9 @@
             variable to be interpreted and its value to be output. (If you don’t use an AVT, you’ll
             set your X position to a literal value of <q>$Xpos</q>, which is invalid because the X
             position of an SVG <code>&lt;circle&gt;</code> element must be numeric.) You don’t need
-            curly braces for the <code>@r</code> attribute (the radius of the circle) if you just plug in a literal number for it, and you don’t need it for the <code>@fill</code> (color)
+            curly braces for the <code>@r</code> attribute (the radius of the circle) if you just plug in a literal number for it like we did here, and you don’t need it for the <code>@fill</code> (color)
             because that value should be a literal color name or some other representation of a
-            color. If you want to, though, you could store these numbers in global variables and call on them here, too.</p>
+            color. If you want to, though, you could store either of these values in global variables and call on them here, too, using curly braces.</p>
         <p>Putting the X position into a variable is handy because you're going to need it both to
             position the dot and to position the chapter label (see the labels on the X axis on our
             sample output at the link above). If you calculate the position for each chapter once
