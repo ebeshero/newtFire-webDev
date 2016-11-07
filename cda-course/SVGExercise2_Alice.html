@@ -18,8 +18,8 @@
        
         <h3>The text</h3>
         <p>With this assignment, you will gain experience with writing XSLT to generate SVG. 
-            We will work with an XML document from <a href="http://alice.obdurodon.org/">a Pitt student project</a> on Lewis Carroll’s <cite>Alice in Wonderland</cite>, and you can download
-            the file from here by right-clicking <a href="alice_quotes.xml">on this</a>. (Don’t
+            We will work with an XML document from <a href="http://alice.obdurodon.org/">a Pitt student project</a> on Lewis Carroll’s <cite>Alice in Wonderland</cite>, and you can <strong>download
+            the XML file from here by right-clicking <a href="alice_quotes.xml"><code>on this</code></a></strong>. (Don’t
             just click to open it in a browser and copy, which can add some browser rendering
             characters that will mess up your code; right click and download.)</p>
         <img src="aliceFlamingo.svg" width="200"/>
@@ -87,6 +87,8 @@
             value. For example, in the code that draws the dots for each chapter, we can set the X
             position of a dot with something like:</p>
         <pre>&lt;xsl:variable name="Xpos" select="position() * $Xinterval"/></pre>
+        using the position() function to return the position of each chapter, or just use the number value coded in the <code>@which</code> attribute:
+        <pre>&lt;xsl:variable name="Xpos" select="@which * $Xinterval"/></pre>
         <p>This is using the symbol for multiplication (<code>*</code>). We can use the following basic <dfn>numeric operators</dfn> in XPath and XSLT: <code>+</code> (for adding one value to another), <code>-</code> (for subtracting one value from another), and <code>*</code> (for multiplying one value by another). For division, we cannot use the forward slash because that literally means taking an XPath step, so we use <code>div</code> (to divide one value by another), and one more: <code>mod</code> to return the remainder after dividing one value by another. 
             (Here is <a href="https://www.safaribooksonline.com/library/view/xpath-and-xpointer/0596002912/ch04s03.html">a handy page to look at examples of each notation</a>.) 
             In our example above, if we’ve previously defined <code>$Xinterval</code> as equal to <q>100</q>, our code for multiplication will set
@@ -128,6 +130,15 @@
             differently from the others. For that reason, you may find it useful to test whether
             you’re at the beginning or end of the sequence of chapters with
                 <code>&lt;xsl:if&gt;</code>.</p>
+        <p>Don’t forget to title your plot and add markers on your X and Y axes so your graph is human-readable!</p>
+        <h3>Bonus Challenge</h3>
+        <p>Once we generate the line graph plotting the number of times Alice speaks in each chapter, we might want to see 
+            how those values compare with the number of speeches by all the other characters combined, that is, speaking parts by everyone
+            who is NOT Alice. We plotted a second line graph to superimpose on the first so we could compare the two sets of data, 
+            and chose different colors for the two lines. Our sample <a href="alice_and_others_Output.svg">output plot looks like this</a>, but you should improve on it by adding a title and a legend
+            to finish labeling the graph. 
+            
+            compares that of all the with all the other characters <em>besides</em> Alice,</p>
         <h3>What to Submit</h3>
         <p>Turn in your XSLT file. We will generate your SVG output ourselves by running your XSLT. 
             Remember to save and open your SVG output in oXygen and in a web browser to be sure it is valid and that it is rendering as you think it should be. </p>
