@@ -55,12 +55,15 @@ table#graphData tr[id="QA1"] {display: table-row;}
           Here we define two rules for the <code>&lt;tr&gt;</code> (table row) elements with @id attributes that are inside <code>table</code> element with the <code>@id</code> of graphData (the table we output to correlate with our SVG bar graph. (Note how the CSS selectors work to step down the tree from a parent table element to the child tr elements.) We set the general rule to conceal all of the rows, and then we write a new rule that exposes <em>just one row</em> for the specific <code>@id="QA1"</code>, so that it will be showing when we first load the page. This might look like a contradiction in terms, but it works because CSS permits a more specific rule to override a more general one.</li>
            <li>Now, for the JavaScript, above all of our functions, we first name the <code>global variable</code> for the table row, and then  in our <code>function init()</code> we give it a definition connected with the only visible table row defined in our CSS:
            <pre>
-      <code>var trow;</code> //Here we name the global variable for the current one-question row in table, which we will call and redefine in each of our JavaScript functions. This makes the variable available to invoke in all of the functions.
+      <code>var trow;</code> //Here we name the global variable for the current one-question row in table, 
+              which we will call and redefine in each of our JavaScript functions. 
+              This makes the variable available to invoke in all of the functions.
 
        function init() {
 //other stuff for adding event listeners to the SVG bars goes here 
   
-   <code>trow = document.getElementById('QA1');</code> //Here we have called the global variable and we have given the specific definition for it that applies in function init()
+   <code>trow = document.getElementById('QA1');</code> //Here we have called the global variable 
+              and we have given the specific definition for it that applies in function init()
   }
               
               
@@ -91,8 +94,7 @@ table#graphData tr[id="QA1"] {display: table-row;}
             <li>A key JavaScript challenge for this assignment is to find a way to connect an event on a specific <code>&lt;g id="SomethingSpecific"&gt;</code> with an associated <code>&lt;tr id="SomethingElseSpecific"&gt;</code>, however you have defined that relationship. We have to set this up so that each set of <code>@id</code> attributes will contain the same string of text pulled from the <code>@xml:id</code> attributes from our TEI XML. To do this, you will either need to match on a split portion of the @id, or add something missing to that @id to complete the match. Our solution (which does not have to be yours) involves taking an SVG attribute in this form: <code>id="svg-ID</code> and splitting it after the hyphen to match the second part of it with an HTML <code>id="ID"</code>. We did that with a nifty JavaScript operation called split(), like this:
             <pre>
                trow = document.getElementById(this.id.split("-")[1]);
-               trow.style.display = "table-row";
-               
+               trow.style.display = "table-row";       
             </pre>
                Let's look at this from the inside out: Here, the word <code>this</code> in JavaScript <em>always refers to the currently selected thing, whatever it is with the event listener that the visitor has clicked on</em>. In this case that's a single SVG stack of bars. Our variable <code>trow</code> is redefined from what it meant in our <code>function init()</code> so that it now holds an array of, <em>not</em> the full @id attrribute, but rather the piece of it that sits <em>after the hyphen (<code>"-"</code>)</em> inside the @id. You can read about and experiment with the JavaScript <code>split()</code> function here on w3schools: <a href="http://www.w3schools.com/jsref/jsref_split.asp">http://www.w3schools.com/jsref/jsref_split.asp</a>. Basically <code>split()</code> involves creating a little array of two (or more) pieces depending on the character you designate as the point of a split or division: so in our case we have a piece before a hyphen and a piece after it. Remember that JavaScript counts from zero, so we can <em>identify which piece to match on based on its position in the JavaScript array, either 0 or 1</em>. Since we want the piece after the hyphen, we grab the piece (or token) at position <code>[1]</code>. What we say here in re-defining our variable <code>trow</code> is: Go into the document and get the <strong>single, particular element</strong> that holds the @id equal to the <em>second half of the split of <strong>this</strong> @id (from our SVG bar stack)</em>. And that element with that @id will be our HTML table row. 
             
