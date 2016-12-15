@@ -156,8 +156,9 @@
                   
                   Where you are writing XSLT to produce HTML, include the appropriate
                   HTML namespace. For XHTML in the form of HTML 5, here are the codes to use to control the namespace and DOCTYPE definitions: (<span class="code">http://www.w3.org/1999/xhtml</span>) in the <span class="code">&lt;xsl:stylesheet&gt;</span> root element at the top, as well as in the xsl:output line:
-                  <div class="code">&lt;xsl:output method="xhtml" doctype-system="about:legacy-compat" omit-xml-declaration="yes"/&gt; 					
-                  </div>
+                  <pre>&lt;xsl:output method="xhtml" doctype-system="about:legacy-compat" 
+                     omit-xml-declaration="yes"/&gt; 					
+                  </pre>
                   					
                   					
                </li>
