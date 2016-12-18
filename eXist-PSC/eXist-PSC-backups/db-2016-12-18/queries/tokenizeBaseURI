@@ -1,0 +1,17 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $mitford := collection('/db/mitford')/*
+let $baseURI := $mitford/base-uri()
+for $i in $baseURI
+let $token := tokenize($i, '/')[last()]
+return $token
+
+
+
+
+
+
+
+
+
+

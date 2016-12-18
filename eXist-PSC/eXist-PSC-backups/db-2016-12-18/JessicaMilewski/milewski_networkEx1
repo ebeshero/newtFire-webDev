@@ -1,0 +1,32 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare variable $ThisFileContent := 
+string-join(
+let $decamFile := doc('/db/decameron/engDecameronTEI.xml')/*
+let $placeName := $decamFile//placeName
+let $distPlace := distinct-values($placeName)
+for $distP in $distPlace 
+let $places := 
+    if ($placeName[. = $distP]/ancestor::floatingText[@type="frame"]) then distinct-values($placeName[. = $distP]/ancestor::floatingText//placeName[not(. = $distP)])
+    else if ($placeName[. = $distP]/ancestor::div[@type="novella"]) then distinct-values($placeName[. = $distP]/ancestor::div[@type="novella"]//placeName[not(. = $distP)])
+    else distinct-values($placeName[. = $distP]/ancestor::div[1]//placeName[not(. = $distP)])
+    
+let $edgeType := 
+    if ($placeName[. = $distP]/ancestor::floatingText[@type="frame"]) then "floatingText"
+    else if ($placeName[. = $distP]/ancestor::div[@type="novella"]) then "novella"
+    else "frame"
+    
+let $edgeWeight := 
+    if ($placeName[. = $distP]/ancestor::floatingText[@type="frame"]) then count($placeName[. = $distP]/ancestor::floatingText//placeName[not(. = $distP)])
+    else if ($placeName//ancestor::div[@type="novella"]) then count($placeName[. = $distP]/ancestor::div[@type="novella"]//placeName[not(. = $distP)])
+    else count($placeName[. = $distP]/ancestor::div[1]//placeName[not(. = $distP)])
+    
+    for $place in $places
+    
+    return concat($distP,  "&#x9;", $edgeType, "&#x9;", $edgeWeight, "&#x9;", $place, "&#10;"));
+    
+    
+     let $filename := "milewski_networkEx1.tsv"
+let $doc-db-uri := xmldb:store("/db/JessicaMilewski", $filename, $ThisFileContent, "text/plain")
+return $doc-db-uri
+(: Output at: http://dxcvm05.psc.edu:8080/exist/rest/db/JessicaMilewski/milewski_networkEx1.tsv  :)

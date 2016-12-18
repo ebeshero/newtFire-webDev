@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/shared-resources/content/apputil.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/xquery/apps</xqdoc:uri><xqdoc:name>apputil</xqdoc:name><xqdoc:comment><xqdoc:description>
+ Utility functions to find, install, upload and remove packages from the
+ package repository.
+</xqdoc:description></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>apputil:get-resource</xqdoc:name><xqdoc:signature>apputil:get-resource($app as xs:string, $path as xs:string) as document-node()?</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Retrieve an XML resource from the application package identified by the unique
+ name given in the first parameter. The resource is parsed an returned as an
+ XML document node.
+ 
+ </xqdoc:description><xqdoc:param>$app the unique name of the application</xqdoc:param><xqdoc:param>$path </xqdoc:param><xqdoc:return>document-node()?</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:install-from-repo</xqdoc:name><xqdoc:signature>apputil:install-from-repo($name as xs:string?, $package-path as xs:anyURI?, $serverUri as xs:anyURI) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$name? </xqdoc:param><xqdoc:param>$package-path? </xqdoc:param><xqdoc:param>$serverUri </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:install-from-repo</xqdoc:name><xqdoc:signature>apputil:install-from-repo($name as xs:string?, $package-path as xs:anyURI?, $serverUri as xs:anyURI, $version as xs:string?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Install a package from the public repository. The package is either specified by its unique name
+ in the first parameter or its file name, e.g. "dashboard-0.1.xar".
+ 
+ </xqdoc:description><xqdoc:param>$name? unique name of the package to install (optional)</xqdoc:param><xqdoc:param>$package-path? the file name of the package to install (optional)</xqdoc:param><xqdoc:param>$serverUri the URI of the public-repo app on the server</xqdoc:param><xqdoc:param>$version? </xqdoc:param><xqdoc:return>item()* :  the empty sequence
+</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:is-installed</xqdoc:name><xqdoc:signature>apputil:is-installed($pkgURI as xs:anyURI, $version as xs:string?) as element()?</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Check if the application identified by the given unique name is installed. Returns
+ the package descriptor of the application if found or the empty sequence otherwise.
+ 
+ </xqdoc:description><xqdoc:param>$pkgURI unique name of the application</xqdoc:param><xqdoc:param>$version? </xqdoc:param><xqdoc:return>element()?</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:link-to-app</xqdoc:name><xqdoc:signature>apputil:link-to-app($uri as xs:string, $relLink as xs:string?) as xs:string</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Locates the package identified by $uri and returns a path which can be used to link
+ to this package from within the HTML view of another package.
+ 
+ $uri the unique name of the package to locate
+ $relLink a relative path to be added to the returned path
+</xqdoc:description><xqdoc:param>$uri </xqdoc:param><xqdoc:param>$relLink? </xqdoc:param><xqdoc:return>xs:string</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:remove</xqdoc:name><xqdoc:signature>apputil:remove($package-url as xs:string) as xs:boolean</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Remove the package identified by its unique name.
+ 
+ </xqdoc:description><xqdoc:param>$package-url </xqdoc:param><xqdoc:return>xs:boolean :  true if the package could be removed, false otherwise
+</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:resolve</xqdoc:name><xqdoc:signature>apputil:resolve($uri as xs:string) as xs:string</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Try to find an application by its unique name and return the relative path to which it
+ has been deployed inside the database.
+ 
+ </xqdoc:description><xqdoc:param>$uri </xqdoc:param><xqdoc:return>xs:string :  database path relative to the collection returned by repo:get-root() 
+ or the empty sequence if the package could not be found or is not deployed into the db
+</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:resolve-abbrev</xqdoc:name><xqdoc:signature>apputil:resolve-abbrev($abbrev as xs:string) as xs:string</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Try to find an application by its abbreviated name and return the relative path to which it
+ has been deployed inside the database.
+ 
+ </xqdoc:description><xqdoc:param>$abbrev </xqdoc:param><xqdoc:return>xs:string :  database path relative to the collection returned by repo:get-root() 
+ or the empty sequence if the package could not be found or is not deployed into the db
+</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:scan-repo</xqdoc:name><xqdoc:signature>apputil:scan-repo($callback as function) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Scan all installed application and library packages. Calls the provided callback function once for
+ every package, passing the package URI as first parameter, the expath pkg descriptor XML as second,
+ and the repo.xml descriptor as third.
+ 
+ </xqdoc:description><xqdoc:param>$callback the callback function to call for every package found</xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>apputil:upload</xqdoc:name><xqdoc:signature>apputil:upload($serverUri as xs:anyURI) as xs:string</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$serverUri </xqdoc:param><xqdoc:return>xs:string</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

@@ -1,0 +1,35 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+declare variable $xInt := 20;
+
+<svg width="700" height="400">
+   <g transform="translate(70, 230)">
+      <line x1="-1" y1="0" x2="500" y2="0" style="stroke:black;stroke-width:2"/>  
+      <line x1="0" y1="0" x2="0" y2="-200" style="stroke:black;stroke-width:2"/>
+{
+let $dickinson := collection('/db/dickinson/f16/')
+for $d in $dickinson
+let $poemNumber := $d//tei:head/tei:title/number(substring(., 6, 2))
+let $body := $d//tei:body
+let $lines := $body//tei:l
+let $countLines := count($lines)
+let $xInt := $poemNumber * 40
+
+
+
+return 
+    <g>
+        <line x1="{$xInt}" y1="0" x2="{$xInt}" y2="-{$countLines * 5}" style="stroke:black;stroke-width:15"/> 
+        <text x="70" y="-215">Number of Lines Per Poem in Emily Dickinson's Fascicle 16</text>
+        <text x="200" y="50">Poem Number</text>
+        <text x="{$xInt}" y="20" text-anchor="middle">{$poemNumber}</text>
+        <text x="{$xInt}" y="-{$countLines * 5 + 3}" text-anchor="middle">{$countLines}</text>
+        <text x="-20" y="-190" style="writing-mode:sideways-lr">Number of Lines Per Poem</text>
+        (: style="writing-mode:tb" looks backwards, but I was unable to look up anything else, as my laptop was freezing. :)
+        
+    </g>
+}
+</g>
+</svg>

@@ -1,0 +1,58 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+
+let $mitfordColl:=collection('/db/mitford/')
+let $titles:= collection('/db/mitford/')//TEI/teiHeader//titleStmt/title
+let $filecount := count($mitfordColl/TEI)
+let $textElmFull := $mitfordColl//text/body//*
+let $textElements:= $mitfordColl//text/body//*/name()
+let $distinctElems := distinct-values($textElements)
+let $countdistElms := count($distinctElems)
+let $countallElms := count($textElmFull)
+let $barsize := 5
+let $spacing := 60
+return
+
+<svg>
+   <g transform="translate(10, 4400)">
+
+    
+    <text x="50" y="-4350">To date: {current-date()}: Number of Valid TEI Files in the Digital Mitford Collection: {$filecount}</text>
+    <text x="50" y="-4325">Number of Distinct Elements in Play: {$countdistElms}</text>
+    <text x="50" y="-4300">Total Number of All Elements: {$countallElms}</text>
+    
+   
+        {
+            let $temp:=
+                for $distinctElem in $distinctElems
+                let $attributes := $textElmFull[./name() = $distinctElem]/@*
+                let $attNames := $attributes/name()
+                let $distAttNames := distinct-values($attNames)   
+           (:order by $distinctElem:)
+                order by count($textElements[.= $distinctElem]) ascending
+           
+         return $distinctElem
+         for $item at $pos in $temp
+         let $distinctElem := $item
+         let $attributes := $textElmFull[./name() = $distinctElem]/@*
+                let $attNames := $attributes/name()
+                let $distAttNames := distinct-values($attNames)   
+         
+         return
+             
+             <g>
+             <text x="0" y="{-((($barsize + $spacing) * $pos)+40)}" style="font-family:sans-serif;font-size:14px" >{$distinctElem} </text>
+           <rect x="75" y="{-((($barsize + $spacing) * $pos)+40)}" width="{count($textElements[.= $distinctElem])}" height="{$barsize}" fill="red"/> 
+             <text x="0" y="{-((($barsize + $spacing) * $pos)+25)}" style="font-family:sans-serif;font-size:10px">This element has been used {count($textElements[.= $distinctElem])} times, or {round-half-to-even((count($textElements[.= $distinctElem])  div $countallElms * 100), 2)} percent of the time.</text> <!--Note: The XPath function round-half-to-even($, 2) lets me return a value with 2 decimal places.-->
+             <text x="0" y="{-((($barsize + $spacing) * $pos)+10)}" style="font-family:sans-serif;font-size:10px" >This element has been used in the following files: {string-join(($textElmFull[./name() = $distinctElem]/ancestor::TEI/teiHeader//titleStmt/title), ', ')}</text>
+             <text x="0" y="{-(($barsize + $spacing) * $pos)}" style="font-family:sans-serif;font-size:10px">It takes the following attributes: {string-join (($distAttNames), ', ')} </text>
+         
+           
+            </g>
+        }
+               
+ 
+
+</g> 
+</svg>
+

@@ -1,0 +1,57 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $countLetterFiles := count($letterFiles);
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when;
+declare variable $letterYears := $letterDates/tokenize(string(), '-')[1];
+declare variable $distYears := distinct-values($letterYears);
+declare variable $earliestYear := min($distYears);
+declare variable $latestYear := max ($distYears);
+declare variable $span := xs:integer($latestYear)-xs:integer($earliestYear);
+declare variable $spanDays := $span*365;
+
+declare variable $HaydonLetters := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $HaydonDates := $HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string();
+declare variable $HaydonMin := min($HaydonDates);
+declare variable $HaydonMax := max($HaydonDates);
+declare variable $YearMax := xs:integer(tokenize($HaydonMax,'-')[1]);
+declare variable $YearMin := xs:integer(tokenize($HaydonMin,'-')[1]);
+declare variable $HaydonStart := ($YearMin - xs:integer($earliestYear))*365;
+declare variable $HaydonEnd := ($YearMax - xs:integer($earliestYear))*365;
+declare variable $dateMin := xs:integer(format-date($HaydonMin, '[d]'));
+declare variable $dateMax := xs:integer(format-date($HaydonMax, '[d]'));
+
+
+
+declare variable $ThisFileContent := 
+<svg width="500" height="3000">
+   <g transform="translate(140,100)">
+      <line x1="0" y1="0" x2="0" y2="{$spanDays}" style="stroke:lightpink;stroke-width:30"/>
+      <line x1="110" y1="{$HaydonStart + $dateMin}" x2="110" y2="{$HaydonEnd + $dateMax}" style="stroke:lightblue;stroke-width:30"/>
+      
+         {
+             for $i in (0 to $span)
+             let $dateText := $i + xs:integer($earliestYear)
+             let $dateMatch := $letterDates[xs:integer(tokenize(string(), '-')[1]) = $dateText]
+             let $count := count($dateMatch)
+             return <g>
+                 <line x1="-25" y1="{$i*365}" x2="100" y2="{$i*365}" style="stroke:black;stroke-width:2"/>
+                 <text x="-65" y="{$i*365}"> {$dateText} </text>
+                 <circle cx="0" cy="{$i*365}" r="{$count}" stroke="black" stroke-width="1" fill="#F75D59" />
+                 <text x="-135" y="{$i*365+30}">Letters coded: {$count}</text>
+                 <text x="140" y="{$HaydonStart + $dateMin}"> First Letter: {$HaydonMin} </text>
+                 <text x="140" y="{$HaydonEnd + $dateMax}"> Last Letter: {$HaydonMax} </text>
+                 <text x="140" y="780" style="writing-mode: tb;">Haydon Correspondence </text>
+                </g>
+         }
+         
+        
+   </g>
+</svg> ;
+let $filename := "milewski_svgEx3.svg"
+let $doc-db-uri := xmldb:store("/db/JessicaMilewski", $filename, $ThisFileContent)
+return $doc-db-uri
+ (: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/JessicaMilewski/milewski_svgEx3.svg :) 

@@ -1,0 +1,38 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0"; 
+declare variable $ThisFileContent := 
+
+  string-join( 
+let $engdecameron := doc('/db/decameron/engDecameronTEI.xml')/*
+let $engplaces := $engdecameron//placeName
+let $engdistinctPs := distinct-values($engplaces)
+for $edp in $engdistinctPs
+let $corresPlaces:= 
+    if ($engplaces[. = $edp]/ancestor::floatingText[@type="frame"]) 
+        then distinct-values($engplaces[. = $edp]/ancestor::floatingText//placeName[not(. = $edp)])
+   else if ($engplaces[. = $edp]/ancestor::div[@type="novella"]) 
+        then distinct-values($engplaces[. = $edp]/ancestor::div[@type="novella"]//placeName[not(. = $edp)])
+   else distinct-values($engplaces[. = $edp]/ancestor::div[1]//placeName[not(. = $edp)])
+
+let $edgeType:=
+    if ($engplaces[. = $edp]/ancestor::floatingText[@type="frame"]) 
+        then "floatingFrame"
+    else if ($engplaces[. = $edp]/ancestor::div[@type="novella"]) 
+        then "novella"
+    else "frame"
+
+let $edgeWeight:=
+    if ($engplaces[. = $edp]/ancestor::floatingText[@type="frame"]) 
+        then count($engplaces[. = $edp]/ancestor::floatingText//placeName[not(. = $edp)])
+   else if ($engplaces[. = $edp]/ancestor::div[@type="novella"]) 
+        then count($engplaces[. = $edp]/ancestor::div[@type="novella"]//placeName[not(. = $edp)])
+   else count($engplaces[. = $edp]/ancestor::div[1]//placeName[not(. = $edp)])
+
+for $p in $corresPlaces
+return
+   
+ concat($edp, "&#x9;", $edgeType, "&#x9;", $edgeWeight, "&#x9;", $p, " &#10;"), " &#10;");
+ 
+ let $filename := "decPlacesOutput.tsv"
+let $doc-db-uri := xmldb:store("/db/queries/op", $filename, $ThisFileContent, "text/plain")
+return $doc-db-uri

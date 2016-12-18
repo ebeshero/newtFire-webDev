@@ -1,0 +1,39 @@
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $countLetterFiles := count($letterFiles);
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when;
+declare variable $letterYears := $letterDates/tokenize(string(), '-')[1];
+declare variable $distYears := distinct-values($letterYears);
+declare variable $earliestYear := min($distYears);
+declare variable $latestYear := max ($distYears);
+declare variable $span := xs:integer($latestYear)-xs:integer($earliestYear);
+declare variable $spanDays := $span*365;
+
+declare variable $ThisFileContent := 
+<svg width="500" height="3000">
+   <g transform="translate(120,100)">
+      <line x1="0" y1="0" x2="0" y2="{$spanDays}" style="stroke:lightpink;stroke-width:30"/>  
+      
+         {
+             for $i in (0 to $span)
+             let $dateText := $i + xs:integer($earliestYear)
+             let $dateMatch := matches($letterDates, $i*365)
+             let $count := count($dateMatch)
+             return <g>
+                 <line x1="-25" y1="{$i*365}" x2="100" y2="{$i*365}" style="stroke:black;stroke-width:2"/>
+                 <text x="-65" y="{$i*365}"> {$dateText} </text>
+                 <circle cx="5" cy="5" r="5" stroke="black" stroke-width="1" fill="#F75D59" />
+                 <text x="-90" y="{$i*365}">Letters coded: {$count}</text>
+                </g>
+         }
+         
+        
+   </g>
+</svg> ;
+let $filename := "milewski_svgEx2.svg"
+let $doc-db-uri := xmldb:store("/db/JessicaMilewski", $filename, $ThisFileContent)
+return $doc-db-uri
+ (: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/JessicaMilewski/milewski_svgEx2.svg :) 

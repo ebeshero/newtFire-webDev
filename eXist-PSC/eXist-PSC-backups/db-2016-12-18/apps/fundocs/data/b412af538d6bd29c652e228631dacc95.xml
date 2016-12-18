@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/demo/examples/tests/shakespeare-tests.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/apps/demo/shakespeare/tests</xqdoc:uri><xqdoc:name>t</xqdoc:name><xqdoc:comment><xqdoc:description>
+ Test cases for the Shakespeare search app.
+</xqdoc:description></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>t:create-query</xqdoc:name><xqdoc:signature>t:create-query($queryStr as xs:string?, $mode as xs:string) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Test translation of query parameters into a full text query.
+</xqdoc:description><xqdoc:param>$queryStr? </xqdoc:param><xqdoc:param>$mode </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>t:query</xqdoc:name><xqdoc:signature>t:query($queryStr as xs:string?, $mode as xs:string) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Test the actual query function: should return a scene with the
+ search terms highlighted.
+</xqdoc:description><xqdoc:param>$queryStr? </xqdoc:param><xqdoc:param>$mode </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>t:show-hits</xqdoc:name><xqdoc:signature>t:show-hits($queryStr as xs:string?, $mode as xs:string) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Test result display.
+</xqdoc:description><xqdoc:param>$queryStr? </xqdoc:param><xqdoc:param>$mode </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

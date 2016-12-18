@@ -1,0 +1,4 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+collection('/db/letters')/distinct-values(.//body//persName)
+(:lists all distinct <persNames> in the corpus: on 12-9-15, there are 919:)

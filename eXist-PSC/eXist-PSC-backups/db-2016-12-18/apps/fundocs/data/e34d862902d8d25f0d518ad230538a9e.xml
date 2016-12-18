@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/eXide/templates/bootstrap/modules/config.xqm</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>$$config-namespace$$</xqdoc:uri><xqdoc:name>config</xqdoc:name><xqdoc:comment><xqdoc:description>
+ A set of helper functions to access the application context from
+ within a module.
+</xqdoc:description></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>config:app-info</xqdoc:name><xqdoc:signature>config:app-info($node as node(), $model as map) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ For debugging: generates a table showing all properties defined
+ in the application descriptors.
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>config:app-meta</xqdoc:name><xqdoc:signature>config:app-meta($node as node(), $model as map) as element()*</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$node </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:return>element()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>config:app-title</xqdoc:name><xqdoc:signature>config:app-title($node as node(), $model as map) as text()</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$node </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:return>text()</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>config:expath-descriptor</xqdoc:name><xqdoc:signature>config:expath-descriptor() as element()</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Returns the expath-pkg.xml descriptor for the current application.
+</xqdoc:description><xqdoc:return>element()</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>config:repo-descriptor</xqdoc:name><xqdoc:signature>config:repo-descriptor() as element()</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Returns the repo.xml descriptor for the current application.
+</xqdoc:description><xqdoc:return>element()</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>config:resolve</xqdoc:name><xqdoc:signature>config:resolve($relPath as xs:string) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Resolve the given path using the current application context.
+ If the app resides in the file system,
+</xqdoc:description><xqdoc:param>$relPath </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

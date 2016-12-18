@@ -1,0 +1,31 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $Decameron := collection('/db/decameron/');
+
+<svg width="1000" height="5000">
+    <g transform= "translate(30,100)">
+<line x1="0" y1="0" x2="0" y2="300" style="stroke:black; stroke-width:3;"/>
+<line x1="0" y1="300" x2="900" y2="300"  style="stroke:black; stroke-width:3;"/>
+<text x="200" y="20" fill="black" font-size="24"> Amount of Distinct Characters in each Day </text>
+{
+let $days := $Decameron//tei:div[@type='Day']
+for $day in $days
+let $people := $day//tei:persName
+let $countPers := count(distinct-values($people))
+let $position := $day/@corresp/xs:integer(substring-after(.,'day'))
+let $x := $position * 80
+return 
+    <g>
+<rect x="{$x}" y="{300-($countPers*10)}" width="40" height="{$countPers*10}" style="fill:pink;stroke-width:3;stroke:black;" />
+
+<text x="{$x}" y="320" fill="black"> Day {$position} </text>
+<text x="{$x+10}" y="{320-($countPers*10)}" fill="black"> {$countPers}  </text>
+
+
+    </g>
+}
+
+</g>
+</svg>
+

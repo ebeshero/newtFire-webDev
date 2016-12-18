@@ -1,0 +1,24 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $dec := doc('/db/decameron/engDecameronTEI.xml');
+declare variable $div := $dec//tei:div [@type="novella"];
+declare variable $mile := $div//tei:milestone;
+declare variable $disMile:=$mile/distinct-values(@corresp);
+declare variable $milePer := 
+declare variable $divCount := count(distinct-values($div));
+<svg width="5000" height="5000">
+    <g>
+    <line x1="0" y1="{$divCount*35}" x2="0" y2="0" style="stroke:black;stroke-width:5"/>
+    <line x1="{count($disMile)}" y1="0" x2="0" y2="0" style="stroke:black;stroke-width:5"/>
+    {
+        for $stories in (1 to $divCount)
+        return
+    <g>
+    <rect y="{$stories*35}" width="{500}" height="10" style="fill:blue;stroke-width:2;stroke:black"/>
+    <line y1="" x1="" y2="" x2="0" style="stroke:gray; stroke-width:3;"/>
+    <text y="{$stories*35-4}" x="20"> Novella {$stories} </text>
+    </g>
+    }
+    </g>
+    </svg>

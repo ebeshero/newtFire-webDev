@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location/></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/versioning</xqdoc:uri><xqdoc:name>v</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>v:annotate</xqdoc:name><xqdoc:signature>v:annotate($doc as node(), $rev as xs:integer) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Return an XML document in which all changes between
+$rev and $rev - 1 are annotated.
+
+</xqdoc:description><xqdoc:param>$doc a node in the document which should be annotated</xqdoc:param><xqdoc:param>$rev the revision whose changes will be annotated</xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>v:apply-patch</xqdoc:name><xqdoc:signature>v:apply-patch($doc as node(), $diffs as element()*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Apply a given patch on a document. This function is used by v:doc 
+internally.
+</xqdoc:description><xqdoc:param>$doc </xqdoc:param><xqdoc:param>$diffs* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>v:diff</xqdoc:name><xqdoc:signature>v:diff($doc as node(), $rev as xs:integer) as element()?</xqdoc:signature><xqdoc:comment><xqdoc:description>
+For the document passed as first argument, retrieve the revision
+specified in the second argument. Generate a diff between both version,
+i.e. HEAD and the given revision. The empty sequence is returned if the 
+given revision is invalid, i.e. v:doc returns the empty sequence.
+
+</xqdoc:description><xqdoc:param>$doc a node in the document for which the diff should be generated</xqdoc:param><xqdoc:param>$rev a valid revision number</xqdoc:param><xqdoc:return>element()?</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>v:doc</xqdoc:name><xqdoc:signature>v:doc($doc as node(), $rev as xs:integer?) as node()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Restore a certain revision of a document by applying a
+sequence of diffs and return it as an in-memory node. If the
+revision argument is empty or smaller than the first actual
+revision of the document, the function will return the base
+version of the document. If the revision number is greater than
+the latest revision, the latest version will be returned.
+
+</xqdoc:description><xqdoc:param>$doc a node in the document for which a revision should
+be retrieved.</xqdoc:param><xqdoc:param>$rev? the revision which should be restored</xqdoc:param><xqdoc:return>node()* :  a sequence of nodes corresponding to the restored document
+(TODO: return a document node instead?) 
+</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>v:find-newer-revision</xqdoc:name><xqdoc:signature>v:find-newer-revision($doc as node(), $base as xs:integer, $key as xs:string) as element()?</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Check if there are any revisions in the database which are newer than the
+version identified by the specified base revision and key. If versioning is
+active, the base revision and key are added to the document root element
+as attributes whenever a document is serialized. The combination of the two
+attributes allows eXist to determine if a newer revision of the document
+exists in the database, which usually means that another user/client has
+committed it in the meantime.
+
+If one or more newer revisions exist in the database, v:find-newer-revision will
+return the version document of the newest revision or an empty sequence
+otherwise.
+
+</xqdoc:description><xqdoc:param>$doc a node in the document which should be checked</xqdoc:param><xqdoc:param>$base the base revision as provided in the v:revision
+attribute of the document which was retrieved from the db.</xqdoc:param><xqdoc:param>$key the key as provided in the v:key attribute of the document
+which was retrieved from the db.</xqdoc:param><xqdoc:return>element()? :  a v:version element or the empty sequence if there's no newer revision
+in the database
+</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>v:history</xqdoc:name><xqdoc:signature>v:history($doc as node()) as element()</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Returns an XML fragment showing the version history of the 
+document to which the specified node belongs. All revisions
+are listed with date and user, but without the detailed diff.
+
+</xqdoc:description><xqdoc:param>$doc an arbitrary node in a document</xqdoc:param><xqdoc:return>element()</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>v:revisions</xqdoc:name><xqdoc:signature>v:revisions($doc as node()) as xs:integer*</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$doc </xqdoc:param><xqdoc:return>xs:integer*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>v:versions</xqdoc:name><xqdoc:signature>v:versions($doc as node()) as element()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Return all version docs, including the full diff, for the specified
+document. This is mainly for internal use.
+
+</xqdoc:description><xqdoc:param>$doc a node in the document for which revisions should be retrieved.</xqdoc:param><xqdoc:return>element()* :  zero or more v:version elements describing the changes 
+made in a revision.
+</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

@@ -1,0 +1,41 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/1999/xhtml";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+<html>
+<head><title>Top Ten Most Referenced People in the Digital Mitford Project</title></head>
+<body> 
+    <table>
+        <tr>
+            <th>@ref of Person</th><th>Files containing @ref</th>
+            </tr>
+{
+let $mitford := collection('/db/mitford')
+let $bodyAll := $mitford/*//tei:body
+let $persRefs := $bodyAll//tei:persName/@ref/string()
+let $distinctRefs := distinct-values($persRefs)
+for $i in $distinctRefs
+let $fileRef := $bodyAll[.//tei:persName[@ref = $i]]
+let $fileRefURI := $fileRef/tokenize(base-uri(), '/')[last()]
+where count($fileRef) gt 15
+order by $fileRef descending 
+return 
+    <tr>
+        
+        <td>{tokenize($i, '#')[last()]}</td>
+       <td>
+           <table>
+           {for $i in $fileRefURI
+           return
+               <tr>
+               <td>{$i}</td>
+               </tr>
+           }
+           </table>
+        </td>
+    
+    </tr>
+}
+</table>
+</body>
+</html>   
+

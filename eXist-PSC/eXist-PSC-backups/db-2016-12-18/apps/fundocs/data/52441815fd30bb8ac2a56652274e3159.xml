@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/demo/examples/xforms/restxq-demo.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/apps/restxq/demo</xqdoc:uri><xqdoc:name>demo</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>demo:addresses</xqdoc:name><xqdoc:signature>demo:addresses() as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ List all addresses and return them as XML.
+</xqdoc:description><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>demo:create-or-edit-address</xqdoc:name><xqdoc:signature>demo:create-or-edit-address($content as node()*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Update an existing address or store a new one. The address XML is read
+ from the request body.
+</xqdoc:description><xqdoc:param>$content* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>demo:delete-address</xqdoc:name><xqdoc:signature>demo:delete-address($id as xs:string*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Delete an address identified by its uuid.
+</xqdoc:description><xqdoc:param>$id* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>demo:get-address</xqdoc:name><xqdoc:signature>demo:get-address($id as xs:string*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Retrieve an address identified by uuid.
+</xqdoc:description><xqdoc:param>$id* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>demo:search-addresses</xqdoc:name><xqdoc:signature>demo:search-addresses($query as xs:string*, $field as xs:string*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Search addresses using a given field and a (lucene) query string.
+</xqdoc:description><xqdoc:param>$query* </xqdoc:param><xqdoc:param>$field* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

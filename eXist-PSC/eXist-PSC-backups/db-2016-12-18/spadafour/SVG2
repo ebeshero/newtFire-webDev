@@ -1,0 +1,70 @@
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $distinctYears := distinct-values($letterDates);
+declare variable $maxYear := xs:integer(max($distinctYears));
+declare variable $minYear := xs:integer(min($distinctYears));
+declare variable $rangeYear := $maxYear - $minYear;
+declare variable $lineSpace := 365;
+declare variable $xHashStart := -15;
+declare variable $xHashEnd := 0;
+declare variable $xText := -60;
+declare variable $boxHeight := $lineSpace div 2;
+declare variable $textSize := 20;
+declare variable $boxSpace :=20;
+
+declare variable $HaydonLetters := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $HaydonDates :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string();
+declare variable $minHaydonYear := xs:integer(tokenize(min($HaydonDates), '-')[1]);
+declare variable $maxHaydonYear := xs:integer(tokenize(max($HaydonDates), '-')[1]);
+declare variable $rangeHaydon := ($maxHaydonYear - $minHaydonYear);
+declare variable $startHaydon := ($minHaydonYear - $minYear) * 365;
+declare variable $endHaydon := $startHaydon + ($rangeHaydon * $lineSpace);
+declare variable $firstHaydonFind := min($HaydonDates);
+declare variable $lastHaydonFind := max($HaydonDates);
+declare variable $firstHaydon := xs:integer(format-date($firstHaydonFind, '[d]'));
+declare variable $lastHaydon := xs:integer(format-date($lastHaydonFind, '[d]'));
+declare variable $startHaydonExact := $startHaydon + $firstHaydon;
+declare variable $endHaydonExact := $endHaydon + $lastHaydon;
+
+
+
+<svg height="3000" width="1250">
+    <g transform="translate(375, 100)">
+        
+        <text x="0" y="-20" font-size="26" style="text-anchor: middle">Count of Letters Per Year</text>
+        <line x1="0" y1="0" x2="0" y2="{($rangeYear + 1) * $lineSpace}" style="stroke:purple;stroke-width:4;"/>
+        
+        <line x1="-100" y1="{$startHaydonExact}" x2="-100" y2="{$endHaydonExact}" style="stroke:orange;stroke-width:4;"/>
+        <line x1="-110" y1="{$startHaydonExact}" x2="0" y2="{$startHaydonExact}" style="stroke:black;stroke-width:2;"/>
+        <line x1="-110" y1="{$endHaydonExact}" x2="0" y2="{$endHaydonExact}" style="stroke:black;stroke-width:2;"/>
+        <text x="-100" y="{$startHaydonExact - 10}" font-size="15" style="text-anchor: end">First Letter: {$firstHaydonFind}</text>
+        <text x="-100" y="{$endHaydonExact + 20}" font-size="15" style="text-anchor: end">Last Letter: {$lastHaydonFind}</text>
+        <text x="-120" y="{$endHaydonExact - $startHaydonExact}" font-size="24" transform="rotate(-90 -120,{$endHaydonExact - $startHaydonExact})">Haydon Correspondance</text>
+    {
+        for $i in (0 to ($rangeYear))
+        let $iYear := $minYear + $i
+        let $ySpace := $i *$lineSpace
+        let $lettersLocat := $letterDates[xs:integer(tokenize(string(), '-')[1]) = $iYear]
+        let $letterCount := count($lettersLocat)
+        
+        return
+            <g>
+            <line x1="{$xHashStart}" y1="{$ySpace}" x2="{$xHashEnd}" y2="{$ySpace}" style="stroke:black;stroke-width:2;"/>
+            
+            <text x="{$xText}" y="{$ySpace + 12}" font-size="{$textSize}">{$iYear}</text>
+            
+            <rect x="0" y="{$ySpace}" width="{$letterCount * $boxSpace}" height="{$boxHeight}" style="fill:blue;stroke:pink;stroke-width:4;fill-opacity:0.1;" />
+            
+            <text x="{$letterCount * $boxSpace div 2}" y="{$ySpace + ($boxHeight div 2)}" alignment-baseline="middle" text-anchor="middle" font-size="18">{$letterCount}</text>
+            
+            
+            </g>
+    }
+    
+    </g>
+</svg>

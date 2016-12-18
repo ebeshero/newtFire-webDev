@@ -1,0 +1,41 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $distinctYears := distinct-values($letterDates);
+declare variable $min := min($distinctYears);
+declare variable $max := max($distinctYears);
+declare variable $years := xs:integer($max) - xs:integer($min);
+declare variable $days := $years* 365;
+declare variable $HaydonLetters := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $HaydonDates :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string();
+declare variable $hayMin := xs:integer(tokenize(min($HaydonDates),'-')[1]);
+declare variable $hayMax := xs:integer(tokenize(max($HaydonDates),'-')[1]);
+declare variable $yearStart := ($hayMin - xs:integer($min))*365;
+declare variable $yearEnd := ($hayMax - xs:integer($min))*365;
+declare variable $dayStart := xs:integer(format-date(min($HaydonDates), '[d001]')); 
+declare variable $dayEnd := xs:integer(format-date(max($HaydonDates), '[d001]'));
+
+<svg width="500" height="3000">
+      <g  transform="(translate(30, 100))">
+          <line x1="200" y1="0" x2="200" y2="{$days}" style="stroke:black;stroke-width:15"/>
+          <line x1="300" y1="{$yearStart + $dayStart}" x2="300" y2="{$yearEnd + $dayStart}" style="stroke:blue;stroke-width:15"/> 
+          {
+    for $i in (0 to $years)
+    let $text := $i+ xs:integer($min)
+    let $radius := count($letterDates[xs:integer(tokenize(string(), '-')[1])=$text])
+    return <g>
+           <text x="140" y="{$i*365+15}"> {$text} </text>
+           <circle cx="200" cy="{$i*365}" r="{$radius}" stroke="black" stroke-width="2" fill="white"/>
+           <line x1="180" y1="{$i*365}" x2="210" y2="{$i*365}" style="stroke:red;stroke-width=15;"/>
+           <text x="310" y="{$yearStart + $dayStart}">{$}</text>
+           <text x="310" y="{$yearEnd + $dayStart}">{$}</text>
+           (:so I think im just going to leave my text output like this so you can see it. Its kinda spooky:)
+           </g>
+          }
+          </g>
+</svg>

@@ -1,0 +1,29 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $Decam := doc('/db/decameron/engDecameronTEI.xml');
+declare variable $DecamEng := $Decam/*;
+declare variable $days := $DecamEng//tei:teiHeader//tei:body//tei:div[@type="Day"];
+declare variable $floatingText := $days//tei:div[@type="novella"]//tei:floatingText[@type="frame"];
+declare variable $persName := $floatingText//tei:persName;
+(: I cannot get a count of $persName. I didn't know if I should make a global variable for this or put it in the FLWOR.. Here is my global variable: declare variable $count := count($persName) Either way, it does not work in my FLWOR so I think I'm not writing it correctly. I wanted to eventually find all of the times the male storytellers (Dioneo, Pamfilo, and Filostrato) are mentioned in the floatingText and make a graph out of that. :)
+
+declare variable $ThisFileContent := 
+<svg width="520" height="600">
+    <g transform="translate(80,520)">
+        <line x1="0" y1="0" x2="350" y2="0" style="stroke:black;stroke-width:2"/>
+        <line x1="0" y1="0" x2="0" y2="-450" style="stroke:black;stroke-width:2"/>
+        {
+            for $i in (0 to 10) (: I just used this as a kind of placeholder because I couldn't figure out the counts. :)
+            let $count := count($persName)
+            return <rect x="15" y="-50" width="50" height="50" style="fill:red;stroke-width:2;stroke:rgb(0,0,0)"/>
+            (: I just output a rectangle to see how it would look.  :)
+        }
+        <text x="50" y="-500">Frequency of Male Storytellers Mentioned in Frame</text>
+        
+    </g>
+</svg> ;
+let $filename := "milewski_svgEx4.svg"
+let $doc-db-uri := xmldb:store("/db/JessicaMilewski", $filename, $ThisFileContent)
+return $doc-db-uri
+ (: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/JessicaMilewski/milewski_svgEx4.svg :) 

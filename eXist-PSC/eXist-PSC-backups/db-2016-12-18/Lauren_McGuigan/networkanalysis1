@@ -1,0 +1,26 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+
+let $doc := doc('/db/decameron/engDecameronTEI.xml')
+let $text := $doc//text
+let $placeName := $text//placeName
+let $distinctPlaceName := distinct-values($placeName)
+for $p in $distinctPlaceName
+
+let $peers:=
+if  ($placeName[. = $p]/ancestor::floatingText[@type='frame']) 
+then (distinct-values ($placeName[. = $p]/ancestor::floatingText[@type='frame']//placeName[not(.=$p)]))
+else if ($placeName[. = $p]/ancestor::div[@type='novella'])
+then (distinct-values ($placeName[. = $p]/ancestor::div[@type='novella']//placeName[not(.=$p)]))
+else distinct-values ($placeName[. = $p]/ancestor::div[1]//placeName[not(.=$p)])
+
+let $edge :=
+if ($placeName[. = $p]/ancestor::floatingText[@type='frame']) 
+then "floatingText"
+else if ($placeName[. = $p]/ancestor::div[@type='novella'])
+then "novella"
+else "frame"
+
+for $peer in $peers
+return
+    concat($doc, "&#x9;", $edge, "&#x9;", $peer), "&#10;")

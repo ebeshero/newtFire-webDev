@@ -1,0 +1,11 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $cook := doc('/db/pacific/voyages/cookVoy2Pnum.xml')  
+let $P := $cook//p[geo]
+let $geo := $cook//p/geo
+let $countlat := count ($geo[@select="lat"])
+let $countlon := count ($geo[@select="lon"])
+for $p in $P  (:to show the use of a range variable with for, try commenting this out, and changing the return expression to give $P/@n:)
+where $countlat lt $countlon
+return string-join(('paragraph', $p/@n),':')
+(:OR TRY: return concat('paragraph', $p/@n):)

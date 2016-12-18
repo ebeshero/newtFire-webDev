@@ -1,0 +1,37 @@
+         xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $countLetterFiles := count($letterFiles);
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when;
+declare variable $letterYears := $letterDates/tokenize(string(), '-')[1];
+declare variable $distYears := distinct-values($letterYears);
+declare variable $minYear := xs:integer(min($distYears));
+declare variable $maxYear := xs:integer(max($distYears));
+declare variable $years := ($maxYear - $minYear);
+declare variable $intervals := ($years)*365;
+
+declare variable $ThisFileContent := 
+<svg width="500" height="3000">
+   <g transform="translate(30, 100)">
+ <line x1="200" y1="0" x2="200" y2="{$intervals}" style="stroke:orange;stroke-width:20" />
+      
+{         
+for $i in (0 to $years)
+let $dateText := $i + $minYear
+return 
+   <g> <line x1="100" y1="{$i*365}" x2="200" y2="{$i*365}" style="stroke:black;stroke-width:2;"/> 
+   
+      <text x="100" y="{$i*365}">{$dateText} </text>    </g>}
+         
+  </g>
+   
+</svg> ;
+
+let $filename := "Mills_SVG2.svg"
+let $doc-db-uri := xmldb:store("/db/MeganMills", $filename, $ThisFileContent)
+return $doc-db-uri
+(: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/MeganMills/Mills_SVG2.svg :) 
+

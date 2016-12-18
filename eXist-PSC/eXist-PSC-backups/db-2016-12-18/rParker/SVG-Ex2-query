@@ -1,0 +1,49 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";      
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $distinctYears := distinct-values($letterDates);
+(:rjp: To this point we were given the above variables as a way to know where the valuable information sits for this assignment inside of the TEI format of the letter. The assignment provided a few additional lines that allowed us to see all of the distinct years output in chronological order; however, in order to continue with what is necessary to complete the said task of drawing a line big enough to fit 365 days for each year we had to make a few more global variables. The bonus variable was the $distinctYears which pointed us in the direction of getting all of the years represented without any repeats. :)
+declare variable $countYears := count($distinctYears);
+(:rjp: This first "new" global variable was more of a test to see how many years in total were going to be necessary. This one was not entirely needed but was a way of testing out defining global variables and getting a sense of the context that we will be working with. :)
+declare variable $maxYear := xs:integer(max($distinctYears));
+declare variable $minYear := xs:integer(min($distinctYears));
+(:rjp: Following the specific directions on the assignment I knew we needed to get the first year and the last year so that we could then determine the span of tme between the two. For this I use the min() and max() functions to grab that smallest and largest integers represented in the list of distinct years:)
+declare variable $countingYears := $maxYear - $minYear;
+declare variable $dayInterval := $countingYears * 365;
+(:rjp: From here we needed to create the range of time not only between each year, but also from the first year to the last year. To do this we took the difference between the largest year and the smallest year and then took that number and multplied it by the 365 days that would be in each year. :)
+declare variable $ThisFileContent :=
+<svg width="500" height="3000">
+   <g transform="translate(30, 100)">
+      <line x1="100" y1="0" x2="100" y2="{$dayInterval}" style="stroke-width:50; stroke:#646F58"/>  
+      
+    
+         {
+            for $i in (0 to $countingYears)
+             let $hashInterval := $i * 365
+             let $date := $i + $minYear
+             let $lettersLink := $letterDates[xs:integer(tokenize(string(),'-')[1]) = $date]
+             let $countLetters := count($lettersLink)
+             return
+                <g>
+                <line x1="50" y1="{$hashInterval}" x2="200" y2="{$hashInterval}" style="stroke-width:5; stroke:black"/>
+                <text x="10" y="{$hashInterval}">{$date}</text>
+                <circle cx="100" cy="{$hashInterval}" r="{$countLetters}" fill="#FFFFFF"/>
+                <text x="210" y="{$hashInterval}">Letters Coded in {$date} = {$countLetters}</text>
+                </g>
+         }
+       </g>
+</svg>;
+let $filename := "Parker_timeline.svg"
+let $doc-db-uri := xmldb:store("/db/rParker", $filename, $ThisFileContent)
+return $doc-db-uri
+
+
+
+
+
+
+

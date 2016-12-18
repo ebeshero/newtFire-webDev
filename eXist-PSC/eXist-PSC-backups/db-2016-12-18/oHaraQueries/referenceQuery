@@ -1,0 +1,8 @@
+xquery version "3.0";
+let $oHara := collection('/db/oHara')/*
+let $titles := $oHara//head
+let $distinctTitles := distinct-values($titles)
+for $i in $distinctTitles
+let $refs := count($i/twinkie//ref)
+return $refs
+(: let $refs := count($oHara/*//ref):)

@@ -1,0 +1,18 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $dickinson := collection('/db/dickinson/f16/')/*
+let $app := $dickinson//app
+let $rdg := $app/rdg
+let $wit := $rdg/@wit/string()
+let $rep1 := replace(string-join($wit, ' '), 'var0', '')
+let $rep2 := replace(string-join($rep1, ' '), 'var1', '')
+let $rep3 := replace(string-join($rep2, ' '), 'var2', '')
+let $allWit := tokenize($rep3, '\s+')
+let $distWit := distinct-values($allWit)
+for $d in $distWit
+    let $pub := distinct-values($wit[contains(., $d)]/ancestor::body//tokenize(@wit, " ")[not(. = $d)])
+    let $edge := $rdg[$pub]
+    let $edgeWeight := count($edge)
+    return
+         
+       

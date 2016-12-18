@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/demo/modules/i18n-templates.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/xquery/i18n/templates</xqdoc:uri><xqdoc:name>intl</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>intl:translate</xqdoc:name><xqdoc:signature>intl:translate($node as node(), $model as map, $lang as xs:string?, $catalogues as xs:string?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Template function: calls i18n:process on the child nodes of $node.
+ Template parameters:
+      lang=de Language selection
+      catalogues=relative path    Path to the i18n catalogue XML files inside database
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:param>$lang? </xqdoc:param><xqdoc:param>$catalogues? </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

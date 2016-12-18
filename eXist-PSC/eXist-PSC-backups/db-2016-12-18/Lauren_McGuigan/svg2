@@ -1,0 +1,49 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0"; 
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $distinctYears := distinct-values($letterDates);
+declare variable $maxDistinctYear := max($distinctYears);
+declare variable $minDistinctYear := min($distinctYears);
+declare variable $integer := (xs:integer($maxDistinctYear) - xs:integer($minDistinctYear)) * 365;
+declare variable $yearSpan := xs:integer($maxDistinctYear) - xs:integer($minDistinctYear);
+declare variable $HaydonLetters := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $HaydonDates :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string(); 
+declare variable $ThisFileContent := 
+<svg width="500" height="3000">
+    <g transform= "translate(30,100)">
+        <line x1="200" y1="0" x2="200" y2="{$integer}" style="stroke:blue; stroke-width:20;"/>
+      
+
+
+{
+    for $i in (0 to $yearSpan)
+    let $dates := $i + xs:integer($minDistinctYear)
+    let $matches := $letterDates [xs:integer(tokenize(string(), '-')[1]) = $dates]
+    let $countMatches := count($matches)
+    return 
+    <g>
+ <line x1="170" y1="{$i*365}" x2="230" y2="{$i*365}" style="stroke:red;stroke-width:5"/>
+ <text x="130" y="{$i*365}"> {$dates} </text>
+ <circle  cx="200" cy="{$i*365}" r="{$countMatches}" stroke="black" stroke-width="2" fill="white">  </circle>
+ <text x="230"y="{$i*365}">{$countMatches} letter(s) </text>
+</g>
+    
+}
+</g>
+</svg> ;
+ let $filename := "timeline.svg"
+let $doc-db-uri := xmldb:store("/db/Lauren_McGuigan", $filename, $ThisFileContent)
+return $doc-db-uri
+
+
+(: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/yourFolder/timeline.svg :)  
+
+    
+
+
+
+

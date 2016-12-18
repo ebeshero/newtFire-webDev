@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/demo/examples/web/shakespeare.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/apps/demo/shakespeare</xqdoc:uri><xqdoc:name>shakes</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>shakes:create-query</xqdoc:name><xqdoc:signature>shakes:create-query($queryStr as xs:string?, $mode as xs:string?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Helper function: create a lucene query from the user input
+</xqdoc:description><xqdoc:param>$queryStr? </xqdoc:param><xqdoc:param>$mode? </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>shakes:do-query</xqdoc:name><xqdoc:signature>shakes:do-query($queryStr as xs:string?, $mode as xs:string?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$queryStr? </xqdoc:param><xqdoc:param>$mode? </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>shakes:from-session</xqdoc:name><xqdoc:signature>shakes:from-session($node as node()*, $model as map) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Read the last query result from the HTTP session and pass it to nested templates
+in the $model parameter.
+</xqdoc:description><xqdoc:param>$node* </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>shakes:hit-count</xqdoc:name><xqdoc:signature>shakes:hit-count($node as node()*, $model as map) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Create a span with the number of items in the current search result.
+ The annotation %templates:output("wrap") tells the templating module
+ to create a new element with the same name and attributes as $node,
+ using the return value of the function as its content.
+</xqdoc:description><xqdoc:param>$node* </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>shakes:query</xqdoc:name><xqdoc:signature>shakes:query($node as node()*, $model as map, $query as xs:string?, $mode as xs:string?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Execute a query and pass the result to nested template functions. This function returns
+ a map, not a node. The templating module recognizes this and will merge the map into
+ the current model, then continue processing any children of $node.
+
+ The annotation %templates:wrap indicates that the current element (in $node) should be preserved.
+ The templating module copies the current element and its attributes, before processing
+ its children.
+</xqdoc:description><xqdoc:param>$node* </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:param>$query? </xqdoc:param><xqdoc:param>$mode? </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>shakes:show-hits</xqdoc:name><xqdoc:signature>shakes:show-hits($node as node()*, $model as map, $start as xs:int) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Output the actual search result as a div, using the kwic module to summarize full text matches.
+</xqdoc:description><xqdoc:param>$node* </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:param>$start </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

@@ -1,0 +1,33 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare variable $doc := doc('/db/decameron/engDecameronTEI.xml');
+declare variable $text := $doc//text;
+declare variable $placeName := $text//placeName/string();
+declare variable $disPlace := distinct-values($placeName);
+
+for $i in $disPlace
+
+let $peers :=
+if ($placeName[.=$i]//ancestor::div[@type="novella"])
+then distinct-values($placeName[. = $i]/ancestor::div//placeName[not(. = $i)])
+else if ($placeName[.=$i]//ancestor::floatingText[@type="frame"])
+then distinct-values ($i//parent::floatingText[@type="frame"]//$placeName)
+else
+
+let $edgeType := 
+if ($placeName[.=$i]//ancestor::div[@type="novella"])
+then "Novella"
+else if($placeName[.=$i]//ancestor::floatingText[@type="frame"])
+then "floatingText"
+else
+
+let $edgeWidth :=
+if ($placeName[.=$i]//ancestor::div[@type="novella"])
+then count($placeName[. = $i]/ancestor::div//placeName[not(. = $i)])
+else if($placeName[.=$i]//ancestor::floatingText[@type="frame"])
+then count($i//parent::floatingText[@type="frame"]//$placeName)
+else
+    
+for $peer in $peers
+
+return concat($i, "&#x9;", $edgeType, "&#x9;", $edgeWidth, "&#x9;", $peer, " &#10;"), " &#10;")
