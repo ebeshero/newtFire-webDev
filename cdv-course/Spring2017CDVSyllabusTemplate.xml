@@ -1,14 +1,57 @@
-<root>
+<div type="schedule">
+    <head>Coding and Data Visualization</head>
     <div type="week">
         <div type="day">
             <head>
                 <date when="2017-01-04">W 01-04</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Welcome! Intro to the course, and Intro to XML and working in
+                    &lt;oXygen/&gt;: Write your first XML. <hi>Mindful File Management</hi>
+                    (<ref target="http://dh.obdurodon.org/file-naming_conventions.xhtml">how
+                        to name</ref>, store, share, and submit files in this course). Setting up
+                    accounts for web server and for GitHub. <ref
+                        target="http://www.simplyrecipes.com/recipes/gazpacho">Gazpacho
+                        Soup</ref></p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item>By Fri. 1/6: Install &lt;oXygen/&gt; software on your own computers.
+                        <ref target="https://courseweb.pitt.edu">Instructions and license key
+                            posted on Courseweb</ref>.</item>
+                    <item>Read our <title level="a"><ref target="explainXML.html">Introduction
+                        to XML</ref></title>, and read <title level="a"><ref
+                            target="http://dh.obdurodon.org/file-naming_conventions.xhtml"
+                            >File-Naming Conventions for Courseweb Homework
+                            Submissions</ref></title>.</item>
+                    <item><hi rend="strong">First XML exercise for New Students:</hi> Look at
+                        this recipe for <ref
+                            target="http://www.simplyrecipes.com/recipes/gazpacho">gazpacho
+                            soup</ref>. What if you were running a restaurant and needed to create
+                        a system to file it according to ingredients to purchase, to track
+                        quantities per unit serving--and this recipe were one of, say, 100 other
+                        recipes you're keeping on file? Or, what if you needed to adapt it with
+                        markup to fit a system like we see at the GitHub-based recipe center <ref
+                            target="http://forkthecookbook.com/">ForktheCookbook.com</ref>? Think
+                        about a good system for tagging the file for this long-term situation,
+                        and mark up your file accordingly. Experiment with this and write a
+                        complete XML file in a way that makes sense to represent the recipe, and
+                        try to make use of elements as well as attributes in your markup. There
+                        is no single way to do this exercise, but we want you to think about how
+                        you nest levels of information (elements within elements), and the
+                        relationship between elements and attributes in XML: Can the attributes
+                        hold information from the main text, perhaps removing it from the body of
+                        the text?) Submit the results on Courseweb, in the folder labelled
+                        "Upload Assignments Here," before our next class.</item>
+                    <item><hi rend="strong">Continuing Students:</hi>
+                        <list>
+                            <item>Work on project code or your choice of an interesting XML coding
+                                challenge.</item>
+                            <item>Help us test-pilot some new methods with GitHub: See instructors
+                                for details.</item>
+                        </list></item>
+                </list>
+                    
             </div>
         </div>
         <div type="day">
@@ -553,4 +596,4 @@
             </div>
         </div>
     </div>
-</root>
+</div>
