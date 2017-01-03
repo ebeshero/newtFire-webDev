@@ -28,7 +28,7 @@
             </head>
             <body>
                 
-                <xsl:comment>#include virtual="top-indexCDA16.html" </xsl:comment>
+                <xsl:comment>#include virtual="top-indexCDA17.html" </xsl:comment>
                 <!--ebb: make a new top for each XML for each new semester course-->
 
                 <h1><span class="banner"><xsl:apply-templates select="//text/front/div[@type='courseID']/head"/></span></h1>
@@ -39,7 +39,7 @@
              <div id="main">   <div id="courseInfo">
                    <xsl:apply-templates select="//div[@type='meetTimes']"/>
                     
-                 <h2><a href="CDASyll.html">Syllabus: Autumn 2016</a></h2><!--ebb: Check link URL! -->
+                 <h2><a href="CDVSyll.html">Syllabus: Spring 2017</a></h2><!--ebb: Check link URL! -->
                     
                     <xsl:apply-templates select="//div[@type='CRN']"/>
                  
