@@ -1,0 +1,69 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>XML Exercise 1</title>
+    </head>
+    <body>
+        <!--#include virtual="top.html" -->
+        <h1><span class="banner">XML Exercise 1</span></h1>
+        <section title="preliminaries">
+            <h3>Before you begin</h3>
+            <p>Before beginning this assignment, you should prepare your workspace: think about where you want to do your coding homework this semester. You will be doing most of your coding work for this course in the &lt;oXygen/&gt; XML Editor. This is installed in the campus computer labs, and you may also install it on any other computer(s) you plan to work with this semester. Also, before beginning homework assignments, you need to read the related tutorials we have posted (plus notes you took in class) and keep these open and handy to consult as you are working. For the very first assignment, here is what you will need:</p>
+            
+          <ul>  <li>Install the &lt;oXygen/&gt; software on your own computer(s) 
+               Follow the <a href="https://courseweb.pitt.edu">instructions and apply the license key we have posted on Courseweb</a>.</li>  
+              <li>Read our <a href="explainXML.html"><q>Introduction to XML</q></a></li>
+                  <li>Read <a href="explainFileNames.html"><q>File Conventions for CourseWeb Assignments</q></a>, so you will know how to name this and most other homework files you submit on Courseweb.</li>
+          
+          </ul>
+        </section>
+        <section title="goals">
+            <h3>Goals</h3>
+            <p>This assignment should give you experience with:</p>
+            <ol>
+                <li>Writing <dfn>well-formed</dfn> XML using elements and attributes.</li>
+                <li>Making decisions in how to write XML so that it binds related kinds of information together by:
+                    <ul>
+                        <li>Thinking of elements and attributes working together (like file folders with labels attached).</li>
+                        <li><dfn>Nesting</dfn> elements that relate to each other.</li>
+                    </ul></li>
+                <li>Using basic features of the &lt;oXygen/&gt; software environment.</li>
+            </ol>
+        </section>
+        
+        <section title="scenario">
+            <h3>Scenario</h3>
+            <p>First, read this recipe for
+                <a href="http://www.simplyrecipes.com/recipes/gazpacho">gazpacho soup</a>, and pretend you are filing it with hundreds of other recipes that you need to fit a set purpose, such as running a restaurant, in which you need to keep track of kinds and quantities of ingredients required. XML is written to store information, and when we apply it to a situation with numbers and units, like with coding recipes, the code we write can help make computerized calculations, and help optimize searching across a collection for particular kinds of ingredients. Your code might be designed to help categorize ingredients by what part of the grocery store they can be found in. The challenge of the assignment is to write code that helps categorize ingredients, mark necessary equipment, and stages for processing, but the system you develop is up to you.</p></section>
+            <section title="step_by_step">
+                <h3>Coding the document in &lt;oXygen/&gt;</h3>
+                <ul> 
+                    <li>First, highlight and copy the text of just the recipe (the list of ingredients and method), and ignore the rest of the page.</li> 
+                    
+                    <li>Open a new XML document in &lt;oXygen/&gt;. Click on the icon at top left that looks like a piece of paper with a folded corner (or go to File and New...), type <code>XML</code> in the filter window, and click the <code>Create</code> button to launch a new XML document.</li>
+                    <li>Paste in the recipe, and begin marking it to apply <dfn>elements</dfn> and add <dfn>attributes</dfn>.</li>
+                    <li>Tips: Watch the color of the square in the upper right corner: if it is green, your code is well-formed, but if it turns <q>angry red</q>, you will know there is an error, perhaps <dfn>tangled tags</dfn> or a missing angle bracket, or a missing <dfn>root element</dfn>. Notice how &lt;oXygen/&gt; generates a closing tag every time you type your own start tag. One handy trick is to you use your mouse to highlight text you want to wrap in an element, and use Control+E in Windows (or Command+E on a Mac) to bring up a window to enter an element name. (You have to add the attributes after you set an element name.)</li>
+                    <li>Save your work frequently, and name your file using our <a href="explainFileNames.html">standard form for homework names</a>.</li>
+                </ul>
+               
+            </section>
+        <section title="suggestions">
+            <h3>Curating the document: Suggestions for XML markup</h3>
+            <p>Frequently the XML code we write is designed for <dfn>digital curation</dfn>, for preserving and collecting resources. Usually we would not rewrite the <dfn>base text</dfn> of a recipe like this, but we would apply markup around passages, so that our markup supplies some information in a more systematic way. For example, spaces and formatting on the page tell our human eyes something about the document, like how to distinguish each item on a list. That formatting information is <strong>not preserved</strong> in XML, and so one of the first things we mark are the structural <q>pieces</q>. What are the important parts of this recipe that you need to distinguish from other parts? Use XML markup to <q>tag</q> those. Then, what is the important information that you can label with markup? Try not to write markup that copies the same words and phrases in the text: think of categories and standard units you can supply so that your markup <em>adds new value</em> to the text.</p>
+            <p> Sidenote: If you are looking for some ideas for your code, you might take a look at <a href="http://forkthecookbook.com/">Fork the Cookbook</a>, a GitHub-based recipe center that has worked out a system for contributors to store volumes and measures, and tracking instructions. (We will be learning how to work with GitHub in this class, too.)</p>
+            <p>There is no single way to do this exercise, but we want you to think about how
+                you nest levels of information (elements within elements), and the
+                relationship between elements and attributes in XML.</p>
+        </section>
+       <section title="submitting_assignment">
+           <h3>When, where, and how to submit the assignment</h3>
+           <p>Check and make sure you saved your file following <a href="explainFileNames.html">our homework file naming rules</a>, including giving it a <code>.xml</code> file extension. Submit your XML file on Courseweb, in the folder labelled “Upload Assignments Here”, before our next class. </p>  
+       </section>
+
+    </body>
+</html>

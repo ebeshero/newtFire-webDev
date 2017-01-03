@@ -1,0 +1,61 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>XML Exercise 2</title>
+    </head>
+    <body>
+        <!--#include virtual="top.html" -->
+        <h1><span class="banner">XML Exercise 2</span></h1>
+       
+        <section title="goals">
+            <h3>Scenario and Goals</h3>
+            <p>This assignment should give you more experience with writing well-formed XML, but of a different kind from our first exercise. You will design XML code to mark and store information in historical and cultural resources. Imagine yourself as a curator of historical letters by an author from a past century, building a digital resource that makes this author's personal letters available to read and search for interesting kinds of information. The kinds of information you choose to mark and collect are up to you, but think of the code you design for this assignment as the basis for coding many more letters writen by the same person.</p>
+        </section>
+        
+            <section title="step_by_step">
+                <h3>Choosing a document, and coding it in &lt;oXygen/&gt;</h3>
+                
+                <p>Choose the text of one letter linked on one of
+                    the following websites (click through until you see a complete letter), and
+                    copy its text into a new XML document in &lt;oXygen/&gt;. Then, mark it up in well-formed XML, using your own
+                    system of tagging, as seems appropriate, to code the structure and the
+                    content of the document. <strong>Important:</strong> Save and name your XML document according to the
+                    <a href="explainFileNames.html">File Conventions</a> and be sure it as the proper <code>.xml</code> file extension before you upload to Courseweb!</p>
+                <h3>Options:</h3>
+                    <ul>
+                        <li>
+                            <a href="http://glc.yale.edu/harriet-jacobs-selected-writings-and-correspondence-documents"> Harriet Jacobs: Selected Writings and Correspondence </a>
+                        </li>
+                        <li>
+                            <a href="http://englishhistory.net/byron/letters.html"> Lord Byron:
+                                Selected Letters</a>
+                        </li>
+                        <li>
+                            <a href="http://www.woolfonline.com/timepasses/?q=letters/overview">Virginia Woolf letters</a>
+                        </li>
+                    </ul>
+                
+            </section>               
+                <section title="suggestions">
+                <h3>Advice on writing the XML code</h3>
+           
+            <p>As with <a href="XMLExercise1.html">the first assignment</a>, there is no single way to do this exercise, but we want you to think about how
+                you nest levels of information (elements within elements), and the
+                relationship between elements and attributes in XML.</p> 
+                
+                
+                <p>Keep in mind as you code that you should not alter the base text of the file. Also, the line breaks and white spaces you can see when you copy and paste are not sufficient to preserve its structural features because XML will <q>normalize</q> these unless they are separated and marked in angle brackets. You will need to apply markup to indicate the basic structural components of the letter, for example, its dateline, greeting, body paragraphs, closer. We expect you to code more than that so that you are also collecting any information you find worth preserving as a curator: (For example, what kinds of information do you see in this letter that would be interesting to collect about, say, people, places, events from this author's life and times? Or what do you find interesting in this document to mark? Slang terms? Parts of speech? What looks interesting to you?) Your element and attribute names should be useful category markers, not simply reproducing the text of the letter but labelling its pieces in a way that helps identify particular kinds of information.</p>
+                <p>You can write XML comment tags to talk to us when we read your code. Write your own comments about decisions you are making in your code, and to leave us messages and questions: <code>&lt;!--ebb: Here is a sample comment tag --&gt;</code>.</p>
+        </section>
+       <section title="submitting_assignment">
+           <h3>When, where, and how to submit the assignment</h3>
+           <p>Check and make sure you saved your file following <a href="explainFileNames.html">our homework file naming rules</a>, including giving it a <code>.xml</code> file extension. Submit your XML file on Courseweb, in the folder labelled “Upload Assignments Here”, before our next class. </p>  
+       </section>
+
+    </body>
+</html>
