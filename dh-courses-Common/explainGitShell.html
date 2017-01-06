@@ -30,13 +30,15 @@
             </ul>
         </div>
         <h3>What is Git? And why do we use it?</h3>
+        <p><!--ebb: Adding before Day 2 of class, 2016-01-06-->When we work together on computer files, we need a way to save them that helps to keep track of each change made to a file,
+        so our work is stored safely and so we do not create many different copies of the same file and get confused trying to figure out
+        which is the most correct or current. When we are working on coding projects, alone or in groups, we need to share our files in <q>the cloud</q>, or a shared internet directory, and we also need to keep track of each stage of the coding process, the changes we made on our own local computers before sharing with the group. Sometimes we have to go back and restore something we did in an early stage that we deleted later. Each saved stage of a file’s existence is a <dfn>version</dfn>, and there are a number of software tools available to store safely all those versions that we care about. Some of these tools are more thorough and reliable, safer to use than others, and Git is probably the most reliable and very widely used in the coding community, because of its distinctive way of storing all local changes ever made to a file.</p>
         <p>Git is a <dfn>version control system</dfn>, or a system designed to manage changes to
-            files by storing a memory of each form they have taken. Some version control systems
+            computer files by storing a memory of each version they have taken over time. Some version control systems
             (like Dropbox) do this in a <dfn>centralized</dfn> way by keeping one master copy of a
             file and storing all history of its changes in a single location in the cloud
-            (remotely). If two users share a file directory that tracks version history in a
-            centralized way, and each attempts to modify the same file and save changes to that
-            location at the same time, the centralized system creates a copy of one of the files
+            (remotely). In Dropbox, if two users share a file directory, and each person attempts to change the same file, they each make a change locally, but run into a problem if they try to save their file in the same shared file location in the Dropbox cloud. 
+            If they save changes at around the same time, the centralized system creates a copy of one of the files
             with an altered file name (usually by putting a (1) or a (2) at the end of the original
             filename in Dropbox), and the owners of the directory must then decide which version to
             keep or how best to reconcile the two versions. Git, by contrast, would record the
@@ -109,7 +111,7 @@
             learn more about the power tools you can work with at command line, see Lifehacker’s <a
                 href="http://lifehacker.com/5633909/who-needs-a-mouse-learn-to-use-the-command-line-for-almost-anything"
                     ><q>A Command Line Primer for Beginners</q></a>. </p>
-        <h3 id="terms">Basic Terms to Understanding Git and GitHub</h3>
+        <h3 id="terms">Basic Terms for Understanding Git and GitHub</h3>
         <!-- RJP:2016-08-26: Needs edited to correspond with edits made in first few paragraphs -->
         <p>Below is a list of key terms you will need to understand while using Git and GitHub. Each
             of these terms will be discussed in greater detail throughout this tutorial, but think
@@ -192,7 +194,7 @@
         <p>Git is available for <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
                 >download</a> on all three of these platforms: Linux, Mac, and Windows. To download
-            Git on your local machine follow the instructions available on the<a
+            Git on your local machine follow the instructions available on the <a
                 href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git" target="_blank"
                 >git-scm.com</a> site. Since platform downloads differ we are not going to go
             through a step-by-step installation process.</p>
