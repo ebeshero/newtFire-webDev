@@ -1,0 +1,40 @@
+start = twinkie
+twinkie = element twinkie {head?, lg*, l*, date?}
+head = element head {text}
+lg = element lg {n*, type*, l+}
+n = attribute n {xsd:int}
+type = attribute type {"tercet" | "quatrain" | "septet" | "atypical"}
+l = element l {mixed {n, (ref | refrain | cntrctn | wordBreak)*}}
+ref = element ref {(what | neighborhood | city | state | continent | from | who | writer | friend | actress | director | wifeOf | husbandOf | musician | painter | language)*, text}
+# In the reference attributes listed above, I tagged more than my research reflects at this time. Some of the things I tagged I deemed could easily be important as my research grows. And since this site is nowhere near completed, some of my markup may seem superfluous, but it's merely the hint of possible research to come.
+what = attribute what {"restaurant" | "popCulture" | "statue" | "fashionStore" | "bridge" | "artExhibit" | "mythology"}
+neighborhood = attribute neighborhood {"manhattan" | "brooklyn"}
+# Here again, I have only "manhattan" neighborhoods listed in my markup, but I know that I'll need "brooklyn" at some point from my research. I'm sure there will be more to add, too.
+city = attribute city {"newYorkCity" | "ypsilanti" | "flint"}
+state = attribute state {"newYork" | "michigan"}
+continent = attribute continent {"africa"}
+from = attribute from {"uS" | "italy" | "france" | "russia"}
+# At this moment, my markup of "from" attributes includes only countries where people are from. I will probably leave it like this, but I am also considering adding city or town names, depending on how my research goes. Perhaps continents, as well?
+who = attribute who {"frankOHara" | "edwinDenby" | "giuliettaMasina" | "federicoFellini" | "vRLang" | "johnLatouche" | "jacksonPollock" | "pierreReverdy" | "halFondren" | "vladimirMayakovsky" | "williamTecumsehSherman" | "eros" | "venus"}
+# Above is essentially my personography. This personography lists only those from the nine poems I've sampled. I know for a fact some of these will be repeated, along with many new names that will need to be added while my research grows.
+writer = attribute writer {"edwinDenby" | "vRLang" | "johnLatouche" | "pierreReverdy" | "frankOHara" | "vladimirMayakovsky"}
+# This is a sect of my personography for everyone who was considered a writer. I did not distinguish between poets, playwrites, prose writers, critics, or any other sort of writer. Though if this particular sect of people grows as large as I think it will, I will probably include what types of writers each person was.
+friend = attribute friend {"halFondren"}
+# The "friends" sect is for people who seem to have no other noteworthy significance other than being friends with O'Hara. At this point, it's unclear whether the distinction will be important.
+actress = attribute actress {"giuliettaMasina"}
+# At this moment, I have one actress and no actors. I have a suspicion I'll get at least a few actors when my research grows. The question will be: do I make a distinction between actors and actresses, or shall I lump them together in one attribute. I will probably keep them separate, because I can always add the values of actors and actresses together, in XQuery.
+director = attribute director {"federicoFellini"}
+wifeOf = attribute wifeOf {"federicoFellini"}
+husbandOf = attribute husbandOf {"giuliettaMasina"}
+# I've included the "wifeOf" and "husbandOf" attributes here for a couple reasons: they have different last names, which is going to be extremely common for high-profile couples, and assuming there are more couples like this, I could imagine my tagging working well for a network analysis.
+musician = attribute musician {"johnLatouche"}
+# You may note that John Latouche is listed under writers and musicians. This is a gray area that I'm going to have to work on while my research expands. Should I pick the one thing that a person was most well-known for, or should I list every type of artist that the person was? Right now, I'm going with the idea that a person can be culturally influential in multiple genres of art, and that could be important.
+painter = attribute painter {"jacksonPollock"}
+language = attribute language {"français" | "deutsch" | "italiano"}
+refrain = element refrain {mixed {how, (ref | cntrctn | wordBreak)*}}
+how = attribute how {"exact" | "parenthetical"}
+cntrctn = element cntrctn {type, text}
+wordBreak = element wordBreak {text}
+date = element date {(xsd:date | xsd:gYearMonth | xsd:gYear), when}
+when = attribute when {(xsd:date | xsd:gYearMonth | xsd:gYear)}
+

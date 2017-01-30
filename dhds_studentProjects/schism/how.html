@@ -1,0 +1,114 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>How We Did It</title>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<script type="text/javascript" src="accordion.js"></script>
+		<link href="accordion.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="bannerArea">
+				<div class="toplogo"><a href="#"><img src="images/titleBanner.png" alt = "Episcopal Church Schism" /></a></div>
+					<ul class="bannerNav">
+						<li><a href="index.html" >Home</a></li>
+						<li><a href="goal.html" >Our Goal</a></li>
+						<li><a href="allData.html" >All of Our Data</a></li>
+						<li><a href="how.html" >How We Did It</a></li>
+					</ul>
+					<ul class="bannerNav">
+						<li><a href="article1.html" title="Episcopal Diocese Votes to Leave Church" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 1</a></li>
+						<li><a href="article2.html" title="Church Attempts to Heal After Split" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 2</a></li>
+						<li><a href="article3.html" title="Episcopal Bishop Ready for Life in Pittsburgh" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 3</a></li>
+						<li><a href="article4.html" title="Episcopal Diocese Chooses to Secede" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 4</a></li>
+						<li><a href="article5.html" title="Episcopal Diocese Prepares for Secession Vote" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 5</a></li>
+						<li><a href="article6.html" title="Episcopal Diocese Votes to Leave" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 6</a></li>
+					</ul>
+				<p><br/></p>
+				<ul class="bannerNav">
+						<li><a href="article7.html" title="Episcopal Split as Conservatives Form New Group" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 7</a></li>
+						<li><a href="article8.html" title="Episcopal Split May Lead to Bitter Property Dispute" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 8</a></li>
+						<li><a href="article9.html" title="Judge Clarifies Ownership of Disputed Episcopal Diocesan Asset" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 9</a></li>
+						<li><a href="article10.html" title="Proposed Constitution to Reunite Conservative Episcopalian Groups" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 10</a></li>
+						<li><a href="article11.html" title="Woman is Named Episcopal Leader" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 11</a></li>
+						<li><a href="article12.html" title="Episcopal Diocese Near Vote on Split" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 12</a></li>
+						<li><a href="article13.html" title="U.S. Episcopal Church Schism Reaches Court" style="background-color:#FFFFFF;color:#000000;text-decoration:none">Article 13</a></li>
+					</ul>
+				<h1 class = "titles">How We Did It</h1>
+				</div>
+				<div class="navigationArea">
+					<div id="SpryAccordion1" class="Accordion" tabindex="0">
+						<div class="AccordionPanel">
+							<div class="AccordionPanelTab">Gathering the Articles</div>
+							<div class="AccordionPanelContent">
+								<div class="acontent">
+								  <p>To gather the data, we initally referred to phsyical newpaper articles, but we would have to manually type all of the data or attempt OCR. As an alternative, we found the articles published on the internet, and we simply copied the articles into our XML files.
+                                  </p>
+								</div>
+							</div>
+						</div>
+						<div class="AccordionPanel">
+							<div class="AccordionPanelTab">Gathering Our Data</div>
+							<div class="AccordionPanelContent">
+								<div class="acontent">
+									<p>This is where the fun began. We had to mark up each file with a system of tags meaning different things. The &lt;who&gt; tags would contain people's names while the attribute "ref" linked the person with a distinct pointer value. That "ref" attribute helped up link the person to their quotes because the &lt;who&gt; tags shared the same attribute with our &lt;quote&gt; tags. Some markup is below for example...</p>
+									<p>
+    
+    
+    &lt;body&gt;&lt;sec&gt;&lt;location&gt;COLUMBUS, Ohio,&lt;/location&gt; &lt;date&gt;June 18&lt;/date&gt; — The &lt;sect type="Episcopal"&gt;Episcopal&lt;/sect&gt; Church elected &lt;who ref="Schori"&gt;Bishop Katharine Jefferts Schori&lt;/who&gt; of &lt;location&gt;Nevada&lt;/location&gt; as its presiding bishop on Sunday, making her the first woman to lead a church in the worldwide &lt;sect type ="Anglican"&gt;Anglican&lt;/sect&gt; Communion.&lt;/sec&gt;
+        
+        Many &lt;sect type="Episcopal"&gt;Episcopalians&lt;/sect&gt; gathered here for the church's triennial general convention cheered the largely unexpected choice of &lt;sec&gt;&lt;who ref="Schori"&gt;Bishop Jefferts Schori&lt;/who&gt;, 52, the lone woman and one of the youngest of the seven candidates for the job.&lt;/sec&gt; &lt;sec&gt;Her election was a milestone for the &lt;sect type="Episcopal"&gt;Episcopal&lt;/sect&gt; Church, which&lt;fact&gt; began ordaining women only in 1976&lt;/fact&gt;.&lt;/sec&gt;
+        
+        She takes on her new responsibilities at a particularly fraught moment in the history of the&lt;sec&gt; &lt;sect type="Episcopal"&gt;Episcopal&lt;/sect&gt; Church, the American branch of the &lt;sect type="Anglican"&gt;Anglican&lt;/sect&gt; Communion, the &lt;fact&gt;world's third-largest church body&lt;/fact&gt;, with&lt;stat&gt; 77 million members&lt;/stat&gt;. &lt;/sec&gt;She was elected to succeed &lt;sec&gt;Presiding &lt;who ref="Griswold"&gt;Bishop Frank T. Griswold&lt;/who&gt;&lt;/sec&gt;, who will retire in November when his nine-year term ends.
+</p>
+                                    
+                                    <p>To ensure we had all of our tags correct and where they were supposed to be, we created a Schema file to keep all of the documents unified. The schema can be found <a href = "aticleSchema.rnc">here</a>.
+                                    </p>
+								</div>
+							</div>
+						</div>
+						<div class="AccordionPanel">
+						<div class="AccordionPanelTab">Transforming Our Data</div>
+							<div class="AccordionPanelContent">
+								<div class="acontent">
+									<p>To transform our data into something usable, we had to determine what we wanted to find. For example, finding the quotes in our articles 
+                                    
+									involved a simple XPath expression, //quote. Finding a list of quotes wouldn't help us much, so we had to get creative with XPath and manual coding. After retrieving a list of quotes and speakers in the form of a table, I was able to copy and paste that into an XML file for additional transformation. In order to quickly transform the large sets of data, RegEx came in handy. Expressions such as: ^(.*)$ --&gt; &lt;li&gt;\0&lt;/li&gt; allowed us to quickly transform a table into a nested list of quotes. Most of the work was done manually to ensure that no mistakes were made. The parish locations were great pieces of data, but using the <a href = "http://www.gpsvisualizer.com/geocoder/">KML Encoder</a> did not yield	the	results	we	were looking for. It is an amazing tool to make the graphs, but it gave incorrect results because some parishes had the same names as others in other states and even countries. To fix those errors, we manually searched through each result to ensure they were correct. The SVG graphs that we designed were done manually in order to create clean and consistent graphs. We retrieved the data through XQuery, and after having that data, we made each graph by hand to ensure they would fit into each &lt;div&gt; container in our webpage. We have provided a sample of our XQuery in a text document <a href = "XQueryExample.txt">here</a>. Another applicaion of XQuery we used was to to find the number of times each person was mentioned, and to do that, we searched for the @ref attribute matching the person and created a total count. Build off of the example we gave you, and see what you can find. </p>
+								</div>
+							</div>
+						</div>
+						<div class="AccordionPanel">
+							<div class="AccordionPanelTab">Bringing it all Together</div>
+							<div class="AccordionPanelContent">
+								<div class="acontent">
+									<p>Bringing all of that information together was interesting. There is so much information in each article that we had to design a site to ensure that it could all fit. We adapted the &quot;Spry Accordion&quot; style of website design to create a clean format that allows you to control what you see. The JavaScript for our adapatation can be found <a href = "accordion.js">here</a>. The rest of the site was designed using &lt;div&gt; containers for an easy to read layout, and you can view the source code for the	website	by	right	clicking	the	screen	and	chosing to read the source. Using the &lt;div&gt; containers can give you interesting layouts. CSS Stylesheets were a great tool to use for the site's formatting, and our's can be found <a href = "stylesheet.css">here</a>. By giving each collection of data its own accordion panel, we created this site, and we encourage you to explore other options of site design.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contentArea">
+					<div>
+						<h1 class = "titles">Summary</h1>
+						<blockquote>
+						  <p>Overall, this site wasn't constructed with a single language. In order to capture the XML marked up data, we had to use a variety of languages and styles to bring it all together. Whether it was simple XML or SVG or complex JavaScript, we managed to pull through and bring this into what it is. I hope you enjoyed the fruits of our labor.</p>
+						  <p>Signed: Cassie Miller &amp; Ryan Brooks</p>
+						</blockquote>
+						</div>
+						<div style="clear:both;"></div>
+					</div>
+					<div style="clear:both;"></div>
+					<div class="footerArea">
+
+					<div class="copyright"><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</div>
+				</div>
+			</div>
+
+			<script type="text/javascript">
+				<!--
+					var SpryAccordion1 = new Spry.Widget.Accordion("SpryAccordion1", {useFixedPanelHeights:false, defaultPanel:0});
+				//-->
+		</script>
+	</body>
+</html>

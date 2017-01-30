@@ -1,0 +1,32 @@
+start = media
+media = element media {source, category, title, mainContent, commentSection}
+source = attribute source {text}  #This identifies where the content is coming from (youtube, nbc, etc)
+category = attribute category {text} #This identifies what category the content fits into. For news articles, this should be the category as defined by the site, such as Health, Science, etc. For Youtube, it is more subjective, but should fall into something like "review, advertisement, preview, official trailer, music video" and so on.
+title = element title{text} #This should be the title of the video or article
+mainContent = element mainContent {link, author, description, statistics} #This section holds the original media content that is being commented on, whether it be a video or article
+commentSection = element commentSection {comment+} #This section holds the top ten comments for the content.
+link = element link {text} #This is the link to the video or article.
+author = element author {text} #The author of the content.
+description = element description {text} # This holds the given description of the youtube video as is, or the summarized description of the article.
+statistics = element statistics {subscribers, views, likes, dislikes, totalComments, publishDate} #This section holds all the statistical information on the content, mostly in numerical form.
+subscribers = element subscribers {xsd:int}
+views = element views {xsd:int}
+likes = element likes {xsd:int}
+dislikes = element dislikes {xsd:int}
+totalComments = element totalComments {xsd:int}
+publishDate = element publishDate {text}
+comment = element comment {tone, commenter, sentence} #This element holds each individual comment within the commentSection element.
+tone = attribute tone {"positive" | "negative" | "neutral"} #This identifies the overall tone of the comment. Is it a positive comment, a negative comment, an incomprehensible comment, or a neutral comment that either states something objectively or attempts to be both positive and negative?
+commenter = element commenter {text} #This is the name of the commenter, whatever it may be. 
+sentence = element sentence {mixed{structure, (caps | expunc | acronym | obscenity | emote)*}} #This identifies the sentences, regardless of how poorly structured, within the comment element.
+structure = attribute structure {"good" | "poor"} #This identifies the overall quality of what is in the sentence element. Does the commenter at least attenpt to make proper sentences with capitalization and punctuation, or is it just an idea, statement, or stream of words with no attempt at proper written form? 
+caps = element caps {mixed{expunc?, acronym?, obscenity?, emote?}} #This identifies sentence elements written entirely in capslock.
+expunc = element expunc {text} #This identifies excessive punctuation such as longer than normal ellipsis (more than three dots), large amounts of space or extra lines, or multiple ?'s or !'s.
+acronym = element acronym {text} #This identifies typical online slang such as lol, omg, wtf, etc.
+obscenity = element obscenity {censored, text} #This identifies anything that can be considered an obscene word. If it's something that would be bleeped out on public broadcasts, then it should be tagged.
+censored = attribute censored {"none" | "full" | "partial"} #This identifies whether the commenter made an attempt to censor their word, either by partially censoring it (F**K), or wholly censoring it (****), or using alternate letters/symbols (SH!T).
+emote = element emote {text} #This identifies any emotes the commenter uses, such as :) or <3 or any attempt at making a picture using symbols (such as a multiple line ASCII image made from text and symbols). Since these may use reserved characters, remember to use &lt; for <, &gt; for >, etc.
+
+
+
+

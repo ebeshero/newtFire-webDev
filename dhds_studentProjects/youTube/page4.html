@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Youtube Comment Analysis Project</title>
+<link href="project_css.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+<div class="container">
+  <div class="header"><img src="project_banner.jpg" alt="Project Banner" name="Project Banner" width="100%" height="150" id="logo" /> 
+    </div>
+  <div class="sidebar1">
+    <ul class="nav">
+      <li><a href="index.html">Home Page</a></li>
+      <li><a href="page2.html">Comment Sources</a></li>
+      <li><a href="page3.html">Comment Analysis</a></li>
+      <li><a href="page4.html">Under the Hood</a></li>
+      <li><a href="page5.html">Conclusions</a></li>
+    </ul>
+    <p>Navigate the site using the links above. Links to the original articles and videos, along with their comments, can be found in the Comment Sources section. Graphs and charts analyzing the collected data can be found in the Analysis section. Under the Hood goes into detail about the XML and other coding techniques we used to gather, organize, and display our data. Our conclusions and closing remarks can be found in the Conclusions section.</p>
+    </div>
+  <div class="content">
+  <h1>Under the Hood</h1>
+  <p>All of the data we collected for this project was organized using XML mark-up to create individual XML files for each video or article. These files were then manipulated via programs such as <a href="http://www.oxygenxml.com">oXygen</a> and <a href="http://www.exist-db.org">eXist</a> to extrapolate and display the data into the lists, charts, and graphs you see. Below are links to the various XML and XSLT files we created, as well as the queries we used to transform the data.</p>
+<ul>
+<li><a href="comment_xml_files/">Our Comment XMl Files</a> - This folder contains all our XML files for both the Youtube videos and NBC news articles, as well as all associated schemas and tranformation files. Each XML file is structured the same way with all pertinent information on the video or article and its comments contained within appropriated marked up elements. If the files inside the folder do not display correctly in your browser when clicked, please right click the link and select "Save Link As..."</li>
+<br />
+<li><a href="comment_xml_files/comments_schema.rnc">Comment Schema</a> - Our schema document that defined how the videos and articles and their comments should be marked up. The schema allowed us to create a consistent XML structure across all files, with detailed explanations of what each element or attribute was meant to define. Some of the things we defined in our schema, and can be seen in bar graph form on the <a href="page3.html">Comments Analysis</a> section of the site, were the tone of the comments, obscenities, sentence structure, excessive punctuation, emotes, and acronyms. All were meant to give us a framework by which to judge both the emotional content and the quality of the grammatical structure of each comment.</li>
+<br />
+<li><a href="comment_xml_files/project_comment_puller_xslt.xslt">Project Comment Puller</a> - Our XSLT file we used to pull and format the comments for the <a href="page2.html">Comments Source</a> section of the sight. This simple code took both the tone of the comment and the text inside the sentence element from the XML files and transformed them into color-coded, organized lists of comments that we placed beneath each video/article. If the file does not display correctly in your browser, please right click the link and select "Save Link As..."</li>
+
+<br />
+
+<li><a href="tone_bargraph_xslt.xslt">Tone Bar Graph XSLT File</a> - Our XSLT file we used to pull the tone attribute from the comments in our XML files and create an SVG bar graph displaying the various percentages of positive, negative, and neutral comments.  Similar If the file does not display correctly in your browser, please right click the link and select "Save Link As..."</li>
+
+<br />
+
+<li><a href="tone_bargraph_xslt_youtube.xslt">Tone Bar Graph XSLT File (Youtube)</a> - Our XSLT file we used to pull the tone attribute from the comments in our yYoutube XML files and create an SVG bar graph displaying thevarious percentages of positive, negative, and neutral comments. If the file does not display correctly in your browser, please right click the link and select "Save Link As..."</li>
+
+<br />
+
+<li><a href="tone_bargraph_xslt_nbc.xslt">Tone Bar Graph XSLT File (NBC)</a> - Our XSLT file we used to pull the tone attribute from the comments in our NBC XML files and create an SVG bar graph displaying the various percentages of positive, negative, and neutral comments. If the file does not display correctly in your browser, please right click the link and select "Save Link As..."</li>
+
+<br />
+
+<li><a href="quality_bargraph_xslt.xslt">Quality Bar Graph XSLT File</a> - Our XSLT file we used to pull the structure attribute from the sentence elements in our XML files and create an SVG bar graph displaying the various percentages of well-structured sentences to poorly-structures sentences across all comments, as well as specifically Youtube and NBC comments. If the file does not display correctly in your browser, please right click the link and select "Save Link As..."</li>
+</ul>
+   
+   </div>
+  
+  <div class="footer">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png"/></a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+    </div>
+</div>
+</body>
+</html>

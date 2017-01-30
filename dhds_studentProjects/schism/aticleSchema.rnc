@@ -1,0 +1,27 @@
+# Cassie Miller's Church Schism Project Schema Version 3.13
+start = article
+article = element article{heading , body}
+heading = element heading{(title | pubSource | pubDate | author | text)*}
+title = element title{text}
+pubSource = element pubSource{text}
+pubDate = element pubDate{text}
+author = element author{text}
+body = element body{mixed{(quote | date | who | sect | location | church | parish | stat | nat | sec | schism | fact)*}}
+quote = element quote{ref , mixed{(quote | date | who | sect | location | church | parish | stat | nat | sec | schism | fact)*}}
+# As you mark up articles, add the names of speakers into the sp and name attributes. If there are any other sects or nationalities, please 
+# add those in as well. If you want, you can download this, mark them up, and post a final version of a schema that has all your attribute
+# values in. If you do that, I can just combine them, and check all of the articles to make sure they work.
+ref = attribute ref{"Robertson" | "Hetzler" | "Duncan" | "Johnson" | "Pollard" | "Mr. Pollard" | "Toth" | "Wilson" | "Stevenson" | "Millard" | "Lewis" | "Murph" | "Hicks" | "Simons" | "Edwards" | "Gargotta" | "Deimel" | "Sweigert" | "James" | "Frank" | "Deforest" | "agreement" | "Creehan" | "Schori" | "Sach" | "Harmon" | "Griswold" | "Robinson" | "Russell" | "Sachs" | "Herrmann" | "Williams" | "McConnell's Mother" | "McConnell" | "Price" | "Betsy" | "Roehrich" | "Millard" | "Luther" | "Werner" | "Gunderson" | "Hall" | "Donegan" | "Morris" | "Munson" | "Grinnell" | "Howell" | "MCassatt" | "RCassatt" | "Brunot" | "Radner" | "Penn" | "Robison" | "Bonner" | "Wainwright" | "Martin" | "Hays" | "Scriven"}
+date = element date{text}
+who = element who{ref , text}
+sect = element sect{type , text}
+type = attribute type{"Anglican" | "Episcopal" | "Marxist" | "Orthodox"}
+location = element location{text}
+church = element church{text}
+parish = element parish{text}
+stat = element stat{mixed{(quote | date | who | sect | location | church | parish | stat | nat | sec | schism | fact)*}}
+nat = element nat{origin , text}
+origin = attribute origin{"American" | "Canadian" | "German"}
+fact = element fact{mixed{(quote | date | who | sect | location | church | parish | stat | nat | sec | schism | fact)*}}
+sec = element sec{mixed{(quote | date | who | sect | location | church | parish | stat | nat | sec | schism | fact)*}}
+schism = element schism{mixed{(quote | date | who | sect | location | church | parish | stat | nat | sec | schism | fact)*}}

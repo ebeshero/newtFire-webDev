@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+.Accordion
+{
+	overflow: hidden;
+	width: 908px;
+}
+
+
+.AccordionPanel
+{
+	margin: 0px;
+	padding: 0px;
+}
+
+.AccordionPanelTab
+{
+	font-family: "Trebuchet MS", Helvetica, Verdana, Arial, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	margin: 0px;
+	cursor: pointer;
+	padding: 10px 30px 10px 55px;
+	border-top: solid;
+	border-color: #75570b;
+	border-width: 1px;
+	font-weight: bold;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	background-image: url(../images/accordian_908.gif);
+	background-color: #c5b58d;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+}
+
+.AccordionPanelContent
+{
+	overflow: auto;
+	margin: 0px;
+	padding: 0px;
+	color: #ffffff;
+	background-color: #c5b58d;
+	z/oom: 1;  /* Hack for IE to force auto height for the content panels  */
+}
+
+.AccordionPanelOpen .AccordionPanelTab
+{
+	background-position: 0px -120px;
+	color: #75570b;
+}
+
+.AccordionPanelTabHover
+{
+	background-position: 0px -60px;
+	color: #FFFFFF;
+}
+
+.AccordionPanelOpen .AccordionPanelTabHover
+{
+	background-position: 0px -180px;	
+}
+
+.AccordionFocused .AccordionPanelTab
+{
+	background-color: #c5b58d;
+}
+
+.AccordionFocused .AccordionPanelOpen .AccordionPanelTab
+{
+	background-color: #c5b58d;
+}
+
+.AccordionPanelContent .acontent
+{
+	padding: 20px 30px 20px 55px;
+}
+

@@ -1,0 +1,34 @@
+xquery version "3.0";
+<html>
+<head>
+<title>Church Schism</title>
+</head>
+<body>
+<table border="1">
+<tr>
+<th>speaker</th>
+<th>quote</th>
+</tr>
+{
+let $Schism :=collection('/db/churchSchism')/*
+let $persName :=$Schism//quote/@ref/string()
+let $distinctPers :=distinct-values($persName)
+for $i in $distinctPers
+return
+<tr>
+<td>{string-join($i, "&#10;")}:</td>
+<td><table>
+{
+let $quote :=$Schism//quote[@ref=$i]/string()
+return
+<tr>
+<td>{string-join($quote,"&#10;")}</td>
+</tr>
+}
+</table>
+</td>
+</tr>
+}
+</table>
+</body>
+</html>
