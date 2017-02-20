@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Schematron Exercise 2</title>
+        <link rel="stylesheet" type="text/css" href="explain.css"/>
+    </head>
+    <body>
+        <!--#include virtual="topAuthorNLL29-BAS160.html" -->
+        <section title="exerciseName"><h1><span class="banner">Schematron Exercise 2</span></h1></section>
+        <section title="preliminaries">
+            <h3>Preliminaries</h3>
+            <p>To work on this assignment, you will need to to find and do the following:</p>
+            <ul>
+                <li><strong>Information resources at the ready:</strong> 
+                    Review <a href="http://newtfire.org/dh/explainSchematron.html">our Schematron tutorial</a>, and read more about the XPath functions and syntax we describe below either on the web (see w3Schools’ <a href="http://www.w3schools.com/xsl/xsl_functions.asp">“XSLT, XPath, and XQuery Functions”</a>, Obdurodon’s <a href="http://dh.obdurodon.org/functions.xhtml">“The XPath Functions We Use the Most”</a>) or through offline searching with the index of the Michael Kay book.</li>  
+                    
+                <li><strong>XML file to test:</strong> Save this TEI file locally and open it in &lt;oXygen/&gt;: <a href="DickinsonFullWithErrors.xml">Emily Dickinson’s Fascicle 16 poems</a>. You will need to associate your Schematron file with this document <strong>in addition to</strong> the currently associated TEI schema lines.</li>
+                    
+                <li>Open a new Schematron document in &lt;oXygen/&gt; by going to <strong>File → New</strong> and typing “Schematron” in the “Type filter text” box, or by going to <strong>File → New → New Document → (scroll to Schematron in the alphabetized list) → Schematron</strong>. Once opened, you will keep the default xml line at the top, but you will delete everything from <code>&lt;sch:schema&gt;</code> down. To write Schematron rules for a document in the TEI namespace, you will then replace this with:
+            <pre>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
+    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+    xmlns="http://purl.oclc.org/dsdl/schematron"&gt;
+        &lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;
+        
+    &lt;/schema&gt;</pre></li>
+                <li>Write your Schematron patterns <strong>inside</strong> the <code>&lt;/schema&gt;</code> root element.</li>
+                <li>Use the <code>tei:</code> prefix before each of your elements since we are working with a document in the TEI namespace. Remember that we do <strong>not</strong> use that prefix before attributes because attributes are in no namespace.</li>
+            </ul>
+            
+        </section>
+        <section title="analysisOfTask">
+            <h3>Analysis of the task</h3>
+            <section title="goal">
+                <h4>The goal:</h4>
+                <p>The Dickinson project team is using TEI <code>&lt;app&gt;</code> elements inside the lines of Dickinson’s poems when they need to encode a set of <dfn>variant</dfn> words or phrases that appear in different publications, labeled in the <code>&lt;rdg&gt;</code> elements with their <code>@wit</code> attributes. You are working with a single file representing a set of poems from a collection of manuscripts or <dfn>fascicle</dfn> that Emily Dickinson bundled and bound together herself. For this assignment, you will write Schematron to function on top of the established TEI Relax NG Schema to help ensure that the <code>&lt;app&gt;</code> and <code>&lt;rdg&gt;</code> elements are written properly according to the rules of the team. You will need to write a few rules to make sure that particular elements and attributes are appearing where we need them to, to make sure the poems are appearing in the proper order in this document (Poem 1 through Poem 11), and to control for missing or additional white spaces around our tags that might be distorting our representation of the poems.</p>
+            </section>
+            <section title="steps">
+                <h4>Creating the rules step by step:</h4>
+                
+                <ol>       <li><strong>Make sure each <code>&lt;rdg&gt;</code> element has no other attribute but <code>@wit</code>.</strong> We want to make sure that the <code>&lt;rdg&gt;</code> element has nothing but an <code>@wit</code> attribute, but it <em>must</em> have this attribute. (The TEI schema by itself will allow other attributes or no attributes at all on this element, but we want to make sure that our project team only uses just this <code> @wit</code> attribute and not others.) Consider that we want the Schematron to tell us when <code>@wit</code> is <em>missing</em> and decide whether you need to write an <code>&lt;assert&gt;</code> or a <code>&lt;report&gt;</code> rule for this. Our solution uses the <code>not()</code> function in <code>@test</code> to fire if the <code>&lt;rdg&gt;</code> does not have <code>@wit</code> (including if it has any attribute other than <code>@wit</code>).
+                    <p><span class="smaller"><strong>Remember to use the <code>tei:</code> prefix before your element names!</strong> (Examples: <code>tei:app</code> and <code>tei:rdg</code>)</span></p></li>
+                
+           
+                    <li><strong>Make sure there are one or more <code>&lt;rdg&gt;</code> elements inside an <code>&lt;app&gt;</code> element.</strong> For this rule we want to check that an <code>&lt;app&gt;</code> element has a <em>count</em> of at least one or more than one <code>&lt;rdg&gt;</code> element. <strong>Note:</strong> For every new rule that matches in some way on the <code>&lt;rdg&gt;</code> context, you need to position it inside a new Schematron <code>&lt;pattern&gt;</code> element because otherwise only the first rule at a given context will fire and the others will remain passive.</li>
+                
+                    
+                    <li><strong>Make sure all of the poems are in the correct counting order within the document.</strong> The team used XSLT to combine eleven separate documents, each holding a single poem, into the one XML file you are working with to hold the entire collection. However, the poems may not have transferred over in the correct order. For example, maybe Poem 6 comes after Poem 7 instead of coming directly after Poem 5. The rule that we will create now will help to check if the poems are in order so you can rearrange them if they are not. For this, we need to do the following:
+                    <ul>
+                        <li><p>First we need to look over our XML document that is holding all of the poems and find out <em>where</em> all of the poem titles are located in the hierarchy. Those poem titles each hold a number (1 to 11) that indicates where they properly sit in the sequence of the collection. We know that these <code>&lt;title&gt;</code> elements are positioned inside the <code>div/head</code> of each poem. Notice that each begins with the same pattern of text: the word "Poem" followed by a white space and a one or two-digit number.</p></li>
+                        <li>Think about what we need to do: We want to make sure that these poems are in the correct order, based on the number given in their title. Is the poem titled Poem 2 immediately following the one titled Poem 1? If we look ahead and evaluate each poem's title in relation to the one that follows it, we only want to look at poems <em>that are followed by another poem</em>. (The last poem will not have a poem following after it to compare, but it will already be worked into the test because it will be the poem following the second-to-last poem.) Write your Schematron <code>&lt;rule&gt;</code> element and set its <code>@context</code> accordingly. (Our solution sets the <code>@context</code> at the <code>title</code> position. Think about whether you want to use the <code>following-sibling::</code> or the <code>following::</code> axis. Either way, you will need to compare a number in the <code>&lt;title&gt;</code> element of a current poem to that of the <strong>first</strong>, immediately-following poem.)</li> 
+                         <li>Decide whether you want to write an <code>&lt;assert&gt;</code> or <code>&lt;report&gt;</code> test that isolates the number of the poem inside the title element at your context. Our solution uses the <code>number()</code> function to convert the numeral(s) into a literal number, and then adds <code>+ 1</code> to test if that value equals the number of the poem given in the next following poem <code>div</code> (stepping down into <em>its</em> <code>title</code> element to isolate and convert and read <em>its</em> number). (Think about why we need to add <strong>+ 1</strong> here, or perhaps alternative ways you could write this test.)
+                         </li>   
+                        <li>You need to isolate just the number after the word “Poem” in the title, and to do this you need the <code>substring()</code> function (which you may wish to look up in Michael Kay or <a href="http://www.w3schools.com/xsl/xsl_functions.asp">w3schools</a> to see how this is formatted). The <code>substring()</code> function takes three arguments. The first argument indicates the XPath node (so if you set your rule context at the title, you would just invoke the <code>self::*</code> or dot(<code>.</code>) as the first argument). The second and third arguments are numbers: The second argument gives the numerical position of the character in the whole string of text that indicates the point where you want to start extracting your substring (so for this, count over from the start of the title to the first digit you want). The third argument indicates <em>how many</em> characters you want to extract into your substring. So the function is set up like this:
+                            <pre><code>substring(XPath, character-position-number-to-start, number-of-characters-to-extract)</code></pre>
+Note: since we have 11 poems, we are going to need to extract two characters to deal with Poem 10 and Poem 11.</li> 
+
+<li>Wrap your <code>substring()</code> in a <code>number()</code> function to convert it, and now work with it <em>as</em> a number. Add <code>+ 1</code> to it, and see if that value, <code>(substring() + 1)</code> equals the <code>substring()</code> in the title of <em>just</em> the very next poem in the sequence.</li>                     
+    
+                            <li>Test your rule. Our file is deliberately out of sequence, so you can expect to see errors if your rule is firing correctly.</li>
+                    </ul></li>
+                 
+                 <li><strong>Test the values of the <code>@wit</code> attributes sitting on the <code>rdg</code> elements to be sure they are not mistyped.</strong> This is something you are likely to need in your projects, so we direct you to <a href="explainSchematronIdRefs.html">our special Schematron tutorial on testing unique identifiers</a>, which shows you how to work with <code>@xml:id</code>s (unique identifiers) and their corresponding referencing attributes.
+                 Can you adapt the code in our tutorial to work with this file and its positioning of the list of witnesses in this document?
+                 </li>
+                    <li><strong>Optional Challenge: Control the white space around the <code>&lt;app&gt;</code> and <code>&lt;rdg&gt;</code> elements in a line of poetry.</strong> As the team works on coding these poems, it is very easy for them to accidentally remove or add white space in applying <code>&lt;app&gt;</code> and <code>&lt;rdg&gt;</code> elements. It is very easy to make two words run together by accident, for example, by coding like this:
+                        <pre>
+                    &lt;l n="1"&gt;When we stand on the tops of&lt;app&gt;
+                     &lt;rdg wit="#df16"&gt;Things—&lt;/rdg&gt;
+                     &lt;rdg wit="#bm"&gt;things&lt;/rdg&gt;
+                  &lt;/app&gt;
+               &lt;/l&gt;
+               </pre>
+                        Notice that there is no space before the opening <code>&lt;app&gt;</code> tag and no space inside the opening <code>&lt;rdg&gt;</code> tag, so when the team transformed this to view the first witness in HTML, we saw something like this:<br/>
+                        <div class="badCode"><strong> When we stand on the tops ofThings—</strong></div>
+                        
+                        To deal with this, we need to recognize that sometimes we want a white space in between the main line of text and the starting <code>&lt;app&gt;</code> element, and sometimes we do not. <ul>
+                            <li>We <strong>do not want to add a space</strong> when the line of text before <code>&lt;app&gt;</code> ends with white space already, when it has a special punctuation mark, a dash (<code>—</code>) or a quotation mark (<code>&amp;quot;</code>) designed to connect with the text in the <code>&lt;rdg&gt;</code> element(s).</li> 
+                            <li>We need to <strong>add</strong> a white space whenever the line of text before <code>&lt;app&gt;</code> ends with something <em>other than</em> the three characters we described above <em>and</em> the <code>rdg</code> element inside begins with a letter (another alphabet character).</li> 
+                            <li>We might have to <strong>remove</strong> an extra white space when the line of text before <code>&lt;app&gt;</code> ends with <em>any non-space character followed by a space</em>, and the <code>&lt;rdg&gt;</code> element opens with a white space.</li>
+                            <li>You may also want to test for white space at the end of an rdg element when its <code>parent::app</code> is <em>followed by</em> a string of text.</li>
+                        </ul>
+                        For our purposes, if you can write a Schematron rule that addresses even just one of the above scenarios, that is sufficient, though we hope that if you succeed with one test, you will figure out how to write one or two others! To control for white space, we created a pattern with a single rule set on the <code>@context</code> of the <code>tei:rdg</code> element, because we need to look at each <code>&lt;rdg&gt;</code> element in turn to see if we have a white space problem, and there are often multiple <code>&lt;rdg&gt;</code> elements inside each line. When we set the context to the whole line of poetry, it might have multiple sets of <code>&lt;app&gt;</code> elements inside, and we cannot write a precise enough rule to address the spans of text we need. To proceed, we need to understand something about <strong>mixed content</strong>: When an element like the TEI <code>l</code> (for a line of poetry) contains a mixture of <code>text()</code> and other elements, the <code>text()</code> node is sitting in a <strong>sibling</strong> relationship to the nested elements, so that a span of text in a line of a Dickinson poem is sitting on the <code>preceding-sibling::</code> axis in relation to the <code>&lt;app&gt;</code> element that follows it. If you write your rule as we did, from the context of the <code>&lt;rdg&gt;</code> elements, you will need to write your test to reach up to to the parent <code>&lt;app&gt;</code> elements and walk over to the <code>preceding-sibling::text()</code> node. We use the <code>matches()</code> function in our Schematron  <code>@test</code> because it works with regular expressions and helps us to identify the particular conditions we are looking for. (Look up this function in one of the sources we list in the Preliminaries section of this assignment to be sure you understand how to write it.) Specifically, we are going to need a <em>two-part test</em>, and we can use the <code>matches()</code> function twice, joined by the word <code>and</code> to see first if a) the line of text that is the first preceding-sibling of our parent <code>&lt;app&gt;</code> <em>ends with</em> something in a regex character set, <strong>and</strong> b) the contents of our context <code>&lt;rdg&gt;</code> element <em>starts with</em> something in a regex character set, like this:
+                        <pre>test="matches(. . .) <code>and</code> matches(. . .)"</pre>
+                        or
+                        <pre>test="not(matches(. . .) <code>and</code> matches(. . .)"</pre>
+                        or some combination of these.
+                        <p>Note that the <code>matches()</code> function takes two arguments like this: <code>matches(Xpath-location, 'regex-pattern')</code>. You might be wondering why we aren’t using the functions <code>starts-with()</code> or <code>ends-with()</code>. The answer is that these do not help us with finding regular expressions, but <code>matches()</code> can look for a regex pattern <em>wherever we need it</em>. To designate the <strong>start of a line</strong> in regex (or the start of the text in a given XPath node, use the regex caret, <code>^</code>, at the start of the regex pattern you are hunting for, and to designate <strong>the end of the text</strong>, use the regex dollar sign, <code>$</code> at the end of your regex pattern.</p>
+                        <p><strong>Bonus task: </strong>You will likely have difficulty with matching on a quotation mark, because if you try to include it literally in the character set (or even escape it), it will be interpreted as the end of the schematron attribute and will result in a formedness error, munging your Schematron code. Consider it a bonus task on this assignment to find a way to match on a straight quotaton mark. Hint: you will need to escape the literal quotation mark using <code>&amp;quot;</code>, but you won’t be able to include it in a <code>[ ]</code> character set.</p>
+                        <p>See how far you can get with this Optional Challenge Task and if you get stuck, record what you tried and what didn’t work. Do your tests fire? You should see some white space errors in the file as we presented it, but you should also tinker with the white space just before an <code>&lt;app&gt;</code> tag and at the start of an <code>&lt;rdg&gt;</code> element. </p>
+                        
+                    </li>  
+                    
+             
+             </ol>
+                
+                <section title="uploading">
+                    <h3>Submission</h3>
+                    <p>Upload your completed Schematron schema AND the Dickinson poems XML <strong><em>with your Schematron associated</em></strong> to Courseweb, and follow our <a href="explainFileNames.html">standard filenaming conventions for homework assignments uploaded to Courseweb</a>.</p>
+                </section>
+            </section>
+        </section>
+    
+</body></html>
