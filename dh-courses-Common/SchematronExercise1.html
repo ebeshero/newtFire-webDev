@@ -56,12 +56,12 @@ name = attribute name {"NYC" | "Mexico" | "London" | "Rome"}</pre>
     &lt;place name="Rome"&gt;30&lt;/place&gt;
     &lt;place name="London"&gt;12&lt;/place&gt;
 &lt;/results&gt;</pre>
-                <p>Our Relax NG schema is a little sloppy and doesn't constrain the XML as
+                <p>Our Relax NG schema is a little sloppy and doesn’t constrain the XML as
                     thoroughly as it could have been better written (as we will discuss below). It
                     lets us set a rule that the content of the element <code>&lt;place&gt;</code>
                     must be a number (or xsd:int for integer), but the rule isn’t really good enough
                     as we will see from the from the following example:</p>
-                <div class="badCode">&lt;results&gt;<br />
+                <div class="badCode">&lt;results&gt;<br/>
                     <span class="indent">&lt;place name="NYC"&gt;27&lt;/place&gt;</span><br />
                     <span class="indent">&lt;place name="Mexico"&gt;39&lt;/place&gt;</span><br />
                     <span class="indent">&lt;place name="Rome"&gt;12&lt;/place&gt;</span><br />
@@ -79,12 +79,11 @@ name = attribute name {"NYC" | "Mexico" | "London" | "Rome"}</pre>
                     Relax NG schema with your XML. As you write the following rules, "munge" (aka
                     mess up) the XML to verify your rules are firing by entering correct and
                     incorrect values into the XML.</p>
-                <ul>
+                <ol>
                     <li>Write a Schematron rule that verifies the four percentages always equal
                         100%.</li>
 
-
-                    <li>Write a Schematron rule that fires an error when any location's voting
+                    <li>Write a Schematron rule that fires an error when any location’s voting
                         percentage sits outside of the 0 to 100 range. There should be no negative
                         integers and no integers greater than 100. <span class="smaller">(Hint: the
                             Relax NG schema states that these values must be integers, so you will
@@ -93,22 +92,20 @@ name = attribute name {"NYC" | "Mexico" | "London" | "Rome"}</pre>
                             as integers and instead will try to process them as strings of text. Use
                             the <code>number()</code> function so the computer parses the values as
                             numbers.)</span></li>
+                    <!--2017-02-22 ebb: We notice that we need the number() function when the content of an element is a number like this, but we DON'T need it when the  number is pulled from an attribute. We should investigate this further.  -->
 
-                    <li>Write a Schematron rule that tests there are only ever four places.</li>
+                    <li>Write a Schematron rule that tests there are only ever four place elements in our list of locations to visit for Spring Break.</li>
 
                     <li>Write a Schematron rule that tests if any of the <code>@name</code> values
                         are repeated. It should not be possible for there to be any places that
-                        appear more than once in the XML. <span class="smaller">(Hint: use
-                                <code>count()</code> and <code>current()</code> to set the count of
-                            each <code>@name</code> as it runs through the parser equal to
-                            one.)</span></li>
-                </ul>
+                        appear more than once in the XML. <span class="smaller">(Hint: Think about using the <code>count()</code> function for this. How many different values for <code>@name</code> should there be? How would you make sure each value is not repeated?</span></li>
+                </ol>
                 <h4>Optional Task:</h4>
                 <ul>
-                    <li>Write a Schematron rule that reports or asserts the places are listed in
-                        order from greatest to least. <span class="smaller">(Hint: You will need to
+                    <li>Write a Schematron rule that tests whether the places are listed in
+                        order from greatest to least number of votes. <span class="smaller">(Hint: You will need to
                             check the <strong>numerical</strong> value of each place with their
-                                <strong>sibling</strong> place's <strong>numerical</strong>
+                                <strong>sibling</strong> place’s <strong>numerical</strong>
                             value. Pending on your rule context you may need to clarify the position of the immediate sibling using the [1] position notation.)</span></li>
                 </ul>
             </section>
