@@ -46,39 +46,39 @@
             italic) or font weights (e.g., bold) or add text decoration (e.g., underlining) or text
             transformation (e.g., convert to all upper case) … well … really anything stylistically
             possible.</p>
-        <p>There are several types of in-line elements in our input XML document, for the purposes
-            of this assignment we will focus on these few:</p>
+        <p>There are several types of in-line elements in our input XML document, but for the purposes
+            of this assignment we will focus on processing the paragraphs (<code>&lt;p&gt;</code> inside the <code>&lt;articleBody element&gt;</code> to receive special tagging:</p>
         <ul>
             <li><code>&lt;unclear&gt;</code> This element will require special attention (described
                 below)!</li>
-
+            
             <li><code>&lt;headLine&gt;</code></li>
-
+            
             <li><code>&lt;workingConditions&gt;</code> For the purpose of this assignment we only
-                want you to grab this element when it appears inside of the
-                    <code>&lt;articleBody&gt;</code> element.</li>
-
+                want you to grab this element when it appears below the
+                <code>&lt;articleBody&gt;</code> element.</li>
+            
             <li><code>&lt;dialogue&gt;</code></li>
-
+            
             <li><code>&lt;femVoice&gt;</code> For the purpose of this assignment we only want you to
                 process this element when it appears inside of the <code>&lt;dialogue&gt;</code>
                 element. </li>
-
+            
             <li><code>&lt;nellVoice&gt;</code> For the purpose of this assignment we only want you
                 to process this element when it appears inside of the <code>&lt;dialogue&gt;</code>
                 element.</li>
-
+            
             <li><code>&lt;mascVoice&gt;</code> For the purpose of this assignment we only want you
                 to process this element when it appears inside of the <code>&lt;dialogue&gt;</code>
                 element.</li>
-
+            
             <li><code>&lt;company&gt;</code> For the purpose of this assignment only style the
                 company names that have the attribute and value
                 <code>@name="identified"</code>.</li>
         </ul>
-        <p>Some are immediately inside <code>&lt;articleBody&gt;</code> (like
-                <code>&lt;workingConditions&gt;</code> and <code>&lt;unclear&gt;</code>). While
-            others sit inside other in-line elements like all of the voice tags sitting inside of
+        <p>Some are immediately inside <code>&lt;p&gt;</code> elements in the article body (like
+            <code>&lt;workingConditions&gt;</code> and <code>&lt;unclear&gt;</code>).
+            Others sit inside other in-line elements like all of the voice tags sitting inside of
                 <code>&lt;dialogue&gt;</code> elements or <code>&lt;headLine&gt;</code> elements
             that sit inside the <code>&lt;head&gt;</code> element. You may not know at the outset
             which ones can be inside which other ones, or how deeply they can nest. Happily, with
@@ -86,7 +86,7 @@
             questions!</p>
         <p>An example of possible desired output can be found here <a
                 href="1888-07-30_XSLTresults.html"
-                >http://newtfire.org/dh/1888-07-30_XSLTresults.html</a>. It is important to note
+                >http://newtfire.org/dh/1888-07-30_XSLTresults.html</a>, though we did not style the body paragraphs in this output file. . It is important to note
             that the majority of the styling choices on this file are controlled with a CSS file.
             You will make your own CSS and relate it to your XSLT; therefore, your stylistic choices
             might vary greatly from ours and your output may look completely different. What should
