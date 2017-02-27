@@ -1382,19 +1382,26 @@
                 <date when="2017-02-27">M 02-27</date>
             </head>
             <div type="inclass">
-                <p>Pull vs. Push processing (and why we tend
-                    to work with XQuery for Pull processing)</p>
+                <p>Review of template matching and processing XML. </p>
+                <p>"Push" vs. "Pull" processing, and how to write XSLT to output HTML that doesn't follow the structure of the input XML. XSLT Conditions: <code>xsl:if</code> and <code>xsl:choose</code>. Processing TEI with xpath-default-namespace.</p>
             </div>
             <div type="assign">
-                <list>
-                    
+                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
+                    3</ref></item>
+                    <item><!--ebb: Update the XQUERY MATERIALS for PSC eXist! BRIDGES?-->Read <ref
+                        target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay’s
+                        XQuery Tutorial</ref> and our <ref
+                            target="http://newtfire.org/dh/explainXQuery.html">Introduction to
+                            XQuery and the eXist XML Database</ref> in preparation for the next
+                        class.</item>
+                </list>
+                <!--<list>                   
                     <item>Review and consult <title level="a"><ref target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref></title> and <title level="a"><ref target="http://dh.obdurodon.org/avt.xhtml">XSLT
                         Attribute Value Templates</ref></title> tutorials as you work on the XSLT exercises this week.
                         exercise.</item>
                     <item><hi rend="em"><ref target="XSLTExercise3_CDV.html">XSLT Exercise
-                        3</ref></hi></item>
-                    
-                </list>
+                        3</ref></hi></item>  
+                </list>-->
             </div>
         </div>
         <div type="day">
@@ -1402,28 +1409,7 @@
                 <date when="2017-03-01">W 03-01</date>
             </head>
             <div type="inclass">
-                <p>How to make internal links on a webpage with XSLT and AVTs</p>
                 <p>Introducing XQuery and eXist, the XML database. </p>
-            </div>
-            <div type="assign">
-                <list>
-                    <item><hi rend="em"><ref target="XSLTExercise4_CDV.html">XSLT Exercise
-                        4</ref></hi></item>
-                    <item><!--ebb: Update the XQUERY MATERIALS for PSC eXist! BRIDGES?-->Read <ref
-                        target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay’s
-                        XQuery Tutorial</ref> and our <ref
-                            target="http://newtfire.org/dh/explainXQuery.html">Introduction to
-                            XQuery and the eXist XML Database</ref> in preparation for the next
-                        class.</item>
-                    
-                </list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2017-03-03">F 03-03</date>
-            </head>
-            <div type="inclass">
                 <p>Learning to write XQuery: collections and documents, queries and FLWORs</p>
                 <p>XQuery online and offline: in eXist and in &lt;oXygen/&gt;</p>
             </div>
@@ -1435,8 +1421,23 @@
                     XQuery and the eXist database environment.</item>
                     <item><hi><ref target="XQueryExercise1.html">XQuery Exercise
                         1</ref></hi></item>
-                    <item>Work on <hi>Project Development Take-Home Midterm</hi></item>
+                   
                 </list>
+            </div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2017-03-03">F 03-03</date>
+            </head>
+            <div type="inclass">
+                <p>XQuery: Writing FLWOR statements and outputting HTML</p>
+          
+            </div>
+            <div type="assign">
+               <list>
+                   <item><hi><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></hi></item>
+                   <item>Work on <hi>Project Development Take-Home Midterm</hi></item>
+               </list>
             </div>
         </div>
     </div>
@@ -1459,10 +1460,10 @@
                 <date when="2017-03-13">M 03-13</date>
             </head>
             <div type="inclass">
-                <p>XQuery: Writing FLWOR statements and outputting HTML</p>
+                <p>XQuery: Writing nested FLWORS and HTML output</p>
             </div>
             <div type="assign">
-                <p><hi><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></hi></p>
+                <p><hi><ref target="XQueryExercise3.html">XQuery Exercise 3</ref></hi></p>
             </div>
         </div>
         <div type="day">
@@ -1470,11 +1471,17 @@
                 <date when="2017-03-15">W 03-15</date>
             </head>
             <div type="inclass">
-                <p>Nested FLWORS and HTML output</p>
-                <p>Project Discussion</p>
+                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+                    and screen grid coordinates. </p>
+                <p>Introduce with <ref target="http://www.w3schools.com/svg/default.asp">w3Schools SVG Tutorial</ref>.</p>
+                <p>Project Discussion: Working with project XML files in eXist-db</p>
             </div>
             <div type="assign">
-                <p><hi>Complete Project Midterm</hi></p>
+              
+                    <list><item>Work through <ref target="http://www.w3schools.com/svg/default.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
+                        Filters, gradients, examples, and reference are optional.</item>
+                        <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
+                
             </div>
         </div>
         <div type="day">
@@ -1482,14 +1489,15 @@
                 <date when="2017-03-17">F 03-17</date>
             </head>
             <div type="inclass">
-                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
-                    and screen grid coordinates. </p>
-                <p>Introduce with <ref target="http://www.w3schools.com/svg/default.asp">w3Schools SVG Tutorial</ref>.</p>
+            <p>XQuery to SVG: Pulling data for visualizing.</p>
+                <p>Making graphs, plotting axes.</p>
+                
             </div>
             <div type="assign">
-                <list><item>Work through <ref target="http://www.w3schools.com/svg/default.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
-                    Filters, gradients, examples, and reference are optional.</item>
-                <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
+                <list>
+                    <item>TBD: new XQuery to SVG Assignment</item>
+                    <item><hi>Complete Project Midterm</hi></item>
+                </list>
             </div>
         </div>
     </div>
@@ -1499,8 +1507,8 @@
                 <date when="2017-03-20">M 03-20</date>
             </head>
             <div type="inclass">
-                <p>XQuery: Nesting FLWORS: when and why </p>
-                <p>XQuery to SVG: Pulling data, choosing visualization formats: Timelines</p>
+               
+                <p>XQuery to SVG: choosing visualization formats: Timelines</p>
                 <p>Saving output in the eXist database</p>
             </div>
             <div type="assign">
