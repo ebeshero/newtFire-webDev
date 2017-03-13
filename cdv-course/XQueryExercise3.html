@@ -167,8 +167,7 @@ You will need the string-join() function, and use the using a special ASCII char
          </li> 
          <li>
             				We would like to output this information as a KML document that we can transform
-            for ourselves in &lt;oXygen/&gt;. To do that, click on the link to the right of the output
-            box labelled in green in square brackets: <strong>[more map options]</strong>.
+            				for ourselves in &lt;oXygen/&gt;. To do that, change the output format to the right of the results box from “Google Maps” to “KML (G. Earth)”. Then, click on the link labelled in green in square brackets: <strong>[more map options]</strong>.
             <ul>
                				
                <li>This brings up a page titled <strong>“Convert your GPS data for use in Google Earth.”</strong> In the “General map parameters” area, <strong>change the Output file type</strong> on the dropdown menu from the default .kmz (zipped) to the form we want: <strong>.kml (uncompressed)</strong>. Notice that you can make adjustments here to your output data. The KML file you
@@ -226,8 +225,7 @@ You will need the string-join() function, and use the using a special ASCII char
                <li>Your FLWOR statement will need to output, in the kml <span class="code">name</span> element, <strong>each one of the <span class="code">distinct-values()</span> of the <span class="code">location</span> element</strong> (using that range variable you worked with in the previous XQuery Exercise 2). 
                </li>
                				
-               <li>In the <span class="code">description</span> element you need to define a variable that will look up for *each* of the location
-                  names in that distinct-values list (using that range variable still), the <strong>longest paragraph</strong> (coded as <span class="code">&lt;p&gt;</span> in the XML files of the Schism collection. Return the <span class="code">string()</span> value of that paragraph so we don't bother with its tags: we just want its plain
+               <li>In the <span class="code">description</span> element you need to define a variable to look up the <strong>longest ancestor paragraph</strong> that holds each location (coded as <span class="code">&lt;p&gt;</span> in the XML files of the Schism collection). Return the <span class="code">string()</span> value of that paragraph so we don’t bother with outputting its internal tags: we just want its plain
                   text.
                </li>
                <li> When you are generating output that makes sense, do the following:
@@ -328,14 +326,13 @@ You will need the string-join() function, and use the using a special ASCII char
          <li>Do number six as described in the overview above, and experiment with importing it
             into Google Earth or Google Maps: Do you see the output? Can you click on the placeMarks
             to view the paragraphs you extracted from the project files? 
-            <ul>
-               <li>Again, to import a KML file into Google Maps, <a href=" http://www.igismap.com/upload-kml-file-google-map/">follow these instructions</a>. To view in Google Earth, simply open Google Earth and open the file within it.
-               </li>  
+            (Again, to import a KML file into Google Maps, <a href=" http://www.igismap.com/upload-kml-file-google-map/">follow these instructions</a>. To view in Google Earth, simply open Google Earth and open the file within it.)</li>
+                 
                <li>Upload your two XQuery files, and each of the KML files you generated (three of them)
                   to Courseweb for this assignment. Voila!
                </li> 
-            </ul>
-         </li>
+            
+       
          		
       </ol>
       		
