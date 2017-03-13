@@ -26,9 +26,7 @@
       <span class="smaller">image of planet Earth surrounded by satellite debris, made viewable by space technology.</span>
       	<p>This exercise gives you experience with API technology to look up geospatial data that you extract from XML, and then plot that data, together with information from your XML, on Google Maps using KML.</p>	
       <h3>What is KML?</h3>
-      <p>KML is <strong>KML (Keyhole Markup Language)</strong>, a form XML designed to store and process location information with geospatial coordinates for visualization. Its odd name, “Keyhole,” is an homage to the early 1960s Key Hole spy satellites (so named because they were being used to see into secret areas during the Cold War, like
-         peering furtively through a keyhole into a private room). Our view of the Google Earth
-         globe and the extensive zooming and panning visibility available in Google Maps is
+      <p>KML is <strong>KML (Keyhole Markup Language)</strong>, a form XML designed to store and process location information with geospatial coordinates for visualization. Its odd name, “Keyhole,” is an homage to the early 1960s Key Hole spy satellites (so named because they were being used to see into secret areas during the Cold War, like peering furtively through a keyhole into a private room). Our view of the Google Earth globe and the extensive zooming and panning visibility available in Google Maps is
          reliant on satellite imaging technology that allows us to pan back from a distance
          to view continents or pull up close to a 3-dimensional street view.</p>
       <p>With this exercise, you will gain experience with extracting data from multiple files,
@@ -45,7 +43,7 @@
       		
       <div class="code">
          			&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />
-         			&lt;kml xmlns="http://earth.google.com/kml/2.2"&gt;<br />
+         &lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt;<br />
          			&lt;Placemark&gt;<br />
          			&lt;name&gt;McKenna Hall, University of Pittsburgh at Greensburg&lt;/name&gt;<br />
          			<span class="indent">&lt;description&gt;where digital humanities students meet for class&lt;/description&gt;</span><br />
@@ -57,20 +55,18 @@
          		
       </div>
       <p>The coordinates in the above mark latitude followed by longitude, and they are sometimes followed by a third unit (which we did not list here) indicating elevation above (or below) sea level. The latitude and longitude coordinate system works like a wrapped grid around the planet and serves as the basis for mapping technologies, permitting us to drop pins on georeferenced images based on latitude and longitude numbers. Here is a <a href="http://www.learner.org/jnorth/tm/LongitudeIntro.html">quick orientation to latitude vs. longitude.</a>.</p>
-      <p>As a form of XML, KML offers a way to store information that can be read by map visualization platforms. Since mapping technologies have proliferated on the web, there are a couple of available namespace definitions for KML. One is the Google namespace that we need to use in this assignment, which is widely in use because Google is recognized as the proprietary owner of Google Earth for which KML was developed. The other is the open standard namespace actually listed
-         in the Google Developers’ tutorial pages and that currently is set in &lt;oXygen/&gt; when
-         you open a new KML file (look in New → Framework Templates): That namespace is <span class="code">&lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt; </span>, and that is ideally the one we should use because it represents KML as an <a href="http://www.opengeospatial.org/standards/kml">international standard</a> of <a href="http://www.opengeospatial.org/">the Open Geospatial Consortium</a>, that is, an open standard for geodata storage and retrieval. However, as we will see with this exercise, the reality is that not every mapping service follows the open standard in their support of KML. For this assignment, we will use the Google namespace for consistency with the GPS lookup tool we will use with this exercise.</p> 
-      <p>A key lesson here is to expect web services to be uneven in supporting the standard KML namespace. When working with generating your own KML and coordinating with a lookup service as we are doing here, it is important to <strong>keep an eye on namespace consistency</strong> given the multiple namespaces available!
-      </p>
+      <p>As a form of XML, KML offers a way to store information that can be read by map visualization platforms. You can view a very basic KML file in &lt;oXygen/&gt; when
+         you open a new KML file (look in New → Framework Templates), and we will be processing KML in this exercise just as we do other kinds of XML files. Notice that its namespace is <span class="code">&lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt; </span>. That namespace represents KML as an <a href="http://www.opengeospatial.org/standards/kml">international standard</a> of <a href="http://www.opengeospatial.org/">the Open Geospatial Consortium</a>, that is, an open standard for geodata storage and retrieval.</p>
       			
       <h3>Overview of the assignment:</h3>
+      <p>This exercise contains lots of small interlocking parts, so it will help you to <strong>read through this overview first before you begin working!</strong></p>
       			
       <ol>
          				
          <li>First, we need to extract the distinct locations tagged in a batch of XML project
             files. We have uploaded for this purpose a small subset of the XML files from the 2015 Church Schism student project into <a href="http://dxcvm05.psc.edu:8080/">our eXist-db at the Pittsburgh Supercomputing Center</a>, accessible from <span class="code">collection('/db/Schism')/*</span>. The student project investigated news stories about a division in the Episcopal Church and keeping track of locations mentioned in the stories. We will generate a plain-text list of the names, check them for errors that we can edit, and feed them into a map API which will return us a KML file containing their geo-coordinates. To create the file in the format we need to give the API, we will extract all the distinct values of the element <span class="code">&lt;location&gt;</span> in use in these files, and we need to generate our output in a string-joined list with a line-break separator, so each name appears on a separate line in our plain text output.
 You will need the string-join() function, and use the using a special ASCII character
-            code for a <strong>line feed:</strong> <span class="code">&amp;#10;</span> 
+            code for a <strong>line feed:</strong> <span class="code">&amp;#10;</span>. To retrieve the location names from this file, we found it helpful to set up the XQuery to save the output into eXist-db, and then we downloaded it from the eXist directory.
          </li>
          				
          <li>We need the data in this format to input into a web form at <strong>GPS VIsualizer</strong>: <a href="http://www.gpsvisualizer.com/geocoder/">http://www.gpsvisualizer.com/geocoder/</a>, which will look up and output latitude and longitude coordinate data for each line
@@ -82,15 +78,15 @@ You will need the string-join() function, and use the using a special ASCII char
             				<span class="smaller">The keys to Bing, Open Maps, and Google Maps permit individuals to process info for
                some hundreds or perhaps a thousand places per day, and are a sort of filter to prevent
                abuse and overload of map APIs. You may wish to sign up for your own Basic key for
-               use in your projects. </span>
+               use in your projects.</span>
+            <p>After you paste in the Bing Maps key, select “Bing Maps" as the source, and be sure “raw list, one address per line” is selected. Then paste your list of places into the window, and click the green “Start geocoding” button. Watch the output results! There are a few different ways to save your results here: just make sure you are retrieving a KML or a KMZ file. (KMZ is a zipped archive format with KML inside, and you can open that in oXygen.) See the “Help with the Details” section below for guidance on how to save the output KML.</p>
             				
          </li>
          				
-         <li>We can output a KML file from the GPS Visualizer site, and save it to work with it.
-            We will make some changes to it so that it includes more information that we will
+         <li>Download the KML file from the GPS Visualizer site, and save it to work with it.
+            We will now make some changes to it so that it includes more information that we will
             extract via XQuery from the Church Schism project files. For this assignment, we would
-            like to capture the text of the longest paragraph surrounding each location, so that this
-            text appears in <em>placemarks</em> on our maps.
+            like to capture the text of the <em>longest paragraph surrounding each location</em> to hold in the <em>placemarks</em> of our KML, so that this text appears in a pop-up window when we click the location pins on our map.
          </li>
          				
          <li>To generate the locations with their associated longest paragraph, we return to XQuery to output a file we will call <strong>Placeography.kml</strong>. This will follow a very simple structure of a KML document: just location names and
@@ -129,14 +125,14 @@ You will need the string-join() function, and use the using a special ASCII char
          				
          <li>Now, we turn to &lt;oXygen/&gt; to write XSLT. We have some automatically generated KML
             that contains information we need to plot our maps, and we have a simple Placeography.kml.
-            We are going to write an <strong>identity transformation</strong> stylesheet that will pull the two files together. We will show you how to do that below. 
+            We are going to write an <strong>identity transformation</strong> stylesheet that will braid the two files together, to pull the GPS Visualizer KML data into our project-generated KML. We will show you how to do that below. 
          </li>
          				
          <li>We output our KML file from this identity transformation, save it and open it in &lt;oXygen/&gt;
             to be sure it is well-formed and valid. Then we input it into either Google Earth
             (if you have installed it on your computer or access it on our computer lab machines),
             or into Google Maps (for which you will need to access your Google account). To import
-            a KML file into Google Earth, <a href="http://www.igismap.com/upload-kml-file-google-map/">follow these instructions</a>. Here is <a href="https://www.google.com/maps/d/edit?mid=zInhk3q5XEGA.k4w5KlEZWuPU">a view of sample output from this assignment: what this should look like when you're done</a>.  
+            a KML file into Google Earth, <a href="http://www.igismap.com/upload-kml-file-google-map/">follow these instructions</a>. Here is <a href="https://www.google.com/maps/d/edit?mid=zInhk3q5XEGA.k4w5KlEZWuPU">a view of some old sample output from this assignment: something like what this should look like when you’re done</a>.  
          </li>
          				
          			
@@ -147,7 +143,7 @@ You will need the string-join() function, and use the using a special ASCII char
       		
       <ol>
          			
-         <li>The first task, to output plain text with distinct location names simply involves
+         <li><p>The first task, to output plain text with distinct location names simply involves
             using <span class="code">distinct-values()</span> in a way that you’ve done before. (To be sure that you are getting the correct results,
             if you do a count() of all the distinct location names coded as of now in the Schism
             project files, the number should be 46.) But there’s something unusual in this task
@@ -156,10 +152,14 @@ You will need the string-join() function, and use the using a special ASCII char
             second argument of the function. This time, we’re using a special ASCII character
             code for a <strong>line feed:</strong> <span class="code">&amp;#10;</span> . Position this in your string-join() (using quotation marks) just as you would any
             other separator character. <span class="smaller">(Or you could define it as a variable in XQuery, and then when you call the variable
-               inside <span class="code">string-join()</span>, don’t use the quotation marks.)</span> <strong>Copy this XQuery into a text file to save, as one of the files you will upload to
-               Courseweb for this homework assignment.</strong></li>
+               inside <span class="code">string-join()</span>, don’t use the quotation marks.)</span></p>
+            <p>NOTE: In order to save the output file in eXist-db, we discovered we needed to set up the <code>string-join()</code> function so that we started it before the first FLWOR statement, and ended it so that its arguments were in the return.</p>
+            <p><strong>Copy this XQuery into a text file to save, as one of the files you will upload to
+               Courseweb for this homework assignment.</strong></p>
+         
+         </li>
          			
-         <li>For the second task, highlight and copy all your output from the eXide returns window,
+         <li>For the second task, copy the list of names from your output text file,
             and paste your list of location names into <a href="http://www.gpsvisualizer.com/geocoder/">the GPS Visualizer tool</a> (after inputting the Bing Maps Key), be sure you have selected Bing Maps as your
             source (so you can use my key) and click the green “Start geocoding” button. Wait
             for the results to come out in the text window: You will see lists of latitude and
@@ -195,8 +195,8 @@ You will need the string-join() function, and use the using a special ASCII char
          			
          			
          <li>You have produced one KML file, or rather you have let the GPS Visualizer do it for
-            you. Now, we want to create a very simple KML file of our own. Go back into eXist,
-            and this time, write a new XQuery file (building on the previous XQuery that you wrote,
+            you. Now, we want to create a very simple KML file of our own. Go back into eXist-db,
+            and write a new XQuery file (building on the previous XQuery that you wrote,
             if you like). This time, we need to output a file that contains KML’s structure of
             &lt;placeMark&gt; elements, with two elements inside: a &lt;name&gt; element and a &lt;description&gt;
             element. You have learned to write XQuery to output HTML, with a root element at the
@@ -205,7 +205,7 @@ You will need the string-join() function, and use the using a special ASCII char
             file: <span class="code">&lt;kml&gt;</span>, and close it at the end of your file: <span class="code">&lt;/kml&gt;</span>. In between, set up your curly braces <span class="code">{ }</span>, and write a FLWOR with a <span class="code">return</span> statement in this form:
             				
             <div class="code">
-               					&lt;kml&gt;<br />
+               &lt;kml&gt;<br />
                					<strong>{</strong><br />
                					(: FLWOR  statements  :)<br />
                					
@@ -230,47 +230,41 @@ You will need the string-join() function, and use the using a special ASCII char
                   names in that distinct-values list (using that range variable still), the <strong>longest paragraph</strong> (coded as <span class="code">&lt;p&gt;</span> in the XML files of the Schism collection. Return the <span class="code">string()</span> value of that paragraph so we don't bother with its tags: we just want its plain
                   text.
                </li>
-               <li> When you are generating output that makes sense, <strong>copy and paste your XQuery into a text file with something new in the title (like
-                     Beshero-Schism-pt2) and save it to upload to Courseweb</strong> as part of this homework assignment. Also, you now need to copy and paste that code
-                  into a new KML file in &lt;oXygen/&gt;: To do this, in &lt;oXygen/&gt; go to New, and look in
-                  the Framework Templates folder for the KML folder. Open the file, and change its top
-                  line, because it will be pointing a different KML namespace than the files we are
-                  generating. Delete the top namespace line and replace it with the following:
-                  					
-                  <div class="code">&lt;kml xmlns="http://earth.google.com/kml/2.2"&gt;</div>
-                  				Now, paste into this new file, after the new namespace line, the KML output you
-                  generated in eXist-db, making sure you have included your root element. <span class="smaller">(When you paste you might leave in the default kml root element, so it's easy to accidentally
-                     double these, and an easy problem to fix.)</span> Save your new KML file (for the purposes of our assignment) as <strong>Placeography.kml</strong> in the same folder with the KML file you generated with the GPS Visualizer.
+               <li> When you are generating output that makes sense, do the following:
+                  <ul>
+                     <li>Write your XQuery to save its output to a file (as you did earlier).</li>
+                     <li><strong>Copy and paste your XQuery into a text file with something new in the title (like Beshero-Schism-pt2) and save it to upload to Courseweb</strong> as part of this homework assignment.</li> 
+                     <li>Save your output KML file, and then download it from eXist-db. Save your new KML file (for the purposes of our assignment) as <strong>Placeography.kml</strong> in the same folder with the KML file you generated with the GPS Visualizer. <strong>Open it in &lt;oXygen/&gt;, and add its proper KML namespace to the root element</strong>, thus:
+                     <div class="code">
+                        &lt;kml xmlns="http://www.opengis.net/kml/2.2"&gt;
+                     </div>
+                        This is very important! Without that namespace line, you will not be able to process this KML with the one produced by the GPS Visualizer. You will notice that as soon as you add this namespace you will see validation errors flagged in your KML. That is okay, because we will simply use this file to feed data into the valid KML produced by the GPS Visualizer. 
+                     </li>
+                  </ul>
                </li>
                			
             </ul>
             			
          </li>
          			
-         <li>Now, you have made not one, but two KML files! We want to take that <span class="code">description</span> element you generated, with the <span class="code">p[1]</span> output and merge it with the KML file that you generated from the GPS Visualizer.
+         <li>Now, you have made not one, but two KML files. We want to take that <span class="code">description</span> element you generated with the longest <span class="code">p</span> output and merge it with the KML file that you generated from the GPS Visualizer.
             We will do that using XSLT to write an <strong>Identity Transformation</strong> stylesheet. You will be transforming the GPS Visualizer KML into a new and slightly
             modified KML, that draws from your second KML file. This will introduce you to some
             coding in XSLT that you have not seen before, a kind of coding that resembles what
             we do with drawing on multiple files in XQuery. In XSLT, too, you can work with multiple
             files. Because this is new and unusual, we want to show you how it works, so we give
-            you our code with comments. (Here are links to: 
-            <ul>
-               <li><a href="KML-IDTransform.xsl">our KML to KML Identity Transformation XSLT file</a>, so you can download the file and open it in &lt;oXygen/&gt;, and
-               </li>
-               				
-               <li><a href="KMLtoKMLExplainbw.pdf">a printable PDF document copy</a> of the code, with our comments highlighted.)
-               </li>
-               			
-            </ul>  We hope that you will be able to apply this in your files. 
+            you our code with comments: You can pull it in from the DHClass-Hub, and find it in the KML folder inside Class Examples, or access it directly to download from the web here:
+            <a href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/636e14b0b2d3e33705284e5b182c79047e8f7589/Class-Examples/KML/KML-IDTransform.xsl">our KML to KML Identity Transformation XSLT file</a>. Retrieve this file so you can open it in &lt;oXygen/&gt;. Here is a view of the code:
+   
             			
             <div class="code">
                				&lt;?xml version="1.0" encoding="UTF-8"?&gt;<br />
                				&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"<br />
                					xmlns:xs="http://www.w3.org/2001/XMLSchema"<br />
-               				<strong>xpath-default-namespace="http://earth.google.com/kml/2.2"</strong><br />
+               <strong>xpath-default-namespace="http://www.opengis.net/kml/2.2"</strong><br />
                					xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs
                math"<br />
-               					<strong>xmlns="http://earth.google.com/kml/2.2"</strong><br />
+               <strong>xmlns="http://www.opengis.net/kml/2.2"</strong><br />
                					
                					version="3.0"&gt;<br />
                					<span class="smaller">&lt;!--ebb: This is an identity-transformation stylesheet designed to transform KML into
@@ -289,13 +283,10 @@ You will need the string-join() function, and use the using a special ASCII char
                   into this transformation! We will be able to process and mingle information from more
                   than one file by establishing variables like this, set at the document node (or root
                   element) of the file. We'll invoke it below using $PO. --&gt;</span><br />
-               				&lt;xsl:template match="node() | @*"&gt;<br />
-               				<span class="indent">&lt;xsl:copy&gt;</span><br />
-               				<span class="indentMore">&lt;xsl:apply-templates select="node() | @*"/&gt;</span><br />
-               				<span class="indent">&lt;/xsl:copy&gt;</span><br />
-               				&lt;/xsl:template&gt;<br />
-               				<span class="smaller">&lt;!--ebb: This code (above) matches and copies all the elements of the KML file, and
-                  essentially makes this an Identity Transformation stylesheet.--&gt;</span><br /><br />
+               			<br/>
+               <span class="indent">&lt;xsl:mode on-no-match="shallow-copy"/&gt;</span><br />
+               				<br />
+               				<span class="smaller">&lt;!--ebb: This code (above) matches and copies all the elements of the GPS visualizer KML file that we select as input, and essentially makes this an Identity Transformation stylesheet.--&gt;</span><br /><br />
                				&lt;xsl:template match="description"&gt;<br />
                				<span class="indent">&lt;name&gt;&lt;xsl:value-of select="."/&gt;&lt;/name&gt;</span><br />
                				&lt;/xsl:template&gt;<br />
@@ -314,14 +305,7 @@ You will need the string-join() function, and use the using a special ASCII char
                						
                						&lt;/xsl:template&gt;<br />
                					
-               				<span class="smaller">&lt;!--ebb: Initially we wrote this:<br />
-                  				&lt;xsl:template match="name"&gt;<br />
-                  				&lt;/xsl:template&gt;<br />
-                  That line is basically an empty template match, so it matches on name and makes it
-                  so nothing comes out.
-                  But we decided we wanted to add a new &lt;description&gt; element, pulling from Cassie's
-                  and Ryan's XML markup, to collect the text immediately surrounding the location name.
-                  So with this template rule we're invoking a second file, signalled by the variable
+               				<span class="smaller">&lt;!--ebb: With this template rule we're invoking a second file, signalled by the variable
                   $PO which we defined at the top of our XSLT document. Note that we are establishing
                   a match-up here between the two files, so we need to use both dot (.) and current()
                   to be very precise about our match-up: The dot (.) refers to *wherever you are at
@@ -333,10 +317,7 @@ You will need the string-join() function, and use the using a special ASCII char
                					
                					
                					&lt;/xsl:stylesheet&gt;	
-               				
-               				
-               				
-               			
+        				              			
             </div>
             			
             			
@@ -362,8 +343,7 @@ You will need the string-join() function, and use the using a special ASCII char
       <h3>For more on mapping with KML:</h3>
       		
       <p>To learn more about how to work with KML and its many options for laying out and connecting
-         points, drawing shapes on maps, using image overlays, etc., see the <a href="https://developers.google.com/kml/documentation/kml_tut">Google Developers KML Tutorial</a>. There are a few options for <a href="http://dh.obdurodon.org/kml/kml-gadget.xhtml">embedding Google Earth</a> or Google Maps on a website using iframes (for Google Maps, find the embed link on
-         the webpage). We’ll help you with this, but first spend some time looking at map output
+         points, drawing shapes on maps, using image overlays, etc., see the <a href="https://developers.google.com/kml/documentation/kml_tut">Google Developers KML Tutorial</a>. There are a few options for embedding a Google Map on a website using iframes (find the embed link on the generated map). We’ll help you with this, but first spend some time looking at map output
          in various views and decide what views make the most sense for your project.
       </p>
       		
