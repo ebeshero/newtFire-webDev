@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Refresh" content="0; url=http://newtfire.org/dh/explainXPath.html"/>
+		<link rel="stylesheet" type="text/css" href="explain.css" />
+		<title>Follow the XPath!</title>
+	</head>
+
+
+	<body>
+		<div id="space">
+			<div id="title"><a href="http://www.pitt.edu/~ebb8/DHDS/"><img
+						src="blue-eye-icon-transMed.png"
+						alt="Pitt-Greensburg Digital Studies Logo: I Code!" /></a>
+				<h1><span class="banner">Follow the XPath!</span></h1>
+			</div>
+			<hr />
+			<p class="boilerplate"><span><strong>Maintained by: </strong> Elisa E. Beshero-Bondar
+				(ebb8 at pitt.edu)   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a></span><span><strong>Last modified:
+					</strong><script type="application/javascript">
+document.write(document.lastModified);
+</script></span></p>
+			<hr />
+			<h3>What is XPath and How Does It Work?</h3>
+			<p>Remember how we&#8217;ve described XML as like &#8220;nested boxes&#8221; or a &#8220;tree&#8221;? (Review that, if
+				you like, on our page explaining XML <a href="explainXML.html">&#8220;So What Exactly is
+					XML anyway?&#8221;</a>) Think of a whole XML file as a big box, and nested inside it
+				are smaller boxes. If we think of XML as a tree, we can consider the whole file as
+				springing from one root, and branching out in complex ways.</p>
+			<p><b>XPath</b> is a language that we write to select parts (or <b>nodes</b>) of an XML
+				document, so we can pick out the pieces, remix them, add to them, count them, number
+				them, etc. We write what&#8217;s called an <b>XPath expression</b> so a computer can
+				follow the path we lay out to to certain parts of an XML document. The way we
+				express this needs to be very precise, though often there are multiple ways of
+				creating a path or identifying a location in a document.</p>
+			<p>Though we sometimes &#8220;do XPath&#8221; for its own sake while we&#8217;re coding our
+				files, to help us find particular things, or check or count something, most often we
+				use XPath expressions within XML-transformation languages, including XQuery (XML
+				Query Language) and XSLT (eXtensible Stylesheet Language Transformations). XPath is
+				a &#8220;helper&#8221; or ancillary language that&#8217;s necessary to work with these transformation
+				languages, which allow us to remix, rewrite, extract pieces from, and add pieces to XML
+				files. Before you can write these transformations, you need to learn XPath. </p>
+			<h3>XML is Made of Nodes</h3>
+			<p>Think of our nested boxes in XML as made of <b>nodes</b>. A <b>node</b> is a position
+				on the XML tree, and can be one of three things:</p>
+			<ol>
+				<li>an element (or the <b>element node</b>), which, remember, contains the start and
+					end tags and everything inside: from <span class="code">&lt;element&gt; . .
+						.contents . .&lt;/element&gt; .</span></li>
+				<li>an attribute (or the <b>attribute node</b>, which contains attributes and their
+					values inside tags, as in <span class="code">@item="beads"</span> in the element
+						<span class="code">&lt;trade item="beads"&gt;</span>. <br /> (Note, we&#8217;ll
+					use the <span class="code">@</span> symbol to indicate an attribute value from
+					now on.)</li>
+				<li>plain text (or the <b>text node</b>), which is only the text content within an
+					element. (We locate the text node in cases when we want to strip out elements
+					and preserve only the text.)</li>
+			</ol>
+			<p>This link provides a handy picture of how element nodes and text nodes fit together
+				in a "tree:" <a href="http://dh.obdurodon.org/introduction-xpath.xhtml#node">David
+					Birnbaum&#8217;s XPath intro page on nodes</a>.</p>
+			<p>We&#8217;ve shown you the Outline View in &lt;oXygen/&gt;, and it may be helpful to look at
+				an outline of a file now, to explain how nodes relate to each other. </p>
+			<div id="outline">
+				<img src="outlineview1.png" alt="outline view in oXygen" /></div>
+			<div id="explan">
+				<p>Element and text nodes are described in XPath like a big family of ancestors,
+					descendents, parents, children, and siblings. </p>
+				<p>In the Outline view of this HTML file which we took from 
+						&lt;oXygen/&gt;, we&#8217;ve marked multiple levels of a family
+					relationship: The yellow highlighted root node <span class="code"
+						>&lt;html&gt;</span> is the original ancestor of all the descendents inside.
+					The red circled nodes (the <span class="code">&lt;head&gt;</span> and <span
+						class="code">&lt;body&gt;</span> elements) are the immediate <b>children</b>
+					of the <span class="code">&lt;html&gt;</span> root node. They are also
+						<b>siblings</b> to each other. </p>
+				<p>What&#8217;s the relationship of the <span class="code">&lt;div&gt;</span> node to the
+						<span class="code">&lt;html&gt;</span> root node? It&#8217;s a grandchild, or a
+					descendant. And it&#8217;s the child of the <span class="code">&lt;body&gt;</span>
+					element. See how that works?</p>
+				<p>The elements I&#8217;ve circled in green may help us to visualize siblings, all the
+					children of <span class="code">&lt;div&gt;</span>. In XPath, we can distinguish
+					these siblings in relation to each other. The second element circled in green,
+					the <span class="code">&lt;p&gt;</span> element with the text &#8220;Remember how
+					we&#8217;ve described...&#8221;, is the <b>"following-sibling"</b> to the <span class="code"
+						>&lt;b&gt;</span> element holding the text "Fall 2013 Digital Humanities."
+					And we can say that the <b>preceding-sibling</b> to the <span class="code"
+						>&lt;ol&gt;</span> element is the <span class="code">&lt;p&gt;</span>
+					element, which holds the text, &#8220;Think of our nested boxes in XML...&#8221; <br />
+					<br /><br />
+				</p>
+			</div>
+			<h3>Axes in XPath</h3>
+			<p>What we&#8217;ve just been describing about family relationships is closely connected to
+					<b>axes</b> in XPath. XPath&#8217;s default is to locate the <b>child</b> of the
+					<b>current context node</b> (or the current position designated in the XML
+				file). Basically, when you designate an axis in an XPath expression, you&#8217;re
+				indicating the direction you want your path expression to go: Do you want it to look
+					<b>up</b> to a parent or ancestor? Or <b>down</b> to a child or descendent? </p>
+			<table>
+				<tr>
+					<td><span class="code">ancestor::</span></td>
+					<td>The ancestor axis sends you to parents and above, all the way up to the root
+						node.</td>
+				</tr>
+				<tr>
+					<td><span class="code">parent::</span> or <span class="code">. .</span></td>
+					<td>The parent axis sends you up a short distance, to the immediate parent of
+						the context node.</td>
+				</tr>
+				<tr>
+					<td><span class="code">child::</span> or <span class="code">/</span></td>
+					<td>The child axis <b>(which is the default)</b> sends you down to the immediate
+						child of the context node.</td>
+				</tr>
+				<tr>
+					<td><span class="code">descendant::</span> or <span class="code">//</span></td>
+					<td>The descendent axis sends you down to the children and their children, and
+						their children&#8217;s children, etc. </td>
+				</tr>
+				<tr>
+					<td><span class="code">preceding-sibling::</span></td>
+					<td>The preceding-sibling axis sends you to the &#8220;left&#8221; to the siblings that come
+						before the context node (the big brothers and sisters, or earliest children
+						of a parent).</td>
+				</tr>
+				<tr>
+					<td><span class="code">following-sibling::</span></td>
+					<td>The following-sibling axis sends you to the &#8220;right&#8221; to the siblings that
+						come after the context node (the little brothers and sisters, or younger
+						children of a parent.</td>
+				</tr>
+				<tr>
+					<td><span class="code">self::</span> or <span class="code">.</span></td>
+					<td>There&#8217;s actually a &#8220;self&#8221; axis designating the current context node. </td>
+				</tr>
+				<tr>
+					<td><span class="code">attribute::</span> or <span class="code">@</span></td>
+					<td>One last axis that&#8217;s sort of in its own parallel universe: the attribute (@)
+						axis! You can follow one of the paths up or down or left or right among
+						elements, and if you want to locate attributes in particular, or want to
+						locate only the elements with a particular attribute or attribute value, you
+						move to the @ axis.</td>
+				</tr>
+			</table>
+			<p>When we write path expressions, we indicate the axis, and we could indicate the name
+				of an element we&#8217;re searching for, or another node specifier like the text node or
+					<span class="code">text()</span>. There&#8217;s a longhand form for specifying axes,
+				and sometimes that longhand comes up in the XPath window in &lt;oXygen/&gt;, so it
+				can be handy to know what these are and what they mean. Use whatever form of these
+				makes the most sense to you as you&#8217;re writing your XPath expressions. </p>
+			<h3>How to Write an XPath Expression</h3>
+			<p>So you want to start writing an XPath expression already! Here we go. <b>Use the
+					XPath 2.0 window</b> in the upper left of your &lt;oXygen/&gt; screen. An XPath
+				expression is a kind of journey, and it begins by figuring out where you are (what&#8217;s
+				your context node?) and taking a step along an axis direction. </p>
+			<p>When we start writing XPath expressions, we usually begin from the root or &#8220;document
+				node&#8221; at the top of the tree, and many of our path expressions will begin with a
+				double slash: <span class="code">//</span>, which is shorthand for the descendant
+				axis: If we *start* our XPath expression with the double slash, we indicate we&#8217;re
+				beginning at the top-level document node and working our way down: </p>
+			<p><span class="code">//body/div/p</span></p>
+			<p>This expression means, <b>start at the beginning node of the document</b> and <b>look
+					for the body element anywhere below</b>. Next, switch to the child axis, and
+					<b>take one step to find the immediate children of body--the div elements</b>
+				(however many there are). Then find <b>all p elements</b> that are the <b>immediate
+					children of all the div</b> elements.</p>
+			<p>What if we want to return all the elements at a particular level, regardless of what
+				they are? Here&#8217;s where we use the asterisk: <span class="code">*</span>.
+				Examples:</p>
+			<p>
+				<span class="code">//body/div/*</span>
+				<br />
+				<span class="code">//body/div//*</span>
+				<br /><br />
+				<span class="code">parent::*</span>
+				<br />
+				<span class="code">self::*</span>
+			</p>
+			<p>Notice how these work: We say, in the first one, start from the document (root) node,
+				and go down to find the body element, then all the <b>div</b> elements that are
+				children of <b>body</b>, and then please return all the elements that are the
+					<b>immediate children of div</b>. How&#8217;s the second one different from the first?
+				Notice that we take a longer step down with that <b>double slash</b>: This says,
+				with all those div elements that are children of body, please look down the
+				descendent axis and return all the elements that are either the children or the
+				descendents of div. <br /><br /> With the last two, notice we designate the axis
+				first. The <span class="code">parent::* </span> will return the name of the parent
+				element for the current context node, whatever it is. (&#8220;Who&#8217;s my mommy?&#8220;) The last
+				one I wrote for the sake of writing it: What if we were somehow lost in an XML file
+				and just wanted to return the name and location of the current context node: (&#8220;Where
+				am I??&#8221; or &#8220;Who am I?&#8221;) </p>
+			<p>Now, a single slash, <span class="code">/</span>, typically indicates taking a step
+				in a path expression, and when it&#8217;s used by itself, it means, &#8220;take one step down
+				and find the immediate children of the context node.&#8221; When we&#8217;re writing XQuery and
+				XSLT we&#8217;ll find ourselves writing XPath expressions from specific points inside a
+				document (not necessarily from the root or document node up at the top), so in those
+				cases we might actually begin an expression like this: </p>
+			<p><span class="code">p/span</span></p>
+			<p>This means, starting from the current context node, look for the immediate children
+				named <span class="code">p</span>, and then go down and find all the immediate
+				children of <span class="code">p</span> named <span class="code">span</span>.</p>
+			<p>So how do we work with attributes? They have their own <span class="code">@</span>
+				axis. Here are some examples of how you can access the attribute axis and what you
+				might find:</p>
+			<p><span class="code">//@id <br /><br /> //div/@id </span>
+			</p>
+			<p>The parents are attributes are technically elements, so very frequently we climb down
+				(or up) an axis to locate a parent element, and then shift over to the attribute
+				axis with the <span class="code">/@</span>, as we did in the second example here.
+				Notice with the first example, though, that this actually starts from the document
+				(root) node, and hunts through the whole document looking for all instances of the
+					<span class="code">@id</span> inside elements wherever it may turn up. If you
+				download this html file that you&#8217;re reading, open it in &lt;oXygen/&gt; and run that
+				XPath, click on the results in the bottom view window, and they&#8217;ll highlight just
+				the attribute portions of their elements. </p>
+			<h3>Predicates, the Filters of XPath: <span class="code">[ ]</span></h3>
+			<p><b>Predicates</b> in XPath are filtering tools. When we write these, we want to keep
+				in mind the structure of the document, and the direction that the computer processor
+				&#8220;looks&#8221; as it&#8217;s following your XPath expression. <a
+					href="http://dh.obdurodon.org/introduction-xpath.xhtml#predicates">David
+					Birnbaum gives a good flowchart explanation of how this works on the
+					&#8220;Predicates&#8221; section of his XPath site</a>. When you write a predicate, you
+				indicate how to select a specific thing out of a lineup, a particular paragraph
+				based on its position, for example. You write a predicate using square brackets:</p>
+			<p>
+				<span class="code">//div/p[1]</span>
+				<br /><br />
+				<span class="code">//div[@id="space"]/p[1]</span>
+			</p>
+			<p>So, say we have multiple <span class="code">div</span> elements, each of which has
+				multiple <span class="code">p</span> children. The first expression returns, for
+				each div in turn, its <b>first</b>
+				<span class="code">p</span> child. In my document, I have two divs with p children,
+				so this XPath returns 2 results, the first paragraph only in each of these
+				divs.<br /><br /> The second is a little more complex: Can you work it out? Here we
+				use predicates in two steps of our XPath expression, to streamline results at each
+				level: First, we say, look for ONLY the div element with the @id="space". <b>We
+					filter out all of the other divs</b> which have different @id attribute values,
+				then, and we ONLY look inside this one div that has this distinguishing
+				characteristic. Then, we step down and find its first p child. Make sense? </p>
+			<p>Now, you can actually set multiple predicates [][] right next to each other in an
+				XPath expression. Here&#8217;s an example of when you might need to do this: Say you have
+				a file divided up into multiple sections using <span class="code">div</span>
+				elements. Let&#8217;s say that several of these <span class="code">div</span> elements are
+				designated with <span class="code">@type</span>, as in <span class="code">&lt;div
+					type="poem"&gt;</span> to indicate a particular kind of content inside. You may
+				have other <span class="code">div</span> elements designated as <span class="code"
+					>@type="preface"</span> and <span class="code">@type="acknowledgments"</span>.
+				So this file is basically a &#8220;book&#8221; of poems with some accompanying material, and the
+					<span class="code">div</span> elements separate each poem from the others. Now,
+				let&#8217;s say you want to find your way with XPath to the <b>fifth</b> poem in the file.
+				Here&#8217;s how you&#8217;d do that by making two predicates side by side:</p>
+			<p><span class="code">//div[@type="poem"][5]</span></p>
+			<p>See how this works? First you say, find me the <span class="code">div</span> elements
+				filtered by <span class="code">@type="poem"</span>, and then filter those results to
+				give me just the <b>fifth</b> one in the sequence. </p>
+			<h3>Functions, How to Do Things with XPath: <span class="code">( )</span>
+			</h3>
+			<p>Functions let us do some processing of the things we locate with XPath expressions.
+				What if you don&#8217;t want to return all the <span class="code">p</span> elements inside
+				a div, and you just want to <b>count</b> them all? That&#8217;s when we use a function
+				called <span class="code">count()</span>. You put in parentheses the nodes you want
+				to count, and this can work in lots of ways: </p>
+			<p>
+				<span class="code">count(//@id)</span>
+				<br /><br />
+				<span class="code">//div/count(p)</span>
+				<br /><br />
+				<span class="code">count(//div/p)</span>
+				<br /><br />
+				<span class="code">//div[@id="space"]/count(p)</span>
+			</p>
+			<p> In the first of these, I&#8217;ve written an expression that says, "Count the number of
+				times the <span class="code">@id attribute</span> is used in this file, starting
+				from the root (document) node. (When I run it here in &lt;oXygen/&gt; as I&#8217;m writing
+				this document, the answer is 3 (as I see in the bottom window). <br /><br /> The
+				second expression, <span class="code">//div/count(p)</span>, says, start from the
+				root node, go down to ALL the div elements in the file, and then count the p
+				elements in EACH div, one by one. My bottom view screen in &lt;oXygen/&gt; gives me
+				a set of three results, with a count for each div in turn. That can be handy!
+				<br /><br /> But what if we want to find out how many p elements there are total
+				under ALL the divs? That&#8217;s what the third expression, <span class="code"
+					>count(//div/p)</span> does: It gives just ONE result, and it&#8217;s a count of ALL
+				the p elements in ALL the divs, without differentiating them div by div by div.
+				Let&#8217;s think about why this gives a different result from the previous example: This
+				has everything to do with where you place the count function! When you place the
+				count at the end, and don&#8217;t include the div element in the parentheses, you
+				effectively step down the tree to each div, and THEN do a count of the p elements
+				inside each. By contrast, when you say <span class="code">count(//div/p)</span>, the
+				computer postpones the counting until it&#8217;s found all the p&#8217;s everywhere that are
+				children of divs. The count function says, &#8220;Hey! round up ALL the p&#8217;s that are
+				children of divs, and count those.&#8221; <br /><br />Can you figure out what the last
+				expression is counting? <span class="code">//div[@id="space"]/count(p)</span>
+				<br /><br /> This combines a predicate with a function! So you indicate that you
+				want to start with only one <span class="code">div</span>, the one with the <span class="code">@id="space"</span> . Then you count
+					the number of <span class="code">p</span> elements in that <span class="code">div</span>. </p>
+			<h3>Using Functions and Predicates Together: Some Complex XPath!</h3>
+			<p>You can actually put functions inside predicates in XPath as a way to filter your
+				results! Here&#8217;s an example: Say we want to find any and all <span class="code">div</span> elements that
+				have <b>just one <span class="code">p</span> child</b>? We&#8217;d write that expression this way:</p>
+			<p><span class="code">//div[count(p) = 1]</span></p>
+			<p>Here&#8217;s another example. What if want to return an div element that doesn&#8217;t have ANY p
+				elements? Here we&#8217;d use a predicate again, and this time use a function called <span
+					class="code">not()</span></p>
+			<p><span class="code">//div[not(p)]</span></p>
+			<p>About these examples: Notice that when you put a function in an XPath predicate, you
+				don&#8217;t have to indicate that you&#8217;re stepping down a tree to get the child element.
+				The default expectation when we don&#8217;t give an axis is that we&#8217;re stepping down to
+				the immediate child.</p>
+			<p>Quite often in writing XPath, we&#8217;re trying to find something in terms of its
+				position. We&#8217;ve given you examples of predicates that return a specific numerical
+				position, as in the first or fifth paragraph or div element, using [1] or [5]. But
+				what if you don&#8217;t have an exact position, but know you want to return, say, the
+				first 10 of a particular element? Here&#8217;s where we can use the <span class="code"
+					>position()</span> function. <br /><br />
+				<span class="code">//div[@type="poem"][position() &lt; 10]</span>
+				<br /><br /> This retrieves the first 10 <span class="code">&lt;div
+					type="poem"&gt;</span> elements in an XML collection of poems chunked in divs.
+				The predicate expressions work to filter by grabbing all the appropriate &#8220;poem&#8221; divs
+				whose position is 10 or under. <b>Note that nothing goes inside the parentheses for
+						<span class="poem">position()</span>.</b> Context functions like this keep
+				the parentheses open. (Basically, <span class="code">position()</span> and <span
+					class="code">last()</span> are written differently from the mathematical
+				functions like count(), where we indicate a particular thing to be counted inside
+				the parentheses.) </p>
+			<p> Here&#8217;s another useful positional function: <span class="code"
+				>last()</span><br /><br /> As you might expect, <span class="code">last()</span>
+				returns the last of a thing you&#8217;ve designated. This is another positional function
+				frequently used in predicates. So, where <span class="code">//p[1]</span> returns
+				the first &lt;p&gt; element in the document, <span class="code">//p[last()]</span>
+				returns the last, wherever it is, and it&#8217;s handy because we usually don&#8217;t know how
+				many p elements (or paragraphs) there are in a big file! <b>Again, note that nothing
+					goes inside the parentheses for this positional function.</b></p>
+			<p>XPath has a little over 100 different functions to choose from, but in most project
+				scenarios, you really only need to work with a handful, which you&#8217;ll get to know
+				pretty well. (One of our favorites is <span class="code">distinct-values()</span>,
+				which we&#8217;ll show you. We use distinct-values to eliminate repetition in a list of
+				results, so we get only the distinctly <b>different</b> things, like the names of
+				elements we&#8217;ve used, for example. Don&#8217;t try to memorize these, but you&#8217;ll need to
+				look them up periodically and find one to use. Here are some useful XPath function
+				lists, with explanations of what the functions do and how they work:</p>
+			<ul>
+				<li><a href="https://developer.mozilla.org/en-US/docs/XPath/Functions">Mozilla
+						Developer Network&#8217;s clickable list of XPath functions</a></li>
+				<li>Birnbaum&#8217;s <a href="http://dh.obdurodon.org/functions.html">"The XPath Functions
+						We Use Most"</a></li>
+				<li><a href="http://www.w3schools.com/xpath/xpath_functions.asp">w3schools: list of
+						XPath functions</a>
+				</li>
+			</ul>
+			<p>Finally, here&#8217;s a link to <a
+					href="http://dh.obdurodon.org/introduction-xpath.xhtml#terms">a handy quick
+					review of terms and symbols</a>, thanks to David Birnbaum! Check out his
+				combination of predicates and functions in the expression with string-length() just
+				above the review: See if you can follow it.</p>
+		</div>
+	</body>
+
+
+
+</html>

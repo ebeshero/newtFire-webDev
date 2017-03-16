@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css" />
+		<title>Pitt-Greensburg Hum 1030/Socsci 1031: Digital Humanities</title>
+	</head>
+
+
+	<body>
+		<div id="space">
+			<h3><b>Hum 1030 / Socsci 1031 at the <a href="http://greensburg.pitt.edu">University of
+						Pittsburgh at Greensburg</a></b></h3>
+			<h1>Digital Humanities / Digital Studies</h1>
+			<h2>Topic: Digital Archives and Pacific Cultures</h2>
+			<b>Course Instructors</b>
+			<ul>
+				<li>co-taught by: Profs. <a href="http://www.pitt.edu/~ebb8/">Elisa
+						Beshero-Bondar</a> and <a href="http://www.personal.psu.edu/ghb1/">Gregory
+						Bondar</a>: <ul>
+						<li>E-mail: ebb8 at pitt.edu , and ghb2 at pitt.edu</li>
+						<li>Office Hours: M 2:45-3:45 and 5:15 - 6:45 PM; W 2:45 - 3:45 PM, H 4 -
+							5:15 PM in FOB 204; after class and F afternoon "lab hours" as
+							needed.</li>
+					</ul></li>
+				<li>Teaching Assistant: Megan Hughes <ul>
+						<li>Email: mah200 at pitt.edu</li>
+						<li>Office Hours: M and W 3-4 PM; F 3-5 PM in 1st floor Cassell Hall (our
+							classroom if it's available)</li>
+					</ul>
+				</li>
+			</ul>
+			<h3>Syllabus: Fall 2013</h3>
+			<h3><a href="#softInstall">Getting started (Info on Installing oXygen, SFTP software,
+					and Accessing Pitt's Box)</a></h3>
+			<h3>Course Schedule</h3>
+			<table>
+				<tr>
+					<th>Week / Date</th>
+					<th>Activities and Readings</th>
+					<th>Homework due (next class unless otherwise indicated)</th>
+				</tr>
+
+				<tr>
+					<td><b>Week 1</b><br /> M 8/26</td>
+					<td>Welcome! Intro to the course,and Intro to XML and working in oXygen:
+						Introduce yourself in XML, and upload your first exercise on Courseweb.</td>
+					<td>
+						<ul>
+							<li><b>By Wed. 8/28:</b> Install oXygen/ software on your computers
+								and/or use lab computers. <a href="http://courseweb.pitt.edu"
+									>Instructions and license key posted on Courseweb</a>.
+								<br /><br />
+							</li>
+							<li><b>First XML exercise:</b> Look at <a
+									href="http://www.simplyrecipes.com/recipes/gazpacho/">this
+									recipe for gazpacho soup</a>. What if you were running a
+								restaurant and needed to create a system to file it according to
+								ingredients to purchase, to track quantities per unit serving--and
+								this recipe were one of, say, 100 other recipes you're keeping on
+								file? Think about a good system for tagging the file for this
+								long-term situation, and mark up your file accordingly. Experiment
+								with this and write a complete XML file in a way that makes sense to
+								represent the recipe. (Think also about what matters here to
+								represent the file, and what doesn't matter.) Submit the results on
+									<a href="http://courseweb.pitt.edu">Courseweb</a>, through the
+								Assignments folder, before our next class on Wed 8/28. <br /><br />
+							</li>
+							<li><b>Maybe Helpful As You're Getting Started: </b><a
+									href="explainXML.html">The Bondars' Basic Overview of XML:
+									"So...What Exactly is 'XML' anyway? When It's Useful and How It
+									Works"</a></li>
+						</ul></td>
+				</tr>
+				<tr>
+					<td>W 8/28</td>
+					<td>Discussion of homework, and XML: Validity and Well-formedness. Pacific
+						Material: What is "first contact"? Start showing <i>First Contact</i> and
+						discuss. More on the 18th-c. Pacific Voyages, and the Importance of
+						Maps.</td>
+					<td>
+						<b>Hmwk (to be submitted on Courseweb): Two Exercises</b>:<br /><br />
+						<b>Coding Exercise (due Wed. 9/4):</b> Browse through and select one entry
+						to code <b>from the year 1769</b> from either <a
+							href="http://southseas.nla.gov.au/journals/banks/contents.html">Joseph
+							Banks's daily journal</a> or <a
+							href="http://southseas.nla.gov.au/journals/cook/contents.html">Captain
+							Cook's log</a>.: The entry you select must be <ul>
+							<li>must feature some account of contact with Polynesians (Tahitians or
+								New Zealanders) from within the year 1769.</li>
+							<li>longer than one or two sentences--at least a thick paragraph or
+								two.</li>
+
+						</ul>Copy and paste the text into the oXygen editor. Come up with a way that
+						makes sense to "mark this up" in XML from the position of an archivist
+						studying the Pacific voyages and cultural contact experiences. Your markup
+						should: <ul>
+							<li>Code <b>the structure</b> this text (its heading, its paragraphs,
+								etc.)</li>
+							<li>Mark passages with specific <b>cultural information</b> about
+								people, places, and kinds of contact experiences that you can see
+								here. Come up with a good system that makes sense to you for holding
+								general and specific kinds of information. (Try marking in multiple
+								layers: Do large passages show us trade experiences, and within them
+								specific objects that are traded?)</li>
+							<li>Contain XML elements <b>with some systematic use of attributes</b>,
+								as in<br /> &lt;element
+								attribute="value"&gt;tag&lt;/element&gt;</li>
+						</ul>.<br /><br />
+						<b>Mapping, Marking, and Summarizing (Reading by Wed. 9/4, Slide Marking by
+							next Fri. 9/6):</b>By next Wed., read <a href="OtaheiteEuroContact.ppt"
+							>our Powerpoint Slides on the Pacific Voyages</a> (download from here or
+						Courseweb), and add new slides to this, to do the following: <ol>
+							<li>Include <b>good, clear modern maps</b> online to paste in the
+								powerpoint file, in order to demonstrate the locations of the Spice
+								Islands (or Molucca Islands), Polynesia, Australia, New Zealand,
+								Cape Horn vs. Cape of Good Hope. <br /> * <b>In Powerpoint, find the
+									Drawing Tab </b>and highlight or circle or draw arrows to
+									<b>mark these locations</b>. Insert a shape + <b>accompanying
+									text box to label</b> the places clearly.</li>
+							<li>Make a new slide in which you design <b>a summary chart of all the
+									voyages discussed in this file</b>. On this slide, briefly
+								summarize a key point of interest about each voyage. Save, and
+								submit your revised file using Courseweb.</li>
+						</ol>
+					</td>
+				</tr>
+
+				<tr>
+					<td><b>Week 2</b><br /> M 9/2</td>
+					<td><b>Labor Day Holiday: NO CLASSES</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>W 9/4</td>
+					<td> Finish watching / discussing <i>First Contact</i>. Introduce Optical
+						Character Recognition (OCR), how it works, when it's good vs. lousy! Intro
+						Tour of ECCO and Burney Collection </td>
+					<td>
+						<a id="OCR"></a><b>Hands-on OCR Exercise (due Mon. 9/9):</b>
+						<ol>
+							<li>Download the following two PDF files, and open each one for OCR
+								("Optical Character Recognition" or "text recognition") in <b>Adobe
+									Acrobat Pro</b> (NOT Adobe Reader): <ul>
+									<li><a href="DHclass-2013-Scan sample.pdf">18th-century Sample
+											File 1 (scanned from book)</a></li>
+									<li><a href="MutinyPage.pdf">18th-century Sample File 2 (from
+											ECCO database)</a></li>
+								</ul>
+							</li>
+							<li>Now, read and follow <b><a href="OCR-homework.pdf">our Detailed
+										Instructions</a></b> on how to work with these files in
+								Adobe Acrobat Pro in the campus computer labs, and on how to prepare
+								your brief response paper.</li>
+						</ol>
+						<br />
+						<br />
+						<b>Coding Hmwk:</b> Read Birnbaum's <a
+							href="http://dh.obdurodon.org/html_basics.html">intro to HTML</a>. Read
+						ahead in w3schools if you like and learn to style your page with CSS, or
+						just try making (and saving) a simple html page for now to bring to class on
+						Monday. </td>
+				</tr>
+
+				<tr>
+					<td><b>Week 3</b><br /> M 9/9</td>
+					<td>
+						<b>Quick Quiz on XML (find errors in a faulty XML file)</b>
+						<br /><br /> Discussion of XML homework (Journal Coding) from last week:
+						Defining elements and attributes effectively to catalog information:
+						Introduce new XML exercise for Wed. this week. <br /><br />Discussion of OCR
+						homework, facsimile vs. XML-based editions and representation issues.
+						18th-century materials and the "long s".<br /> Facsimile publications and
+						Digital Databases. <ul>
+							<li><a href="http://nla.gov.au/nla.ms-ms1">Facsimile (via National
+									Library of Australia)</a></li>
+							<li><a href="http://ebooks.adelaide.edu.au/c/cook/james/c77j/">HTML
+									ebook (via U. of Adelaide)</a></li>
+							<li><a href="http://pacific.obdurodon.org/InjuredIslandersr.xml">Our XML
+									edition of "The Injured Islanders," styled with CSS: a class
+									exercise</a></li>
+							<li><a href="http://pacific.obdurodon.org/injured.css">CSS for our XML
+									edition of "The Injured Islanders"</a></li>
+							<li><a href="http://dh.obdurodon.org/html_basics.html">Birnbaum's Intro
+									to HTML</a></li>
+							<li><a href="http://dh.obdurodon.org/css-intro.html">Birnbaum's Intro to
+									CSS</a></li>
+						</ul>
+						<br />
+						<br />
+						<b>Display vs. content, and Types of Markup: </b>descriptive, procedural,
+						presentation: XML and XHTML, with CSS. Hands-on intro to XHTML and styling
+						with CSS. <br /><br /> XML: Designing and Styling with CSS. </td>
+					<td>
+						<b>XML Coding of Voyage Logs, Part 2 (due Wed. 9/11):</b>
+						<ul>
+							<li>Choose a second journal entry by Banks or Cook from the year 1769
+								that contains similar kinds of cultural contact information that you
+								coded in your first entry. As before, the entry you select must: a)
+								feature some account of contact with Polynesians (Tahitians or New
+								Zealanders) from the year 1769, and b) be longer than one or two
+								setnences--at least a thick paragraph or two. </li>
+
+							<li>Make a new XML file to contain TWO journal entries, and include the
+								contents of your first entry together with the new one you chose. Or
+								choose two new entries if you'd like to start afresh.</li>
+							<li>Review our comments on your first homework exercise, and think
+								carefully about a system for your coding of multiple entries
+								together. As before, we ask that you code the journal's structure
+								(including paragraph breaks, dates and other header information for
+								each entry) as well as significant cultural details with an eye to
+								marking related kinds of information for archival research. We ask
+								that you: <ul>
+									<li>Be sure your coding is consistent--that dates and paragraphs
+										are all marked the same way consistently throughout your
+										file, for example.</li>
+									<li>For markup of cultural information or cultural contact
+										events (like exchange of goods, thefts, rituals,
+										communication, etc), be sure that you use some elements more
+										than once, and that these are used across both entries.</li>
+									<li>Be sure that you're defining elements and attributes in a
+										way useful for cataloging and research--moving from the
+										general to the more specific, and without unduly repeating
+										the language of the journal entry in your tag names. (For
+										advice on this, work with our comments in the homework we
+										returned.)</li>
+								</ul>
+							</li>
+						</ul>
+						<br />
+						<br />
+						<b>due Friday, 9/13</b>: Read Birnbaum's <a
+							href="http://dh.obdurodon.org/html_basics.html">intro to HTML</a> and <a
+							href="http://dh.obdurodon.org/css-intro.html">Intro to CSS</a>.
+						Assignment: Take an XML or and XHTML file, save it, and style it for viewing
+						in a web browser with CSS. Post the XML or XHTML file and your css file to
+						your webspace, following our instructions on Courseweb. When you've
+						completed your work for this assignment and you're ready for us to look at
+						it, <b>please post a link (an absolute link) to your website on the
+							designated area in our Discussion Board</b> on <a
+							href="http://courseweb.pitt.edu">Courseweb</a>. (We'll view this link
+						after you've posted it (over the weekend), and then look at it again after
+						class on Mon. 9/16.)</td>
+				</tr>
+				<tr>
+					<td>W 9/11</td>
+					<td>
+						<b>More Coding Experience:</b> XML and XHTML. Learn XHTML and More CSS:
+						Hands-on Exercises. </td>
+					<td>
+						<b>REVISED: Due Fri. 9/20</b>: Make one or more HTML and/or XML pages, style
+						with CSS, and post them to your Pitt webspace. For our assignment, your
+						pages must do the following: <ul>
+							<li>HTML pages must include <b>an image</b>, <b>absolute and relative
+									hyperlinks</b>,<b> a table</b>, <b>a list</b>, and
+									<b>paragraphs</b>. <ul>
+									<li>Link multiple pages together using relative links.</li>
+									<li>Link to an external page with an absolute link.</li>
+								</ul></li>
+							<li>Choose a page (or more as you wish) <b>to style in at least two
+									different ways, using different CSS files</b> that you create.
+								(Write an html page, save it twice under two distinct file names,
+								and associate each one with a different CSS file that you create, to
+								give them very different appearances.)</li>
+							<li>CSS: Find at least 3 things to style in w3schools' CSS reference
+								pages (or other resources) that we did not show you in class:
+								Experiment! </li>
+						</ul>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td><b>Week 4</b><br />
+						<a id="textmine"></a>M 9/16</td>
+					<td>XML for Archives: Look at and discuss our <a
+							href="http://pacific.obdurodon.org/poems.html">poetry pages</a> and <a
+							href="http://pacific.obdurodon.org/PoemsGrphAnlys.xhtml">graph page</a>
+						on Digital Archives and Pacific Cultures. <br /><br />Introduction to
+							<b>text-mining with ECCO</b> (Pitt Digital Library Database), and
+						bibliographic data. How to deal with bad OCR in the Gale databases: tips and
+						tricks. Also: an XML Template for recording and storing searches and
+						results. <b>Groups Assigned for Text-Mining Exercise.</b></td>
+					<td><b><a href="ECCOlocationEx1.pdf">Text-Mining Exercise, Part I</a></b> We'll
+						divide you into small groups, assigned to a particular chapter in Cook's 1st
+						Voyage (or another Voyage text). <ol>
+							<li><a href="ECCOlocationEx1.pdf"><b>Detailed guidelines and Group
+										Assignments posted here</b><br /></a></li>
+							<li><a href="http://southseas.nla.gov.au/journals/hv23/contents.html"
+									>Hawkesworth's Account of Cook's Voyage.</a> Note that ALL GROUP
+								READING ASSIGNEMNTS ARE IN BOOK I (Chs. VIII - XX) of this
+								volume.<br /></li>
+							<li><b><a href="ECCOLocationForm.xml">XML Form for recording of
+										successful and unsuccessful searches.</a></b> (Do these
+								searches individually, but try to coordinate with your group--a good
+								use of our Courseweb Discussion Board--so each of you are following
+								up on different search leads. Or share out searching variations on a
+								term.)</li>
+							<li>Save a record of your individual searches in your XML file (saved
+								with your last name in the filename) and upload it on <a
+									href="http://courseweb.pitt.edu">Courseweb</a> as your
+								assignment for Wed. Be ready to access your files in your groups
+								when we meet in class on Wed. for the next stage of this
+								Exercise.</li>
+						</ol>
+					</td>
+				</tr>
+				<tr>
+					<td>W 9/18</td>
+					<td><b>Text-Mining Exercise, Part II:</b> In groups compare your results of
+						text-mining from ECCO, the terms you looked up and the kinds of results you
+						generated. Working together, make one XML file to contain your collective
+						finds, and save this to our Class Box folder, with a file name in this
+						format: <b>HksCookG1.xml</b> (Put the number or your group's number in the
+						file name (G1, G2, G3, G4, G5, G6 as appropriate). <br /><br />
+						<b>Autotagging with Find and Replace and working with Regular Expressions
+							("regex")</b>. Class file: <a
+							href="https://pitt.box.com/s/14dzzbquk9kjcup3ish3">Table of Contents
+							from Georg Forster's Voyage narrative</a>. Exercise on this with Table
+						of Contents of a Voyage Text, and Preview of the Regex homework exercise. </td>
+					<td>
+					  <p><b><a href="RegexExercise1.html">Regex Exercise 1: (due Mon. 9/23)</a></b></p>
+					  <p><b>Project Development: Reading and Response: Review of ECCO Finds (due Mon.
+						  9/23)</b>					  </p>
+						<ol>
+							<li>First of all, did your group make a single file to contain all the
+								information you've gathered with successful and unsuccessful
+								searches? If you were absent for this, <a
+									href="https://pitt.box.com/s/1dym97nuq8i4iuutt8xz">please check
+									what your Group has posted here in Box</a>, and save a copy of
+								your homework for Wed. in your group space. One of you in the group
+								should assimilate all the files together. <b>If you've not finished
+									this part, please do so by Friday 9/20.</b></li>
+							<li>Look up the texts your group has identified as interesting in ECCO,
+								using the bib data you’ve collectively entered. <b>Concentrate on
+									the texts which are NOT records of the voyages, but are rather
+									CREATIVE, artistic, literary adaptations or PHILOSOPHICAL
+									reflections.</b> (If your group did not locate any of these,
+								keep searching until you find some, using new search terms or
+								variations—and record these on a new XML form to submit with this
+								assignment and save in Box, adding your initials to the name of your
+								group file: <b>HksCookG5ebb.xml</b>.)</li>
+
+							<li>Work on explaining, as best you can, what’s happening to the words
+								you searched for as they’re being used by people not directly
+								involved with the voyages. Write this up as a one-page response
+								paper, citing specific examples. <b>Optional:</b> If you want, try
+								writing up your response paper in XML--since this may make it easier
+								to refer to specific 18th-century texts you found: You can just use
+								the bib entries from your groups' XML file!</li>
+
+							<li>Look at <a href="http://pacific.obdurodon.org/PoemsGrphAnlys.xhtml"
+									>the Poetry pages on our Digital Archives and Pacific Cultures
+									site</a> to get a sense of the kinds of texts we worked on last
+								year, and think about (comment if you like) how the texts you’ve
+								been locating might compare in the way they’re responding to the
+								voyages. (Commenting on this is optional, but we’ll be thinking
+							  about this together as we proceed.)<br />
+						  </li>
+                    </ol></td>
+				</tr>
+
+				<tr>
+					<td><a id="regeXPath"></a><b>Week 5</b>
+						<br /> M 9/23</td>
+					<td> Regex review. Introducing XPath </td>
+					<td><b><a href="RegexExercise2.html">Regex Exercise 2: (due Fri 9/27)</a></b><br /><br />
+					<b>Read our <a href="explainXPath.html">Introduction to
+								XPath: "Follow the XPath!"</a></b> in preparation for our class on
+						Wed. 9/25. If you like, try experimenting with the XPath expressions on our
+						page, by downloading the explainXPath.html file, opening it in oXygen, and
+						experimenting in the XPath window with some of our expressions..</td>
+				</tr>
+				<tr>
+					<td><a id="XPath1"/>W 9/25</td>
+					<td>Fun with XPath! Work with our <a href="explainXPath.html"><b>Intro to XPath:
+								"Follow the XPath!"</b></a>.</td>
+					<td><b><a href="XPathExercise1.html">XPath Assignment 1 (due Mon. 9/30)</a>
+						</b>
+					</td>
+				</tr>
+
+				<tr>
+					<td><a id="XPath2"></a><b>Week 6</b><br /> M 9/30</td>
+					<td> Regex review. Distinct-values, and other useful XPath expressions. Xpath
+						exercise together.</td>
+					<td><b><a href="XPathExercise2.html">XPath Assignment 2 (due Wed. 10/2 before
+								class)</a></b>
+					</td>
+				</tr>
+				<tr>
+					<td>W 10/2</td>
+					<td><b>Test on Regex.</b><br /><br />Meet the XML "family" of standards: ways of
+						manipulating and transforming XML via XPath. <br /><br /></td>
+					<td>Work on XPath: Catch up on XPath Exercises, Revisions by Friday 10/4.</td>
+				</tr>
+
+				<tr>
+					<td><b>Week 7</b><br /> M 10/7</td>
+					<td>XPath review. <br/><br/>
+				  <br/><br/></td>
+					<td><p><strong><a href="XPathExercise3.html">XPath Exercise 3</a> (due by Wed. 10/9 at start of class)</strong><br/><br/>
+					
+				  </p></td>
+				</tr>
+				<tr>
+					<td><a id="ECCO2"/>W 10/9</td>
+					<td><p><b>Class
+						Project Development:</b> Processing Our ECCO Location Text Mining Exercise </p>
+				  <p>Simplifying and Building on ECCOlocation Exercise</p></td>
+					<td><p><strong><a href="ECCOLocateP2.html">Homework: Processing the ECCOlocation List</a></strong> (due by class time on <strong>Tues. 10/16</strong>, after Fall Break)
+                      </p></td>
+				</tr>
+
+				<tr>
+					<td><b>Week 8</b><br /> M 10/14</td>
+					<td><b>Fall Break: No Classes</b></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>T 10/16</td>
+					<td><p><b>MONDAY Classes Meet!</b> </p>
+				    <p>**Intro to eXist database and XQuery. XML databases.**</p>
+                    <p><b><br />
+                    </b>Loading a collection of XML files to eXist. </p>
+                    <p>&nbsp;</p>
+<p>&nbsp;</p></td>
+					<td><p>Read / Reference the <a
+							href="http://www.stylusstudio.com/xquery_primer_new.html">Stylus Studio
+					  Xquery Primer</a> and our Intro to XQuery (to be posted)</p>
+				    <p>&nbsp;</p>
+				    <p><b>Important:</b> When running XQuery on TEI files, add the
+                      following declaration of the TEI namespace at the head of your XQuery (or
+                      you won't get any results!): <br />
+                      <br />
+declare default element namespace &quot;http://www.tei-c.org/ns/1.0&quot;;</p></td>
+				</tr>
+				<tr>
+					<td><a id="XQuery1"/>W 10/17</td>
+					<td> <p><b>Test on XPath.</b></p>
+				    <p><strong><a href="explainXQuery.html">Our Guide to XQuery: XQuery and the eXist XML Database</a></strong></p></td>
+					<td><p><b><a href="XQueryExercise1.html">XQuery Exercise 1 (due Fri. 10/18)</a></b></p>
+					  <p>&nbsp;</p></td>
+				</tr>
+
+				<tr>
+					<td><b>Week 9</b><br /> M 10/21</td>
+					<td>XQuery: Thinking in Algorithms, Writing with FLOWRs, and outputting HTML. Work with / build on Xquery Exercise 1 (due today)<br />					  
+				    <br /></td>
+					<td>					  <p><b><a href="XQueryExercise2.html">XQuery Exercise 2</a></b> (due Wed. 10/23)</p></td>
+				</tr>
+				<tr>
+					<td>W 10/23</td>
+					<td>XQuery Element Constructors: Outputting New XML and HTML. </td>
+					<td><b><a href="XQueryExercise3.html">XQuery Exercise 3</a></b> (due Fri. or Sat. 10/25 or 10/26 by 1 PM)<br/><br/></td>
+				</tr>
+
+				<tr>
+					<td><b>Week 10</b><br /> M 10/28</td>
+					<td><p>XQuery: &quot;for&quot; loops and &quot;where&quot; filters in FLWORs</p>
+					  <p>&nbsp;</p></td>
+					<td><b><a href="XQueryExercise4.html">XQuery Exercise 4</a></b> (in two parts, due Wed. and Fri. this week) See posts on the CW Discussion Board for help with this assignment. </td>
+				</tr>
+				<tr>
+					<td>W 10/30</td>
+					<td>XQuery: Working on Exercise 4</td>
+					<td>XQuery Exercise 4 continued--Part 2 due by Friday 11/1.<br /><br /></td>
+				</tr>
+
+				<tr>
+					<td><a id="CP"/><b>Week 11</b><br /> M 11/4</td>
+					<td><strong><a href="courseProject.html">FINAL COURSE PROJECTS: Groups Assigned</a></strong><br/>
+					  <br/> TEI Structure and Content Coding Guidelines for the Pacific Project
+					 </td>
+					<td>Project Development Stage 1: <a href="https://pitt.box.com/s/1nxneqpxbpg80ysqb3an">Visit your Group's Project Folder in Box</a>: Start document analysis (review of one of your files posted here).<br />
+					  <br/>
+						<a href="http://www.w3schools.com/svg/default.asp"> Read w3schools tutorial on SVG</a>
+				   </td>
+				</tr>
+				<tr>
+					<td>W 11/6</td>
+					<td> Introducing Scalable Vector Graphics (SVG), and the Weirdness of SVG
+						Coordinate Space. Fun with SVG.  Draw some SVG in oXygen or eXist. Extracting a chart.</td>
+					<td><b>Project Development</b>, and <b><a href="SVGExercise1.html">SVG Exercise 1</a></b> (due Mon. Nov. 11 before class)<br/> <br/>
+						We recommend <b><a href="http://tutorials.jenkov.com/svg/index.html">Jakob Jenkov's SVG Tutorial</a></b> as you tinker with SVG.
+					</td>
+				</tr>
+
+				<tr>
+					<td><a id="isl"></a><b>Week 12</b><br /> M 11/11</td>
+					<td>Pacific Island Societies: egalitarian and chiefdoms</td>
+					<td><b><a href="http://www.pitt.edu/~ebb8/DHDS/ChiefdomRefEx.html">Reflection Paper and Short Coding Assignment (due Wed. 11/13 before class)</a></b></td>
+				</tr>
+				<tr>
+					<td>W 11/13</td>
+					<td>
+						SVG from XQuery. Generating graphics from XML for web<br/><br/>
+						Project Workshop
+						</td>
+					<td><b><a href="SVGExercise2.html">SVG Exercise 2: SVG from XQuery</a></b>, due Mon. 11/18
+						</td>
+				</tr>
+
+				<tr>
+					<td><b>Week 13</b><br /> M 11/18</td>
+					<td>Schematron. XQuery / XSLT: Preserving Cultural Markup for HTML with <span class="code">&lt;span class=""&gt;</span>
+						XSLT... bootstrapping stylesheets and Javscript?</td>
+					<td>XSLT Ex<br /><br />Projects: Data Visualization.</td>
+				</tr>
+				<tr>
+					<td>W 11/20</td>
+					<td>Project Design. Checkboxes and options with Javascript. <a
+							href="http://dh.obdurodon.org/javascript/classListToggle.xhtml">Tutorial
+							on Toggling</a>: Using spans and class in html.</td>
+					<td>JavaScript Exercise: Toggling. Prep for Network Analysis next week: <a href="http://www.cytoscape.org/">Install Cytoscape</a>.</td>
+				</tr>
+
+				<tr>
+					<td><b>Week 14</b><br /> M 11/25</td>
+					<td>Generating a Network Analysis. Writing Up Commentary on Visuals. Project Design / Consultation </td>
+					<td>[Network Analysis Exercise]</td>
+				</tr>
+				<tr>
+					<td>W 11/27 - F 11/29</td>
+					<td><b>Thanksgiving Break</b></td>
+					<td></td>
+				</tr>
+
+				<tr>
+					<td><b>Week 15</b><br /> M 12/2</td>
+					<td>Class Projects: Assembly / Presentation</td>
+					<td>Class Projects: Assembly / Presentation</td>
+				</tr>
+				<tr>
+					<td>W 12/4</td>
+					<td>Last Day. Class Projects: Assembly / Presentation</td>
+					<td>Class Projects: Assembly / Presentation</td>
+				</tr>
+
+				<tr>
+					<td><b>Finals Week: <br />12/9 - 12/14</b></td>
+					<td><b>Final Class Projects Due. [TBA]</b>
+					</td>
+				</tr>
+
+			</table>
+			<a id="softInstall"></a><h3>Software and Box Access You'll Need:</h3><ol>
+				<li>Download and install the following software on your home computer: <ul>
+						<li><strong>All users:</strong>
+							<a href="http://www.oxygenxml.com">&lt;oXygen/&gt;</a>. The University
+							has purchased a site license for this software, which is installed in
+							all CSSD labs. The license also permits students enrolled in the course
+							to install the software on their home computers (for course-related use
+							only). The license key is available in the Announcements section of <a
+								href="http://courseweb.pitt.edu">Courseweb</a>.</li>
+						<li><strong>Windows users:</strong>
+							<a href="http://winscp.net/eng/download.php">WinSCP 5.1.7</a>
+							(free)</li>
+						<li><strong>Mac users:</strong>
+							<a href="http://fetchsoftworks.com/fetch/">Fetch</a> (students may
+							obtain free licenses at <a href="http://fetchsoftworks.com/fetch/free"
+								>http://fetchsoftworks.com/fetch/free</a>)</li>
+						<li><strong>Linux users:</strong> You probably don't need to install
+							anything. But look at how your system handles secure file transfer
+							(SFTP).</li>
+					</ul>
+				</li>
+				<li>Pitt provides all students with a free <q>cloud storage</q> account on <a
+						href="http://pitt.box.com">http://pitt.box.com</a>, and you will need to use
+					this account to manage your shared project files. If you have not already done
+					so, log into <a href="http://my.pitt.edu">http://my.pitt.edu</a>, select <q>My
+						resources</q> from the menu bar at the top, and then select <q>Box</q>.
+					Access your account and familiarize yourself with how it works.</li>
+				<li>During the first weeks of the semester, meet with the profs to configure and
+					access your individual user account on our new Greensburg "sandbox" server.
+					[More on this soon!) You will need this account for some of the course
+					assignments.</li>
+			</ol>
+			<h3>Fall 2013 Course Enrollment and Electives Info:</h3>
+			<img src="tinycompassm.gif" align="right" alt="compass" />
+			<ul>
+				<li>Human 1030 Course Number: 23359</li>
+				<li>Socsci 1031 Course Number: 28057 </li>
+				<li>Satisfies HM, NS2, and SS General Electives at Pitt-Greensburg</li>
+			</ul>
+			<ul>
+				<li><b>Class Meets: Mondays and Wednesdays, 4 - 5:15 PM in Cassell Hall
+					116.</b></li>
+				<li><a href="http://www.pitt.edu/~ebb8/DHDS/">Course Description</a></li>
+			</ul>
+			<h3>Course Resources</h3>
+			<h4>Mapping:</h4>
+			<ul>
+				<li><a href="http://www.davidrumsey.com/view/google-maps">David Rumsey Map
+						Collection: Google Map with links to historic maps</a></li>
+			</ul>
+			<h4>Pacific Contact History:</h4>
+			<ul>
+				<li><a href="http://southseas.nla.gov.au/index.html">South Seas: Voyaging and
+						Cross-Cultural Encounters in the Pacific (1760-1800)</a></li>
+
+			</ul>
+		</div>
+	</body>
+
+
+
+</html>

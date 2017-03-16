@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head><link rel="stylesheet" type="text/css" href="explain.css"/><title>XSLT Test</title></head>
+
+
+<body>
+	<div id="space">
+		<div id="title"><a href="http://www.pitt.edu/~ebb8/DHDS/"><img
+			src="blue-eye-icon-transMed.png"
+			alt="Pitt-Greensburg Digital Studies Logo: I Code!" /></a>
+			<h1><span class="banner">XSLT Test</span></h1>
+		</div>
+		<hr />
+		<p class="boilerplate"><span><strong>Maintained by: </strong> Elisa E. Beshero-Bondar
+			(ebb8 at pitt.edu) <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br /><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a></span><span><strong>Last modified:
+				</strong><script type="application/javascript">
+document.write(document.lastModified);
+</script></span></p>
+		<hr />
+			
+			<p>Download the XML file I have linked here from our class's Frank O'Hara Project: <a href="McDermottOHaraPoemRevision.xml">McDermottOHaraPoemRevision.xml</a>. The file contains a poem with some interesting markup that we'd like you to transform into HTML, according to our instructions:
+			</p>
+			<p><strong>Overview:</strong> This test will require you to write <strong>modal XSLT</strong> to produce, first, an HTML reading view of this complete poem according to our instructions below, followed by an unordered list of the pop culture references marked inside it (coded as <span class="code">&lt;ref what="popCulture"&gt;</span>.</p>
+			<p>The HTML presentation of the poem should meet the following specifications:</p>
+			<ol>
+				<li>Your HTML must be output as <strong>a valid XHTML strict file</strong>, which means you must have the appropriate <span class="code">xsl:output</span> statement to set this doctype definition.</li>
+				<li>Each <strong>stanza</strong> of the poem (marked as <span class="code">&lt;st&gt;</span>) and <strong>the date</strong> following the poem, should be held inside an HTML <span class="code">&lt;p&gt;</span> element.</li>
+				<li>Each line of the poem should be output with an HTML break element, <span class="code">&lt;br/&gt;</span>, and also so that its line number is visible and coded to be styled in CSS differently from the main text, like this: <span class="code">&lt;span class="number"&gt;2&lt;/span&gt;</span></li>
+				
+			<li>The poem features some interesting examples of words broken across lines, so they are literally broken in half by a line break. Your HTML presentation should transform the contents of the <span class="code">wordBreak</span> elements so they appear bold in the HTML, using the HTML <span class="code">&lt;b&gt;</span> element.</li>
+				<li>Let's make the contents of the <span class="code">refrain</span> elements stand out by coding them with italics, using the HTML <span class="code">&lt;i&gt;</span> element. </li>
+				<li>Write a template rule to transform all the <span class="code">ref</span> elements, using <span class="code">&lt;span class=""&gt;</span> (which would allow us to style this a particular way in CSS), and use an <strong>attribute value template</strong> to determine the value of <span class="code">@class</span>. (You don't need to write CSS for this test.)</li>
+				<li>Now, write modal XSLT to output <strong>an unordered (bulleted) list to appear after the reading view of the poem</strong>, using <span class="code">&lt;ul&gt;</span> and <span class="code">&lt;li&gt;</span> to list the contents of the Pop Culture references in this poem.</li>
+			</ol>
+	<p>Check your work! Be sure to open your HTML file in &lt;oXygen/&gt; to be sure it is valid and well-formed, and modify your XSLT accordingly. When you are finished, <strong>upload only your XSLT file</strong> in <a href="https://courseweb.pitt.edu">Courseweb</a> in "Tests" at the designated upload point for the XSLT exam. We only need to see your XSLT file.</p>		
+			
+		
+</div>					
+	</body>
+
+
+
+</html>
