@@ -51,8 +51,8 @@ declare namespace tei="http://www.tei-c.org/ns/1.0"</pre>
       <p>Work out your maximum values for X and Y and set a view port with a width and a height, and then a viewBox attribute to scale your output if you wish.</p>
       <p>Look at examples of how we prepared SVG Viewports in class, and check out <a href="https://sarasoueidan.com/blog/svg-coordinate-systems/">Sara Soueidan’s excellent detailed explanation</a>. Here is a brief summary overview of how to set the Viewport attributes on the SVG root element:</p>
       <ul>
-         <li>width="{largest X value for the ENTIRE plot + something with some wiggle room}"</li> 
-         <li>height="{largest Y for the ENTIRE plot + wiggle room}"</li>
+         <li><code>width="{largest X value for the ENTIRE plot + something with some wiggle room}"</code></li> 
+         <li><code>height="{largest Y for the ENTIRE plot + wiggle room}"</code></li>
       </ul>
       <p>Now, if I want to define how the image behaves on a screen, I define the <code>viewBox</code> attribute. <code>viewBox</code> takes four values: <code>viewBox="(x1,y1,x2,y2)"</code> which define a new coordinate system to use in rendering our output image.</p>
          <ul> 
