@@ -15,36 +15,97 @@
    <body>
       <!--#include virtual="top.html" -->
     	
-      <h1><span class="banner">SVG Exercise 4: Plot a Graph, or Your Choice</span></h1>
-      <p>For this assignment, you will be working with pulling data from your project files, and you may choose to work with your own project or another team’s project as you wish. For your output, you have a choice: You may either:</p>
-         <ul><li>Plot a graph with an X and a Y axis, labelled with a title and units, that represents data you pull from your project files using XQuery. Spend some time studying the code and structure of the files and experiment with something interesting to plot. Or... </li>
-         <li>Plot an SVG visualization of your choice that shows us something interesting in the project files. Your XQuery needs to be more complicated than one or two XPath expressions, and should involve some use of a <q>for loop</q>, but otherwise the form your plot takes is entirely up to you. (You might experiment with plotting shapes that show us something about the layered structure of <cite>The Decameron</cite>, for example. Whatever you plot should not be drawn by hand, but involve some use of XQuery variables and calculations to pull information from the XML code and output it as SVG. Use SVG <code>&lt;text&gt;</code> elements to title and label your plot.</li></ul>
-         <p>I have loaded your project files into <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a>, so you may access them from the following locations:</p>
-      <ul>
-         <li>Decameron project: You can choose to work with the English Decameron TEI file by itself: 
-         <pre>
-            <code>doc('/db/decameron/engDecameronTEI.xml')</code>
-         </pre>
-            or with the collection of the pair of English and Italian files, if you want to plot a graph that compares something between the two:
-           <pre>
-             <code>collection('/db/decameron/')</code>
-           </pre> 
-         </li>
-         <li>City Slave Girls project: 
-         <pre><code>collection('/db/Nelson/ChicagoTimes_XML_grammar/')</code></pre></li>
-         <li>Emily Dickinson project (fascicle 16 files):
-         <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
-      </ul>
- <p>Each of these projects are using TEI code. To read from the TEI and to output in the SVG namespace, you will need to declare your namespaces and work with the <code>tei:</code> prefix for all TEI elements.</p>     	
+      <h1><span class="banner">SVG Exercise 4: Plot a Bar Graph for the Graveyard Project</span></h1>
+      <h3>Our task</h3>
+      <p><a href="http://graveyard.newtfire.org/">The Graveyard project</a> currently archives and shares <dfn>personography</dfn> data (or data about people) from the Brush Creek Cemetery’s records, specifically for a group of 142 burials in Section A of the graveyard. These burials are organized into family plots, and the records frequently (but not always) indicate a location of death. Thanks to the data curation of the Graveyard team, we are able to look up and plot information about each family represented in section A and get a sense of the family’s geographic distribution from the locations of death associated with each last name (or surname). XPath of the Graveyard team’s data file tells us there are 56 distinct surnames for the 142 persons buried here. For this assignment, we will concentrate only on the larger families, those where the same surname is associated with <strong>three or more</strong> people. Of these we will graph a total count of deaths per surname, and then superimpose stacked bars representing each regional death location and the count of deaths for that region.</p>
+      <p>Here is <a href="http://dxcvm05.psc.edu:8080/exist/rest/db/classExampleQueries/graveyardTester.svg">our sample output for the assignment</a>. Yours may be styled differently, and you do not need to output the diagnostic information we did at the top of the plot (unless you want to do something similar). You should title and label your graph clearly and provide an explanation of colors (or textures) that you use to distinguish locations.</p>
+         <p>Access the Graveyard TEI personography file from <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a> in this location:</p>
+
+         <pre><code>doc("/db/graveyard/graveyardInfo-TEI.xml")</code></pre>
+    
+ <p>The personography file was prepared using TEI code. To read from the TEI and to output in the SVG namespace, you will need to declare your namespaces and work with the <code>tei:</code> prefix for all TEI elements.</p>     	
       	<pre>
 xquery version "3.0";
 declare default element namespace "http://www.w3.org/2000/svg"; 
-declare namespace tei="http://www.tei-c.org/ns/1.0"
-      	</pre>
+declare namespace tei="http://www.tei-c.org/ns/1.0"</pre>
       
-      <p>Open one of the files in these projects in eXide (with file-->open, and browse your way to it), and spend a few minutes studying the code. Look for something interesting to count and plot. For example, you might plot something that you can count within each of the ten days of the Decameron, knowing that days are held within <code>&lt;div[@type="Day"]&gt;</code> elements: perhaps the number of times a particular character appears, or how many places are marked. Because the XML texts that we are using here are under development, they may be inconsistently or incompletely marked up. They are all well formed, however, which means that they can be explored with XML tools, including XQuery.</p>
-      <p>To plot your graph (or other visualization) in SVG from XQuery, apply what you have been learning about SVG in the previous assignments. For example, when you plotted the timeline, you learned how to code a viewport in the SVG root element, and you learned how to plot from x=0 and y=0 so that your plot is visible in the SVG coordinate space, using <code>transform="translate(x, y)"</code>. You also learned how to plot and space hashmarks at regular intervals along a line. Your plot doesn’t need to contain hashmarks that look like the timeline plot, but at the very least you may want to space bars on a  bar graph at regular intervals, based on a maximum value. Keep in  mind that when you output multiple SVG elements in a return, you will want to bundle them together in a single group, or <code>&lt;g&gt;</code>.</p>
-   <p>The dimensions and style of your plot are up to you, though we recommend a bar graph be used for most plots of counts. Save your SVG output in eXist, but paste a copy of your XQuery script in a text file, save it according to our usual homework file naming conventions, and upload it to Coursweb.</p>
+      <p>We should begin by surveying the personography file. Open it in eXide (with file-->open, and browse your way to it). Notice how the personography entries are organized, and see how the <code>&lt;surname&gt;</code> elements are positioned. And notice how the <code>&lt;region&gt;</code> elements are nested inside the <code>&lt;death&gt;</code> element. Since the regions (US states or Canadian provinces) are more frequently shared and are easiest to understand, we will plot our stacked chart based on these elements (and bypass the cities encoded in <code>&lt;settlement&gt;</code>settlement). Here is a sample entry, highlighting the elements we seek:</p>
+         <pre>
+           &lt;person xml:id="L12P1" role="occupant" sex="m"&gt;
+            &lt;persName&gt;<code>&lt;surname&gt;Henderson&lt;/surname&gt;</code>&lt;forename type="first"&gt;James&lt;/forename&gt;&lt;/persName&gt;
+            &lt;age&gt;49&lt;/age&gt;
+            &lt;death when="1931-05-21"&gt;&lt;placeName&gt;&lt;settlement type="city"&gt;Mann
+                  County&lt;/settlement&gt;<code>&lt;region type="state"&gt;New York&lt;/region&gt;</code>&lt;/placeName&gt;&lt;note
+                type="cause"&gt;unknown&lt;/note&gt;&lt;/death&gt;
+            &lt;event type="interred" when="1931-05-24"&gt;
+              &lt;desc/&gt;
+            &lt;/event&gt;
+            &lt;trait type="racial"&gt;
+              &lt;label&gt;white&lt;/label&gt;
+            &lt;/trait&gt;
+            &lt;geo&gt;&lt;!--whitespace-separated geocoordinates look up how to do this in the TEI--&gt;&lt;/geo&gt;
+          &lt;/person&gt;</pre>  
+      <p>To plot your graph in SVG from XQuery, apply what you have been learning about SVG in the previous assignments. For example, when you plotted the timeline, you learned how to code a viewport in the SVG root element, and you learned how to plot from x=0 and y=0 so that your plot is visible in the SVG coordinate space, using <code>transform="translate(x, y)"</code>. You also learned how to plot and space hashmarks at regular intervals along a line. At the very least you want to space bars on a  bar graph at regular intervals, and draw X and Y axes based on maximum values multiplied by spacer variables that you set. Keep in  mind that when you output multiple SVG elements in a return, you will want to bundle them together in a single group, or <code>&lt;g&gt;</code>. And don’t forget to use the the <code>tei:</code> prefix when reaching into the TEI elements!</p>
+      <h3>How to make a stacked bar graph with XQuery</h3>
+      <h4>Draw your X and Y axes, and set up a Viewport</h4>
+      <p>Work out your maximum values for X and Y and set a view port with a width and a height, and then a viewBox attribute to scale your output if you wish.</p>
+      <p>Look at examples of how we prepared SVG Viewports in class, and check out <a href="https://sarasoueidan.com/blog/svg-coordinate-systems/">Sara Soueidan’s excellent detailed explanation</a>. Here is a brief summary overview of how to set the Viewport attributes on the SVG root element:</p>
+      <ul>
+         <li>width="{largest X value for the ENTIRE plot + something with some wiggle room}"</li> 
+         <li>height="{largest Y for the ENTIRE plot + wiggle room}"</li>
+      </ul>
+      <p>Now, if I want to define how the image behaves on a screen, I define the <code>viewBox</code> attribute. <code>viewBox</code> takes four values: <code>viewBox="(x1,y1,x2,y2)"</code> which define a new coordinate system to use in rendering our output image.</p>
+         <ul> 
+            <li><code>x1,y1</code> defines starting top-left part of the image, and<code> x2,y2</code> defines the number that represents the bottom right of the user’s screen.</li> 
+        <li> If <code>x1,y1</code> does not start at <code>0,0</code> the <code>viewBox</code> will select the part of your image that starts where you say as the top left of the viewable SVG. (Notice what happens to the output SVG if you set x1,y1 to 200,200)</li>
+            <li> If <code>x2,y2</code> is SMALLER than the total width and height you defined for your image, you’ll be zooming and cropping, because the <code>viewBox</code> defines what you can see on the visible screen. (Notice what happens if you set <code>x2,y2</code> to the <code>width div 2</code> and <code>height div 2</code>).</li>
+         <li>If the <code>x2,y2</code> is LARGER than the total width and height, the result effectively zooms out, making the output image take up LESS space on the screen. Think of <code>x2,y2</code> as defining a ratio with your width and height attribute values.</li>
+      </ul>
+      <h4>Plotting surnames and total bars</h4>
+      <p>We recommend beginning by plotting the each surname in a text element running beneath your X axis, and in the same X locations, plotting the total count of deaths per surname. Then we will go on to superimpose the stacked bars overtop of that total bar. Not every death was recorded with a location, so our stacked bars should stack from the bottom up, and in many cases leave some room at the top for those whose locations at death were not marked.</p>
+      <h4>Plotting the stacks: a special cumulative <code>for</code> loop, or array</h4>
+      <p>After you have output your surnames with their total counts, you will need to make an inner FLWOR, within the return statement of the “surname” FLWOR.</p>
+      <p>We found it helpful to store some <strong><dfn>arrays</dfn></strong> (or lists of values) in global variables, and we looped through the arrays in FLWOR statements used to output the colors in our legend, as well for the regional bars. Later on we found it absolutely essential to make a special kind of array to properly calculate the Y position of each stacked bar associated with a surname.</p>
+      <p>In order to stack bars you need to start each new bar where the previous bar completed. That means, if there are four bars to plot (bar 1, bar 2, bar 3, and bar 4), we have to plot like this: </p>
+      <ul>
+         <li>Bar 2 must be set at the height of bar 1.</li>
+         <li>Bar 3 must sit on top of the heights of bar 1 + bar 2.</li>
+         <li>Bar 4 must sit on top of the heights of bar 1 + bar 2 + bar 3.</li>
+      </ul>
+      <p>We need a way to keep a running total of the heights, so that as we loop through each region associated with a surname, we output the cumulative <code>sum()</code> of an array storing the values from the previous loops. Here is some code to show how we prepared an accumulator array:</p>
+      <pre>
+         let $matchesRegionList := 
+          for $d in $distDeathsSurRegion
+          where substring-before($d, '_') = $i
+          return $d
+     for $m at $posM in $matchesRegionList
+     let $reg := tokenize(substring-after($m, '_'), '-')[1]
+     let $count := tokenize(substring-after($m, '_'), '-')[last()]
+     let $intCount := xs:integer($count)
+     let $regYVal := $intCount * $Y_StretchFactor
+     <code>let $accumYVal := 
+          for $a in (0 to $posM - 1)
+          (:ebb: This very useful loop lets us look up the counts at each of the *previous* $posM steps! :)
+          let $accum := $matchesRegionList[$posM - $a]
+          let $countAccum := (tokenize(substring-after($accum, '_'), '-')[last()], '0')[1]
+          let $intCountAccum := xs:integer($countAccum)
+          let $accumY := $intCountAccum * $Y_StretchFactor
+          return $accumY
+      let $accumPos := sum($accumYVal)</code>
+     let $cVal :=
+         for $v in $colorStates
+         where $reg = substring-before($v, '_')
+         return substring-after ($v, '_')
+         (:ebb: Here we're looping over a global variable called $colorStates, 
+         and wherever its region substring matches our current region, we output its color value substring for use in coloring our region stacks. :)
+     return
+      &lt;rect class="{$reg}_{$count}" x="{$pos * $X_Spacer}" <code>y="-{$accumPos}"</code> width="20" height="{$regYVal}" style="stroke: black; stroke-width:1; fill: {$cVal}"/&gt;</pre>
+      <p>Note that <code>$i</code> refers to the surname value from our outermost <code>for</code> loop, and <code>$distDeathsSurRegion</code> is a reference to another array we stored up in a global variable, in which we stored, for each distinct region, a concatenated string (using the <code>concat()</code> function) piecing together a surname, followed by an underscore ("_"), followed by the region, followed by a hyphen ("-"), and the surname deathcount at that region. We are reaching up into that global variable, finding the substring that matches our current <code>$i</code> surname, and outputting it as a smaller array, stored in <code>$matchesRegionList </code>.</p>
+      <p>Next we loop through the <code>$matchesRegionList</code> array and extract the substrings with the information we want for region (<code>$reg</code>) and deathcount (<code>$count</code>). And we convert the count to an integer, and multiply it to the proportion we set for plotting on our graph. And this is where we need to plot how much we have to adjust the y position of each bar, by looking up the values at each preceding position in our <code>$matchesRegionList</code> array. This line of code is vital:</p>
+      <pre>for $a in (0 to $posM - 1)</pre>
+      <p>Here we define a <code>for</code> to range over integers from 0 to the last previous position of the <code>$posM</code> variable (or <code>$posM - 1</code>). For each position, whether it is 0, 1, 2, 3, etc, we subtract it from the current $posM, and we set that value as the position to retrieve on the $matchesRegionlist. The loop runs to its maximum, and outputs a series of numbers. In our next variable, <code>$accumPos</code> we add up the values of that array using the <code>sum()</code> function, which is designed add up a set of values. We use that <code>$accumPos</code> to calculate the position of the current bar for a region in our graph.</p>
+      <h3>Your output</h3>
+   <p>The dimensions and style of your plot are up to you, though we expect your output to be clearly labelled, so visitors to the Graveyard project will understand what they are seeing. Save your SVG output in your folder in eXist, but paste a copy of your XQuery script in a text file, save it according to our usual homework file naming conventions, and upload it to Coursweb.</p>
 
    </body>
 

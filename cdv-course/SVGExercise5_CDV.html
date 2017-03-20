@@ -1,0 +1,51 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>SVG Exercise 5 (CDV)</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+    	
+      <h1><span class="banner">SVG Exercise 5: Plot a Graph, or Your Choice</span></h1>
+      <p>For this assignment, you will be working with pulling data from your project files, and you may choose to work with your own project or another team’s project as you wish. For your output, you have a choice: You may either:</p>
+         <ul><li>Plot a graph with an X and a Y axis, labelled with a title and units, that represents data you pull from your project files using XQuery. Spend some time studying the code and structure of the files and experiment with something interesting to plot. Or... </li>
+         <li>Plot an SVG visualization of your choice that shows us something interesting in the project files. Your XQuery needs to be more complicated than one or two XPath expressions, and should involve some use of a <q>for loop</q>, but otherwise the form your plot takes is entirely up to you. (You might experiment with plotting shapes that show us something about the layered structure of <cite>The Decameron</cite>, for example. Whatever you plot should not be drawn by hand, but involve some use of XQuery variables and calculations to pull information from the XML code and output it as SVG. Use SVG <code>&lt;text&gt;</code> elements to title and label your plot.</li></ul>
+         <p>I have loaded your project files into <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a>, so you may access them from the following locations:</p>
+      <ul>
+         <li>Decameron project: You can choose to work with the English Decameron TEI file by itself: 
+         <pre>
+            <code>doc('/db/decameron/engDecameronTEI.xml')</code>
+         </pre>
+            or with the collection of the pair of English and Italian files, if you want to plot a graph that compares something between the two:
+           <pre>
+             <code>collection('/db/decameron/')</code>
+           </pre> 
+         </li>
+         <li>City Slave Girls project: 
+         <pre><code>collection('/db/Nelson/ChicagoTimes_XML_grammar/')</code></pre></li>
+         <li>Emily Dickinson project (fascicle 16 files):
+         <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
+      </ul>
+ <p>Each of these projects are using TEI code. To read from the TEI and to output in the SVG namespace, you will need to declare your namespaces and work with the <code>tei:</code> prefix for all TEI elements.</p>     	
+      	<pre>
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0"
+      	</pre>
+      
+      <p>Open one of the files in these projects in eXide (with file-->open, and browse your way to it), and spend a few minutes studying the code. Look for something interesting to count and plot. For example, you might plot something that you can count within each of the ten days of the Decameron, knowing that days are held within <code>&lt;div[@type="Day"]&gt;</code> elements: perhaps the number of times a particular character appears, or how many places are marked. Because the XML texts that we are using here are under development, they may be inconsistently or incompletely marked up. They are all well formed, however, which means that they can be explored with XML tools, including XQuery.</p>
+      <p>To plot your graph (or other visualization) in SVG from XQuery, apply what you have been learning about SVG in the previous assignments. For example, when you plotted the timeline, you learned how to code a viewport in the SVG root element, and you learned how to plot from x=0 and y=0 so that your plot is visible in the SVG coordinate space, using <code>transform="translate(x, y)"</code>. You also learned how to plot and space hashmarks at regular intervals along a line. Your plot doesn’t need to contain hashmarks that look like the timeline plot, but at the very least you may want to space bars on a  bar graph at regular intervals, based on a maximum value. Keep in  mind that when you output multiple SVG elements in a return, you will want to bundle them together in a single group, or <code>&lt;g&gt;</code>.</p>
+   <p>The dimensions and style of your plot are up to you, though we recommend a bar graph be used for most plots of counts. Save your SVG output in eXist, but paste a copy of your XQuery script in a text file, save it according to our usual homework file naming conventions, and upload it to Coursweb.</p>
+
+   </body>
+
+</html>
