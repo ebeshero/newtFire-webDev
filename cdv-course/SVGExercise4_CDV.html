@@ -64,8 +64,8 @@ declare namespace tei="http://www.tei-c.org/ns/1.0"</pre>
       <h4>Plotting surnames and total bars</h4>
       <p>We recommend beginning by plotting the each surname in a text element running beneath your X axis, and in the same X locations, plotting the total count of deaths per surname. Then we will go on to superimpose the stacked bars overtop of that total bar. Not every death was recorded with a location, so our stacked bars should stack from the bottom up, and in many cases leave some room at the top for those whose locations at death were not marked.</p>
       <h4>Plotting the stacks: a special cumulative <code>for</code> loop, or array</h4>
-      <p>After you have output your surnames with their total counts, you will need to make an inner FLWOR, within the return statement of the “surname” FLWOR.</p>
-      <p>We found it helpful to store some <strong><dfn>arrays</dfn></strong> (or lists of values) in global variables, and we looped through the arrays in FLWOR statements used to output the colors in our legend, as well for the regional bars. Later on we found it absolutely essential to make a special kind of array to properly calculate the Y position of each stacked bar associated with a surname.</p>
+      <p>After you have output your surnames with their total counts, you will need to make an inner <code>FLWOR</code>, within the return statement of the “surname” <code>FLWOR</code>.</p>
+      <p>We found it helpful to store some <strong><dfn>arrays</dfn></strong> (or lists of values) in global variables, and we looped through the arrays in <code>FLWOR</code> statements used to output the colors in our legend, as well for the regional bars. Later on we found it absolutely essential to make a special kind of array to properly calculate the Y position of each stacked bar associated with a surname.</p>
       <p>In order to stack bars you need to start each new bar where the previous bar completed. That means, if there are four bars to plot (bar 1, bar 2, bar 3, and bar 4), we have to plot like this: </p>
       <ul>
          <li>Bar 2 must be set at the height of bar 1.</li>
