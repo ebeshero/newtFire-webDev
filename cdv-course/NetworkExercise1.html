@@ -60,7 +60,7 @@ Lamberti	novella	Filostrato
            <pre><code>collection('/db/decameron/')</code></pre> 
          </li>
          <li>City Slave Girls project (GitHub: <a href="https://github.com/RJP43/CitySlaveGirls">https://github.com/RJP43/CitySlaveGirls</a>): 
-         <pre><code>collection('/db/Nelson/ChicagoTimes_XML_grammar/')</code></pre></li>
+         <pre><code>collection('/db/Nelson/CSG_XML/')</code></pre></li>
          <li>Emily Dickinson project, fascicle 16 files (GitHub: <a href="https://github.com/ebeshero/EmilyDickinson16">https://github.com/ebeshero/EmilyDickinson16</a>): 
          <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
       </ul>
@@ -80,6 +80,11 @@ declare default element namespace "http://www.tei-c.org/ns/1.0";</code></pre>
       <pre>Source-Node [tab] Edge-Interaction [tab] Target-Node [return]</pre>
       This effectively expresses something like a simple sentence:
       <pre>Thing-1 [tab] is-in-a-special-shared-place-with [tab] Thing-2 [return]</pre>
+      <p>We are almost certainly going to need to <q>clean up</q> and <q>de-dupe</q> (or remove duplicates from) the input data! Almost every project will feature some level of mess to clean up, and one very simple clean-up you can apply here is to remove any extra white spaces in your input nodes, while doing the XQuery! For this we use the XPath function <code>normalize-space()</code>, which simply removes leading and following white spaces, and makes sure that <code>&lt;city&gt; Greensburg&lt;/city&gt;</code> turns out to be the same single distinct value as <code>&lt;city&gt;Greensburg &lt;/city&gt;</code> and <code>&lt;city&gt;Greensburg&lt;/city&gt;</code>. To use <code>normalize-space()</code>, we typically walk the tree to the nodes we want to process, and place <code>normalize-space(.)</code> like so at the end of the XPath: 
+      </p>
+      <pre>
+         <code>$yourVariableStartingPoint//walk//the//tree//to//here/normalize-space(.)</code>
+      </pre>
       <p>In our return, we are going to use <code>concat()</code> to hold the Source-Node, [tab], Edge-Interaction, [tab], Target-Node, and then we will bundle that concat function inside a <code>string-join()</code> with the special unicode character of a line-feed or hard-return, <code>&amp;#10;</code>, as the separator of each line in the output text. Typically we don’t express the whole verb phrase as the Edge, but we output a word or phrase that identifies what the shared space or shared interaction consists of, as in this example:</p>
       <pre>Bergamino	floatingFrame	Lauretta</pre>
       <p>Here, the character Bergamino shares with the character Lauretta a position in one of the <code>&lt;floatingText&gt;</code> sections of our TEI XML for <cite>The Decameron</cite>, and this relationship constitutes one base unit of a larger network of connections. Generating the TSV file that holds a collection of information like this effectively stores all the network data, and when we import it in Cytoscape we can run the software to calculate, plot, and study its <strong><dfn>network statistics</dfn></strong>: which nodes are the most connected to other nodes? Which nodes are necessary to hold the network together? Which parts of the network are broken off from the others? Which nodes only appear to have one edge type (say only in sharing <code>&lt;floatingText&gt;</code>) and which ones share multiple edge types? We can output our network plot in many different ways to consider these questions, and that will be our focus <a href="NetworkExercise2.html">in Part 2</a>, but for now, we need to generate the network data to identify the nodes and edges in the first place.</p>
