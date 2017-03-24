@@ -83,7 +83,7 @@ declare default element namespace "http://www.tei-c.org/ns/1.0";</code></pre>
       <p>We are almost certainly going to need to <q>clean up</q> and <q>de-dupe</q> (or remove duplicates from) the input data! Almost every project will feature some level of mess to clean up, and one very simple clean-up you can apply here is to remove any extra white spaces in your input nodes, while doing the XQuery! For this we use the XPath function <code>normalize-space()</code>, which simply removes leading and following white spaces, and makes sure that <code>&lt;city&gt; Greensburg&lt;/city&gt;</code> turns out to be the same single distinct value as <code>&lt;city&gt;Greensburg &lt;/city&gt;</code> and <code>&lt;city&gt;Greensburg&lt;/city&gt;</code>. To use <code>normalize-space()</code>, we typically walk the tree to the nodes we want to process, and place <code>normalize-space(.)</code> like so at the end of the XPath: 
       </p>
       <pre>
-         <code>$yourVariableStartingPoint//walk//the//tree//to//here/normalize-space(.)</code>
+         <code>let $input1 := $yourVariableStartingPoint//walk//the//tree//to//here/normalize-space(.)</code>
       </pre>
       <p>In our return, we are going to use <code>concat()</code> to hold the Source-Node, [tab], Edge-Interaction, [tab], Target-Node, and then we will bundle that concat function inside a <code>string-join()</code> with the special unicode character of a line-feed or hard-return, <code>&amp;#10;</code>, as the separator of each line in the output text. Typically we don’t express the whole verb phrase as the Edge, but we output a word or phrase that identifies what the shared space or shared interaction consists of, as in this example:</p>
       <pre>Bergamino	floatingFrame	Lauretta</pre>
