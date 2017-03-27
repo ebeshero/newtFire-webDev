@@ -54,14 +54,18 @@ Lamberti	novella	Filostrato
       
          <p>You may work with any of our student project files to plot a network of co-occurrence of any kind that interests you, but keep in mind our advice in our tutorial: <strong>keep it simple</strong> with just one kind of node (say, individual names, place names, reading witnesses, etc.) and some unit of co-occurence drawn from the structure of your XML files. Your project files are loaded into <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a>, so you may access them from the following locations:</p>
       <ul>
-         <li>Decameron project (GitHub: <a href="https://github.com/jlm323/DecameronProject">https://github.com/jlm323/DecameronProject</a>): You can choose to work with the English Decameron TEI file by itself: 
+         <li>Hamilton project (GitHub: <a href="https://github.com/ahunker/Hamilton-Project">https://github.com/ahunker/Hamilton-Project</a>) <strong>coded in TEI</strong>: There is a single collection that holds two directories, containing song lyrics from Act One and Act Two of the musical. You can choose to work with the whole musical, or with either one of the subcollections: 
+            <pre><code>collection('/db/hamilton/')</code></pre>
+         
+         </li>
+         <li>Decameron project (GitHub: <a href="https://github.com/jlm323/DecameronProject">https://github.com/jlm323/DecameronProject</a>) <strong>coded in TEI</strong>: You can choose to work with the English Decameron TEI file by itself: 
          <pre><code>doc('/db/decameron/engDecameronTEI.xml')</code></pre>
             or with the collection of the pair of English and Italian files, if you want to plot a graph that compares something between the two:
            <pre><code>collection('/db/decameron/')</code></pre> 
          </li>
-         <li>City Slave Girls project (GitHub: <a href="https://github.com/RJP43/CitySlaveGirls">https://github.com/RJP43/CitySlaveGirls</a>): 
+         <li>City Slave Girls project (GitHub: <a href="https://github.com/RJP43/CitySlaveGirls">https://github.com/RJP43/CitySlaveGirls</a>) <strong>coded in TEI</strong>:  
          <pre><code>collection('/db/Nelson/CSG_XML/')</code></pre></li>
-         <li>Emily Dickinson project, fascicle 16 files (GitHub: <a href="https://github.com/ebeshero/EmilyDickinson16">https://github.com/ebeshero/EmilyDickinson16</a>): 
+         <li>Emily Dickinson project, fascicle 16 files (GitHub: <a href="https://github.com/ebeshero/EmilyDickinson16">https://github.com/ebeshero/EmilyDickinson16</a>) <strong>coded in TEI</strong>: : 
          <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
       </ul>
 
