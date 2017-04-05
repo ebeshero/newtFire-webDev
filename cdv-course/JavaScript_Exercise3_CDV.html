@@ -1,0 +1,41 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>JavaScript Exercise 3 (CDV)</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+      	
+      			
+      				
+      <h1><span class="banner">JavaScript Exercise 3</span></h1>
+      <p>In this exercise, we will enhance to the timeline we output in SVG from XQuery, working with the Digital Mitford letters collection stored in our eXist database (see <a href="SVGExercise2_CDV.html">SVG Exercises 2</a> and <a href="SVGExercise3_CDV.html">3</a>). At that stage, we output a vertical timeline that ran down the screen and required scrolling, and we plotted a parallel line showing how just one correspondent, Benjamin Robert Haydon, aligned with the total collection timeline. The parallel line marked the earliest and latest letters addressed to him and indicated the stretch of time represented by his letters.</p>
+      <h2>Our goals</h2>
+      <p>We are now ready to improve that SVG so that it is more representative of the whole collection, so that we can output a line <em>for each</em> of the correspondents in the collection. We want to integrate the timelines more effectively on an HTML website page, without scrolling. And we want to prepare a clickable web form in HTML to allow us to show and hide particular lines so we can compare the duration of particular correspondents on the list. On click of one or more names, we should be able to reveal the lines we are interested in seeing.</p>
+      
+      
+     
+         <ul><li>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:
+         <ul>
+            <li>On load of the window, you will want to fire a function, the one we typically call <code>init()</code>. That init() (or initial()) function should add event listeners on the elements you expect your site visitors to interact with. This is familiar territory, but we found ourselves writing the element selection a little differently than we have done in the past: In our SVG, we set <code>@id</code> attributes on each <code>&lt;g&gt;</code> element, and there was at least one outer <code>&lt;g&gt;</code> containing an entire graph. We only wanted something to happen on click of each stacked bar, so we wanted the inner <code>&lt;g&gt;</code>  elements to be made <q>clickable</q>. To do that we used a handy selector in JavaScript that uses CSS syntax to identify <em>elements that hold a specific attribute</em> called <code>querySelectorAll()</code>: We wrote it like this to define an array of elements:
+            <pre>
+                var svgSelect = document.querySelectorAll('g[id]');
+               
+            </pre>
+               That code creates an array of all the <code>&lt;g&gt;</code> elements that hold an @id attribute. After this we set up a for-loop with the range variable <code>i</code> to step through each member of the array of <code>svgSelect.length</code>, and then we set up our <code>addEventListener()</code> to run on the <code> svgSelect[i]</code> (or the svgSelect variable at position i), and to fire the next function() in sequence in the event of <code>'click'</code>, just as you have already done on previous assignments. <strong>Note:</strong> If you use the @id in other ways on your outer wrapper <code>&lt;g&gt;</code> elements, you will need to do something more, perhaps to set a <code>@class</code> attribute on just the <code>&lt;g&gt;</code> elements you want to grab here. (Modifying your code to suit your specific plan is part of this assignment!)</li>
+            <li>Our JavaScript defines two more functions after <code>function init()</code>, and remember that each function needs to call the others in turn for your JavaScript to work. . . </li></ul></li></ul>
+   </body>
+   
+   
+   
+   
+</html>
