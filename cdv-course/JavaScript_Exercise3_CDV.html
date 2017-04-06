@@ -33,9 +33,16 @@
       </ul>
    
 <h2>Help with details</h2>
-      <h3>XQuery</h3>
+      <h3>XQuery to output HTML with SVG</h3>
       <p>Optimally, we want to generate our HTML page with SVG set within it, so that the same XQuery functions generate the entire page. This is a bit of a challenge for outputting code in multiple namespaces. Here is how we did it:</p>
-<h3>JavaScript</h3>    
+      
+      <!--Notes:
+      Output namespaces in eXide. We prefixed htm for EVERY html element, and we used the prefix tei when reading from our TEI files. We made SVG the default namespace. You might try this differently: make HTML the default namespace (no prefix required), and prefix the svg elements. SHOW CODE BLOCK FOR THIS.
+      
+      You can add the script element signalling your JavaScript file in your XQuery script, or after the step below, when you open and spot-repair the file in  &lt;oXygen/&gt;.
+      -->    
+      <p>Your output HTML and SVG will be missing the proper DOCTYPE declaration and the HTML root element will be missing its namespace attribute. Download the file from eXide, save it elsewhere to be mounted on your webspace at the PSC, and open it in &lt;oXygen/&gt;. You can add what you need by opening a new HTML 5 document in &lt;oXygen/&gt; and adding those features. &lt;oXygen/&gt; should give you a green light if all is well.</p>
+      <h3>JavaScript</h3>
          <ul><li>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:
          <ul>
             <li>On load of the window, you will want to fire a function, the one we typically call <code>init()</code>. That init() (or initial()) function should add event listeners on the elements you expect your site visitors to interact with. This is familiar territory, but we found ourselves writing the element selection a little differently than we have done in the past: In our SVG, we set <code>@id</code> attributes on each <code>&lt;g&gt;</code> element, and there was at least one outer <code>&lt;g&gt;</code> containing an entire graph. We only wanted something to happen on click of each stacked bar, so we wanted the inner <code>&lt;g&gt;</code>  elements to be made <q>clickable</q>. To do that we used a handy selector in JavaScript that uses CSS syntax to identify <em>elements that hold a specific attribute</em> called <code>querySelectorAll()</code>: We wrote it like this to define an array of elements:
