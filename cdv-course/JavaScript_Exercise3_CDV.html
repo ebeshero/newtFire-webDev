@@ -18,12 +18,24 @@
       			
       				
       <h1><span class="banner">JavaScript Exercise 3</span></h1>
-      <p>In this exercise, we will enhance to the timeline we output in SVG from XQuery, working with the Digital Mitford letters collection stored in our eXist database (see <a href="SVGExercise2_CDV.html">SVG Exercises 2</a> and <a href="SVGExercise3_CDV.html">3</a>). At that stage, we output a vertical timeline that ran down the screen and required scrolling, and we plotted a parallel line showing how just one correspondent, Benjamin Robert Haydon, aligned with the total collection timeline. The parallel line marked the earliest and latest letters addressed to him and indicated the stretch of time represented by his letters.</p>
+      <p>In this exercise, we will enhance our output from <a href="SVGExercise2_CDV.html">SVG Exercises 2</a> and <a href="SVGExercise3_CDV.html">3</a>, that is, the timeline we output in SVG from XQuery on the Digital Mitford letters collection stored in our eXist database. At that stage, we output a vertical timeline that ran down the screen and required scrolling, and we plotted a parallel line showing how just one correspondent, Benjamin Robert Haydon, aligned with the total collection timeline. The parallel line marked the earliest and latest letters addressed to him and indicated the stretch of time represented by his letters.</p>
       <h2>Our goals</h2>
-      <p>We are now ready to improve that SVG so that it is more representative of the whole collection, so that we can output a line <em>for each</em> of the correspondents in the collection. We want to integrate the timelines more effectively on an HTML website page, without scrolling. And we want to prepare a clickable web form in HTML to allow us to show and hide particular lines so we can compare the duration of particular correspondents on the list. On click of one or more names, we should be able to reveal the lines we are interested in seeing.</p>
-      
-      
-     
+      <p>We will prepare our timeline to sit on a project webpage as a clickable infographic that helps us to survey the contents of our collection of files. This involves some alterations to the original XQuery we wrote, prior to drafting JavaScript. Our new code will do the following:</p>
+      <ul>
+         <li>Output an SVG line <em>for each</em> of the correspondents in the collection (not just for Benjamin Robert Haydon). 
+         <ul>
+            <li>Plot the timelines horizontally this time, so the earliest dates are on the left of the screen and the latest on the right.</li>
+            <li>Prepare the SVG viewport so the lines do not require scrolling to be viewed.</li> 
+         </ul>
+         </li>
+         <li>Output a clickable web form in HTML listing each correspondent, and assemble a document that successfully integrates HTML with SVG.</li>
+         <li>Write JavaScript so that the SVG timelines for each of Mitford's correspondents can be toggled from the HTML portion of the page. Our visitors should be able to show and hide particular lines so they can compare the time spans associated with particular correspondents on the list. On click of one or more names, we should be able to reveal the lines we are interested in seeing.</li>
+      </ul>
+   
+<h2>Help with details</h2>
+      <h3>XQuery</h3>
+      <p>Optimally, we want to generate our HTML page with SVG set within it, so that the same XQuery functions generate the entire page. This is a bit of a challenge for outputting code in multiple namespaces. Here is how we did it:</p>
+<h3>JavaScript</h3>    
          <ul><li>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:
          <ul>
             <li>On load of the window, you will want to fire a function, the one we typically call <code>init()</code>. That init() (or initial()) function should add event listeners on the elements you expect your site visitors to interact with. This is familiar territory, but we found ourselves writing the element selection a little differently than we have done in the past: In our SVG, we set <code>@id</code> attributes on each <code>&lt;g&gt;</code> element, and there was at least one outer <code>&lt;g&gt;</code> containing an entire graph. We only wanted something to happen on click of each stacked bar, so we wanted the inner <code>&lt;g&gt;</code>  elements to be made <q>clickable</q>. To do that we used a handy selector in JavaScript that uses CSS syntax to identify <em>elements that hold a specific attribute</em> called <code>querySelectorAll()</code>: We wrote it like this to define an array of elements:
