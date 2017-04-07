@@ -140,6 +140,8 @@
                   front of the distinct correspondent value identifying its group of SVG elements,
                   but we could just as easily have put something like <code>HTM_</code> in front of
                   the <code>@id</code> on the HTML input element.)</li>
+               <li>How will you space the lines for each correspondent in relation to one another? This is up to you! One approach may be to
+               try to plot these all on or near the timeline for the entire collection so that they superimpose on one another (realizing that you will use CSS to hide all the lines at first, and expose them with JavaScript when a visitor selects particular correspondents from the HTML input options. A different approach (the one we took in the version we showed above) is to plot each correspondent line running down the screen. To achieve that, we used the <code>$pos</code> variable in our XQuery <code>for loop</code>: <code>for $i at $pos in $variableWeAreLoopingThrough</code>.</li>
                <li>You may need to review how we calculated the start and end of the Haydon line,
                   and apply this more generally to the <code>for loop</code> values. Remember that
                   the minimum year for a correspondent is something we calculate in relation to the
