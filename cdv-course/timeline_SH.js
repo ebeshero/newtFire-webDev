@@ -2,7 +2,7 @@
 window.onload = init;
 /* or window.addEventListener('DOMContentLoaded',init,false); */
 function init() {
-window.alert("hi!");
+window.alert("hi there!");
   var checkboxSelect = document.querySelectorAll('input[id]');
   for (var i = 0; i < checkboxSelect.length; i++) {
   checkboxSelect[i].addEventListener('click', lineShow, true);
@@ -15,8 +15,6 @@ function lineShow() {
 {
           /*  alert("CheckBox checked."); */
             svgLine = document.getElementById(svgID);
-  /*svgLine.style.display = "block";*/
-  /*this.addEventListener('click', hide, true);*/
   
   if (svgLine.style.display == 'block') {
         svgLine.style.display = 'none';
@@ -28,25 +26,3 @@ function lineShow() {
     
     
 }
-
-
-
-function hide() {
-
- var svgID = 'SVG_' + this.id
-    {/*  alert("function hide() is firing!");*/
-    svgLine = document.getElementById(svgID);
-  svgLine.style.display = "none"; 
-  /*this.addEventListener('click', lineShowAgain, false);*/
-  }  
-}
- 
-
-       
-    
-    
-
-
-  
-
-window.onload = init;

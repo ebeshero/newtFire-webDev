@@ -84,16 +84,32 @@
       </ul>
     
       
-      <h3>JavaScript</h3>
-         <ul><li>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:
+      <h3>CSS and JavaScript</h3>
+      <p>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:</p>
          <ul>
-            <li>On load of the window, you will want to fire a function, the one we typically call <code>init()</code>. That init() (or initial()) function should add event listeners on the elements you expect your site visitors to interact with. This is familiar territory, but we found ourselves writing the element selection a little differently than we have done in the past: In our SVG, we set <code>@id</code> attributes on each <code>&lt;g&gt;</code> element, and there was at least one outer <code>&lt;g&gt;</code> containing an entire graph. We only wanted something to happen on click of each stacked bar, so we wanted the inner <code>&lt;g&gt;</code>  elements to be made <q>clickable</q>. To do that we used a handy selector in JavaScript that uses CSS syntax to identify <em>elements that hold a specific attribute</em> called <code>querySelectorAll()</code>: We wrote it like this to define an array of elements:
+            <li>Your CSS may be as elaborate as you like, but it should at the very least be set to hide the individual SVG <code>g</code> elements associated with particular correspondent timelines. To toggle the display properties off and on involves writing JavaScript to show or hide a particular line that the user is clicking on, that is, to change the state from hidden to showing. In the CSS we set the default style for the correspondent SVG <code>g</code> elements to <code>display="none"</code>, and wrote a JavaScript function to override that and return <code>display="block"</code>, which is the proper display value for SVG elements.</li>
+            <li>On load of the window, you will want to fire a function, the one we typically call <code>init()</code>. That <code>init()</code> or <code>initial(</code>) function should add event listeners on the HTML elements that you expect your site visitors to interact with. This is familiar territory, but we found ourselves writing the element selection a little differently than we have done in the past: In our SVG, we set <code>@id</code> attributes on each <code>&lt;input&gt;</code> element. We could have just used <code>getElementsByTagName()</code>, but we thought we would show you a handy selector in JavaScript that uses CSS syntax to identify <em>elements that hold a specific attribute</em> called <code>querySelectorAll()</code>: We wrote it like this to define an array of elements:
             <pre>
-                var svgSelect = document.querySelectorAll('g[id]');
+                var inputSelect = document.querySelectorAll('input[id]');
                
             </pre>
-               That code creates an array of all the <code>&lt;g&gt;</code> elements that hold an @id attribute. After this we set up a for-loop with the range variable <code>i</code> to step through each member of the array of <code>svgSelect.length</code>, and then we set up our <code>addEventListener()</code> to run on the <code> svgSelect[i]</code> (or the svgSelect variable at position i), and to fire the next function() in sequence in the event of <code>'click'</code>, just as you have already done on previous assignments. <strong>Note:</strong> If you use the @id in other ways on your outer wrapper <code>&lt;g&gt;</code> elements, you will need to do something more, perhaps to set a <code>@class</code> attribute on just the <code>&lt;g&gt;</code> elements you want to grab here. (Modifying your code to suit your specific plan is part of this assignment!)</li>
-            <li>Our JavaScript defines two more functions after <code>function init()</code>, and remember that each function needs to call the others in turn for your JavaScript to work. . . </li></ul></li></ul>
+               That code creates an array of all the <code>&lt;input&gt;</code> elements that hold an <code>@id</code> attribute. After this we set up a JavaScript for-loop with the range variable <code>i</code> to step through each member of the array of <code>inputSelect.length</code>, and then we set up our <code>addEventListener()</code> to run on the <code>inputSelect[i]</code> (or the svgSelect variable at position i), and to fire the next function in sequence in the event of <code>'click'</code>, just as you have already done on previous assignments.</li>
+            <li>Our JavaScript defines just one more function to fire after <code>function init()</code>.This function needs to check the <code>@id</code> value on the HTML element that was clicked on, and to refer to that element, the one the user has just now clicked on, we use the special JavaScript word <code>this</code>. To find the <code>@id</code> on <code>this</code>, we write: <code>this.id</code>. What you need to do with <code>this.id</code> is use it to find the corresponding SVG element whose <code>@id</code> best matches. In our code, we added the string <code>SVG_</code>, so we sought out the element with the id <code>'SVG_' + this.id</code> to find the matching group of SVG elements associated with a particular selected correspondent.</li>
+            <li>We then manage the show-hide toggling by writing a JavaScript <code>if() else()</code> to change the display property of the matching SVG element. Remember that to check the display condition of <code>this</code>, we need to use the double equal sign: <code>==</code>, and use the single equal sign <code>=</code> to indicate a change in value.</li>
+         
+         </ul>
+         
+      
+      <h3>What to submit for your homework</h3>
+      <p>You will need to submit multiple files to complete this assignment:</p>
+      <ul>
+         <li>Your <strong>XSLT files</strong> to produce HTML and SVG</li>
+         <li>Your <strong>HTML file</strong> containing your SVG. (You may also include, if you like, the separate SVG and HTML files you first output from XSLT, but you don’t really need to do that since we can run your XSLT to generate them directly.</li>
+         <li>Your <strong>CSS file</strong> to style and proportion the SVG and HTML elements on your page, and to control colors and display options together with your JavaScript</li>
+         <li>Your <strong>JavaScript file</strong> to script and control a sequence of events that should happen when a visitor interacts with your pages.</li>
+         
+      </ul>
+      <p>We ask that you associate your files with relative URLs so that you can upload them to Courseweb or put them in place (in relation to each other) on whatever web server you wish to use. Submit this on Courseweb, but if you like, you may also mount your files on your newtFire or GitHub io webspace.</p>
    </body>
    
    
