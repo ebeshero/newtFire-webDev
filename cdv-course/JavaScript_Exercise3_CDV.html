@@ -20,7 +20,10 @@
       <h1><span class="banner">JavaScript Exercise 3</span></h1>
       <p>In this exercise, we will enhance our output from <a href="SVGExercise2_CDV.html">SVG Exercises 2</a> and <a href="SVGExercise3_CDV.html">3</a>, that is, the timeline we output in SVG from XQuery on the Digital Mitford letters collection stored in our eXist database. At that stage, we output a vertical timeline that ran down the screen and required scrolling, and we plotted a parallel line showing how just one correspondent, Benjamin Robert Haydon, aligned with the total collection timeline. The parallel line marked the earliest and latest letters addressed to him and indicated the stretch of time represented by his letters.</p>
       <h2>Our goals</h2>
-      <p>We will prepare our timeline to sit on a project webpage as a clickable infographic that helps us to survey the contents of our collection of files. This involves some alterations to the original XQuery we wrote, prior to drafting JavaScript. Our new code will do the following:</p>
+      <p>Your task is to  timeline to sit on a project webpage as a clickable infographic that helps us to survey the contents of our collection of files. Our sample output looks like this screen capture (but we will refrain from showing you the clickable output until you have completed the assignment):</p> 
+      <img src="screenCapCDVJS3.png" width="1000"/>
+        <p>As shown in the screen capture image, a clicked checkbox shows or hides a line indicating a timespan associated with a particular Mitford correspondent. When a checkbox is clicked, this triggers a JavaScript function to fire to check whether a specific SVG <code>&lt;g&gt;</code> element, is displaying or hidden.</p>  
+      <p>To reconstruct our old SVG output into a dynamic webpage involves some alterations to the original XQuery we wrote, prior to drafting JavaScript. You will need to do the following:</p>
       <ul>
          <li>Output an SVG line <em>for each</em> of the correspondents in the collection (not just for Benjamin Robert Haydon). 
          <ul>
@@ -29,15 +32,50 @@
          </ul>
          </li>
          <li>Output a clickable web form in HTML listing each correspondent, and assemble a document that successfully integrates HTML with SVG.</li>
-         <li>Write JavaScript so that the SVG timelines for each of Mitford's correspondents can be toggled from the HTML portion of the page. Our visitors should be able to show and hide particular lines so they can compare the time spans associated with particular correspondents on the list. On click of one or more names, we should be able to reveal the lines we are interested in seeing.</li>
+         <li>Write CSS and JavaScript so that the SVG timelines for each of Mitford's correspondents can be toggled from the HTML portion of the page. Our visitors should be able to show and hide particular lines so they can compare the time spans associated with particular correspondents on the list. On click of one or more names, we should be able to reveal the lines we are interested in seeing.</li>
       </ul>
    
 <h2>Help with details</h2>
       <h3>XQuery to output HTML with SVG</h3>
       <p>Optimally, we want to generate our HTML page with SVG set within it, so that the same XQuery functions generate the entire page. This is a bit of a challenge for outputting code in multiple namespaces. Here is how we did it:</p>
-      
+      <ul>
+         <li>First, we set up multiple namespaces in our XQuery script. We need to account for three namespaces: 
+         <ol><li>A default output namespace (which we set to SVG, though you could set it to HTML if you like). The default output namespace one will <strong>not</strong> require prefixes.</li>
+            <li>A namespace for the HTML output, with a prefix that we designate.</li>
+            <li>A namespace identifying the TEI elements when you are reading them from our collection in eXist-db.</li>
+            </ol>
+          <p> Note that you can really reverse the default output namespace and make it HTML rather than SVG. That is up to you, but whatever output namespace you choose, the <em>other</em> one must be prefixed in your XQuery script. That means that in our script, every time we indicate an HTML element, we place an <code>htm:</code> prefix in front of it. </p>
+            <p>Here is the code we used to define the namespaces as global variables at the top of our XQuery script (highlighting the prefix definitions):</p>
+            <pre>
+               xquery version "3.0";
+               declare default element namespace "http://www.w3.org/2000/svg"; 
+               declare namespace <code>tei=</code>"http://www.tei-c.org/ns/1.0"; 
+               declare namespace <code>htm=</code>"http://www.w3.org/1999/xhtml";</pre>
+         </li>
+         <li>Unless we noted errors in your original SVG homework, your original global variable definitions for the SVG assignment should be fine and will be necessary for this assignment, too. We added three new variables to help us identify to <q>dereference</q> (or look up) the first standard full name of each correspondent as listed in the Digital Mitford site index file, which is posted on the web here: <code><a href="http://digitalmitford.org/si.xml">http://digitalmitford.org/si.xml</a></code>:
+            <pre>declare variable $col := collection ('/db/mitford');
+                 declare variable $letCol := collection ('/db/mitford/letters');
+                       (: other variables here. . . :)
+                <code>declare variable $letterRecipients := $letFiles/descendant::tei:titleStmt/tei:title/tei:persName/@ref;
+                 declare variable $distLetterRecips := distinct-values($letterRecipients);
+                 declare variable $si := doc('http://digitalmitford.org/si.xml');</code></pre>
+            Dereferencing isn’t strictly necessary for our assignment, but it is a nice touch for display on the Mitford project’s website, where we can use it in our output HTML to list a full name rather than just an id value as our list of letter correspondents. Consider that a bonus challenge for the assignment: instead of just listing out the @ref values, can you output in the HTML a list of the full names of the letter writers? Hint: In our code, when we wrote a <code>for loop</code> to step through the distinct <code>@ref</code> values, we looked up in the <code>http://digitalmitford.org/si.xml</code> file the first <code>&lt;tei:persName&gt;</code> child of the <code>&lt;tei:person&gt;</code> element whose <code>@xml:id</code> equals the current index variable in the loop. 
+         </li>
+         <li>Our XQuery needs to output an HTML page, with the SVG timelines tucked inside. You will need to build an outer shell of HTML elements around your XQuery script (just as you have done in previous assignments in the XQuery series), and within the content of that page, we recommend placing an HTML <code>div type="svg"</code> element (with the namespace prefix if you prefixed HTML: <code>&lt;htm:div type="svg"&gt;</code>). You can apply styling to adjust the dimensions of the div, but you can control the dimensions of the SVG viewport so that your timelines will fit on a screen.</li>
+         <li>You need to output a list of correspondents to click on in the HTML, and in the SVG you need to output a corresponding set of SVG elements. While it would be satisfying to output these as the return of the same <code>FLWOR</code>, we found we had to create two <code>for loops</code> over the set of distinct values of correspondents in the collection, one placed near the top of the HTML page, and the other within the SVG portion of the file. Note the following:
+            <ul>
+               <li>We used the HTML <code>&lt;htm:input type="checkbox"&gt;</code> element to generate our checkboxes, and we placed an <code>@id</code> attribute on each one. The checkbox basically just responds to a mouseclick, and with JavaScript we will make the presence or absence of a check correspond with the display properties of the corresponding SVG line. Note: You do not have to use a checkbox: you could use a <code>htm:button</code> or even an <code>htm:span</code> element that you might stylize in CSS. You simply need for the element to hold an <code>@id</code> attribute that corresponds to each member of your list of distinct values. In order for that <code>@id</code> value to be valid, you will need to remove the hashtag from the front of the string retrieved from the TEI <code>@ref</code> attributes.</li>
+               <li>How do we make the SVG lines for each correspondent pair up with the HTML input elements? We set up a <code>for loop</code> in the SVG to output lines spaced down the page </li>
+            </ul>
+         
+         
+         </li>
+         
+            <li>Your output file should save with a <code>.html</code> extension. (Interestingly, the prefixes from your XQuery script magically disappear when you open the output file and view its code!)</li>
+
+      </ul>
       <!--Notes:
-      Output namespaces in eXide. We prefixed htm for EVERY html element, and we used the prefix tei when reading from our TEI files. We made SVG the default namespace. You might try this differently: make HTML the default namespace (no prefix required), and prefix the svg elements. SHOW CODE BLOCK FOR THIS.
+
       
       You can add the script element signalling your JavaScript file in your XQuery script, or after the step below, when you open and spot-repair the file in  &lt;oXygen/&gt;.
       -->    
