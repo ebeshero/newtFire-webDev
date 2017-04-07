@@ -70,11 +70,14 @@
                <li>Of course, you will be swapping the x and y values in order to plot horizontally rather than vertically, and you will want to review how we work with <code>transform="translate()"</code>, which we discussed in <a href="SVGExercise2_CDV.html">SVG Exercise 2</a>.</li>
                <li>Be sure to label your output SVG lines with meaningful information: whose line is this, what’s the start and end date, the count of letters to this correspondent, etc.</li>
             </ul>
-         
-         
          </li>
          
             <li>Your output file should save with a <code>.html</code> extension. (Interestingly, the prefixes from your XQuery script magically disappear when you open the output file and view its code!)</li>
+         <li>Your output HTML and SVG will be missing the proper DOCTYPE declaration and the HTML root element will be missing its namespace attribute. <strong>Download</strong> the file from eXide, save it elsewhere to be mounted on your webspace at the PSC, and <strong>open it in &lt;oXygen/&gt;</strong>. You can add what you need by opening a new HTML 5 document in &lt;oXygen/&gt; and adding the Doctype line and the namespace attribute to the <code>html</code> root element:
+            <pre>
+               &lt;!DOCTYPE html&gt;
+               &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
+            &lt;oXygen/&gt; should then give you a green light if all is well. Note: if there are hashtags (<code>#</code>) starting your @id attributes, you these will raise an HTML validation error: you want to avoid outputting those.</li>
 
       </ul>
       <!--Notes:
@@ -82,7 +85,7 @@
       
       You can add the script element signalling your JavaScript file in your XQuery script, or after the step below, when you open and spot-repair the file in  &lt;oXygen/&gt;.
       -->    
-      <p>Your output HTML and SVG will be missing the proper DOCTYPE declaration and the HTML root element will be missing its namespace attribute. Download the file from eXide, save it elsewhere to be mounted on your webspace at the PSC, and open it in &lt;oXygen/&gt;. You can add what you need by opening a new HTML 5 document in &lt;oXygen/&gt; and adding those features. &lt;oXygen/&gt; should give you a green light if all is well.</p>
+      
       <h3>JavaScript</h3>
          <ul><li>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:
          <ul>
