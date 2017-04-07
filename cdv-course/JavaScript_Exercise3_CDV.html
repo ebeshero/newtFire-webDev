@@ -73,18 +73,16 @@
          </li>
          
             <li>Your output file should save with a <code>.html</code> extension. (Interestingly, the prefixes from your XQuery script magically disappear when you open the output file and view its code!)</li>
+         <li>You may want to add the <code>script</code> element signalling your JavaScript file in your XQuery script, in case you need to go back and alter the XQuery to correct your HTML.</li>
          <li>Your output HTML and SVG will be missing the proper DOCTYPE declaration and the HTML root element will be missing its namespace attribute. <strong>Download</strong> the file from eXide, save it elsewhere to be mounted on your webspace at the PSC, and <strong>open it in &lt;oXygen/&gt;</strong>. You can add what you need by opening a new HTML 5 document in &lt;oXygen/&gt; and adding the Doctype line and the namespace attribute to the <code>html</code> root element:
             <pre>
                &lt;!DOCTYPE html&gt;
                &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
             &lt;oXygen/&gt; should then give you a green light if all is well. Note: if there are hashtags (<code>#</code>) starting your @id attributes, you these will raise an HTML validation error: you want to avoid outputting those.</li>
+         
 
       </ul>
-      <!--Notes:
-
-      
-      You can add the script element signalling your JavaScript file in your XQuery script, or after the step below, when you open and spot-repair the file in  &lt;oXygen/&gt;.
-      -->    
+    
       
       <h3>JavaScript</h3>
          <ul><li>In your JavaScript you will likely be doing some familiar things you have already tried, but you will face new challenges, too. Think about what needs to happen in sequence:
