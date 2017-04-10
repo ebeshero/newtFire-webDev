@@ -189,7 +189,7 @@
             timelines. To toggle the display properties off and on involves writing JavaScript to
             show or hide a particular line that the user is clicking on, that is, to change the
             state from hidden to showing. In the CSS we set the default style for the correspondent
-            SVG <code>g</code> elements to <code>display="none"</code>, and wrote a JavaScript
+            SVG <code>g</code> elements (the ones on which we had set <code>@id</code> attributes) to <code>g[id] {display:none;}</code>. We then wrote a JavaScript
             function to override that and return <code>display="block"</code>, which is the proper
             display value for SVG elements.</li>
          <li>On load of the window, you will want to fire a function, the one we typically call
