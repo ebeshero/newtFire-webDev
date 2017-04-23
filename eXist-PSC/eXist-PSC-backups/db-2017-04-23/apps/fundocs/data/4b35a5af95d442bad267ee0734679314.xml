@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location/></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://www.jsonp.org</xqdoc:uri><xqdoc:name>jsonp</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>jsonp:contents-to-jsonp</xqdoc:name><xqdoc:signature>jsonp:contents-to-jsonp($node as node()) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+   Helper function: output the contents of a node or attribute.
+
+   Special cases:
+
+       &lt;p&gt;An empty element becomes 'null', i.e. &amp;lt;e/&amp;gt; becomes {"e": null}.&lt;/p&gt;
+       &lt;p&gt;An element with a single text child becomes a property with the value of the text child, i.e.
+       &amp;lt;e&amp;gt;text&amp;lt;/e&amp;gt; becomes {"e": "text"}&lt;/p&gt;
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>jsonp:element-helper</xqdoc:name><xqdoc:signature>jsonp:element-helper($attribs as attribute()*, $children as node()*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+   Helper function: output element content for elements with more than one child node or attribute.
+
+   Special cases:
+
+       &lt;p&gt;Child elements with the same name are added to an array.&lt;/p&gt;
+       &lt;p&gt;If an element has attribute and text content, the text content becomes a
+       property, e.g. '#text': 'my text'.&lt;/p&gt;
+       &lt;p&gt;In mixed content nodes, text nodes will be dropped.&lt;/p&gt;
+</xqdoc:description><xqdoc:param>$attribs* </xqdoc:param><xqdoc:param>$children* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>jsonp:node-to-jsonp</xqdoc:name><xqdoc:signature>jsonp:node-to-jsonp($node as node()+) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+    Helper function: convert a node into JSON.
+</xqdoc:description><xqdoc:param>$node+ </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>jsonp:node-to-jsonp-entry</xqdoc:name><xqdoc:signature>jsonp:node-to-jsonp-entry($node as node()+) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$node+ </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>jsonp:xml-to-jsonp</xqdoc:name><xqdoc:signature>jsonp:xml-to-jsonp($node as node()+, $call-back as xs:string?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+    Main entry point of the module. Convert node into JSONP.
+</xqdoc:description><xqdoc:param>$node+ </xqdoc:param><xqdoc:param>$call-back? </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

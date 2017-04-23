@@ -1,0 +1,41 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+(:  let $letters := collection('/db/letters') :)
+let $biggerLetters := collection ('/db/mitford/letters')
+(:  let $MissJamesOld := $letters/TEI//text//p//persName[@ref="#James_Miss"] :)
+let $MissJames := $biggerLetters/TEI//text//p//persName[@ref="#James_Miss"]
+let $MJpeeps := distinct-values($MissJames/parent::p/persName[not(@ref="#James_Miss")]/@ref)
+(: For each of these people who are referred to in the same paragraph with Miss James, we need to return a count of how 
+ : frequently this person appears. :)
+ 
+let $MJbooks := $MissJames/parent::p[persName[@ref="#James_Miss"]]/title/@ref | 
+$MissJames/parent::p[persName[@ref="#James_Miss"]]/bibl/@corresp
+let $distinct_MJbooks := distinct-values($MJbooks)
+
+for $b in $distinct_MJbooks
+let $derefB := $biggerLetters//TEI//text//p[persName[@ref="#James_Miss"]]//title[@ref = $b]
+let $count_B := count($derefB)
+order by $count_B descending
+
+(:  :for $i in $MJpeeps
+let $deref := $biggerLetters//TEI//text//p[persName[@ref="#James_Miss"]//persName[@ref = $i]
+let $count_i := count ($deref)
+order by $count_i descending :)
+
+
+return 
+    
+ <foo>
+    <!-- <persName>{$i}</name>
+    <persCount> {$count_i} </persCount>-->
+     <biblRef>{$b}</biblRef>
+     <biblCount>{$count_B}</biblCount>
+     </foo>
+
+    
+
+
+
+
+
+

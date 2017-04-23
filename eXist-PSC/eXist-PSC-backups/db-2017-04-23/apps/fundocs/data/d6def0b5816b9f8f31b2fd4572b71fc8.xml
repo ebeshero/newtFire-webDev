@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location/></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://www.json.org</xqdoc:uri><xqdoc:name>json</xqdoc:name><xqdoc:comment><xqdoc:description>
+    Transform XML fragments into &lt;a href="http://www.json.org"&gt;JSON&lt;/a&gt;. The target of this module
+    is to create a straight-forward Javasript representation of data-centric XML. It does not try to handle
+    mixed content nodes (with a mix of elements and text).
+    
+    &lt;h2&gt;Special rules&lt;/h2&gt;
+       &lt;p&gt;The root element will be absorbed, i.e. &amp;lt;root&amp;gt;text&amp;lt;/root&amp;gt; becomes "text".&lt;/p&gt;
+       &lt;p&gt;Child elements with the same name are added to an array.&lt;/p&gt;
+       &lt;p&gt;If an element has attribute and text content, the text content becomes a
+       property, e.g. '#text': 'my text'.&lt;/p&gt;
+       &lt;p&gt;In mixed content nodes, text nodes will be dropped.&lt;/p&gt;
+       &lt;p&gt;An empty element becomes 'null', i.e. &amp;lt;e/&amp;gt; becomes {"e": null}.&lt;/p&gt;
+       &lt;p&gt;An element with a single text child becomes a property with the value of the text child, i.e.
+       &amp;lt;e&amp;gt;text&amp;lt;/e&amp;gt; becomes {"e": "text"}&lt;/p&gt;
+       &lt;p&gt;If the attribute json:literal="true" is present on an element, then its text value
+         is considered literal and not quoted as a string. Useful for boolean and numberic
+         values! The json:annotate-json-literals function can be used to assist in this. &lt;/p&gt;
+</xqdoc:description></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>json:annotate-json-literals</xqdoc:name><xqdoc:signature>json:annotate-json-literals($src as node()*, $literals as xs:QName+) as node()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Helper function that annotates
+ elements with `json:literal="true"`
+ if their QNames are present in $literals
+
+ </xqdoc:description><xqdoc:param>$src* One or more nodes to consider for annotation</xqdoc:param><xqdoc:param>$literals+ The QNames of the elements to annotate</xqdoc:param><xqdoc:return>node()* :  The $src annotated with json:literal="true" as requested
+</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>json:contents-to-json</xqdoc:name><xqdoc:signature>json:contents-to-json($node as node()) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+   Helper function: output the contents of a node or attribute.
+
+   Special cases:
+
+       &lt;p&gt;An empty element becomes 'null', i.e. &amp;lt;e/&amp;gt; becomes {"e": null}.&lt;/p&gt;
+       &lt;p&gt;An element with a single text child becomes a property with the value of the text child, i.e.
+       &amp;lt;e&amp;gt;text&amp;lt;/e&amp;gt; becomes {"e": "text"}&lt;/p&gt;
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>json:element-helper</xqdoc:name><xqdoc:signature>json:element-helper($attribs as attribute()*, $children as node()*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+   Helper function: output element content for elements with more than one child node or attribute.
+
+   Special cases:
+
+       &lt;p&gt;Child elements with the same name are added to an array.&lt;/p&gt;
+       &lt;p&gt;If an element has attribute and text content, the text content becomes a
+       property, e.g. '#text': 'my text'.&lt;/p&gt;
+       &lt;p&gt;In mixed content nodes, text nodes will be dropped.&lt;/p&gt;
+</xqdoc:description><xqdoc:param>$attribs* </xqdoc:param><xqdoc:param>$children* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>json:node-to-json</xqdoc:name><xqdoc:signature>json:node-to-json($node as node()+) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+    Helper function: convert a node into JSON.
+</xqdoc:description><xqdoc:param>$node+ </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>json:xml-to-json</xqdoc:name><xqdoc:signature>json:xml-to-json($node as node()) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+    Main entry point of the module. Convert a single node into JSON.
+    The root element will be absorbed.
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

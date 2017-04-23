@@ -1,0 +1,12 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $collection := collection('/db/pacific/literary')/*
+let $collectionText := $collection//text
+let $people1 := $collectionText//persName 
+let $ana := $collectionText//rs/@ana
+let $allmypeeps := ($people1, $ana)
+let $distinctnames := distinct-values($allmypeeps)
+return $distinctnames
+
+
+

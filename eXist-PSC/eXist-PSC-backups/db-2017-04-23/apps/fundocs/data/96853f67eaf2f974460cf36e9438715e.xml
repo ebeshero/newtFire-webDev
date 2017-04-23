@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/XSLTForms-Demo/modules/app.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/apps/xsltforms-demo</xqdoc:uri><xqdoc:name>app</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>app:list-examples</xqdoc:name><xqdoc:signature>app:list-examples($node as node(), $model as map, $group as xs:string) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ List the examples described in examples.xml.
+ TODO: fill in more of the contents of examples.xml.
+
+ </xqdoc:description><xqdoc:param>$node the HTML node with the class attribute which triggered this call</xqdoc:param><xqdoc:param>$model a map containing arbitrary data - used to pass information between template calls</xqdoc:param><xqdoc:param>$group </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

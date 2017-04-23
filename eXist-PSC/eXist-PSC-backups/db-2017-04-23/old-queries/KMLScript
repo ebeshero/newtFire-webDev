@@ -1,0 +1,122 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+(: 2014-03-14 :)
+(: More robust ID and convert of coords in various formats :)
+<kml>
+
+
+
+<Document><name>Cook's First Voyage (from Hawkesworth)</name>
+<description>KML plot of navivigational coordinates from Hawkesworth's Account of Captain Cook's First Voyage</description>
+<Folder><name>Cook Voyage 1</name>
+<Style id="compass"><IconStyle><Icon><href>http://pacific.obdurodon.org/CompassRose2.gif</href></Icon></IconStyle></Style>
+<Style id="redLine"><LineStyle><color>ff0000CC
+</color><width>4</width></LineStyle></Style>
+
+{let $doc := doc('/db/pacific/mapping/Cook1Geo.xml')
+
+(: ID's all lat & lon coords in each paragraph :)
+let $pps := $doc//p
+for $p at $pos in $pps
+let $latCoords := $p/geo[@select="lat"]
+let $lonCoords := $p/geo[@select="lon"]
+
+(: ID's only coords associated with N's :)                                
+let $ns := $latCoords[@n] (: assumes every lat@N is paired with a lon@N :)
+for $n in $ns
+let $nval := $n/@n/data(.)
+let $lats := data($latCoords[@n=$nval])
+let $lons := data($lonCoords[@n=$nval])
+
+(: Converts latitude coords from DMS to decimal :)
+for $lat in $lats
+let $latsign := compare ($lat,'N|n')                                     (: sets +/- :)
+let $latdms3 := replace(normalize-space($lat),"degrees","°")         (: replaces the word "degrees" with the °-symbol :)
+let $latdms2a := replace(normalize-space($latdms3),'" N|" S|″ N|″ S|`` N|`` S|" n|" s|″ n|″ s|`` n|`` s','')     (: removes directions from seconds :)
+let $latsec1 := number(substring-after($latdms2a,"′ "))
+let $latsec := $latsec1 div 60
+(:  :let $latdms2 := replace(substring-after($latdms2a),"' "),"") :)
+let $latdms1 := replace(normalize-space($latdms2a),"' N|' S|′ N|′ S|` N|` S|' n|' s|′ n|′ s|` n|` s","")     (: removes directions from minutes :)
+let $latdms := replace(normalize-space($latdms1)," N| S| n| s"," 0")         (: sets absent minute-coord to zero :)
+let $latdeg := number(substring-before($latdms,"°"))                   (: sets degrees :)
+let $latmin := number(substring-after($latdms,"° "))                   (: sets minutes :)
+(:   :let $latmin := $latmin1+ $latsec :)
+let $latdec := $latsign * ($latdeg + ($latmin div 60))
+
+(: Converts longitude coords from DMS to decimal :)
+for $lon in $lons
+let $lonsign := compare ($lon,'E|e')
+let $londms3 := replace(normalize-space($lon),"degrees","°")         (: replaces the word "degrees" with the °-symbol :)
+let $londms2 := replace(normalize-space($londms3),'" E|" W|″ E|″ W|`` E|`` W|" e|" w|″ e|″ w|`` e|`` w','')     (: removes directions from seconds :)
+let $lonsec1 := number(substring-after($londms2,"′ "))
+let $lonsec := $lonsec1 div 60
+let $londms1 := replace(normalize-space($londms2),"' E|' W|′ E|′ W|` E|` W|' e|' w|′ e|′ w|` e|` w","")     (: removes directions from minutes :)
+let $londms := replace(normalize-space($londms1)," E| W| e| w"," 0")         (: sets absent minute-coord to zero :)
+let $lonmin := number(substring-after($londms,"° "))
+let $londeg := number(substring-before($londms,"°"))
+let $londec := $lonsign * ($londeg + ($lonmin div 60))
+
+return
+<Placemark><name>{string-join(($pos,$lat,$lon,$latsec),', ')}</name>
+<styleUrl>#compass</styleUrl>
+<description>{string($p)}</description>
+<Point><coordinates>{string-join(($londec,$latdec,0),',')}</coordinates></Point>
+</Placemark>
+ 
+}
+
+<Placemark>
+ <styleUrl>#redLine</styleUrl>
+        <tessellate>1</tessellate>       
+  <altitudeMode>clampToGround</altitudeMode>   
+        <LineString>
+         <coordinates>
+
+{
+    let $doc := doc('/db/pacific/mapping/Cook1Geo.xml')
+(:Above: tesselate is a boolean value, and we use it to plot lines to follow the curvature of the earth.:)
+(:For tesselate to work, we apparently have to set altitudeMode to clampToGround.:)
+(: ID's all lat & lon coords in each paragraph :)
+let $pps := $doc//p
+for $p at $pos in $pps
+let $latCoords := $p/geo[@select="lat"]
+let $lonCoords := $p/geo[@select="lon"]
+
+(: ID's only coords associated with N's :)                                
+let $ns := $latCoords[@n] (: assumes every lat@N is paired with a lon@N :)
+for $n in $ns
+let $nval := $n/@n/data(.)
+let $lats := data($latCoords[@n=$nval])
+let $lons := data($lonCoords[@n=$nval])
+(: Converts latitude coords from DMS to decimal :)
+for $lat in $lats
+let $latsign := compare ($lat,'N')                                     (: sets +/- :)
+let $latdms1 := replace(normalize-space($lat),"' N|' S|′ N|′ S","")     (: removes directions from minutes :)
+let $latdms := replace(normalize-space($latdms1)," N| S"," 0")         (: sets absent minute-coord to zero :)
+let $latdeg := number(substring-before($latdms,"°"))                   (: sets degrees :)
+let $latmin := number(substring-after($latdms,"° "))                   (: sets minutes :)
+let $latdec := $latsign * ($latdeg + ($latmin div 60))
+
+(: Converts longitude coords from DMS to decimal :)
+for $lon in $lons
+let $lonsign := compare ($lon,'E')
+let $londms1 := replace(normalize-space($lon),"' E|' W|′ E|′ W","")
+let $londms := replace(normalize-space($londms1)," E| W"," 0")
+let $lonmin := number(substring-after($londms,"° "))
+let $londeg := number(substring-before($londms,"°"))
+let $londec := $lonsign * ($londeg + ($lonmin div 60))
+
+let $LineString := string-join(($londec,$latdec,0),',')   
+
+
+return string-join(($LineString), " ")
+            
+}            
+            
+          </coordinates>
+        </LineString>
+      </Placemark>
+
+
+</Folder></Document>
+</kml>

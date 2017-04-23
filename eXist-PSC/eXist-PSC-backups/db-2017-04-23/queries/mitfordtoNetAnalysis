@@ -1,0 +1,24 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+(: Goal: Want to grab contents of @ref attributes, and network based on who is addressed in the same files. We need plain text output for this, divided by tab separators:)
+ (:Cardinality is an issue! When we tie things together :)
+let $mitfordColl:=collection('/db/mitford/')/*
+let $titles:= $mitfordColl/teiHeader//titleStmt/title
+(:  :for $i in $titles
+let $uri := tokenize($mitfordColl/base-uri(), "/")[last()]
+return string-join((concat($i, $uri)), " &#x9;"):)
+for $f in $mitfordColl
+let $people := $f//text//persName/@ref
+let $distinctPeeps := distinct-values($people)
+
+for $p in $distinctPeeps
+let $filePeep: = $f[.//text//persName/@ref = $p]//titleStmt/title/string()
+
+let $otherPeeps := $f[.//text//persName/@ref = $p]//text//persName[not(@ref = $p)]/@ref
+let $distOthers := distinct-values($otherPeeps)
+for $o in $distOthers
+(:This last taking of distinct-values() condenses my output one last time, so I eliminate duplicate references to the same other people in a letter. :)
+return 
+    string-join((string-join($p, "&#x9;"), string-join($filePeep, "&#x9;"), $o), "&#x9;")
+    
+ 

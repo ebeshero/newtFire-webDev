@@ -1,0 +1,21 @@
+xquery version "3.0";
+
+declare variable $thisFile := 
+<kml>
+{
+let $schism := collection('/db/Schism')/*
+let $loc := $schism//location
+let $distLoc := distinct-values($loc)
+for $i in $distLoc
+let $max := $loc/ancestor::p[contains(., $i)][string-length() = max($loc/ancestor::p[contains(., $i)]/string-length())]
+return
+    <Placemark>
+        <name>{$i, '&#10;'}</name>
+        <description>{$max/string()}</description>
+    </Placemark>
+}
+</kml>;
+
+let $filename := "Placeography.kml"
+let $dob-db-uri := xmldb:store("/db/ajnewton1/", $filename, $thisFile)
+return $dob-db-uri

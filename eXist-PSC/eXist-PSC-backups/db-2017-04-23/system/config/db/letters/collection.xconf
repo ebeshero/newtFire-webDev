@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://exist-db.org/collection-config/1.0"><index xmlns:tei="http://www.tei-c.org/ns/1.0">
+        <!--Index Config for Mitford Letters Collection-->
+        <!-- Lucene index is configured below --><lucene><analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/><analyzer id="ws" class="org.apache.lucene.analysis.core.WhitespaceAnalyzer"/><text qname="tei:titleStmt"/><text qname="tei:date"/><text qname="tei:text"/><text qname="tei:p"/><text qname="tei:title"/><text qname="tei:persName"/><text qname="tei:placeName"/><text qname="tei:address"/></lucene>
+        <!--Range indexes--><create qname="@ref" type="xs:string"/><create qname="tei:date" type="xs:string"/><create qname="@when" type="xs:date"/></index></collection>

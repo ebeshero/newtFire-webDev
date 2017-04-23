@@ -1,0 +1,32 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $haydonRefs := $lettersColl//tei:titleStmt/tei:title//tei:persName[@ref = "#Haydon"];
+declare variable $countHF := count($haydonRefs/@ref/string());
+declare variable $distinctYears := distinct-values($letterDates);
+declare variable $returnNumOfYear := 
+        let $maxDY := xs:integer(max($distinctYears))
+        let $minDY := xs:integer(min($distinctYears))
+        let $numberOfYears := $maxDY - $minDY
+        return $numberOfYears;
+
+<svg>
+   <g >
+      <line x1="0" y1="30" x2="{$returnNumOfYear * 100}" y2="30" style="stroke:#006600"/>  
+       <!--ebb: FLWOR statements will go here, inside a pair of curly braces-->
+         {
+        
+        for $i in $distinctYears
+        let $haydonInYear := $haydonRefs[ancestor::tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1] = $i]
+        let $countHPY := count($haydonInYear)
+        order by $i
+        return ($i, $countHPY)
+         }
+      
+   </g>
+</svg>

@@ -1,0 +1,66 @@
+   xquery version "3.0";
+   declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+        <head><title>Lists of Pacific Places Mentioned in Common</title></head>
+        <body>
+            
+            <h3>List of Places Mentioned in Both "The Injured Islanders" (1779) and "The Elegy on Captain Cook" (1780)</h3>
+            <ul>
+{
+ 
+let $coll := collection('/db/pacific/literary')
+
+let $title := $coll//teiHeader//titleStmt/title
+
+let $text := $coll//text
+let $placeNames := $text//placeName
+
+let $distPlace := distinct-values($placeNames)
+
+
+for $place in $distPlace
+
+let $nameLength := string-length($place)
+
+where count($text[.//placeName = $place]) gt 1
+  (:the CHALLENGE here is making an XPath expression equivalent to a variable. Discuss making a variable EQUAL to a path expression--a position within a play. Because, see, distinct-values pull each value in the list OUT OF CONTEXT.:)
+order by $nameLength
+(:  order by $pers :)
+
+return 
+       
+                <li>{$place}</li>               
+}
+                </ul>
+                
+<h3>Any Places Mentioned in the Poetry in Common with the Voyage Collection?</h3>
+<table>
+    {
+    let $voycoll:= collection('/db/pacific/voyages')    
+    let $voytexts := $voycoll//text 
+    let $voyplaceNames := $voytexts//placeName
+    let $poetrycoll := collection('/db/pacific/literary')
+    let $poetrytexts := $poetrycoll//text
+    let $poeplaceNames := $poetrytexts//placeName
+    let $distpoePlaces := distinct-values($poeplaceNames)
+    let $distvoyPlaces := distinct-values ($voyplaceNames)
+    let $distPlaces := distinct-values($poeplaceNames | $voyplaceNames)
+    for $dstPlc in $distPlaces  
+    for $voytext in $voytexts
+    for $poetrytext in $poetrytexts
+    let $voytitle := $voytext/ancestor::TEI/teiHeader//titleStmt/title/text()  
+     let $poetrytitle := $poetrytext/ancestor::TEI/teiHeader//titleStmt/title/text()
+    where $poetrytext[$dstPlc=$poeplaceNames]and $voytext[$dstPlc=$voyplaceNames]              
+                    return 
+                    <tr>    
+                        <td>{$dstPlc}</td>
+                        <td>Count of Poems mentioning this place: {count($poetrytext[$dstPlc=$poeplaceNames])}</td>
+                        <td>Count of Voyage Publications mentioning this place: {count($voytext[$dstPlc=$voyplaceNames])}</td>
+                        <td> {string-join(($poetrytitle[$poetrytext[$dstPlc=$poeplaceNames]]), ", ")}, {string-join (($voytitle[$voytext[$dstPlc=$voyplaceNames]]), ", ")}</td>
+                    </tr>    
+                    }
+                    </table>
+    
+    </body>
+    </html>
+

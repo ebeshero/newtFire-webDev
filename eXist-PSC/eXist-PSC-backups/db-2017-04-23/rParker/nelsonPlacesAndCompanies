@@ -1,0 +1,53 @@
+xquery version "3.0";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $ThisFileContent:=
+string-join( 
+let $nellColl := collection('/db/Nelson/CSG_XML')
+let $nellFiles := $nellColl/*
+let $SiteIndex := doc('/db/Nelson/siteIndex.xml')/*
+
+let $locPlaces := $nellFiles//tei:placeName[@type="locRef"]
+let $distLocPlaces := distinct-values($locPlaces) (:The local references not associated with orgs/comps in the articles:)
+
+let $allOrgsSI:= $SiteIndex//tei:listOrg/tei:org (:All of the organizations in the site index:)
+let $compsArt := $nellFiles//tei:orgName[@type="exposedCompany"]/@ref/substring-after(.,"#")
+let $distCompsArt := distinct-values($compsArt)(:exposed companies in articles:)
+for $i in $distCompsArt
+let $expCompSI := $allOrgsSI[@xml:id = $i](:orgs in site index that match exposed companies in articles:)
+let $compName :=  
+if ($expCompSI[descendant::tei:orgName[1]/text()]) then $expCompSI//tei:orgName[1]/string()
+else if ($expCompSI//*[./text()]) then $expCompSI//*[./text()][1]/string()
+else $expCompSI/@xml:id/string()
+(:2016-04-10 ebb: I expanded your definition of $compName to test for every eventuality I could think of to grab a name associated with a site index entry, and failing everything to output just the matching @xml:id itself. If there were a match of your @xml:id to $i, it should give the @xml:id here as the value of $compName. :)
+(:  :$expCompSI//*[1]/string():)
+let $compAddr := 
+if ($expCompSI[descendant::tei:placeName/text()]) then ($expCompSI//tei:placeName/normalize-space(string()))
+else "No Address"
+order by $compName
+return concat($compName, "&#x9;", $compAddr), "&#10;");
+
+let $filename := "NellCompaniesAddresses.tsv"
+let $doc-db-uri := xmldb:store("/db/Nelson", $filename, $ThisFileContent, "text/plain")
+return $doc-db-uri 
+(: output at: http://dxcvm05.psc.edu:8080/exist/rest/db/Nelson/NellCompaniesAddresses.tsv :)  
+
+
+
+(:let $addys := :)
+(:if ($expCompSI) then ($expCompSI//tei:placeName/string()):)
+(:else if (not($expCompSI)) then ($allOrgsSI//tei:placeName/string()):)
+(:else "No Address":)
+(:let $orgNames :=:)
+(:if ($expCompSI) then ($expCompSI//tei:orgName):)
+(:else if (not($expCompSI) and $allOrgsSI//tei:orgName/string()) then ($allOrgsSI//tei:orgName):)
+(:else "No Name":)
+(:return concat($orgNames," ---> ", $addys):)
+
+
+(:let $addys := :)
+(:if (//$company/@xml:id[string()= $i]) then ($company//tei:placeName/string()):)
+(:else if (//$company/@xml:id[not(string()=$i)] and //$company//tei:placeName/string()) then ($company//tei:placeName/string()):)
+(:else "No Address Available":)
+(:let $compName := $company//tei:orgName:)
+(:let $distAddys := distinct-values($addys):)
+(:return concat($compName," ---> ", $distAddys):) 

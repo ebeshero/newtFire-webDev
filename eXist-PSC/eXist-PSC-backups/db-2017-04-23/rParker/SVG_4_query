@@ -1,0 +1,71 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $document := doc("/db/graveyard/graveyardInfo-TEI.xml")/*;
+declare variable $deadPeople := $document//tei:person[tei:death];
+declare variable $surnames := $deadPeople//tei:surname;
+declare variable $regions := $deadPeople//tei:region;
+declare variable $listSurnames := $surnames/string();
+declare variable $listRegions := $regions/string();
+declare variable $distinctSurnames := distinct-values($listSurnames);
+declare variable $distinctRegions := distinct-values($listRegions);
+declare variable $listDeadPeople :=
+    for $i in $distinctSurnames
+    let $deathCount := count($deadPeople[descendant::tei:surname = $i])
+    where $deathCount gt 3
+    order by $deathCount descending
+    return $i;
+declare variable $listDeadCount :=
+    for $i in $distinctSurnames
+    let $deathCount := count($deadPeople[descendant::tei:surname = $i])
+    where $deathCount gt 3
+    order by $deathCount descending
+    return $deathCount;
+declare variable $DeadRegion := 
+    for $i in $distinctSurnames  
+    let $deathCount := count($deadPeople[descendant::tei:surname = $i])
+    let $theRegions := $deadPeople[descendant::tei:surname = $i]//tei:death//tei:region
+    where $deathCount gt 3
+    return $theRegions;
+declare variable $listDeadRegion := distinct-values($DeadRegion);
+declare variable $deathsSurnameRegion := 
+    for $i in $listDeadPeople
+    let $deathCount := count($deadPeople[descendant::tei:surname = $i])
+    let $deathRegions := $deadPeople[descendant::tei:surname = $i]//tei:death//tei:region[text()]
+    for $r in $deathRegions 
+    let $RegionCount := count($deadPeople[descendant::tei:surname = $i][descendant::tei:death//tei:region = $r])
+    where $deathCount gt 3
+    order by $RegionCount descending
+    return concat($i, "_", $r, "-", $RegionCount) ;
+declare variable $distDeathsSurRegion := distinct-values($deathsSurnameRegion);
+declare variable $maxDeadCount := max($listDeadCount);
+declare variable $yAxisLength := xs:integer($maxDeadCount) * 50;
+declare variable $xAxisLength := xs:integer(count($listDeadPeople)) * 100;
+declare variable $xSpacer := 100;
+declare variable $ySpacer := 50;
+
+
+<svg width='700' height="700" viewBox='0,0,1500,800'>
+    <g transform="translate(100, 800)">
+    <!-- TITLE -->
+    <text x="10" y="-670" style="font-size:30px">Geographic Distribution of Families in Brush Creek Cemetery (gt 3 Deaths)</text>
+    <!-- Y-Axis -->
+    <line x1="0" y1="0" x2="0" y2="-{$yAxisLength}" stroke="black" stroke-width="3"/>
+    <text x="-30" y="-{$yAxisLength}">{$maxDeadCount}</text>
+    <text x="-30" y="-300">6</text>
+    <text x="-30" y="0">0</text>
+    <!-- X-Axis -->
+    <line x1="0" y1="0" x2="{$xAxisLength + 100}" y2="0" stroke="black" stroke-width="3"/>
+    {
+for $i at $pos in $listDeadPeople 
+let $deathCount := count($deadPeople[descendant::tei:surname = $i])
+let $totalYVal := $deathCount * $ySpacer
+
+return 
+   <g id="{$i}"> 
+   <text x="{$pos * $xSpacer}" y="30">{$i}</text>
+   <text x="{$pos * $xSpacer}" y="{-$totalYVal - 15}">{$deathCount}</text>
+    <rect x="{$pos * $xSpacer}" y="{-$totalYVal}" width="20" height="{$totalYVal}" style="stroke: black; stroke-width:1; fill:none;" />
+    </g>}
+    </g>
+</svg>

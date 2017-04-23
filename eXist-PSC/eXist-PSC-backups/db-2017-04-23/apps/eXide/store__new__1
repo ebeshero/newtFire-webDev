@@ -1,0 +1,13 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $shakespeare := collection('/db/shakespeare/plays')
+let $filepaths := $shakespeare/base-uri()
+let $allElementNames := $shakespeare/descendant::*/name()
+let $distinctElements := distinct-values($allElementNames)
+let $countElementNames := count($distinctElNames)
+
+return
+    <html>
+        <head><title>Count and Liist of all XML Elements Used in Shakespeare Play Collection</title></head>
+        <body>
+            <p>{$countElementNames}</p>

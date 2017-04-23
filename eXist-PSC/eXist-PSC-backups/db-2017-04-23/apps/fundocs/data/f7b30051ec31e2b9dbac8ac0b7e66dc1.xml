@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/dashboard/modules/app.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/xquery/app</xqdoc:uri><xqdoc:name>app</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>app:test</xqdoc:name><xqdoc:signature>app:test($node as node(), $params as element()?, $model as item()*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ This is a sample templating function. It will be called by the templating module if
+ it encounters an HTML element with a class attribute: class="app:test". The function
+ has to take exactly 3 parameters.
+ 
+ </xqdoc:description><xqdoc:param>$node the HTML node with the class attribute which triggered this call</xqdoc:param><xqdoc:param>$params? an XML fragment containing any parameters passed with the class</xqdoc:param><xqdoc:param>$model* an arbitrary sequence - used to pass information between template calls</xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>
