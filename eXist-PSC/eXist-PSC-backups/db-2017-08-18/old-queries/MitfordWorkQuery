@@ -1,0 +1,19 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+
+let $si:= doc('/db/mitford/si.xml')
+let $notes:=$si//note[@resp]
+let $Totalnotes := count($notes)
+let $resp := distinct-values($notes/@resp)
+let $ebb := $notes[@resp='ebb']
+let $ebb2 := $notes[@resp='#ebb']
+let $Totebb := count($ebb | $ebb2)
+let $lmw := count($notes[@resp="#lmw"])
+let $lmw2 := count($notes[@resp="#lmw #ebb"])
+let $lmw3 := count($notes[@resp="#lmw #cmm"])
+let $lmw4:= count($notes[@resp="#lmw, #cmm"])
+let $lmwMost := $notes[@resp[starts-with((.),( '#lmw'))]]
+let $lmwRest := $notes[@resp="lmw"]
+let $Totlmw := count($lmwMost | $lmwRest)
+
+return $lmwRest

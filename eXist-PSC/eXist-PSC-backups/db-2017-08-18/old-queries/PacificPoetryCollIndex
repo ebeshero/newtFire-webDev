@@ -1,0 +1,41 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+(:Goal: Make an index of characters in the Pacific poems, and which poems they appear in :)
+<html>
+    <head><title>Index of Characters in the Pacific Poems Collection</title></head>
+    
+<body>
+<table>
+{    
+let $coll:=collection ('/db/pacific/literary')
+let $poems:= $coll/TEI
+let $texts:=$poems//text
+
+let $people := $texts//persName | $texts//rs[@type="person"]/@ana
+let $distinctPeople := distinct-values($people)
+for $dstPrs in $distinctPeople
+order by $dstPrs
+return 
+    <tr>
+        <td><b>{$dstPrs}</b></td>
+        <td>{count($texts//*[$dstPrs = persName | rs[@type="person"]/@ana])}</td>
+        <td>
+            {
+            for $text in $texts
+            let $title := $text/ancestor::TEI/teiHeader//titleStmt/title
+            let $line := $text//l[$dstPrs = .//persName | .//rs[@type="person"]/@ana]/@n
+            where count($line) gt 0
+            return
+                <ul>
+                    <li>{$title[$text[$dstPrs = .//persName | .//rs[@type="person"]/@ana]]}</li>
+                    <li>Line: {string-join(($line), ", ")}</li>
+                </ul>
+            }
+        </td>
+
+    </tr>
+    
+}    
+</table>
+</body>
+</html>

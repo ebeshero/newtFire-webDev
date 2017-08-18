@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/dashboard/modules/restxq.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/xquery/restxq</xqdoc:uri><xqdoc:name>restxq</xqdoc:name><xqdoc:comment><xqdoc:description>
+ An implementation of RESTful Annotations for XQuery (RESTXQ) in plain
+ XQuery. Most of this code is standard XQuery 3.0 with map extension, 
+ except for the function used to inspect a function signature and the 
+ calls to the HTTP request module.
+ 
+ This started as a temporary solution until the Java implementation was
+ available, but I now use it as a quick fallback when I don't want to or 
+ cannot enable the restxq trigger.
+ 
+ </xqdoc:description><xqdoc:author> Wolfgang Meier &lt;wolfgang</xqdoc:author></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>restxq:process</xqdoc:name><xqdoc:signature>restxq:process($path-info as xs:string?, $functions as function+) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description> 
+ Main entry point: takes a sequence of functions and tries to match them
+ against the current HTTP request by inspecting their %rest annotations.
+ 
+ </xqdoc:description><xqdoc:param>$path-info? the HTTP request path to compare with in %restxq:path. If empty,
+ we'll use the value returned by request:get-path-info(), i.e. any extra path
+ information in the URL after the path leading to the called XQuery. If you call
+ restxq from a controller.xql, you probably want to pass $exist:path as $path-info.</xqdoc:param><xqdoc:param>$functions+ the sequence of function items to inspect, usually obtained
+ by calling util:list-functions on a module URI.</xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

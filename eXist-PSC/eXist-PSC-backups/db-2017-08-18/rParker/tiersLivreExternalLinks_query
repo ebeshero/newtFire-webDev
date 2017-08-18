@@ -1,0 +1,15 @@
+xquery version "3.0";
+let $doc := doc('/db/rParker/tiersLivreExternalLinks_clean.xml')
+let $extSites := $doc//extSite
+(:  let $count := $doc//count
+let $max := max($count)
+return $max :)
+let $distExt := distinct-values($extSites)
+for $x in $distExt
+let $countEx := count($extSites)
+(: let $countD := count($distinct) :)
+let $token := tokenize($x,"/")[3]
+let $tokToken := tokenize($token,".")[2]
+let $distinctTok := distinct-values($token)
+return  $tokToken
+

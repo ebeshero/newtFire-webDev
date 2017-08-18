@@ -1,0 +1,22 @@
+xquery version "3.0";
+<html>
+<head><title>Names of Speakers Who Appear in More than One Shakespeare Play</title></head>
+<body>
+ <table> 
+     <tr><th>Names of Speaker</th></tr>
+   { 
+let $ShakesPlays := collection('/db/shakespeare/plays')/*
+(:  let $ShakesTitles := $ShakesPlays/TITLE/string():)
+let $distinctSpeakers := distinct-values($ShakesPlays//SPEAKER)
+for $i in $distinctSpeakers
+let $match := $ShakesPlays[.//SPEAKER = $i]
+let $matchTitle := $match/TITLE/string() 
+where count($match) gt 1
+return 
+    <tr>
+   <td>{distinct-values($i)}</td><td>{string-join(($matchTitle), ", ")}</td>
+   </tr>
+}
+</table>
+</body>
+</html>

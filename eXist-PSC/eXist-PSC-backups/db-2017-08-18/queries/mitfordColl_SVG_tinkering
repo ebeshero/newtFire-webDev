@@ -1,0 +1,81 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $HaydonRefs := $lettersColl//tei:titleStmt/tei:title//tei:persName[@ref="#Haydon"];
+declare variable $countHaydonRefs := count($HaydonRefs/@ref/string(.));
+declare variable $distinctYears := distinct-values($letterDates);
+declare variable $DYears_Integers := 
+  for $i in $distinctYears
+  order by $i ascending
+  return xs:integer($i);
+declare variable $Years_in_Coll :=
+   let $maxDY := max($distinctYears)
+   let $minDY := min($distinctYears)
+   return xs:integer($maxDY) - xs:integer($minDY);
+declare variable $CountHaydonInYear := 
+     for $i in $distinctYears
+     let $HaydonPerYear := $HaydonRefs[ancestor::tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1] = $i]
+     let $countHPY := count($HaydonPerYear)
+     order by $countHPY descending
+     return $countHPY;
+declare variable $maxHaydonInYear := max($CountHaydonInYear);
+declare variable $Year_Space := 100;
+declare variable $Year_Space_Graph2 := 50;
+declare variable $LetterCount_Space := 10;
+declare variable $barWidth := 25;
+declare variable $graph1_Ytranslate := $maxHaydonInYear * $LetterCount_Space + 5* $LetterCount_Space;
+declare variable $graph2_Ytranslate := 2.5 * $graph1_Ytranslate;
+declare variable $centeredHeading := ($Years_in_Coll * $Year_Space + 2* $Year_Space) div 2;
+
+<svg>
+    <g transform="translate(30, {$graph1_Ytranslate})">
+    <text x="{$centeredHeading}" y="{-90}" style="text-anchor: middle">Haydon's letters to Mitford per Year, Output like a Bar Graph</text>
+    <line x1="{$Year_Space}" x2="{$Years_in_Coll * $Year_Space + 2* $Year_Space}" y1="0" y2="0" style="stroke:black;"/>
+      {for $i at $pos in $DYears_Integers
+      let $HaydonPerYear := $HaydonRefs[ancestor::tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1] = string($i)]
+      let $CountHPY := count($HaydonPerYear)
+      order by $i
+        return
+          <g>  
+            <rect x="{$pos * $Year_Space}" y="-{$CountHPY * $LetterCount_Space}" height="{$CountHPY * $LetterCount_Space}" width="{$barWidth}" style="stroke:#006600; fill: #00cc00"/>
+            {let $showIfNotZero := $CountHPY
+            where  $showIfNotZero gt 0
+            return
+            <text x="{$pos * $Year_Space + $barWidth div 2}" y="{-($CountHPY * $LetterCount_Space) div 2}" style="text-anchor: middle; font-size: 12px;">{$CountHPY}</text>
+            }
+              <text x="{$pos * $Year_Space}" y="20">{$i}</text>  
+         </g>}
+  </g>
+<!-- ebb: Making a second version of the graph here with a new FLWOR. Added a new variable to shorten the distance between years.--> 
+  <!--ebb: In the SVG elements below, I'm reversing x's and y's and heights vs. widths from the FLWOR above. Since we are plotting **downwards** along the vertical ribbon, we don't need to make y's negative here! I'm also making adjustments to plot the rectangles so they center on the ribbon. The $centeredHeading Global Variable gives me a midpoint on which to plot the line and all the X values I'd like to appear centered along it. If I'm centering a rectangle, I subtract half the width of a rectangle from that midpoint to determine the x position of the rectangle.-->
+  
+  <g transform="translate(30, {$graph2_Ytranslate})">
+  <text x="{$centeredHeading}" y="{-90}" style="text-anchor: middle">Haydon's letters to Mitford per Year, Output Vertically and Centered on a Ribbon</text>
+  <line y1="0" y2="{$Years_in_Coll * $Year_Space_Graph2 + $Year_Space_Graph2}" x1="{$centeredHeading}" x2="{$centeredHeading}" style="stroke:navy; stroke-width:15"/>
+  {for $i at $pos in $DYears_Integers
+      let $HaydonPerYear := $HaydonRefs[ancestor::tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1] = string($i)]
+      let $CountHPY := count($HaydonPerYear)
+      order by $i
+        return
+          <g> 
+
+            <rect y="{$pos * $Year_Space_Graph2}" x="{$centeredHeading - ($CountHPY * $LetterCount_Space) div 2}" width="{$CountHPY * $LetterCount_Space}" height="{$barWidth}" style="stroke:#006600; fill: #FFD700"/>
+            {let $showIfNotZero := $CountHPY
+            where  $showIfNotZero gt 0
+            return
+            <g>
+            <text y="{$pos * $Year_Space_Graph2 + ($barWidth div 1.5)}" x="{$centeredHeading}" style="text-anchor: middle; font-size: 12px;">{$CountHPY}</text>
+            <text y="{$pos * $Year_Space_Graph2 + ($barWidth div 1.5)}" x="{$centeredHeading - 75}">{$i}</text> 
+            </g>
+            }
+              
+         </g>}
+  
+      </g>
+  
+</svg>
+
+              

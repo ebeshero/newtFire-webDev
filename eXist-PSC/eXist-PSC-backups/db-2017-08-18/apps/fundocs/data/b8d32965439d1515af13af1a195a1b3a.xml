@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location/></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/xquery/sequences</xqdoc:uri><xqdoc:name>seq</xqdoc:name><xqdoc:comment><xqdoc:description> Basic XQuery equivalents of map, fold, and filter functions adapted from 
+  the standard library of the Scheme programming language.  Demonstrates the 
+  use of higher-order functions in eXist.
+</xqdoc:description></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>seq:filter</xqdoc:name><xqdoc:signature>seq:filter($func as function, $seq as item()*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description> Filters the passed sequence by calling $func for every
+  item. All items for which $func returns true are copied
+  to the output sequence, items for which it returns false
+  are skipped.
+</xqdoc:description><xqdoc:param>$func </xqdoc:param><xqdoc:param>$seq* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>seq:fold</xqdoc:name><xqdoc:signature>seq:fold($func as function, $seq as item()*, $start as item()) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>	Calls $func for all items in the sequence. For example, if
+  the sequence is (1, 2, 3), $func will be called with arguments
+  (1, 2) and (3, 3).
+</xqdoc:description><xqdoc:param>$func </xqdoc:param><xqdoc:param>$seq* </xqdoc:param><xqdoc:param>$start </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>seq:map</xqdoc:name><xqdoc:signature>seq:map($func as function, $seqA as item()*, $seqB as item()*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description> Applies $func to the items
+  of two sequences and returns the results as 
+  a new sequence. Both input sequences should
+  have the same length.
+</xqdoc:description><xqdoc:param>$func </xqdoc:param><xqdoc:param>$seqA* </xqdoc:param><xqdoc:param>$seqB* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

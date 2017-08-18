@@ -1,0 +1,22 @@
+xquery version "3.0";
+
+declare variable $files := collection('/db/Schism')/*;
+declare variable $locs := $files//location;
+declare variable $distLocs := distinct-values($locs);
+declare variable $thisFile :=
+
+<kml>
+{
+for $i in $distLocs
+
+return 
+    <Placemark>
+        <name>{$i, '&#10;'}</name>
+        <description>{max(//p[contains(., $i)]/string())}</description>
+    </Placemark>
+}
+</kml>;
+
+let $filename := "Placeography.kml"
+let $db := xmldb:store("/db/jonhoranic", $filename, $thisFile)
+return $db

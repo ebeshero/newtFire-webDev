@@ -1,0 +1,39 @@
+xquery version "3.0";
+ 
+ (:Note: declaring the svg namespace in XQuery seems problematic here: won't run the nested FLWOR. :)
+let $elcoll:=collection('/db/Election2012')/results
+let $barsize:=20
+let $spacing:=5
+let $states:=$elcoll/state
+return
+    
+<g transform="translate(10, 1400)">
+                <text x="50" y="-1300" style="font-family:sans-serif;font-size:25px" fill="black"
+                    font-stretch="expanded">State-by-State Percentages of the Popular Vote in the
+                    2012 US Presidential Elections</text>
+                <line x1="0" y1="0" x2="1000" y2="0" stroke="black" stroke-width="2"/>
+                <!--x-axis-->
+                <line x1="0" y1="0" x2="0" y2="{-($barsize + $spacing)*(count (//state))}"
+                    stroke="black" stroke-width="2"/>
+                <!--y-axis-->
+
+{
+    for $state at $pos in $states
+let $candidate :=$state/candidate    
+let $TotVotes := sum($candidate)
+let $candDem := ($candidate[@party='Democrat'] div $TotVotes) * 1000
+let $candRep := ($candidate[@party='Republican'] div $TotVotes) * 1000
+let $candLib := ($candidate[@party='Libertarian'] div $TotVotes) * 1000
+let $candGreen := ($candidate[@party='Green'] div $TotVotes) * 1000
+
+  return  
+
+   <rect x="0" y="{-($barsize + $spacing) * $pos}" width="{$candRep+$candLib+ $candGreen}" height="{$barsize}" fill="red"/>
+    
+    
+}
+
+
+</g>
+
+

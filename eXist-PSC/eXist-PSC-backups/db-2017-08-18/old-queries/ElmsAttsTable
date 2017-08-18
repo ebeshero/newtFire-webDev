@@ -1,0 +1,36 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+<head><title>TEI Elements with their Attributes in use in the Pacific Literary Collection</title></head>
+<body>
+<table>    
+{
+let $coll:= collection('/db/pacific/literary')
+let $elements := $coll//*
+let $elmnames := $elements/name()
+let $distelms := distinct-values($elmnames)
+let $attributes := $coll//@*/name()
+let $distatts := distinct-values($attributes)
+for $distelm at $pos in $distelms
+order by count($elements[name()=$distelm])
+return
+<tr>
+    <td n="{count($elements[name()=$distelm])}">{$distelm}</td>
+     <td>
+     <ul>
+    {for $distatt in $distatts
+    where count($elements[name()=$distelm]/@*[name()=$distatt]) gt 0
+        return 
+           
+           
+            <li>{$distatt}</li>
+        
+    }
+     </ul> 
+     </td>
+   
+ </tr>   
+}
+</table>
+</body>
+</html>

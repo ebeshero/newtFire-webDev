@@ -1,0 +1,67 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+    <head><title>Pacific Poetry Collection: Names Indexed!</title></head>
+<body>
+    <table>
+        <tr>
+            <th>Person</th>
+            <th>Poem Title</th>
+            <th>Line Number</th>
+            <th>Paragraph Position</th>
+            </tr>
+{
+let $pacificPoems := collection('/db/pacific/literary')/*
+let $people := $pacificPoems//text//persName/normalize-space() 
+let $rsPeople := $pacificPoems//text//rs[@type="person"]/@ana/string()
+(:  :let $rsPeople := $pacificPoems//text//rs[@type="person"]/@ana/string():)
+let $People := ($people, $rsPeople)
+let $distinctPeeps:= distinct-values($People)
+for $i in $distinctPeeps
+let $matchTitleAna := $pacificPoems//text//rs[@type="person"][@ana/string() = $i]/ancestor::TEI//titleStmt/title/string()
+
+let $matchTitlePers :=$pacificPoems//text//persName[./normalize-space() = $i]/ancestor::TEI//titleStmt/title/string()
+ (:let $matchTitlePers := $people[. = $i]/ancestor::TEI/titleStmt/title/string():)
+ (:This commented-out version doesn't work. Think about why! :)
+
+let $matchTitle := ($matchTitleAna, $matchTitlePers)
+let $distinctMatch := distinct-values($matchTitle)
+return
+
+<tr>
+    <td>{$i}</td>
+    <td>{string-join($distinctMatch, ', ')}</td>
+    <td><table>
+        {for $j in $distinctMatch
+        let $matchLinePers := $pacificPoems//text//l[.//persName = $i]/@n
+        let $matchLineRs := $pacificPoems//text//l[.//rs[@type="person"][@ana/string() = $i] ]/@n
+        let $matchLine := ($matchLinePers, $matchLineRs)
+        return
+            <tr>
+                <td>{$j}: </td>
+            <td>Line-numbers: {string-join($matchLine, ", ")}</td>
+            </tr>
+        }
+</table>
+</td>
+<td><table>
+    {for $j in $distinctMatch
+    let $matchParagraphPers:= $pacificPoems//text//p[.//persName = $i]/position()
+    let $matchParagraphRs := $pacificPoems//text//p[.//rs[@type="person"][@ana/string() = $i] ]/position()
+         let $matchPar := ($matchParagraphPers, $matchParagraphRs)
+         return
+              <tr>
+                <td>{$j}: </td>
+            <td>Paragraph position: {string-join($matchPar, ", ")}</td>
+            </tr>
+             
+    }
+    </table>
+    </td>
+
+</tr>
+
+}
+</table>
+</body>
+</html>

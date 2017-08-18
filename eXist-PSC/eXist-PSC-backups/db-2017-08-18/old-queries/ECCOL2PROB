@@ -1,0 +1,32 @@
+xquery version "3.0";
+<eccoLocation>
+    <listBibl>
+ {       
+let $coll:= collection ('/db/ECCO2/')
+let $bibls:= $coll//bibl
+let $authors := $bibls/author/text()
+
+
+let $distinctauths := distinct-values($authors)
+for $distauth at $pos in $distinctauths
+for $distauth2 at $pos2 in $distinctauths
+let $lengthda := string-length($distauth[contains(., $distauth2)] )
+let $lengthda2 := string-length($distauth2[contains(., $distauth)])
+
+ 
+
+order by $distauth
+return 
+  if  ($distauth2(contains(., $distauth))  and string-length($distauth) lt string-length($distauth2))
+  then
+<bibl n="{$pos}">
+<author>
+{$distauth}</author></bibl>
+
+else
+  <bibl n="{$pos}">
+<author>
+{$distauth2}</author></bibl>  
+ }
+</listBibl>
+</eccoLocation>

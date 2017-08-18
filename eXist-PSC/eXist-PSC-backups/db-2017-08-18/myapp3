@@ -1,0 +1,5 @@
+xquery version "3.1";
+
+let $header := request:get-parameter("header", "parameter")
+let $secondline := request:get-parameter("footer", "4")
+return<html>{$header}<sec>{count($secondline)}</sec></html>
