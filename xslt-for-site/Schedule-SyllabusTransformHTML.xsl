@@ -284,14 +284,12 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="body//title[not(@level)] | body//title[@level='m']">
-        <cite><xsl:apply-templates/></cite>
-        
+    <xsl:template match="text//title[not(@level)] | text//title[@level='m']">
+        <cite><xsl:apply-templates/></cite>  
     </xsl:template>
     
-    <xsl:template match="body//title[@level='a']">
-        <cite class="sub"><xsl:apply-templates/></cite>
-        
+    <xsl:template match="text//title[@level='a']">
+        <cite class="sub"><xsl:apply-templates/></cite>     
     </xsl:template>
     
     <xsl:template match="q">

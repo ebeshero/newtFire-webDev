@@ -71,5 +71,12 @@
     <xsl:template match="ref">
         <a href="{@target}"><xsl:apply-templates/></a>
     </xsl:template>
+    <xsl:template match="text//title[not(@level)] | text//title[@level='m']">
+        <cite><xsl:apply-templates/></cite>  
+    </xsl:template>
+    
+    <xsl:template match="text//title[@level='a']">
+        <cite class="sub"><xsl:apply-templates/></cite>     
+    </xsl:template>
 
 </xsl:stylesheet>

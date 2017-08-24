@@ -146,27 +146,27 @@
     </xsl:template>
     
   
-      <xsl:template match="hi">
-          <strong><xsl:apply-templates/></strong>
-          
+      <xsl:template match="hi[@rend='em'] | hi[not(@rend)]">
+          <strong><xsl:apply-templates/></strong>          
       </xsl:template>
+    <xsl:template match="hi[@rend='ital'] | hi[@rend='italic'] | hi[@rend='italics']">
+        <em><xsl:apply-templates/></em>          
+    </xsl:template>
+    
     
     <xsl:template match="note">
         <xsl:text> </xsl:text><span class="smaller"><xsl:apply-templates/></span>
     </xsl:template>
 
-    <!--    <xsl:template match="body//title">
-        <span class="italic"><xsl:apply-templates/></span>
-    </xsl:template>-->
-   <xsl:template match="body//title[not(@level)] | body//title[@level='m']">
-       <cite><xsl:apply-templates/></cite>
-       
+
+    <xsl:template match="text//title[not(@level)] | text//title[@level='m']">
+       <cite><xsl:apply-templates/></cite>  
    </xsl:template>
     
-    <xsl:template match="body//title[@level='a']">
-        <cite class="sub"><xsl:apply-templates/></cite>
-        
+    <xsl:template match="text//title[@level='a']">
+        <cite class="sub"><xsl:apply-templates/></cite>     
     </xsl:template>
+    
     <xsl:template match="q">
         <q><xsl:apply-templates/></q>
     </xsl:template>
