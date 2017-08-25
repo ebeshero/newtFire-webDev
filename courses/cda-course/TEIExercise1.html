@@ -1,0 +1,33 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>TEI Exercise 1</title>
+    </head>
+    <body>
+        <!--#include virtual="top.html" -->
+        <h1><span class="banner">Document Analysis and TEI Exercise, Part 1 of 2</span></h1>
+        <section title="preliminaries">
+            <h3>Accessing the documents to curate</h3>
+            <p>For this assignment you will need to work with the <a href="https://github.com/ebeshero/DHClass-Hub/tree/master/Class-Examples/Cheese-Straws-Exercise">Cheese-Straws-Exercise directory</a> we have posted in the DHClass-Hub. Do a git pull, locate the directory on your local computer, and study the files. You will find a photo of a small manuscript (a recipe for Cheese Straws) together with a short typed text file with information about the manuscript, its writer, and her community and cultural background.</p>
+            <p>Your goal is to create one TEI document to make a unified text out of the two files here. To begin, open a new TEI file in &lt;oXygen/&gt; by clicking on the top left icon that looks like a corner-folded piece of paper (or going to File → New) and typing <strong>TEI</strong> in the search box. In the results, look for the TEI P5 options and choose the first one: <strong>All</strong>. Look at the TEI file and notice its characteristic two-part structure, with the <code>teiHeader</code> and <code>text</code> elements that are the children of the root element <code>TEI</code>. For this assignment we will be working in the <code>&lt;text&gt;</code> portion of the document.</p>
+        </section>
+        <section title="research_planning">
+            <h3>Researching the TEI to work with</h3>
+            <p>Before beginning to code, we need to do some research on the TEI, working with chapters in the <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">TEI Guidelines</a>. We especially recommend you study <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONAen/html/">Chapter 3: Elements Available in All TEI Documents</a> (especially section 3.5.3) and <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">Chapter 4: Default Text Structure</a>. Look for elements and attributes to use that will help you make an information-rich, coded edition (all in one TEI document) of the recipe and its accompanying material. You may want to work at first with paper and pen (or pencil) to sketch out a plan of what elements and attributes to use. Remember, we are concentrating on just the <code>&lt;text&gt;</code> element of the TEI document for now. (We will work on the TEI Header in part 2 of this exercise.)</p>
+            <p>Here are a pair of sample TEI files to help give you an idea of how these are structured:</p>
+                <ul><li><a href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Class-Examples/TEI_Samples/1601variant.xml">Simple TEI file</a> from the Emily Dickinson Fascicle 16 project (This helps to see the basic parts of a TEI file all together at a glance. You want to do more than this for the TEI exercise, but this helps to represent a starting point.)</li>
+                    <li><a href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Class-Examples/TEI_Samples/1818-01-12_WElford.xml">Letter file</a> from the Digital Mitford project (set aside the detailed header here and concentrate on how we organized the text portion of the document)</li></ul>
+        </section>
+        <section title="coding"> 
+        <h3>Coding in TEI</h3>
+            <p>When you have made some decisions about how to code, go ahead and begin encoding, finding a way to represent the text of the recipe and the text (and/or information from it) from the accompanying document in the <code>text</code> portion of the TEI document. &lt;oXygen/&gt; comes with the current, very extensive schema rules for the TEI P5 installed, so that when you opened the TEI document it came with its own schema lines. As you code, notice that &lt;oXygen/&gt; will fire errors when XML is not well-formed, as well as when TEI validity is broken. You may also notice, as you apply tags, that the schema offers you suggestions of attributes or attribute values, helping to inform you about what the TEI makes available given a particular parent element.</p>
+        </section>
+        <section title="how_to_submit">
+            <h3>Submitting your work</h3>
+            <p>When you have found a way to represent the recipe and (at least some) of the accompanying information in the <code>text</code> portion of the document, be sure to give your file a name that meets our <a href="http://dh.newtfire.org/explainFileNames.html">homework file submission rules</a>, and submit it in the appropriate place on Courseweb. Watch for quick instructor comments on this assignment  (including generalized comments on the DHClass-Hub) so you are prepared to proceed with <a href="TEIExercise2.html">Part 2</a>.</p>
+        </section>
+    </body>
+</html>
