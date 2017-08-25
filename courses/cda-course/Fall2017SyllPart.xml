@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xml>
-    <div type="week" n="1">
+ <div type="schedule"> <head>Coding and Digital Archives: Schedule</head>
+       <div type="week" n="1">
         <div type="day">
             <head>
                 <date when="2017-08-28">M 08-28</date>
@@ -248,7 +248,7 @@
             <div type="inclass"><p>Regular Expressions: Selecting for what’s not there, complicated patterns</p></div>
             <div type="assign"><list>
                 <item><ref target="RegexExercisePlay.html"><hi rend="em">Regex Exercise 4:</hi> <hi rend="italics">Pygmalion</hi></ref></item>
-                <item>Preview our <title level="a"><a href="explainXPath.html">Introduction to XPath</a></title> in preparation for the next unit.</item>
+                <item>Preview our <title level="a"><ref target="explainXPath.html">Introduction to XPath</ref></title> in preparation for the next unit.</item>
             </list></div>
         </div>
         <div type="day">
@@ -367,8 +367,8 @@
                 <p>Where we use XPath, and where we <hi rend="em">don’t</hi> use XPath in XSLT.</p>
                 <p>Identity Transformation</p></div>
             <div type="assign"><list><item>Read our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
-                <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an Identity Transformation</ref></hi>.</item></list>
-                <item>Begin Project Take-home Midterm (due M 10/24)</item>
+                <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an Identity Transformation</ref></hi>.</item>
+                <item>Begin Project Take-home Midterm (due M 10/24)</item></list>
             </div>
         </div>
         <div type="day">
@@ -441,8 +441,8 @@
             <head>
                 <date when="2017-10-30">M 10-30</date>
             </head>
-            <div type="inclass">Sorting with XSLT<p>
-            </p>HTML with internal links: how it works</div>
+            <div type="inclass"><p>Sorting with XSLT</p>
+            <p>HTML with internal links: how it works</p></div>
             <div type="assign">
                 <list>
                     <item><hi rend="em"><ref target="XSLTExercise6.html">XSLT Exercise 6</ref></hi></item>
@@ -518,7 +518,7 @@
             <head>
                 <date when="2017-11-15">W 11-15</date>
             </head>
-            <div type="inclass">SVG and Project Development
+            <div type="inclass"><p>SVG and Project Development</p>
                 <note>TEI Conference</note></div>
             <div type="assign"><list><item>Work on XSLT, SVG and other coding needed for your projects</item>
                 <item>Read Obdurodon's <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</ref></item>
@@ -590,8 +590,9 @@
                 <date when="2017-12-04">M 12-04</date>
             </head>
             <div type="inclass"><p>Project Review and Presentations</p></div>
-            <div type="assign"><item>Project development</item>
+            <div type="assign"><list><item>Project development</item>
                 <item><p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p></item>
+            </list>
             </div>
         </div>
         <div type="day">
@@ -608,9 +609,12 @@
             <head>
                 <date when="2017-12-08">F 12-08 (Last day of classes)</date>
             </head>
-            <div type="inclass">Project Presentations</div>
-            <div type="assign"><item>Project development</item>
-                <item><p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p></item></div>
+            <div type="inclass"><p>Project Presentations</p></div>
+            <div type="assign"><list><item>Project development</item>
+                <item><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</item>
+            </list>
+            </div>
+                
         </div>
     </div>
     <div type="week">
@@ -623,4 +627,4 @@
             </div>
         </div>
     </div>
-</xml>
+    </div>
