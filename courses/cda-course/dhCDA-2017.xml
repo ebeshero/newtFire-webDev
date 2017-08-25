@@ -860,348 +860,200 @@
 
 
           <div type="schedule"> <head>Coding and Digital Archives: Schedule</head>
-    <div type="week" n="1">
+       <div type="week" n="1">
         <div type="day">
             <head>
-                <date when="2016-08-29">M 08-29</date>
+                <date when="2017-08-28">M 08-28</date>
             </head>
-            <div type="inclass">
-               <p>Welcome! Intro to the course, and Intro to XML and working in
-                  &lt;oXygen/&gt;: Write your first XML. <hi>Mindful File Management</hi>
-                  (<ref target="explainFileNames.html">how
-                     to name, store, share, and submit files in this course</ref>). Setting up
-                  accounts for web server and for GitHub. <ref target="http://www.simplyrecipes.com/recipes/gazpacho">Gazpacho
-                     Soup</ref>
-               </p>
-            </div>
-            <div type="assign">
-               <list>
-                  <item>By Wed. 8/31: Install &lt;oXygen/&gt; software on your own computers.
-                     <ref target="https://courseweb.pitt.edu">Instructions and license key
+            <div type="inclass"> <p>Welcome! Intro to the course, and Intro to XML and working in
+                &lt;oXygen/&gt;: Write your first XML. <hi>Mindful File Management</hi>
+                (<ref target="explainFileNames.html">how
+                    to name</ref>, store, share, and submit files in this course). Setting up
+                accounts for web server and for GitHub. <ref target="http://www.simplyrecipes.com/recipes/gazpacho">Gazpacho
+                    Soup</ref></p></div>
+            <div type="assign"><list>
+                <item>Install &lt;oXygen/&gt; software on your own computers (if you have not done so already):
+                    <ref target="https://courseweb.pitt.edu">instructions and license key
                         posted on Courseweb</ref>.</item>
-                  <item>Read our <title level="a"><ref target="explainXML.html">Introduction to XML</ref></title>, and
-                     read <title level="a"><ref target="explainFileNames.html">File Conventions for CourseWeb Assignments</ref></title>.</item>
-                  <item><hi rend="strong">First XML exercise:</hi> Look at this recipe for
-                     <ref target="http://www.simplyrecipes.com/recipes/gazpacho">gazpacho soup</ref>. What if you were running a restaurant and needed to create
-                     a system to file it according to ingredients to purchase, to track
-                     quantities per unit serving--and this recipe were one of, say, 100 other
-                     recipes you're keeping on file? Or what if you needed to adapt it with
-                     markup to fit a system like we see at the GitHub-based recipe center <ref target="http://forkthecookbook.com/">ForktheCookbook.com</ref>? Think
-                     about a good system for categorizing the information in the recipe for this long-term situation,
-                     and mark up your file accordingly. Copy the text of just the recipe (including the list of ingredients and method) and ignore the rest of the page. Paste the text of the recipe into a new XML document in
-                     &lt;oXygen/&gt;. Prepare a
-                     complete XML file in a way that makes sense to organize the information in the recipe (giving it a name, classifying the ingredients, etc), and
-                     make use of <hi rend="em">elements</hi> as well as <hi rend="em">attributes</hi> in your markup. There
-                     is no single way to do this exercise, but we want you to think about how
-                     you nest levels of information (elements within elements), and the
-                     relationship between elements and attributes in XML. Submit the results on Courseweb, in the folder labelled
-                     “Upload Assignments Here”, before our next class.</item>
-                  <item><hi rend="em">By Wed. or Fri. this week:</hi> Read <ref target="explainGitShell.html">our GitHub
-                     tutorial</ref>, and create your GitHub account. Clone <ref target="https://github.com/ebeshero/DHClass-Hub">our class GitHub
-                        repository</ref> to your local machine(s). Practice opening an
-                     Issue and pushing files to the Sandbox directory.</item>        
-               </list>
-            </div>
+                <item>Read our <title level="a"><ref target="explainXML.html">Introduction
+                    to XML</ref></title>, and read <title level="a"><ref target="explainFileNames.html">File-Naming Conventions for Courseweb Homework
+                        Submissions</ref></title>.</item>
+                <item>Complete <hi rend="strong"><ref target="XMLExercise1.html">XML Exercise 1</ref></hi> </item>
+                <item><hi rend="strong">Returning (Greensburg) Students Only:</hi>
+                    <list>
+                        <item>Work on project code or your choice of an interesting XML coding
+                            challenge.</item>
+                        <item>Meet with instructors to plan peer mentoring roles.</item>
+                    </list></item>
+            </list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-08-31">W 08-31</date>
+                <date when="2017-08-30">W 08-30</date>
             </head>
-            <div type="inclass">
-               <p>Setting up GitHub, Working in the Cloud and campus lab access. “Markup” vs.
-                  “Markdown”. Discussion of the XML recipe homework: XML Comments, Validity, and
-                  Well-formedness, and how to work with &lt;oXygen/&gt;. Web Accounts: collect
-                  info.</p>
-            </div>
-            <div type="assign">
-                <list> <item><hi rend="em"><ref target="GitExercise1.html">Git Exercise 1</ref></hi>: Read and consult our <ref target="explainGitShell.html">Guide to Git Shell</ref> as you complete this exercise.</item>
-                <item><hi rend="em">XML Exercise 2:</hi> Choose the text of one letter linked on one of
-                  the following websites (click through until you see a complete letter), and
-                  copy its text into &lt;oXygen/&gt;. Then, mark it up in XML, using your own
-                  system of tagging, as seems appropriate, to code the structure and the
-                  content of the document. Important: Save and name your document according to the
-                    <ref target="explainFileNames.html">File Conventions</ref> (which hold for all coding homework in this course) before you upload to Courseweb! Options:
-               <list>
-                  <item>
-                     <ref target="http://glc.yale.edu/harriet-jacobs-selected-writings-and-correspondence-documents"> Harriet Jacobs: Selected Writings and Correspondence </ref>
-                  </item>
-                  <item>
-                     <ref target="http://englishhistory.net/byron/letters.html"> Lord Byron:
-                        Selected Letters</ref>
-                  </item>
-                  <item>
-                     <ref target="http://www.woolfonline.com/timepasses/?q=letters/overview">Virginia Woolf letters</ref>
-                  </item>
-               </list></item></list>
-            </div>
+            <div type="inclass"> <p>Getting started with GitHub and our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Discussion of the XML recipe homework: XML Comments, Validity, and
+                Well-formedness, and how to work with &lt;oXygen/&gt;. Web Accounts: collect info.</p></div>
+            <div type="assign"> <list> <item><hi rend="em"><ref target="GitExercise1.html">Git Exercise 1</ref></hi>: Read and consult our <ref target="explainGitShell.html">Guide to Git Shell</ref> as you complete this exercise.</item>
+                <item><hi rend="em"><ref target="XMLExercise2.html">XML Exercise 2</ref></hi></item></list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-09-02">F 09-02</date>
+                <date when="2017-09-01">F 09-01</date>
             </head>
-            <div type="inclass">
-               <p>Discussion of homework, and XML: Validity and Well-formedness. XML projects
-                  in digital humanities. Introduce the <ref target="http://digitalmitford.org">Digital Mitford Project</ref> and <ref target="http://dickinson16.newtfire.org"> Emily Dickinson's
-                        Fascicle 16</ref></p>
-               <p>Pushing and pulling files, opening and closing Issues, joining in discussions (via Issues) on our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. </p>
-            </div>
+            <div type="inclass"> <p>Discussion of homework, and XML: Validity and Well-formedness. XML projects
+                in digital humanities. Introduce the <ref target="http://digitalmitford.org">Digital Mitford Project</ref> and student projects from <ref target="http://newtfire.org/dh/studentProjects.html">Greensburg</ref> and <ref target="http://dh.obdurodon.org/course-projects.xhtml">Pittsburgh</ref>.</p>
+                <p>Working with our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>: Opening and closing Issues, writing markdown and joining in discussions (via Issues), accessing our class examples of code, pulling and pushing files in Troubleshooting directory.</p></div>
             <div type="assign">
-               <p><hi rend="em"><!--<ref target="https://github.com/ebeshero/DHClass-Hub/issues/10">-->Reading and Discussion Post on GitHub<!--</ref>--></hi>: Read Gabrielle
-                  Kirilloff, <ref target="http://gk.obdurodon.org/seminar/seminarPaper.xhtml">“&lt;Traversing_the_Tree/&gt;”</ref>, the short article, <ref target="http://www.idsnews.com/article/2015/04/frankenstein-novel-analyzed">“Frankenstein novel analyzed”</ref> and scroll through <ref target="http://balisage.net/Proceedings/vol13/html/Piez01/BalisageVol13-Piez01.html">Wendell Piez's conference talk and images for the Balisage Markup
-                           Conference 2014</ref>. If you like, you can take a close look at his <ref target="https://github.com/wendellpiez/Luminescent/blob/master/lmnl/frankenstein-as-published.lmnl">LMNL code of Frankenstein on GitHub</ref>. Then go to our DHClass-Hub GitHub
-                  Issues page to join in the discussion.  For full credit, your posts should make specific reference to passages in
-                  Kirilloff's essay, and reflect on those passages. Raising questions is
-                  encouraged, and so is responding to each other!</p>
-               <p><hi rend="em">XML exercise 3:</hi> Review our feedback on your coding
-                  exercises so far and submit revisions if we asked you to. Mark up a text of
-                  your choice (any genre; manageable but reasonable size; foreign languages
-                  welcome). Work on applying attributes with your elements, and doing so in a
-                  careful and systematic way. </p>
+                <list><item><hi rend="em"><ref target="GitExercise2.html">Git Exercise 2</ref></hi></item>
+                    <item><hi rend="em">XML exercise 3:</hi> Review our feedback on your coding
+                        exercises so far and submit revisions if we asked you to. Mark up a text of
+                        your choice (any genre; manageable but reasonable size; foreign languages
+                        welcome). Work on applying attributes with your elements, and doing so in a
+                        careful and systematic way. </item>
+                    <item><hi rend="em"><ref target="https://github.com/ebeshero/DHClass-Hub/issues/">Reading and Discussion Post on GitHub</ref></hi>: Locate the class discussion exercise on our Issues board, which will ask you to read and discuss an article by Gabrielle
+                        Kirilloff, <ref target="http://gk.obdurodon.org/seminar/seminarPaper.xhtml">“&lt;Traversing_the_Tree/&gt;”</ref>, the short article, <ref target="http://www.idsnews.com/article/2015/04/frankenstein-novel-analyzed">“Frankenstein novel analyzed”</ref> and scroll through <ref target="http://balisage.net/Proceedings/vol13/html/Piez01/BalisageVol13-Piez01.html">Wendell Piez’s conference talk and images for the Balisage Markup
+                            Conference 2014</ref>. For full credit, your posts should make specific reference to passages in
+                        Kirilloff’s essay, and reflect on those passages. Please raise questions and respond to each other!</item></list> 
             </div>
         </div>
     </div>
     <div type="week" n="2">
         <div type="day">
             <head>
-                <date when="2016-09-05">M 09-05</date>
+                <date when="2017-09-04">M 09-04</date>
             </head>
-           <div type="inclass">
-              <p>
-                 <hi>Labor Day Holiday: No classes.</hi>
-              </p>
-           </div>
-           <div type="assign">
-              <p/>
-           </div>
+            <div type="inclass"><p>
+                <hi>Labor Day Holiday: No classes.</hi>
+            </p></div>
+            <div type="assign"/>
         </div>
         <div type="day">
             <head>
-                <date when="2016-09-07">W 09-07</date>
+                <date when="2017-09-06">W 09-06</date>
             </head>
-            <div type="inclass">
-               <p>Overlapping hierarchies. Document Analysis and Coding: Group Exercise with <ref target="http://www.online-literature.com/coleridge/640/">Kubla Khan</ref>
-                  The concept of “UX.”</p>
-            </div>
-            <div type="assign">
-               <p><hi rend="em">UX Discussion on DHClass-Hub</hi> Choose one of the following digital archives to explore, and write a post on the DHClass-Hub addressing 
-                   1) something interesting the site is inviting us to explore about centuries-old texts, and 2) the
-                  effectiveness of the user experience (“UX”).</p>
-               <list>
-                  <item><ref target="http://mapoflondon.uvic.ca/index.htm">Map of Early Modern
-                     London</ref></item>
-                   <item><ref target="http://dickinson16.newtfire.org/">Emily Dickinson Project</ref>: prepared by Pitt-Greensburg students last year</item>
-                  <item><ref target="http://www.perseus.tufts.edu/hopper/text?doc=urn:cts:greekLit:tlg0013.tlg007.perseus-eng1">The Homeric Hymn 7 to Dionysus within the Perseus Project</ref>, and
-                     explore the features here.</item>
-                  <item><ref target="http://shelleygodwinarchive.org/contents/frankenstein">Shelley-Godwin Archive: Frankenstein Notebooks:</ref> what can we
-                     learn about the manuscript drafts of Frankenstein from this project? How
-                     does the site guide us to make certain kinds of discoveries?</item>
-                  
-               </list>
-               <p>Review XML syntax for test. Read <title level="a"><ref target="explainRNG.html">Intro to Relax NG</ref></title>.</p>
-            </div>
+            <div type="inclass">  <p>Overlapping hierarchies. Document Analysis and Coding: Group Exercise with <ref target="http://www.online-literature.com/coleridge/640/">Kubla Khan</ref></p>
+                <p>The concept of “UX.” or User Experience, and discussion of projects.</p></div>
+            <div type="assign"><p><hi rend="em">UX Discussion on DHClass-Hub</hi>  Choose one of the following digital archives to explore, and write a post on the DHClass-Hub addressing 
+                1) something interesting the site is inviting us to explore about centuries-old texts, and 2) the
+                effectiveness of the user experience (“UX”).</p>
+                <list>
+                    <item><ref target="http://shelleygodwinarchive.org/contents/frankenstein">Shelley-Godwin Archive: Frankenstein Notebooks</ref></item>
+                    <item>
+                        <ref target="http://mapoflondon.uvic.ca/index.htm">Map of Early Modern
+                        London</ref></item>
+                    <item><ref target="http://dickinson16.newtfire.org/">Emily Dickinson Project</ref>: prepared by Pitt-Greensburg students last in 2015-2016</item>
+                    <item><ref target="http://www.perseus.tufts.edu/hopper/text?doc=urn:cts:greekLit:tlg0013.tlg007.perseus-eng1">The Homeric Hymn 7 to Dionysus within the Perseus Project</ref>, and
+                        explore the features here.</item>
+                    </list>
+                <p><ref target="explainXML.html">Review XML syntax</ref> for test. Read <title level="a"><ref target="explainRNG.html">Intro to Relax NG</ref></title>.</p></div>
         </div>
         <div type="day">
             <head>
-               <date when="2016-09-09">F 09-09 <note>drop-add period ends</note></date>
+                <date when="2017-09-08">F 09-08 <note>drop-add period ends</note></date>
             </head>
-            <div type="inclass">
-               <p><hi rend="em">Test 1: XML, markup.</hi></p>
-               <p>Schema Languages: Writing the Rules. Writing Relax NG</p>
-            </div>
-           <div type="assign">
-              <p><hi rend="em">Relax NG exercise 1:</hi> Write a Relax NG schema for one of the XML documents you created for an earlier assignment (XML exercise 2 or 3), and upload it an your XML file to Courseweb.</p>
-            </div>
-            
+            <div type="inclass"> <p><hi rend="em">Short Test 1 (10-15 minutes): XML markup.</hi></p>
+                <p>Schema Languages: Writing the Rules. Writing Relax NG</p></div>
+            <div type="assign"> <p><hi rend="em">Relax NG exercise 1:</hi> Write a Relax NG schema for one of the XML documents you created for an earlier assignment (XML exercise 2 or 3), and upload it and your XML file to Courseweb.</p></div>
         </div>
     </div>
     <div type="week" n="3">
         <div type="day">
             <head>
-                <date when="2016-09-12">M 09-12</date>
+                <date when="2017-09-11">M 09-11</date>
             </head>
-            <div type="inclass">
-                <p>Relax NG: mixed content, data types. Course projects: introduction.</p>
-            </div>
-            <div type="assign">
-                <p><hi rend="em">Relax NG exercise 2: </hi>This time, choose a small text
-                    (maybe one of the letters from the first assignment that you did NOT mark up before, or anything you like). Perform document analysis, write a schema,
-                    and mark up the text according to the schema.</p>
-                <p> <hi rend="em"><ref target="https://github.com/ebeshero/DHClass-Hub/issues/200">Discussion Post on GitHub Issues: Where Might We Go from Here?</ref></hi>Choose one of the following Greensburg
-                    project sites under development. Describe (in your own words) at least one
-                    significant topic it seems to be exploring, and reflect on what we might
-                    want to try next to develop the research areas of
-                    the project and/or the UX of the project site. Those of us (instructors and returning students) who have been involved in these projects should help introduce them to our class and point out things that need work.</p>
+            <div type="inclass"> <p>Relax NG: mixed content, data types. Course projects: introduction.</p>
+                <p>Course projects: discussion and tour: digital archive projects by Greensburg students in the past year:</p>
                 <list>
-                    <item><ref target="http://decameron.newtfire.org">Decameron Project</ref>. Developed by coding students at Pitt-Greensburg last spring, and ready to be continued.</item>
-                    <item><ref target="http://amadis.newtfire.org">Amadis in Translation</ref>. Recently launched project last year: follow the link to its GitHub repository for more information and a view of the coding. We need to work on preparing the two sets of English and Spanish base texts to read and study them together, and we could choose to expand the project in a new direction of interest.</item>
-                    <item>From our Digital Mitford Project: <ref
-                        target="http://digitalmitford.org/letters.html">Letters
-                        Introduction</ref>. For the letters portion of this project, a team could develop a module to help investigate some interesting topics. t<!--First review the bottom section: “Digitizing a
-                        Mitford Letter: Photofacsimile, Transcription Markup, and Versioning
-                        Markup”: What does the side-by-side view show us and what might we be
-                        able to learn from it? Consider the reading views of the letters: What
-                        kind of research is involved here, or what kinds of questions have we been
-                        investigating to generate our views of these letters? What (besides
-                        coding some thousands more letters) could we try to build from our
-                        XML markup?--> </item>
-                    <item><ref target="http://pacific.pitt.edu/">Digital Archives and Pacific
-                        Cultures Site</ref>: 
-                   This site reflects the origins of our Pitt-Greensburg
-                            digital humanities projects—it was our starting point and first
-                            collaboration with students. The Voyage Maps area got us involved with using maps to represent passages from voyage logs, but the project could use an overhaul to pick up loose ends or continue where we left off a few years ago, and we could move it to our development space at the Supercomputing Center to be with our other projects.</item></list>
+                    <item><ref target="http://hamilton.newtfire.org">The Hamilton Project</ref></item>
+                    <item><ref target="http://graveyard.newtfire.org">The Graveyard Project</ref></item>
+                    <item><ref target="http://lope.newtfire.org">The Lope de Vega Project</ref></item>
+                    <item><ref target="http://decameron.newtfire.org">The Decameron Project</ref></item>
+                    <item><ref target="http://eldritch.newtfire.org">The Eldritch Project</ref></item>
+                    
+                </list>
+                <p>Pittsburgh campus projects with interesting visualizations:</p>
+                <list>
+                    <item><ref target="http://bamfs.obdurodon.org/index.xhtml">Profanities in Quentin
+                        Tarantino’s Screenplays</ref> (with network analysis)</item>
+                    <item><ref target="http://translate.obdurodon.org/">Divergences in Machine
+                        Translation: Examining Harry Potter texts processed by Google
+                        Translate across multiple language families</ref></item>
+                </list>
+            
+            </div>
+            <div type="assign"> <list><item><hi rend="em">Relax NG exercise 2: </hi>This time, choose a small text
+                (maybe one of the letters from the first assignment that you did NOT mark up before, or anything you like). Perform document analysis, write a schema,
+                and mark up the text according to the schema.</item>
+                <item><hi rend="em"><ref target="https://github.com/ebeshero/DHClass-Hub/issues/200">Discussion Post on GitHub Issues: Where Might We Go from Here?</ref><!--2017-08-24 ebb: Change link to wipe the slate clean and add new/different projects? --></hi>Comment on one of the listed
+                project sites under development. Describe (in your own words) at least one
+                significant topic it seems to be exploring, and reflect on what we might
+                want to try next to develop the research areas of
+                the project and/or the UX of the project site. Those of us (instructors and returning students) who have been involved in these projects should help introduce them to our class and point out things that need work.</item></list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-09-14">W 09-14</date>
+                <date when="2017-09-13">W 09-13</date>
             </head>
-            <div type="inclass">
-                <p>More projects designed by students: <ref target="http://nelson.newtfire.org">The Restoration of Nell Nelson</ref>, <ref target="http://seuss.obdurodon.org/"
-                    >The Nonsensical Seuss</ref>, and <ref
-                        target="http://translate.obdurodon.org/">Divergences in Machine
-                        Translation: Examining Harry Potter texts processed by Google Translate
-                        across multiple language families</ref>
-                </p>
+            <div type="inclass"> <p>More projects designed by students: <ref target="http://nelson.newtfire.org">The Restoration of Nell Nelson</ref>, <ref target="http://seuss.obdurodon.org/">The Nonsensical Seuss</ref>, and <ref
+                    target="http://translate.obdurodon.org/">Divergences in Machine
+                    Translation: Examining Harry Potter texts processed by Google Translate
+                    across multiple language families</ref>
+            </p>
                 <p>Descriptive markup and non-textual features: Manuscripts and Physical
                     Objects. <ref
                         target="http://gwpapers.virginia.edu/multimedia/account-book-2-1767-1775/"
                         >The Papers of George Washington project: Visualizations page</ref>.</p>
-                <p>Introducing the Text Encoding Initiative (TEI).</p>
-            </div>
-            <div type="assign">
-                <p><hi rend="em">Relax NG exercise 3:</hi> Choose a small text of a different
-                    type or genre than last time, perform document analysis, write a schema, and
-                    mark up the text according to the schema.</p>
-                <p><hi rend="em"><!--<ref target="https://github.com/ebeshero/DHClass-Hub/issues/16">-->GitHub Post and Discussion: Project Proposal Ideas.<!--</ref>--> 
-                </hi></p>
-            </div>
+                <p>Introducing the Text Encoding Initiative (TEI).</p></div>
+            <div type="assign"><list><item><hi rend="em">Relax NG exercise 3:</hi> Choose a small text of a different
+                type or genre than last time, perform document analysis, write a schema, and
+                mark up the text according to the schema.</item>
+                <item><hi rend="em"><!--<ref target="https://github.com/ebeshero/DHClass-Hub/issues/16">-->GitHub Post and Discussion: Project Proposal Ideas.<!--</ref>--> 
+                </hi></item></list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-09-16">F 09-16</date>
+                <date when="2017-09-15">F 09-15</date>
             </head>
-            <div type="inclass">
-                <p><ref target="http://www.tei-c.org/index.xml">The TEI</ref>: Why and how we work with it. Project Discussion.</p>
-            </div>
-            <div type="assign">
-                <list> <item><hi rend="em">Document Analysis and TEI Lookup Exercise</hi>, with a small manuscript: Part 1  <ref target="https://github.com/ebeshero/DHClass-Hub/tree/master/Class-Examples/Cheese-Straws-Exercise">Cheese Straw Recipe</ref>: Work on creating the body of a TEI document, that represents and efficiently stores searchable information from the two files (one photo and the other some text written about what you see in the photo). 
-                    Begin by reading and studying the files. Your goal is to create one TEI document to make a unified text out of the two files here. Start a TEI file in oXygen and work in the &lt;body&gt; element to transcribe and code the recipe and its accompanying text, in whatever order makes sense to you. Consult <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/">the TEI P5 guidelines</ref>, especially <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html#CONAen/html/">Chapter 3: Elements Available in All TEI Documents</ref> (especially section 3.5.3) and <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html">Chapter 4: Default Text Structure</ref>.  
-                </item>
-                    <item>Read and Work With <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/index.html">Chapters in the TEI Guidelines</ref> and look up coding rules to map out a plan of what elements and attributes to use in the body element of the TEI document, and write TEI to represent the body of the file. (Leave the TEI header for Part 2 of this assignment.)</item>
-                    <item>Here are a pair of sample TEI files to help give you an idea of how these are structured:
-                        <list><item><ref target="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Class-Examples/TEI_Samples/1601variant.xml">Simple TEI file</ref> from the Emily Dickinson Fascicle 16 project (This helps to see the basic parts of a TEI file all together at a glance. You want to do more than this for the TEI exercise, but this helps to represent a starting point.)</item>
-                            <item><ref target="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Class-Examples/TEI_Samples/1818-01-12_WElford.xml">Letter file</ref> from the Digital Mitford project (with a detailed TEI header)</item></list>
-                    </item>
-                    
-                </list>
-            </div>
+            <div type="inclass"><p><ref target="http://www.tei-c.org/index.xml">The TEI</ref>: Why and how we work with it. Project Discussion.</p></div>
+            <div type="assign"><p><ref target="TEIExercise1.html"><hi rend="em">Document Analysis and TEI Exercise, Part 1</hi></ref></p></div>
         </div>
     </div>
     <div type="week" n="4">
         <div type="day">
             <head>
-                <date when="2016-09-19">M 09-19</date>
+                <date when="2017-09-18">M 09-18</date>
             </head>
-            <div type="inclass">
-                <p><hi rend="em">Form project teams</hi></p>
-                <p>Discussion and Work with Cheese-Straw TEI Exercise. What We Include in the TEI Header.</p>
-            </div>
-            <div type="assign">
-                <list> <item><hi rend="em">Document Analysis and TEI Lookup Exercise</hi>, with a small manuscript: Part 2 <ref target="https://github.com/ebeshero/DHClass-Hub/tree/master/Class-Examples/Cheese-Straws-Exercise">Cheese Straw Recipe</ref>: Plan the contents of the TEI Header. Review <ref target="https://github.com/ebeshero/DHClass-Hub/blob/master/Class-Examples/TEI_Samples/1818-01-12_WElford.xml">our sample TEI Letter file for the Digital Mitford project</ref> to see the kinds of information in our header (though this is more detailed than you need for this exercise). Read and sift through the TEI Guidelines (and look up element and attribute rules as needed) from <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">Chapter 2: The TEI Header</ref> and <ref target="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html">Chapter 10: Manuscript Description</ref>. Consider reorganizing your TEI document as a whole: Are any parts of the document perhaps better represented in the TEI Header? Think about how to distinguish between the "hands" involved in the recipe and its context: How can TEI markup help to distinguish Prof. Triplette's writing from her grandmother's? 
-                </item>
-                <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start looking at
-                    <ref target="http://www.regular-expressions.info/quickstart.html">the
-                        Regular Expressions Quick Start</ref> in prep for next class.</item></list>
-            </div>
+            <div type="inclass"> <p><hi rend="em">Form project teams</hi></p>
+                <p>Discussion and Work with Cheese-Straw TEI Exercise. What We Include in the TEI Header.</p></div>
+            <div type="assign"><list><item><ref target="TEIExercise2.html"><hi rend="em">Document Analysis and TEI Exercise, Part 2</hi></ref></item>
+                <item>Read our <title level="a"><ref target="explainHTML.html">Introduction to HTML</ref></title>.</item>
+            </list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-09-21">W 09-21</date>
+                <date when="2017-09-20">W 09-20</date>
             </head>
-            <div type="inclass">
-                <p>Up-Conversion with Regular Expressions: Using Find &amp; Replace in &lt;oXygen/&gt;. Model with Cheese Straw Recipe. </p>
-                <p>Review Relax-NG</p>
-            </div>
-            <div type="assign">
-                <list><item>Consult our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and <ref target="http://www.regular-expressions.info/quickstart.html">the Regular
-                    Expressions Quick Start</ref> as you work on the exercise:</item>
-                    <item><ref target="RegexExerciseSonnets.html"><hi rend="em">Regex Exercise 1:</hi> Shakespeare’s Sonnets</ref></item></list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2016-09-23">F 09-23</date>
-            </head>
-            <div type="inclass">
-                <p><hi rend="em">Test 2: Relax NG</hi></p>
-                <p>More on Regular Expressions. Inside-out or Outside-in? Greedy Matching.</p>
-                <note>TEI Conference</note>
-            </div>
+            <div type="inclass"><p>XML and the Web: HTML and CSS. SFTP into the Apache Server for newtFire. File directories and their association with web URLs.</p>
+                <p>Review Relax-NG</p></div>
             <div type="assign">
                 <list>
-                    <item><ref target="RegexExerciseBlithedale.html"><hi rend="em">Regex Exercise 2:</hi> Blithedale</ref></item>
-                    <item><hi rend="em">Project Development</hi>: You've been invited to collaborate on new projects in GitHub. 
-                        <list><item>Go to GitHub and clone the new repository on your computer, and begin exploring the files locally. </item>
-                            <item><hi rend="em">Post in the Issues board of your new Project Github</hi> your available meeting times to help us determine a regular meeting time for your group.</item></list></item>
-                   <!-- <item><ref target="https://github.com/ebeshero/DHClass-Hub/issues/19">GitHub Discussion: Applications of Regex Outside of &lt;oXygen/&gt;?</ref></item>--></list>
-            </div>
-        </div>
-    </div>
-    <div type="week" n="5">
-        <div type="day">
-            <head>
-                <date when="2016-09-26">M 09-26</date>
-            </head>
-            <div type="inclass">
-                <p>Regular Expressions: thinking algorithmically</p>
-                <note>TEI Conference</note>
-            </div>
-            <div type="assign">
-                <p><ref target="RegexExerciseVoyage.html"><hi rend="em">Regex Exercise 3:</hi> Voyage Log</ref></p>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2016-09-28">W 09-28</date>
-            </head>
-            <div type="inclass">
-                <p>Regular Expressions: Selecting for what’s not there, complicated patterns</p>
-                <note>TEI Conference</note>
-            </div>
-            <div type="assign">
-                <list>
-                    <item><ref target="RegexExercisePlay.html"><hi rend="em">Regex Exercise 4:</hi> <title level="m">Pygmalion</title></ref></item>
-                    <item>Read our <title level="a"><ref target="explainHTML.html">Introduction to XHTML (and HTML)</ref></title>.</item>
+                    <item>Consult our <title level="a"><ref target="explainHTML.html">Introduction to and HTML</ref></title>, and our <title level="a"><ref target="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</ref></title> as you work on the homework exercise.</item>
+                    <item><hi rend="em"><ref target="HTMLExercise1.html">HTML/CSS Exercise 1</ref>:</hi> NOTE: <hi>Do not submit this assignment on Courseweb.</hi> Instead, submit this homework by using SFTP to post to our newtFire web server.</item>
                 </list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-09-30">F 09-30</date>
+                <date when="2017-09-22">F 09-22</date>
             </head>
-            <div type="inclass">
-                <p>XML and the Web: HTML and CSS. SFTP into the Apache Server for newtFire. File directories and their association with web URLs.</p>
-                <note>TEI Conference</note>
-            </div>
-            <div type="assign">
-                <list>
-                    <item>Consult our <title level="a"><ref target="explainHTML.html">Introduction to XHTML (and HTML)</ref></title>, and our <title level="a"><ref target="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</ref></title> as you work on the homework exercise.</item>
-                    <item><hi rend="em"><ref target="HTMLExercise1.html">HTML/CSS Exercise 1</ref>:</hi> NOTE: Do not submit this assignment on Courseweb. Instead, submit this homework by using SFTP to post to our newtFire web server.</item>
-                </list>
-              
-            </div>
-        </div>
-    </div>
-    <div type="week" n="6">
-        <div type="day">
-            <head>
-                <date when="2016-10-03">M 10-03</date>
-            </head>
-            <div type="inclass">
+            <div type="inclass"><p><hi rend="em">Short Test 2: Relax NG</hi></p>
                 <p>The CSS Box Model, positioning, and controlling layout. What are namespaces and why do they matter? Namespaces and the web. Web browsers and display variations. Server Side vs. Client Side.</p>
             </div>
             <div type="assign">
-                <list>
+                <list><item><hi rend="em">Project Development</hi>: You have been invited to collaborate on new projects in GitHub. 
+                    <list><item>Go to GitHub and clone the new repository on your computer, and begin exploring the files locally. </item>
+                        <item><hi rend="em">Post in the Issues board of your new Project Github</hi> your available meeting times to help us determine a regular meeting time for your group.</item></list></item>
                     <item>Read <title level="a"><ref target="http://learnlayout.com/">Learn CSS
                         Layout</ref></title>, and consult <ref
                             target="http://www.w3schools.com/css/">w3 Schools CSS Reference</ref>
@@ -1211,64 +1063,110 @@
                         Experiment with writing CSS to control font, layout, color, backgrounds. </item>
                     <item><hi rend="em"><ref target="HTMLExercise2.html">HTML/CSS Exercise 2</ref></hi> (As with HTML Exercise 1, submit this
                         homework by using FTP to post to our newtFire web server.)</item>
+                    <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start looking at
+                        <ref target="http://www.regular-expressions.info/quickstart.html">the
+                            Regular Expressions Quick Start</ref> in prep for next class.</item>
                 </list>
             </div>
         </div>
+    </div>
+    <div type="week" n="5">
         <div type="day">
             <head>
-                <date when="2016-10-05">W 10-05</date>
-            </head>
-            <div type="inclass">
-                <p>How XML code structure matters for web transforms and delivery: Why we need
-                    to navigate XML with XPath. Introducing XPath: Paths, Axes.</p>
-            </div>
-            <div type="assign">
-                <list>
-                    <item>First, carefully read our <ref target="explainXPath.html">Introduction
-                        to XPath: <title level="a">Follow the XPath!</title></ref> As you
-                        read, try experimenting with the XPath expressions on our page, by
-                        downloading the explainXPath.html file, opening it in oXygen, and
-                        experimenting in the XPath window with some of our expressions. Then,
-                        move on to Xpath Exercise 1.</item>
-                    <item><ref target="XPathExercise1.html"><hi rend="em">XPath Exercise
-                        1</hi></ref>
-                    </item>
-                </list>
-            </div>
+                <date when="2017-09-25">M 09-25</date>
+            </head><!--2017-08-24 ebb: Consider: one more day on HTML/CSS??? -->
+            <div type="inclass"><p>Up-Conversion with Regular Expressions: Using Find &amp; Replace in &lt;oXygen/&gt;. Model with Cheese Straw Recipe.</p></div>
+            <div type="assign"> <list><item>Consult our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and <ref target="http://www.regular-expressions.info/quickstart.html">the Regular
+                Expressions Quick Start</ref> as you work on the exercise:</item>
+                <item><ref target="RegexExerciseSonnets.html"><hi rend="em">Regex Exercise 1:</hi> Shakespeare’s Sonnets</ref></item></list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-10-07">F 10-07</date>
+                <date when="2017-09-27">W 09-27</date>
             </head>
-            <div type="inclass">
-                <p><hi rend="em">Regular Expressions Exam.</hi></p>
+            <div type="inclass"><p>More on Regular Expressions. Inside-out or Outside-in? Greedy Matching.</p></div>
+            <div type="assign"><list>
+                <item><ref target="RegexExerciseBlithedale.html"><hi rend="em">Regex Exercise 2:</hi> Blithedale</ref></item>
+                
+                <!-- <item><ref target="https://github.com/ebeshero/DHClass-Hub/issues/19">GitHub Discussion: Applications of Regex Outside of &lt;oXygen/&gt;?</ref></item>-->
+                
+            </list></div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2017-09-29">F 09-29</date>
+            </head>
+            <div type="inclass"><p>Regular Expressions: thinking algorithmically</p></div>
+            <div type="assign"> <p><ref target="RegexExerciseVoyage.html"><hi rend="em">Regex Exercise 3:</hi> Voyage Log</ref></p></div>
+        </div>
+    </div>
+    <div type="week" n="6">
+        <div type="day">
+            <head>
+                <date when="2017-10-02">M 10-02</date>
+            </head>
+            <div type="inclass"><p>Regular Expressions: Selecting for what’s not there, complicated patterns</p></div>
+            <div type="assign"><list>
+                <item><ref target="RegexExercisePlay.html"><hi rend="em">Regex Exercise 4:</hi> <hi rend="italics">Pygmalion</hi></ref></item>
+                <item>Preview our <title level="a"><ref target="explainXPath.html">Introduction to XPath</ref></title> in preparation for the next unit.</item>
+            </list></div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2017-10-04">W 10-04</date>
+            </head>
+            <div type="inclass"><p>How XML code structure matters for web transforms and delivery: Why we need
+                to navigate XML with XPath. Introducing XPath: Paths, Axes.</p>
+            <p>Review for Regex Test</p></div>
+            <div type="assign"><list>
+                <item>First, carefully read our <ref target="explainXPath.html">Introduction
+                    to XPath: <title level="a">Follow the XPath!</title></ref> As you
+                    read, try experimenting with the XPath expressions on our page, by
+                    downloading the explainXPath.html file, opening it in oXygen, and
+                    experimenting in the XPath window with some of our expressions. Then,
+                    move on to Xpath Exercise 1.</item>
+                <item><ref target="XPathExercise1.html"><hi rend="em">XPath Exercise
+                    1</hi></ref>
+                </item>
+            </list></div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2017-10-06">F 10-06</date>
+            </head>
+            <div type="inclass"><p><hi rend="em">Short Regular Expressions Test</hi></p>
                 <p>Using XPath to climb trees—up and down and side to side. Predicate
                     expressions: <hi rend="em">[ ]</hi>. <hi rend="em">(Grouping)</hi> and <hi
                         rend="em">[Position()]</hi>. XPath syntax: some tricks.</p>
             </div>
-            <div type="assign">
-                <list>
-                    <item><ref target="XPathExercise2.html"><hi rend="em">XPath Exercise
-                        2</hi></ref></item>
-                    <item>Begin reading <title level="a"><ref
-                        target="http://dh.obdurodon.org/functions.xhtml">The XPath
-                        Functions We Use Most</ref></title>.</item>
-                </list>
-            </div>
+            <div type="assign"><list>
+                <item><ref target="XPathExercise2.html"><hi rend="em">XPath Exercise
+                    2</hi></ref></item>
+                <item>Begin reading <title level="a"><ref
+                    target="http://dh.obdurodon.org/functions.xhtml">The XPath
+                    Functions We Use Most</ref></title>.</item>
+            </list></div>
         </div>
     </div>
     <div type="week" n="7">
         <div type="day">
             <head>
-                <date when="2016-10-10">M 10-10</date>
+                <date when="2017-10-09">M 10-09</date>
             </head>
-            <div type="inclass">
-                <p>XPath Functions: some common functions we use and how to write them: <hi
-                    rend="em">count(), not(), distinct-values()</hi>. XPath for the <hi
-                        rend="em">text() node</hi> to grab strings: <hi rend="em"
-                            >string-join()</hi>, <hi rend="em">contains(string 1, string 2)</hi>. </p>
-                <p>Using Regular Expressions in XPath.</p>
-            </div>
+            <div type="inclass"> <p>
+                <hi>Fall Break: Monday classes meet on Tuesday this week.</hi>
+            </p></div>
+            <div type="assign"/>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2017-10-10">T 10-10</date>
+            </head>
+            <div type="inclass"><p>XPath Functions: some common functions we use and how to write them: <hi
+                rend="em">count(), not(), distinct-values()</hi>. XPath for the <hi
+                    rend="em">text() node</hi> to grab strings: <hi rend="em"
+                        >string-join()</hi>, <hi rend="em">contains(string 1, string 2)</hi>. </p>
+                <p>Using Regular Expressions in XPath.</p></div>
             <div type="assign">
                 <list>
                     <item>Read (and consult) <title level="a"><ref
@@ -1282,105 +1180,68 @@
         </div>
         <div type="day">
             <head>
-                <date when="2016-10-12">W 10-12</date>
+                <date when="2017-10-11">W 10-11</date>
             </head>
-            <div type="inclass">
-                <p>Work on XPath and manipulating text strings. Using Regular Expressions in XPath.</p>
-            </div>
-            <div type="assign">
-                <list><item>
-                    <ref target="XPathExercise4.html"><hi rend="em">XPath Exercise 4:</hi> Manipulating Strings</ref>.
-                </item>
-                    
-                </list>
-            </div>
+            <div type="inclass"><p>Work on XPath and manipulating text strings. Using Regular Expressions in XPath.</p></div>
+            <div type="assign"><p><ref target="XPathExercise4.html"><hi rend="em">XPath Exercise 4:</hi> Manipulating Strings</ref>.</p></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-10-14">F 10-14</date>
+                <date when="2017-10-13">F 10-13</date>
             </head>
-            <div type="inclass">
-            
-                <p>writing an XPath-based Schema language: Schematron, and how we use it with
-                    Relax-NG</p>
-                <p>Examples of Schematron in our projects</p>
-                <note>Presentation in Pittsburgh</note>
-            </div>
-            <div type="assign">
-                <list>
-                    <item> Read our <ref
-                        target="explainSchematron.html">Guide
-                        to Schema Writing with Schematron</ref>.</item>
-<item>Work on <hi>Project Midterm</hi></item>
-                        <item><hi rend="em"><ref
-                            target="SchematronExercise1.html">Schematron Exercise 1</ref></hi></item>
-                        
-                    
-                </list>
-            </div>
+            <div type="inclass"> <p>writing an XPath-based Schema language: Schematron, and how we use it with
+                Relax-NG</p>
+                <p>Examples of Schematron in our projects</p></div>
+            <div type="assign"><list>
+                <item> Read our <ref
+                    target="explainSchematron.html">Guide
+                    to Schema Writing with Schematron</ref>.</item>
+                <item>Work on <hi>Project Midterm</hi></item>
+                <item><hi rend="em"><ref
+                    target="SchematronExercise1.html">Schematron Exercise 1</ref></hi></item>
+            </list></div>
         </div>
     </div>
     <div type="week" n="8">
         <div type="day">
             <head>
-                <date when="2016-10-17">M 10-17</date>
+                <date when="2017-10-16">M 10-16</date>
             </head>
-            <div type="inclass">
-                <p>
-                    <hi>Fall Break: Monday classes meet on Tuesday this week.</hi>
-                </p>
-            </div>
-            <div type="assign">
-              <p><hi>Project Midterm</hi></p>
-            </div>
+            <div type="inclass"><list>
+                <item>Schematron in Projects</item>
+                <item>Using Personographies, Placeographies, Prosopographies: <ref target="explainSchematronIdRefs.html">Keeping track
+                    of xml:ids with Schematron</ref></item>     
+            </list></div>
+            <div type="assign"><list><item><hi rend="em"><ref target="SchematronExercise2.html">Schematron Exercise 2</ref></hi></item>
+                <item>Read our tutorial on <ref target="explainSchematronIdRefs.html">Coding with Unique Identifiers and How to Test for them with Schematron</ref>,
+                    and use this in the Schematron homework: add <code>@xml:id</code> checking rules to your Schematron file, pulling from this tutorial.</item>
+                <!--<item>To prepare for the XSLT unit, <ref target="http://media.wiley.com/product_data/excerpt/47/04701927/0470192747.pdf">read Michael Kay’s Chapter 1</ref> and focus on pages 3-7, <title level="a">A Simple XSLT Stylesheet</title>: pp. 10-12, <title level="a">How it Works</title>: pp. 17-18, and <title level="a">Example: Displaying a Poem,</title> pp. 35-38 (to review a sample XSLT stylesheet). We provide a link to an online pdf of Chapter 1 here for those who do not have the physical book, <title level="m">XSLT 2.0 and XPath 2.0., 4th edition</title>, our optional text. This is the only chapter that Kay and the publishers have made available on the web.</item>-->
+                <item>Preview our <ref target="explainXSLT.html">Introduction to XSLT</ref>.</item> 
+            </list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-10-18">T 10-18</date>
+                <date when="2017-10-18">W 10-18</date>
             </head>
-            <div type="inclass">
-                <list>
-                    <item>Schematron in Projects</item>
-                    <item>Using Personographies, Placeographies, Prosopographies: <ref target="explainSchematronIdRefs.html">Keeping track
-                        of xml:ids with Schematron</ref></item>     
-                </list>
-            </div>
-            <div type="assign">
-                <list><item><hi rend="em"><ref target="SchematronExercise2.html">Schematron Exercise 2</ref></hi></item>
-                    <item>Read our tutorial on <ref target="explainSchematronIdRefs.html">Coding with Unique Identifiers and How to Test for them with Schematron</ref>,
-                        and use this in the Schematron homework: add <code>@xml:id</code> checking rules to your Schematron file, pulling from this tutorial.</item>
-                    <!--<item>To prepare for the XSLT unit, <ref target="http://media.wiley.com/product_data/excerpt/47/04701927/0470192747.pdf">read Michael Kay’s Chapter 1</ref> and focus on pages 3-7, <title level="a">A Simple XSLT Stylesheet</title>: pp. 10-12, <title level="a">How it Works</title>: pp. 17-18, and <title level="a">Example: Displaying a Poem,</title> pp. 35-38 (to review a sample XSLT stylesheet). We provide a link to an online pdf of Chapter 1 here for those who do not have the physical book, <title level="m">XSLT 2.0 and XPath 2.0., 4th edition</title>, our optional text. This is the only chapter that Kay and the publishers have made available on the web.</item>-->
-                    <item>Preview our <ref target="explainXSLT.html">Introduction to XSLT</ref>.</item>
-                    
-                </list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2016-10-19">W 10-19</date>
-            </head>
-            <div type="inclass">
-                <p>Introducing XSLT (eXtensible Stylesheet Language Transformations). XSL Transformations from XML to XML, and from XML to HTML. Namespaces</p>
+            <div type="inclass"><p>Introducing XSLT (eXtensible Stylesheet Language Transformations). XSL Transformations from XML to XML, and from XML to HTML. Namespaces</p>
                 <p>Where we use XPath, and where we <hi rend="em">don’t</hi> use XPath in XSLT.</p>
-                <p>Identity Transformation</p>
-            </div>
-            <div type="assign">
-                <list><item>Read our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
-                    <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an Identity Transformation</ref></hi>.</item></list>
+                <p>Identity Transformation</p></div>
+            <div type="assign"><list><item>Read our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
+                <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an Identity Transformation</ref></hi>.</item>
+                <item>Begin Project Take-home Midterm (due M 10/24)</item></list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-10-21">F 10-21</date>
+                <date when="2017-10-20">F 10-20</date>
             </head>
-            <div type="inclass">
-                <p>XSLT to HTML: How it works.</p>
-            </div>
+            <div type="inclass"><p>XSLT to HTML: How it works.</p></div>
             <div type="assign">
                 <list> <item><hi rend="em"><ref target="XSLTExercise2.html">XSLT Exercise 2</ref></hi> </item>
                     <item><hi rend="em">To read</hi> as you work on XSLT 2 and 3:<list> <item><title level="a"><ref target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in algorithms</ref></title></item>
                         <item><title level="a"><ref target="http://dh.obdurodon.org/developing-xslt.xhtml">Developing an XSLT Stylesheet</ref></title></item>
                     </list></item>
+                    <item>Continue Project Take-home Midterm (due M 10/24)</item>
                 </list>
             </div>
         </div>
@@ -1388,64 +1249,43 @@
     <div type="week" n="9">
         <div type="day">
             <head>
-                <date when="2016-10-24">M 10-24</date>
+                <date when="2017-10-23">M 10-23</date>
             </head>
             <div type="inclass">
                 <p>XSLT: XPath and XPath patterns. Working algorithmically.</p>
-            </div>
-            <div type="assign">
-                <list>
-                    <item><hi rend="em"><ref target="XSLTExercise3.html">XSLT Exercise 3</ref></hi></item>
-                    <item>In prep for next class, read about:
-                        <list>
-                            <item><ref target="http://dh.obdurodon.org/xslt-basics-2.xhtml">XSLT Conditionals, and Push and Pull</ref></item>
-                            <item><ref
-                                target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
-                                Templates</ref>.</item></list></item>
-                </list>
-            </div>
+                <note>MITH Digital Dialogue</note></div>
+            <div type="assign"> <list>
+                <item><hi rend="em"><ref target="XSLTExercise3.html">XSLT Exercise 3</ref></hi></item>
+                <item>In prep for next class, read about:
+                    <list>
+                        <item><ref target="http://dh.obdurodon.org/xslt-basics-2.xhtml">XSLT Conditionals, and Push and Pull</ref></item>
+                        <item><ref
+                            target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                            Templates</ref>.</item></list></item>
+            </list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-10-26">W 10-26</date>
+                <date when="2017-10-25">W 10-25</date>
             </head>
             <div type="inclass">
-                
                 <p>XSLT: Push and Pull. Attribute Value Templates</p>
-                <p>XPath Exam: NOT TODAY: POSTPONED</p>
-            </div>
-            <div type="assign">
-                <list>
-                    <item>(Consult <ref target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
-                        Templates</ref> as you work on the coding exercise.)</item>
-                    <item><hi rend="em"><ref target="XSLTExercise4.html">XSLT Exercise 4</ref></hi></item>
-                   
-                    <item>Read <ref target="http://music-encoding.org/support/a-gentle-introduction-to-mei/">An Introduction to MEI</ref> and <ref target="http://music-encoding.org/creating-a-new-mei-document/">General MEI document structure</ref> in preparation for Friday's guest lecture by <ref target="http://mith.umd.edu/people/person/raffaele-viglianti/">Dr. Raff Viglianti</ref></item>
-                    <item>In prep for the next XSLT exercise, read <ref
-                        target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref>.</item>
-                </list>
-            </div>
+                <p>Review for XPath test.</p>
+                <note>MITH Digital Dialogue</note></div>
+            <div type="assign"><list>
+                <item>(Consult <ref target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                    Templates</ref> as you work on the coding exercise.)</item>
+                <item><hi rend="em"><ref target="XSLTExercise4.html">XSLT Exercise 4</ref></hi></item>
+                <item>In prep for the next XSLT exercise, read <ref
+                    target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref>.</item>
+            </list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-10-28">F 10-28</date>
+                <date when="2017-10-27">F 10-27</date>
             </head>
-            <div type="inclass">
-                <p>Guest Speaker: <ref target="http://mith.umd.edu/people/person/raffaele-viglianti/">Raffaele Vigliante</ref> visits us from the Maryland Institute of Technology in the Humanities (MITH) to speak on MEI (Music Encoding Initiative) and XSLT to study music and walk us through a couple of in-class exercises with MEI.
-                Please open the XML files in the list below in oXygen when you arrive, or at the beginning of class.
-                </p>
-                <list>
-                    <item><ref target="https://gist.githubusercontent.com/raffazizzi/ac514325af7b6950c3a1c33138811880/raw/a4d4fc14a64d9bc3c998a1dfafdaeb8ec041b3c5/MEIhelloworld.xml">Coding MEI Exercise</ref>: To open the file directly in oXygen, use CTRL + U (PC) or Command + U (Mac) and copy and paste the address of this link into the window. 
-                    </item>
-                    <item>XPath on MEI Exercise: Open these two files in oXygen:
-                   <list>
-                       <item><ref target="https://raw.githubusercontent.com/Freischuetz-Digital/data-music/master/ready-for-use/source_raw/A/A_mov13.xml">https://raw.githubusercontent.com/Freischuetz-Digital/data-music/master/ready-for-use/source_raw/A/A_mov13.xml</ref></item>
-                       <item><ref target="https://raw.githubusercontent.com/Freischuetz-Digital/data-music/master/ready-for-use/source_raw/A/A_mov14.xml">https://raw.githubusercontent.com/Freischuetz-Digital/data-music/master/ready-for-use/source_raw/A/A_mov14.xml</ref></item>
-                   </list>
-                    </item>
-                    <item>Raff’s <ref target="https://docs.google.com/presentation/d/1qA0M2TenJJ4s1EBJJDpBEsZ0dRRzL0t4kRqw901aw_E/edit#slide=id.g138985c204_2_30">slides</ref></item>
-                    
-                </list>
+            <div type="inclass"><p>XPath test.</p>
+                <p>How Modal XSLT works.</p>
             </div>
             <div type="assign">
                 <list>
@@ -1459,38 +1299,31 @@
     <div type="week" n="10">
         <div type="day">
             <head>
-                <date when="2016-10-31">M 10-31</date>
+                <date when="2017-10-30">M 10-30</date>
             </head>
-            <div type="inclass">
-                <p>XSLT</p>
-            </div>
+            <div type="inclass"><p>Sorting with XSLT</p>
+            <p>HTML with internal links: how it works</p></div>
             <div type="assign">
                 <list>
                     <item><hi rend="em"><ref target="XSLTExercise6.html">XSLT Exercise 6</ref></hi></item>
-                    
                 </list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-11-02">W 11-02</date>
+                <date when="2017-11-01">W 11-01</date>
             </head>
-            <div type="inclass">
-                <p> XSLT. Coding (and Extracting) Metadata. Working with Metadata in TEI headers</p>
-            </div>
+            <div type="inclass"><p>Writing XSLT for your projects. Review of metadata and TEI, and using XSLT to extract metadata: Example: <ref target="http://digitalmitford.org/getLetterText.php?uri=1821-01-29_Webb.xml">Digital Mitford letter</ref>.</p></div>
             <div type="assign">
                 <p><hi rend="em"><ref target="XSLTExercise7.html">XSLT Exercise 7</ref></hi></p>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-11-04">F 11-04</date>
+                <date when="2017-11-03">F 11-03</date>
             </head>
-            <div type="inclass">
-                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
-                    and screen grid coordinates.</p> 
-                <p>Introduce with <ref target="http://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p>
-            </div>
+            <div type="inclass"><p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+                and screen grid coordinates.</p><p>Play with <ref target="http://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p> </div>
             <div type="assign">
                 <list>
                     <item>Work through <ref target="http://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
@@ -1503,197 +1336,157 @@
     <div type="week" n="11">
         <div type="day">
             <head>
-                <date when="2016-11-07">M 11-07</date>
+                <date when="2017-11-06">M 11-06</date>
             </head>
-            <div type="inclass">
-                <p>SVG from XSLT, working with variables to plot coordinate space</p>
-            </div>
-            <div type="assign">
-                <list> <item><ref target="SVGExercise2_Alice.html"><hi rend="em">SVG Exercise 2:</hi> Plotting a Line-Graph with XSLT</ref>
-                    
-                </item>
-                </list>
+            <div type="inclass"><p>SVG from XSLT, working with variables to plot coordinate space</p></div>
+            <div type="assign"> <list> <item><ref target="SVGExercise2_Alice.html"><hi rend="em">SVG Exercise 2:</hi> Plotting a Line-Graph with XSLT</ref>
+            </item>
+            </list></div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2017-11-08">W 11-08</date>
+            </head>
+            <div type="inclass"><p>more on XSLT to SVG and working with variables</p></div>
+            <div type="assign"> <list><item><ref target="SVG-XSLExercise3.html"><hi rend="em">SVG Exercise 3</hi>: Plotting a Stacked Bar Graph</ref>
+                Work on this in stages: complete a portion by Friday: By this point, set up your plot and your variables, and plot one set of bars. Submit the whole by Monday 11/14.</item>
+                <item>Review <ref target="projectGuide.html">Project Guidelines</ref>, work on developing project sites on NewtFire.</item>
+            </list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-11-09">W 11-09</date>
+                <date when="2017-11-10">F 11-10</date>
             </head>
-            <div type="inclass">
-                <p>more on XSLT to SVG and working with variables</p>
-            </div>
-            <div type="assign">
-                <list><item><ref target="SVG-XSLExercise3.html"><hi rend="em">SVG Exercise 3</hi>: Plotting a Stacked Bar Graph</ref>
-                    Work on this in stages: complete a portion by Friday: By this point, set up your plot and your variables, and plot one set of bars. Submit the whole by Monday 11/14.</item>
-                    <item>Review <ref target="projectGuide.html">Project Guidelines</ref>, work on developing project sites on NewtFire.</item>
-                </list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2016-11-11">F 11-11</date>
-            </head>
-            <div type="inclass">
-               <p>Work on SVG Exercise: How to stack the bars</p>
+            <div type="inclass"><p>Work on SVG Exercise: How to stack the bars</p>
                 <p>Project Development: Review <ref target="projectGuide.html">Project Guidelines</ref></p>
-                <!-- <p>SVG for Web Interfaces. SVG with CSS. <!-\-ebb: New Material for us! Work with Sara Soueidan's resources and develop a new assignment! -\-></p>-->
-            </div>
-            <div type="assign">
-                <p><ref target="SVG-XSLExercise3.html">SVG Exercise 3</ref>, continued: finish the assignment </p>
-            </div>
+                <!-- <p>SVG for Web Interfaces. SVG with CSS. <!-\-ebb: New Material for us! Work with Sara Soueidan's resources and develop a new assignment! -\-></p>--><note>TEI Conference</note></div>
+            <div type="assign"><p><ref target="SVG-XSLExercise3.html">SVG Exercise 3</ref>, continued: finish the assignment </p></div>
         </div>
     </div>
     <div type="week" n="12">
         <div type="day">
             <head>
-                <date when="2016-11-14">M 11-14</date>
+                <date when="2017-11-13">M 11-13</date>
             </head>
-            <div type="inclass">
-                <p>Embedding SVG on an HTML page.</p>
-            </div>
-            <div type="assign">
-                <list> <item><hi rend="em">SVG Exercise 4</hi>: Produce SVG for your project from XSLT. Place your SVG on a web page and style with CSS. Be sure to associate the relevant files and upload to Courseweb all the necessary files for us to view your pages.</item>
-                    <item>Read Obdurodon's <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</ref></item></list>
-            </div>
+            <div type="inclass"><p>Embedding SVG on an HTML page.</p>
+                <note>TEI Conference</note></div>
+            <div type="assign"><list> <item><hi rend="em">SVG Exercise 4</hi>: Produce SVG for your project from XSLT. Place your SVG on a web page and style with CSS. Be sure to associate the relevant files and upload to Courseweb all the necessary files for us to view your pages.</item>
+                <item>Read Obdurodon's <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</ref></item></list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-11-16">W 11-16</date>
+                <date when="2017-11-15">W 11-15</date>
             </head>
-            <div type="inclass">
-                <p>How JavaScript works, and how to write it.</p>
-            </div>
-            <div type="assign">
-                <p><hi rend="em"><ref target="JavaScript_SSI_Exercise1.html">Server Side Includes and Javascript Exercise 1:</ref></hi></p>
-            </div>
+            <div type="inclass"><p>SVG and Project Development</p>
+                <note>TEI Conference</note></div>
+            <div type="assign"><list><item>Work on XSLT, SVG and other coding needed for your projects</item>
+                <item>Read Obdurodon's <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</ref></item>
+            </list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-11-18">F 11-18</date>
+                <date when="2017-11-17">F 11-17</date>
             </head>
-            <div type="inclass">
-                <p>More JavaScript! Writing JavaScript functions.</p>
-            </div>
-            <div type="assign">
-                <list>
-                    <item>Read Oburodon's <ref target="http://dh.obdurodon.org/javascript_piece-by-piece.xhtml">JavaScript Piece By Piece</ref> tutorial </item>
-                    <item>Read Elisa's Obdurodon tutorial, <ref
-                        target="http://dh.obdurodon.org/javascript/classListToggle.xhtml">JavaScript Toggling with classList and switch</ref></item>
-                    <item><hi rend="em"><ref target="JavaScriptExercise2.html">Javascript Exercise 2</ref></hi></item>
-                    
-                </list>
-            </div>
+            <div type="inclass"><p>How JavaScript works, and how to write it.</p>
+                <p>How JavaScript is different from Server Side Includes (client side vs. server side).</p></div>
+            <div type="assign"><p><hi rend="em"><ref target="JavaScript_SSI_Exercise1.html">Server Side Includes and Javascript Exercise 1:</ref></hi></p></div>
         </div>
     </div>
     <div type="week" n="13">
         <div type="day">
             <head>
-                <date when="2016-11-21">M 11-21</date>
+                <date when="2017-11-20">M 11-20</date>
+            </head>
+            <div type="inclass"><p>More JavaScript! Writing JavaScript functions.</p></div>
+            <div type="assign"> <list>
+                <item>Read Oburodon's <ref target="http://dh.obdurodon.org/javascript_piece-by-piece.xhtml">JavaScript Piece By Piece</ref> tutorial </item>
+                <item>Read Elisa's Obdurodon tutorial, <ref
+                    target="http://dh.obdurodon.org/javascript/classListToggle.xhtml">JavaScript Toggling with classList and switch</ref></item>
+                <item><hi rend="em"><ref target="JavaScriptExercise2.html">Javascript Exercise 2</ref></hi></item>  
+            </list></div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2017-11-22">W 11-22 to F 11-24</date>
+            </head>
+            <div type="inclass"><p>Thanksgiving Recess: No Classes.</p></div>
+            <div type="assign"/>
+        </div>
+    </div>
+    <div type="week" n="14">
+        <div type="day">
+            <head>
+                <date when="2017-11-27">M 11-27</date>
             </head>
             <div type="inclass">
                 <p>Projects and Portfolios</p>
                 <p>JavaScript with SVG for Dynamic Activity on an Image</p>
                 <p>JavaScript, SVG, and CSS with your HTML: Putting it All Together</p>
             </div>
-            <div type="assign">
-                <p><hi rend="em"><ref target="JavaScript_Exercise3.html">JavaScript  Exercise 3</ref></hi>: JavaScript with SVG</p>
-            </div>
+            <div type="assign"><p><hi rend="em"><ref target="JavaScript_Exercise3.html">JavaScript  Exercise 3</ref></hi>: JavaScript with SVG</p></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-11-23">W 11-23 to F 11-27</date>
+                <date when="2017-11-29">W 11-29</date>
             </head>
-            <div type="inclass">
-                <p>Thanksgiving Recess: No Classes.</p>
-            </div>
-            <div type="assign">
-                <p/>
-            </div>
-        </div> 
-    </div>
-    <div type="week" n="14">
-        <div type="day">
-            <head>
-                <date when="2016-11-28">M 11-28</date>
-            </head>
-            <div type="inclass">
-                <p>Projects and Portfolios: Work with <ref target="projectGuide.html">Course Project Guidelines</ref>; Choose a <ref target="http://creativecommons.org/">Creative Commons License</ref></p>
+            <div type="inclass"><p>Projects and Portfolios: Work with <ref target="projectGuide.html">Course Project Guidelines</ref>; Choose a <ref target="http://creativecommons.org/">Creative Commons License</ref></p>
                 <p>JavaScript, SVG, and CSS with your HTML: Putting it All Together</p>
-            </div>
-            <div type="assign">
-                    <p>Project development</p>   
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2016-11-30">W 11-30</date>
-            </head>
-            <div type="inclass">
-                <p>Web Development: Checking with <ref target="https://validator.w3.org/">w3c Markup Validation Service</ref></p>
                 <p>Set Project Presentation Schedule</p>
             </div>
-            <div type="assign">
-                <p>Project development</p>
-            </div>
+            <div type="assign"> <p>Project development</p>  </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-12-02">F 12-02</date>
+                <date when="2017-12-01">F 12-01</date>
             </head>
-            <div type="inclass">
-                <p>Web Development: Projects</p>
-            </div>
-            <div type="assign">
-                <p>Project development, Prepare presentations.</p>
-            </div>
+            <div type="inclass"><p>Web Development: Projects</p></div>
+            <div type="assign"><p>Project development, Prepare presentations.</p></div>
         </div>
     </div>
     <div type="week" n="15">
         <div type="day">
             <head>
-                <date when="2016-12-05">M 12-05</date>
+                <date when="2017-12-04">M 12-04</date>
             </head>
-            <div type="inclass">
-                <p>Project Review and Presentations</p>
-            </div>
-            <div type="assign">
-                <p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p>
+            <div type="inclass"><p>Project Review and Presentations</p></div>
+            <div type="assign"><list><item>Project development</item>
+                <item><p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p></item>
+            </list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-12-07">W 12-07</date>
+                <date when="2017-12-06">W 12-06</date>
             </head>
-            <div type="inclass">
-                <p>Project Presentations</p>
-            </div>
-            <div type="assign">
-                <p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p>
-            </div>
+            <div type="inclass"><p>Project Presentations</p></div>
+            <div type="assign"><list>
+                <item>Project development</item>
+                <item><p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p></item>
+            </list></div>
         </div>
         <div type="day">
             <head>
-                <date when="2016-12-09">F 12-09 (Last Day of Classes)</date>
+                <date when="2017-12-08">F 12-08 (Last day of classes)</date>
             </head>
-            <div type="inclass">
-                <p>Project Presentations</p>
+            <div type="inclass"><p>Project Presentations</p></div>
+            <div type="assign"><list><item>Project development</item>
+                <item><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</item>
+            </list>
             </div>
+                
+        </div>
+    </div>
+    <div type="week">
+        <div type="day">
+            <head><date>Thurs. 12/14 by 11:59 PM</date></head>
             <div type="assign">
-                <p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters for today): Post a review, as detailed as possible for a project team other than your own; a project that was presented today.</p>
+                <p>
+                    <hi>Projects due. Submit projects with a post to the instructors from  your project GitHub repo.</hi>
+                </p>
             </div>
         </div>
     </div>
-              <div type="week">
-                  <div type="day">
-                      <head><date>Thurs. 12/15 by 11:59 PM</date></head>
-                      <div type="assign">
-                          <p>
-                              <hi>Projects due.</hi>
-                          </p>
-                      </div>
-                  </div>
-              </div>
-        <!--end of last week -->
     </div>
 
 
