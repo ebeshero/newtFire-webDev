@@ -1,0 +1,29 @@
+xquery version "3.0";
+declare namespace tei="http://www.tei-c.org/ns/1.0"; 
+declare variable $ThisFileContent :=
+<kml>
+    {let $collection := collection('/db/hamilton')
+    let $location := $collection//tei:placeName
+    let $distLocation := distinct-values($location)
+    for $i in $distLocation
+    let $descLocation := string-join($location/ancestor::tei:body[contains(., $i)]//tei:title, ' | ')
+    return
+    <Placemark>
+        <name>{$i}</name>
+        <description>Song(s) where the place name appears: {$descLocation}</description>
+    </Placemark>}
+</kml>;
+let $filename := "Hamilton_Placeography.kml"
+let $doc-db-uri := xmldb:store("/db/ahunker/", $filename, $ThisFileContent)
+return $doc-db-uri
+(:  :declare variable $ThisFileContent :=
+string-join(
+let $collection := collection('/db/Hamilton')
+let $location := $collection//tei:placeName
+let $distLocation := distinct-values($location)
+for $i in $distLocation
+return 
+    $i, '&#10;');
+let $filename := "Hamilton_Placeography.txt"
+let $doc-db-uri := xmldb:store("/db/ahunker/", $filename, $ThisFileContent)
+return $doc-db-uri:)

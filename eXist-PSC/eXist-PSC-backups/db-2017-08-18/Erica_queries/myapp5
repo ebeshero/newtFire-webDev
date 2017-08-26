@@ -1,0 +1,7 @@
+xquery version "3.0";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+let $data-collection := collection("/db/neh-2017")
+let $result := "a string"
+let $xml := <result><b val="b"> no bss</b> another word starting with a {result}</result>
+return string-join($data-collection//text(), "")

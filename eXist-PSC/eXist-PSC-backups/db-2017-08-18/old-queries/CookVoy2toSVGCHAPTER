@@ -1,0 +1,46 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<svg width="1000%" height="1000%">
+{
+let $CookVoy2:= doc('/db/pacific/voyages/cookVoy2Pnum.xml')
+let $chapters:= $CookVoy2//div[@type="chapter"]
+let $countchap := count($chapters)
+let $barsize:=20
+let $spacing:=5
+
+return
+   <g transform="translate(10, 2700)">
+                <text x="50" y="-2600" style="font-family:sans-serif;font-size:25px" fill="black"
+                    font-stretch="expanded">How do the Chapters in Cook's Second Voyage Compare in their Counts of Latitude and Longitude Measurements?</text>
+                <line x1="148" y1="0" x2="1400" y2="0" stroke="black" stroke-width="2"/>
+                <!--x-axis: Look for your largest width value in your results to help figure out about where to set x2.-->
+                <line x1="148" y1="0" x2="148" y2="{-((($barsize) + $spacing*6)* $countchap)}"
+                    stroke="black" stroke-width="2"/>
+                <!--y-axis-->
+ { 
+     for $chapter at $pos in $chapters   
+   let $chapterHead := $chapter/head/l[1]/text()
+   let $bookHead := $chapter/parent::div[@type="book"]/head/l[2]/text()
+   let $countAllGeo := count($chapter//geo)*10
+    let $countlat:=count($chapter//geo[@select="lat"])*10
+    let $countlon:=count($chapter//geo[@select="lon"])*10
+ 
+ 
+return 
+ 
+<g>
+    
+    <text x="0" y="{-((($barsize + $spacing*6) * $pos) -15) }" style="font-family:sans-serif;font-size:12px">{$bookHead}: {$chapterHead}</text>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countAllGeo}" height="{$barsize}" fill="green"/>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countlat + $countlon}" height="{$barsize}" fill="yellow"/>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countlon}" height="{$barsize}" fill="blue"/>
+    
+    
+   
+ </g>
+ }
+ 
+ </g>
+}
+ </svg>
+    

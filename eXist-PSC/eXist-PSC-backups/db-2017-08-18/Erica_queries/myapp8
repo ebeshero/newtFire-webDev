@@ -1,0 +1,8 @@
+xquery version "3.0";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+let $data-doc := doc("/db/neh-2017/hamlet.xml")
+let $heads := $data-doc//tei:head
+for $head in $heads
+return
+    if (starts-with($head, "G")) then $head else ()

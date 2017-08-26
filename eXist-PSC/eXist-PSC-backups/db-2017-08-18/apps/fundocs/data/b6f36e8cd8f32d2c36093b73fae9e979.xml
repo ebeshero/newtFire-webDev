@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/eXide/modules/pretty-print.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/eXide/deploy</xqdoc:uri><xqdoc:name>pretty</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>pretty:namespace-decls</xqdoc:name><xqdoc:signature>pretty:namespace-decls($elem as element(), $namespaces as xs:string*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+  Check which namespace declarations have to be output.
+</xqdoc:description><xqdoc:param>$elem </xqdoc:param><xqdoc:param>$namespaces* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>pretty:pretty-print</xqdoc:name><xqdoc:signature>pretty:pretty-print($node as item(), $namespaces as xs:string*) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Pretty print an XML fragment. Returns HTML to highlight the XML syntax.
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:param>$namespaces* </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

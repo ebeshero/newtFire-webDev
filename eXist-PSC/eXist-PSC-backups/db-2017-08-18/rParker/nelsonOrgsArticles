@@ -1,0 +1,45 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/1999/xhtml";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+<html>
+<head><title>Organizations in Each Article</title></head>
+<body> 
+<table>
+    <tr>
+            <th>@ref of Organization</th>
+            <th>Files containing @ref</th>
+            </tr>{
+    
+let $nellColl := collection('/db/Nelson/CSG_XML')
+let $nellText := $nellColl/*//tei:text
+let $orgWhole := $nellText//tei:orgName
+let $orgs := $nellText//tei:orgName/@ref/substring-after(.,'#')
+let $distOrgs := distinct-values($orgs)
+for $i in $distOrgs
+let $fileOrg := $nellText[.//tei:orgName[@ref/substring-after(.,'#')=$i]]
+let $fileOrgURI := $fileOrg/tokenize(base-uri(), '/')[last()]
+let $fileID := $fileOrg/ancestor::tei:titleStmt/tei:title/@corresp/string()
+
+order by $i
+        return
+    <tr>
+        <td>
+         {$fileID}
+        </td>
+        <td class="outer">{$i}</td>
+        
+       <td>
+           <table>
+           {for $j in $fileOrgURI
+           return
+               <tr>
+               <td>{$j}</td>
+               </tr>
+           }
+           </table>
+        </td>
+    </tr>
+}
+</table>
+</body>
+</html>  

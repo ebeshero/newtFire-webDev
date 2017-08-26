@@ -1,0 +1,16 @@
+xquery version "3.0";
+
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare option exist:serialize "method=json enforce-xhtml=yes";
+
+let $play-title := request:get-parameter("play-title", ()) (: "Hamlet, Prince of Denmark" :)
+let $doc-title := request:get-parameter("doc-title", ())
+
+let $data-doc := if (exists($doc-title)) then
+    doc(concat("/db/neh-2017", $doc-title, ".xml"))
+    else
+    collection("/db/neh-2017")//tei:title[. eq $title]
+    
+    
+    return $data-doc
+

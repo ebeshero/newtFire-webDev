@@ -1,0 +1,8 @@
+xquery version "3.0";
+collection('/db/shakespeare/plays')/PLAY[count(distinct-values(.//SPEAKER)) gt 40]/TITLE/string()
+
+
+
+
+
+

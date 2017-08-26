@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/doc/modules/docbook.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://docbook.org/ns/docbook</xqdoc:uri><xqdoc:name>docbook</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>docbook:load</xqdoc:name><xqdoc:signature>docbook:load($node as node(), $model as map, $q as xs:string?, $doc as xs:string?, $field as xs:string) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Load a docbook document. If a query was specified, re-run the query on the document
+ to get matches highlighted.
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:param>$q? </xqdoc:param><xqdoc:param>$doc? </xqdoc:param><xqdoc:param>$field </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>docbook:to-html</xqdoc:name><xqdoc:signature>docbook:to-html($node as node(), $model as map) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Transform the docbook fragment given in $model.
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>docbook:toc</xqdoc:name><xqdoc:signature>docbook:toc($node as node(), $model as map) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Generate a table of contents.
+</xqdoc:description><xqdoc:param>$node </xqdoc:param><xqdoc:param>$model </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

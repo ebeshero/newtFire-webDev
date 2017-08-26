@@ -1,0 +1,50 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare variable $mitford := collection ('/db/mitford');
+declare variable $MissJames := $mitford//TEI//text//p//*[@ref="#James_Miss"];  
+declare variable $ThisFileContent :=
+<html>
+    <head><title>Sample Co-Citation Counts from the Digital Mitford Project</title></head>
+    <body>
+        <table border='1'>
+             <tr>
+                <th>People</th>
+                <th>Count</th>
+                <th>URI</th>
+            </tr>
+         {
+         let $MJpeople as attribute(ref)* := 
+            $MissJames/ancestor::p//persName/@ref[not(. eq '#James_Miss')] | 
+            $MissJames/ancestor::p//rs[@type="person"]/@ref[not(. eq '#James_Miss')]
+         let $MJpeeps := distinct-values($MJpeople)
+         
+         let $stuff :=
+             for $peep in $MJpeeps
+             let $peepOccurrences :=
+                $mitford//p[descendant::*[@ref eq '#James_Miss'] and descendant::*[@ref eq $peep]]/descendant::*[@ref eq $peep]
+             let $peepCount := count($peepOccurrences)
+             let $urls := for $url in distinct-values($peepOccurrences/tokenize(base-uri(),'/')[last()]) order by $url return $url
+             order by $peepCount descending
+             return 
+                <tr>
+                    <td>{$peep}</td>
+                    <td>{count($peepOccurrences)}</td>
+                    <td><ul>{for $url in $urls return <li>{$url}</li>}</ul></td>
+                </tr>
+         for $item in $stuff[position() lt 4]
+         return $item
+     }</table>
+</body>
+</html>;
+
+let $filename := "tester.html"
+let $doc-db-uri := xmldb:store("/db/output", $filename, $ThisFileContent)
+return $doc-db-uri
+
+
+
+
+
+
+
+

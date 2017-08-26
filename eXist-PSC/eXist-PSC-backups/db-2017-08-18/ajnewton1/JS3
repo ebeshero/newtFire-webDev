@@ -1,0 +1,93 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";    
+declare namespace htm="http://www.w3.org/1999/xhtml";
+
+declare variable $letColl := collection('/db/mitford/letters');
+declare variable $letFiles := $letColl/*;
+declare variable $letDates := $letColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+
+declare variable $col := collection ('/db/mitford');
+declare variable $letterRecipients := $letFiles/descendant::tei:titleStmt/tei:title/tei:persName/@ref;
+declare variable $distLetterRecips := distinct-values($letterRecipients);
+declare variable $si := doc('http://digitalmitford.org/si.xml');
+
+declare variable $distinctYears := distinct-values($letDates);
+declare variable $hLetters := $letFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $hDates :=$hLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string();  
+
+declare variable $hMin := min($hDates);
+declare variable $hMax := max($hDates);
+declare variable $earliestHaydon := format-date($hMin, '[d]');
+declare variable $latestHaydon := format-date($hMax, '[d]');
+declare variable $earlyYear := xs:integer(tokenize($hMin, '-')[1]);
+declare variable $lateYear := xs:integer(tokenize($hMax, '-')[1]);
+declare variable $earlyDay := xs:integer($earliestHaydon);
+declare variable $lateDay := xs:integer($latestHaydon);
+declare variable $minDY := xs:integer(min($distinctYears));
+declare variable $maxDY := xs:integer(max($distinctYears));
+declare variable $years := $maxDY - $minDY;
+declare variable $years_space := $years* 365;
+declare variable $earlyLet := ($earlyYear - $minDY)* 365;
+declare variable $lateLet := ($lateYear - $minDY)* 365;
+
+declare variable $DYears_Integers := 
+    for $i in $distinctYears
+    order by $i ascending
+    return xs:integer($i);
+declare variable $lettersYear := 
+    for $i in $distinctYears
+        let $LY := $letDates[//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1] = $i]
+        let $countLY := count($LY)
+        order by $countLY descending
+    return $countLY;
+    
+    declare variable $ThisFileContent :=
+    <htm:html>
+        <htm:head>
+            <htm:title>JavaScript Ex3</htm:title>
+        </htm:head>
+        <htm:h1>Timeline for Letters to Specific Correspondents in the Digital Mitford Collection</htm:h1>
+        <htm:fieldset>
+            <htm:legend>Click to Reveal:</htm:legend>
+            {for $i in $distLetterRecips
+            let $name := $si//tei:person[@xml:id = substring-after($i, '#')]/tei:persName[1]/string()
+            return
+                <htm:span>
+                    <htm:input type="checkbox"
+                        id="{substring-after($i, '#')}"/>
+                        {$name}
+                </htm:span>
+           }
+        </htm:fieldset>
+        
+        <svg width="3000" height="500">
+            <g transform="translate(30, 100) scale(.5, .5)">
+            
+                (:The info the main timeline:)
+                <text x="25" y="-25">Timeline of Letters to Specific Correspondents in the Digital Mitford Collection</text>
+                <line x1="0" y1="30" x2="{$years_space}" y2="30" style="stroke:#00008B;stroke-width:6"/>
+                {
+                for $i in (0 to $years)
+                return
+                <g>
+                    <line x1="{$i*365}" y1="25" x2="{$i*365}" y2="50" style="stroke:#00008B;stroke-width:5"/>
+                    <text x="{$i*365}" y="10">{$minDY + $i}</text>
+                    <circle cx="{$i*365}" cy="50" r="{count($letDates[contains(.,$minDY+$i)])div 2}" stroke="#4169E1" fill="#4169E1" stroke-width="3"/>
+                </g>
+                }
+                
+                (:The info for Haydon Line:)
+                <line x1="{$earlyLet + $earlyDay}" y1="100" x2="{$lateLet + $lateDay}" y2="100" style="stroke:#5F9EA0;stroke-width:6"/>
+                <text x="1000" y="115">Haydon Correspondence</text>
+                <text x="409" y="115">First Letter:{$hMin}</text>
+                <text x="2099" y="115">Last Letter:{$hMax}</text>
+            </g>
+        </svg>
+    </htm:html>;
+
+let $filename := "jstimeline.svg"
+let $doc-db-uri := xmldb:store("/db/ajnewton1", $filename, $ThisFileContent)
+return $doc-db-uri
+
+(: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/ajnewton1/jstimeline.svg :)

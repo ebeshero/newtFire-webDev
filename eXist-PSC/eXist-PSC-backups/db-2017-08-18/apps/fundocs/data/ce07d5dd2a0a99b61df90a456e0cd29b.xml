@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xqdoc:xqdoc xmlns:xqdoc="http://www.xqdoc.org/1.0"><xqdoc:control><xqdoc:date>2015-05-06T12:07:02.066-04:00</xqdoc:date><xqdoc:location>/db/apps/eXide/modules/tmpl.xql</xqdoc:location></xqdoc:control><xqdoc:module type="library"><xqdoc:uri>http://exist-db.org/xquery/template</xqdoc:uri><xqdoc:name>tmpl</xqdoc:name><xqdoc:comment><xqdoc:description/></xqdoc:comment></xqdoc:module><xqdoc:functions><xqdoc:function><xqdoc:name>tmpl:expand-template</xqdoc:name><xqdoc:signature>tmpl:expand-template($input as item(), $map as element()?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+Expand the XML fragment given in $input and replace all occurrences of template
+parameters within text strings or attributes with the replacements given in
+parameter $map. Template parameters are delimited with double $: $$parameter$$.
+
+The parameter map contains a mapping of template parameter names to values:
+
+&lt;parameters&gt;
+&lt;param name="param1" value="value1"/&gt;
+&lt;/parameters&gt;
+</xqdoc:description><xqdoc:param>$input </xqdoc:param><xqdoc:param>$map? </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>tmpl:parse</xqdoc:name><xqdoc:signature>tmpl:parse($str as xs:string, $parameters as element()?) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description>
+ Helper function: recursively replace parameters in the given string.
+</xqdoc:description><xqdoc:param>$str </xqdoc:param><xqdoc:param>$parameters? </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function><xqdoc:function><xqdoc:name>tmpl:process</xqdoc:name><xqdoc:signature>tmpl:process($node as node(), $parameters as element()) as item()*</xqdoc:signature><xqdoc:comment><xqdoc:description/><xqdoc:param>$node </xqdoc:param><xqdoc:param>$parameters </xqdoc:param><xqdoc:return>item()*</xqdoc:return></xqdoc:comment></xqdoc:function></xqdoc:functions></xqdoc:xqdoc>

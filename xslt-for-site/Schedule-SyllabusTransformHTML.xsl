@@ -31,7 +31,7 @@
             <body>
               
 
-                <xsl:comment>#include virtual="top-indexCDV17.html" </xsl:comment>
+                <xsl:comment>#include virtual="top-indexCDA17.html" </xsl:comment>
                 <!--ebb: make a new top for each XML for each new semester course-->
                         <h1>
                             <span class="banner">
@@ -284,14 +284,12 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="body//title[not(@level)] | body//title[@level='m']">
-        <cite><xsl:apply-templates/></cite>
-        
+    <xsl:template match="text//title[not(@level)] | text//title[@level='m']">
+        <cite><xsl:apply-templates/></cite>  
     </xsl:template>
     
-    <xsl:template match="body//title[@level='a']">
-        <cite class="sub"><xsl:apply-templates/></cite>
-        
+    <xsl:template match="text//title[@level='a']">
+        <cite class="sub"><xsl:apply-templates/></cite>     
     </xsl:template>
     
     <xsl:template match="q">

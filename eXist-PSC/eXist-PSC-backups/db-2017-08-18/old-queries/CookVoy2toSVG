@@ -1,0 +1,50 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<svg>
+{
+let $CookVoy2:= doc('/db/pacific/voyages/cookVoy2Pnum.xml')
+let $chapters:= $CookVoy2//div[@type="chapter"]
+let $countchap := count($chapters)
+let $barsize:=20
+let $spacing:=5
+
+return
+   <g transform="translate(10, 2700)">
+                <text x="50" y="-2600" style="font-family:sans-serif;font-size:25px" fill="black"
+                    font-stretch="expanded">How do the Chapters in Cook's Second Voyage Compare in their Counts of Latitude and Longitude Measurements?</text>
+                <line x1="148" y1="0" x2="1600" y2="0" stroke="black" stroke-width="2"/>
+                <!--x-axis-->
+                <line x1="148" y1="0" x2="148" y2="{-((($barsize) + $spacing*6)* $countchap)}"
+                    stroke="black" stroke-width="2"/>
+                <!--y-axis-->
+ {    
+    for $chapter at $pos in $chapters
+ 
+    let $chapterpars:= $chapter/p
+    let $countchpars := count($chapterpars)
+    let $countAllGeo := count($chapter//geo)*10
+    let $countlat:=count($chapter//geo[@select="lat"])*10
+    let $countlon:=count($chapter//geo[@select="lon"])*10
+    let $countdates := count($chapter//date)
+    let $counttimes := count ($chapter//time)*10
+    
+  
+   
+return 
+ 
+<g>
+    
+    <text x="0" y="{-(($barsize + $spacing*6) * $pos) + 10}">{$chapter/head/l[1]/text()}</text>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countAllGeo}" height="{$barsize}" fill="green"/>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countlat + $countlon}" height="{$barsize}" fill="yellow"/>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countlon}" height="{$barsize}" fill="blue"/>
+      <rect x="150" y="{-(($barsize +$spacing*6) * $pos) + 20}" width="{$counttimes}" height="{$barsize}" fill="orange"/> 
+    
+   
+ </g>
+ }
+ 
+ </g>
+}
+ </svg>
+    

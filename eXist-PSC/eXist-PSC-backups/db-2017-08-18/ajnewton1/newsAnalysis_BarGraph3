@@ -1,0 +1,85 @@
+xquery version "3.0";
+
+declare variable $news := collection('/db/newsAnalysis');
+
+(: ajn54: BBC :)
+declare variable $BBC := $news//article/head/siteInfo[@ref="BBC"]/ancestor::article;
+declare variable $BBCarticles := count($BBC//body//quote[@pol]);
+declare variable $BBCarticlesR := count($BBC//body//quote[@pol="rep"]);
+declare variable $BBCarticlesD := count($BBC//body//quote[@pol="dem"]);
+
+(: ajn54: FOX :)
+declare variable $FOX := $news//article/head/siteInfo[@ref="FOX"]/ancestor::article;
+declare variable $FOXarticles := count($FOX//body//quote[@pol]);
+declare variable $FOXarticlesR := count($FOX//body//quote[@pol="rep"]);
+declare variable $FOXarticlesD := count($FOX//body//quote[@pol="dem"]);
+
+(: ajn54: CNN :)
+declare variable $CNN := $news//article/head/siteInfo[@ref="CNN"]/ancestor::article;
+declare variable $CNNarticles := count($CNN//body//quote[@pol]);
+declare variable $CNNarticlesR := count($CNN//body//quote[@pol="rep"]);
+declare variable $CNNarticlesD := count($CNN//body//quote[@pol="dem"]);
+
+(: ajn54: NPR :)
+declare variable $NPR := $news//article/head/siteInfo[@ref="NPR"]/ancestor::article;
+declare variable $NPRarticles := count($NPR//body//quote[@pol]);
+declare variable $NPRarticlesR := count($NPR//body//quote[@pol="rep"]);
+declare variable $NPRarticlesD := count($NPR//body//quote[@pol="dem"]);
+
+declare variable $ThisFileContent :=
+<svg xmlns="http://www.w3.org/2000/svg" width='900' height="560">
+    <g transform="translate(100, 500) scale(1.2,1.2)">
+    
+        <!-- THE TEXT -->
+        <text x="0" y="-350">Comparison Between the Amount of Time Each Political Party Was Quoted</text>
+        <text x="120" y="-330">Within The Selected News Sources</text>
+        <rect x="500" y="-390" height="150" width="120" style="stroke:black; stroke-width: 1; fill: none"/>
+        <text x="505" y="-370">BBC- {$BBCarticles}</text>
+        <text x="505" y="-350">FOX- {$FOXarticles}</text>
+        <text x="505" y="-330">CNN- {$CNNarticles}</text>
+        <text x="505" y="-310">NPR- {$NPRarticles}</text>
+        <text x="505" y="-290" style="fill:red;">Republicans- Red</text>
+        <text x="505" y="-270" style="fill:blue;">Democrats- Blue</text>
+        <text x="505" y="-250">Unknown- Black</text>
+        
+        <!-- THE BARS -->
+        <g transform="scale(1.2,1.2)">
+        <!-- BBC -->
+        <rect x="20" y="-{$BBCarticles}" height="{$BBCarticles}" width="20" style="stroke: black ; stroke-width: 2;"/>
+        <rect x="20" y="-{$BBCarticlesR + $BBCarticlesD}" height="{$BBCarticlesR}" width="20" style="stroke: red; stroke-width: 2; fill: red;"/>
+        <rect x="20" y="-{$BBCarticlesD}" height="{$BBCarticlesD}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        
+        <!-- FOX -->
+        <rect x="60" y="-{$FOXarticles}" height="{$FOXarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+        <rect x="60" y="-{$FOXarticlesR + $FOXarticlesD}" height="{$FOXarticlesR}" width="20" style="stroke: red; stroke-width: 2; fill: red;"/>
+        <rect x="60" y="-{$FOXarticlesD}" height="{$FOXarticlesD}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        
+        <!-- CNN -->
+        <rect x="100" y="-{$CNNarticles}" height="{$CNNarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+        <rect x="100" y="-{$CNNarticlesR + $CNNarticlesD}" height="{$CNNarticlesR}" width="20" style="stroke: red; stroke-width: 2; fill: red;"/>
+        <rect x="100" y="-{$CNNarticlesD}" height="{$CNNarticlesD}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        
+        <!-- NPR -->
+        <rect x="140" y="-{$NPRarticles}" height="{$NPRarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+        <rect x="140" y="-{$NPRarticlesR + $NPRarticlesD}" height="{$NPRarticlesR}" width="20" style="stroke: red; stroke-width: 2; fill: red;"/>
+        <rect x="140" y="-{$NPRarticlesD}" height="{$NPRarticlesD}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        
+        <line x1="0" y1="0" x2="200" y2="0" style="stroke: black; stroke-width: 2"/>
+        <line x1="0" y1="0" x2="0" y2="-140" style="stroke: black; stroke-width: 2"/>
+        <text x="-25" y="-80">80</text>
+        <text x="-25" y="0">0</text>
+        <text x="-25" y="-40">40</text>
+        <text x="-30" y="-40" style="writing-mode: tb; transform: rotate(180deg);">BBC</text>
+        <text x="-70" y="-40" style="writing-mode: tb; transform: rotate(180deg);">FOX</text>
+        <text x="-110" y="-40" style="writing-mode: tb; transform: rotate(180deg);">CNN</text>
+        <text x="-150" y="-40" style="writing-mode: tb; transform: rotate(180deg);">NPR</text>
+        </g>
+    </g>
+</svg>;
+
+let $filename := "newsAnalysis_BarGraph3.svg"
+let $filepath := "/db/ajnewton1"
+let $doc-db-uri := xmldb:store($filepath, $filename, $ThisFileContent)
+return $doc-db-uri 
+
+(: Output http://dxcvm05.psc.edu:8080/exist/rest/db/ajnewton1/newsAnalysis_BarGraph3.svg :) 

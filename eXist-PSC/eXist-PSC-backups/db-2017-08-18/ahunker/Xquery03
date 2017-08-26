@@ -1,0 +1,17 @@
+xquery version "3.0";
+declare variable $ThisFileContent :=
+<kml>
+    {let $collection := collection('/db/Schism')
+    let $location := $collection//location
+    let $distLocation := distinct-values($location)
+    for $i in $distLocation
+    let $descLocation := max($location/ancestor::p[contains(., $i)]/string())
+    return
+    <Placemark>
+        <name>{$i}</name>
+        <description>{$descLocation}</description>
+    </Placemark>}
+</kml>;
+let $filename := "Placeography.kml"
+let $doc-db-uri := xmldb:store("/db/ahunker/", $filename, $ThisFileContent)
+return $doc-db-uri

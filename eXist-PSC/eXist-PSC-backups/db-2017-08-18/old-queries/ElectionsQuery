@@ -1,0 +1,10 @@
+xquery version "3.0";
+let $Elections := doc('/db/Election2012/election_2012_data.xml')
+let $states := $Elections//state
+for $state in $states
+let $stateName := $state/@name
+let $totalVotes := sum($state/candidate)
+let $Dems := $state/candidate[@party='Democrat']
+let $percentDemVote := $Dems div $totalVotes * 100
+
+return concat(string-join(($stateName, round($percentDemVote)), ": "), "%") 
