@@ -1019,22 +1019,28 @@
             <head>
                 <date when="2017-09-18">M 09-18</date>
             </head>
-            <div type="inclass"> <p><hi rend="em">Form project teams</hi></p>
+            <div type="inclass"> <!--2017-09-19 ebb: The Cathedral of Learning experienced flooding from a broken sprinkler on the 3rd floor on 9-18, so the Pittsburgh class was cancelled. We therefore pushed everything ahead a day and cut back the number of Regex Assignments in the following week to catch up, by using David's Oscar Wilde play assignment. -->
                 <p>Discussion and Work with Cheese-Straw TEI Exercise. What We Include in the TEI Header.</p></div>
-            <div type="assign"><list><item><ref target="TEIExercise2.html"><hi rend="em">Document Analysis and TEI Exercise, Part 2</hi></ref></item>
+            <div type="assign"><list><item><ref target="TEIExercise2.html"><hi rend="em">work on Document Analysis and TEI Exercise, Part 2 (optionally due W or F this week)</hi></ref></item>
                 <item>Read our <title level="a"><ref target="explainHTML.html">Introduction to HTML</ref></title>.</item>
+                
             </list></div>
         </div>
         <div type="day">
             <head>
                 <date when="2017-09-20">W 09-20</date>
             </head>
-            <div type="inclass"><p>XML and the Web: HTML and CSS. SFTP into the Apache Server for newtFire. File directories and their association with web URLs.</p>
-                <p>Review Relax-NG</p></div>
+            <div type="inclass"><p><hi rend="em">Form project teams</hi></p>
+                <p>TEI, continued discussion: how to work with the TEI Guidelines. The concept of <q>tag abuse</q>.</p>
+                <p>XML and HTML: shared contexts as controlled vocabularies. The w3c and web standards.</p>
+                <p>Accessing a web server with a secure shell: joining newtFire, SSH keypairs. </p>
+                </div>
             <div type="assign">
                 <list>
-                    <item>Consult our <title level="a"><ref target="explainHTML.html">Introduction to and HTML</ref></title>, and our <title level="a"><ref target="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</ref></title> as you work on the homework exercise.</item>
-                    <item><hi rend="em"><ref target="HTMLExercise1.html">HTML/CSS Exercise 1</ref>:</hi> NOTE: <hi>Do not submit this assignment on Courseweb.</hi> Instead, submit this homework by using SFTP to post to our newtFire web server.</item>
+                    <item><ref target="TEIExercise2.html"><hi rend="em">Finish Document Analysis and TEI Exercise, Part 2 if you did not submit it already</hi></ref></item>
+                    <item>Follow our instructions [posted on Courseweb] to set up log in with SSH keys on newtFire. Bring your computer or a copy of your new keys to class on Friday.</item>
+                    <item>Install FileZilla (or other SFTP client) by Friday if you have not done so already.</item>
+                    <item>Re-read our <title level="a"><ref target="explainHTML.html">Introduction to HTML</ref></title> in preparation for Friday.</item>
                 </list>
             </div>
         </div>
@@ -1042,25 +1048,16 @@
             <head>
                 <date when="2017-09-22">F 09-22</date>
             </head>
-            <div type="inclass"><p><hi rend="em">Short Test 2: Relax NG</hi></p>
-                <p>The CSS Box Model, positioning, and controlling layout. What are namespaces and why do they matter? Namespaces and the web. Web browsers and display variations. Server Side vs. Client Side.</p>
+            <div type="inclass">
+                <p>XML and the Web: HTML and CSS.</p>
+                <p>Hands-on: SFTP into the Apache Server for newtFire. File directories and their association with web URLs.</p>
             </div>
             <div type="assign">
                 <list><item><hi rend="em">Project Development</hi>: You have been invited to collaborate on new projects in GitHub. 
                     <list><item>Go to GitHub and clone the new repository on your computer, and begin exploring the files locally. </item>
                         <item><hi rend="em">Post in the Issues board of your new Project Github</hi> your available meeting times to help us determine a regular meeting time for your group.</item></list></item>
-                    <item>Read <title level="a"><ref target="http://learnlayout.com/">Learn CSS
-                        Layout</ref></title>, and consult <ref
-                            target="http://www.w3schools.com/css/">w3 Schools CSS Reference</ref>
-                        as you code. (Also, check out <ref
-                            target="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF"
-                            >Paletton</ref> to help think about choosing balanced color schemes.
-                        Experiment with writing CSS to control font, layout, color, backgrounds. </item>
-                    <item><hi rend="em"><ref target="HTMLExercise2.html">HTML/CSS Exercise 2</ref></hi> (As with HTML Exercise 1, submit this
-                        homework by using FTP to post to our newtFire web server.)</item>
-                    <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start looking at
-                        <ref target="http://www.regular-expressions.info/quickstart.html">the
-                            Regular Expressions Quick Start</ref> in prep for next class.</item>
+                    <item>Consult our <title level="a"><ref target="explainHTML.html">Introduction to and HTML</ref></title>, and our <title level="a"><ref target="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</ref></title> as you work on the homework exercise.</item>
+                    <item><hi rend="em"><ref target="HTMLExercise1.html">HTML/CSS Exercise 1</ref>:</hi> NOTE: <hi>Do not submit this assignment on Courseweb.</hi> Instead, submit this homework by using SFTP to post to our newtFire web server.</item>
                 </list>
             </div>
         </div>
@@ -1070,29 +1067,49 @@
             <head>
                 <date when="2017-09-25">M 09-25</date>
             </head><!--2017-08-24 ebb: Consider: one more day on HTML/CSS??? -->
-            <div type="inclass"><p>Up-Conversion with Regular Expressions: Using Find &amp; Replace in &lt;oXygen/&gt;. Model with Cheese Straw Recipe.</p></div>
-            <div type="assign"> <list><item>Consult our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and <ref target="http://www.regular-expressions.info/quickstart.html">the Regular
-                Expressions Quick Start</ref> as you work on the exercise:</item>
-                <item><ref target="RegexExerciseSonnets.html"><hi rend="em">Regex Exercise 1:</hi> Shakespeare’s Sonnets</ref></item></list></div>
+            <div type="inclass"><p><hi rend="em">Short Test 2: Relax NG</hi></p>
+                <p>The CSS Box Model, positioning, and controlling layout. What are namespaces and why do they matter? Namespaces and the web. Web browsers and display variations. Server Side vs. Client Side.</p>
+            </div>
+            <div type="assign"> 
+                <list><item>Read <title level="a"><ref target="http://learnlayout.com/">Learn CSS
+                    Layout</ref></title>, and consult <ref
+                        target="http://www.w3schools.com/css/">w3 Schools CSS Reference</ref>
+                    as you code. (Also, check out <ref
+                        target="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF"
+                        >Paletton</ref> to help think about choosing balanced color schemes.
+                    Experiment with writing CSS to control font, layout, color, backgrounds. </item>
+                <item><hi rend="em"><ref target="HTMLExercise2.html">HTML/CSS Exercise 2</ref></hi> (As with HTML Exercise 1, submit this
+                    homework by using FTP to post to our newtFire web server.)</item>
+                <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start looking at
+                    <ref target="http://www.regular-expressions.info/quickstart.html">the
+                        Regular Expressions Quick Start</ref> in prep for next class.</item></list>
+</div>
         </div>
         <div type="day">
             <head>
                 <date when="2017-09-27">W 09-27</date>
             </head>
-            <div type="inclass"><p>More on Regular Expressions. Inside-out or Outside-in? Greedy Matching.</p></div>
-            <div type="assign"><list>
-                <item><ref target="RegexExerciseBlithedale.html"><hi rend="em">Regex Exercise 2:</hi> Blithedale</ref></item>
+            <div type="inclass">
+                <p>Up-Conversion with Regular Expressions: Using Find &amp; Replace in &lt;oXygen/&gt;.</p>
                 
-                <!-- <item><ref target="https://github.com/ebeshero/DHClass-Hub/issues/19">GitHub Discussion: Applications of Regex Outside of &lt;oXygen/&gt;?</ref></item>-->
-                
-            </list></div>
+                <p>More on Regular Expressions. Inside-out or Outside-in? Greedy Matching.</p></div>
+            <div type="assign">
+                <list><item>Consult our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and <ref target="http://www.regular-expressions.info/quickstart.html">the Regular
+                    Expressions Quick Start</ref> as you work on the exercise:</item>
+                    <item><ref target="RegexExerciseSonnets.html"><hi rend="em">Regex Exercise 1:</hi> Shakespeare’s Sonnets</ref></item></list>
+            </div>
         </div>
         <div type="day">
             <head>
                 <date when="2017-09-29">F 09-29</date>
             </head>
             <div type="inclass"><p>Regular Expressions: thinking algorithmically</p></div>
-            <div type="assign"> <list><item><ref target="RegexExerciseVoyage.html"><hi rend="em">Regex Exercise 3:</hi> Voyage Log</ref></item></list></div>
+            <div type="assign"> 
+                <list>
+                    <item><ref target="RegexExerciseBlithedale.html"><hi rend="em">Regex Exercise 2:</hi> Blithedale</ref></item>
+                    <!-- <item><ref target="https://github.com/ebeshero/DHClass-Hub/issues/19">GitHub Discussion: Applications of Regex Outside of &lt;oXygen/&gt;?</ref></item>-->  
+                </list>
+                <!-- 2017-09-19: Sacrificed just for this semester: <list><item><ref target="RegexExerciseVoyage.html"><hi rend="em">Regex Exercise 3:</hi> Voyage Log</ref></item></list>--></div>
         </div>
     </div>
     <div type="week" n="6">
@@ -1102,7 +1119,7 @@
             </head>
             <div type="inclass"><p>Regular Expressions: Selecting for what’s not there, complicated patterns</p></div>
             <div type="assign"><list>
-                <item><ref target="RegexExercisePlay.html"><hi rend="em">Regex Exercise 4:</hi> <hi rend="italics">Pygmalion</hi></ref></item>
+                <item><ref target="RegexExercisePlay.html"><hi rend="em">Regex Exercise 3:</hi> <hi rend="italics">Pygmalion</hi></ref></item>
                 <item>Preview our <title level="a"><ref target="explainXPath.html">Introduction to XPath</ref></title> in preparation for the next unit.</item>
             </list></div>
         </div>
