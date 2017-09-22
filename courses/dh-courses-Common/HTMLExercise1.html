@@ -15,16 +15,19 @@
                     href="explainHTML.html">Introduction to XHTML (and HTML)</a>" and "<a
                     href="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</a>". It will
                 benefit you to keep these tutorials open while you work on this assignment. To
-                begin, open a new XHTML file in &lt;oXygen/&gt; under <strong>File → New → Framework
-                    Templates → (scroll to XHTML in the alphabetized list) → XHTML 5</strong>. We do
-                not recommend keeping the xml line at the very top, but just the DOCTYPE and the
-                root html element pointing to the xhtml namespace; therefore, the top of your file
-                should look like this:</p>
+                begin, open a new HTML file in &lt;oXygen/&gt; by clicking on the icon that looks like a piece of paper in the top left (or going to <strong>File → New</strong>, entering <code>HTML</code> in the search bar, and clicking on the HTML result. Paste in the highlighted meta elements below at the appropriate place in the <code>head</code> element at the start of your file:</p>
             <pre>
-                     &lt;!DOCTYPE html
-  SYSTEM "about:legacy-compat"&gt;
+                &lt;!DOCTYPE html&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-                      
+            &lt;head&gt;
+                  &lt;title&gt;&lt;!--title of your page here--&gt;&lt;/title&gt;
+                 <code>&lt;meta charset="UTF-8" /&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code>
+                &lt;!--Add your &lt;link&gt; element to associate your CSS file here once you have created it.-->
+             &lt;/head&gt;
+                 &lt;body&gt;
+                 &lt;!--Code the viewable portion of your page here.--&gt;
+                 &lt;/body&gt;
                   </pre>
             <p>You will also need to open a new CSS file in &lt;oXygen/&gt; under <strong>File → New
                     → New Document → CSS</strong>.</p>
@@ -34,8 +37,8 @@
             <p>The goal of this assignment is to create a very basic personal webpage. If you
                     <em>view page source</em> on this page you can see examples of how we used
                 headings, paragraphs, lists, an image, and links to other pages within the same
-                directory. You can also view the corresponding CSS and take note of how we linked
-                our CSS with this page. Mac users to view page source we recommend that you use
+                directory. You can also view the corresponding CSS and <strong>take note of how we linked
+                our CSS with this page</strong>. Mac users to view page source we recommend that you use
                 Firefox or Chrome because Safari will require you to change browser preferences to
                 see the page source. In Firefox or Chrome simply <em>right-click</em> and select
                     <em>view page source</em>.</p>
@@ -65,7 +68,7 @@
             <h3>Submitting your work</h3>
             <p>You are required to save your HTML page(s) and CSS file in your <q>personal
                     webpage</q> Git repository AND move them to your personal web space accounts at
-                newtFire.org on the Pittsburgh Supercomputing Center using an FTP client. Be sure to
+                newtFire.org using the FTP client that we showed you how to configure (see Courseweb for configuration instructions if you need to configure your FTP client). Be sure to
                     <em>add</em>, <em>commit</em>, and <em>push</em> your files from your local Git
                 repository to your remote GitHub repository.</p>
             <p><em>A note on mindful file management:</em> We recommend you save your CSS stylesheet
