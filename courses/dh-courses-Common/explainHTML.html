@@ -119,12 +119,17 @@
          browser, and to help make the HTML page fully responsive on a wide range of screens (from mobile devices to wide-screen monitors). <strong>If you are developing a newtFire project,</strong> then we recommend that you
          save your work as <code>.html</code> and apply the following setup for your <code>Doctype
             declaration</code> and <code>&lt;head&gt;</code> element:</p>
-      <pre> &lt;!DOCTYPE html&gt; &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
-          &lt;head&gt; &lt;title&gt;Your page title here (to appear in the browser tab, but not on the
-         page)&lt;/title&gt;
-         &lt;meta charset="UTF-8" /&gt; 
-         &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-         &lt;link rel="stylesheet" type="text/css" href="explain.css"/&gt;  &lt;/head&gt; </pre>
+      <pre> &lt;!DOCTYPE html&gt; 
+         &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+            &lt;head&gt; 
+               &lt;title&gt;Your page title here &lt;!--to appear in the browser tab, but not on the page--&gt; &lt;/title&gt;
+               &lt;meta charset="UTF-8" /&gt; 
+               &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+               &lt;link rel="stylesheet" type="text/css" href="explain.css"/&gt;  
+           &lt;/head&gt; 
+           &lt;body&gt; &lt;!--Code the viewable part of your site here.--&gt;
+           &lt;/body&gt;  
+      </pre>
       <h3>Block-Level Body Elements</h3>
       <p><strong>Block-level</strong> elements are the major structural components of an XHTML page,
          and usually we do not nest these inside each other: They are discrete “blocks” formatted
