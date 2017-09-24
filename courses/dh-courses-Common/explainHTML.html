@@ -398,8 +398,8 @@
             href="http://newtfire.org/">our newtFire server</a> for HTML related homework exercises and for
          course project website development, and we provide information to you privately on how to access your assigned web space.</p>
       <h3>Setting up XSLT to Make HTML</h3>
-      <p>When you write XSLT to transform XML into HTML, you will need to configure some settings and create a template rule that matches on the document node. The stylesheet should start out something like this:</p>
-      <div class="code">
+      <p>When you learn to write XSLT to transform XML into HTML, you will need to configure some settings and create a template rule that matches on the document node. The stylesheet should start out something like this:</p>
+      <pre>
          &lt;?xml version="1.0" encoding="UTF-8"?&gt;
          &lt;xsl:stylesheet <span class="code">xmlns="http://www.w3.org/1999/xhtml"</span>
          xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"&gt;
@@ -419,7 +419,7 @@
          &lt;/html&gt;
          &lt;/xsl:template&gt;
          &lt;/xsl:stylesheet&gt;
-      </div>
+      </pre>
       <p>Basically, we map out the <q>skeleton</q> of the HTML file, all its basic structural components within a first  template rule matching on the document node. One oddity is the <code>@doctype-system</code> attribute: We have to set this to "about:legacy-compat" because XSLT otherwise will not generate the HTML DOCTYPE line that it needs to be valid. The output HTML document will have a longer doctype line (<code>&lt;!DOCTYPE html SYSTEM "about:legacy-compat"&gt;</code> instead of just <code>&lt;!DOCTYPE html&gt;</code>), but it basically indicates the same thing to a web browser.
          <span class="smaller">XSLT can only output the longer form of the doctype line, based on the way it parses code. The indication of <q>legacy</q> compatibility basically indicates that the XSLT technology producing the HTML is a legacy system, maintaining compatibility with current HTML standards.</span></p>
    </body>
