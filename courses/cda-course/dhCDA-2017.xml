@@ -1068,19 +1068,33 @@
                 <date when="2017-09-25">M 09-25</date>
             </head><!--2017-08-24 ebb: Consider: one more day on HTML/CSS??? -->
             <div type="inclass"><p><hi rend="em">Short Test 2: Relax NG</hi></p>
-                <p>The CSS Box Model, positioning, and controlling layout. What are namespaces and why do they matter? Namespaces and the web. Web browsers and display variations. Server Side vs. Client Side.</p>
+                <list>
+                    <item>Web browsers and display variations</item>
+                    <item>The CSS Box Model and controlling layout with Flexbox: see <ref target="https://internetingishard.com/html-and-css/flexbox/">tutorial</ref>, with newtFire examples:
+                <list>
+                    <item>HTML: Open URL in oXygen: <hi>http://newtfire.org</hi></item>
+                    <item>CSS: Open URL in oXygen: <hi>http://newtfire.org/nfIndex.css</hi></item>
+                </list>
+                </item>
+                    <item>Server Side Includes for boilerplate content: Example: 
+                        <list>
+                            <item>Include file for newtFire assignment pages: <ref target="https://github.com/ebeshero/newtFire-webDev/blob/master/courses/dh-courses-Common/top.html">a fragment of HTML</ref></item>
+                            <item>Indicating where an include goes on a page: <ref target="https://github.com/ebeshero/newtFire-webDev/blob/master/courses/dh-courses-Common/explainCSS.html">Example</ref></item>
+                            <item>Full page <ref target="http://dh.newtfire.org/explainCSS.html">on the web</ref>: and <ref target="view-source:http://dh.newtfire.org/explainCSS.html">page source</ref></item>  
+                        </list></item>
+                </list>
             </div>
             <div type="assign"> 
-                <list><item>Read <title level="a"><ref target="http://learnlayout.com/">Learn CSS
-                    Layout</ref></title>, and consult <ref
+                <list><item>Consult <title level="a"><ref target="http://learnlayout.com/">Learn CSS
+                    Layout</ref></title>, <ref target="https://internetingishard.com/html-and-css/flexbox/">Flexbox tutorial</ref>, and <ref
                         target="http://www.w3schools.com/css/">w3 Schools CSS Reference</ref>
                     as you code. (Also, check out <ref
                         target="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF"
-                        >Paletton</ref> to help think about choosing balanced color schemes.
+                        >Paletton</ref> (or hunt for other color scheme generators on the web) to help think about choosing a balanced color scheme for your website.
                     Experiment with writing CSS to control font, layout, color, backgrounds. </item>
                 <item><hi rend="em"><ref target="HTMLExercise2.html">HTML/CSS Exercise 2</ref></hi> (As with HTML Exercise 1, submit this
                     homework by using FTP to post to our newtFire web server.)</item>
-                <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start looking at
+                <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start reading
                     <ref target="http://www.regular-expressions.info/quickstart.html">the
                         Regular Expressions Quick Start</ref> in prep for next class.</item></list>
 </div>
