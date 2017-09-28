@@ -31,16 +31,18 @@
    	  <h3>The input text</h3>
        <p>The text we’ll be using as input for the first regex homework assignment is a plain-text
            version of Shakespeare’s sonnets produced by Project Gutenberg, which you can download from our site here: <a
-               href="shakeSonnets.txt"
-               >shakeSonnets.txt</a>.</p>
+               href="shakeSonnets.txt">shakeSonnets.txt</a>.</p>
            
            <ul><li>To download the file,  go to File and Save as in your web browser, and choose a useful name and location on your computer to save the file.
            We typically keep the <code>.txt</code> extension, and you might rename this as <code>YourName_Regex1_sonnets.txt</code>.)
            </li>
            <li>Then open &lt;oXygen/&gt;, and open the file you saved. </li>
-            <li>You should manually delete any of the Project Gutenberg
-           information from the beginning and end of this file, so that what you’re left with is
-           just the sonnets in order, with roman numerals before each one.</li>
+               <li><strong>Make a <q>Step File</q></strong>: Next, open a <strong>new, separate text file</strong>, in which you record each step you take in up-converting this document. This needs to be a plain text file (and not something you write in a word processor (<em>not</em> a Microsoft Word document) so you do not have to struggle with autocorrections of the regex patterns you are recording. Save this file as your main homework submission for this assignment: We will duplicate the steps you record to make sure they work to up-convert the text file to XML. Save this file following our <a href="http://dh.newtfire.org/explainFileNames.html">standard homework file naming conventions</a> (for upload to Courseweb).
+               <span class="smaller"><strong>Suggestion:</strong> You can open a new plain text file in oXygen by going to open a New document (the folded piece of paper icon) and typing in "text" in the search bar. <strong>On Windows</strong>, you can find and open Notepad and record your steps in plain text form here outside of oXygen, which may be convenient, so you don’t accidentally try your find-and-replace operations on your step file instead of the main text. <strong>On Mac</strong>, we don’t really have a good separate text editor to recommend: you might try TextEdit, but it may be best to stick with oXygen, and open your window in tile view as we did with your Relax NG Schema files.</span>
+               </li>
+            <li>You should manually delete any of the Project Gutenberg publishing
+           information from the beginning and end of the sonnets file, so that what you’re left with is
+           <strong>just the sonnets in order, with roman numerals before each one</strong>.</li>
            </ul>
        <p>If you find it easier to work with a small amount of text, you can make yourself a
            document that contains just a few sonnets and use that during development. Once you
@@ -49,11 +51,14 @@
            for a handful of sonnets should work for all of them.</p>
        <h3>The task</h3>
        <p>Your goal is to produce an XML version of this file by using the search-and-replace
-           techniques we discussed in class. Your output should look something like <a
+           techniques we discussed in class, <strong>and</strong> a plain text file that documents your step-by-step method, suitable for sharing with others. <span class="smaller">(You may, in a real-life project situation, need to share the steps you take in up-converting plain text documents to XML, and share that on your GitHub repo in GitHub’s markdown (the same that we write on the GitHub Issues board), and in that case you would save the file with a <code>.md</code> extension, like <a href="https://github.com/ebeshero/DHClass-Hub/blob/master/Class-Examples/Regex_upConversion/JohannForster-IntroToUpconversion/JohannForster_Upconversion.md">the instructions files we pushed into Class Examples for Regex_upConversion on the DHClass-Hub</a>).</span></p>
+       
+       <p>Your up-converted XML output should look something like <a
                href="http://dh.obdurodon.org/shakespeare-sonnets.xml">http://dh.obdurodon.org/shakespeare-sonnets.xml</a>.
            That is, each sonnet should be its own element, each line should be tagged separately,
            and the roman numerals should be encoded in a useful way (we’ve used attributes, but you
            could also put them in a child element).</p>
+       <p>Your <q>Steps file</q> needs to be detailed enough to indicate each step of your process: what regular expression patterns you attempted to find, and what expressions you used to replace them. You might record the number finds you get and even how you fine-tuned your steps when you were not finding everything you wanted to at first. <strong>Note:</strong> we strongly recommend copying and pasting your find and replace expressions into your Steps file instead of retyping them (since it is easy to introduce errors that way).</p>
        <h3>How to proceed</h3>
        <p>There are several ways to get to the target output, but here is how we might approach the
            task:</p>
@@ -114,7 +119,7 @@
            tag the Roman numerals as if they were lines of poetry, which they aren’t, but it’s
            easier to let the first find-and-replace overgeneralize and then go back and retag the
            Roman numerals than to try to write a more constrained regex that won’t overgeneralize.
-           We don't want to tag blank lines (if we left them in), though, so we need a regex that
+           We don’t want to tag blank lines (if we left them in), though, so we need a regex that
            matches only lines that have characters in them. Remember where we told you above to
            make sure that <q>Dot matches all</q> was unchecked? Normally the dot (<code>.</code>)
            matches any character except a new line, which means that we can use the plus sign
