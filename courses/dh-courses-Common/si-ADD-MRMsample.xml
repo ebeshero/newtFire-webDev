@@ -2,6 +2,7 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!--ebb: Above this are the TEI Schema lines (which include the TEI's own general Schematron rules. Associate your own schema as a Schematron file, and check that your schema line will appear in addition to the TEI lines. -->
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
    <teiHeader>
@@ -20,10 +21,6 @@
             <respStmt>
                <resp>Data extraction and compiling by</resp>
                <persName type="hist" ref="#ebb">Elisa Beshero-Bondar</persName>
-            </respStmt>
-            <respStmt>
-               <resp when="2017-10-15">File deliberately altered for use in DH Class assignments by</resp>
-               <persName ref="#ebb">Elisa Beshero-Bondar</persName> on <date when="2017-10-15">October 15, 2017</date>
             </respStmt>
          </titleStmt>
          <editionStmt>
@@ -94,10 +91,10 @@
                <person xml:id="Adams_GP" sex="m">
                   <persName>General Sir George Pownoll Adams</persName>
                   <persName>
-                     <forename>George</forename>
+                     <forename> George</forename>
                      <forename><choice><sic>Pownoll</sic><reg>Pownall</reg></choice></forename>
                      <surname>Adams</surname>
-                     <roleName>General</roleName>
+                     <roleName> General</roleName>
                      <roleName>Sir</roleName>
                      <roleName>Knight Commander of Hanover (KCH)</roleName>
                   </persName>
@@ -117,13 +114,13 @@
                <person xml:id="Addison_Joseph" sex="m">
                   <persName>Joseph Addison</persName>
                   <persName>
-                     <surname>Addison</surname>
+                     <surname> Addison</surname>
                      <forename>Joseph</forename>
                   </persName>
-                  <birth when="1672-05-01">
+                  <birth when="1719-06-17">
                      <placeName>Millstone, Wiltshire, England</placeName>;
                   </birth>
-                  <death when="1719-06-17">
+                  <death when="1672-05-01">'
                      <placeName>Holland House, London, England</placeName>
                   </death>
                   <occupation>literary</occupation>
@@ -155,10 +152,10 @@
                
                <person xml:id="Aeschylus" sex="m">
                   <persName>Aeschylus</persName>
-                  <birth notBefore="-0525">525 BC
+                  <birth notBefore="-0455">525 BC
                      <placeName>Eleusis, West Attica</placeName>
                   </birth>
-                  <death notAfter="-0455">455 BC
+                  <death notAfter="-0525">455 BC
                      <placeName>Gela, Sicily</placeName>
                   </death>
                   <occupation>literary</occupation>
@@ -197,7 +194,7 @@
                </person>
                
                <person xml:id="Alfieri_Vittorio" sex="m">
-                  <persName>Count Vittorio Alfieri</persName>
+                  <persName> Count Vittorio Alfieri</persName>
                      <persName>
                     <surname>Alfieri</surname>
                      <forename>Vittorio</forename>
@@ -423,10 +420,10 @@
                   </note>
                </person>
                
-               <person xml:id="Baillie_Joanna" sex="f">
+               <person xml:id="Joanna_Baillie" sex="f">
                   <persName>Joanna Baillie</persName>
                   <persName>
-                     <surname>Baillie</surname>
+                     <surname> Baillie</surname>
                      <forename>Joanna</forename>
                   </persName>
                   <birth when="1762-09-11">
@@ -802,8 +799,8 @@
                      <forename>Elizabeth</forename>
                      <surname type="paternal">Hardwick</surname>
                      <surname type="married">Barley</surname>
-                     <surname type="married">Cavendish</surname>
-                     <surname type="married">St. Loe</surname>
+                     <surname type="married">cavendish</surname>
+                     <surname type="married">st. Loe</surname>
                      <surname type="married">Talbot</surname>
                      <roleName>Countess of Shrewsbury</roleName>
                   </persName>

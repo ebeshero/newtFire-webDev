@@ -140,13 +140,26 @@
                      
                      <item>
                          <ref target="explainXML.html">Introduction to XML</ref>
+                         <list>
+                             <item><ref target="XMLExercise1.html">XML Exercise 1</ref></item>
+                             <item>Other XML exercises are more open-ended, listed in the opening weeks on <ref target="CDASyll.html">the current syllabus</ref>.</item>
+                         </list>
                      </item>
                      <item><ref target="explainGitShell.html">Guide to GitHub and Git Shell</ref> with our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>
                          <list><item><ref target="GitExercise1.html">Git Exercise 1</ref></item>
-                             <item><ref target="GitExercise2.html">Git Exercise 2</ref></item></list>
+                             <item><ref target="GitExercise2.html">Git Exercise 2</ref></item>
+                             <item>The book-chapter that former student student instructor <ref target="http://newtfire.org/~rjp43/RebeccaParker_CV.pdf">Rebecca J. Parker</ref> co-authored with me about our use of GitHub in this class: <bibl><ref target="https://www.academia.edu/34341800/A_GitHub_Garage_for_a_Digital_Humanities_Course"><title level="a">A GitHub Garage for a Digital Humanities Course</title></ref> published in <title level="m">New Directions for Computing Education</title> (<publisher>Springer Books</publisher>, <date>2017</date>) <biblScope unit="page" from="259" to="276">pp. 259-276</biblScope></bibl></item>
+                         </list>
+                     </item>
+                     <item>Orientation to <ref target="http://www.tei-c.org/Guidelines/P5/">the TEI</ref>
+                         <list>
+                             <item><ref target="TEIExercise1.html">Document Analysis and TEI Exercise, Part 1 of 2</ref></item>
+                             <item><ref target="TEIExercise2.html">Document Analysis and TEI Exercise, Part 2 of 2</ref></item>
+                         </list>
                      </item>
                      <item>
                          <ref target="explainRNG.html">Guide to Schema Writing with Relax NG</ref>
+                         <list><item>Relax NG exercises involve writing schemas and revising XML from the XML exercises.</item></list>
                      </item>
                      <item>
                          <ref target="explainHTML.html">Introduction to XHTML (and HTML)</ref> and <ref target="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</ref>
@@ -181,8 +194,9 @@
                          </list>
                          <p>Examples from our projects</p>
                          <list>
-                             <item><ref target="http://ebeshero.github.io/mitford/MRMvalidate.sch">Digital Mitford Project Schematron</ref></item>
-                             <item>GitHub: <ref target="https://github.com/ebeshero/Amadis-in-Translation/blob/master/XML-and-Schematron/Amadis.sch">Amadis-in-Translation Project Schematron</ref></item>
+                             <item><ref target="https://github.com/ebeshero/ebeshero.github.io/blob/master/MRMValidate.sch">Digital Mitford Project Schematron rules for validating attributes against an index</ref></item>
+                             <item>GitHub: <ref target="https://github.com/ebeshero/Amadis-in-Translation/blob/master/XMLandSchemas/Amadis_RomanNumeralTester.sch">Roman numeral checking in Amadis-in-Translation Project Schematron</ref></item>
+                             <item>Obdurodon challenge example: <ref target="http://dh.obdurodon.org/schematron-class-02.html">Using Schematron in Editing</ref> (flagging when text is too long or short using string-length())</item>
                          </list></item>
                      <item>
                          <ref target="explainXSLT.html">Introduction to XSLT</ref>
@@ -223,8 +237,8 @@
                                  Jenkov tutorial</item>
                              <item>
                                  <ref target="http://www.webdesignerdepot.com/2015/01/the-ultimate-guide-to-svg/">The ultimate guide to SVG</ref>: helpful material on using SVG in site design for banners and more.</item> 
-                                <item><ref target="http://www.math.wsu.edu/kcooper/M300/svgcheat.php">SVG Cheat
-                                     Sheet</ref>
+                             <item><ref target="http://www.math.wsu.edu/kcooper/M300/svgcheat.php">SVG Cheat
+                                 Sheet</ref>
                              </item>
                              <item>Obdurodon: <ref target="http://dh.obdurodon.org/svg-embedding.xhtml">How to Embed SVG in an XHTML Page</ref>
                              </item>
@@ -299,8 +313,16 @@
                          </list>
                      </item>
                      
-          
-                     <item>Python and Web Scraping (under development)</item>
+                     <item>Python for Natural Language Processing and Web Scraping
+                         <p>Resources</p>
+                         <list>
+                             <item><ref target="https://github.com/djbpitt/wordnet/blob/master/Wordnet.ipynb">Wordnet Sandbox</ref>:  Python Notebook tutorial by David Birnbaum, used in Obdurodon's <ref target="http://ghost.obdurodon.org">Victorian Ghost Stories project</ref> and newtFire's <ref target="http://eldritch.newtfire.org">Eldritch project</ref></item>
+                             <item></item>
+                         </list>
+                         
+                         
+                         
+                     </item>
                      <item><ref target="housestyle.html">newtFire House Style</ref></item>
                      
                  </list>
