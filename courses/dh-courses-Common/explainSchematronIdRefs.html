@@ -25,7 +25,7 @@
                
            <p>We could add other <code>&lt;persName&gt;</code> elements inside this entry if we discover that Mary Ann Harvey used a pseudonym or fake name, or had a nickname. We add as much or as little information as we can find and as seems necessary to our project, and our entries are always in a state of development as we keep working on our project. In the body of a Mitford letter, if she mentions that her father has seen Mary Davenport perform in a play, we encode Mary’s name like this:</p>
      
-     <pre>&lt;p&gt;&lt;persName ref="Mitford_Geo"&gt;Drum&lt;/persName&gt; saw &lt;persName ref="#Davenport_MA"&gt;Mary Davenport&lt;/persName&gt;
+     <pre>&lt;p&gt;&lt;persName ref="#Mitford_Geo"&gt;Drum&lt;/persName&gt; saw &lt;persName ref="#Davenport_MA"&gt;Mary Davenport&lt;/persName&gt;
          perform in &lt;title ref="#TwelfthNight_Shkspr"&gt;Twelfth Night&lt;/title&gt; last week.&lt;/p&gt;</pre>
      
      <p>Because we are only permitted to use an <code>@xml:id</code> attribute value <em>once</em> in our entire project, we place a hashtag on all attributes (like <code>@ref</code>, <code>@wit</code>, <code>@corresp</code> that <em>refer</em> or <em>point to</em> that <code>@xml:id</code>. The use of the hashtag permits us to invoke the identifying string as often as we need to, and it permits us to pull up more information about a given name by pointing to information in our site index file.</p>
