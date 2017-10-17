@@ -65,6 +65,9 @@
            <!--<ul><xsl:apply-templates select="list"/></ul>-->
        </ul>
    </xsl:template>
+    <xsl:template match="p">
+        <p><xsl:apply-templates/></p>
+    </xsl:template>
 <xsl:template match="item">
     <li><xsl:apply-templates/></li>
 </xsl:template>
