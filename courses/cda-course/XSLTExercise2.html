@@ -19,7 +19,7 @@
       <h3>Overview of the Assignment</h3>
       <p>The Digital Mitford Site Index stores lists of names and information on people, places, organizations, and texts, among other kinds of named entities referenced in files throughout the Digital Mitford project. For this assignment, we will work with a slightly modified version of the Digital Mitford Site Index, which you should download <a href="si-modified.xml">from here</a> and open in &lt;oXygen&gt;. Our goal is to create a structured outline in HTML of all the information about organizations in the site index. We want to output that in HTML in the form of a list with nested lists inside, representing an outline of first the <em>categories</em> of organization, and then inside each category, a new list of the organization names.  This is something we actually need to do in the Mitford project: to process portions of the Site Index file to make it readable on the web as a list. One possible use of a webpage like this is as a list of links, so that each organization name might link to a page of information on each organization. We don't have to generate those links now. For this assignment, we just want to learn how to transform XSLT to HTML and to generate the lists themselves by pulling the right content out of our XML.</p>
       <p>If you’re feeling adventurous, once you obtain the output we're seeking, you may go on to build other HTML lists, working with other portions of the XML document, such as the <code>&lt;listBibl&gt;</code> or <code>&lt;listPerson&gt;</code> sections, which are formatted a little differently. The only required content of your homework, though, is the HTML outline of <strong>organization types</strong> and <strong>organization names</strong>. For the organization types or categories, we need to pull from the <span class="code">&lt;head&gt;</span> element sitting inside at the top of each <span class="code">&lt;listOrg&gt;</span> elements in our TEI file. For the organization names, we reach in to find the individual entries for <span class="code">&lt;org&gt;</span> and their child <span class="code">&lt;orgName&gt;</span> elements inside each <span class="code">&lt;listOrg&gt;</span> element. Each <span class="code">&lt;org&gt;</span> element contains one <span class="code">&lt;orgName&gt;</span> inside that holds the best-known name of a particular organization. You may first want to experiment with XPath on the Site Index file to locate the <span class="code">&lt;listOrg&gt;</span> elements and study the XML hierarchy of the lists. Let’s make the outer list be <strong>ordered</strong> (or numbered) list in HTML, using the HTML <span class="code">&lt;ol&gt;</span> element, and then make the inner list be an <strong>unordered</strong> (bulleted) list, using the HTML <span class="code">&lt;ul&gt;</span> element.</p>
-      <p>Your lists in HTML should come out looking like this:</p>
+      <p>Your lists in HTML should come out looking something like this, only yours will have a few more entries in each category, because your XML document contains some new material.</p>
 <div class="code">
    <ol>
       <li>Archives Holding Mitford's Papers<ul>
@@ -214,7 +214,7 @@
       &lt;/ol&gt;
 </pre>
    
-      <p>In our ordered and unordered lists, the only element content permitted inside is list items or <span class="code">&lt;li&gt;</span> elements. We’ve nested them so that each list item in the outside numbered list contains a category type (designating what kind of organization), followed by an embedded <span class="code">&lt;ul&gt;</span> that contains, in turn, a separated bulleted list series, listing the name of each organization in the list.</p>
+      <p>In HTML ordered and unordered lists, the only elements permitted inside are list items or <span class="code">&lt;li&gt;</span> elements. We’ve nested them so that each list item in the outside numbered list contains a category type (designating what kind of organization), followed by an embedded <span class="code">&lt;ul&gt;</span> that contains, in turn, a separated bulleted list series, listing the name of each organization in the list.</p>
       			
       		<h3>Before You Begin: Set up the XSLT Stylesheet to Read TEI</h3>	
       <p>The Digital Mitford's Site Index file is coded in the TEI namespace, which means that your XSLT stylesheet (much as in the last assignment) requires an instruction at the top to specify that when it tries to match elements, it needs to match them in the TEI namespace. (When you create an new XSLT document in &lt;oXygen/&gt; it won’t contain that instruction by default, so whenever you are working with TEI you need to add it (See the text in <span style="color:blue;">blue</span> below). To ensure that the output would be in the XHTML namespace, we
@@ -239,10 +239,10 @@
       <h3>Guide to Approaching the Problem</h3>
       <p>Our XSLT transformation (after all this housekeeping) has three template rules:</p>
       <ol>
-         <li>We have a template rule for the document node (<code>&lt;xsl:template
-            match="/"&gt;</code>), in which we create the basic HTML output: the
+         <li>We have a template rule for the <strong>document node</strong> (<code>&lt;xsl:template
+            match="/"&gt;</code>), in which we create the basic HTML file structure: the
             <code>&lt;html&gt;</code> element, <code>&lt;head&gt;</code> and its contents,
-            and <code>&lt;body&gt;</code>. Inside the <code>&lt;body&gt;</code> element that
+            and <code>&lt;body&gt;</code>—anything that appears just once in the HTML document (one to one relationship with the root node). Inside the <code>&lt;body&gt;</code> element that
             we’re creating, we use <code>&lt;xsl:apply-templates&gt;</code> and select the <code>&lt;listOrg&gt;</code> elements
             (using an XPath expression as the value of the <code>@select</code> attribute). And we create our wrapper <code>&lt;ol&gt;</code> tags to set up the ordered list of organization types.</li>
          <li>We have a separate template rule that matches the <code>&lt;listOrg&gt;</code> elements (holding the lists of organizations), so it will be invoked as a result of the preceding <code>&lt;xsl:apply-templates&gt;</code> instruction, and
@@ -258,9 +258,7 @@
          <li>We have a separate template rule that matches the <code>&lt;org&gt;</code> elements, which make up the items in the list of organizations, 
             and that just applies
             templates to the <code>&lt;orgName&gt;</code> element within each <code>&lt;org&gt;</code>.
-            This rule will fire once for each <code>&lt;org&gt;</code> element inside the <code>&lt;listOrg&gt;</code>, and it will be called
-            separately for the <code>&lt;org&gt;</code> elements within each <code>&lt;listOrg&gt;</code>, so that the orgs will be rendered properly
-            in their respective lists.</li>
+            This rule will fire once for each <code>&lt;org&gt;</code> element inside the <code>&lt;listOrg&gt;</code>, and it will be called separately for the <code>&lt;org&gt;</code> elements within each <code>&lt;listOrg&gt;</code>, so that the orgs will be rendered properly in their respective lists.</li>
       </ol>
       <p>We don’t need a template rule for the <code>&lt;head&gt;</code> elements themselves
          because the built-in (default) template rule in XSLT for an <em>element</em> that
@@ -280,12 +278,10 @@
             rules instead. There’s a Good Reason for this, which we’ll explain later, when we
             talk about situations where you <em>should</em> use
             <code>&lt;xsl:for-each&gt;</code>.</li>
+         <li>You may notice that two or three of your output bulleted list items show multiple related organization names squished together. This is because our editors occasionally provided more than one name used for an organization. Our standing rule is that the most definitive <code>orgName</code> be listed <em>first</em> in the list of names, so we recommend that you tidy up your list by selecting just the very first available orgName, that is, the first element child named <code>orgName</code> of <code>org</code> elements you are processing. Alternatively, you may try applying an XPath <code>string-join()</code> function to output the entries, but you will need to use <code>xsl:value-of</code> instead of <code>xsl:apply-templates</code> because we need to use <code>xsl:value-of</code> to calculate the results of functions (which removes us from the XML tree). Either approach is fine with us, and you would use the same <code>@select</code> attribute to indicate what you would like to output.</li>
          <li><em>Before submitting your homework, you must run the transformation at home</em> to
-            make sure the results are what you expect them to be. There’s a guide to running
-            XSLT transformations inside &lt;oXygen/&gt; on Obdurodon at <a
-               href="http://dh.obdurodon.org/oxygen-xslt-configuration.html"
-               title="How to run a transformation in oXygen"
-               >http://dh.obdurodon.org/oxygen-xslt-configuration.html</a>. If you don’t get
+            make sure the results are what you expect them to be. Remember, there’s a guide to running
+            XSLT transformations inside &lt;oXygen/&gt; in our <a href="explainXSLT.html">Intro to XSLT tutorial</a>. If you don’t get
             the results you expect and can’t figure out what you’re doing wrong, remember that you can post a query to our <a href="https://github.com/ebeshero/DHClass-Hub/issues">DHClass-Hub Issues board</a>. You can’t just ask for the answer,
             though; you need to describe what you tried, what you expected, what you got, and
             what you think the problem is. We often find, just as we’re preparing to post our
