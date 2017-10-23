@@ -85,8 +85,7 @@
             XSLT, unlike with many other programming languages, you don’t need to care about those
             questions!</p>
         <p>An example of possible desired output can be found here <a
-                href="1888-07-30_XSLTresults.html"
-                >http://newtfire.org/dh/1888-07-30_XSLTresults.html</a>, though we did not style the body paragraphs in this output file. . It is important to note
+                href="1888-07-30_XSLTresults.html">http://newtfire.org/dh/1888-07-30_XSLTresults.html</a>, though we did not style the body paragraphs in this output file, and we are sure you can style this more effectively! It is important to note
             that the majority of the styling choices on this file are controlled with a CSS file.
             You will make your own CSS and relate it to your XSLT; therefore, your stylistic choices
             might vary greatly from ours and your output may look completely different. What should
@@ -210,27 +209,16 @@
                     place the <code>&lt;xsl:apply-templates/&gt;</code> inside of the span. Then in
                     the CSS make reference to the <code>@class</code>, again as described in the
                     page we link to above.</p></li>
-            <li>This next part really exercises your XPath skills! Note that directly inside of the
-                    <code>&lt;root&gt;</code> element in the <code>&lt;toneElements&gt;</code>
-                element the <code>@category</code> attributes of the
-                    <code>&lt;workingConditions&gt;</code> elements are listed with an
-                    <code>@id</code> associated to the <code>@category</code> attributes of the
-                    <code>&lt;workingConditions&gt;</code> elements and an <code>@tone</code>
-                attribute declaring values of <q>good</q>, <q>bad</q>, or <q>neutral</q>. You can
-                write a <strong>matching rule</strong> that will <dfn>dereference</dfn> the
-                    <code>@category</code> attribute on, say, <code>&lt;workingConditions
-                    category="positive"&gt;...text node...&lt;/workingConditions&gt;</code>, look up
-                whether this is a good, bad, or neutral tone, and set the <code>@class</code> value
-                accordingly. You could then make all good working Conditions one color and all bad
-                working conditions a different color, letting XPath look up the tone reference for
-                you. <em>Hint: In your XSLT matching template rule set the <code>@category</code> of
-                    an inline <code>&lt;workingConditions&gt;</code> element <strong>equal
-                        to</strong> the XPath steps of the specific associated <code>@tone</code>
-                    attributes in the <code>&lt;toneElements&gt;</code> list. Then precede with the
-                        <code>&lt;span&gt;</code> and <code>@class</code> setup detailed above.</em>
-                A similar <dfn>dereference</dfn> can be made with the <code>@connotation</code>
-                attribute on the variety of voice tags (<code>&lt;femVoice&gt;</code>,
-                    <code>&lt;nellVoice&gt;</code>, <code>&lt;mascVoice&gt;</code>).</li>
+            <li><p>This next part will exercise your XPath skills a little, and introduce you to the use of <code>current()</code> in processing XSLT templates. Notice that the Nelson team set up a list of <code>&lt;toneElements&gt;</code> at the top of their document, as the first child of the <code>&lt;root&gt;</code> element. They did this to store a list of ready-reference values connected with their markup of voices and working conditions in their 19th-century newspaper articles. They imagined working with these to help with organizing and styling their markup, so they could associate three simple qualities: <q>good</q>, <q>bad</q>, and <q>neutral</q> with the more complex array of information about working conditions they coded in the newspaper texts. Notice that inside <code>toneElements</code> are two elements, <code>connotations</code> and <code>category</code>, and these hold <code>@id</code> and <code>@tone</code> attributes. We would like you to notice the <code>category</code> elements in particular: The <code>@id</code> attributes on these <code>category</code> <em>elements</em> are the same values used in an <em>attribute</em> conveniently named <code>@category</code> sitting on the <code>workingConditions</code> elements throughout the newspaper article. This markup makes it possible to <strong>look up</strong> the <code>@tone</code> associated with each category <code>@id</code>, and use it for styling the spans of text inside <code>workingConditions</code> with just three colors so readers can visually identify whether these are good, bad, or neutral by skimming the page. The Nelson team wants to keep that category information in the XML to investigate their research questions, but for outputting an HTML reading view, they wanted a simple strategy to reduce the number of colors or styles they would need to distinguish the spans of text in <code>workingConditions</code>. We are asking you to write the code that helps <strong>dereference</strong> those <code>@category</code> attributes on the <code>workingConditions</code> elements, so that as you process the <code>workingConditions</code> element, you instruct the computer to go look for the matching <code>category</code> element, locating it by its <code>@id</code> attribute, and then output the value of its <code>@tone</code> attribute for use in styling these.</p> <p>You should be able to write this with a single template rule and a single AVT (attribute value template), but there are two challenges here:</p>
+                <ul><li>The XPath requires you to construct a complex predicate, so we encourage you to tinker with it in the XPath window to be sure you understand how to find and deliver what you're looking for.</li>
+                    <li>The XSLT requires you to match up <em>each</em> single <code>@category</code> attribute with its corresponding <code>@id</code> up in the <code>toneElements</code> list, but because these <code>@category</code> attributes vary each time a new <code>workingConditions</code> element is processed, we need to use a special expression called <code>current()</code> to instruct XSLT to look up and evaluate <em>only the current</em> value of <code>@category</code>, so that you can return the appropriate <code>@tone</code> attribute. We use <code>current()</code> in XSLT when we need to specify the current context at the XSLT level. It is a little more specific than the dot (<code>.</code>) which just means the self node. Each time the XSLT fires it is processing the self node, but current() means you are checking the <em>current</em> value at the self node. We would use current() in an AVT context to get something you need like so: 
+                    <pre>&lt;span class="{//XPath-to-what-you-need-to-match[@id = <code>current()</code>/@category]/what-you-need-to-return}"&gt;</pre>
+                        Notice how we need to change the context in this AVT so we start our XPath from the top at the document node? We need to do that to walk the tree and find what it is that matches our <code>current()</code> context. Give it a try, and you will then be able to style the good, bad, and neutral kinds of workingConditions spans in a quickly legible way. Note: If you're up for it, a similar <dfn>dereference</dfn> can be made with the <code>@connotation</code> attribute on the variety of voice tags (<code>&lt;femVoice&gt;</code>,
+                        <code>&lt;nellVoice&gt;</code>, <code>&lt;mascVoice&gt;</code>): that's optional.        
+                    </li>
+                </ul>      
+               
+               </li>
             <li><p>Setting the <code>@class</code> attributes in the output HTML makes it possible
                     to style the various <code>&lt;span&gt;</code> elements differently according to
                     the value of those attributes, but you need to create a CSS stylesheet to do
@@ -313,10 +301,8 @@
         <h3>Important</h3>
         <ul>
             <li><em>Before submitting your homework, you must run the transformation at home</em> to
-                make sure the results are what you expect them to be. There’s a guide to running
-                XSLT transformations inside &lt;oXygen/&gt; on Obdurodon at <a
-                    href="http://dh.obdurodon.org/oxygen-xslt-configuration.html"
-                    title="How to run a transformation in oXygen">http://dh.obdurodon.org/oxygen-xslt-configuration.html</a>. If you don’t get
+                make sure the results are what you expect them to be. Remember, there’s a guide to running
+                XSLT transformations inside &lt;oXygen/&gt; in our <a href="explainXSLT.html">Intro to XSLT tutorial</a>.If you don’t get
                 the results you expect and can’t figure out what you’re doing wrong, remember that
                 you can post a query to our <a href="https://github.com/ebeshero/DHClass-Hub/issues">DHClass-Hub Issues board</a>. You can’t just ask for the answer, though; you
                 need to describe what you tried, what you expected, what you got, and what you think
@@ -327,12 +313,8 @@
                 responds. Answering someone else’s inquiry and troubleshooting someone else’s
                 problem often helps us clarify matters for ourselves!</li>
 
-            <li>When you complete this assignment, you need to submit your XSLT file and CSS file to
-                Courseweb, following our usual homework file-naming conventions. We will run your
-                XSLT transformation to see what output it generates, so you do not need to submit
-                your output file. However, it is important that you include your CSS so we can
-                locally associate it to your XSLT (keeping them in the same folder space) and see
-                your final output. <strong>You should link the CSS in the XSLT for us!</strong></li>
+            <li>When you complete this assignment, submit your XSLT file, your output HTML, and your CSS file to
+                Courseweb, following our usual homework file-naming conventions. <strong>You should link the CSS in the XSLT for us!</strong></li>
         </ul>
     </body>
 </html>

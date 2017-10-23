@@ -48,12 +48,11 @@
                 will be sorted alphabetically, instead of in numerical order.</li>
           
         </ul>
-        <p>Our HTML output for this assignment is at <a href="dickinson-output.html"
-            >http://newtfire.org/dh/dickinson-6.html</a>.</p>
+        <p>Our HTML output for this assignment is at <a href="dickinson-output.html">http://newtfire.org/dh/dickinson-6.html</a>.</p>
         <h3>The tools we need</h3>
         <p>To create links between the first lines in the table of contents and the poems in the
             full text section of the page below we’re going to use <dfn>attribute value
-                templates</dfn> (AVT). If you haven’t done so already, you should read about AVTs at
+                templates</dfn> (AVT). We have been working with these in earlier XSLT assignments, but you may want to review Obdurodon’s page on how they are written:
             <a href="http://dh.obdurodon.org/avt.xhtml">http://dh.obdurodon.org/avt.xhtml</a>.</p>
         <p>To sort the table of contents we’re going to use <code>&lt;xsl:sort&gt;</code>.</p>
         <p>When we sort the first lines, they won’t sort correctly for a quirky reason. We’re going
@@ -77,7 +76,7 @@
             the main body:</p>
         <pre>&lt;h2 id="p1606"&gt;Poem 6 &lt;/h2&gt;</pre>
         <h3>Adding links to your output</h3>
-        <p>You should first read Obdurodon’s page on <a href="http://dh.obdurodon.org/avt.xhtml">Attribute value templates
+        <p>You should first review Obdurodon’s page on <a href="http://dh.obdurodon.org/avt.xhtml">Attribute value templates
             (AVT)</a>, which describes a strategy you can use to create a unique <code>@id</code>
             attribute for each poem. For this task we gave our poems <code>@id</code> values
             that were a concatenation of the letter <q>p</q> and the distinct identifying number given in the <code>idno</code> element in the TEI header of each poem file: <q>1606</q> for Poem 6. We attached those <code>@id</code>
@@ -151,13 +150,13 @@
             whether you can apply it to fixing this problem.</p>
         <p>Another Optional Challenge, for either of the table of contents or the body output, or both: You may have observed in your HTML output that some of our titles are inconsistently formatted. Some poem numbers have a period after them, and some only white space before the parenthetical information that summarizes each poem’s publication history. You might see if you can find a way to:
             a) output only the poem and its number in the part of the document where you reproduce the poems, and/or
-            b) remove the rogue period from the output, using the <code>replace()</code> function, which takes three arguments (for "finding a needle in a haystack" and then changing or removing it): an XPath leading to a string you want to alter (your "haystack"), a regular expression for the "needle" you want to find and change, and whatever you wish to convert it to (including nothing, to delete it). Read about <code>replace()</code> in the Strings section of <a href="http://dh.obdurodon.org/functions.xhtml">The XPath functions we use the most</a> and learn about its syntax by looking it up in the index of the Michael Kay book.</p>
+            b) remove the rogue period from the output, using the <code>replace()</code> function, which takes three arguments (for <q>finding a needle in a haystack</q> and then changing or removing it): an XPath leading to a string you want to alter (your <q>haystack</q>), a regular expression for the <q>needle</q> you want to find and change, and whatever you wish to convert it to (including nothing, to delete it). Read about <code>replace()</code> in the Strings section of <a href="http://dh.obdurodon.org/functions.xhtml">The XPath functions we use the most</a> and learn about its syntax by looking it up in the index of the Michael Kay book.</p>
         <h3>Finishing touches</h3>
         <p>Some lists of first lines of poetry put quotation marks around the lines. We haven’t done
             that in our solution, but if you’d like to add it, you should use the HTML
             <code>&lt;q&gt;</code> (<q>quoted text</q>) element, instead of outputting the raw
             quotation marks as plain text.</p>
-        <p>Oh, and did we mention CSS? Can you attach a CSS stylesheet to your output to make it
+        <p>Oh, and did we mention CSS? Can you associate a CSS stylesheet to your output (write the CSS file link into your XSLT) to make it
             look more interesting than what you get by default in a web browser? See if you can find an interesting way to style the <code>&lt;span&gt;</code> elements surrounding the variants.</p>
         
     </body>
