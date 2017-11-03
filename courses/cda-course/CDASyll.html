@@ -3,546 +3,1410 @@
   SYSTEM "about:legacy-compat">
 <html xmlns="http://www.w3.org/1999/xhtml">
    <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <title>Slave City Girls</title>
-   </head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <title>Syllabus: Coding and Digital Archives</title>
+      <meta name="Description" content="Supported by the University of Pittsburgh at Greensburg" />
+      <meta name="keywords" content="Digital Humanities, Syllabus, XML, TEI, XSLT, XQuery, Schematron, Relax NG, SVG, digital scholarship, digital edition, electronic edition, electronic text, humanities computing, electronic editing, Beshero-Bondar" />
+      <link rel="stylesheet" type="text/css" href="syllsched.css" /><script type="text/javascript" src="jumpingDateLinks.js">/**/</script></head>
    <body>
-      <h1>Chigago Times Articles</h1>
-      <h2>City Slave Girls</h2>
-      <h3>Nell Nelson, 1888-07-30</h3>
+      <!--#include virtual="top-indexCDA17.html" -->
+      <h1><span class="banner">Greensburg: Coding and Digital Archives | Pittsburgh: Computational Methods in the
+            Humanities</span></h1>
+      <h2><span class="banner"></span></h2>
+      <div id="main">
+         <div id="courseInfo">
+            
+            <p>
+               <strong>Autumn 2017:</strong> This course material is shared by two University of Pittsburgh campuses this semester:
+            </p> 
+            <ul>
+               
+               <li>Pittsburgh class meets M W F 10 - 11 AM, G-27 Cathedral of Learning,</li>
+               
+               <li>Greensburg class meets M W F 10:30 - 11:20 AM, 137 McKenna Hall.</li>
+            </ul>
+            
+            
+            <p><a id="dateRef">Jump Down to the Schedule</a></p>
+            
+            <h2>All the Tools You Need As We Begin:</h2>
+            
+            
+            <p>Download and install the following software on your own personal computer(s) on or
+               before the first day of class. These software tools are available in our campus computing
+               labs, too.
+            </p>
+            
+            <ol>
+               
+               <li>
+                  <strong>All students:</strong>
+                  <a href="http://www.oxygenxml.com/">&lt;oXygen/&gt;</a>. The University of
+                  Pittsburgh has purchased a site license for this software, which is installed in
+                  the Pitt computer labs on multiple campuses, and it’s in use in courses here at
+                  Greensburg and at Oakland. The license also permits students enrolled in the
+                  course to install the software on their home computers (for course-related use
+                  only). When installing this on your own computers, <strong>you will need the
+                     license key</strong>, which we have posted on our course Announcements section of
+                  <a href="https://courseweb.pitt.edu">Courseweb</a>.
+               </li>
+               
+               <li>All students require a good means of secure file transfer (SFTP) for homework
+                  assignments and projects (also available in the campus computer labs). There are
+                  several good options available. We recommend you download and install on your own
+                  computers one (or more) of the following, depending on your platform: (Feel free
+                  to experiment with these and others!) 
+                  <ul>
+                     
+                     <li>
+                        <strong>Windows users:</strong> one of the following FTP clients—the functionality is
+                        similar: 
+                        <ul>
+                           
+                           
+                           <li><a href="https://filezilla-project.org/download.php?show_all=1">FileZilla</a>
+                              (This is our favorite client because it behaves the same way across platforms.)
+                              
+                           </li>
+                           
+                           <li><a href="http://winscp.net/eng/download.php">WinSCP</a> (This is one we used for a long time, since the 1990s, but we now use SSH and Filezilla
+                              more frequently.)
+                           </li>
+                           
+                           
+                           <li>
+                              <a href="http://www.wm.edu/offices/it/services/software/licensedsoftware/webeditingsftp/sshsecureshell/index.php">SSH Secure Shell Client</a>
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </li>
+                     
+                     <li>
+                        <strong>Mac users:</strong>
+                        
+                        <ul>
+                           
+                           <li><a href="https://filezilla-project.org/download.php?show_all=1">FileZilla</a>
+                              (This is our favorite client because it behaves the same way across platforms.)
+                              
+                           </li>
+                           
+                           <li>or <a href="http://fetchsoftworks.com/fetch/">Fetch</a> (students
+                              may obtain free licenses at <a href="http://fetchsoftworks.com/fetch/free">http://fetchsoftworks.com/fetch/free</a>)
+                              
+                           </li>
+                           
+                        </ul>
+                        
+                     </li>
+                     
+                     <li>
+                        <strong>Linux users:</strong> You probably don’t need to install anything,
+                        but look at how your system handles secure file transfer (SFTP).
+                         <span class="smaller">(FileZilla or other clients designed for Linux
+                           environments.)</span>
+                        
+                     </li>
+                     
+                  </ul>
+                  
+               </li>
+               
+               
+               <li><strong>Read the <a href="CDA.html">Course Description</a></strong> and this Syllabus page to see how this course works on a day-to-day basis.
+               </li>
+               
+               <li>This course fulfills general education requirements in Q2, SS, and HM, and it fulfills
+                  a core requirement for <a href="http://greensburg.pitt.edu/academics/info/digital-studies">the Digital Studies Certificate at Pitt-Greensburg</a>. Think about where this course might fit in your academic career, and how you might
+                  apply the skills you learn here.
+               </li>
+               
+               <li>No coding experience? Don’t worry! You are in very good company. We don’t expect any
+                  of you to have written a line of computer code before now. Past students in this course
+                  who never saw anything like markup or XML code have designed projects (<a href="http://newtfire.org/dh/studentProjects.html">like these</a>) and even spoken about them at an undergraduate conference! You’ll help continue
+                  some of these projects we’ve started, and you’ll learn to build and create digital
+                  tools for yourself with skills we hope you will keep developing.
+               </li> 
+               
+               
+               
+            </ol>
+            
+            The Webs Where We Work:
+            
+            <ul>
+               
+               <li>
+                  <a href="http://newtfire.org/dh/CDA.html">Course Home Website:
+                     http://newtfire.org/dh/CDA.html</a> Home of our syllabus and
+                  schedule.
+               </li>
+               
+               
+               <li><a href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub:
+                     https://github.com/ebeshero/DHClass-Hub</a> Class GitHub Repository and
+                  Issues Board
+               </li>
+               
+               
+               
+               <li>
+                  <a href="https://courseweb.pitt.edu">CourseWeb:
+                     https://courseweb.pitt.edu</a> To submit homework assignments and exams
+                  and read private course announcements
+               </li>
+               
+               <li>
+                  <a href="explainFileNames.html">File Conventions for CourseWeb Assignments</a>
+                  
+                  
+               </li>
+               
+               
+               <li>Server Access Instructions for Web Project Development on newtFire: [To Be
+                  Announced]
+               </li>
+               
+               
+            </ul>
+            
+            
+            <a href="index.html">Explanatory Guides and Exercises: Complete List</a>
+            
+         </div>
+         <div id="schedule">
+            <table>
+               <tr>
+                  <th id="Week1"><span class="h4"><em>Week 1</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-08-28">
+                  <td>
+                     <h4>M 08-28</h4>
+                  </td>
+                  <td> 
+                     <p>Welcome! Intro to the course, and Intro to XML and working in
+                        &lt;oXygen/&gt;: Write your first XML. <strong>Mindful File Management</strong>
+                        (<a href="explainFileNames.html">how
+                           to name</a>, store, share, and submit files in this course). Setting up
+                        accounts for web server and for GitHub. <a href="http://www.simplyrecipes.com/recipes/gazpacho">Gazpacho
+                           Soup</a></p>
+                  </td>
+                  <td>
+                     <ul>
+                        
+                        <li>Install &lt;oXygen/&gt; software on your own computers (if you have not done so already):
+                           <a href="https://courseweb.pitt.edu">instructions and license key
+                              posted on Courseweb</a>.
+                        </li>
+                        
+                        <li>Read our <cite class="sub"><a href="explainXML.html">Introduction
+                                 to XML</a></cite>, and read <cite class="sub"><a href="explainFileNames.html">File-Naming Conventions for Courseweb Homework
+                                 Submissions</a></cite>.
+                        </li>
+                        
+                        <li>Complete <strong><a href="XMLExercise1.html">XML Exercise 1</a></strong> 
+                        </li>
+                        
+                        <li><strong>Returning (Greensburg) Students Only:</strong>
+                           
+                           <ul>
+                              
+                              <li>Work on project code or your choice of an interesting XML coding
+                                 challenge.
+                              </li>
+                              
+                              <li>Meet with instructors to plan peer mentoring roles.</li>
+                              
+                           </ul>
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-08-30">
+                  <td>
+                     <h4>W 08-30</h4>
+                  </td>
+                  <td> 
+                     <p>Getting started with GitHub and our <a href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</a>. Discussion of the XML recipe homework: XML Comments, Validity, and
+                        Well-formedness, and how to work with &lt;oXygen/&gt;. Web Accounts: collect info.
+                     </p>
+                  </td>
+                  <td> 
+                     <ul> 
+                        <li><strong><a href="GitExercise1.html">Git Exercise 1</a></strong>: Read and consult our <a href="explainGitShell.html">Guide to Git Shell</a> as you complete this exercise.
+                        </li>
+                        
+                        <li><strong><a href="XMLExercise2.html">XML Exercise 2</a></strong></li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-09-01">
+                  <td>
+                     <h4>F 09-01</h4>
+                  </td>
+                  <td> 
+                     <p>Discussion of homework, and XML: Validity and Well-formedness. XML projects
+                        in digital humanities. Introduce the <a href="http://digitalmitford.org">Digital Mitford Project</a> and student projects from <a href="http://newtfire.org/dh/studentProjects.html">Greensburg</a> and <a href="http://dh.obdurodon.org/course-projects.xhtml">Pittsburgh</a>.
+                     </p>
+                     
+                     <p>Working with our <a href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</a>: Opening and closing Issues, writing markdown and joining in discussions (via Issues),
+                        accessing our class examples of code, pulling and pushing files in Troubleshooting
+                        directory.
+                     </p>
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        <li><strong><a href="GitExercise2.html">Git Exercise 2</a></strong></li>
+                        
+                        <li><strong>XML exercise 3:</strong> Review our feedback on your coding
+                           exercises so far and submit revisions if we asked you to. Mark up a text of
+                           your choice (any genre; manageable but reasonable size; foreign languages
+                           welcome). Work on applying attributes with your elements, and doing so in a
+                           careful and systematic way. 
+                        </li>
+                        
+                        <li><strong><a href="https://github.com/ebeshero/DHClass-Hub/issues/325">Reading and Discussion Post on GitHub</a></strong>: Locate the class discussion exercise on our Issues board, which will ask you to
+                           read and discuss an article by Gabrielle Kirilloff, <a href="http://gk.obdurodon.org/seminar/seminarPaper.xhtml">“&lt;Traversing_the_Tree/&gt;”</a>, the short article, <a href="http://www.idsnews.com/article/2015/04/frankenstein-novel-analyzed">“Frankenstein novel analyzed”</a> and scroll through <a href="https://www.balisage.net/Proceedings/vol13/html/Piez01/BalisageVol13-Piez01.html">Wendell Piez’s conference talk and images for the Balisage Markup
+                              Conference 2014</a>. For full credit, your posts should make specific reference to passages in
+                           Kirilloff’s essay, and reflect on those passages. Please raise questions and respond
+                           to each other!
+                        </li>
+                     </ul> 
+                     
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week2"><span class="h4"><em>Week 2</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-09-04">
+                  <td>
+                     <h4>M 09-04</h4>
+                  </td>
+                  <td>
+                     <p>
+                        <strong>Labor Day Holiday: No classes.</strong>
+                        
+                     </p>
+                  </td>
+                  <td></td>
+               </tr>
+               <tr id="d2017-09-06">
+                  <td>
+                     <h4>W 09-06</h4>
+                  </td>
+                  <td>  
+                     <p>Overlapping hierarchies. Document Analysis and Coding: Group Exercise with <a href="https://github.com/ebeshero/DHClass-Hub/tree/master/Class-Examples/XML/OHCO_ozymandias">Ozymandias</a></p>
+                     
+                     <p>The concept of “UX.” or User Experience, and discussion of projects.</p>
+                  </td>
+                  <td>
+                     <p><strong><a href="https://github.com/ebeshero/DHClass-Hub/issues/331">UX Discussion on DHClass-Hub</a></strong>  Choose one of the following digital archives to explore, and write a post on the
+                        DHClass-Hub addressing 
+                        1) something interesting the site is inviting us to explore about centuries-old texts,
+                        and 2) the
+                        effectiveness of the user experience (“UX”).
+                     </p>
+                     
+                     <ul>
+                        
+                        <li><a href="http://shelleygodwinarchive.org/contents/frankenstein">Shelley-Godwin Archive: Frankenstein Notebooks</a></li>
+                        
+                        <li>
+                           <a href="http://mapoflondon.uvic.ca/index.htm">Map of Early Modern
+                              London</a></li>
+                        
+                        <li><a href="http://dickinson16.newtfire.org/">Emily Dickinson Project</a>: prepared by Pitt-Greensburg students last in 2015-2016
+                        </li>
+                        
+                        <li><a href="http://www.perseus.tufts.edu/hopper/text?doc=urn:cts:greekLit:tlg0013.tlg007.perseus-eng1">The Homeric Hymn 7 to Dionysus within the Perseus Project</a>, and
+                           explore the features here.
+                        </li>
+                        
+                     </ul>
+                     
+                     <p><a href="explainXML.html">Review XML syntax</a> for test. Read <cite class="sub"><a href="explainRNG.html">Intro to Relax NG</a></cite>.
+                     </p>
+                  </td>
+               </tr>
+               <tr id="d2017-09-08">
+                  <td>
+                     <h4>F 09-08 </h4> <span class="smaller"> <span class="smaller">drop-add period ends</span></span></td>
+                  <td> 
+                     <p><strong>Short Test 1 (10-15 minutes): XML markup.</strong></p>
+                     
+                     <p>Schema Languages: Writing the Rules. Writing Relax NG</p>
+                  </td>
+                  <td> 
+                     <p><strong>Relax NG exercise 1:</strong> Write a Relax NG schema for one of the XML documents you created for an earlier assignment
+                        (XML exercise 2 or 3), and upload it and your XML file to Courseweb. Be sure to consult
+                        <cite class="sub"><a href="explainRNG.html">Intro to Relax NG</a></cite> as you work.
+                     </p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week3"><span class="h4"><em>Week 3</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-09-11">
+                  <td>
+                     <h4>M 09-11</h4>
+                  </td>
+                  <td> 
+                     <p>Relax NG: mixed content, data types. Course projects: introduction.</p>
+                     
+                     <p>Course projects: discussion and tour: digital archive projects by Pitt students in
+                        the past year:
+                     </p>
+                     
+                     <ul>
+                        
+                        <li><a href="http://ghost.obdurodon.org">Victorian Ghost Stories</a></li>
+                        
+                        <li><a href="http://seuss.obdurodon.org/index.xhtml">The Nonsensical Seuss</a></li>
+                        
+                        <li><a href="http://graveyard.newtfire.org">The Graveyard Project</a></li>
+                        
+                        <li><a href="http://hamilton.newtfire.org">The Hamilton Project</a></li>
+                        
+                        <li><a href="http://eldritch.newtfire.org">The Eldritch Project</a></li>
+                        
+                        <li><a href="http://lope.newtfire.org">The Lope de Vega Project</a></li>
+                        
+                        <li><a href="http://decameron.newtfire.org">The Decameron Project</a></li>
+                        
+                     </ul>
+                     
+                     
+                     
+                  </td>
+                  <td> 
+                     <ul>
+                        <li><strong>Relax NG exercise 2: </strong>This time, choose a small text
+                           (maybe one of the letters from the first week's assignment that you did NOT mark up
+                           before, or anything you like). Perform document analysis, write a schema,
+                           and mark up the text according to the schema. Be sure to consult <cite class="sub"><a href="explainRNG.html">Intro to Relax NG</a></cite> as you work.
+                        </li>
+                        
+                        <li><strong><a href="https://github.com/ebeshero/DHClass-Hub/issues/334">Discussion Post on GitHub Issues: Where Might We Go from Here?</a></strong> Comment on one of the listed
+                           project sites under development. Describe (in your own words) at least one
+                           significant topic it seems to be exploring, and reflect on what research the developers
+                           might
+                           want to investigate next, the UX of the project site, and/or what ideas it inspires
+                           for new projects. Those of us (instructors and returning students) who have been involved
+                           in these projects should help introduce them to our class and point out things that
+                           need work.
+                        </li>
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-09-13">
+                  <td>
+                     <h4>W 09-13</h4>
+                  </td>
+                  <td> 
+                     <p>More projects designed by students: <a href="http://nelson.newtfire.org">The Restoration of Nell Nelson</a>, <a href="http://seuss.obdurodon.org/">The Nonsensical Seuss</a>, and <a href="http://translate.obdurodon.org/">Divergences in Machine
+                           Translation: Examining Harry Potter texts processed by Google Translate
+                           across multiple language families</a>
+                        
+                     </p>
+                     
+                     <p>Descriptive markup and non-textual features: Manuscripts and Physical
+                        Objects. <a href="http://gwpapers.virginia.edu/multimedia/account-book-2-1767-1775/">The Papers of George Washington project: Visualizations page</a>.
+                     </p>
+                     
+                     <p>Introducing the Text Encoding Initiative (TEI).</p>
+                  </td>
+                  <td>
+                     <ul>
+                        <li><strong>Relax NG exercise 3:</strong> Choose a small text of a different
+                           type or genre than last time, perform document analysis, write a schema, and
+                           mark up the text according to the schema. As before, be sure to consult <cite class="sub"><a href="explainRNG.html">Intro to Relax NG</a></cite> as you work.
+                        </li>
+                        
+                        <li><strong><a href="https://github.com/ebeshero/DHClass-Hub/issues/337">GitHub Post and Discussion: Project Proposal Ideas.</a>
+                              </strong></li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-09-15">
+                  <td>
+                     <h4>F 09-15</h4>
+                  </td>
+                  <td>
+                     <p><a href="http://www.tei-c.org/index.xml">The TEI</a>: Why and how we work with it. Project Discussion.
+                     </p>
+                  </td>
+                  <td>
+                     <p><a href="TEIExercise1.html"><strong>Document Analysis and TEI Exercise, Part 1</strong></a></p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week4"><span class="h4"><em>Week 4</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-09-18">
+                  <td>
+                     <h4>M 09-18</h4>
+                  </td>
+                  <td> 
+                     
+                     <p>Discussion and Work with Cheese-Straw TEI Exercise. What We Include in the TEI Header.</p>
+                  </td>
+                  <td>
+                     <ul>
+                        <li><a href="TEIExercise2.html"><strong>work on Document Analysis and TEI Exercise, Part 2 (optionally due W or F this week)</strong></a></li>
+                        
+                        <li>Read our <cite class="sub"><a href="explainHTML.html">Introduction to HTML</a></cite>.
+                        </li>
+                        
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-09-20">
+                  <td>
+                     <h4>W 09-20</h4>
+                  </td>
+                  <td>
+                     <p><strong>Form project teams</strong></p>
+                     
+                     <p>TEI, continued discussion: how to work with the TEI Guidelines. The concept of <q>tag abuse</q>.
+                     </p>
+                     
+                     <p>XML and HTML: shared contexts as controlled vocabularies. The w3c and web standards.</p>
+                     
+                     <p>Accessing a web server with a secure shell: joining newtFire, SSH keypairs. </p>
+                     
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        
+                        <li><a href="TEIExercise2.html"><strong>Finish Document Analysis and TEI Exercise, Part 2 if you did not submit it already</strong></a></li>
+                        
+                        <li>Follow our instructions [posted on Courseweb] to set up log in with SSH keys on newtFire.
+                           Bring your computer or a copy of your new keys to class on Friday.
+                        </li>
+                        
+                        <li>Install FileZilla (or other SFTP client) by Friday if you have not done so already.</li>
+                        
+                        <li>Re-read our <cite class="sub"><a href="explainHTML.html">Introduction to HTML</a></cite> in preparation for Friday.
+                        </li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-09-22">
+                  <td>
+                     <h4>F 09-22</h4>
+                  </td>
+                  <td>
+                     
+                     <p>XML and the Web: HTML and CSS.</p>
+                     
+                     <p>Hands-on: SFTP into the Apache Server for newtFire. File directories and their association
+                        with web URLs.
+                     </p>
+                     
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        <li><strong>Project Development</strong>: You have been invited to collaborate on new projects in GitHub. 
+                           
+                           <ul>
+                              <li>Go to GitHub and clone the new repository on your computer, and begin exploring the
+                                 files locally. 
+                              </li>
+                              
+                              <li><strong>Post in the Issues board of your new Project Github</strong> your available meeting times to help us determine a regular meeting time for your
+                                 group.
+                              </li>
+                           </ul>
+                        </li>
+                        
+                        <li>Consult our <cite class="sub"><a href="explainHTML.html">Introduction to and HTML</a></cite>, and our <cite class="sub"><a href="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</a></cite> as you work on the homework exercise.
+                        </li>
+                        
+                        <li><strong><a href="HTMLExercise1.html">HTML/CSS Exercise 1</a>:</strong> NOTE: <strong>Do not submit this assignment on Courseweb.</strong> Instead, submit this homework by using SFTP to post to our newtFire web server.
+                        </li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week5"><span class="h4"><em>Week 5</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-09-25">
+                  <td>
+                     <h4>M 09-25</h4>
+                  </td>
+                  <td>
+                     <p><strong>Short Test 2: Relax NG</strong></p>
+                     
+                     <ul>
+                        
+                        <li>Web browsers and display variations</li>
+                        
+                        <li>The CSS Box Model and controlling layout with Flexbox: see <a href="https://internetingishard.com/html-and-css/flexbox/">tutorial</a>, with newtFire examples:
+                           
+                           <ul>
+                              
+                              <li>HTML: Open URL in oXygen: <strong>http://newtfire.org</strong></li>
+                              
+                              <li>CSS: Open URL in oXygen: <strong>http://newtfire.org/nfIndex.css</strong></li>
+                              
+                           </ul>
+                           
+                        </li>
+                        
+                        <li>Server Side Includes for boilerplate content: Example: 
+                           
+                           <ul>
+                              
+                              <li>Include file for newtFire assignment pages: <a href="https://github.com/ebeshero/newtFire-webDev/blob/master/courses/dh-courses-Common/top.html">a fragment of HTML</a></li>
+                              
+                              <li>Indicating where an include goes on a page: <a href="https://github.com/ebeshero/newtFire-webDev/blob/master/courses/dh-courses-Common/explainCSS.html">Example</a></li>
+                              
+                              <li>Full page <a href="http://dh.newtfire.org/explainCSS.html">on the web</a>: and <a href="view-source:http://dh.newtfire.org/explainCSS.html">page source</a></li>  
+                              
+                           </ul>
+                        </li>
+                        
+                     </ul>
+                     
+                  </td>
+                  <td> 
+                     
+                     <ul>
+                        <li>Consult <cite class="sub"><a href="http://learnlayout.com/">Learn CSS
+                                 Layout</a></cite>, <a href="https://internetingishard.com/html-and-css/flexbox/">Flexbox tutorial</a>, and <a href="http://www.w3schools.com/css/">w3 Schools CSS Reference</a>
+                           as you code. (Also, check out <a href="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF">Paletton</a> (or hunt for other color scheme generators on the web) to help think about choosing
+                           a balanced color scheme for your website.
+                           Experiment with writing CSS to control font, layout, color, backgrounds. 
+                        </li>
+                        
+                        <li><strong><a href="HTMLExercise2.html">HTML/CSS Exercise 2</a></strong> (As with HTML Exercise 1, submit this
+                           homework by using FTP to post to our newtFire web server.)
+                        </li>
+                        
+                        <li>Read our <cite class="sub"><a href="explainRegex.html">Intro to Regular Expressions</a></cite> and start reading
+                           <a href="http://www.regular-expressions.info/quickstart.html">the
+                              Regular Expressions Quick Start</a> in prep for next class.
+                        </li>
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-09-27">
+                  <td>
+                     <h4>W 09-27</h4>
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        <li>FTP Customization and Project Development: 
+                           <ul>
+                              
+                              <li>How to customize SFTP (Filezilla)</li>
+                              
+                              <li>Decide on project website directory names and URLs.</li>
+                              
+                              <li>Project development expectations: project GitHub development, use of Issues board,
+                                 and website posting.
+                              </li>
+                           </ul>
+                        </li>
+                        
+                        <li>Up-Conversion with Regular Expressions:
+                           
+                           <ul>
+                              
+                              <li>Using Find &amp; Replace in &lt;oXygen/&gt;.</li>
+                              
+                              <li>How to start: inside-out, or outside-in?</li>
+                              
+                              <li>The "close-open" strategy: The beginning of a thing comes at the <strong>end</strong> of the previous thing!
+                              </li>
+                              
+                           </ul>
+                        </li>
+                     </ul>
+                     
+                     
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        
+                        <li>Project team leaders: if you have not done so already, launch your project GitHub
+                           Repo, and find and add your team members and instructors. 
+                           <ul>
+                              <li>Write a first post on your Issues board to get started and set regular project team
+                                 meetings.
+                              </li> 
+                              <li>After each project meeting (at least) each team should post on its Issues board about
+                                 progress and tasks you're working on.
+                              </li> 
+                              <li>If your website directory is ready, post a <q>splash page</q> to get started.
+                              </li>
+                           </ul>
+                        </li>
+                        
+                        <li>Consult our <cite class="sub"><a href="explainRegex.html">Intro to Regular Expressions</a></cite> and <a href="http://www.regular-expressions.info/quickstart.html">the Regular
+                              Expressions Quick Start</a> as you work on the exercise:
+                        </li>
+                        
+                        <li><a href="RegexExerciseSonnets.html"><strong>Regex Exercise 1:</strong> Shakespeare’s Sonnets</a></li>
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-09-29">
+                  <td>
+                     <h4>F 09-29</h4>
+                  </td>
+                  <td>
+                     <p>Regular Expressions: thinking algorithmically. Greedy Matching.</p>
+                  </td>
+                  <td> 
+                     
+                     <ul>
+                        
+                        <li><a href="RegexExerciseBlithedale.html"><strong>Regex Exercise 2:</strong> Blithedale</a></li>
+                          
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week6"><span class="h4"><em>Week 6</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-10-02">
+                  <td>
+                     <h4>M 10-02</h4>
+                  </td>
+                  <td>
+                     <p>Regular Expressions: Selecting for what’s not there, complicated patterns</p>
+                  </td>
+                  <td>
+                     <ul>
+                        
+                        <li><a href="RegexExercisePlay.html"><strong>Regex Exercise 3:</strong> <strong>Pygmalion</strong></a></li>
+                        
+                        <li>Preview our <cite class="sub"><a href="explainXPath.html">Introduction to XPath</a></cite> in preparation for the next unit.
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-10-04">
+                  <td>
+                     <h4>W 10-04</h4>
+                  </td>
+                  <td>
+                     <p>How XML code structure matters for web transforms and delivery: Why we need
+                        to navigate XML with XPath. Introducing XPath: Paths, Axes.
+                     </p>
+                     
+                     <p>Introducing XPath with <a href="bad-hamlet.xml">Hamlet</a></p>
+                     
+                     <p>Review for Regex Test</p>
+                  </td>
+                  <td>
+                     <ul>
+                        
+                        <li>First, carefully read our <a href="explainXPath.html">Introduction
+                              to XPath: <cite class="sub">Follow the XPath!</cite></a> As you
+                           read, try experimenting with the XPath expressions on our page, by
+                           downloading the explainXPath.html file, opening it in oXygen, and
+                           experimenting in the XPath window with some of our expressions. Then,
+                           move on to Xpath Exercise 1.
+                        </li>
+                        
+                        <li><a href="XPathExercise1.html"><strong>XPath Exercise
+                                 1</strong></a>
+                           
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-10-06">
+                  <td>
+                     <h4>F 10-06</h4>
+                  </td>
+                  <td>
+                     <p><strong>Short Regular Expressions Test</strong></p>
+                     
+                     <p>Using XPath to climb trees—up and down and side to side. Predicate
+                        expressions: <strong>[ ]</strong>. <strong>(Grouping)</strong> and <strong>[Position()]</strong>. XPath syntax: some tricks.
+                     </p>
+                     
+                  </td>
+                  <td>
+                     <ul>
+                        
+                        <li><a href="XPathExercise2.html"><strong>XPath Exercise
+                                 2</strong></a></li>
+                        
+                        <li>Begin reading <cite class="sub"><a href="http://dh.obdurodon.org/functions.xhtml">The XPath
+                                 Functions We Use Most</a></cite>.
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week7"><span class="h4"><em>Week 7</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-10-09">
+                  <td>
+                     <h4>M 10-09</h4>
+                  </td>
+                  <td> 
+                     <p>
+                        <strong>Fall Break: Monday classes meet on Tuesday this week.</strong>
+                        
+                     </p>
+                  </td>
+                  <td></td>
+               </tr>
+               <tr id="d2017-10-10">
+                  <td>
+                     <h4>T 10-10</h4>
+                  </td>
+                  <td>
+                     <p>XPath Functions: some common functions we use and how to write them: <strong>count(), not(), distinct-values()</strong>. XPath for the <strong>text() node</strong> to grab strings: <strong>string-join()</strong>, <strong>contains(string 1, string 2)</strong>. 
+                     </p>
+                     
+                     <p>Using Regular Expressions in XPath.</p>
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        
+                        <li>Read (and consult) <cite class="sub"><a href="http://dh.obdurodon.org/functions.xhtml">The XPath
+                                 Functions We Use Most</a></cite>
+                           
+                        </li>
+                        
+                        <li><a href="XPathExercise3.html"><strong>XPath Exercise 3:</strong>
+                              experimenting with functions</a></li>   
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-10-11">
+                  <td>
+                     <h4>W 10-11</h4>
+                  </td>
+                  <td>
+                     <p>Work on XPath and manipulating text strings. Using Regular Expressions in XPath.</p>
+                  </td>
+                  <td>
+                     <p><a href="XPathExercise4.html"><strong>XPath Exercise 4:</strong> Manipulating Strings</a>.
+                     </p>
+                  </td>
+               </tr>
+               <tr id="d2017-10-13">
+                  <td>
+                     <h4>F 10-13</h4>
+                  </td>
+                  <td> 
+                     <p>writing an XPath-based Schema language: Schematron, and how we use it with
+                        Relax-NG
+                     </p>
+                     
+                     <p>Examples of Schematron in our projects</p>
+                  </td>
+                  <td>
+                     <ul>
+                        
+                        <li> Read our <a href="explainSchematron.html">Guide
+                              to Schema Writing with Schematron</a>.
+                        </li>
+                        
+                        <li><strong><a href="SchematronExercise1.html">Schematron Exercise 1</a></strong></li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week8"><span class="h4"><em>Week 8</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-10-16">
+                  <td>
+                     <h4>M 10-16</h4>
+                  </td>
+                  <td>
+                     <ul>
+                        
+                        <li>Schematron in Projects</li>
+                        
+                        <li>Using Personographies, Placeographies, Prosopographies: <a href="explainSchematronIdRefs.html">Keeping track
+                              of xml:ids with Schematron</a></li>     
+                        
+                     </ul>
+                  </td>
+                  <td>
+                     <ul>
+                        <li><strong><a href="SchematronExercise2.html">Schematron Exercise 2</a></strong></li>
+                        
+                        
+                        
+                        <li>Preview our <a href="explainXSLT.html">Introduction to XSLT</a>.
+                        </li> 
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-10-18">
+                  <td>
+                     <h4>W 10-18</h4>
+                  </td>
+                  <td>
+                     <p>Introducing XSLT (eXtensible Stylesheet Language Transformations). XSL Transformations
+                        from XML to XML, and from XML to HTML. Namespaces
+                     </p>
+                     
+                     <p>Where we use XPath, and where we <strong>don’t</strong> use XPath in XSLT.
+                     </p>
+                     
+                     <p>Identity Transformation</p>
+                  </td>
+                  <td>
+                     <ul>
+                        <li>Read our <a href="explainXSLT.html">Intro to XSLT</a>.
+                        </li>
+                        
+                        <li>In Michael Kay book: For context on XSLT, skim Michael Kay’s Chapter 1 and read pages
+                           3-7, <cite class="sub">A Simple XSLT Stylesheet</cite>: pp. 10-12, <cite class="sub">How it Works</cite>: pp. 17-18, and <cite class="sub">Example: Displaying a Poem,</cite> pp. 35-38 (to review a sample XSLT stylesheet). We provide <a href="http://media.wiley.com/product_data/excerpt/47/04701927/0470192747.pdf"> link to an online pdf of Chapter 1 here</a> for those who do not have the physical book, <cite>XSLT 2.0 and XPath 2.0., 4th edition</cite>.
+                        </li>
+                        
+                        <li><strong><a href="XSLTExercise1.html">XSLT Exercise 1: an Identity Transformation</a></strong>.
+                        </li>
+                        
+                        <li>Work on <a href="https://github.com/ebeshero/DHClass-Hub/issues/377">Project Take-home Midterm (due M 10/23)</a></li>
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-10-20">
+                  <td>
+                     <h4>F 10-20</h4>
+                  </td>
+                  <td>
+                     <p>XSLT to HTML: How it works.</p>
+                  </td>
+                  <td>
+                     
+                     <ul> 
+                        <li><strong><a href="XSLTExercise2.html">XSLT Exercise 2</a></strong> 
+                        </li>
+                        
+                        <li><strong>To read</strong> as you work on XSLT 2 and 3:
+                           <ul> 
+                              <li><cite class="sub"><a href="http://dh.obdurodon.org/algorithms.xhtml">Thinking in algorithms</a></cite></li>
+                              
+                              <li><cite class="sub"><a href="http://dh.obdurodon.org/developing-xslt.xhtml">Developing an XSLT Stylesheet</a></cite></li>
+                              
+                           </ul>
+                        </li>
+                        
+                        <li>Continue <a href="https://github.com/ebeshero/DHClass-Hub/issues/377">Project Take-home Midterm (due M 10/23)</a></li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week9"><span class="h4"><em>Week 9</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-10-23">
+                  <td>
+                     <h4>M 10-23</h4>
+                  </td>
+                  <td>
+                     
+                     <p><strong><a href="https://github.com/ebeshero/DHClass-Hub/issues/377">Project Midterms</a> due</strong></p>
+                     
+                     <p>XSLT: XPath and XPath patterns. Working algorithmically.</p>
+                      <span class="smaller">MITH Digital Dialogue</span></td>
+                  <td> 
+                     <ul>
+                        
+                        <li><strong><a href="XSLTExercise3.html">XSLT Exercise 3</a></strong></li>
+                        
+                        <li>In prep for next class, read about:
+                           
+                           <ul>
+                              
+                              <li><a href="http://dh.obdurodon.org/xslt-basics-2.xhtml">XSLT Conditionals, and Push and Pull</a></li>
+                              
+                              <li><a href="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                                    Templates</a>.
+                              </li>
+                           </ul>
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-10-25">
+                  <td>
+                     <h4>W 10-25</h4>
+                  </td>
+                  <td>
+                     
+                     <p>XSLT: Push and Pull. Attribute Value Templates</p>
+                     
+                     <p>Review for XPath test.</p>
+                      <span class="smaller">MITH Digital Dialogue</span></td>
+                  <td>
+                     <ul>
+                        
+                        <li>(Consult <a href="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                              Templates</a> as you work on the coding exercise.)
+                        </li>
+                        
+                        <li><strong><a href="XSLTExercise4.html">XSLT Exercise 4</a></strong></li>
+                        
+                        <li>In prep for the next XSLT exercise, read <a href="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</a>.
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-10-27">
+                  <td>
+                     <h4>F 10-27</h4>
+                  </td>
+                  <td>
+                     
+                     <p>How Modal XSLT works.</p>
+                     
+                     <p>Processing collections of files</p>
+                     
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        
+                        <li>Consult <a href="http://dh.obdurodon.org/modal-xslt.html">Modal
+                              XSLT</a> page.
+                        </li>
+                        
+                        <li><strong><a href="XSLTExercise5.html">XSLT Exercise 5</a></strong></li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week10"><span class="h4"><em>Week 10</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-10-30">
+                  <td>
+                     <h4>M 10-30</h4>
+                  </td>
+                  <td>
+                     <p>Sorting with XSLT</p>
+                     
+                     <p>HTML with internal links: how it works</p>
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        
+                        <li><strong><a href="XSLTExercise6.html">XSLT Exercise 6</a></strong></li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-11-01">
+                  <td>
+                     <h4>W 11-01</h4>
+                  </td>
+                  <td>
+                     
+                     <p><strong>XPath test.</strong></p>
+                     
+                     <p>Writing XSLT for your projects. Review of metadata and TEI, and using XSLT to extract
+                        metadata: Example: <a href="http://digitalmitford.org/getLetterText.php?uri=1821-01-29_Webb.xml">Digital Mitford letter</a>.
+                     </p>
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        <li><strong><a href="XSLTExercise7.html">XSLT Exercise 7</a></strong></li>
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-11-03">
+                  <td>
+                     <h4>F 11-03</h4>
+                  </td>
+                  <td>
+                     <ul>
+                        <li>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+                           and screen grid coordinates.
+                        </li>
+                        
+                        <li><a href="https://www.slideshare.net/ebbondar/svg-81556046">Introductory slideshow</a></li>
+                        
+                        <li>Play with <a href="http://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</a>.
+                        </li>
+                     </ul> 
+                  </td>
+                  <td>
+                     
+                     <ul>
+                        
+                        <li>Work through <a href="http://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</a> to complete the SVG basic and SVG shapes pages. 
+                           Filters, gradients, examples, and reference are optional.
+                        </li>
+                        
+                        <li><strong><a href="SVGExercise1.html">SVG Exercise 1</a></strong></li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week11"><span class="h4"><em>Week 11</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-11-06">
+                  <td>
+                     <h4>M 11-06</h4>
+                  </td>
+                  <td>
+                     <p>SVG from XSLT, working with variables to plot coordinate space</p>
+                  </td>
+                  <td> 
+                     <ul> 
+                        <li><a href="SVGExercise2_Alice.html"><strong>SVG Exercise 2:</strong> Plotting a Line-Graph with XSLT</a>
+                           
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-11-08">
+                  <td>
+                     <h4>W 11-08</h4>
+                  </td>
+                  <td>
+                     <p>more on XSLT to SVG and working with variables</p>
+                  </td>
+                  <td> 
+                     <ul>
+                        <li><a href="SVG-XSLExercise3.html"><strong>SVG Exercise 3</strong>: Plotting a Stacked Bar Graph</a>
+                           Work on this in stages: complete a portion by Friday: By this point, set up your plot
+                           and your variables, and plot one set of bars. Submit the whole by Monday 11/14.
+                        </li>
+                        
+                        <li>Review <a href="projectGuide.html">Project Guidelines</a>, work on developing project sites on NewtFire.
+                        </li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-11-10">
+                  <td>
+                     <h4>F 11-10</h4>
+                  </td>
+                  <td>
+                     <p>Work on SVG Exercise: How to stack the bars</p>
+                     
+                     <p>Project Development: Review <a href="projectGuide.html">Project Guidelines</a></p>
+                      <span class="smaller">TEI Conference</span></td>
+                  <td>
+                     <p><a href="SVG-XSLExercise3.html">SVG Exercise 3</a>, continued: finish the assignment 
+                     </p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week12"><span class="h4"><em>Week 12</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-11-13">
+                  <td>
+                     <h4>M 11-13</h4>
+                  </td>
+                  <td>
+                     <p>Embedding SVG on an HTML page.</p>
+                      <span class="smaller">TEI Conference</span></td>
+                  <td>
+                     <ul> 
+                        <li><strong>SVG Exercise 4</strong>: Produce SVG for your project from XSLT. Place your SVG on a web page and style with
+                           CSS. Be sure to associate the relevant files and upload to Courseweb all the necessary
+                           files for us to view your pages.
+                        </li>
+                        
+                        <li>Read Obdurodon's <a href="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</a></li>
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-11-15">
+                  <td>
+                     <h4>W 11-15</h4>
+                  </td>
+                  <td>
+                     <p>SVG and Project Development</p>
+                      <span class="smaller">TEI Conference</span></td>
+                  <td>
+                     <ul>
+                        <li>Work on XSLT, SVG and other coding needed for your projects</li>
+                        
+                        <li>Read Obdurodon's <a href="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</a></li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-11-17">
+                  <td>
+                     <h4>F 11-17</h4>
+                  </td>
+                  <td>
+                     <p>How JavaScript works, and how to write it.</p>
+                     
+                     <p>How JavaScript is different from Server Side Includes (client side vs. server side).</p>
+                  </td>
+                  <td>
+                     <p><strong><a href="JavaScript_SSI_Exercise1.html">Server Side Includes and Javascript Exercise 1:</a></strong></p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week13"><span class="h4"><em>Week 13</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-11-20">
+                  <td>
+                     <h4>M 11-20</h4>
+                  </td>
+                  <td>
+                     <p>More JavaScript! Writing JavaScript functions.</p>
+                  </td>
+                  <td> 
+                     <ul>
+                        
+                        <li>Read Oburodon's <a href="http://dh.obdurodon.org/javascript_piece-by-piece.xhtml">JavaScript Piece By Piece</a> tutorial 
+                        </li>
+                        
+                        <li>Read Elisa's Obdurodon tutorial, <a href="http://dh.obdurodon.org/javascript/classListToggle.xhtml">JavaScript Toggling with classList and switch</a></li>
+                        
+                        <li><strong><a href="JavaScriptExercise2.html">Javascript Exercise 2</a></strong></li>  
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-11-22">
+                  <td>
+                     <h4>W 11-22 to F 11-24</h4>
+                  </td>
+                  <td>
+                     <p>Thanksgiving Recess: No Classes.</p>
+                  </td>
+                  <td></td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week14"><span class="h4"><em>Week 14</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-11-27">
+                  <td>
+                     <h4>M 11-27</h4>
+                  </td>
+                  <td>
+                     
+                     <p>Projects and Portfolios</p>
+                     
+                     <p>JavaScript with SVG for Dynamic Activity on an Image</p>
+                     
+                     <p>JavaScript, SVG, and CSS with your HTML: Putting it All Together</p>
+                     
+                  </td>
+                  <td>
+                     <p><strong><a href="JavaScript_Exercise3.html">JavaScript  Exercise 3</a></strong>: JavaScript with SVG
+                     </p>
+                  </td>
+               </tr>
+               <tr id="d2017-11-29">
+                  <td>
+                     <h4>W 11-29</h4>
+                  </td>
+                  <td>
+                     <p>Projects and Portfolios: Work with <a href="projectGuide.html">Course Project Guidelines</a>; Choose a <a href="http://creativecommons.org/">Creative Commons License</a></p>
+                     
+                     <p>JavaScript, SVG, and CSS with your HTML: Putting it All Together</p>
+                     
+                     <p>Set Project Presentation Schedule</p>
+                     
+                  </td>
+                  <td> 
+                     <p>Project development</p>  
+                  </td>
+               </tr>
+               <tr id="d2017-12-01">
+                  <td>
+                     <h4>F 12-01</h4>
+                  </td>
+                  <td>
+                     <p>Web Development: Projects</p>
+                  </td>
+                  <td>
+                     <p>Project development, Prepare presentations.</p>
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <th id="Week15"><span class="h4"><em>Week 15</em></span></th>
+                  <th><span class="h4"><em>In Class</em></span></th>
+                  <th><span class="h4"><em>Due Next Time</em></span></th>
+               </tr>
+               <tr id="d2017-12-04">
+                  <td>
+                     <h4>M 12-04</h4>
+                  </td>
+                  <td>
+                     <p>Project Review and Presentations</p>
+                  </td>
+                  <td>
+                     <ul>
+                        <li>Project development</li>
+                        
+                        <li>
+                           <p><strong>GitHub Issues</strong>: (For everyone but the project presenters for today): Post a review, as detailed
+                              as possible for a project team other than your own; a project that was presented today.
+                           </p>
+                        </li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+               <tr id="d2017-12-06">
+                  <td>
+                     <h4>W 12-06</h4>
+                  </td>
+                  <td>
+                     <p>Project Presentations</p>
+                  </td>
+                  <td>
+                     <ul>
+                        
+                        <li>Project development</li>
+                        
+                        <li>
+                           <p><strong>GitHub Issues</strong>: (For everyone but the project presenters for today): Post a review, as detailed
+                              as possible for a project team other than your own; a project that was presented today.
+                           </p>
+                        </li>
+                        
+                     </ul>
+                  </td>
+               </tr>
+               <tr id="d2017-12-08">
+                  <td>
+                     <h4>F 12-08 (Last day of classes)</h4>
+                  </td>
+                  <td>
+                     <p>Project Presentations</p>
+                  </td>
+                  <td>
+                     <ul>
+                        <li>Project development</li>
+                        
+                        <li><strong>GitHub Issues</strong>: (For everyone but the project presenters for today): Post a review, as detailed
+                           as possible for a project team other than your own; a project that was presented today.
+                        </li>
+                        
+                     </ul>
+                     
+                  </td>
+               </tr>
+            </table>
+            <table>
+               <tr>
+                  <td>
+                     <h4>Thurs. 12/14 by 11:59 PM</h4>
+                  </td>
+                  <td>
+                     
+                     <p>
+                        <strong>Projects due. Submit projects with a post to the instructors from  your project GitHub
+                           repo.</strong>
+                        
+                     </p>
+                     
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
       <hr />
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-       Chicago Times 
-      CITY SLAVE GIRLS
-      Monday Morning, July 30, 1888.
-      Nell Nelson
-      
-      
-      
-      
-      <h3>
-         <mark>A Lady Reporter’s Experience in the Shops with Sewing Serfs.</mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>
-            
-            <workingConditions>
-               <bold><span class="work">
-                     <apply-templates></apply-templates></span></bold>
-            </workingConditions>
-            
-         </mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>
-            
-            <workingConditions>
-               <bold><span class="work">
-                     <apply-templates></apply-templates></span></bold>
-            </workingConditions>
-            
-         </mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>Making Shirts at Seventy-Five Cents a Dozen
-            and 
-            <workingConditions>
-               <bold><span class="work">
-                     <apply-templates></apply-templates></span></bold>
-            </workingConditions>.
-         </mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>CLOAKS, OVERALLS, AND SHIRTS.</mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>
-            
-            <workingConditions>
-               <bold><span class="work">
-                     <apply-templates></apply-templates></span></bold>
-            </workingConditions>
-            
-         </mark>
-      </h3>
-      
-      <h3>
-         <mark>
-            
-            <workingConditions>
-               <bold><span class="work">
-                     <apply-templates></apply-templates></span></bold>
-            </workingConditions>
-            
-         </mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>THE NEVER-RIP JERSEY.</mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>A Hard Day’s Work for 41 Cents.</mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>Less Fortunate Workers Who Earned Only 11
-            Cents.
-         </mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>A Sick Girl’s Sad Story.</mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>The Hopeless Miss Who Longed to Be
-            Married.
-         </mark>
-      </h3>
-      
-      
-      <h3>
-         <mark>The Trials of Poor Creatures Who Stitch the “Never
-            Rip Jersey.”
-         </mark>
-      </h3>
-      
-      
-      
-      
-      
-      
-      
-      <p>Tuesday, July 10, according to instructions from THE TIMES, I made up for the role of shop-girl, and with a list
-         of factories in one hand and gentle peace in the other sailed down State street under a brown braise veil as impenetrable
-         as an iron mask. I applied at two feather factories and three
-         corset shops, but aside from the exercise up and down several
-         flights of stairs got nothing. The feather people did not need any help and the corset
-         folks had not started on the winter trade. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> The fifth place on my list was the “Western Lace Manufacturing Co.”
-         218 State street. Ascending one flight of stairs I
-         stopped to take off my veil and adjust my eyes to the low light. That done I looked
-         about and finding a door marked ”Office of the Western Lace
-         Manufacturing Co.” with “Come In” on the glass I complied.
-      </p>
-      
-      <p>A young girl followed and leaving her
-         to close the door I fell into a chair, the only one about, and proceeded to perspire
-         and
-         scrutinize the place. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> On a long table, that served
-         as a sort of fortification for the private office of the company, were the
-         samples—“antique crocheted good”—as they are listed, in various shades of white. All
-         were of different pattern and unvarying ugliness. There were round tidies and oblong
-         tidies, square mats for a bureau and smaller ones of oval and circular design, intended
-         for a lamp or cushion. Behind the table, sachetiny between a writing stand and a desk,
-         was a young man of 30 or so, of blonde type, with a stationary
-         scowl between his eyebrows and  otherwise pleasing manner. That is, I
-         thought the manner pleasing till I began to get acquainted with it and then my
-         opinion changed. After a lapse of five minutes or so the fair-haired gentlemen turned to the young girl with a deepening of the  and a most
-         unalluring <span class=""></span> opening
-         a piece of newspaper and unfolding a dozen hand-made mats the size of a tea-plate.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         <span class=""></span></p>
-      
-      <p>As he went to lead the way the crochet-teacher called
-         his attention, and the girl remaining I seized my chances for a bit of interviewing.
-         Martha showed me her contract, in which 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>. On the back of the contract were the
-         credit receipts of the company entered in lead pencil, dating from January to July. She told me she lived in
-         Gross Park, away out on the West side that she helped her
-         mother, and had been trying to earn $15 since
-         January. She received 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>.
-         <span class=""></span></p>
-      
-      <p>When Mr. Ford came from the work-room he was met by a
-         boy who had brought in some work and was in a hurry to be off.
-         <span class=""></span> The poor boy is gone.
-         Martha sits in the back room the picture of  and the
-         entry being made I am approached. I look like a beggar and that
-         is what I am taken for, as, the pretty blonde secretary only scowls. He
-         stands and looks down at me and I sit and look up at him waiting for the, lines in
-         the
-         handsome brow to deepen, the edge of the soft, brown mustache to curl, and the laconic,
-         withering <span class=""></span>giving my cat-colored eyes a mater doloroso sort of a roll
-         As he caught the seraphic expression some facial machinery gave a lurch that threw
-         on
-         side of his countenance bias for a second. Reaching to the desk he pulled out the
-         following circular and handed it to me.
-      </p>
-      
-      <p>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-      </p>
-      
-      <p>
-         <span class=""></span>
-         
-      </p>
-      
-      <p>Poor Mr. Ford was so furious by this time that I thanked him for his
-         attention and bade him good afternoon. At the foot of the stairs I waited to tie my
-         veil
-         on and see how Martha fared, but at the expiration of thirty
-         minutes she was still waiting for Mr. White and her .
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>.
-         All expressed a liking for the work but complained bitterly
-         of the way the  gave out the work. For instance
-         bedspreads paid $10
-         a dozen, but not more than three spreads were given to a hand and one of these was
-         the
-         sample. The little tablemats paid 50 cents per dozen, but before a girl was able to crochet enough
-         to live on she was obliged to take collars made of line thread in such an intricate
-         pattern that it was an utter impossibility to earn $1 a month. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> This fact does not appear in the circulars, and it is
-         not  after the contract has been signed that the  tacties of the
-         concern are understood.
-      </p>
-      
-      <p>Several cases are on record at the Woman’s Protective agency, but no
-         judgment has been obtained, as the agreement  valid be-fore the law. All that
-         can be done in the matter is to warn the public against a  legally
-         incorporated to grind the life out of the women and girls unfortunate enough to
-         patronize it. At Rosenthal &amp; Co.’s and Rosenberg
-         Bros. I applied for work and was told to report in the morning to sew on
-         cloaks. The manager in Stein’s, on Market street, wanted
-         bands and offered to engage me at once. I was most impudently catechized some seven
-         inquires requiring as many false statements. What was my name, place of residence,
-         last
-         position, amount of wages received, state of my health, nativity, <span class=""></span> It was enough and I left the
-         creature still anxious to solve the widow question. By the time I reached Ludden’s, 122 Market
-         street, I was in a reckless frame of mind. <span class=""></span>
-         John had eyes the color of calico and a complexion like an immature
-         tomato. He led the way to the cottonades, which were cut,
-         trimmed, and tied up in bundles of a dozen garments each. <span class=""></span></p>
-      
-      <p>At the Never-Rip Jersey Company I was told to apply
-         at the factory 133 West Washington street. “Work is
-         given out at 7:30 a. m.,” the clerk informed me, “and if you have any snap about you
-         you
-         can make a good living. By the way of getting the required snap I went home, ate my
-         dinner, and was in bed at 8 o’ clock. The next morning I resumed
-         the rags of poverty and at 7 o’clock made my debut as the factory hand.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>. The factory where the never-rip
-         jerseys are made is at the corner of
-         Washington and Union streets, with the elevator entrance in the rear and
-         workroom in the fifth story. The girls began to arrive at 7 o’clock, and at every
-         trip
-         of the elevator some twenty or more were carried up-stairs. I took a chair in one
-         of the
-         machine rows, and for an hour did nothing but watch the preparations for work in that
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>. Light was admitted from rear
-         and side windows. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> Along the brick walls
-         were nails, irregularly driven, on which the girls hung their hats and wraps, dresses
-         and collars. Nearly every one took off her dress and waisit, turned it inside out,
-         put
-         it on a nail and put on a calico of old stuff shop suit. A few took off their corsets
-         and nearly all the machine hands changed their shoes before work. On the stroke of
-         7:30
-         a bell rang, the power was turned on 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         The faces were sad and so very, very pales that I shall
-         never look at a jersey again without seeing
-         them.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> The work circulated in baskets—long chip hampers
-         with stout-handles—that held a dozen, with room for five times that quantity.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-      </p>
-      
-      <p>If it had been the last change for life I don’t believe the girls
-         would have worked any harder for salvation. Scarcely a head was raised from machine
-         or lap.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> At 8:40 the proprietor of the chair I was in
-         asked me to vacate, and I walked down through the narrow aisles of
-         sewing-women to the “forelady” and asked for work. She asked me if I wanted to
-         take a machine, but I expressed a preference for finishing. I was given a numbers,
-         a
-         basket with five jerseys to finish, and a chair beside a girl
-         named Hannah, who, being engaged by the way was told to “show me.”
-         Hannah had blonde hair and talked with the brogue.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         Remembering the treachery of my shop clothes I ever wore filled the two hooks and
-         eyes
-         with sewing and after testing them proceeded to face the collar. I told Hannah about my misery, but she wisely said it was no
-         fault of hers and went on with a 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>.
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> and at the end of two hours I had bound the
-         arm-holes, faced the collar, tacked the front facing and the bustle piece, and put
-         two
-         patts of hooks and eyes in a black jersey. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> The front facings had to be trimmed off. I had no
-         scissors. Hannah was dangerous with her, and 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-      </p>
-      
-      <p>
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         One little girl who had been stretching
-         jerseys at 2
-         cents each made a lunch on three graham crackers and a piece of custard
-         pie, which she ate reading a paper-covered book. I counted thirty-seven girls with
-         a
-         lunch of dry bread, fifteen with sandwiches, and ten who ate cold pancakes.
-         Twenty-three girls were without any luncheon whatever. During the
-         intermission the elevator stopped running and no one left the building but myself.
-         Less
-         than ten minutes was spent over the wretched mea. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>, each with her bit of soap and grimy cotton towel, to
-         wash. Dress waists were loosened and necks, faces, arms, and hands lathered with soap
-         and rinsed, as the change permitted. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> At 1 o’clock I finished my basket, which I dragged to
-         Tom, the book-keeper, who took my name and credited me with
-         five garments. 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         I didn’t get any more work till 2 o’clock because the forelady was in the toilet-room having
-         her bangs done up in paper. She was a pretty woman, by the way, with a good face and
-         a shock of beautiful auburn hair. She had been in her position for six years and was
-         drawing a salary of $35 a week. The girls had
-         a good word for her generally, but she struck me as being a woman without
-         heart. At her appearance I was given a basketful of
-         jerseys to finish button-holes.
-      </p>
-      
-      <p>
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>, at the end of which I won the heart of a little girl who sat at the end of my
-         table facing the wall. She had been sitting still so long that I called out and asked
-         if
-         she were ill. “No. I haven’t any work.”
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> It was too hot to work; she was
-         going away soon, she said, and didn’t care to do any more. “When did I begin? Today. I worked in a box-factory, but it
-         was so dull I could only earn 16 cents a day.
-         My mother wants me to pay her $2.50 a week board, but how could I with
-         96 cents. This is no
-         better. I came at 8 this morning and I have only made 11 cents. I am 21. Beaus? Yes, some. I have on
-         steady fellow, but I don’t know if he will marry me. I hope he will. She
-         told me he earned 
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>; that he was “steady as a steeple, and the only fellow
-         she ever loved.”
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         Nothing of any importance occurred till someone passed the news
-         that a girl was asleep in the closet. Half a dozen left their machines to look at
-         her, Hannah, my mentor, among them. “Oh, you just ought to see
-         her, fast asleep, with her mouth wide open.” It was more than I could stand.
-         I threw my button-holes into the basket and went to the toiletroom.
-      </p>
-      
-      <p> Sure enough, there was the poor girl sitting in the dirty place, her head resting
-         against a folded apron, breathing in the foul air that reeked with filth and
-         disease. The walls of the closet were black with pencil marks, the floor was strewn
-         with lint and threads, and the pale face of the sleeper looked ghastly in the
-         darkness. She had tied one end of a string to the latch and the other to the drop
-         chain.
-         <span class=""></span>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         After making her toilet she came over to my table as I sewed away at my button-holes
-         she
-         told me her story. <span class=""></span> At 5:30 work ceased.
-      </p>
-      
-      <p>
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions> I paid a
-         nickel to have my corner swept, and finding it impossible to wash up sans towel and
-         soap
-         I got under my veil and rang the elevator. The pressers laughed and told me to try
-         the
-         stairs—five flights. Down I went. At the second I went into the salesroom to buy a
-         jersey. One of the firm waited on me; his magnanimity was
-         sublime. The identical black
-         jersey that I had received 5 centsfor finishing was offered to me at $2. I declined.
-      </p>
-      
-      <p>
-         
-         <workingConditions>
-            <bold><span class="work">
-                  <apply-templates></apply-templates></span></bold>
-         </workingConditions>
-         
-      </p>
-      
-      
-      
    </body>
 </html>
