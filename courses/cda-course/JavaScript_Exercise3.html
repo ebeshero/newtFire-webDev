@@ -65,10 +65,6 @@ table#graphData tr[id="QA1"] {display: table-row;}
    <code>trow = document.getElementById('QA1');</code> //Here we have called the global variable 
               and we have given the specific definition for it that applies in function init()
   }
-              
-              
-              
-              var trow = document.getElementById('QA1');
            </pre>
            By doing this, we create a variable set to the only value that will be showing at the load of the HTML page, and that variable can then be <em>passed</em> to our next function, which fires on click of a stacked bar. What should happen, if you click on, say, the second stacked bar of the SVG plot, is that the currently-showing table information from the first stacked bar will disappear and be replaced by the table row information from that second SVG bar stack. To make this happen, we first need to call a function that will <em>cause the previously displaying table (and any associated highlights)</em> to disappear. We called that our <code>hide-last()</code> function, and it is supposed to fire <strong>first of all</strong> when a visitor clicks, so we call it like this:
               
