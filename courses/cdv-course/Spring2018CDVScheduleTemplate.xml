@@ -393,10 +393,18 @@
                 <date when="2018-02-19">M 2-19</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>More on XPath String functions.</p>
+                <p>Applying XPath.</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item>
+                        <ref target="XPathExercise4.html"><hi rend="em">XPath Exercise 4:</hi>
+                            Manipulating Strings</ref>. </item>
+                    <item>Read our <ref
+                        target="explainSchematron.html">Guide
+                        to Schema Writing with Schematron</ref>.</item>
+                </list>
             </div>
         </div>
         <div type="day">
@@ -404,10 +412,19 @@
                 <date when="2018-02-21">W 2-21</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>writing an XPath-based Schema language: Schematron, and how we use it with
+                    Relax-NG</p>
+                <p>Examples of Schematron in our projects</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item> Read our <ref
+                        target="explainSchematron.html">Guide
+                        to Schema Writing with Schematron</ref>.</item>
+                    <item>Work on <hi>Project Midterm</hi></item>
+                    <item><hi rend="em"><ref
+                        target="SchematronExercise1.html">Schematron Exercise 1</ref></hi></item>   
+                </list>
             </div>
         </div>
         <div type="day">
@@ -415,10 +432,19 @@
                 <date when="2018-02-23">F 2-23</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <list>
+                    <item>Schematron in Projects</item>
+                    <item>Using Personographies, Placeographies, Prosopographies: <ref target="explainSchematronIdRefs.html">Keeping track
+                        of xml:ids with Schematron</ref></item>
+                </list>
+                <note>TEI Council face-to-face: Cologne</note>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list><item><hi rend="em"><ref target="SchematronExercise2.html">Schematron Exercise 2</ref></hi></item>
+                    <item>Read our tutorial on <ref target="explainSchematronIdRefs.html">Coding with Unique Identifiers and How to Test for them with Schematron</ref>,
+                        and use this in the Schematron homework: add <code>@xml:id</code> checking rules to your Schematron file, pulling from this tutorial.</item>
+                    <item>Read our <ref target="http://newtfire.org/dh/explainXSLT.html">Introduction to XSLT</ref> in preparation for the next class.</item>
+                </list>
             </div>
         </div>
     </div>
@@ -428,10 +454,29 @@
                 <date when="2018-02-26">M 2-26</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Introducing XSLT and XQuery: how we use each.</p>
+                <p>Orientation to XSLT (eXtensible Stylesheet Language Transformations). XSL
+                    Transformations from XML to XML, and from XML to HTML. Namespaces</p>
+                <p>The Weirdness that is XSL Template Matching: Where we use XPath, and where
+                    we use <hi>pseudo-XPath patterns</hi> in XSLT.</p>
+                <p>Identity Transformations</p>
+                <note>TEI Council face-to-face: Cologne</note>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item>Read and refer to our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
+                    <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an
+                        Identity Transformation</ref></hi>.</item>
+                    <item><hi rend="em">To read this week</hi>, or before you start work on XSLT
+                        2 (by this weekend): <list>
+                            <item><title level="a"><ref
+                                target="http://dh.obdurodon.org/developing-xslt.xhtml"
+                                >Developing an XSLT Stylesheet</ref></title></item>
+                            <item><title level="a"><ref
+                                target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in                             algorithms</ref></title></item>                           
+                        </list>
+                    </item>
+                </list>
             </div>
         </div>
         <div type="day">
@@ -439,10 +484,28 @@
                 <date when="2018-02-28">W 2-28</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p><hi rend="em">XPath Exam</hi>
+                    <!--ebb: Or we could make this a (new) Schematron exam! -->
+                </p>
+                <p>XSLT to HTML: How it works: the template rule for the document node, and
+                    succeeding template rules.</p>
+                <p>What happens with <hi>xsl:apply-templates</hi>, <hi>xsl:value-of</hi>, and Attribute Value Templates.</p>
+                <note>TEI Council face-to-face: Cologne</note>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item><ref target="XSLTExercise2_CDV.html">XSLT Exercise 2</ref></item>
+                    <item>To help guide you with XSLT and prepare for next class, read and consult:<list>
+                        <item><title level="a"><ref
+                            target="http://dh.obdurodon.org/developing-xslt.xhtml"
+                            >Developing an XSLT Stylesheet</ref></title></item>
+                        <item><title level="a"><ref
+                            target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in
+                            algorithms</ref></title></item>
+                        <item><title level="a"><ref target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref></title></item>
+                    </list>
+                    </item>  
+                </list>
             </div>
         </div>
         <div type="day">
@@ -450,10 +513,20 @@
                 <date when="2018-03-02">F 3-02</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Review of template matching and processing XML. </p>
+                <p>"Push" vs. "Pull" processing, and how to write XSLT to output HTML that doesn't follow the structure of the input XML. XSLT Conditions: <code>xsl:if</code> and <code>xsl:choose</code>. Processing TEI with xpath-default-namespace.</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
+                    3</ref></item>
+                    <item><!--ebb: Update the XQUERY MATERIALS for STOCKHOLM NEWTFIRE!-->Read <ref
+                        target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay’s
+                        XQuery Tutorial</ref> and our <ref
+                            target="http://newtfire.org/dh/explainXQuery.html">Introduction to
+                            XQuery and the eXist XML Database</ref> in preparation for the next
+                        class.</item>
+                    <item>[CHECK SCHEDULE / MOVE?] Work on <hi>Project Development Sprint or Take-Home Midterm</hi></item>
+                </list>
             </div>
         </div>
     </div>
@@ -476,10 +549,19 @@
                 <date when="2018-03-12">M 3-12</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Introducing XQuery and eXist, the XML database. </p>
+                <p>Learning to write XQuery: collections and documents, queries and FLWORs</p>
+                <p>XQuery online and offline: in eXist and in &lt;oXygen/&gt;</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list><item>Work with <ref target="http://www.stylusstudio.com/xquery-primer.html"
+                    >Michael Kay’s XQuery Tutorial</ref> and our <ref
+                        target="http://newtfire.org/dh/explainXQuery.html">Introduction to
+                        XQuery and the eXist XML Database</ref> as you orient yourself to
+                    XQuery and the eXist database environment.</item>
+                    <item><hi><ref target="XQueryExercise1.html">XQuery Exercise
+                        1</ref></hi></item>
+                </list>
             </div>
         </div>
         <div type="day">
@@ -487,10 +569,14 @@
                 <date when="2018-03-14">W 3-14</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>XQuery: Writing FLWOR statements and outputting HTML</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item><item><hi>Complete Project Sprint (Midterm)</hi></item></item>
+                    <item><hi><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></hi></item>
+                   
+                </list>
             </div>
         </div>
         <div type="day">
@@ -498,10 +584,11 @@
                 <date when="2018-03-16">F 3-16</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>GIS and KML (Keyhole Markup Language for mapping). XQuery to KML Placemarks.</p>
+                <p>Saving output in the eXist database</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p><hi><ref target="XQueryExercise3.html">XQuery Exercise 3 (XQuery + XSLT to KML)</ref></hi></p>
             </div>
         </div>
     </div>
@@ -511,10 +598,15 @@
                 <date when="2018-03-19">M 3-19</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+                    and screen grid coordinates. </p>
+                <p>Introduce with <ref target="https://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p>
+                <p>Project Discussion: Working with project XML files in eXist-db</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list><item>Work through <ref target="https://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
+                    Filters, gradients, examples, and reference are optional.</item>
+                    <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
             </div>
         </div>
         <div type="day">
@@ -522,10 +614,14 @@
                 <date when="2018-03-21">W 3-21</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>XQuery to SVG: Pulling data for visualizing.</p>
+                <p>Choosing visualization formats: Timelines</p>
+                <note>Sigma Tau Delta Conference</note>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item><ref target="SVGExercise2_CDV.html">SVG Exercise 2 (plotting a timeline)</ref></item>
+                </list>
             </div>
         </div>
         <div type="day">
@@ -533,10 +629,12 @@
                 <date when="2018-03-23">F 3-23</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Review of SVG timeline assignment.</p>
+                <p>Project files in eXist</p>
+                <note>Sigma Tau Delta Conference</note>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p><hi><ref target="SVGExercise3_CDV.html">SVG Exercise 3 (Part 2 of the Timeline)</ref></hi></p>
             </div>
         </div>
     </div>
@@ -546,10 +644,10 @@
                 <date when="2018-03-26">M 3-26</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>(XSLT or XQuery) to SVG: Making line and bar graphs, plotting axes.</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p><hi><ref target="SVGExercise4_CDV.html">SVG Exercise 4 XQuery to SVG</ref></hi>: (Stacked Bar Graph for the Graveyard Project)</p>
             </div>
         </div>
         <div type="day">
@@ -557,10 +655,18 @@
                 <date when="2018-03-28">W 3-28</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>XQuery to Network Analysis: generating plain text data for Cytoscape</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item>Read <ref target="http://ebeshero.github.io/thalaba/cytosc.html"><title level="a">An Introduction to Network Analysis and Cytoscape for XML Coders</title></ref></item>
+                    <item><ref target="http://cytoscape.org/">Install Cytoscape on your computer</ref>, together with the appropriate Java package. Note: This is also installed in the campus computer labs, so you may work with it there, too or instead of on your own computer. If you have trouble with the installation, locate Cytoscape in the campus computer labs.
+                        Begin familiarizing yourself with the Cytoscape interface, working with Cytoscape session files (with .cys extension) posted in Class Examples, Network-Workshop folder in our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Try importing one of my Cytoscape session files (.cys) following my tutorial.
+                        
+                    </item>
+                    <item>Start on <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></item>
+                    
+                </list>
             </div>
         </div>
         <div type="day">
@@ -568,10 +674,13 @@
                 <date when="2018-03-30">F 3-30</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>XQuery to Network Analysis: Processing and Filtering; Running the Network Analyzer.
+                    Common Network stats: degree centrality, node centrality, edge betweenness,
+                    shortest paths</p>
+                <p>XQuery from eXist to Web: Building the Database into the Web Project</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p>Complete <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></p>
             </div>
         </div>
     </div>
@@ -581,10 +690,10 @@
                 <date when="2018-04-02">M 4-02</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>XQuery to Network Analysis: Extracting TSV data from XML. Importing to Cytoscape and running the Network Analyzer.</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p><hi><ref target="NetworkExercise2.html">XQuery to Network Analysis: Exercise, Part 2</ref></hi></p>
             </div>
         </div>
         <div type="day">
@@ -592,10 +701,13 @@
                 <date when="2018-04-04">W 4-04</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <!--PLACEHOLDER FROM LAST SPRING STD CONF -->
+                <p>Project Data Viz Work Session</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <item>Prepare Data Visualization of your choice for project.</item>
+                <item>Read Obdurodon’s <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to
+                    Javascript</ref></item>
             </div>
         </div>
         <div type="day">
@@ -603,10 +715,10 @@
                 <date when="2018-04-06">F 4-06</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>How JavaScript works (client side), and how to write it. Review Server Side Includes, vs. Client Side processing.</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p><hi><ref target="JavaScript_SSI_Exercise1.html">Server Side Includes and JavaScript Exercise 1</ref></hi></p>
             </div>
         </div>
     </div>
@@ -616,10 +728,18 @@
                 <date when="2018-04-09">M 4-09</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>More JavaScript! Writing JavaScript functions: scripting a sequence of events.</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <list>
+                    <item>Read Obdurodon's <ref target="http://dh.obdurodon.org/javascript_piece-by-piece.xhtml"
+                        >JavaScript Piece By Piece tutorial</ref></item>
+                    <item>Read Elisa's Obdurodon tutorial, <ref
+                        target="http://dh.obdurodon.org/javascript/classListToggle.xhtml"
+                        >JavaScript Toggling with classList and switch</ref></item>
+                    <item><hi><ref target="JavaScriptExercise2.html">Javascript Exercise
+                        2</ref></hi></item>
+                </list>
             </div>
         </div>
         <div type="day">
@@ -627,10 +747,15 @@
                 <date when="2018-04-11">W 4-11</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <list>
+                    <item>JavaScript with SVG for Dynamic Activity on an Image</item>
+                    <item>JavaScript, SVG, and CSS with your HTML: putting it all together.</item>
+                    <item>Testing your website code with <ref target="https://validator.w3.org/">the w3c Validator</ref></item>
+                </list>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p><hi><ref target="JavaScript_Exercise3_CDV.html">JavaScript Exercise 3 (CDV)</ref></hi>: JavaScript with SVG</p>
+                
             </div>
         </div>
         <div type="day">
@@ -638,10 +763,12 @@
                 <date when="2018-04-13">F 4-13</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Projects and Portfolios. <ref target="https://creativecommons.org/">Creative
+                    Commons Licenses</ref></p>
+                
             </div>
             <div type="assign">
-                <p>...</p>
+                <p>Web Development: Projects</p>
             </div>
         </div>
     </div>
@@ -651,10 +778,10 @@
                 <date when="2018-04-16">M 4-16</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Web Development: Projects</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p>Project Development</p>
             </div>
         </div>
         <div type="day">
@@ -662,10 +789,12 @@
                 <date when="2018-04-18">W 4-18</date>
             </head>
             <div type="inclass">
-                <p>...</p>
+                <p>Project presentations?</p>
+                <p>Web Development: Projects</p>
             </div>
             <div type="assign">
-                <p>...</p>
+              
+                <p>Project Development</p>
             </div>
         </div>
         <div type="day">
@@ -673,10 +802,13 @@
                 <date when="2018-04-20">F 4-20</date>
             </head>
             <div type="inclass">
-                <p><hi>Last day of classes.</hi></p>
+                <p><hi>Last day of classes.</hi> Project Presentations</p>
             </div>
             <div type="assign">
-                <p>...</p>
+                <p><hi rend="em">GitHub Issues</hi>: (For everyone but the project presenters
+                    for today): Post a review, as detailed as possible for a project team other
+                    than your own</p>
+                <p>Complete projects</p>
             </div>
         </div>
     </div>
