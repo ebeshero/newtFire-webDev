@@ -10,17 +10,16 @@ parse it. If you create your own webpages, please consider copying this
 or putting something similar at the start of your own code! For more 
 information about HTML go to:http://www.w3schools.com/html/ 
 -->
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    <!--A Document Type Declaration, or DOCTYPE, is an instruction that 
+    <!--Up at the very top, you see a Document Type Declaration, or DOCTYPE. This is an instruction that 
         associates a particular type of document (for example, a webpage) 
-        with a Document Type Definition (DTD)-->
+        with a Document Type Definition (DTD).-->
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <!--2018-01-13 ebb: I've made some updates to the code to work with newtFire standard HTML and css, and to update with HTML 5 protocols in 2018.-->
         <title>Traversing the Tree</title>
         <link rel="stylesheet" type="text/css" href="explainGK.css"/>
-        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     </head>
     <!--The head section usually contains information about the text 
         or instructions for the computer. None of the information in 
@@ -100,7 +99,7 @@ information about HTML go to:http://www.w3schools.com/html/
                 decision in terms of classifying elements of the text. Similarly, when new versions
                 of a print text are created, editorial decisions are often made about ambiguous
                 elements of the text. For example, the punctuation used in different print versions
-                of William Blake’s Songs of Innocence and Experience widely varies because the
+                of William Blake’s <cite>Songs of Innocence and Experience</cite> widely varies because the
                 intended punctuation in the illuminated versions is unclear.<a href="#F3" id="f3" class="footnote"><sup>3</sup></a></p>
             <p>There are differences between the two processes as well. Perhaps most significantly,
                 even if a transcribed digital copy of a text is formatted in the same way as the
@@ -125,7 +124,7 @@ information about HTML go to:http://www.w3schools.com/html/
                 text, it does significantly affect any queries run on the text. For example, suppose
                 a scholar encounters a text in which the content between quotation marks includes
                 words that are not part of a spoken quotation:</p>
-            <p>“Hello, said the girl, how are you?”</p>
+            <div class="code">“Hello, said the girl, how are you?”</div>
             <p>Assuming that the scholar does not want to compromise the integrity of the text by
                 relocating the questions marks, she is faced with a number of ways to classify and
                 interpret this text: she could label the example as either one or two separate
@@ -218,10 +217,10 @@ information about HTML go to:http://www.w3schools.com/html/
             <p> Writing in a language that does not have pre-defined tag sets increases the effect
                 of the markup process on the scholar. For example, take the following sample of
                 text:</p>
-            <p>“-able wind. Considering the grand way these moments are photographed, it almost
+           <div class="code">“-able wind. Considering the grand way these moments are photographed, it almost
                 appears as if Navidson is trying through ever the most quotidian objects and events
                 to evoke for us some senses of Holloway's epic progress. That or participate in it.
-                Perhaps even challenge it.”<a href="#F12" id="f12" class="footnote"><sup>12</sup></a></p><p style="font-size: small;">To interact with a digital
+                Perhaps even challenge it.”<a href="#F12" id="f12" class="footnote"><sup>12</sup></a></div><p style="font-size: small;">To interact with a digital
                     version of <i>House of Leaves</i>, click <a href="http://markzdanielewski.info/hol/holuk/holreadframe.html">here</a></p>
             <p>In its source document, the above snippet of text was displayed with line breaks
                 between a preceding and following paragraph. If the scholar were to encode this
@@ -529,7 +528,7 @@ information about HTML go to:http://www.w3schools.com/html/
                     smaller than the rest of the document.-->
                 <h3><a id="P8">Footnotes</a></h3>
                 <p class="footnote"><a href="#f1" id="F1" class="footnote">1. </a>A good example
-                    is the website Melville’s Marginalia Online: <a href="http://melvillesmarginalia.org/browser.php?page=1">http://melvillesmarginalia.org/browser.php?page=1</a> The site uses digital
+                    is the website Melville’s Marginalia Online: <a href="http://melvillesmarginalia.org/browser.php?page=1">http://melvillesmarginalia.org/</a> The site uses digital
                     technology to make the texts accessible to a wider audience and to provide tools
                     and a layout that allow user to perceive patterns in the marginalia that might
                     be visible from reading the print copies.</p>
@@ -538,26 +537,26 @@ information about HTML go to:http://www.w3schools.com/html/
                     Blackwell, 2004. <a href="http://www.digitalhumanities.org/companion/">http://www.digitalhumanities.org/companion/</a></p>
                 <p class="footnote"><a href="#f3" id="F3" class="footnote">3. </a>To view multiple
                     versions of Songs of Innocence and Experience go to “The William Blake Archive”:
-                        <a href="http://www.blakearchive.org/blake/">http://www.blakearchive.org/blake/</a> Also, to compare the different
-                    punctuation used in versions of The Night see: <a href="http://www.gk.obdurodon.org/Blake.html">http://www.gk.obdurodon.org/Blake.html</a></p>
+                        <a href="http://www.blakearchive.org/blake/">http://www.blakearchive.org/blake/</a> <!--ebb: Not available in 2018: Also, to compare the different
+                    punctuation used in versions of The Night see: <a href="http://www.gk.obdurodon.org/Blake.html">http://www.gk.obdurodon.org/Blake.html</a>--></p>
                 <p class="footnote"><a href="#f4" id="F4" class="footnote">4. </a>Descriptive
                     markup seeks to ascribe meaning to a text. XML was intended to be used as a type
                     of descriptive markup. For more information on the different types of markup,
                     see: Coombs, James H., Allen H. Renear, and Steven J. DeRose. “Markup Systems
-                    and the Future of Scholarly Text Processing.” Association for Computing
-                    Machinery Volume 30, November 1987.</p>
+                    and the Future of Scholarly Text Processing.” <i>Association for Computing
+                    Machinery</i> Volume 30, November 1987.</p>
                 <p class="footnote"><a href="#f5" id="F5" class="footnote">5. </a>I ran across a
                     similar problem in my own research: “Exploring Speech in Russian Fairy Tales.”
-                    For more information see: <a href="http://gk.obdurodon.org/projectLog.xhtml">http://gk.obdurodon.org/projectLog.xhtml</a></p>
+                    For more information see: <a href="http://ft.obdurodon.org/projectLog.xhtml">http://ft.obdurodon.org/projectLog.xhtml</a></p>
                 <p class="footnote"><a href="#f6" id="F6" class="footnote">6. </a>This idea can be
                     tied into practice theory. For more information see: Scifleet, Paul and Susan P.
                     Williams “Practice Theory and the Foundations of Digital Document Encoding.”
-                    Association for Computing Machinery.</p>
+                    <i>Association for Computing Machinery</i>.</p>
                 <p class="footnote"><a href="#f7" id="F7" class="footnote">7. </a>Often in XML tag
                     names camel case is used. In creating tag names spaces cannot be used, so words
                     are often joined.</p>
                 <p class="footnote"><a href="#f8" id="F8" class="footnote">8. </a>See: <a href="http://donne.obdurodon.org/poetry.html">http://donne.obdurodon.org/poetry.html</a> This site contains a project
-                    under development by a student in the course “Computation Methods in the
+                    developed by a student in the University of Pittsburgh course “Computational Methods in the
                     Humanities” (ENGLIT 1610).</p>
                 <p class="footnote"><a href="#f9" id="F9" class="footnote">9. </a>See SGML: The
                     Reason Why and the First Published Hint: <a href="http://www.sgmlsource.com/history/jasis.htm">http://www.sgmlsource.com/history/jasis.htm</a> Journal of the American
@@ -568,7 +567,7 @@ information about HTML go to:http://www.w3schools.com/html/
                 <p class="footnote"><a href="#f11" id="F11" class="footnote">11. </a>For more
                     information on Unicode see the Unicode Consortium: <a href="http://unicode.org/">http://unicode.org/</a></p>
                 <p class="footnote"><a href="#f12" id="F12" class="footnote">12. </a>Danielewski,
-                    Mark Z. Mark Z. Danielewski's House of Leaves. New York: Pantheon, 2000.
+                    Mark Z. <i>House of Leaves</i>. New York: Pantheon, 2000.
                     Print.</p>
                 <p class="footnote"><a href="#f13" id="F13" class="footnote">13. </a>For the
                     source of this image see: <a href="http://onjava.com/onjava/2001/02/08/dom.html">http://onjava.com/onjava/2001/02/08/dom.html</a></p>
@@ -586,14 +585,13 @@ information about HTML go to:http://www.w3schools.com/html/
                     tree data.</p>
                 <p class="footnote"><a href="#f19" id="F19" class="footnote">19. </a>Derose, J.
                     Stephen, David G. Durand, Elli Mylonas, and Allen H. Renear “What is Text,
-                    Really?” Journal of Computing in Higher Education Winter 1990, Vol. I (2),
+                    Really?” <i>Journal of Computing in Higher Education</i> Winter 1990, Vol. I (2),
                     3-26</p>
                 <p class="footnote"><a href="#f20" id="F20" class="footnote">20. </a>Renear,
                     Allen, Elli Mylonas, and David Durand, “Refining our Notion of What Text Is”</p>
                 <p class="footnote"><a href="#f21" id="F21" class="footnote">21. </a>Renear,
                     Allen, Elli Mylonas, and David Durand, “Refining our Notion of What Text Is”</p>
-                <p class="footnote"><a href="#f22" id="F22" class="footnote">22. </a>Danielewski,
-                    Mark Z. Mark Z. Danielewski's House of Leaves.</p>
+                <p class="footnote"><a href="#f22" id="F22" class="footnote">22. </a>Mark Z. Danielewski's <i>House of Leaves</i>.</p>
                 <p class="footnote"><a href="#f23" id="F23" class="footnote">23. </a>For a
                     discussion of previous text encoding approaches, see: Derose, J. Stephen, David
                     G. Durand, Elli Mylonas, and Allen H. Renear “What is Text, Really?”</p>
