@@ -1347,14 +1347,12 @@
                     <item>XQuery Exercise 3: Upload one or more project files to the eXist-db database, and write some XQuery to output something useful to your project.</item>
                     <item>Read <ref target="http://ebeshero.github.io/thalaba/cytosc.html"><title level="a">An Introduction to Network Analysis and Cytoscape for XML Coders</title></ref></item>
                     <item><ref target="http://cytoscape.org/">Install Cytoscape on your computer</ref>, together with the appropriate Java package. Note: This is also installed in the campus computer labs, so you may work with it there, too or instead of on your own computer. If you have trouble with the installation, locate Cytoscape in the campus computer labs.
-                        Begin familiarizing yourself with the Cytoscape interface, working with Cytoscape session files (with .cys extension) posted in Class Examples, Network-Workshop folder in our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Try importing one of my Cytoscape session files (.cys) following my tutorial.
+                        Begin familiarizing yourself with the Cytoscape interface, working with Cytoscape session files (with .cys extension) posted in Class Examples, Network-Workshop folder in our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Try importing one of my Cytoscape session files (.cys) following our tutorial instructions.
                         
                     </item>
                     
                 </list>
                
-                
-                <!--MOVE -->
                 
             </div>
         </div>
@@ -1364,15 +1362,15 @@
             </head>
             <div type="inclass">
                 <p>XQuery from eXist to Web: Building the Database into the Web Project</p>
-                <p>Network Analysis: Network graphs and data</p>
-                <p>XQuery to Network Analysis: CSV and TSV Files for import data. Cytoscape: Processing and Filtering; Running the Network Analyzer. Common network statistics: degree centrality, node centrality, edge betweenness,
+                <p>Network Analysis: Network graphs and structured data</p>
+                <p>XQuery to Network Analysis: generating plain text data (CSV or TSV) for Cytoscape</p>
+                <p>What we do in Cytoscape: Processing and Filtering; Running the Network Analyzer. Common network statistics: degree centrality, node centrality, edge betweenness,
                     shortest paths</p>
-                    
-                    <!--<hi rend="em">XPath Exam</hi>-->
+         
         
             </div>
             <div type="assign">
-                <p>Complete <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></p> 
+                <p><hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></p> 
                 
             </div>
         </div>
@@ -1393,12 +1391,6 @@
             <item>Work on Project Midterm</item> 
                 </list>
                 
-                <!--MOVE -->
-                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
-                    3</ref></item>
-                    
-                    <item>[CHECK SCHEDULE / MOVE?] Work on <hi>Project Development Sprint or Take-Home Midterm</hi></item>
-                </list>
             </div>
         </div>
     </div>
@@ -1464,23 +1456,13 @@
                         of xml:ids with Schematron</ref></item>
                     
                 </list>
-                
-                
-                <!--MOVE -->
-                <!--DO THIS IMMEDIATELY FOLLOWING XSLT EX 1 IDENTITY TRANSFORM -->
-                <p>GIS and KML (Keyhole Markup Language for mapping). XQuery to KML Placemarks.</p>
-                <p>Saving output in the eXist database</p>
             </div>
             <div type="assign">
                 <list><item><hi rend="em"><ref target="SchematronExercise2.html">Schematron Exercise 2</ref></hi></item>
                     <item>Read our tutorial on <ref target="explainSchematronIdRefs.html">Coding with Unique Identifiers and How to Test for them with Schematron</ref>,
                         and use this in the Schematron homework: add <code>@xml:id</code> checking rules to your Schematron file, pulling from this tutorial.</item>
                     <item>Read our <ref target="http://newtfire.org/dh/explainXSLT.html">Introduction to XSLT</ref> in preparation for the next class.</item>
-                </list>
-                
-                
-               <!--MOVE --> 
-                <p><hi><ref target="XQueryExercise3.html">Pipeline to Mapping Exercise (XQuery + XSLT to KML)</ref></hi></p>
+                </list>               
             </div>
         </div>
     </div>
@@ -1494,13 +1476,7 @@
                 <p>The Weirdness that is XSL Template Matching: Where we use XPath, and where
                     we use <hi>pseudo-XPath patterns</hi> in XSLT.</p>
                 <p>Identity Transformations</p>
-                
-                
-                <!--MOVE -->
-                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
-                    and screen grid coordinates. </p>
-                <p>Introduce with <ref target="https://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p>
-                <p>Project Discussion: Working with project XML files in eXist-db</p>
+         
             </div>
             <div type="assign">
                 <list>
@@ -1517,12 +1493,6 @@
                         </list>
                     </item>
                 </list>
-                
-                
-              <!--MOVE -->  
-                <list><item>Work through <ref target="https://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
-                    Filters, gradients, examples, and reference are optional.</item>
-                    <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
             </div>
         </div>
         <div type="day">
@@ -1533,11 +1503,7 @@
                 <p>XSLT to HTML: How it works: the template rule for the document node, and
                     succeeding template rules.</p>
                 <p>What happens with <hi>xsl:apply-templates</hi>, <hi>xsl:value-of</hi>, and Attribute Value Templates.</p>
-                
-                
-                <!--MOVE -->
-                <p>XQuery to SVG: Pulling data for visualizing.</p>
-                <p>Choosing visualization formats: Timelines</p>
+   
                 <note>Sigma Tau Delta Conference</note>
             </div>
             <div type="assign">
@@ -1554,12 +1520,6 @@
                     </list>
                     </item>  
                 </list>
-                
-                
-                <!--MOVE-->
-                <list>
-                    <item><ref target="SVGExercise2_CDV.html">SVG Exercise 2 (plotting a timeline)</ref></item>
-                </list>
             </div>
         </div>
         <div type="day">
@@ -1568,14 +1528,13 @@
             </head>
             <div type="inclass">
                 <p>Project Work Day. Review/Consultation/Correction of XSLT Ex 2.</p>
-                
-                <!--MOVE -->
-                <p>Review of SVG timeline assignment.</p>
-                <p>Project files in eXist</p>
+                <p>Modal XSLT. Preview XSLT Ex 3.</p>              
                 <note>Sigma Tau Delta Conference</note>
             </div>
             <div type="assign">
-                <p><hi><ref target="SVGExercise3_CDV.html">SVG Exercise 3 (Part 2 of the Timeline)</ref></hi></p>
+                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
+                    3</ref></item>
+                </list>
             </div>
         </div>
     </div>
@@ -1585,10 +1544,12 @@
                 <date when="2018-03-26">M 3-26</date>
             </head>
             <div type="inclass">
-                <p>(XSLT or XQuery) to SVG: Making line and bar graphs, plotting axes.</p>
+                <p>GIS and KML (Keyhole Markup Language for mapping). XQuery to KML Placemarks.</p>
+                <p>Review saving and accessing XQuery output files in eXist-db</p>
             </div>
             <div type="assign">
-                <p><hi><ref target="SVGExercise4_CDV.html">SVG Exercise 4 XQuery to SVG</ref></hi>: (Stacked Bar Graph for the Graveyard Project)</p>
+                <p><hi><ref target="XQueryExercise3.html">Mapping Pipeline Exercise (XQuery + XSLT to KML)</ref></hi></p>
+                
             </div>
         </div>
         <div type="day">
@@ -1596,14 +1557,15 @@
                 <date when="2018-03-28">W 3-28</date>
             </head>
             <div type="inclass">
-                <p>XQuery to Network Analysis: generating plain text data for Cytoscape</p>
+                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+                    and screen grid coordinates. </p>
+                <p>Introduce with <ref target="https://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p>
+                <p>Project Discussion: Working with project XML files in eXist-db</p>
             </div>
             <div type="assign">
-                <list>
-                    
-                    <item>Start on <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></item>
-                    
-                </list>
+                <list><item>Work through <ref target="https://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
+                    Filters, gradients, examples, and reference are optional.</item>
+                    <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
             </div>
         </div>
         <div type="day">
@@ -1611,11 +1573,14 @@
                 <date when="2018-03-30">F 3-30</date>
             </head>
             <div type="inclass">
-                
+                <p>XQuery to SVG: Pulling data for visualizing.</p>
+                <p>Choosing visualization formats: Timelines</p> 
                 
             </div>
             <div type="assign">
-                <p>Complete <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></p>
+                <list>
+                    <item><ref target="SVGExercise2_CDV.html">SVG Exercise 2 (plotting a timeline)</ref></item>
+                </list>
             </div>
         </div>
     </div>
@@ -1625,11 +1590,13 @@
                 <date when="2018-04-02">M 4-02</date>
             </head>
             <div type="inclass">
-           
+                <p>Review of SVG timeline assignment.</p>
+                <p>Project files in eXist</p>
            
             </div>
             <div type="assign">
-                <p><hi><ref target="NetworkExercise2.html">XQuery to Network Analysis: Exercise, Part 2</ref></hi></p>
+                <p><hi><ref target="SVGExercise3_CDV.html">SVG Exercise 3 (Part 2 of the Timeline)</ref></hi></p>
+               
             </div>
         </div>
         <div type="day">
@@ -1637,13 +1604,16 @@
                 <date when="2018-04-04">W 4-04</date>
             </head>
             <div type="inclass">
-                <!--PLACEHOLDER FROM LAST SPRING STD CONF -->
-                <p>Project Data Viz Work Session</p>
+                <p>XQuery to SVG: Making line and bar graphs, plotting axes. How to plot stacked bars. </p>
+                
+
+                <!--PLACEHOLDER FROM LAST SPRING STD CONF 
+                <p>Project Data Viz Work Session</p> -->
             </div>
             <div type="assign">
-                <list><item>Prepare Data Visualization of your choice for project.</item>
-                <item>Read Obdurodon’s <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to
-                    Javascript</ref></item></list>
+                <p><hi><ref target="SVGExercise4_CDV.html">SVG Exercise 4 XQuery to SVG</ref></hi>: (Stacked Bar Graph for the Graveyard Project)</p>
+                <list><!--<item>Prepare Data Visualization of your choice for project.</item>-->
+                <item>Read Obdurodon’s <ref target="http://dh.obdurodon.org/javascript.xhtml">Introduction to Javascript</ref></item></list>
             </div>
         </div>
         <div type="day">
