@@ -33,9 +33,9 @@
       			
       <h3>How to Access our eXist XML database: </h3>
       			
-      <p>We are working with a particular XML database installed at the Pittsburgh Supercomputing Center(PSC) called eXist. Usually when we work on homework exercises and on project development, we will be working on the PSC eXist installation, but we can also write and run XQuery locally inside &lt;oXygen/&gt; by clicking on the little <q>XQuery Debugger</q> button right next to the <q>XSLT debugger</q> button in the top right of the &lt;oXygen/&gt; window to work with a batch of files we have saved locally. For our projects we tend to prefer working with an eXist installation either on a server or offline on a local computer because a) eXist has indexing tools that we use to make it more efficient to run over multiple collections stored on a remote server, and b) we can connect the XQuery scripts and XML files we have stored in eXist to our project websites. Here’s how to access our eXist database at the PSC:</p>
+      <p>We are working with a particular XML database called eXist-db, which we have installed on the NewtFire server. Usually when we work on homework exercises and on project development, we will be working on the PSC eXist installation, but we can also write and run XQuery locally inside &lt;oXygen/&gt; by clicking on the little <q>XQuery Debugger</q> button right next to the <q>XSLT debugger</q> button in the top right of the &lt;oXygen/&gt; window to work with a batch of files we have saved locally. For our projects we tend to prefer working with an eXist installation either on a server or offline on a local computer because a) eXist has indexing tools that we use to make it more efficient to run over multiple collections stored on a remote server, and b) we can connect the XQuery scripts and XML files we have stored in eXist to our project websites. Here’s how to access our eXist database at the PSC:</p>
       	<ol>
-      	   <li>In a web browser, go to <a href="http://dxcvm05.psc.edu:8080/">http://dxcvm05.psc.edu:8080/</a></li>
+      	   <li>In a web browser, go to <a href="http://newtfire.org:8338/">http://newtfire.org:8338/</a></li>
       	   <li>Wait for eXist to load, and it will show you a page of several icons/images.</li>
       	   <li>Look for the eXide button in the second row of icons and click on it. An interface will open where you can input XQuery code and work with the collections of files we have stored here.</li>
       	   <li>For our first assignments, a login is not strictly necessary, but as you work on projects or if you wish to save your XQuery code to a directory you create here, you will need to log in with a username and password. If you are an enrolled student in one of my digital humanities courses, I will likely have created a login for you, and for details please see Courseweb.</li>
@@ -392,8 +392,15 @@
        </pre>
      
       <h3>Namespaces and XQuery output formats</h3>
- <p>While we frequently write XQuery to output plain text or HTML, we can also write it to produce output code in a namespace, such as specialized forms of XML like TEI or KML. Watch this space for details as we develop this portion of the tutorial. <!--2016-03-02 ebb: DEVELOP THIS SECTION! -->
- </p>     
+ <p>While we frequently write XQuery to output plain text or HTML, we can also write it to produce output code in a namespace, such as specialized forms of XML like TEI or KML. Above, when we were processing XQuery on a TEI file for the Pacific project, we used a convenient line of code at the top of the file:
+ </p>    <pre>declare default element namespace "http://www.tei-c.org/ns/1.0";</pre>
+      <p>Using this means that the default format of all elements being processed <em>and</em> output iwll be in TEI, and that was fine for our processing above. It may not be okay, though, when you need to process the special Wordhoard TEI Shakespeare collection to convert its TEI elements into HTML elements. Here we need to declare <em>two</em> namespaces, and we have to make a decision which one should be the default. The other one that isn't marked as the default will have to be distinguished, using a  <strong>namespace prefix</strong>, like this: <code>tei:text</code> (for the TEI element <code>&lt;text&gt;</code>). When transforming from TEI to HTML, we recommend setting the output HTML as the default namespace and treating TEI elements with prefixes (and generally speaking we suggest setting the namespace format of the output file as the default namespace in your XQuery code. Here is how to set a default namespace line and a namespace line that requires prefixes: </p>
+      <pre>
+         declare default element namespace "http://www.w3.org/1999/xhtml";
+         declare namespace tei="http://www.tei-c.org/ns/1.0";
+         (:Continue writing XQuery here... :)
+      </pre>
+      <p>The top line of our example above is a default element namespace line, which we're setting for our output format, the HTML namespace. (We found it by opening an HTML file in oXygen, and just pasted it in here.) The default element namespace won't require us to set prefixes, but if we want to be processing  code from a different namespace, we need to declare it too. The TEI elements being processed will all require the <code>tei:</code> prefix in front for the code to properly distinguish these elements. Note: Attributes are in no namespace at all, but their parent (hosting) elements are what is namespaced. That means you only need to use the namespace prefix on the element names, not the attributes.</p>    
       <h3>Links to Some Excellent XQuery Resources:</h3>
       
       <ul>
