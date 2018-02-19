@@ -1163,7 +1163,7 @@
                 <date when="2018-02-09">F 2-09</date>
             </head>
             <div type="inclass">
-                <p>The CSS Box Model, positioning, and controlling layout. What are namespaces and why do they matter? Namespaces and the web. Web browsers and display variations. Server Side vs. Client Side. Server Side Includes (SSIs) and setting permissions for them to work.</p>
+                <p>What are namespaces and why do they matter? Namespaces and the web. Web browsers and display variations. Server Side vs. Client Side. Server Side Includes (SSIs) and setting permissions for them to work.</p>
             </div>
             <div type="assign">
                 <list>
@@ -1186,12 +1186,14 @@
                 <date when="2018-02-12">M 2-12</date>
             </head>
             <div type="inclass">
-                <p>Review for Regular Expressions Exam.</p>
+                <p>The CSS Box Model. Positioning, and controlling layout with HTML div, span elements and CSS flex.</p>
+                <p>Regular Expressions Take-Home Exam (Projects)</p>
                 <p>How XML code structure matters for web transforms and delivery: Why we need
                     to navigate XML with XPath. Introducing XPath: Paths, Axes.</p>
             </div>
             <div type="assign">
                 <list>
+                    <item><hi>HTML Exercise 3:</hi> Implement div (or section) and span elements and try using flex in your HTML pages on newtFire. Teams: create a project webpage if you have not done so already.</item>
                     <item>First, carefully read our <ref target="explainXPath.html">Introduction
                         to XPath: <title level="a">Follow the XPath!</title></ref> As you
                         read, try experimenting with the XPath expressions on our page, by
@@ -1201,7 +1203,6 @@
                     <item><ref target="XPathExercise1.html"><hi rend="em">XPath Exercise
                         1</hi></ref>
                     </item>
-                    <item>Review for Regular Expressions exam.</item>
                 </list>
             </div>
         </div>
@@ -1210,7 +1211,6 @@
                 <date when="2018-02-14">W 2-14</date>
             </head>
             <div type="inclass">
-                <p><hi rend="em">Regular Expressions Exam.</hi></p>
                 <p>Using XPath to climb trees—up and down and side to side. Predicate
                     expressions: <hi rend="em">[ ]</hi>. <hi rend="em">(Grouping)</hi> and <hi
                         rend="em">[Position()]</hi>. XPath syntax: some tricks.</p>
@@ -1222,7 +1222,8 @@
                     <item>For Friday: Begin reading <title level="a"><ref
                         target="http://dh.obdurodon.org/functions.xhtml">The XPath
                         Functions We Use Most</ref></title>.</item>
-                    <item>Through next Monday: DHClass-Hub Discussion of Steve Ramsay’s blog posting on  <ref target="http://stephenramsay.us/2013/04/30/dh-and-cs/"><title level="a">DH and CS</title></ref>, and choose at least one of the following two to continue reading and discussing on our DHClass-Hub:
+                    <item>For Friday: <hi>HTML Exercise 3:</hi> Implement div (or section) and span elements and try using flex in your HTML pages on newtFire. Teams: create a project webpage if you have not done so already.</item>
+                    <item>Through next Monday: DHClass-Hub Discussion: Choose at least one of the following two posts by Steve Ramsay to continue reading and discussing on our DHClass-Hub:
                         <list>
                             <item> <ref
                                 target="https://web.archive.org/web/20140604085234/http://www.playingwithhistory.com/wp-content/uploads/2010/04/hermeneutics.pdf">
@@ -1243,9 +1244,7 @@
             </head>
             <div type="inclass">
                 <p>XPath Functions: some common functions we use and how to write them: <hi
-                    rend="em">count(), not(), distinct-values()</hi>. XPath for the <hi
-                        rend="em">text() node</hi> to grab strings: <hi rend="em"
-                            >string-join()</hi>, <hi rend="em">contains(string 1, string 2)</hi>. </p>
+                    rend="em">count(), not(), distinct-values()</hi>.  </p>
                 <p>Using Regular Expressions in XPath.</p>
             </div>
             <div type="assign">
@@ -1266,23 +1265,176 @@
                 <date when="2018-02-19">M 2-19</date>
             </head>
             <div type="inclass">
-                <p>More on XPath String functions.</p>
-                <p>Applying XPath.</p>
+                <p>Introducing XQuery and <ref target="http://newtfire.org:8338">the eXist-db on newtFire</ref></p>
+                <p>Writing XPath in eXist-db</p>
+                <p>XPath String functions. XPath for the <hi
+                    rend="em">text() node</hi> to grab strings: <hi rend="em"
+                        >string-join()</hi>, <hi rend="em">contains(string 1, string 2)</hi>.</p>
+                <p>Learning to write XQuery: collections and documents, queries and FLWORs</p>
             </div>
             <div type="assign">
                 <list>
-                    <item>
-                        <ref target="XPathExercise4.html"><hi rend="em">XPath Exercise 4:</hi>
-                            Manipulating Strings</ref>. </item>
-                    <item>Read our <ref
-                        target="explainSchematron.html">Guide
-                        to Schema Writing with Schematron</ref>.</item>
+                    <item>Read and check out some things you can try in our newtFire eXist environment at <ref target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay’s XQuery Tutorial</ref> and our <ref
+                            target="http://newtfire.org/dh/explainXQuery.html">Introduction to XQuery and the eXist XML Database</ref>.</item>
+                    <item><hi><ref target="XQueryExercise1.html">XQuery Exercise
+                        1 with XPath String Functions (DEVELOPING)</ref></hi>
+                       <!-- <ref target="XPathExercise4.html"><hi rend="em">XPath Exercise 4:</hi>
+                            Manipulating Strings</ref>.--> </item>
+                    
+  
+                    
                 </list>
             </div>
         </div>
         <div type="day">
             <head>
                 <date when="2018-02-21">W 2-21</date>
+            </head>
+            <div type="inclass">
+                
+               <list> <item>XQuery: Writing FLWOR statements and outputting HTML lists and tables</item>
+                <item>Outputting files and saving them to the eXist-db database for previewing</item>
+                <item>XQuery online and offline: in eXist and in &lt;oXygen/&gt;</item></list>
+                
+                
+            </div>
+            <div type="assign">
+                <list>
+          
+                    <item><hi><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></hi></item>
+                    
+                  
+                    
+                </list>
+            </div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2018-02-23">F 2-23</date>
+            </head>
+            <div type="inclass">
+                <list>
+                    
+                    <item>Review XQuery Ex 2: FLWOR for-loops and outputs.</item>
+                    <item>Saving and Accessing files in eXist-db</item>
+                    <item>Introduce Project Midterm Sprint and preview next week</item>
+                   
+                </list>
+                <note>TEI Council face-to-face: Cologne</note>
+            </div>
+            <div type="assign">
+                <list>
+                    <item>Apply corrections or revisions to XQuery Ex 2 as needed.</item>
+                    <item>Start on <hi>Project Midterm</hi></item>
+                </list>
+                
+            </div>
+        </div>
+    </div>
+    <div type="week" n="8">
+        <div type="day">
+            <head>
+                <date when="2018-02-26">M 2-26</date>
+            </head>
+            <div type="inclass">
+               
+                <p>Project Sprint Work Day: Work with your Project Teams and Instructors on Coding Sprint.</p>
+                
+                <note>TEI Council face-to-face: Cologne</note>
+            </div>
+            <div type="assign">
+                <list>
+                    <item>XQuery Exercise 3: Upload one or more project files to the eXist-db database, and write some XQuery to output something useful to your project.</item>
+                    <item>Read <ref target="http://ebeshero.github.io/thalaba/cytosc.html"><title level="a">An Introduction to Network Analysis and Cytoscape for XML Coders</title></ref></item>
+                    <item><ref target="http://cytoscape.org/">Install Cytoscape on your computer</ref>, together with the appropriate Java package. Note: This is also installed in the campus computer labs, so you may work with it there, too or instead of on your own computer. If you have trouble with the installation, locate Cytoscape in the campus computer labs.
+                        Begin familiarizing yourself with the Cytoscape interface, working with Cytoscape session files (with .cys extension) posted in Class Examples, Network-Workshop folder in our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Try importing one of my Cytoscape session files (.cys) following my tutorial.
+                        
+                    </item>
+                    
+                </list>
+               
+                
+                <!--MOVE -->
+                
+            </div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2018-02-28">W 2-28</date>
+            </head>
+            <div type="inclass">
+                <p>XQuery from eXist to Web: Building the Database into the Web Project</p>
+                <p>Network Analysis: Network graphs and data</p>
+                <p>XQuery to Network Analysis: CSV and TSV Files for import data. Cytoscape: Processing and Filtering; Running the Network Analyzer. Common network statistics: degree centrality, node centrality, edge betweenness,
+                    shortest paths</p>
+                    
+                    <!--<hi rend="em">XPath Exam</hi>-->
+        
+            </div>
+            <div type="assign">
+                <p>Complete <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></p> 
+                
+            </div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2018-03-02">F 3-02</date>
+            </head>
+            <div type="inclass">
+                <list><item>XQuery to Network Analysis: Check for problems: TSV data extracted from XML.</item><item>Importing to Cytoscape and running the Network Analyzer.</item>
+                </list>
+                
+                <!--MOVE-->
+                <p>Review of template matching and processing XML. </p>
+                <p>"Push" vs. "Pull" processing, and how to write XSLT to output HTML that doesn't follow the structure of the input XML. XSLT Conditions: <code>xsl:if</code> and <code>xsl:choose</code>. Processing TEI with xpath-default-namespace.</p>
+            </div>
+            <div type="assign">
+                <list><item><hi><ref target="NetworkExercise2.html">XQuery to Network Analysis: Exercise, Part 2</ref></hi></item>
+            <item>Work on Project Midterm</item> 
+                </list>
+                
+                <!--MOVE -->
+                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
+                    3</ref></item>
+                    
+                    <item>[CHECK SCHEDULE / MOVE?] Work on <hi>Project Development Sprint or Take-Home Midterm</hi></item>
+                </list>
+            </div>
+        </div>
+    </div>
+    <div type="week" n="9">
+        <div type="day">
+            <head>
+                <date when="2018-03-05">M 3-05 - F 3-09</date>
+            </head>
+            <div type="inclass">
+                <p><hi>Spring Break: No Classes.</hi></p>
+            </div>
+            <div type="assign">
+                <p>Work on Project Midterm Sprint, and XQuery to Network Analysis</p>
+            </div>
+        </div>
+    </div>
+    <div type="week" n="10">
+        <div type="day">
+            <head>
+                <date when="2018-03-12">M 3-12</date>
+            </head>
+            <div type="inclass">
+               <p>XQuery to Network Analysis: Survey issues and outputs. Altering and styling network graphs.</p>
+               <p>XQuery in projects.</p>
+            </div>
+            <div type="assign">
+                <list>
+                    <item>Revise Network Analyses as needed. Work on Project-related XQuery.</item>
+                    <item><hi>Complete Project Sprint (Midterm)</hi></item>
+                    <item>Read our <ref target="explainSchematron.html">Guide
+                        to Schema Writing with Schematron</ref>.</item></list>
+            </div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2018-03-14">W 3-14</date>
             </head>
             <div type="inclass">
                 <p>writing an XPath-based Schema language: Schematron, and how we use it with
@@ -1294,23 +1446,30 @@
                     <item> Read our <ref
                         target="explainSchematron.html">Guide
                         to Schema Writing with Schematron</ref>.</item>
-                    <item>Work on <hi>Project Midterm</hi></item>
                     <item><hi rend="em"><ref
                         target="SchematronExercise1.html">Schematron Exercise 1</ref></hi></item>   
+                    
+                   
                 </list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2018-02-23">F 2-23</date>
+                <date when="2018-03-16">F 3-16</date>
             </head>
             <div type="inclass">
-                <list>
+                <list> 
                     <item>Schematron in Projects</item>
                     <item>Using Personographies, Placeographies, Prosopographies: <ref target="explainSchematronIdRefs.html">Keeping track
                         of xml:ids with Schematron</ref></item>
+                    
                 </list>
-                <note>TEI Council face-to-face: Cologne</note>
+                
+                
+                <!--MOVE -->
+                <!--DO THIS IMMEDIATELY FOLLOWING XSLT EX 1 IDENTITY TRANSFORM -->
+                <p>GIS and KML (Keyhole Markup Language for mapping). XQuery to KML Placemarks.</p>
+                <p>Saving output in the eXist database</p>
             </div>
             <div type="assign">
                 <list><item><hi rend="em"><ref target="SchematronExercise2.html">Schematron Exercise 2</ref></hi></item>
@@ -1318,22 +1477,30 @@
                         and use this in the Schematron homework: add <code>@xml:id</code> checking rules to your Schematron file, pulling from this tutorial.</item>
                     <item>Read our <ref target="http://newtfire.org/dh/explainXSLT.html">Introduction to XSLT</ref> in preparation for the next class.</item>
                 </list>
+                
+                
+               <!--MOVE --> 
+                <p><hi><ref target="XQueryExercise3.html">Pipeline to Mapping Exercise (XQuery + XSLT to KML)</ref></hi></p>
             </div>
         </div>
     </div>
-    <div type="week" n="8">
+    <div type="week" n="11">
         <div type="day">
             <head>
-                <date when="2018-02-26">M 2-26</date>
+                <date when="2018-03-19">M 3-19</date>
             </head>
-            <div type="inclass">
-                <p>Introducing XSLT and XQuery: how we use each.</p>
-                <p>Orientation to XSLT (eXtensible Stylesheet Language Transformations). XSL
-                    Transformations from XML to XML, and from XML to HTML. Namespaces</p>
+            <div type="inclass">   
+                <p>Orientation to XSLT (eXtensible Stylesheet Language Transformations). When we use XSLT vs. When we use XQuery. XSL Transformations from XML to XML, and from XML to HTML. Namespaces</p>
                 <p>The Weirdness that is XSL Template Matching: Where we use XPath, and where
                     we use <hi>pseudo-XPath patterns</hi> in XSLT.</p>
                 <p>Identity Transformations</p>
-                <note>TEI Council face-to-face: Cologne</note>
+                
+                
+                <!--MOVE -->
+                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+                    and screen grid coordinates. </p>
+                <p>Introduce with <ref target="https://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p>
+                <p>Project Discussion: Working with project XML files in eXist-db</p>
             </div>
             <div type="assign">
                 <list>
@@ -1341,7 +1508,7 @@
                     <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an
                         Identity Transformation</ref></hi>.</item>
                     <item><hi rend="em">To read this week</hi>, or before you start work on XSLT
-                        2 (by this weekend): <list>
+                        2:<list>
                             <item><title level="a"><ref
                                 target="http://dh.obdurodon.org/developing-xslt.xhtml"
                                 >Developing an XSLT Stylesheet</ref></title></item>
@@ -1350,20 +1517,28 @@
                         </list>
                     </item>
                 </list>
+                
+                
+              <!--MOVE -->  
+                <list><item>Work through <ref target="https://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
+                    Filters, gradients, examples, and reference are optional.</item>
+                    <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
             </div>
         </div>
         <div type="day">
             <head>
-                <date when="2018-02-28">W 2-28</date>
+                <date when="2018-03-21">W 3-21</date>
             </head>
             <div type="inclass">
-                <p><hi rend="em">XPath Exam</hi>
-                    <!--ebb: Or we could make this a (new) Schematron exam! -->
-                </p>
                 <p>XSLT to HTML: How it works: the template rule for the document node, and
                     succeeding template rules.</p>
                 <p>What happens with <hi>xsl:apply-templates</hi>, <hi>xsl:value-of</hi>, and Attribute Value Templates.</p>
-                <note>TEI Council face-to-face: Cologne</note>
+                
+                
+                <!--MOVE -->
+                <p>XQuery to SVG: Pulling data for visualizing.</p>
+                <p>Choosing visualization formats: Timelines</p>
+                <note>Sigma Tau Delta Conference</note>
             </div>
             <div type="assign">
                 <list>
@@ -1379,119 +1554,9 @@
                     </list>
                     </item>  
                 </list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2018-03-02">F 3-02</date>
-            </head>
-            <div type="inclass">
-                <p>Review of template matching and processing XML. </p>
-                <p>"Push" vs. "Pull" processing, and how to write XSLT to output HTML that doesn't follow the structure of the input XML. XSLT Conditions: <code>xsl:if</code> and <code>xsl:choose</code>. Processing TEI with xpath-default-namespace.</p>
-            </div>
-            <div type="assign">
-                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
-                    3</ref></item>
-                    <item><!--ebb: Update the XQUERY MATERIALS for STOCKHOLM NEWTFIRE!-->Read <ref
-                        target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay’s
-                        XQuery Tutorial</ref> and our <ref
-                            target="http://newtfire.org/dh/explainXQuery.html">Introduction to
-                            XQuery and the eXist XML Database</ref> in preparation for the next
-                        class.</item>
-                    <item>[CHECK SCHEDULE / MOVE?] Work on <hi>Project Development Sprint or Take-Home Midterm</hi></item>
-                </list>
-            </div>
-        </div>
-    </div>
-    <div type="week" n="9">
-        <div type="day">
-            <head>
-                <date when="2018-03-05">M 3-05 - F 3-09</date>
-            </head>
-            <div type="inclass">
-                <p><hi>Spring Break: No Classes.</hi></p>
-            </div>
-            <div type="assign">
-                <p>...</p>
-            </div>
-        </div>
-    </div>
-    <div type="week" n="10">
-        <div type="day">
-            <head>
-                <date when="2018-03-12">M 3-12</date>
-            </head>
-            <div type="inclass">
-                <p>Introducing XQuery and eXist, the XML database. </p>
-                <p>Learning to write XQuery: collections and documents, queries and FLWORs</p>
-                <p>XQuery online and offline: in eXist and in &lt;oXygen/&gt;</p>
-            </div>
-            <div type="assign">
-                <list><item>Work with <ref target="http://www.stylusstudio.com/xquery-primer.html"
-                    >Michael Kay’s XQuery Tutorial</ref> and our <ref
-                        target="http://newtfire.org/dh/explainXQuery.html">Introduction to
-                        XQuery and the eXist XML Database</ref> as you orient yourself to
-                    XQuery and the eXist database environment.</item>
-                    <item><hi><ref target="XQueryExercise1.html">XQuery Exercise
-                        1</ref></hi></item>
-                </list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2018-03-14">W 3-14</date>
-            </head>
-            <div type="inclass">
-                <p>XQuery: Writing FLWOR statements and outputting HTML</p>
-            </div>
-            <div type="assign">
-                <list>
-                    <item><hi>Complete Project Sprint (Midterm)</hi></item>
-                    <item><hi><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></hi></item>
-                   
-                </list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2018-03-16">F 3-16</date>
-            </head>
-            <div type="inclass">
-                <p>GIS and KML (Keyhole Markup Language for mapping). XQuery to KML Placemarks.</p>
-                <p>Saving output in the eXist database</p>
-            </div>
-            <div type="assign">
-                <p><hi><ref target="XQueryExercise3.html">XQuery Exercise 3 (XQuery + XSLT to KML)</ref></hi></p>
-            </div>
-        </div>
-    </div>
-    <div type="week" n="11">
-        <div type="day">
-            <head>
-                <date when="2018-03-19">M 3-19</date>
-            </head>
-            <div type="inclass">
-                <p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
-                    and screen grid coordinates. </p>
-                <p>Introduce with <ref target="https://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p>
-                <p>Project Discussion: Working with project XML files in eXist-db</p>
-            </div>
-            <div type="assign">
-                <list><item>Work through <ref target="https://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
-                    Filters, gradients, examples, and reference are optional.</item>
-                    <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2018-03-21">W 3-21</date>
-            </head>
-            <div type="inclass">
-                <p>XQuery to SVG: Pulling data for visualizing.</p>
-                <p>Choosing visualization formats: Timelines</p>
-                <note>Sigma Tau Delta Conference</note>
-            </div>
-            <div type="assign">
+                
+                
+                <!--MOVE-->
                 <list>
                     <item><ref target="SVGExercise2_CDV.html">SVG Exercise 2 (plotting a timeline)</ref></item>
                 </list>
@@ -1502,6 +1567,9 @@
                 <date when="2018-03-23">F 3-23</date>
             </head>
             <div type="inclass">
+                <p>Project Work Day. Review/Consultation/Correction of XSLT Ex 2.</p>
+                
+                <!--MOVE -->
                 <p>Review of SVG timeline assignment.</p>
                 <p>Project files in eXist</p>
                 <note>Sigma Tau Delta Conference</note>
@@ -1532,11 +1600,7 @@
             </div>
             <div type="assign">
                 <list>
-                    <item>Read <ref target="http://ebeshero.github.io/thalaba/cytosc.html"><title level="a">An Introduction to Network Analysis and Cytoscape for XML Coders</title></ref></item>
-                    <item><ref target="http://cytoscape.org/">Install Cytoscape on your computer</ref>, together with the appropriate Java package. Note: This is also installed in the campus computer labs, so you may work with it there, too or instead of on your own computer. If you have trouble with the installation, locate Cytoscape in the campus computer labs.
-                        Begin familiarizing yourself with the Cytoscape interface, working with Cytoscape session files (with .cys extension) posted in Class Examples, Network-Workshop folder in our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Try importing one of my Cytoscape session files (.cys) following my tutorial.
-                        
-                    </item>
+                    
                     <item>Start on <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></item>
                     
                 </list>
@@ -1547,10 +1611,8 @@
                 <date when="2018-03-30">F 3-30</date>
             </head>
             <div type="inclass">
-                <p>XQuery to Network Analysis: Processing and Filtering; Running the Network Analyzer.
-                    Common Network stats: degree centrality, node centrality, edge betweenness,
-                    shortest paths</p>
-                <p>XQuery from eXist to Web: Building the Database into the Web Project</p>
+                
+                
             </div>
             <div type="assign">
                 <p>Complete <hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></p>
@@ -1563,7 +1625,8 @@
                 <date when="2018-04-02">M 4-02</date>
             </head>
             <div type="inclass">
-                <p>XQuery to Network Analysis: Extracting TSV data from XML. Importing to Cytoscape and running the Network Analyzer.</p>
+           
+           
             </div>
             <div type="assign">
                 <p><hi><ref target="NetworkExercise2.html">XQuery to Network Analysis: Exercise, Part 2</ref></hi></p>
