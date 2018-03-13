@@ -1425,19 +1425,22 @@
             <head>
                 <date when="2018-03-14">W 3-14</date>
             </head>
-            <div type="inclass">
-                <p>writing an XPath-based Schema language: Schematron, and how we use it with
-                    Relax-NG</p>
-                <p>Examples of Schematron in our projects</p>
+            <div type="inclass"><p>Project Work Day; Orientation to TEI ODD-generated schemas customized for projects.</p>
+                <!--<p>writing an XPath-based Schema language: Schematron, and how we use it with
+                    Relax-NG</p>-->
+                <!--<p>Examples of Schematron in our projects</p>-->
             </div>
             <div type="assign">
                 <list>
-                    <item> Read our <ref
+                    <item>Perfect your project schema and markup, with emphasis on consistency and efficiency for addressing project research questions.</item>
+                    <item>Complete Midterm Sprint</item>
+                    <item>Read our <ref target="http://newtfire.org/dh/explainXSLT.html">Introduction to XSLT</ref> in preparation for the next class.</item>
+                    <!--<item> Read our <ref
                         target="explainSchematron.html">Guide
                         to Schema Writing with Schematron</ref>.</item>
                     <item><hi rend="em"><ref
                         target="SchematronExercise1.html">Schematron Exercise 1</ref></hi></item>   
-                    
+                    -->
                    
                 </list>
             </div>
@@ -1448,20 +1451,37 @@
             </head>
             <div type="inclass">
                 <list> 
-                    <item>Schematron in Projects</item>
+                    <!--<item>Schematron in Projects</item>
                     <item>Using Personographies, Placeographies, Prosopographies: <ref target="explainSchematronIdRefs.html">Keeping track
-                        of xml:ids with Schematron</ref></item>
-                    
+                        of xml:ids with Schematron</ref></item>-->
+                    <item>Orientation to XSLT (eXtensible Stylesheet Language Transformations). When we use XSLT vs. When we use XQuery. XSL Transformations from XML to XML, and from XML to HTML. Namespaces</item>
+                    <item>The Weirdness that is XSL Template Matching: Where we use XPath, and where
+                        we use <hi>pseudo-XPath patterns</hi> in XSLT.</item>
+                    <item>Identity Transformations</item>
                 </list>
             </div>
             <div type="assign">
-                <list><item><hi rend="em"><ref target="SchematronExercise2.html">Schematron Exercise 2</ref></hi></item>
+                <!--<list><item><hi rend="em"><ref target="SchematronExercise2.html">Schematron Exercise 2</ref></hi></item>
                     <item>Read our tutorial on <ref target="explainSchematronIdRefs.html">Coding with Unique Identifiers and How to Test for them with Schematron</ref>,
-                        and use this in the Schematron homework: add <code>@xml:id</code> checking rules to your Schematron file, pulling from this tutorial.</item>
-                    <item>Read our <ref target="http://newtfire.org/dh/explainXSLT.html">Introduction to XSLT</ref> in preparation for the next class.</item>
-                </list>               
+                        and use this in the Schematron homework: add <code>@xml:id</code> checking rules to your Schematron file, pulling from this tutorial.</item></list>-->
+                    <list>
+                        <item>Read and refer to our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
+                        <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an
+                            Identity Transformation</ref></hi>.</item>
+                        <item><hi rend="em">To read this week</hi>, or before you start work on XSLT
+                            2:<list>
+                                <item><title level="a"><ref
+                                    target="http://dh.obdurodon.org/developing-xslt.xhtml"
+                                    >Developing an XSLT Stylesheet</ref></title></item>
+                                <item><title level="a"><ref
+                                    target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in                             algorithms</ref></title></item>                           
+                            </list>
+                              
+                        </item>
+                    </list>
             </div>
         </div>
+       
     </div>
     <div type="week" n="11">
         <div type="day">
@@ -1469,41 +1489,10 @@
                 <date when="2018-03-19">M 3-19</date>
             </head>
             <div type="inclass">   
-                <p>Orientation to XSLT (eXtensible Stylesheet Language Transformations). When we use XSLT vs. When we use XQuery. XSL Transformations from XML to XML, and from XML to HTML. Namespaces</p>
-                <p>The Weirdness that is XSL Template Matching: Where we use XPath, and where
-                    we use <hi>pseudo-XPath patterns</hi> in XSLT.</p>
-                <p>Identity Transformations</p>
-         
-            </div>
-            <div type="assign">
-                <list>
-                    <item>Read and refer to our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
-                    <item><hi rend="em"><ref target="XSLTExercise1.html">XSLT Exercise 1: an
-                        Identity Transformation</ref></hi>.</item>
-                    <item><hi rend="em">To read this week</hi>, or before you start work on XSLT
-                        2:<list>
-                            <item><title level="a"><ref
-                                target="http://dh.obdurodon.org/developing-xslt.xhtml"
-                                >Developing an XSLT Stylesheet</ref></title></item>
-                            <item><title level="a"><ref
-                                target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in                             algorithms</ref></title></item>                           
-                        </list>
-                    </item>
-                </list>
-            </div>
-        </div>
-        <div type="day">
-            <head>
-                <date when="2018-03-21">W 3-21</date>
-            </head>
-            <div type="inclass">
                 <p>XSLT to HTML: How it works: the template rule for the document node, and
                     succeeding template rules.</p>
-                <p>What happens with <hi>xsl:apply-templates</hi>, <hi>xsl:value-of</hi>, and Attribute Value Templates.</p>
-                <!--  <p>Review of template matching and processing XML. </p>
-                <p>"Push" vs. "Pull" processing, and how to write XSLT to output HTML that doesn't follow the structure of the input XML. XSLT Conditions: <code>xsl:if</code> and <code>xsl:choose</code>. Processing TEI with xpath-default-namespace.</p>-->
-   
-                <note>Sigma Tau Delta Conference</note>
+                <p>What happens with <hi>xsl:apply-templates</hi>, <hi>xsl:value-of</hi>, and Attribute Value Templates.</p> 
+         
             </div>
             <div type="assign">
                 <list>
@@ -1519,6 +1508,25 @@
                     </list>
                     </item>  
                 </list>
+                 
+            </div>
+        </div>
+        <div type="day">
+            <head>
+                <date when="2018-03-21">W 3-21</date>
+            </head>
+            <div type="inclass">
+                <p>Review/Consultation/Correction of XSLT Ex 2.</p>
+                <p>Modal XSLT. Preview XSLT Ex 3.</p>  
+                <!--  <p>Review of template matching and processing XML. </p>
+                <p>"Push" vs. "Pull" processing, and how to write XSLT to output HTML that doesn't follow the structure of the input XML. XSLT Conditions: <code>xsl:if</code> and <code>xsl:choose</code>. Processing TEI with xpath-default-namespace.</p>-->
+   
+                <note>Sigma Tau Delta Conference</note>
+            </div>
+            <div type="assign">
+                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
+                    3</ref></item>
+                </list>
             </div>
         </div>
         <div type="day">
@@ -1526,13 +1534,12 @@
                 <date when="2018-03-23">F 3-23</date>
             </head>
             <div type="inclass">
-                <p>Project Work Day. Review/Consultation/Correction of XSLT Ex 2.</p>
-                <p>Modal XSLT. Preview XSLT Ex 3.</p>              
+                <p>Project Work Day. Review/Consultation on XSLT Ex 3.</p>
+                           
                 <note>Sigma Tau Delta Conference</note>
             </div>
             <div type="assign">
-                <list><item><ref target="XSLTExercise3_CDV.html">XSLT Exercise
-                    3</ref></item>
+                <list><item>Homework: XSLT or XQuery on Your Project.</item>
                 </list>
             </div>
         </div>
