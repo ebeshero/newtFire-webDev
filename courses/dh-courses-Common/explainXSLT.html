@@ -267,7 +267,7 @@
         &lt;li&gt;
             <span class="code">&lt;xsl:apply-templates select="head/l"/&gt;</span>
             &lt;ul&gt;
-                <span class="code">&lt;xsl:apply-templates select=".//p/placeName"/&gt;</span>
+                <span class="code">&lt;xsl:apply-templates select="descendant::p/placeName"/&gt;</span>
                 <span style="color:green;">&lt;!--ebb: In this stylesheet, we wanted to include only the placeName elements inside the body paragraphs of the chapters. 
                    So we set our @select statement to step down and collect only these placeNames --&gt;</span>
             &lt;/ul&gt;
@@ -275,11 +275,15 @@
     <span class="code">&lt;/xsl:template&gt;</span>
     <span class="code">&lt;xsl:template match="p/placeName"&gt;</span>
         <span style="color:green;">&lt;!--ebb: This template rule matches on a pattern: 
-           Any time this rule is called, it finds a placeName that is the child of a body paragraph. In the previous template rule, we called for this template to be applied *only selectively* 
-           that is, *only to the placeNames inside the paragraphs within chapter div elements.* So this template rule will only fire under those selective conditions. --&gt;</span>
+           Any time this rule is called, it finds a placeName that is the child of a body paragraph. 
+           In the previous template rule, we called for this template to be applied *only selectively* 
+           that is, *only to the placeNames inside the paragraphs within chapter div elements.* 
+           So this template rule will only fire under those selective conditions. --&gt;</span>
         <span class="code">&lt;li&gt;&lt;xsl:apply-templates/&gt;</span>
-        <span style="color:green;">&lt;!--ebb: When we don't use an @select on apply-templates, we simply output the content of the element we're matching on, and we output it as plain text. 
-           Try copying and pasting this XSLT into oXygen, run it over the Georg Forster file, and study the output HTML. As you'll see from the output, perhaps we should consider modifying this rule! 
+        <span style="color:green;">&lt;!--ebb: When we don't use an <code>@select</code> on apply-templates, we simply pass the contents of the current element being processed on to whatever template rules 
+           in the document are ready to process it, and if there is only plain text inside, plain text will be output. 
+           Try copying and pasting this XSLT into oXygen, run it over the Georg Forster file, and study the output HTML. 
+           As you’ll see from the output, perhaps we should consider modifying this rule! 
            We seem to be outputting note elements that are children of placeName in this document, which introduces some clutter to our output results! 
            Sometimes running a transformation can show us some things we may want to change about our source code, 
            or things we can try to exclude or modify in our XSLT transformation. --&gt;</span>
@@ -297,13 +301,25 @@
          Where we need to reach in and grab more deeply nested, repeating elements in the hierarchy, we need to invoke and fire new template rules, via <span class="code">xsl:apply-templates</span>, 
          which we can specify as needed with the <span class="code">@select</span> attribute to direct which parts of the XML file will be consumed and processed in particular lists or positions in the output HTML document. Notice that the <span class="code">@select</span> attribute on <span class="code">xsl:apply-templates</span> is a <strong>literal XPath expression</strong>. In the template rule matching <span class="code">div @type="chapter"</span> we see two ways of stepping down into a literal XPath from the current context node,
          whatever it is: In the <em>first</em> <span class="code">xsl:apply-templates @select</span>, we step into a child node and then down another path step to the <span class="code">&lt;l&gt;</span> (or line) element that is the child of head:
-         <span class="code">head/l</span>. In the <em>second</em> <span class="code">xsl:apply-templates @select</span>, we use the <strong>"dot" notation</strong> to indicate the current context node. This dot notation, <span class="code">.</span>, is very important
-         because when there is nothing indicated to the left of it our <span class="code">//</span> descendent axis notation (or a <span class="code">/</span> child axis notation) would otherwise be read as starting from the root of the
-         XML tree and heading all the way down, rather than reading within a specific chapter and looking all the way down through its children and children ’s children <em>only within the chapter</em>.  This is because <span class="code">xsl:apply-templates @select</span> is a <strong>literal XPath expression</strong> that <em>must be defined in terms of the current context node</em>, quite unlike what we described with the <strong>“XPath-like”</strong> syntax in the template’s <span class="code">@match</span>. Notice that we only need to use the dot notation when we are designating the descendant axis from the current context node. We do not use it here to step down to the <em>immediate child</em>  or over to <em>an attribute</em> on the current context node: we can simply designate those by element name or by @attribute and no slash is necessary (so therefore no dot notation is necessary either). So that is why we wrote: <span class="code">&lt;xsl:apply-templates select="head/l"/&gt;</span> in the first template rule above; but we wrote <span class="code">&lt;xsl:apply-templates select=".//p/placeName"/&gt;</span> in the same rule, in order to step down the descendant axis from the context node. We do not need the dot unless we have to designate a path jump down the descendant axis from the current context. 
+         <span class="code">head/l</span>. In the <em>second</em> <span class="code">xsl:apply-templates @select</span>, we reach down the <code>descendant::</code> axis <em>from the current template match</em> (or <dfn>context node</dfn>) to select a specific node to process next. We could also have written that <code>xsl:apply-templates @select</code> like this:</p>
+         <div class="code">
+            <span class="code"> &lt;xsl:template match="div[@type='chapter']"&gt;</span>
+            &lt;li&gt;
+            <span class="code">&lt;xsl:apply-templates select="head/l"/&gt;</span>
+            &lt;ul&gt;
+            <span class="code">&lt;xsl:apply-templates select="<span style="color:red;">.//</span>p/placeName"/&gt;</span>
+    
+            &lt;/ul&gt;
+            &lt;/li&gt;
+            <span class="code">&lt;/xsl:template&gt;</span>
+         </div>
+  <p>        
+     Here we used the <strong><q>dot</q> notation</strong> to indicate the current context node. This <q>dot</q> notation, <span class="code">.</span>, is very important
+     because when there is nothing indicated to the left of it our <span class="code">//</span> descendent axis notation (or a <span class="code">/</span> child axis notation) would otherwise be read as starting from <em>the root of the XML tree</em> and heading all the way down, rather than reading within a specific chapter and looking all the way down through its children and children ’s children <em>only within the chapter</em>.  This is because <span class="code">xsl:apply-templates @select</span> is a <strong>literal XPath expression</strong> that <em>must be defined in terms of the current context node</em>, quite unlike what we described with the <strong><q>XPath-like</q></strong> syntax in the template’s <span class="code">@match</span>. Notice that we only need to use the dot notation when we are designating the descendant axis with its abbreviated double-slash form from the current context node . We do not use it here to step down to the <em>immediate child</em>  or over to <em>an attribute</em> on the current context node: we can simply designate those by element name or by @attribute and no slash is necessary (so therefore no dot notation is necessary either). So that is why we wrote: <span class="code">&lt;xsl:apply-templates select="head/l"/&gt;</span> in the first template rule above; but we wrote <span class="code">&lt;xsl:apply-templates select="descendant::p/placeName"/&gt;</span> in the same rule, in order to step down the descendant axis from the context node. After all, we do not need to use the dot if we always <strong>specify the axis name</strong> at the start of the @select value, and we think it is best practice always to specify the axis direction here.
          
         
       </p>
-      			
+
       <h4>Calculating and Outputting XPath Functions</h4>
       			
       <p>If we wanted to calculate a <span class="code">count()</span> or take the <span class="code">distinct-values()</span> of a series of output elements, or calculate and output <span class="code">string-length()</span> of a node, or otherwise execute XPath functions, we would write something like this:
