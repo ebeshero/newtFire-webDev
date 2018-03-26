@@ -57,7 +57,7 @@
     <xsl:template match="sp">
         <div class="sp">
         <span class="num"><xsl:apply-templates select="@n"/></span>
-   <strong><!--ebb: This dereferencing works, but with this team's code it doesn't look great. <xsl:apply-templates select="//particDesc//person[@xml:id=substring-after(current()/@who, '#')]/persName[1]"/>-->
+   <strong>
        <xsl:apply-templates select="substring-after(@who, '#')"/>
        <xsl:text>: </xsl:text></strong><xsl:apply-templates/>
            <span class="time"><xsl:apply-templates select="@from"/>-<xsl:apply-templates select="@to"/></span>

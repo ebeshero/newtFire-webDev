@@ -24,7 +24,7 @@
       	
       <img src="satelliteEarth.jpg" alt="planet Earth surrounded by satellite debris"/>
       <span class="smaller">image of planet Earth surrounded by satellite debris, made viewable by space technology.</span>
-      	<p>This exercise gives you experience with API technology to look up geospatial data that you extract from XML, and then plot that data, together with information from your XML, on Google Maps using KML.</p>	
+      <p>Our projects often require us to look up information to add to our markup, and sometimes we want to do that <q>in bulk</q> for a long list of items. Instead of looking up just one word in a dictionary, what if we need to find 200 words? The internet makes this possible for us, and using the XQuery and XSLT we are learning, we can output lists formatted for lookup in an <strong>Application Programming Interface, or API</strong>, which retrieves the information we want and returns it to us in a new file. API technology is designed to help us as project developers aggregate information quickly! We can write XSLT to adjust the markup or output special forms of XML, HTML, or other "ML" markup formats that we need. One common application for this is mapping, when we have marked place names in our project XML and want to plot them on a map, but are missing the mapping coordinates (latitude and longitude) and need a special format for mapping technology. In the XML family of languages, KML is specially designed for display in mapping software such as Google Earth or Google My Maps, NASA WorldWind, and ESRI ArcGIS Explorer. This exercise gives you experience with API technology to look up geospatial data that you extract from XML, and then plot that data, together with information from your XML, on Google Maps using KML.</p>	
       <h3>What is KML?</h3>
       <p>KML is <strong>KML (Keyhole Markup Language)</strong>, a form XML designed to store and process location information with geospatial coordinates for visualization. Its odd name, “Keyhole,” is an homage to the early 1960s Key Hole spy satellites (so named because they were being used to see into secret areas during the Cold War, like peering furtively through a keyhole into a private room). Our view of the Google Earth globe and the extensive zooming and panning visibility available in Google Maps is
          reliant on satellite imaging technology that allows us to pan back from a distance
@@ -64,7 +64,8 @@
       <ol>
          				
          <li>First, we need to extract the distinct locations tagged in a batch of XML project
-            files. We have uploaded for this purpose a small subset of the XML files from the 2015 Church Schism student project into <a href="http://dxcvm05.psc.edu:8080/">our eXist-db at the Pittsburgh Supercomputing Center</a>, accessible from <span class="code">collection('/db/Schism')/*</span>. The student project investigated news stories about a division in the Episcopal Church and keeping track of locations mentioned in the stories. We will generate a plain-text list of the names, check them for errors that we can edit, and feed them into a map API which will return us a KML file containing their geo-coordinates. To create the file in the format we need to give the API, we will extract all the distinct values of the element <span class="code">&lt;location&gt;</span> in use in these files, and we need to generate our output in a string-joined list with a line-break separator, so each name appears on a separate line in our plain text output.
+            files. We have uploaded for this purpose a small subset of the XML files from the 2015 Church Schism student project into <a href="http://newtfire.org:8338/">our eXist-db on newtFire</a>, accessible from <span class="code">collection('/db/Schism')/*</span>. The student project investigated news stories about a major conflict dividing Episcopalian churches and kept track of locations mentioned in the stories. We want to help plot those locations with some information about each one on a map.</li> 
+         <li>To begin, we will generate <strong>a plain-text list of the names</strong>, check them for errors that we can edit, and feed them into a map API which will return us a KML file containing their geo-coordinates. To create the file in the format we need to give the API, we will extract all the distinct values of the element <span class="code">&lt;location&gt;</span> in use in these files, and we need to generate our output in a string-joined list with a line-break separator, so each name appears on a separate line in our plain text output.
 You will need the string-join() function, and use the using a special ASCII character
             code for a <strong>line feed:</strong> <span class="code">&amp;#10;</span>. To retrieve the location names from this file, we found it helpful to set up the XQuery to save the output into eXist-db, and then we downloaded it from the eXist directory.
          </li>
@@ -73,8 +74,8 @@ You will need the string-join() function, and use the using a special ASCII char
             of text. You will need to use a map API key to process more than five locations at
             a time, and for our class purposes we have set up a key to Bing Maps API that you
             may use (copy the full line below): 
-            	<!--2017-01-02 ebb: UPDATE THIS KEY. IT IS TWO OR THREE YEARS OLD. -->				
-            <div class="code">AlmOJ6eCoH-qzIkqle1JVPo1O8FHE4IANZ0mxTB0tga19_AuZQec5ynrhFUZmjol</div>
+            	<!--2018-03-26 ebb: KEY UPDATED as of February 2018. -->				
+            <div class="code">5IOF5qZGB0AuA1ddG44IsOL1anHPfb7I</div>
             				<span class="smaller">The keys to Bing, Open Maps, and Google Maps permit individuals to process info for
                some hundreds or perhaps a thousand places per day, and are a sort of filter to prevent
                abuse and overload of map APIs. You may wish to sign up for your own Basic key for
@@ -146,14 +147,13 @@ You will need the string-join() function, and use the using a special ASCII char
          <li><p>The first task, to output plain text with distinct location names simply involves
             using <span class="code">distinct-values()</span> in a way that you’ve done before. (To be sure that you are getting the correct results,
             if you do a count() of all the distinct location names coded as of now in the Schism
-            project files, the number should be 46.) But there’s something unusual in this task
-            that you’ve not seen before: We want to output a new location on each line of plain
+            project files, the number should be 46.) We want to output a new location on each line of plain
             text output, using the <span class="code">string-join()</span> function. Usually when we use <span class="code">string-join()</span>, we indicate a comma or some form of punctuation as our separator character for the
             second argument of the function. This time, we’re using a special ASCII character
             code for a <strong>line feed:</strong> <span class="code">&amp;#10;</span> . Position this in your string-join() (using quotation marks) just as you would any
             other separator character. <span class="smaller">(Or you could define it as a variable in XQuery, and then when you call the variable
                inside <span class="code">string-join()</span>, don’t use the quotation marks.)</span></p>
-            <p>NOTE: In order to save the output file in eXist-db, we discovered we needed to set up the <code>string-join()</code> function so that we started it before the first FLWOR statement, and ended it so that its arguments were in the return.</p>
+            <p>NOTE: In order to save the output file in eXist-db, we need to set up the <code>string-join()</code> function so that we started it before the first FLWOR statement, and end it so that its arguments were in the return.</p>
             <p><strong>Copy this XQuery into a text file to save, as one of the files you will upload to
                Courseweb for this homework assignment.</strong></p>
          
@@ -291,7 +291,7 @@ You will need the string-join() function, and use the using a special ASCII char
                					<span class="smaller">&lt;!--ebb: In the initial output from GPS Visualizer, we discover that the contents
                   of the &lt;description&gt; element contains a little more detail than the original value
                   we input for &lt;name&gt;. So we write a template rule to match on &lt;description&gt; and output
-                  it as &lt;name&gt;, and we'll suppress the original &lt;name&gt; element from appearing in the
+                  it as &lt;name&gt;, and we’ll suppress the original &lt;name&gt; element from appearing in the
                   output with the next template rule. --&gt;</span><br />
                					
                					
@@ -305,11 +305,10 @@ You will need the string-join() function, and use the using a special ASCII char
                					
                				<span class="smaller">&lt;!--ebb: With this template rule we're invoking a second file, signalled by the variable
                   $PO which we defined at the top of our XSLT document. Note that we are establishing
-                  a match-up here between the two files, so we need to use both dot (.) and current()
-                  to be very precise about our match-up: The dot (.) refers to *wherever you are at
-                  the moment in your current path* so it's in-the-moment, here, referring to the most
-                  immediate reference point: the $PO//name. We need current() to signal where we are
-                  with the template match, the current context node of the template match in our main
+                  a match-up here between the two files, so we need to use both <code>dot (.)</code> and <code>current()</code>
+                  to be very precise about our match-up: The dot <code>(.)</code> refers to <strong>wherever you are at
+                     the moment in your current path</strong>, so it’s referring in-the-moment to the most
+                  immediate reference point: the $PO//name. We need <code>current()</code> to signal where we are with the template match, the current context node of the template match in our main
                   import file from the GPS Visualizer. 
                   --&gt;</span><br />
                					
@@ -323,8 +322,7 @@ You will need the string-join() function, and use the using a special ASCII char
             			
          </li>
          			
-         <li>Do number six as described in the overview above, and experiment with importing it
-            into Google Earth or Google Maps: Do you see the output? Can you click on the placeMarks
+         <li>Import your file into Google Earth or Google Maps as described in the overview above. Do you see the output? Can you click on the placeMarks
             to view the paragraphs you extracted from the project files? 
             (Again, to import a KML file into Google Maps, <a href=" http://www.igismap.com/upload-kml-file-google-map/">follow these instructions</a>. To view in Google Earth, simply open Google Earth and open the file within it.)</li>
                  
