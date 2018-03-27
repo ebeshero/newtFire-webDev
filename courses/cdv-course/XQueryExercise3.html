@@ -285,6 +285,15 @@ You will need the string-join() function, and use the using a special ASCII char
                <span class="indent">&lt;xsl:mode on-no-match="shallow-copy"/&gt;</span><br />
                				<br />
                				<span class="smaller">&lt;!--ebb: This code (above) matches and copies all the elements of the GPS visualizer KML file that we select as input, and essentially makes this an Identity Transformation stylesheet.--&gt;</span><br /><br />
+               
+               &lt;xsl:template match="Placemark"&gt;<br />
+               &lt;Placemark&gt;<br />
+               <span class="indent">&lt;xsl:apply-templates select="description"/&gt;</span><br />
+               <span class="indent">&lt;xsl:apply-templates select="name"/&gt;</span><br />
+               <span class="indent"> &lt;xsl:apply-templates select="description/following-sibling::*"/&gt;</span><br />
+               &lt;/Placemark&gt;<br />
+               &lt;/xsl:template&gt;<br />
+               <br />
                				&lt;xsl:template match="description"&gt;<br />
                				<span class="indent">&lt;name&gt;&lt;xsl:value-of select="."/&gt;&lt;/name&gt;</span><br />
                				&lt;/xsl:template&gt;<br />
@@ -295,7 +304,7 @@ You will need the string-join() function, and use the using a special ASCII char
                   output with the next template rule. --&gt;</span><br />
                					
                					
-               					&lt;xsl:template match="Placemark/name"&gt;<br />
+               					&lt;xsl:template match="name"&gt;<br />
                						
                				<span class="indent">&lt;description&gt;</span>  <br />
                				<strong><span class="indentMore">&lt;xsl:value-of select="$PO//name[. = current()]/following-sibling::description"/&gt;</span><br /></strong>
