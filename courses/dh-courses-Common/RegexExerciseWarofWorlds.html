@@ -1,0 +1,59 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>Regex Exercise: Convert a Play to XML</title>
+   </head>
+
+
+
+   <body>
+      <!--#include virtual="top.html" -->
+      <h1><span class="banner">Regex Exercise (Short Test): Autotag the Radio Script of <i>The War of the Worlds</i></span></h1>
+      <ul>
+         
+         <li><a href="http://newtfire.org/dh/explainRegex.html">Our newtFire tutorial
+            on Autotagging with Regular Expressions (Regex)</a> 
+         </li>
+         <li><a href="http://www.regular-expressions.info/tutorial.html">Regular-Expressions.info Tutorial</a>: a mine of helpful detail on regular expression matching,</li>
+      </ul>	
+     
+     <h2>The test</h2>
+     <ul><li>For this test you need to download the <a href="War-of-the-Worlds-1938-regex.txt">War-of-the-World-1938.txt</a> file from the Newtfire site.</li>
+     
+     <li>After you have the file downloaded and opened the file in oXygen, open the Find/Replace window.</li>
+     
+        <li>Open new text file to record your steps. <strong>Record each step of your process on the following tasks carefully</strong>, since this is the file we will be evaluating. These will include global Find-and-Replace operations or Regular Expressions in oXygen (using Ctrl-F on Windows or command-F on Mac). Your goal is to produce a well-formed XML document, but even if you have have trouble, what's most important is that you document the steps you took.</li>
+     
+     <li>We have already verified for you that there are no reserved characters.</li>
+     
+     <li>Also there are no groups of blank lines exceeding 2 (\n{2}).</li>
+     </ul>
+     
+     <h3>Your Tasks:</h3>   
+     
+      <ol> <li><p>Find all of the speakers. Use <code>&lt;spkr&gt;</code> in your replace window to wrap all of the speakers. Record your Find and Replace expressions with a brief description and any additional alterations you made to the text file.</p>
+        
+         <p>Bonus: Tag all of the speeches and corresponding speakers. Use <code>&lt;sp&gt;</code> for speech and <code>&lt;spkr&gt;</code> for speaker. Record your Find and Replace expressions  with a brief description and any additional alterations you made to the text file. [Hint: remember how you wrapped chapters or acts!]</p></li>
+           
+           <li>Find all of the stage directions in parenthesis. Tag all of the stage directions with <code>&lt;sd&gt;</code> removing the pseudo-markup (a.k.a. the parentheses). Record your Find and Replace expressions with a brief description and any additional alterations you made to the text file.</li>
+              
+              <li>Make sure you add a root element and verify your new XML file is green in oXygen.</li>
+              
+         <li><strong>Upload two files on Courseweb for this exercise:</strong>
+            <ol>
+               <li>a plain-text file in which you recorded your steps </li>
+               
+               <li>your end result: the XML file you create</li>
+            </ol>
+         </li>
+      </ol>
+      
+   </body>
+
+</html>
