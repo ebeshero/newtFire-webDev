@@ -7,7 +7,7 @@
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <link rel="stylesheet" type="text/css" href="explain.css" />
-      <title>SVG Exercise 5 (CDV)</title>
+      <title>SVG Project Exercise (CDV)</title>
    </head>
    
    
@@ -18,34 +18,54 @@
       <h1><span class="banner">SVG Exercise 5: Plot a Graph, or Your Choice</span></h1>
       <p>For this assignment, you will be working with pulling data from your project files, and you may choose to work with your own project or another team’s project as you wish. For your output, you have a choice: You may either:</p>
          <ul><li>Plot a graph with an X and a Y axis, labelled with a title and units, that represents data you pull from your project files using XQuery. Spend some time studying the code and structure of the files and experiment with something interesting to plot. Or... </li>
-         <li>Plot an SVG visualization of your choice that shows us something interesting in the project files. Your XQuery needs to be more complicated than one or two XPath expressions, and should involve some use of a <q>for loop</q>, but otherwise the form your plot takes is entirely up to you. (You might experiment with plotting shapes that show us something about the layered structure of <cite>The Decameron</cite>, for example. Whatever you plot should not be drawn by hand, but involve some use of XQuery variables and calculations to pull information from the XML code and output it as SVG. Use SVG <code>&lt;text&gt;</code> elements to title and label your plot.</li></ul>
-         <p>I have loaded your project files into <a href="http://dxcvm05.psc.edu:8080/">our eXist database</a>, so you may access them from the following locations:</p>
+         <li>Plot an SVG visualization of your choice that shows us something interesting in the project files. Your XQuery needs to be more complicated than one or two XPath expressions, and should involve some use of a <q>for loop</q>, but otherwise the form your plot takes is entirely up to you.  <strong>Whatever you plot must involve some use of XQuery variables and calculations to pull information from the XML code and output it as SVG.</strong> Use SVG <code>&lt;text&gt;</code> elements to title and label your plot.</li></ul>
+         <p>You may load your project files into <a href="http://newtfire.org:8338/">our eXist database</a> to work on for this assignment. We also have project files from the current and previous semesters loaded into the database so you may access them from the following locations:</p>
       <ul>
-         <li>Decameron project: You can choose to work with the English Decameron TEI file by itself: 
-         <pre>
-            <code>doc('/db/decameron/engDecameronTEI.xml')</code>
-         </pre>
-            or with the collection of the pair of English and Italian files, if you want to plot a graph that compares something between the two:
-           <pre>
-             <code>collection('/db/decameron/')</code>
-           </pre> 
+         <li>Akira project: <pre><code>doc("/db/akira/akira-tei.xml")</code></pre></li>
+         <li>Graveyard project: <pre><code>doc("/db/graveyard/graveyardInfo-TEI.xml")</code></pre> 
+         </li>
+         <li>Hamilton project:  
+           <pre><code>collection('/db/hamilton/')</code></pre> 
          </li>
          <li>City Slave Girls project: 
          <pre><code>collection('/db/Nelson/ChicagoTimes_XML_grammar/')</code></pre></li>
          <li>Emily Dickinson project (fascicle 16 files):
-         <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
+            <pre><code>collection('/db/dickinson/f16/')</code></pre>  </li>
       </ul>
- <p>Each of these projects are using TEI code. To read from the TEI and to output in the SVG namespace, you will need to declare your namespaces and work with the <code>tei:</code> prefix for all TEI elements.</p>     	
+ <p>NOTE: Each of these projects is using TEI code. To read from the TEI and to output in the SVG namespace, you will need to declare your namespaces and work with the <code>tei:</code> prefix for all TEI elements.</p>     	
       	<pre>
-xquery version "3.0";
+xquery version "3.1";
 declare default element namespace "http://www.w3.org/2000/svg"; 
 declare namespace tei="http://www.tei-c.org/ns/1.0"
       	</pre>
       
-      <p>Open one of the files in these projects in eXide (with file-->open, and browse your way to it), and spend a few minutes studying the code. Look for something interesting to count and plot. For example, you might plot something that you can count within each of the ten days of the Decameron, knowing that days are held within <code>&lt;div[@type="Day"]&gt;</code> elements: perhaps the number of times a particular character appears, or how many places are marked. Because the XML texts that we are using here are under development, they may be inconsistently or incompletely marked up. They are all well formed, however, which means that they can be explored with XML tools, including XQuery.</p>
-      <p>To plot your graph (or other visualization) in SVG from XQuery, apply what you have been learning about SVG in the previous assignments. For example, when you plotted the timeline, you learned how to code a viewport in the SVG root element, and you learned how to plot from x=0 and y=0 so that your plot is visible in the SVG coordinate space, using <code>transform="translate(x, y)"</code>. You also learned how to plot and space hashmarks at regular intervals along a line. Your plot doesn’t need to contain hashmarks that look like the timeline plot, but at the very least you may want to space bars on a  bar graph at regular intervals, based on a maximum value. Keep in  mind that when you output multiple SVG elements in a return, you will want to bundle them together in a single group, or <code>&lt;g&gt;</code>.</p>
+      <p>Open one of the files in these projects in eXide (with File——>Open, and browse your way to it), and <strong>spend a few minutes studying the XML code</strong>. Look for something interesting to count and plot. Because the XML texts that we are using here are under development, they may be inconsistently or incompletely marked up. They are all well formed, however, which means that they can be explored with XML tools, including XQuery.</p>
+     
    <p>The dimensions and style of your plot are up to you, though we recommend a bar graph be used for most plots of counts. Save your SVG output in eXist, but paste a copy of your XQuery script in a text file, save it according to our usual homework file naming conventions, and upload it to Coursweb.</p>
-
+   <h3>Plotting SVG from XQuery:</h3>  
+      <h4>Draw your X and Y axes, and set up a Viewport</h4>
+      <p>Work out your maximum values for X and Y and set a view port with a width and a height, and then a viewBox attribute to scale your output if you wish.</p>
+      <p>Look at examples of how we prepared SVG Viewports in class, and check out <a href="https://sarasoueidan.com/blog/svg-coordinate-systems/">Sara Soueidan’s excellent detailed explanation</a>. Here is a brief summary overview of how to set the Viewport attributes on the SVG root element:</p>
+      <ul>
+         <li><code>width="{largest X value for the ENTIRE plot + something with some wiggle room}"</code></li> 
+         <li><code>height="{largest Y for the ENTIRE plot + wiggle room}"</code></li>
+      </ul>
+      <p>Now, if I want to define how the image behaves on a screen, I define the <code>viewBox</code> attribute. <code>viewBox</code> takes four values: <code>viewBox="(x1,y1,x2,y2)"</code> which define a new coordinate system to use in rendering our output image.</p>
+      <ul> 
+         <li><code>x1,y1</code> defines starting top-left part of the image, and<code> x2,y2</code> defines the number that represents the bottom right of the user’s screen.</li> 
+         <li> If <code>x1,y1</code> does not start at <code>0,0</code> the <code>viewBox</code> will select the part of your image that starts where you say as the top left of the viewable SVG. (Notice what happens to the output SVG if you set x1,y1 to 200,200)</li>
+         <li> If <code>x2,y2</code> is SMALLER than the total width and height you defined for your image, you’ll be zooming and cropping, because the <code>viewBox</code> defines what you can see on the visible screen. (Notice what happens if you set <code>x2,y2</code> to the <code>width div 2</code> and <code>height div 2</code>).</li>
+         <li>If the <code>x2,y2</code> is LARGER than the total width and height, the result effectively zooms out, making the output image take up LESS space on the screen. Think of <code>x2,y2</code> as defining a ratio with your width and height attribute values.</li>
+      </ul>
+     <h4>General Pointers</h4> 
+      <p>To plot your graph in SVG from XQuery, apply what you have been learning about SVG in the previous assignments. Keep in  mind the following:</p>
+     <ul><li>Don’t forget to use the <code>tei:</code> prefix when reaching into the TEI elements!</li> 
+        <li>When you output multiple SVG elements in a return, you will want to bundle them together in a single group, or <code>&lt;g&gt;</code>.</li> 
+        <li>Experiment with setting the <strong>viewport</strong> in the SVG root element using <code>transform="translate(x, y)":  to shift the x dimension over to the right and your y down the screen, so that you can plot your coordinates from x=0 and y=0 so that your plot is visible in the SVG coordinate space, </code>, and follow our advice in the section above on setting a viewBox.</li> 
+        <li>You know that you want to space the bars on a  bar graph at regular intervals, and draw X and Y axes based on maximum values multiplied by spacer variables that you set.</li>
+        <li>Just as we did on the timeline, write a for-loop over a range of integers so that you plot and space <strong>hashmarks</strong> at regular intervals along a line.</li>  <li>You will want to review how to plot SVG rectangles and lines, and decide whether you want to make bars out of a line or a rectangle element. <span class="smaller">(We sometimes think drawing a wide line using a large-ish <code>@stroke-width</code> attribute is easier than working with the <code>@height</code> attribute on the rectangle, but this is up to you. If you work with <code>@height</code>, note that this is a positive absolute value, and the x and y coordinates are set at the top of the rectangle, not the bottom. You draw down the screen based on the positive value of the height you set. If you work with line elements, you set the start and end points of the lines.)</span>.</li>  </ul>
+      
+      
    </body>
 
 </html>
