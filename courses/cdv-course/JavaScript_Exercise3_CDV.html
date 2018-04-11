@@ -152,7 +152,7 @@
                <li>Of course, you will be swapping the x and y values in order to plot horizontally
                   rather than vertically, and you will want to review how we work with
                      <code>transform="translate()"</code>, which we discussed in <a
-                     href="SVGExercise2_CDV.html">SVG Exercise 2</a>.</li>
+                     href="SVGExercise5_CDV.html#viewport">SVG Exercise 5</a>.</li>
                <li>Be sure to label your output SVG lines with meaningful information: whose line is
                   this, what’s the start and end date, the count of letters to this correspondent,
                   etc.</li>
@@ -212,7 +212,7 @@
             svgSelect variable at position i), and to fire the next function in sequence in the
             event of <code>'click'</code>, just as you have already done on previous
             assignments.</li>
-         <li>Our JavaScript defines just one more function to fire after <code>function
+         <li>Our JavaScript defines just one (or two) more functions to fire after <code>function
                init()</code>.This function needs to check the <code>@id</code> value on the HTML
             element that was clicked on, and to refer to that element, the one the user has just now
             clicked on, we use the special JavaScript word <code>this</code>. To find the
@@ -221,11 +221,13 @@
                <code>@id</code> best matches. In our code, we added the string <code>SVG_</code>, so
             we sought out the element with the id <code>'SVG_' + this.id</code> to find the matching
             group of SVG elements associated with a particular selected correspondent.</li>
-         <li>We then manage the show-hide toggling by writing a JavaScript <code>if() else()</code>
+         <li>We then manage the show-hide toggling. You could do this in one or two ways:<ol><li> To do it all in one function, you could write JavaScript <code>if() else()</code>
             to change the display property of the matching SVG element. Remember that to check the
             display condition of <code>this</code>, we need to use the double equal sign:
                <code>==</code>, and use the single equal sign <code>=</code> to indicate a change in
             value.</li>
+         <li>The other way, which could be simpler to script, involves two functions. The function that fires on <code>this</code> must <i>first</i> trigger another function that you write to make sure that the SVG elements are ALL hidden, before you trigger <code>this</code> to be visible. This does not require JavaScript to test conditions: it simply turns off the display for a selection as soon as the user visits another selection. We have examples of both approaches on the DHClass-Hub for you to consult.</li>
+         </ol></li>
 
       </ul>
       <h3>What to submit for your homework</h3>
