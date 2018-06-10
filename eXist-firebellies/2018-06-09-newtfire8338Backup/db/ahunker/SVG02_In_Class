@@ -1,0 +1,26 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0"; 
+
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $countLetterFiles := count($letterFiles);
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when;
+declare variable $letterYears := $letterDates/tokenize(string(), '-')[1];
+declare variable $haydon := $lettersColl//tei:titleStmt/tei:title//tei:persName[@ref="#Haydon"];
+declare variable $haydonCount := count($haydon/string(.));
+(: ADD MORE GLOBAL VARIABLES :)
+<svg width="500" height="3000">
+   <g transform="translate(30, 100)">
+          <line x1="0" y1="0" x2="0" y2="-100"/>
+            {let $distinctYears := distinct-values($letterDates)
+            for $i in $distinctYears
+            let $Haydon_in_year := $haydon[ancestor::tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1] = $i]
+            order by $i
+            return
+                ($i, $Haydon_in_year)}
+   </g> 
+</svg> 
+
+(: mitfordColl_SVG :)

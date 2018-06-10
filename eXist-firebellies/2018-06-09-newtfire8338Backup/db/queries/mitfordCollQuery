@@ -1,0 +1,64 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+
+let $mitfordColl:=collection('/db/mitford/')
+let $titles:= collection('/db/mitford/')//TEI/teiHeader//titleStmt/title
+let $filecount := count($mitfordColl/TEI)
+let $textElmFull := $mitfordColl//text/body//*
+let $textElements:= $mitfordColl//text/body//*/name()
+let $distinctElems := distinct-values($textElements)
+let $countdistElms := count($distinctElems)
+let $countallElms := count($textElmFull)
+return
+
+<xml>
+
+
+    <reportHead>
+    <count type="files">Number of Valid TEI Files in the Collection: {$filecount}</count>
+    <count type="distElements">Number of Distinct Elements in Play: {$countdistElms}</count>
+    <count type="allElements">Total Number of All Elements: {$countallElms}</count>
+    </reportHead>
+    <list>
+        {
+            for $distinctElem in $distinctElems
+          
+                
+           (:order by $distinctElem:)
+           order by count($textElements[.= $distinctElem]) descending
+           
+         return <item>
+             <elementName>{$distinctElem} </elementName>
+             <count type="thisElement">This element has been used {count($textElements[.= $distinctElem])} times, or {round-half-to-even((count($textElements[.= $distinctElem])  div $countallElms * 100), 2)} percent of the time.</count> <!--Note: The XPath function round-half-to-even($, 2) lets me return a value with 2 decimal places.-->
+             <fileTitles> This element has been used in the following files: {string-join(($textElmFull[./name() = $distinctElem]/ancestor::TEI/teiHeader//titleStmt/title), ', ')}</fileTitles>
+            
+             <list type="attribute">
+              {
+             
+            let $attributes := $textElmFull[./name() = $distinctElem]/@*
+            let $attNames := $attributes/name()
+            let $distAttNames := distinct-values($attNames)
+            for $distAttName in $distAttNames
+            where count($attributes) gt 0
+            return
+              <item><name type="attribute">
+                  {$distAttName}</name>
+                  <values type="attribute">Values: {string-join((distinct-values($attributes[name() = $distAttName])), ', ')}</values>
+            </item>
+              
+             }
+           
+              </list>
+            </item>
+            
+        }
+               
+              
+                    
+     
+         
+</list>
+
+
+</xml>    
+

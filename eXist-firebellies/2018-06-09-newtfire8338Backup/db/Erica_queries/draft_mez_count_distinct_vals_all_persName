@@ -1,0 +1,5 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+collection('/db/letters')/distinct-values(.//body//persName)
+(: trying to count--how many distinct names, total? right now, listing names in one doc--ok:)
+(:need to count ALL, not just in the titles? Needs better XPath:)

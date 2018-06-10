@@ -1,0 +1,48 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+<head><title>People who appear in more than 20 Mitford files, and the other people connected with them</title></head>
+<body>
+    <table>
+    {
+let $mitfordColl := collection('/db/mitford')
+let $mitfordFile:= $mitfordColl/*
+let $mitfordTitle:=$mitfordFile//titleStmt/title
+let $counturi := count($mitfordColl/base-uri())
+
+let $persNameRefs := data($mitfordColl//body//persName/@ref)
+let $distinctRefs := distinct-values($persNameRefs)
+for $distinctRef in $distinctRefs
+let $match := $mitfordFile[.//persName/@ref= $distinctRef] 
+let $matchTitle := $match//titleStmt/title/normalize-space()
+let $matchUri := $match/base-uri()
+let $countMatch := count($match)
+let $matchPlaces := distinct-values($match//placeName/@ref/string())
+where $countMatch gt 20 
+(: return string-join(($distinctRef, $matchTitle, $matchUri), "; ") :)
+ 
+(:  return concat($distinctRef, ": ", string-join(($matchTitle, $matchUri), "; "))  :)
+
+return 
+    <tr>
+        <td>{$distinctRef}</td> <td>{string-join($matchUri, ", ")}</td>
+        
+        
+        <td><table> (:Make a double-nested FLWOR:)
+            {for $matchPlace in $matchPlaces
+           return
+               <tr>
+            <td>{$matchPlace}</td>
+       </tr>
+            
+        }
+            </table>
+        </td>
+        </tr>
+    
+    
+}
+ 
+ </table>
+ </body>
+</html>

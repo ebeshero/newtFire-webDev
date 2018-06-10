@@ -1,0 +1,10 @@
+xquery version "3.0";
+let $forms:= collection('/db/ECCOLocat/')/eccoLocation
+let $titles:= $forms//title/text()
+for $title at $pos in $titles
+where $title[starts-with ($title, $titles)]
+return 
+ <truffle>
+     <tuple>{$title}</tuple>
+     <tuple>{$pos}</tuple>
+ </truffle>

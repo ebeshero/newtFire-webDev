@@ -1,0 +1,9 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $BartColl:=collection('/db/rParker/BlackRockHistSociety/')
+let $title:= $BartColl//TEI/teiHeader//titleStmt/title
+let $coms := $BartColl//measure[@commodity]/@commodity
+
+
+return $coms
+

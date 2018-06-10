@@ -1,0 +1,50 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+(: Global :)
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+
+(: Part 1 :)
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $distinctYears := distinct-values($letterDates);
+declare variable $minDY := xs:integer(min($distinctYears)); (: declare as integer inorder to use as timeline dates :)
+declare variable $maxDY := max($distinctYears); 
+declare variable $years := xs:integer($maxDY) - xs:integer($minDY); (: Used in a for loop for the actual data :)
+
+(: Part 2 :)
+declare variable $HaydonLetters := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $HaydonDates :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string(); 
+declare variable $distinctYearsHLfirst := xs:integer(format-date($HaydonDates[9], '[d1]')); (: The first date :)
+declare variable $distinctYearsHLlast := xs:integer(format-date($HaydonDates[11], '[d1]')); (: The last date :)
+declare variable $maxHD := max($distinctYearsHLlast); 
+declare variable $yearsHDlast := xs:integer($maxDY) - xs:integer($maxHD);
+
+declare variable $days := $years* 365; (: Used in y2 for the line :)
+
+declare variable $ThisFileContent := 
+    <svg width="500" height="3000" viewBox="0 0 500 3000">
+        <g transform="translate(30, 100)">
+            <line x1="25" y1="0" x2="25" y2="{$days}" style="stroke:#5F9EA0;stroke-width:7"/> 
+            <line x1="121.5" y1="{($distinctYearsHLfirst)+365}" x2="121.5" y2="{($distinctYearsHLlast)+($yearsHDlast)+($distinctYearsHLlast)}" style="stroke:#5F9EA0;stroke-width:7"/>
+            <text x="130" y="{($distinctYearsHLfirst)+365}">1819-02-13 - First Letter</text>
+            <text x="130" y="{($distinctYearsHLlast)+($yearsHDlast)+($distinctYearsHLlast)}">1823-10-01 - Last Letter</text>
+            {
+                for $i in (0 to $years)
+                return
+        <g>
+            <line x1="21.5" y1="{$i*365}" x2="125" y2="{$i*365}" style="stroke:#00008B;stroke-width:4"/>
+            <text x="130" y="{$i*365}">{$minDY+$i}</text>
+            <circle cx="50" cy="{$i*365}" r="{count($letterDates[contains(., $minDY + $i)])}" stroke="#4169E1" fill="#4169E1" stroke-width="4"/>
+        </g>
+            }
+        </g>
+</svg>;
+
+let $filename := "timeline.svg"
+let $doc-db-uri := xmldb:store("/db/ajnewton1", $filename, $ThisFileContent)
+return $doc-db-uri
+
+(: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/ajnewton1/timeline.svg :)

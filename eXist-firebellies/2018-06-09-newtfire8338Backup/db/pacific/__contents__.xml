@@ -1,0 +1,9 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/pacific" version="1" owner="admin" group="pacific" mode="775" created="2018-02-10T00:43:00.348-05:00">
+    <acl entries="2" version="1">
+        <ace index="0" target="GROUP" who="dba" access_type="ALLOWED" mode="7"/>
+        <ace index="1" target="GROUP" who="dh-group" access_type="ALLOWED" mode="5"/>
+    </acl>
+    <subcollection name="voyages" filename="voyages"/>
+    <subcollection name="literary" filename="literary"/>
+    <subcollection name="mapping" filename="mapping"/>
+</collection>

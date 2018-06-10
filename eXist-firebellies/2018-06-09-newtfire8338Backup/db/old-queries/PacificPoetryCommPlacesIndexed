@@ -1,0 +1,43 @@
+xquery version "3.0";
+(:To generate the XQuery here, first, we retrieved a list of the distinct place mentioned in more than one poem in our collection. Then, we moved onward, using a nested FLWOR to show the line numbers within specific poems in which these places appear. We're using element constructors, or curly braces, to put our results in a new document html structure: We've generated results in an html table with two cells in each table row. In the first cell, we display the distinct place, and in the second we show a little list with two entries: 
+ - the particular poem in which it appears within a particular line (or multiple lines) of text. 
+  - a string-joined list of line numbers in which that place appears.
+  - (Note that some places were listed in the text part of the file, but apparently not within the lines of poetry. When we run our results, only Zealand shows us line entries for both poems. The other places most likely appear in the prefacing text that just precedes the "Injured Islanders" poem, and that means we can always add another table cell (and possibly another FLWOR) here to see if we can locate where those place names are sitting, to return their parent elements!) 
+  For now, though, we present this to show a successful script for a nested double FLWOR. .:)
+
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+    <head><title>A Table of Place Names that Appear in More Than One Poem in our Pacific Literary Collection</title></head>
+
+<body>
+    <table>
+{
+let $coll := collection ('/db/pacific/literary')
+let $poems :=$coll//text
+let $placeNames := $poems//placeName
+let $dstPlaces := distinct-values($placeNames)
+for $distPlc in $dstPlaces
+
+where count($poems[$distPlc = .//placeName]) gt 1
+order by $distPlc
+return 
+    <tr>
+      
+    <td>{$distPlc}</td>
+    <td>
+        {for $poem in $poems
+let $title := $poem/ancestor::TEI/teiHeader//titleStmt/title
+        let $line := $poem//l[$distPlc =.//placeName]/@n
+        where count($line) gt 0
+        return  
+            <ul>
+            <li>{$title[$poem[$distPlc =.//placeName]]}</li>
+            <li>Line: {string-join(($line), ", ")}</li>
+            </ul>
+    } 
+    </td>
+    </tr>
+}
+</table>
+</body>
+</html>

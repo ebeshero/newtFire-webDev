@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Who Lives, Who Dies, Who Tells Your Story"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Who Lives, Who Dies, Who Tells Your Story</title>
+            </head>
+            <div type="song">
+
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Let me tell you what I wish I'd known</l>
+                    <l>When I was young and dreamed of glory</l>
+                    <l>You have no control:</l>
+                </sp>
+
+
+                <sp who="#washington #company">
+                    <speaker>WASHINGTON AND COMPANY</speaker>
+                    <l>Who lives</l>
+                    <l>Who dies</l>
+                    <l>Who tells your story?</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#jefferson">President Jefferson</persName>:</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>I'll give him this: his financial system is a</l>
+                    <l>Work of genius. <seg type="#fact">I couldn't undo it if I tried</seg></l>
+                    <l>And I tried</l>
+                </sp>
+
+
+                <sp who="#washington #company">
+                    <speaker>WASHINGTON AND COMPANY</speaker>
+                    <l>Who lives</l>
+                    <l>Who dies</l>
+                    <l>Who tells your story?</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#madison">President Madison</persName>:</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>He took our country from bankruptcy to prosperity</l>
+                    <l>I hate to admit it, but he doesn't get enough credit</l>
+                    <l>For all the credit he gave us</l>
+                </sp>
+
+
+                <sp who="#washington #company">
+                    <speaker>WASHINGTON AND COMPANY</speaker>
+                    <l>Who lives</l>
+                    <l>Who dies</l>
+                    <l>Who tells your story?</l>
+                </sp>
+
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Every other founding father's story gets told</l>
+                    <l>Every other founding father gets to grow old</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>But when you're gone, who remembers your name?</l>
+                    <l>Who keeps your flame?</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#burr #men">
+                        <speaker>BURR AND MEN</speaker>
+                        <l>Who tells your story?</l>
+                        <l>Who tells your story?</l>
+                    </sp>
+
+
+                    <sp who="#angelica #women">
+                        <speaker>ANGELICA AND WOMEN</speaker>
+                        <l>Who tells your story?</l>
+                        <l>Your story?</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l><persName ref="#eliza">Eliza</persName></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I put myself back in the narrative</l>
+                </sp>
+
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l><persName ref="#eliza">Eliza</persName></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I stop <phr type="#time">wasting time</phr> on tears</l>
+                    <l><seg type="#fact">I live another fifty years</seg></l>
+                    <l>It's not enough</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><persName ref="#eliza">Eliza</persName></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fiction">I interview every soldier who fought by your side</seg></l>
+                </sp>
+
+
+                <sp who="#mulligan #lafayette #laurens">
+                    <speaker>MULLIGAN/LAFAYETTE/LAURENS</speaker>
+                    <l>She tells our story</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I try to make sense of your thousands of pages of writings</l>
+                    <l>You really do write like you're running out of-</l>
+                </sp>
+
+
+                <sp who="#eliza #company">
+                    <speaker>ELIZA AND COMPANY</speaker>
+                    <l><phr type="#time">Time</phr></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I rely on-</l>
+                </sp>
+
+
+                <sp who="#eliza #angelica">
+                    <speaker>ELIZA AND ANGELICA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>While she's alive-</l>
+                </sp>
+
+
+                <sp who="#eliza #angelica">
+                    <speaker>ELIZA AND ANGELICA</speaker>
+                    <l>We tell your story</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fact">She is buried in <placeName>Trinity Church</placeName></seg></l>
+                </sp>
+
+
+                <sp who="#eliza #angelica">
+                    <speaker>ELIZA AND ANGELICA</speaker>
+                    <l>Near you</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>When I needed her most, she was right on-</l>
+                </sp>
+
+
+                <sp who="#eliza #company">
+                    <speaker>ELIZA AND COMPANY</speaker>
+                    <l><phr type="#time">Time</phr></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>And I'm still not through</l>
+                    <l>I ask myself, "What would you do if you had more-"</l>
+                </sp>
+
+
+                <sp who="#eliza #company">
+                    <speaker>ELIZA AND COMPANY</speaker>
+                    <l><phr type="#time">Time</phr></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>The Lord, in his kindness</l>
+                    <l>He gives me what you always wanted</l>
+                    <l>He gives me more-</l>
+                </sp>
+
+
+                <sp who="#eliza #company">
+                    <speaker>ELIZA AND COMPANY</speaker>
+                    <l><phr type="#time">Time</phr></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fact">I raise funds in D.C. for the <persName ref="#washington">Washington</persName> Monument</seg></l>
+                </sp>
+
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>She tells my story</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fiction">I speak out against slavery</seg></l>
+                    <l>You could have done so much more if you only had-</l>
+                </sp>
+
+
+                <sp who="#eliza #company">
+                    <speaker>ELIZA AND COMPANY</speaker>
+                    <l><phr type="#time">Time</phr></l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>And when <phr type="#time">my time is up</phr>, have I done enough?</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>Will they tell our story?</l>
+                    </sp>
+
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <l>Will they tell your story?</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Oh. Can I show you what I'm proudest of?</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>The orphanage</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fact">I established the first private orphanage in New York City</seg></l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>The orphanage</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I help to raise hundreds of children</l>
+                    <l>I get to see them growing up</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>The orphanage</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>In their eyes I see you, <persName ref="#hamilton">Alexander</persName></l>
+                    <l>I see you every-</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#eliza #company">
+                        <speaker>ELIZA AND COMPANY</speaker>
+                        <l><phr type="#time">Time</phr></l>
+                    </sp>
+
+
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>And when my <phr type="#time">time</phr> is up</l>
+                        <l>Have I done enough?</l>
+                        <l>Will they tell my story? </l>
+                    </sp>
+
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <l>Will they tell your story?</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fact">Oh, I can't wait to see you again</seg></l>
+                    <l>It's only a matter of-</l>
+                </sp>
+
+
+                <sp who="#eliza #company">
+                    <speaker>ELIZA AND COMPANY</speaker>
+                    <l><phr type="#time">Time</phr></l>
+                </sp>
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Will they tell your story?</l>
+
+
+                    <l>Who lives, who dies, who tells your story?</l>
+
+
+                    <l>Will they tell your story?</l>
+
+
+                    <l>Who lives, who dies-</l>
+                    <l><phr type="#time">Time</phr></l>
+
+
+                    <l><phr type="#time">Time</phr></l>
+
+
+                    <l><phr type="#time">Time</phr>...</l>
+                </sp>
+
+
+
+                <sp who="#company">
+                    <speaker>FULL COMPANY</speaker>
+                    <l>Who tells your story?</l>
+                </sp>
+
+
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Who Lives, Who Dies, Who Tells Your Story</head>
+                <event xml:id="event80" when="1806-01-01"> <label>Graham Windham Orphanage Founded</label><desc>Eliza helped found the first prviate orphanage in New York in 1806.</desc></event>
+            <event xml:id="event81" when="1814-03-14"> <label>Angelica Dies</label><desc>On March 14, 1814, Angelica died. She was buried in the same cemetery, Trinity Church, as Alexander Hamilton and Philip Hamilton.</desc></event>
+            <event xml:id="event82" when="1848-01-01"> <label>Construction for Washington Monument Begins</label><desc>The Washington Monument started construction in the year 1848.</desc></event>
+            <event xml:id="event83" when="1854-11-09"> <label>Eliza Dies</label><desc>On November 11, 1854, Eliza died. She was also buried in Trinity Church cememtery.</desc></event>
+            </listEvent>
+        </back>
+    </text>
+</TEI>

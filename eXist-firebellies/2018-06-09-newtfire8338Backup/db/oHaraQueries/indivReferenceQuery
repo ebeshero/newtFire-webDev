@@ -1,0 +1,14 @@
+xquery version "3.0";
+let $oHara := collection('/db/oHara')/*
+let $titles := $oHara//head
+let $baseURI := $oHara/base-uri()
+let $Totrefs := $oHara//ref
+let $countTotrefs := count($Totrefs)
+for $i in $oHara
+let $filename := $i/base-uri()
+let $title := $i//head
+let $firstline := $i//l[1]
+let $refs := $i//ref
+let $countrefs := count($refs)
+let $percent := $countrefs div $countTotrefs * 100
+return string-join(($title, '(', $firstline, ')', $percent), ' ')

@@ -1,0 +1,68 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0"; 
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when;
+declare variable $HaydonLetters := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref="#Haydon"];
+declare variable $HaydonDates :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when; 
+declare variable $HaydonDatesString :=$HaydonLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string(); 
+declare variable $minHD := min($HaydonDatesString);
+declare variable $maxHD := max($HaydonDatesString);
+declare variable $letterYears := $letterDates/tokenize(string(), '-')[1];
+declare variable $HaydonYears := $HaydonDates/tokenize(string(), '-')[1];
+declare variable $distinctYears := distinct-values($letterYears);
+declare variable $HaydonDistinctYears := distinct-values($HaydonYears);
+declare variable $NumOfYears := count($letterYears);
+declare variable $minDY := min($distinctYears);
+declare variable $maxDY := max($distinctYears);
+declare variable $minHDY := min($HaydonDistinctYears);
+declare variable $maxHDY := max($HaydonDistinctYears);
+
+declare variable $HaydonStart := 
+    let $num1 := (xs:integer($minHDY) - xs:integer($minDY) )* 365
+    let $formatDate1 := xs:integer(format-date($minHD, '[d]'))
+    return xs:integer($num1 + $formatDate1);
+    
+declare variable $HaydonEnd := 
+    let $num2 := (xs:integer($maxHDY) - xs:integer($minDY))* 365
+    let $formatDate2 := xs:integer(format-date($maxHD, '[d]'))
+    return xs:integer($num2 + $formatDate2);
+    
+declare variable $yearSpan :=  xs:integer($maxDY) - xs:integer($minDY);
+declare variable $yearsIntegers := 
+  for $i in $letterYears
+  order by $i ascending
+  return xs:integer($i);
+declare variable $lineLength := $yearSpan * 365;
+declare variable $eachDate :=
+    let $distinctYears := distinct-values($letterDates)
+        for $distinctYear in $distinctYears
+        order by $distinctYear
+        return $distinctYear;
+declare variable $year:= xs:integer($minDY);
+declare variable $ThisFileContent :=
+<svg width="500" height="2800" viewBox="0,0,300,3200">
+   <g transform="translate(30, 180)">
+        <text x="0" y="-100" style="font-size:30px">Timeline of Mitford Letters</text>
+        <line x1="100" y1="0" x2="100" y2="{$lineLength}" stroke="goldenrod" stroke-width="10"/>
+        <text y="{$HaydonStart}" x="210">Haydon's First Letter</text>
+        <text y="{$HaydonEnd}" x="210">Haydon's Last Letter</text>
+        <line y1="{$HaydonStart}" x1="200" y2="{$HaydonEnd}" x2="200" stroke="purple" stroke-width="10"/>
+    {for $i in (0 to $yearSpan)
+    let $r := count($letterYears[contains(.,$year+$i)]) div 2
+    return
+        <g>
+        <line x1="100" y1="{$i*365}" x2="150" y2="{$i*365}" stroke="black" stroke-width="3"/>
+        <text x="90" y="{$i*365}" transform="rotate(-90 90, {$i*365})" text-anchor="middle">{$year+$i}</text>
+        <circle cx="150" cy="{$i*365}" r="{$r}" stroke="goldenrod" fill="gold" stroke-width="4"/>
+        <text x="20" y="{$i*365}" text-anchor="middle">{count($letterYears[contains(.,$year+$i)])} Letter(s)</text>
+        </g>
+    }
+    
+   </g> 
+</svg>;
+let $filename := "timeline.svg"
+let $doc-db-uri := xmldb:store("/db/ahunker", $filename, $ThisFileContent)
+return $doc-db-uri

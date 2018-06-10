@@ -1,0 +1,103 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";    
+declare namespace htm="http://www.w3.org/1999/xhtml";
+
+declare variable $mitfordColl := collection ('/db/mitford');
+declare variable $lettersColl := collection('/db/mitford/letters');
+declare variable $letterFiles := $lettersColl/*;
+declare variable $letterDates := $lettersColl//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $distinctYears := distinct-values($letterDates);
+
+declare variable $minDY := xs:integer(min($distinctYears));
+declare variable $maxDY := xs:integer(max($distinctYears));
+declare variable $years := $maxDY - $minDY;
+declare variable $years_space := $years* 365;
+
+declare variable $recipLetters := $letterFiles/descendant::tei:titleStmt/tei:title/tei:persName/@ref;
+declare variable $distRecips := distinct-values($recipLetters);
+
+
+
+declare variable $recipDates :=$recipLetters//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string();
+declare variable $maxRecip := max($recipDates);
+declare variable $minRecip := min($recipDates);
+
+declare variable $letterRecipients := $letterFiles/descendant::tei:titleStmt/tei:title/tei:persName/@ref;
+ declare variable $distLetterRecips := distinct-values($letterRecipients);
+ declare variable $si := doc('http://digitalmitford.org/si.xml');
+
+declare variable $ThisFileContent :=
+ <htm:html>
+    <htm:head>
+    <htm:title>Mitford Letter Timeline</htm:title>
+     <script type="text/javascript" src="">
+       /**/
+       </script>
+    </htm:head>
+    
+    <htm:body>
+    <htm:fieldset>
+    <htm:legend>Click Here to Toggle On/Off</htm:legend>
+{
+for $r in $distLetterRecips
+let $recips := $letterFiles/descendant::tei:titleStmt/tei:title/tei:persName/@ref = $r
+return 
+ <htm:span><htm:input type="checkbox" id="{$r}" style="cursor:pointer"/>{tokenize($r, '#')[2]}<htm:br/></htm:span>
+    }
+    </htm:fieldset>
+    <htm:div class="svg">
+    
+    <svg width="3000" height="500">
+   <g transform="translate(30, 100) scale(.7, .7)">
+   <text x="25" y="-25">Timeline of Letters to Specific Correspondents in the Digital Mitford Collection</text>
+      <line x1="0" y1="30" x2="{$years_space}" y2="30" style="stroke:black;stroke-width:10"/>  
+       {
+           for $i in (0 to $years)
+    return
+        <g>
+            <line x1="{$i*365}" y1="25" x2="{$i*365}" y2="50" style="stroke:black;stroke-width:5"/>
+         <text x="{$i*365}" y="10">{$minDY + $i}</text>
+         <circle cx="{$i*365}" cy="50" r="{count($letterDates[contains(.,$minDY+$i)])div 2}" stroke="black" fill="aqua" stroke-width="3"/>
+         </g>
+        
+         }
+         {
+             for $d at $pos in $distRecips
+             let $selectRecipLetter := $letterFiles[descendant::tei:titleStmt/tei:title/tei:persName/@ref/string() = $d]
+             let $letterDates := $selectRecipLetter//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/string()
+             let $letterCount := count($selectRecipLetter)
+             let $minDate := min($letterDates)
+let $maxDate := max($letterDates)
+let $earliestDate := format-date($minDate, '[d]')
+let $latestDate := format-date($maxDate, '[d]')
+let $earliestYear_Integer := xs:integer(tokenize($minDate, '-')[1])
+let $latestYear_Integer := xs:integer(tokenize($maxDate, '-')[1])
+let $earliestDay_Integer := xs:integer($earliestDate)
+let $latestDay_Integer := xs:integer($latestDate)
+let $earliestLetter := ($earliestYear_Integer - $minDY)* 365
+let $latestLetter := ($latestYear_Integer - $minDY)* 365
+let $output :=
+if ($letterCount = 1) then
+    <g id="SVG_{substring-after($d, '#')}">
+    <circle cx="{$earliestLetter + $earliestDay_Integer}" cy="{$pos * 70}" r="5" stroke="aqua" fill="aqua" stroke-width="4"/>
+     <text x="{$earliestLetter}" y="{$pos * 75}">{tokenize($d, '#')[2]} - Date: {$earliestYear_Integer} to {$latestYear_Integer}</text>
+    </g>
+else
+    <g id="SVG_{substring-after($d, '#')}">
+         <line x1="{$earliestLetter + $earliestDay_Integer}" y1="{$pos * 50}" x2="{$latestLetter + $latestDay_Integer}" y2="{$pos * 50}" style="stroke:aqua;stroke-width:4"/>
+         <text x="{$earliestLetter + 80}" y="{$pos * 55}">{tokenize($d, '#')[2]} - Date: {$earliestYear_Integer} to {$latestYear_Integer}</text>
+        </g>
+return $output
+         }
+
+</g>
+</svg>
+</htm:div>
+</htm:body>
+</htm:html>;
+
+let $filename := "Java_Ex3.html"
+let $db := xmldb:store("/db/bsf15", $filename, $ThisFileContent)
+return $db
+(: Output: http://dxcvm05.psc.edu:8080/exist/rest/db/bsf15/Java_Ex3.html :)

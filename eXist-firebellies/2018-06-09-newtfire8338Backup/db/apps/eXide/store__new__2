@@ -1,0 +1,5 @@
+xquery version "3.1";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+let $coll := collection('/db/JaneAusten/')/*
+let $said := $coll//tei:said
+return $said

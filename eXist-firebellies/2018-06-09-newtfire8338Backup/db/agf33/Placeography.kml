@@ -1,0 +1,17 @@
+xquery version "3.1";
+<kml>
+{    
+let $coll := collection('/db/Schism')/*
+let $locations := $coll//location/normalize-space()
+let $distinctLocations := distinct-values($locations)
+for $i in $distinctLocations
+let $match := $coll//location[./normalize-space() = $i]
+let $surroundPar := $match/ancestor::p
+let $maxLengthPar := $surroundPar[string-length() = max($surroundPar/string-length())]
+return 
+ <Placemark>
+     <name>{$i}</name>
+     <description>{$maxLengthPar/string()}</description>
+</Placemark>    
+}
+</kml>

@@ -1,0 +1,29 @@
+xquery version "3.0";
+declare variable $ThisFileContent:=
+let $shakespeare := collection('/db/shakespeare/plays')
+let $filepaths := $shakespeare/base-uri()
+let $allElementNames := $shakespeare/descendant::*/name()
+let $distinctElements := distinct-values($allElementNames)
+let $countElementNames := count($distinctElements)
+(: An xQuery Comment :)
+return
+    <html>
+        <head><title>Count and Liist of all XML Elements Used in Shakespeare Play Collection</title></head>
+        <body>
+            <p>{$countElementNames}</p>
+            <table>
+        <tr><th>Element Name</th><th>Number of times this element is used in the collection</th></tr>
+               {for $i in $distinctElements
+                let $count := count($shakespeare//*[name(.) = $i])
+                return
+                    <tr><td>{$i}</td>
+                        <td>{$count}</td></tr>}
+                
+                </table>
+                </body>
+                </html>;
+                
+let $filename := "SHAKESFLOWEROutput.html" 
+let $doc-db-uri := xmldb:store("/db/Samantha-McGuigan/", $filename, $ThisFileContent)
+return $doc-db-uri
+                
