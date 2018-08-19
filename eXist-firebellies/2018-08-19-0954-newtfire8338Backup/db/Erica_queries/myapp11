@@ -1,0 +1,6 @@
+xquery version "3.0";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+let $data-doc := doc("/db/neh-2017/hamlet.xml")
+let $ids := $data-doc//@xml:id
+return $ids

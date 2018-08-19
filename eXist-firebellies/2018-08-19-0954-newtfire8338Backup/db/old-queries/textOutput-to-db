@@ -1,0 +1,17 @@
+xquery version "3.0";
+let $locationList :=
+   let $schism := collection('/db/Schism')/*
+   
+   let $location := distinct-values($schism//location)
+   for $i in $location
+    return $i
+let $newbody := string-join($locationList, "&#10;")
+let $filename := "textOutput.txt"
+let $doc-db-uri := xmldb:store("/db/queries", $filename, $newbody)
+return $doc-db-uri
+  
+
+
+
+
+

@@ -1,0 +1,114 @@
+xquery version "3.0";
+(: ajn54: Find the amount of males to females in each article :)
+
+(: ajn54: Total :)
+declare variable $news := collection('/db/newsAnalysis')/*;
+declare variable $articles := count($news//body//quote[@sex]);
+declare variable $articlesM := count($news//body//quote[@sex="m"]);
+declare variable $articlesF := count($news//body//quote[@sex="f"]);
+
+(: ajn54: Election Results :)
+declare variable $newsER := collection('/db/newsAnalysis/electionResults');
+declare variable $ERarticles := count($newsER//body//quote[@sex]);
+declare variable $ERarticlesM := count($newsER//body//quote[@sex="m"]);
+declare variable $ERarticlesF := count($newsER//body//quote[@sex="f"]);
+
+(: ajn54: Syrian Bombings :)
+declare variable $newsSB := collection('/db/newsAnalysis/syrianBombings');
+declare variable $SBarticles := count($newsSB//body//quote[@sex]);
+declare variable $SBarticlesM := count($newsSB//body//quote[@sex="m"]);
+declare variable $SBarticlesF := count($newsSB//body//quote[@sex="f"]);
+
+(: ajn54: Travel Ban :)
+declare variable $newsTB := collection('/db/newsAnalysis/travelBan');
+declare variable $TBarticles := count($newsTB//body//quote[@sex]);
+declare variable $TBarticlesM := count($newsTB//body//quote[@sex="m"]);
+declare variable $TBarticlesF := count($newsTB//body//quote[@sex="f"]);
+
+(: ajn54: Trumps Taxes :)
+declare variable $newsTT := collection('/db/newsAnalysis/trumpsTaxes');
+declare variable $TTarticles := count($newsTT//body//quote[@sex]);
+declare variable $TTarticlesM := count($newsTT//body//quote[@sex="m"]);
+declare variable $TTarticlesF := count($newsTT//body//quote[@sex="f"]);
+
+(: ajn54: Womens March :)
+declare variable $newsWM := collection('/db/newsAnalysis/womensMarch');
+declare variable $WMarticles := count($newsWM//body//quote[@sex]);
+declare variable $WMarticlesM := count($newsWM//body//quote[@sex="m"]);
+declare variable $WMarticlesF := count($newsWM//body//quote[@sex="f"]);
+
+declare variable $ThisFileContent :=
+<svg xmlns="http://www.w3.org/2000/svg" width='1000' height="550">
+    <g transform="translate(100, 500) scale(1.2,1.2)">
+    
+        <!-- THE TEXT -->
+        <text x="0" y="-350">Comparison Between the Amount of Time Each Gender Was Quoted</text>
+        <text x="120" y="-330">Within The Selected Articles</text>
+        <rect x="500" y="-410" height="190" width="180" style="stroke:black; stroke-width: 1; fill: none"/>
+        <text x="505" y="-390">All Articles (All)- {$articles}</text>
+        <text x="505" y="-370">Election Results (ER)- {$ERarticles}</text>
+        <text x="505" y="-350">Syrian Bombings (SB)- {$SBarticles}</text>
+        <text x="505" y="-330">Travel Ban (TB)- {$TBarticles}</text>
+        <text x="505" y="-310">Trumps Taxes (TT)- {$TTarticles}</text>
+        <text x="505" y="-290">Womens March (WM)- {$WMarticles}</text>
+        <text x="505" y="-270" fill= "blue">Men - Blue</text>
+        <text x="505" y="-250" fill= "pink">Women - Pink</text>
+        <text x="505" y="-230">Undocumented - Black</text>
+        
+        <!-- THE BARS -->
+        
+        <!-- articles -->
+        <rect x="20" y="-{$articles}" height="{$articles}" width="20" style="stroke: black ; stroke-width: 2;"/>
+        <rect x="20" y="-{$articlesM + $articlesF}" height="{$articlesM}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        <rect x="20" y="-{$articlesF}" height="{$articlesF}" width="20" style="stroke: pink; stroke-width: 2; fill: pink;"/>
+        
+        <!-- election results -->
+        <rect x="60" y="-{$ERarticles}" height="{$ERarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+        <rect x="60" y="-{$ERarticlesM + $ERarticlesF}" height="{$ERarticlesM}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        <rect x="60" y="-{$ERarticlesF}" height="{$ERarticlesF}" width="20" style="stroke: pink; stroke-width: 2; fill: pink;"/>
+        
+        <!-- syrian bombings -->
+        <rect x="100" y="-{$SBarticles}" height="{$SBarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+        <rect x="100" y="-{$SBarticlesM + $SBarticlesF}" height="{$SBarticlesM}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        <rect x="100" y="-2" height="{$SBarticlesF}" width="20" style="stroke: pink; stroke-width: 2; fill: pink;"/>
+        
+        <!-- travel ban -->
+        <rect x="140" y="-{$TBarticles}" height="{$TBarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+        <rect x="140" y="-{$TBarticlesM + $TBarticlesF}" height="{$TBarticlesM}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        <rect x="140" y="-{$TBarticlesF}" height="{$TBarticlesF}" width="20" style="stroke: pink; stroke-width: 2; fill: pink;"/>
+        
+        <!-- trumps taxes -->
+        <rect x="180" y="-{$TTarticles}" height="{$TTarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+        <rect x="180" y="-{$TTarticlesM + $TTarticlesF}" height="{$TTarticlesM}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        <rect x="180" y="-{$TTarticlesF}" height="{$TTarticlesF}" width="20" style="stroke: pink; stroke-width: 2; fill: pink"/>
+        
+        <!-- womens march -->
+        <rect x="220" y="-{$WMarticles}" height="{$WMarticles}" width="20" style="stroke: black; stroke-width: 2;"/>
+                <rect x="220" y="-{$WMarticlesM + $WMarticlesF}" height="{$WMarticlesM}" width="20" style="stroke: blue; stroke-width: 2; fill: blue;"/>
+        <rect x="220" y="-{$WMarticlesF}" height="{$WMarticlesF}" width="20" style="stroke: pink; stroke-width: 2; fill: pink;"/>
+        
+        <line x1="0" y1="0" x2="300" y2="0" style="stroke: black; stroke-width: 2"/>
+        <line x1="0" y1="0" x2="0" y2="-240" style="stroke: black; stroke-width: 2"/>
+        <text x="-50" y="-200" style="writing-mode: tb; transform: rotate(360deg);">Number of Gender Mentions</text>
+        <text x="-25" y="-238">240</text>
+        <text x="-25" y="-120">120</text>
+        <text x="-25" y="-160">160</text>
+        <text x="-25" y="-200">200</text>
+        <text x="-25" y="-80">80</text>
+        <text x="-25" y="0">0</text>
+        <text x="-25" y="-40">40</text>
+        <text x="20" y="20">All</text>
+        <text x="60" y="20">ER</text>
+        <text x="100" y="20">SB</text>
+        <text x="140" y="20">TB</text>
+        <text x="180" y="20">TT</text>
+        <text x="220" y="20">WM</text>
+    </g>
+</svg>;
+
+let $filename := "newsAnalysis_BarGraph.svg"
+let $filepath := "/db/ajnewton1"
+let $doc-db-uri := xmldb:store($filepath, $filename, $ThisFileContent)
+return $doc-db-uri 
+
+(: Output http://dxcvm05.psc.edu:8080/exist/rest/db/ajnewton1/newsAnalysis_BarGraph.svg :) 

@@ -1,0 +1,4 @@
+xquery version "3.1";
+
+let $header := request:get-parameter("header," "parameter")
+return<html>{$header}</html>

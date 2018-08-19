@@ -1,0 +1,14 @@
+xquery version "3.0";
+declare variable $files := collection('/db/Schism')/*;
+declare variable $locs := $files//location;
+declare variable $distLocs := distinct-values($locs);
+declare variable $thisFile :=
+
+string-join(
+for $i in $distLocs
+return $i, '&#10;');
+
+let $filename := "mapTest.txt"
+let $db := xmldb:store("/db/jonhoranic", $filename, $thisFile)
+return $db
+

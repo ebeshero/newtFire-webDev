@@ -1,0 +1,32 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $coll := collection ('/db/pacific/literary') 
+let $TEI := $coll/TEI
+let $text := $coll//text
+let $persName :=$text//(persName | rs[@type="person"]/@ana)
+let $distNames :=distinct-values($persName)
+for $distName in $distNames
+return 
+    <truffle>
+    <tuple>{$distName}</tuple>
+    <tuple>
+        {for $txt in $text
+        
+        let $title :=$txt[.//$persName=$distName]/ancestor::TEI/teiHeader//titleStmt/title
+        let $line:= $txt//l[.//$persName=$distName]/@n
+        let $rs:=$txt//rs[.//$persName=$distName]
+        where count($rs) gt 0 
+        return
+            <ul>
+                <li>{$title}</li>
+                <li>Lines: {string-join(($line), ", ")}</li>
+                <li><ul>
+                    <li>RS type: {string-join((distinct-values($rs[not(@type="person")]/@type)), ", ")}</li>
+                    <li>RS subtype: {string-join((distinct-values($rs/@subtype)), ", ")}</li>
+                    <li>Count: How many times mentioned in this text? {count($rs)}</li>
+                    </ul>
+                </li>
+            </ul>
+        }
+        </tuple>
+</truffle>

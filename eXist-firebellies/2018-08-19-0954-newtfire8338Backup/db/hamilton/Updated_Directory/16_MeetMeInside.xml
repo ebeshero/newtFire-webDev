@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Meet Me Inside"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Meet Me Inside</title>
+            </head>
+            <div type="song">
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#lee">Lee</persName>, do you yield?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><seg type="#fact">You shot him in the side!</seg></l>
+                    <l>Yes, he yields!</l>
+                </sp>
+
+                <sp who="#laurens">
+                    <speaker>LAURENS</speaker>
+                    <l><phr type="#satisfied">I’m satisfied</phr></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Yo, we gotta clear the field!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Go! We won</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><seg type="#fiction">Here comes the <persName ref="#washington">General</persName>!</seg></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>This should be fun</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>What is the meaning of this? <persName ref="#burr">Mr. Burr</persName>, get a
+                        medic for the <persName ref="#lee">General</persName></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Yes, sir</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><persName ref="#lee">Lee</persName>, you will never agree with me</l>
+                    <l>But believe me, these young men don’t speak for me</l>
+                    <l>Thank you for your service</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Let’s ride!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><persName ref="#hamilton">Hamilton</persName>!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Sir!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Meet me inside</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Meet him inside! Meet him inside!</l>
+                    <l>Meet him inside, meet him, meet him inside!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Son—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Don’t call me son</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>This war is hard enough</l>
+                    <l>Without infighting—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#lee">Lee</persName> called you out. We called his bluff</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>You solve nothing, you aggravate our allies to the south</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>You're absolutely right, <persName ref="#laurens">John</persName> should have
+                        shot him in the mouth</l>
+                    <l>That would’ve shut him up</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Son—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I’m notcha son—</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Watch your tone</l>
+                    <l>I am not a maiden in need of defending, I am grown</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <stage type="delivery">OVERLAPPING</stage>
+                    <l><persName ref="#lee">Charles Lee</persName>, <persName ref="#conway">Thomas
+                            Conway</persName></l>
+                    <l>These men take your name and they rake it</l>
+                    <l>Through the mud</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>My name’s been through a lot, I can take it</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Well, I don’t have your name. I don’t have your titles</l>
+                    <l>I don’t have your land</l>
+                    <l>But, if you—</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>No—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>If you gave me command of a battalion, a group of men to lead, I could fly
+                        above my station after the war</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Or you could die and we need you alive</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I’m more than willing to die—</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Your wife needs you alive, son, I need you alive—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Call me son one more time—</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><seg type="#fiction">Go home, <persName ref="#hamilton">Alexander</persName></seg></l>
+                    <l>That’s an order from your commander</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Sir—</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Go home</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Meet Me Inside</head><event xml:id="event29" when="1781-03-15"><label>Hamilton Goes Home</label><desc>After a dispute with Washington, Hamilton leaves his staff for a few months.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

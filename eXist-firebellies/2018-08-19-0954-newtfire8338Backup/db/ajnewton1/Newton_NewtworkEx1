@@ -1,0 +1,35 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+
+declare variable $ThisFileContent:=
+string-join(
+let $engdecameron := doc('/db/decameron/engDecameronTEI.xml')/*
+let $engpeople := $engdecameron//persName
+let $engdistinctPs  := distinct-values($engpeople)
+
+for $edp in $engdistinctPs
+let $peers:=
+    if (//text//persName[. = $edp]/ancestor::floatingText)
+        then distinct-values(//persName[. = $edp]/ancestor::floatingText//persName[. != $edp])
+    else distinct-values(//persName[. = $edp][not(ancestor::floatingText)]/ancestor::div[1]//persName[. != $edp])
+         
+let $edgeType:=
+    if (//persName[. = $edp]/ancestor::floatingText)
+        then "floatingText"
+    else if (//persName[. = $edp][not(ancestor::floatingText)]/ancestor::div[1][@type="novella"]) 
+        then "novella"
+    else "frame"  
+        
+let $edgeWeight:=
+    if (//text//persName[. = $edp]/ancestor::floatingText)
+        then count(//persName[. = $edp]/ancestor::floatingText//persName[. != $edp])
+    else count(//persName[. = $edp][not(ancestor::floatingText)]/ancestor::div[1]//persName[. != $edp])
+                
+for $peer in $peers
+return
+concat($edp, "&#x9;"     , $edgeType,"&#x9;", $edgeWeight, "&#x9;",$peer,"&#10;"));
+
+let $filename := "MyNetworkData.tsv"
+let $doc-db-uri := xmldb:store("/db/ajnewton1", $filename, $ThisFileContent, "text/plain")
+return $doc-db-uri
+(: output at http://dxcvm05.psc.edu:8080/exist/rest/db/ajnewton1/MyNetworkData.tsv ) :)   

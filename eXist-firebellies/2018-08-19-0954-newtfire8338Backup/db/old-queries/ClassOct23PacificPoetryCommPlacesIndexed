@@ -1,0 +1,37 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+    <head><title></title></head>
+<body>
+    <table>
+{    
+let $coll := collection('/db/pacific/literary')
+let $poems :=$coll//text  (:There's only one of these text elements in the file!:)
+let $placeNames :=$poems//placeName
+let $dstPlaces := distinct-values($placeNames)
+for $dstPlace in $dstPlaces
+where count($poems[$dstPlace = .//placeName]) gt 1
+order by string-length($dstPlace) descending
+return       
+    <tr>
+        <td>{$dstPlace}</td>
+        <td>
+            
+            {
+           for $poem in $poems  
+           let $title :=$poem/ancestor::TEI/teiHeader//titleStmt/title
+           let $line :=$poem//l[$dstPlace=.//placeName]/@n
+           where count($line) gt 0
+           return
+               <ul>
+               <li>{$title[$poem[$dstPlace=.//placeName]]}</li>
+                <li>{string-join(($line), ", ")}</li></ul>
+            }
+            
+        </td>
+    </tr>
+}
+</table>
+</body>
+</html>
+

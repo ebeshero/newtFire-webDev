@@ -1,0 +1,32 @@
+xquery version "3.0";
+declare variable $shakespeare := collection('/db/shakespeare/plays');
+declare variable $filepaths := $shakespeare/base-uri();
+declare variable $elements := $shakespeare//*/name();
+declare variable $distinct := distinct-values($elements);
+declare variable $count := count($distinct);
+declare variable $thisFile := 
+
+    <html>
+        <head><title>Count and List of all XML Elements Used in Shakespeare Play Collection</title></head>
+        <body>
+            <p>{$count}</p>
+    <table>
+    <tr><th>Element Name</th><th>Number of Times</th></tr>
+        {for $i in $distinct
+            let $localCount := count($shakespeare//*[name(.) = $i])
+            where $localCount lt 100
+            order by $localCount
+        
+        return
+            <tr><td>{$i}</td>
+            <td>{$localCount}</td>
+            </tr>
+        }
+    </table>
+    </body>
+    </html>;
+    
+let $filename := "WillShakesManOutput.html"
+let $db := xmldb:store("/db/jonhoranic", $filename, $thisFile)
+return $db
+(: Output URL = http://dxcvm05.psc.edu:8080/exist/rest/db/jonhoranic/WillShakesManOutput.html :)

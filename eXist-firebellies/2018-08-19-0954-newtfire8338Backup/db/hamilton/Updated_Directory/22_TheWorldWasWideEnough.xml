@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "The World Was Wide Enough"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>The World Was Wide Enough</title>
+            </head>
+            <div type="song">
+
+
+                <sp who="#men">
+                    <speaker>MALE COMPANY</speaker>
+                    <l>One two three four</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>FULL COMPANY</speaker>
+                    <stage type="delivery">Except Hamilton and <persName ref="#burr">Burr</persName></stage>
+                    <l>Five six seven eight nine—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>There are ten things you need to know</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number one!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>We rowed across the <placeName>Hudson</placeName> at dawn</l>
+                    <l><seg type="#fact">My friend, <persName ref="#ness">William P. Van Ness</persName> signed on as my—</seg></l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l>Number two!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#hamilton">Hamilton</persName> arrived with his crew:</l>
+                    <l><seg type="#fact"><persName ref="#pendleton">Nathaniel Pendleton</persName> and a doctor that he knew</seg></l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number three!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I watched <persName ref="#hamilton">Hamilton</persName> examine the terrain</l>
+                    <l>I wish I could tell you what was happ’ning in his brain</l>
+                    <l>This man has poisoned my political pursuits!</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Most disputes die and no one shoots!</l>
+                    <l>Number four!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#hamilton">Hamilton</persName> drew first position</l>
+                    <l>Looking, to the world, like a man on a mission</l>
+                    <l>This is a soldier with a marksman’s ability</l>
+                    <l>The doctor turned around so he could have deniability</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Five!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Now I didn’t know this at the time</l>
+                    <l>But we were—</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#burr #philipH">
+                        <speaker>BURR AND PHILIP</speaker>
+                        <l>Near the same spot</l>
+                        <l>Your son died, is that</l>
+                        <l>Why— </l>
+                    </sp>
+
+
+                    <sp who="#hamilton">
+                        <speaker>HAMILTON</speaker>
+                        <l>Near the same spot</l>
+                        <l>My son died, is that</l>
+                        <l>Why—</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Six!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>He examined his gun with such rigor?</l>
+                    <l>I watched as he methodically fiddled with the trigger</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Seven!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Confession time? Here’s what I got:</l>
+                    <l><seg type="#fiction">My fellow soldiers’ll tell you I’m a terrible shot</seg></l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number eight!</l>
+                </sp>
+
+
+                <sp who="#burr #hamilton #men">
+                    <speaker>BURR/HAMILTON/ENSEMBLE MEN</speaker>
+                    <l>Your last chance to negotiate</l>
+                    <l>Send in your seconds, see if they can set the record straight</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>They won’t teach you this in your classes</l>
+                    <l>But look it up, <seg type="#fact"><persName ref="#hamilton">Hamilton</persName> was wearing his glasses</seg></l>
+                    <l>Why? If not to take deadly aim?</l>
+                    <l>It’s him or me, the world will never be the same</l>
+                    <l>I had only one thought before the slaughter:</l>
+                    <l>This man will not make an orphan of my daughter</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number nine!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Look him in the eye, aim no higher</l>
+                    <l>Summon all the courage you require</l>
+                    <l>Then count:</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>One two three four five six seven eight nine</l>
+                    <l>Number ten paces! Fire!—</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I imagine death so much it feels more like a memory</l>
+                    <l>Is this where it gets me, on my feet, sev’ral feet ahead of me?</l>
+                    <l>I see it coming, do I run or fire my gun or let it be?</l>
+                    <l>There is no beat, no melody</l>
+                    <l><persName ref="#burr">Burr</persName>, my first friend, my enemy</l>
+                    <l>Maybe the last face I ever see</l>
+                    <l><phr type="#shot">If I throw away my shot</phr>, is this how you’ll remember me?</l>
+                    <l>What if this bullet is my <phr type="#legacy">legacy</phr>?</l>
+
+
+                    <l><phr type="#legacy">Legacy</phr>. What is a <phr type="#legacy">legacy</phr>?</l>
+                    <l>It’s planting seeds in a garden you never get to see</l>
+                    <l>I wrote some notes at the beginning of a song someone will sing for me</l>
+                    <l><placeName>America</placeName>, you great unfinished symphony, you sent for me</l>
+                    <l>You let me make a difference</l>
+                    <l>A place where even orphan immigrants</l>
+                    <l>Can leave their fingerprints and rise up</l>
+                    <l><phr type="#time">I’m running out of time</phr>. I’m running, and <phr type="#time">my time’s up</phr></l>
+                    <l>Wise up. Eyes up</l>
+                    <l>I catch a glimpse of the other side</l>
+                    <l><persName ref="#laurens">Laurens</persName> leads a soldiers’ chorus on the other side</l>
+                    <l>My son is on the other side</l>
+                    <l>He’s with my mother on the other side</l>
+                    <l><persName ref="#washington">Washington</persName> is watching from the other side</l>
+
+
+                    <l>Teach me how to say goodbye</l>
+
+
+                    <l><phr type="#rise">Rise up</phr>, <phr type="#rise">rise up</phr>, <phr type="#rise">rise up</phr></l>
+                    <l><persName ref="#eliza">Eliza</persName></l>
+
+
+                    <l>My love, <phr type="#time">take your time</phr></l>
+                    <l>I’ll see you on the other side</l>
+                    <l>Raise a glass to freedom...</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l><seg type="#fiction">He aims his pistol at the sky—</seg></l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><phr type="#wait">Wait</phr>!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><seg type="#fact">I strike him right between his ribs</seg></l>
+                    <l><seg type="#fact">I walk towards him, but I am ushered away</seg></l>
+                    <l>They row him back across the <placeName>Hudson</placeName></l>
+                    <l>I get a drink</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Aaaah</l>
+                    <l>Aaaah</l>
+                    <l>Aaaah</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I hear wailing in the streets</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Aaaah</l>
+                    <l>Aaaah</l>
+                    <l>Aaaah</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Somebody tells me, “You’d better hide.”</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Aaaah</l>
+                    <l>Aaaah</l>
+                    <l>Aaaah</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>They say</l>
+                </sp>
+
+
+                <sp who="#burr #angelica">
+                    <speaker>BURR AND ANGELICA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName> and <persName ref="#eliza">Eliza</persName>—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><seg type="#fact">Were both at his side when he died</seg></l>
+                    <l>Death doesn’t discriminate</l>
+                    <l>Between the sinners and the saints</l>
+                    <l>It takes and it takes and it takes</l>
+                    <l>History obliterates</l>
+                    <l>In every picture it paints</l>
+                    <l>It paints me and all my mistakes</l>
+                    <l>When <persName ref="#hamilton">Alexander</persName> aimed</l>
+                    <l>At the sky</l>
+                    <l>He may have been the first one to die</l>
+                    <l>But I’m the one who paid for it</l>
+
+
+                    <l>I survived, but I paid for it</l>
+
+
+                    <l><seg type="#fact">Now I’m the villain in your history</seg></l>
+                    <l>I was too young and blind to see...</l>
+                    <l>I should’ve known</l>
+                    <l>I should’ve known</l>
+                    <l>The world was wide enough for both <persName ref="#hamilton">Hamilton</persName> and me</l>
+                    <l>The world was wide enough for both <persName ref="#hamilton">Hamilton</persName> and me</l>
+                </sp>
+
+
+            </div>
+        </body>
+        <back>
+            <listEvent><head>The World Was Wide Enough</head>
+                <event xml:id="event79" when="1804-07-11"><label>Hamilton and Burr Duel</label><desc>On July 11, 1804, Alexander Hamilton and Aaron Burr dueled in Weehawken, New Jersey.</desc></event>
+                <event xml:id="event80" when="1804-07-12"> <label>Hamilton Dies</label><desc>After being shot by Burr, Alexander Hamilton died on July 12, 1804.</desc></event>
+            </listEvent>
+        </back>
+    </text>
+</TEI>
