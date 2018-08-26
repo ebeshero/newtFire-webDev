@@ -8,7 +8,7 @@
     <xsl:output method="xhtml" doctype-system="about:legacy-compat" 
         omit-xml-declaration="yes"/> 
     <!--<xsl:strip-space elements="*"/>-->
-    
+    <!-- ebb: This XSLT reads the current syllabus TEI file and outputs the HTML schedule for class.-->
     <!--2016-01-05 ebb: Check and revise links to the Course Description from this page 
         as we alternate between courses. Link alternates from CDA.html for Fall to CDV.html for Spring. 
         Change title in Banner to Spring (or Fall) of the appropriate year. -->
@@ -31,7 +31,7 @@
             <body>
               
 
-                <xsl:comment>#include virtual="top-indexCDA17.html" </xsl:comment>
+                <xsl:comment>#include virtual="top-indexCDA18.html" </xsl:comment>
                 <!--ebb: make a new top for each XML for each new semester course-->
                         <h1>
                             <span class="banner">
@@ -52,7 +52,7 @@
                     <div id="main">
                         <div id="courseInfo">
                          <!-- <h3>
-                                <a href="CDV.html"> Course Description and Policies</a>
+                                <a href="CDA.html"> Course Description and Policies</a>
                             </h3>-->
 
                             <xsl:apply-templates select="//div[@type='meetTimes']"/>
@@ -79,7 +79,7 @@
 
                             <!--    <table>-->
 
-                            <xsl:apply-templates select="//div[@type='schedule']/div[@type='week']"/>
+                            <xsl:apply-templates select="//div[@type='schedule']/table[@type='week']"/>
 
 
                             <!--</table>-->
@@ -102,7 +102,7 @@
 
 
 
-    <xsl:template match="div[@type='week']">
+    <xsl:template match="table[@type='week']">
         <xsl:choose>
             <xsl:when test="@n">
                 <!--<tr>
@@ -130,7 +130,7 @@
                             </span>
                         </th>
                     </tr>
-                    <xsl:apply-templates select="div[@type='day']"/>
+                    <xsl:apply-templates select="row[@role='day']"/>
                 </table>
                 <!--</td>
            </tr>-->
@@ -145,16 +145,16 @@
                     <tr>
                         <td>
                             <h4>
-                                <xsl:apply-templates select="div[@type='day']/head/date/text()"/>
+                                <xsl:apply-templates select="row[@role='day']/cell[@role='date']/date/text()"/>
                             </h4>
-                            <xsl:if test="div[@type='day']/head/date/note">
+                            <xsl:if test="cell[@role='date']/note">
                                 <span class="smaller">
-                                    <xsl:apply-templates select="div[@type='day']/head/date/note"/>
+                                    <xsl:apply-templates select="cell[@role='date']/note"/>
                                 </span>
                             </xsl:if>
                         </td>
                         <td>
-                            <xsl:apply-templates select="div[@type='day']/div[@type='assign']"/>
+                            <xsl:apply-templates select="row[@role='day']/cell[@role='assign']"/>
                         </td>
                     </tr>
                 </table>
@@ -167,9 +167,9 @@
     </xsl:template>
 
 
-    <xsl:template match="div[@type='day'][parent::div/@n]">
+    <xsl:template match="row[@role='day'][parent::table/@n]">
 
-        <tr id="d{head/date/@when}">
+        <tr id="d{cell[@role='date']/date/@when}">
             <td><!--ebb delete this <td> if we have to put the commented-out code back, if the JavaScript doesn't work!-->
             <!--2015-10-01 ebb: This should no longer be necessary, now that we have a functioning JavaScript for jumping to the current, or closest preceding date!
                 <xsl:variable name="dateToken" select="tokenize(head/date/@when, '-')"/>
@@ -199,21 +199,21 @@
                 </xsl:when>
             </xsl:choose>-->
                 <h4>
-                    <xsl:apply-templates select="head/date/text()"/>
+                    <xsl:apply-templates select="cell[@role='date']/date/text()"/>
                 </h4>
-                <xsl:if test="head/date/note">
+                <xsl:if test="cell[@role='date']/note">
                     <xsl:text> </xsl:text>
                     <span class="smaller">
-                        <xsl:apply-templates select="head/date/note"/>
+                        <xsl:apply-templates select="cell[@role='date']/note"/>
                     </span>
                 </xsl:if>
             </td>
 
             <td>
-                <xsl:apply-templates select="div[@type='inclass']"/>
+                <xsl:apply-templates select="cell[@role='inclass']"/>
             </td>
             <td>
-                <xsl:apply-templates select="div[@type='assign']"/>
+                <xsl:apply-templates select="cell[@role='assign']"/>
             </td>
         </tr>
 
