@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Schematron Exercise: Digital Mitford Project</title>
+        <link rel="stylesheet" type="text/css" href="explain.css"/>
+    </head>
+    <body>
+        <!--#include virtual="top.html" -->
+        <section title="exerciseName"><h1><span class="banner">Schematron Exercise 2</span></h1></section>
+        <a href="http://schematron.com"><img src="schematronLogo.png" alt="Schematroll, the Schematron mascot"/></a><span class="smaller">Meet Schematroll, the <a href="http://schematron.com/">Schematron</a> mascot! Schematroll is a cross between a <a href="http://members.optusnet.com.au/bilbies/About_Bilbies.htm">bilby</a> and a <a href="https://www.bushheritage.org.au/species/bettongs">bettong</a>.</span>
+        <section title="preliminaries">
+            <h3>Preliminaries</h3>
+            <p>To work on this assignment, you will need to to find and do the following:</p>
+            <ul>
+                <li><strong>Information resources at the ready:</strong> 
+                    Review <a href="http://newtfire.org/dh/explainSchematron.html">our Schematron tutorial</a>, and read more about the XPath functions and syntax we describe below either on the web (see w3Schools’ <a href="https://www.w3schools.com/xml/xsl_functions.asp">“XSLT, XPath, and XQuery Functions”</a>, Obdurodon’s <a href="http://dh.obdurodon.org/functions.xhtml">“The XPath Functions We Use the Most”</a>) or through offline searching with the index of the Michael Kay book. You also want to read <a href="explainSchematronIdRefs.html">our tutorial on validating id attributes</a>.</li>  
+                    
+                <li><strong>XML file that needs better schema:</strong> Right-click to save this TEI file locally and open it in &lt;oXygen/&gt;: <a href="si-ADD-MRMsample.xml"><strong>Sample for Digital Mitford Site Index</strong></a>. You will need to associate your Schematron file with this document <strong>in addition to</strong> the currently associated TEI schema lines.</li>
+                    
+                <li>Open a new Schematron document in &lt;oXygen/&gt; by going to <strong>File → New</strong> and typing “Schematron” in the “Type filter text” box, or by going to <strong>File → New → New Document → (scroll to Schematron in the alphabetized list) → Schematron</strong>. Once opened, you will keep the default xml line at the top, but you will delete everything from <code>&lt;sch:schema&gt;</code> down. To write Schematron rules for a document in the TEI namespace, you will then replace this with:
+            <pre>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
+    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+    xmlns="http://purl.oclc.org/dsdl/schematron"&gt;
+        &lt;ns uri="http://www.tei-c.org/ns/1.0" prefix="tei"/&gt;
+        
+    &lt;/schema&gt;</pre></li>
+                <li>Write your Schematron patterns <strong>inside</strong> the <code>&lt;schema&gt;</code> root element.</li>
+                <li><strong>Important:</strong> You must use the <code>tei:</code> prefix before each of your elements since we are working with a document in the TEI namespace; otherwise none of your schema rules involving elements will fire! However, we do <strong>not</strong> use that prefix before attributes because the attributes are in no namespace.</li>
+            </ul>
+            
+        </section>
+         <section title="goal">
+                <h4>The goal:</h4>
+                <p>The Digital Mitford project is working on a collection of <dfn>prosopography data</dfn>: a record of people, places, organizations, published works, and other named entities relevant to British author Mary Russell Mitford’s world in the nineteenth century. After some years of collaborative research the collection of data (which we call our <q>Site Index</q>) contains thousands of entries, and it keeps growing as members of our project team contribute batches of new entries in the course of their research. It’s common for our editors to make typographical errors as they enter details about historical people in particular, since these entries can be especially complicated! That is why we need to write some Schematron rules to help people find and correct the common errors they will likely make they are coding.</p>
+                <p>As you work on the rules below, think about how to group them logically into related <code>pattern</code> elements. You can use an <code>@id</code> on <code>pattern</code> elements to help label them and organize your work. Also, be sure to associate your Schematron file with the XML file you are testing <em>as soon as you write your first rule</em> so you can see if it is responding as you expect.</p>
+            </section>
+            <section title="sourceCode">
+                <h4>Survey the code</h4>
+                <p>Skim through the Digital Mitford project XML you downloaded, and get a sense of how it is organized and the way we have nested information about individuals inside each <code>person</code> element. Notice:</p>
+                    <ul><li>Each <code>tei:person</code> has an <code>@xml:id</code> whose value is a distinct identity marker.</li>
+                        <li>Inside the <code>tei:person</code> elements there are <code>tei:persName</code> elements, some of which contain nested <code>tei:surname</code>, and <code>tei:forename</code> elements.</li> <li>There are also elements for <code>tei:birth</code> and <code>tei:death</code> with attributes and contents telling us about when and where a person was born and died.</li> 
+                       <li>Finally, most <code>tei:person</code> elements contain a biographical <code>tei:note</code> element with more information. These notes sometimes include references (made with <code>@ref</code> attributes) to people, places, books, and more listed elsewehere in the site index.</li></ul>
+            </section>
+            <section title="rules">
+                <h4>Schematron rules to write and test</h4>
+                
+                <ol>  
+                   <!-- <li>We want to close up extra white spaces that our editors accidentally type at the start of their elements. Write a Schematron rule that checks for leading white space inside the <code>tei:persName</code> element in particular. (That is, raise a warning when an element <em>starts with</em> any kind of white space.) <ul>
+                       <li>(Hint for safely <q>playing with matches</q>: Remember the regular expression <code>^</code> and <code>$</code>? In XPath contexts, they refer to the start or end of an XML node, instead of the start or end of a line of text.)</li>
+<li>Notice: if you write a function that requires quotation marks to surround a literal string, you need to use single quotations so you do not conflict with the double quotes indicating a Schematron attribute value. This practice is called <em>nesting</em> your quotation marks, and we use it in ordinary writing, too! In XML code and in formal editorial practice, we alternate between double and single quotation marks to nest them in layers.
+</li></ul></li>-->
+                    <li><p>On the <code>tei:person</code> element, we want to check the way its <code><dfn>@xml:id</dfn></code> is written. In our project when a historical person is given a unique identifier, that <code>@xml:id</code> value is supposed to begin with the most distinctive part of the person’s name, their <em>last</em> name. Since we code the <code>tei:surname</code> element as a descendant of <code>tei:person</code>, you may write a Schematron rule that tests whether the <code>@xml:id</code> <em>starts with</em> the contents of the TEI's surname element. <strong>Hint:</strong> To specify an XML node (an element or attribute) as an argument in an XPath function, simply give the element name (without quotation marks) instead of a specific string.</p></li>
+                    <li>Sometimes our editors don’t capitalize proper names! Check that all the <code>tei:forename</code>, <code>tei:surname</code>, and <code>tei:placeName</code> elements, as well as any <code>tei:persName</code> elements that hold text and do not wrap around forename and surname elements start with capital letters. <strong>Hints:</strong><ul><li>You can do that with one rule, and you can set multiple contexts using the <strong>union operator</strong> or pipe: <code>|</code> to join these together. <span class="smaller">You last used the pipe when writing Relax NG. You can use it in Schematron (and XSLT) contexts here specifically to join together multiple context items in one rule.</span></li>
+                    </ul> </li>
+                    <li>Now let’s take a look at the dates coded in this file, coded in the <code>tei:birth</code> and <code>tei:death</code> elements. All death dates need to be later than birth dates, but surprisingly, the TEI does not have a built-in way of checking this. Write a Schematron rule to flag when the dates coded in the <code>@when</code> attributes on any <code>tei:birth</code> and <code>tei:death</code> elements don’t make sense. For the purposes of this homework, it is fine to <strong>concentrate only on the <code>@when</code> attributes</strong> coded on <code>tei:birth</code> and <code>tei:death</code> (you can ignore other attributes containing dates).
+                        <ul>
+                        <li><strong>How to test for this:</strong> Some dates are given as full ISO years (<code>yyyy-mm-dd</code>) and others are only partial and those, alas, will NOT convert to a machine-readable date with <code>xs:date()</code>, so we do not want to use that function here. Instead, we recommend that you work with the <code>tokenize()</code> function to isolate the year as the piece that we really need to look at, that is, the four-digit year that sits in front of the first hyphen. To reliably capture this piece, write the <code>tokenize()</code> function to break the attribute values in pieces around hyphens (<q>tokenize on the hyphen</q>) and write a position predicate to grab the <em>first</em> of the tokens. (Note: tokenize() is a wonderfully adaptable function! Even if the date value lacks any hyphens and only contains a year, this will still return that year since the token just won’t break off!)</li><li>Remember, you are testing to see when a <em>birth year</em> is later than a <em>death year</em>, so you need to write a test that uses comparison operators.</li>
+                    </ul></li>         
+                  <!--  <li>It is very important for our site index file that <code>@ref</code> attributes must begin with a leading hashtag (<code>#</code>), since (as we explain more fully in our guide on <q><a href="explainSchematronIdRefs.html">Coding with Unique Identifiers and Testing Them with Schematron</a></q>), the hashtag is reserved for <code>@ref</code> attributes that <em>point) to</em> <code>@xml:ids</code>, so they do not duplicate those ids (whose values should only ever turn up once in a project). Write Schematron rule(s) to test and flag those errors on our <code>@ref</code> attributes, to help us find where these are missing their required hashtags.</li>-->
+                  <!--  <li><strong>Optional Bonus Challenge:</strong> These last two tasks are challenging, but may be useful to adapt in projects, so if you do not have time to write them now, you may wish to come back to them later on. To work on these, you need to consult our guide on <q><a href="explainSchematronIdRefs.html">Coding with Unique Identifiers and Testing Them with Schematron</a></q>. Finally, carefully following our guide, adapt the code we provide there to write a test that checks whether the <code>@ref</code> and <code>@resp</code> attribute values, <em>following their hashtags</em>, actually match up to a defined <code>@xml:id</code> in this file <em>or</em> in the Digital Mitford Site Index at <code>http://digitalmitford.org/si.xml</code>. (Note that this rule will also ensure that these values actually begin with a hashtag!) Following our guide, you will learn how to write a <code>let</code> statement to define a variable that points to another file’s <code>@xml:ids</code>, and then <em>refer</em> to that variable in your Schematron test. Also, it is perfectly legal in our project for there to be <em>multiple</em> values on an <code>@ref</code> or <code>@resp</code>, separated by white space, just as you see in our guide, so you should follow our lead to adapt our code there.
+</li>-->
+                    <li><strong>Bonus Challenge:</strong> We need a more sophisticated way than we used in number 2 to check the way people type out full names in the <code>persName</code> elements. Can we test for errors like these?
+                        <pre>Dorothy wordsworth</pre> 
+                        or
+                        <pre>Percy bysshe Shelley</pre>
+                        Of course we can, by adapting the <code>tokenize()</code> we have been using here to break on white space, and to test <strong>each</strong> token in turn to see if it is capitalized. You can do this by applying the <code>for $i in (sequence) return …</code> (or <q><strong>for-loop</strong></q> XPath feature) so we can walk through each token in the full sequence. To see how to write the code, consult our <a href="explainSchematronIdRefs.html">our guide on testing unique identifiers</a>: Look at our <code>let</code> statement, defining a variable containing a sequence of tokens, and then consider how we processed each one in turn in our <code>assert @test</code>. Can you adapt that code to tokenize the parts of a name, and test to see if each part is capitalized? Write your Schematron rule!       
+                    </li> 
+             </ol>
+                
+                <section title="uploading">
+                    <h3>Submission</h3>
+                    <p>Upload your completed Schematron schema AND the si-Add-MRMsample.xml file <strong>with your Schematron associated</strong> to Courseweb, and follow our <a href="explainFileNames.html">standard filenaming conventions for homework assignments uploaded to Courseweb</a>.</p>
+                </section>
+            </section>
+        
+    
+</body></html>

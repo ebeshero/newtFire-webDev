@@ -2,13 +2,13 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <title>Schematron Exercise 2</title>
+        <title>Schematron Exercise: Digital Mitford Project</title>
         <link rel="stylesheet" type="text/css" href="explain.css"/>
     </head>
     <body>
         <!--#include virtual="top.html" -->
         <section title="exerciseName"><h1><span class="banner">Schematron Exercise 2</span></h1></section>
-        <a href="http://schematron.com"><img src="schematronLogo.png" alt="Schematroll, the Schematron mascot"/></a><span class="smaller">Meet Schematroll, the <a href="http://schematron.com/">Schematron</a> mascot! Schematroll is a cross between a <a href="http://members.optusnet.com.au/bilbies/About_Bilbies.htm">bilby</a> and a <a href="http://www.iucnredlist.org/details/2783/0">bettong</a>.</span>
+        <a href="http://schematron.com"><img src="schematronLogo.png" alt="Schematroll, the Schematron mascot"/></a><span class="smaller">Meet Schematroll, the <a href="http://schematron.com/">Schematron</a> mascot! Schematroll is a cross between a <a href="http://members.optusnet.com.au/bilbies/About_Bilbies.htm">bilby</a> and a <a href="https://www.bushheritage.org.au/species/bettongs">bettong</a>.</span>
         <section title="preliminaries">
             <h3>Preliminaries</h3>
             <p>To work on this assignment, you will need to to find and do the following:</p>
@@ -26,7 +26,7 @@
         
     &lt;/schema&gt;</pre></li>
                 <li>Write your Schematron patterns <strong>inside</strong> the <code>&lt;/schema&gt;</code> root element.</li>
-                <li><strong>Important:</strong> You must use the <code>tei:</code> prefix before each of your elements since we are working with a document in the TEI namespace; otherwise none of your schema rules involving elements will fire! Remember that we do <strong>not</strong> use that prefix before attributes because attributes are in no namespace.</li>
+                <li><strong>Important:</strong> You must use the <code>tei:</code> prefix before each of your elements since we are working with a document in the TEI namespace; otherwise none of your schema rules involving elements will fire! However, we do <strong>not</strong> use that prefix before attributes because the attributes are in no namespace.</li>
             </ul>
             
         </section>
@@ -34,13 +34,16 @@
             <h3>Analysis of the task</h3>
             <section title="goal">
                 <h4>The goal:</h4>
-                <p>The Digital Mitford project is working on a collection of prosopography data, that is, a record of people, places, organizations, published works, and other named entities relevant to British author Mary Russell Mitford’s world in the nineteenth century. After some years of collaborative research the collection (which we call our <q>Site Index</q>) contains thousands of entries, all contributed in batches by members of the editing team in the course of their research. It’s common for our editors to make typographical errors as they enter details about historical people in particular, since these entries can be especially complicated! Your task is to write a helpful Schematron file to guide the editors in their process, flag errors if they reverse date ranges like birth and death dates, check for white space errors and other common problems, and check to see that the referencing of <code>@xml:id</code> attributes is correct. We hope that learning these things will give you ideas for writing Schematron to guide your own projects.</p>
+                <p>The Digital Mitford project is working on a collection of <dfn>prosopography data</dfn>: a record of people, places, organizations, published works, and other named entities relevant to British author Mary Russell Mitford’s world in the nineteenth century. After some years of collaborative research the collection of data (which we call our <q>Site Index</q>) contains thousands of entries, and it keeps growing as members of our project team contribute batches of new entries in the course of their research. It’s common for our editors to make typographical errors as they enter details about historical people in particular, since these entries can be especially complicated! With this exercise, you will write a helpful Schematron file to guide the editors in their process and flag some common errors that we can really only catch with XPath expressions: if they reverse date ranges like birth and death dates, or make errors with white spaces, for example. We hope that learning these things will give you ideas for writing Schematron to guide your own projects.</p>
                 <p>As you work on the rules below, think about how to group them logically into related <code>pattern</code> elements. You can use an <code>@id</code> on <code>pattern</code> elements to help label them and organize your work. Also, be sure to associate your Schematron file with the XML file you are testing <em>as soon as you write your first rule</em> so you can test it to make sure it is working.</p>
              
             </section>
             <section title="rules">
                 <h4>A little orientation</h4>
-                <p>Skim through the Digital Mitford project XML you downloaded, and get a sense of how it is organized and the way we have nested information about individuals inside each <code>person</code> element. You will see that each <code>person</code> has an <code>@xml:id</code> whose value is a distinct identity marker. Inside the <code>person</code> elements you will see <code>persName</code> elements, some of which contain nested <code>surname</code>, and <code>forename</code> elements. You will also see elements for <code>birth</code> and <code>death</code> with attributes and contents telling us about when and where a person was born and died. And most <code>person</code> elements contain a biographical <code>note</code> element with more information. These notes sometimes include references (made with <code>@ref</code> attributes) to people, places, books, and more listed elsewehere in the site index.</p>
+                <p>Skim through the Digital Mitford project XML you downloaded, and get a sense of how it is organized and the way we have nested information about individuals inside each <code>person</code> element. Notice:</p>
+                    <ul><li>Each <code>person</code> has an <code>@xml:id</code> whose value is a distinct identity marker.</li>
+                        <li>Inside the <code>person</code> elements there are <code>persName</code> elements, some of which contain nested <code>surname</code>, and <code>forename</code> elements.</li> <li>There are also elements for <code>birth</code> and <code>death</code> with attributes and contents telling us about when and where a person was born and died.</li> 
+                       <li>Finally, most <code>person</code> elements contain a biographical <code>note</code> element with more information. These notes sometimes include references (made with <code>@ref</code> attributes) to people, places, books, and more listed elsewehere in the site index.</li></ul>
                 <h4>Rules to write and test</h4>
                 
                 <ol>  
