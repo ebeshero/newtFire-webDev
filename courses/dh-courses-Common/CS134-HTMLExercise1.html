@@ -1,0 +1,116 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>HTML Exercise 1</title>
+    </head>
+    <body>
+        <div id="top"><div id="bannerImage"><a href="http://newtfire.org/dh/"><img
+    src="newt-mosaic4.png"
+    alt="NewtFire logo: a mosaic rendering of a firebelly newt"/></a></div>
+    <div id="title"><a href="http://newtfire.org">newtFire</a> <a href="http://newtfire.org/dh">{dh|ds}</a></div>
+    <div class="boilerplate"><span>Authored by:  Rebecca J. Parker (rjp43 at pitt.edu | Twitter: @bcpkr396)  Edited and maintained by:  Gregory Bondar (ghb2 at pitt.edu) and Elisa E. Beshero-Bondar
+        (ebb8 at pitt.edu)   <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://licensebuttons.net/l/by-nc-sa/4.0/80x15.png" /></a><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"></a> Last modified:
+        Saturday, 27-Oct-2018. <a href="http://newtfire.org/firebellies.html">Powered by firebellies</a>.</span></div>	
+</div>
+<hr/>
+        <h1><span class="banner">HTML Exercise 1</span></h1>
+        <section title="preliminaries">
+            <h3>Where to GET HELP?!?</h3>
+            <p>If you have a question, or are having problems with a program, ASK FOR HELP ON <a href="https://github.com/ghbondar/webDevClass-Hub/issues">GITHUB: in our course repo</a>, create a new Issue, explain your problem, and even include copies of your code enclosed by the tick-marks found under the tilda on your keyboard. Remember, that all assignments are due at the beginning of class on the due date, Monday Oct 29.</p>
+            <h3>Preliminaries</h3>
+            <p>Before beginning this assignment please thoroughly read our tutorial: "<a
+                    href="explainHTML.html">Introduction to XHTML (and HTML)</a>". It will
+                benefit you to keep these tutorials open while you work on this assignment. To
+                begin, open a new HTML file in &lt;oXygen/&gt; by clicking on the icon that looks like a piece of paper in the top left (or going to <strong>File → New</strong>, entering <code>HTML</code> in the search bar, and clicking on the HTML result. Paste in the highlighted meta elements below at the appropriate place in the <code>head</code> element at the start of your file:</p>
+            <pre>
+                &lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+            &lt;head&gt;
+                  &lt;title&gt;&lt;!--title of your page here--&gt;&lt;/title&gt;
+                 <code>&lt;meta charset="UTF-8" /&gt;
+                  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</code>
+                &lt;!--Add your &lt;link&gt; element to associate your CSS file here once you have created it.-->
+             &lt;/head&gt;
+                 &lt;body&gt;
+                 &lt;!--Code the viewable portion of your page here.--&gt;
+                 &lt;/body&gt;
+                  </pre>
+
+        </section>
+        <section title="analysis_of_task">
+            <h3>Analysis of the task</h3>
+            <p>The goal of this assignment is to create a very basic personal webpage. If you
+                    <em>view page source</em> on this page you can see examples of how we used
+                headings, paragraphs, lists, an image, and links to other pages within the same
+                directory. Mac users to view page source we recommend that you use
+                Firefox or Chrome because Safari will require you to change browser preferences to
+                see the page source. In Firefox or Chrome simply <em>right-click</em> and select
+                    <em>view page source</em>.</p>
+            <p>The key components of your first basic webpage that we will be looking for are:</p>
+            <ul>
+                <li>Heading elements (with any variation of heading levels)</li>
+                <li>Paragraph element(s)</li>
+                <li>Linking at least one image</li>
+
+            </ul>
+            <p>We encourage you to go above and beyond these very basic requirements, and indeed in
+                    <a href="HTMLExercise2.html">Exercise 2</a> we will expect to see a more
+                completed web site.</p>
+            <h3>Viewing your webpage locally</h3>
+            <p>While developing your webpage it is important to consistently check your changes.
+                Follow these three simple steps to open your webpage locally in your web
+                browser:</p>
+            <ol>
+                <li>open your browser</li>
+                <li>on Windows: <code>control + o</code>
+                    <br /> on Mac: <code>command + o</code>
+                </li>
+                <li>browse your local file explorer for your webpage</li>
+            </ol>
+        </section>
+        <section title="how_to_submit">
+            <h3>Submitting your work</h3>
+            <p>You are required to save your HTML page(s) file in your <q>personal
+                    webpage</q> Git repository AND move them to your personal web space accounts at
+                newtfire.org using the FTP client that we showed you how to configure (see Courseweb 
+                for configuration instructions if you need to configure your FTP client).</p>
+            <p>To <em>push</em> to Github, remember:</p>
+            <ol>
+                <li>Your index.html-file must be saved in you personal Github repo</li>
+                <li>Open the Git Bash shell in that folder, if it's not open</li>
+                <li>Type: git add -A</li>
+                <li>Type: git commit -m "submitting homework"</li>
+                <li>Type: git push</li>
+            </ol>
+
+            <p><em>A note on mindful file management:</em> We recommend you save your pages
+                that are linked from other pages together in the same directory as your index.html file. 
+                Otherwise, you will need to declare the folder
+                (directory) followed by a <code>/</code> and then the filename. Mindful file
+                management is a key component of creating a well organized website.</p>
+            <p>By convention, the first page you place in your website folder is designated your
+                index.html page. You don’t have to have an index.html, but if you do, the main page
+                of your site can be abbreviated to the name of the site directory holding the web
+                files, like this one for Dr. Beshero-Bondar’s personal Pitt homepage:
+                http://www.pitt.edu/~ebb8/ . By default, when given that address, the web browser
+                retrieves the index.html file placed in her account’s space, and if it doesn’t find
+                one it generates an error. (The site address leads to exactly the same place as
+                http://www.pitt.edu/~ebb8/index.html .) By assigning any other name to your homepage
+                someone visiting your site is required to call on that specific file/file path to
+                get to your homepage. <strong>For this assignment please name your homepage
+                        <code>index.html</code>.</strong></p>
+            <p>Access your personal web space accounts at newtfire.org using Filezilla, or your preferred file transfer program (FTP client). Move
+                all of your developed HTML pages into the <code>public_html</code>
+                folder.</p>
+            <p>If necessary, be sure that the file permissions on your main folder allow the group and others
+                to <q>Read</q> and <q>Execute</q>. You (the owner) should be the only one able to
+                write to this directory. The following image shows how to access file permissions
+                and our recommended settings using WinSCP on a Windows machine; however, the setup
+                should be similar on other platforms and in other file transfer programs.</p>
+            <img src="filePermissions.jpg" alt="WinScp Changing File Permissions" />
+        </section>
+    </body>
+</html>
