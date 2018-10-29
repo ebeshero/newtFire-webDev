@@ -17,11 +17,12 @@
       			
       <h1><span class="banner">XSLT Exercise 3</span></h1>
      <h3>The input text</h3>
-      <p>For this assignment we’ll be preparing an HTML view of data in an XML file from <cite>The Restoration of Nell Nelson</cite> project. We prepared the XML to hold information from this chart originally printed in a nineteenth-century newspaper: <img src="originalWSGAch1_table.jpg"/></p>
+      <p>For this assignment we’ll be preparing an HTML view of data in an XML file from <cite>The Restoration of Nell Nelson</cite> project. We prepared the XML to curate the information from a chart originally printed in a nineteenth-century newspaper: <img src="originalWSGAch1_table.jpg"/>
+      Our XML reorganizes the information using elements and attributes to hold the data for each survey question. We will write XSLT to present that information in a much simpler way that works better for reading on the web than in a newspaper. </p>
             <p>The source XML file can be found here:
             <a href="WSGATableCh1.xml">WSGATableCh1.xml</a>. You should
             right-click on this link, download the file, and open it in &lt;oXygen/&gt;. We may be
-            using it for subsequent assignments, so keep a copy when you’re done with this one. 
+            using it for subsequent assignments, so keep a copy when you’re done with this exercise. 
             
          </p>
       <p>Our XML file is coded in the TEI namespace, which means that your XSLT stylesheet
@@ -48,9 +49,9 @@
 &lt;/xsl:stylesheet&gt;</pre>
     
       <h3>Overview of the assignment</h3>
-      <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document that consists only of a table. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. You can read more about HTML tables at 
+      <p>For this assignment you want to write an XSLT stylesheet that will transform the XML input document into an HTML document presents the information in HTML tables. In order to create an HTML table, you need to know that a table in HTML is a <code>&lt;table&gt;</code> element that contains one <code>&lt;tr&gt;</code> (<q>table row</q>) element for each row of the table. Each cell in the row is a <code>&lt;td&gt;</code> (<q>table data</q>) element for regular rows and a <code>&lt;th&gt;</code> (<q>table header</q>) element for the header row. To view HTML table code, take a look at this w3schools example: 
          <a href="http://www.w3schools.com/html/html_tables.asp">http://www.w3schools.com/html/html_tables.asp</a>.</p>
-         <p>The desired output will look like:</p>
+         <p>We are going to create a new HTML table to hold all the survey questions that share the same kinds of responses. One of these will be <q>Yes</q>/<q>No</q> types of answers, and the other two tables will hold the questions with different kinds of answers. We will make sure each table has clear header rows so we can see the kinds of survey questions being asked. This basically means we are <strong>remixing</strong> the information presented in the source documents for ease of reading. The desired HTML output will look like this: </p>
          <div class="code">
             
                   <h1>Sanitary Conditions of Workshops and Factories in New York City</h1>
@@ -68,8 +69,7 @@
                      <tr>
                         <td>1</td>
                         <td>
-                           Is there free circulation of air through and about the building in which you work? 
-                           
+                           Is there free circulation of air through and about the building in which you work?   
                         </td>
                         <td>468</td>
                         <td></td>
@@ -80,8 +80,7 @@
                      <tr>
                         <td>2</td>
                         <td>
-                           Are there offensive odors in the rooms occupied by employes[?]
-                           
+                           Are there offensive odors in the rooms occupied by employes[?]                          
                         </td>
                         <td>342</td>
                         <td></td>
@@ -92,8 +91,7 @@
                      <tr>
                         <td>3</td>
                         <td>
-                           Are there facilities for washing?
-                           
+                           Are there facilities for washing?                          
                         </td>
                         <td>460</td>
                         <td>14</td>
@@ -465,8 +463,9 @@
       <p>The information that you want to output is all found inside the <code>&lt;div type="table"&gt;</code> element in our input document. For the moment we’re going to ignore everything else inside of the <code>&lt;teiHeader&gt;</code>. You want to generate one HTML
          table to contain all of the questions that have the corresponding answers "Yes", "Yes, but fined", "No", and "Blank". The table should also contain the numerical values for each of those responses. Finally the table should include a cell that tallies the total number of responses to each question. Your XSLT, then, should proceed along the following lines:</p>
       <ol>
-         <li>In a template rule for the document node (<code>&lt;xsl:template
-            match="/"&gt;</code>), create the HTML superstructure. Between the start and end
+         <li>First of all, survey the source XML document carefully, and write some XPath to make sure you understand the way the different kinds of survey questions are coded. What kinds survey responses do you see? How are they encoded? Can you locate with XPath all the questions that have <q>Yes</q> answers? (If you find these, you have all the <q>Yes/Yes-but-fined/No/Blank</q> responses. When survey questions have answers other than <q>Yes</q>, what are they? Can you write XPath expressions to isolate these? Make some notes for yourself. </li>
+         <li>Start your XSLT by writing a template rule for the document node (<code>&lt;xsl:template
+            match="/"&gt;</code>) so you can create the HTML superstructure. Between the start and end
             <code>&lt;body&gt;</code> tags that you’ll be creating you should insert the
             main tags for the HTML tables. Between the start and end <code>&lt;table&gt;</code> tags, you should then insert
             <code>&lt;xsl:apply-template&gt;</code> elements that select the nodes you want
@@ -483,10 +482,8 @@
             </em>and the various <code>&lt;xsl:template&gt;</code> elements sit around watching
             nodes fly by, and when they match something, they <em>grab it and process it</em>.
             In this case, then, your <code>&lt;xsl:apply-template&gt;</code> elements inside the
-            template rule for the document node will tell the system that you want to process the <code>&lt;string&gt;</code> elements of the <code>&lt;f name="question"&gt;</code> and all of the corresponding responses (<code>&lt;f name="response"&gt;</code>) and the corresponding  <code>&lt;string&gt;</code> insides of the <code>&lt;f name="note"&gt;</code> element all sitting inside of the same <code>&lt;fs&gt;</code> element. In order to specify that you only want specific Yes or No Questions then the <code>&lt;xsl:apply-template&gt;</code> elements inside the
-            template rule for the document node will tell the system that you want to process the following elements only when one of the <code>&lt;f name="response"&gt;</code> has an <code>@select="Yes"</code>, at
-            which point the template rule for the document node will call out what portions of the document need to be processed at this particular point. That work actually gets done by other
-            <code>&lt;xsl:template&gt;</code> rules, the ones that you’ve written that match
+            template rule for the document node will tell the system that you want to process the descendant <code>&lt;fs&gt;</code> elements, based on their contents. In order to specify that you only want specific Yes or No Questions then you need to specify with <code>&lt;xsl:apply-template select="___"&gt;</code> to process <code>fs</code> elements only when one of the <code>&lt;f name="response"&gt;</code> has an <code>@select="Yes"</code>. That work wll get done by new
+            <code>&lt;xsl:template&gt;</code> rules that you will need to write to match
             the <code>&lt;f name="response"&gt;</code> with <code>@select="Yes"</code>.</li>
          
          <li>In the <code>&lt;xsl:template&gt;</code> rules for <code>&lt;string&gt;</code> elements of the <code>&lt;f name="question"&gt;</code> you’ll need to output something for each one, that is, each question that has a “Yes” answer (held inside the same <code>&lt;fs&gt;</code> element as the <code>&lt;f name="response"&gt;</code> with <code>@select="Yes"</code>).</li>
