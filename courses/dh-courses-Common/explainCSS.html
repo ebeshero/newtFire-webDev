@@ -9,7 +9,7 @@
    </head>
    <body>
       <!--#include virtual="top.html" -->
-      <h1><span class="banner">Introduction to Cascading Stylesheets (CSS)</span></h1>
+      <section id="intro_to_CSS"><h1><span class="banner">Introduction to Cascading Stylesheets (CSS)</span></h1>
       <!--<h3> for subheadings when you need them.</h3>-->
       <p>Here we offer a very basic orientation to styling HTML elements with Cascading Stylesheets
          (CSS), with emphasis on learning how to write the code and associate it with an XHTML (or
@@ -57,8 +57,8 @@
          download from the page source view. Even more conveniently, CSS resources make default
          styles available for download, like <a href="http://www.csszengarden.com/">CSS Zen
             Garden</a>. But as you learn to write CSS, we expect you will find it as addictive as we
-         do, in the fun obsession of designing a lovely site all your own. </p>
-      <h3>CSS Statements</h3>
+         do, in the fun obsession of designing a lovely site all your own. </p></section>
+     <section id="CSS_Statements"> <h3>CSS Statements</h3>
       <p>CSS statements take this basic form, with a <span class="red">selector</span> followed a
          statement in curly braces <span class="code">{ }</span> containing a <span class="purple"
             >property</span>, and a <span class="green">value</span>: </p>
@@ -77,8 +77,6 @@
             class="code">body</span> element (and by the <strong>inheritance</strong> rule) all the
          descendent elements within <span class="code">body</span>: </p>
       <ul>
-
-
          <li>The background color will be a particular hexadecimal color value (a value made of
             three 2-digit numbers in the base-16 hexadecimal system, which combines digits and
             letters. These designate a color by <strong>RGB</strong> factors: The first two numbers
@@ -118,8 +116,8 @@
          your XML schema, but you can’t make up XHTML element names or CSS properties or acceptable
          values. E.g., if you try to set the color of an element to “OutrageousNeonYellow!”, that
          setting will be ignored. You can look up the legal properties and values from <a
-            href="#resources">our Resources section below</a>. </p>
-      <h3>Associating a CSS File with an HTML File</h3>
+            href="#resources">our Resources section below</a>. </p></section>
+     <section id="link_CSS"> <h3>Associating a CSS File with an HTML File</h3>
       <p>When we write a separate CSS file to style an HTML file, we need to
             <strong>associate</strong> it with the HTML by placing a special &lt;:link&gt; element
          inside the &lt;head&gt; element. The code looks like this, and we recommend simply copying
@@ -145,13 +143,13 @@
             way you associate the files is a little different: To attach CSS to XML in
             &lt;oXygen/&gt;, select Document → XML Document → Associate XSLT/CSS Stylesheet and
             navigate to the CSS file. &lt;oXygen/&gt; then inserts a line near the top of your
-            document to make the file association. </span></p>
-      <h3><a id="resources">Resources,</a> Tutorials, and References </h3>
+            document to make the file association. </span></p></section>
+    <section id="css_Resources">  <h3><a id="resources">Resources,</a> Tutorials, and References </h3>
       <p>We're not being lazy here; it's just that there are wonderful resources on the World Wide
          Web that cover every rule for CSS writing! Our goal with this page was to orient you to the
          basics of the syntax, so you can then find your way just as we do, consulting the following
          (and finding your own great CSS resources): </p>
-      <h3>CSS Tutorials and Samples:</h3>
+      <h4>CSS Tutorials and Samples:</h4>
       <ul>
 
 
@@ -223,7 +221,7 @@
          </li>
 
 
-      </ul>
+      </ul></section>
    </body>
 
 

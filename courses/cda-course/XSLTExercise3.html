@@ -463,7 +463,7 @@
       <p>The information that you want to output is all found inside the <code>&lt;div type="table"&gt;</code> element in our input document. For the moment we’re going to ignore everything else inside of the <code>&lt;teiHeader&gt;</code>. You want to generate one HTML
          table to contain all of the questions that have the corresponding answers "Yes", "Yes, but fined", "No", and "Blank". The table should also contain the numerical values for each of those responses. Finally the table should include a cell that tallies the total number of responses to each question. Your XSLT, then, should proceed along the following lines:</p>
       <ol>
-         <li>First of all, survey the source XML document carefully, and write some XPath to make sure you understand the way the different kinds of survey questions are coded. What kinds survey responses do you see? How are they encoded? Can you locate with XPath all the questions that have <q>Yes</q> answers? (If you find these, you have all the <q>Yes/Yes-but-fined/No/Blank</q> responses. When survey questions have answers other than <q>Yes</q>, what are they? Can you write XPath expressions to isolate these? Make some notes for yourself. </li>
+         <li>First of all, survey the source XML document carefully, and write some XPath to make sure you understand the way the survey questions and answers are connected together. What kinds survey responses do you see, and how are they encoded? Can you locate with XPath all the questions that have <q>Yes</q> answers? (If you find these, you have all the <q>Yes/Yes-but-fined/No/Blank</q> responses.) When survey questions have answers other than <q>Yes</q>, what are they? Can you write XPath expressions to isolate these? Make some notes for yourself. </li>
          <li>Start your XSLT by writing a template rule for the document node (<code>&lt;xsl:template
             match="/"&gt;</code>) so you can create the HTML superstructure. Between the start and end
             <code>&lt;body&gt;</code> tags that you’ll be creating you should insert the
@@ -510,7 +510,7 @@
               &lt;th&gt;No&lt;/th&gt;
               &lt;th&gt;Blank&lt;/th&gt;
               &lt;th&gt;Total Responses&lt;/th&gt;</code>, and then create a separate row with data for each number, question, and response.</p>
-         <p>Now, take this a step further and create two new tables for questions that require responses other than YES or NO.  Create a new table for the question about identifying the source of smells, and another table for the question regarding responses about sitting or standing. Remember which template rule you need to work with to create a table in the first place, and then proceed as you did before to write template rules that respond to the specific situations that you select for, so that each table contains the specific data that you designate.</p> 
+         <p>Now, take this a step further and create two new tables for questions that require responses other than Yes or No.  Create a new table for the question about identifying the source of smells, and another table for the question regarding responses about sitting or standing. Remember which template rule you need to work with to create a table in the first place, and then proceed as you did before to write template rules that respond to the specific situations that you select for, so that each table contains the specific data that you designate.</p> 
       
       <h3>Important</h3>
       <ul>

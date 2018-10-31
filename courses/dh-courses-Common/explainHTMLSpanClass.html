@@ -1,0 +1,62 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>Using &lt;span&gt; and @class to style your HTML</title>
+    </head>
+
+
+
+    <body>
+        <!--#include virtual="topAuthorDJB.html" -->
+        <h1><span class="banner">Using &lt;span&gt; and @class to style your HTML</span></h1>
+        <h4>How to use <code>@class</code></h4>
+        <p>You can style in-line elements with such basic HTML tags as <code>&lt;em&gt;</code> for
+            emphasis, <code>&lt;strong&gt;</code> for strong emphasis, etc., but what if you want to
+            assign style that isn’t supported by the basic HTML tags? For example, what if you need
+            to make your text red?</p>
+        <p>The HTML <code>@class</code> attribute is a very useful way to subcategorize HTML
+            elements. For example, suppose you have two paragraph-like elements in your input XML,
+            one for good examples of something (perhaps called <code>&lt;good_example&gt;</code>)
+            and one for bad examples (perhaps called <code>&lt;bad_example&gt;</code>). You’d like
+            to transform both into HTML <code>&lt;p&gt;</code> elements, but you want the good
+            example to be green and the bad example to be red. In XML you gave them different names,
+            so you could style them with different CSS rules, but HTML has predefined tags and is
+            thus more restrictive; if you want them to look and behave like paragraphs, the natural
+            way to do that is to make both <code>&lt;p&gt;</code> elements. Fortunately, you can
+            still style these two paragraphs differently by giving them different values for the
+            <code>@class</code> attribute. For example, if you output the good example as
+            <code>&lt;p class="good"&gt;</code>, you can specify in your CSS that all
+            <code>&lt;p&gt;</code> elements whose <code>@class</code> attribute has the value of
+            <q>good</q> should be colored green.</p>
+        <p>The syntax for specifying the value of the <code>@class</code> attribute in CSS is to
+            concatenate, in order and with no intervening spaces, the name of the element, a dot,
+            and the name of the class. For example:</p>
+        <pre>p.good {color: green;}</pre>
+        <p>says <q>style all <code>&lt;p&gt;</code> elements with an attribute <code>@class</code>
+            whose value is <q>good</q> by coloring the text green.</q></p>
+        <h4>How to use <code>&lt;span&gt;</code></h4>
+        <p>Assigning a <code>@class</code> attribute value to an element like <code>&lt;p&gt;</code>
+            to control its styling is natural because the element <code>&lt;p&gt;</code> occurs
+            naturally in the structure of the output HTML. That is, it’s easy to style a
+            paragraph because you can attach the <code>@class</code> attribute to the opening
+            <code>&lt;p&gt;</code> tag. But what if you want to tag just a few words the middle
+            of a sentence, which had a specific element structure in the original XML, but where
+            there isn’t a corresponding HTML element to which you could transform it? That is, what
+            if there’s no place to attach the <code>@class</code> attribute in the HTML output?</p>
+        <p><code>&lt;span&gt;</code> is an all-purpose in-line element. It has no special meaning
+            and no default rendering properties. The point of <code>&lt;span&gt;</code> is that it
+            serves as a place to hang a <code>@class</code> attribute, enabling you to style
+            arbitrary text. If, for example, your XML says something like:</p>
+        <pre>&lt;paragraph&gt;On the wall there was a sign that said &lt;warning&gt;beware&lt;/warning&gt;&lt;/paragraph&gt;</pre>
+        <p>You could transform that into:</p>
+        <pre>&lt;p&gt;On the wall there was a sign that said &lt;span class="warning"&gt;beware&lt;/span&gt;&lt;/p&gt;</pre>
+        <p>and then include in your CSS:</p>
+        <pre>span.warning { color: yellow; }</pre>
+        <p>This would cause the word <q>beware</q> to appear in yellow.</p>
+    </body>
+</html>

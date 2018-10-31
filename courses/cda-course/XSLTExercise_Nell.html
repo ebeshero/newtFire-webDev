@@ -1,0 +1,320 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+        <title>XSLT Exercise 4 (Nell Nelson Project)</title>
+    </head>
+
+
+
+    <body>
+        <!--#include virtual="topAuthorRJP43.html" -->
+        <h1><span class="banner">XSLT Exercise 4</span></h1>
+        <h3>The input text</h3>
+        <p>For this assignment we’ll be producing HTML from an XML file originally prepared by students in the
+            Nell Nelson project team in the fall of 2015 and modified for use in this XSLT
+            exercise. The XML file is available here: <a
+                href="NelsonArticle_1888-07-30.xml"
+                >http://newtfire.org/dh/NelsonArticle_1888-07-30.xml</a>. You should right-click on
+            this link, download the file, and open it in &lt;oXygen/&gt;.</p>
+        <h3>The usual housekeeping:</h3>
+        <p>Because this document is not in a namespace, we do not need the
+                <code>@xpath-default-namespace</code> attribute, and the only thing we need to add
+            to &lt;oXygen&gt;’s default XSLT stylesheet template. We also add our usual
+                <code>&lt;xsl:output&gt;</code> line that we use when producing HTML (for making
+            sure we produce valid HTML 5 in XHTML format). Here’s what we need:</p>
+        <pre>
+          &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
+    <span style="color:blue;">xmlns="http://www.w3.org/1999/xhtml" version="3.0"</span>&gt;
+    <span style="color:purple;">&lt;xsl:output method="xhtml" encoding="utf-8" doctype-system="about:legacy-compat"
+        omit-xml-declaration="yes"/&gt;</span>
+            
+        </pre>
+        <h3>Overview of the assignment</h3>
+        <p>We’re going to work with this entire XML document (on all levels of the
+            hierarchy), concentrating on processing the XML “salad” of mixed text and in-line elements to style them for presentation on the web
+            in HTML’s limited tagset. You can use some of the basic HTML in-line elements, like
+                <code>&lt;em&gt;</code> for emphasis or <code>&lt;strong&gt;</code> for strong
+            emphasis, but you’ll also want to use CSS to set some elements to have different colors
+            or background colors or to alter borders or fonts or font sizes or font styles (e.g.,
+            italic) or font weights (e.g., bold) or add text decoration (e.g., underlining) or text
+            transformation (e.g., convert to all upper case) … well … really anything stylistically
+            possible.</p>
+        <p>There are several types of in-line elements in our input XML document, but for the purposes
+            of this assignment we will focus on processing the paragraphs (<code>&lt;p&gt;</code>) inside the <code>&lt;articleBody element&gt;</code> to receive special tagging:</p>
+        <ul>
+            <li><code>&lt;unclear&gt;</code> This element will require special attention (described
+                below)!</li>
+            
+            <li><code>&lt;headLine&gt;</code></li>
+            
+            <li><code>&lt;workingConditions&gt;</code> For the purpose of this assignment we only
+                want you to grab this element when it appears below the
+                <code>&lt;articleBody&gt;</code> element.</li>
+            
+            <li><code>&lt;dialogue&gt;</code></li>
+            
+            <li><code>&lt;femVoice&gt;</code> For the purpose of this assignment we only want you to
+                process this element when it appears inside of the <code>&lt;dialogue&gt;</code>
+                element. </li>
+            
+            <li><code>&lt;nellVoice&gt;</code> For the purpose of this assignment we only want you
+                to process this element when it appears inside of the <code>&lt;dialogue&gt;</code>
+                element.</li>
+            
+            <li><code>&lt;mascVoice&gt;</code> For the purpose of this assignment we only want you
+                to process this element when it appears inside of the <code>&lt;dialogue&gt;</code>
+                element.</li>
+            
+            <li><code>&lt;company&gt;</code> For the purpose of this assignment only style the
+                company names that have the attribute and value
+                <code>@name="identified"</code>.</li>
+        </ul>
+        <p>Some are immediately inside <code>&lt;p&gt;</code> elements in the article body (like
+            <code>&lt;workingConditions&gt;</code> and <code>&lt;unclear&gt;</code>).
+            Others sit inside other in-line elements like all of the voice tags sitting inside of
+                <code>&lt;dialogue&gt;</code> elements or <code>&lt;headLine&gt;</code> elements
+            that sit inside the <code>&lt;head&gt;</code> element. You may not know at the outset
+            which ones can be inside which other ones, or how deeply they can nest. Happily, with
+            XSLT, unlike with many other programming languages, you don’t need to care about those
+            questions!</p>
+        <p>An example of possible desired output can be found here <a
+                href="1888-07-30_XSLTresults.html">http://newtfire.org/dh/1888-07-30_XSLTresults.html</a>, though we did not style the body paragraphs in this output file, and we are sure you can style this more effectively! It is important to note
+            that the majority of the styling choices on this file are controlled with a CSS file.
+            You will make your own CSS and relate it to your XSLT; therefore, your stylistic choices
+            might vary greatly from ours and your output may look completely different. What should
+            look relatively similar is the underlying raw HTML, which is generated by running the
+            XSLT. By viewing the page source of our output you can review the underlying raw HTML
+                (<a href="view-source:http://newtfire.org/dh/1888-07-30_XSLTresults.html"
+                >view-source:http://newtfire.org/dh/1888-07-30_XSLTresults.html</a>).</p>
+        <h3>Analysis of the task</h3>
+        <h4>How to process richly mixed content</h4>
+        <p>Prose paragraphs with in-line elements that might contain other in-line elements are
+            richly mixed content, with varied and unpredictable combinations of elements and plain
+            text. This is the problem that XSLT was designed to solve. With a traditional procedural
+            programming language, you’d have to write rules like <q>inside this paragraph, if
+                there’s a <code>&lt;dialogue&gt;</code> do X, and, oh, by the way, check whether
+                there’s a <code>&lt;nellVoice&gt;</code> or a <code>&lt;company&gt;</code> inside
+                the <code>&lt;dialogue&gt;</code>, etc.</q> That is, most programming languages have
+            to tell you what to look for at every step. The elegance of XSLT when dealing with this
+            type of data is that all you have to say inside paragraphs and other elements is <q>I’m
+                not worried about what I’ll find here; just process <strong>(apply templates
+                    to)</strong> all my children, whatever they might be.</q></p>
+        <p>The way to deal with mixed content in XSLT is to have a template rule for every element
+            and use it to output whatever HTML markup you want for that element and then, inside
+            that markup, to include a general <code>&lt;xsl:apply-templates/&gt;</code>, not
+            specifying a <code>@select</code> attribute. For example, if you want your
+                <code>&lt;nellVoice&gt;</code> to be tagged with the HTML
+                <code>&lt;strong&gt;</code> tags, which means <q>strong emphasis</q> and which is
+            usually rendered in bold, you could have a template rule like:</p>
+        <pre>&lt;xsl:template match="nellVoice"&gt;
+  &lt;strong&gt;
+      &lt;xsl:apply-templates/&gt;
+  &lt;/strong&gt;
+&lt;/xsl:template&gt;</pre>
+        <p>You don’t know or care whether <code>&lt;nellVoice&gt;</code> has any children nodes or,
+            if it does, what they are. Whatever they are, this rule tells the system to try to
+            process them, and as long as there’s a template rule for them, they’ll get taken care of
+            properly somewhere else in the stylesheet. If there are no children nodes, the
+                <code>&lt;xsl:apply-templates/&gt;</code> will apply vacuously and harmlessly. As
+            long as every element tells you to process its children, you’ll work your way down
+            through the hierarchy of the paragraph without having to know which elements can contain
+            which other elements or text nodes.</p>
+        <h4>Taking stock: when to use <code>@select</code></h4>
+        <p>In our <a href="explainXSLT.html">XSLT tutorial</a> we describe the use of
+                <code>&lt;xsl:apply-templates select="…"/&gt;</code> which specifies exactly what
+            you want to process and where. That makes sense when your input and output are very
+            regular in structure. <em>Use the <code>@select</code> attribute when you know exactly
+                what you’re looking for and where you want to put it.</em> We will want to use
+                <code>&lt;xsl:apply-templates select="…"/&gt;</code> in order to grab all of the
+                <code>&lt;headline&gt;</code> elements sitting inside of the
+                <code>&lt;head&gt;</code> element and to output them inside of the
+                <code>&lt;html&gt;</code> element at the beginning of your XSLT transformation
+            separate from the <code>&lt;articleBody&gt;</code> text. We will also want to use the
+                <code>&lt;xsl:apply-templates select="…"/&gt;</code> in order to place the rest of
+            the source text sitting inside of <code>&lt;articleBody&gt;</code> into a
+                <code>&lt;p&gt;</code> element below the headlines. By setting up these very
+            specific selections of these elements we are deciding the placement of where the
+            headlines of the source document sit in relation to the rest of the text found in
+                <code>&lt;articleBody&gt;</code> for our HTML output. It would also be logical to
+            add heading elements in the HTML portion of our XSLT to indicate placement of the
+                <code>&lt;newspaperTitle&gt;</code>, <code>&lt;seriesTitle&gt;</code>,
+                <code>&lt;date&gt;</code>, and <code>&lt;byline&gt;</code> elements. Consider where
+            each of these elements’ placements make sense in relation to the
+                <code>&lt;headline&gt;</code> elements and the <code>&lt;p&gt;</code> element
+            containing the text from the <code>&lt;articleBody&gt;</code> element. <span
+                class="smaller">Don’t forget what is represented in the <code>&lt;html&gt;</code>
+                element of your XSLT is the basic superstructure of your output HTML document;
+                therefore, the content inside of the <code>&lt;head&gt;</code> element, including
+                the <code>&lt;title&gt;</code> element, will not appear unless the underlying HTML
+                is being viewed. Hence the importance in creating visible header elements
+                    (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.) that contain the actual
+                title and byline information.</span></p>
+        <p>For the rest of this assignment, you don’t know (and don’t need to know) the order and
+            nesting hierarchy of whatever salad of elements and plain text you might find inside
+                <code>&lt;articleBody&gt;</code>, <code>&lt;head&gt;</code> or its sub-elements. You
+            just want to process whatever comes up whenever it comes up.
+                <code>&lt;xsl:apply-templates/&gt;</code> without the <code>@select</code> attribute
+            says <q>apply templates to whatever you find.</q>
+            <em>Omit the <code>@select</code> attribute where you don’t want to have to think about
+                and cater to every alternative individually.</em> (You can still treat them all
+            differently because you’ll have different template rules to <q>catch</q> them, but when
+            you assert that they should be processed, you don’t have to know what they actually
+            are.)</p>
+        <h4>What should the output look like</h4>
+        <p>HTML provides a limited number of elements for styling in-line text, which you can read
+            about at <a href="http://www.w3schools.com/html/html_formatting.asp"
+                >http://www.w3schools.com/html/html_formatting.asp</a>. You can use any of these in
+            your output, but note that presentational elements, the kind that describe how text
+            looks (e.g., <code>&lt;i&gt;</code> for <q>italic</q>), are generally regarded as less
+            useful than descriptive tags, which describe what text means (e.g.,
+                <code>&lt;em&gt;</code> for <q>emphasis</q>). Both of the preceding are normally
+            rendered in italics in the browser, but the semantic tag is more consistent with the
+            spirit of XML than the presentational one.</p>
+        <p>The web would be a dull world if the only styling available were the handful of
+            presentational tags available in vanilla HTML. In addition to those options, there are
+            also ways to assign arbitrary style to a snippet of in-line text, changing fonts or
+            colors or other features in mid-stream. To do that:</p>
+        <ol>
+            <li><p>Before you read any further in this page, read Obdurodon’s <a
+                        href="http://dh.obdurodon.org/class-and-span.html">Using
+                            <code>&lt;span&gt;</code> and <code>@class</code> to style your HTML</a>
+                    page.</p></li>
+
+            <li><p>To use the strategies described at that page, create an XSLT template rule that
+                    transforms the element you want to style to an HTML <code>&lt;span&gt;</code>
+                    element with a <code>@class</code> attribute. For example, you might transform
+                        <code>&lt;nellVoice&gt;</code> in the input XML to <code>&lt;span
+                        class="nellVoice"&gt;</code>...text node (represented in XSLT with
+                        <code>&lt;xsl:apply-templates/&gt;</code>) ...<code>&lt;/span&gt;</code> in
+                    the output HTML. You can then specify CSS styling by reference to the
+                        <code>@class</code> attribute, as described in the page we link to
+                    above.</p>
+                <p>Note that you can make your transformations very specific. For example, instead
+                    of setting all <code>&lt;workingConditions&gt;</code> elements to the same HTML
+                        <code>@class</code>, you can create separate template rules to
+                        <strong>match</strong> on workingConditions according to their attribute
+                    values. For example, <code>&lt;xsl:template
+                        match="workingConditions[@category='positive']"&gt;</code> is a normal XPath
+                    expression to match <code>&lt;workingConditions&gt;</code> elements only if they
+                    have a <code>@category</code> attribute with the value <q>positive</q>. So
+                    within that matching template rule you create a <code>&lt;span&gt;</code>
+                    element with a logical <code>@class</code> (let’s say positive) and then simply
+                    place the <code>&lt;xsl:apply-templates/&gt;</code> inside of the span. Then in
+                    the CSS make reference to the <code>@class</code>, again as described in the
+                    page we link to above.</p></li>
+            <li><p>This next part will exercise your XPath skills a little, and introduce you to the use of <code>current()</code> in processing XSLT templates. Notice that the Nelson team set up a list of <code>&lt;toneElements&gt;</code> at the top of their document, as the first child of the <code>&lt;root&gt;</code> element. They did this to store a list of ready-reference values connected with their markup of voices and working conditions in their 19th-century newspaper articles. They imagined working with these to help with organizing and styling their markup, so they could associate three simple qualities: <q>good</q>, <q>bad</q>, and <q>neutral</q> with the more complex array of information about working conditions they coded in the newspaper texts. Notice that inside <code>toneElements</code> are two elements, <code>connotations</code> and <code>category</code>, and these hold <code>@id</code> and <code>@tone</code> attributes. We would like you to notice the <code>category</code> elements in particular: The <code>@id</code> attributes on these <code>category</code> <em>elements</em> are the same values used in an <em>attribute</em> conveniently named <code>@category</code> sitting on the <code>workingConditions</code> elements throughout the newspaper article. This markup makes it possible to <strong>look up</strong> the <code>@tone</code> associated with each category <code>@id</code>, and use it for styling the spans of text inside <code>workingConditions</code> with just three colors so readers can visually identify whether these are good, bad, or neutral by skimming the page. The Nelson team wants to keep that category information in the XML to investigate their research questions, but for outputting an HTML reading view, they wanted a simple strategy to reduce the number of colors or styles they would need to distinguish the spans of text in <code>workingConditions</code>. We are asking you to write the code that helps <strong>dereference</strong> those <code>@category</code> attributes on the <code>workingConditions</code> elements, so that as you process the <code>workingConditions</code> element, you instruct the computer to go look for the matching <code>category</code> element, locating it by its <code>@id</code> attribute, and then output the value of its <code>@tone</code> attribute for use in styling these.</p> <p>You should be able to write this with a single template rule and a single AVT (attribute value template), but there are two challenges here:</p>
+                <ul><li>The XPath requires you to construct a complex predicate, so we encourage you to tinker with it in the XPath window to be sure you understand how to find and deliver what you're looking for.</li>
+                    <li>The XSLT requires you to match up <em>each</em> single <code>@category</code> attribute with its corresponding <code>@id</code> up in the <code>toneElements</code> list, but because these <code>@category</code> attributes vary each time a new <code>workingConditions</code> element is processed, we need to use a special expression called <code>current()</code> to instruct XSLT to look up and evaluate <em>only the current</em> value of <code>@category</code>, so that you can return the appropriate <code>@tone</code> attribute. We use <code>current()</code> in XSLT when we need to specify the current context at the XSLT level. It is a little more specific than the dot (<code>.</code>) which just means the self node. Each time the XSLT fires it is processing the self node, but current() means you are checking the <em>current</em> value at the self node. We would use current() in an AVT context to get something you need like so: 
+                    <pre>&lt;span class="{//XPath-to-what-you-need-to-match[@id = <code>current()</code>/@category]/what-you-need-to-return}"&gt;</pre>
+                        Notice how we need to change the context in this AVT so we start our XPath from the top at the document node? We need to do that to walk the tree and find what it is that matches our <code>current()</code> context. Give it a try, and you will then be able to style the good, bad, and neutral kinds of workingConditions spans in a quickly legible way. Note: If you're up for it, a similar <dfn>dereference</dfn> can be made with the <code>@connotation</code> attribute on the variety of voice tags (<code>&lt;femVoice&gt;</code>,
+                        <code>&lt;nellVoice&gt;</code>, <code>&lt;mascVoice&gt;</code>): that's optional.        
+                    </li>
+                </ul>      
+               
+               </li>
+            <li><p>Setting the <code>@class</code> attributes in the output HTML makes it possible
+                    to style the various <code>&lt;span&gt;</code> elements differently according to
+                    the value of those attributes, but you need to create a CSS stylesheet to do
+                    that. Create the stylesheet (just as you've created CSS in the past), and
+                    specify how you want to style your <code>&lt;span&gt;</code> elements. Link the
+                    CSS stylesheet to the XSLT by creating the appropriate <code>&lt;link&gt;</code>
+                    element inside of the HTML <code>&lt;head&gt;</code> element of your XSLT (you
+                    can remind yourself of the <code>&lt;link&gt;</code> element format by
+                    referencing our <a href="explainCSS.html">CSS Tutorial</a>).</p></li>
+            <li><p>Besides wrapping your <code>&lt;xsl:apply-templates/&gt;</code> in
+                        <code>&lt;span&gt;</code> elements and other HTML elements (Hint: including
+                    HTML heading elements say if you want each of your <code>&lt;headLine&gt;</code>
+                    elements to appear as individual headings instead of block text) you might
+                    consider adding extra spaces or text outside some of these as well. For example,
+                    in our HTML output note that each of the voice tags have some added words
+                    appearing in front of the quoted speeches (where the sex of the speaker or if
+                    Nelson was the speaker is indicated). Also we added double
+                        <code>&lt;br/&gt;</code> elements to add space around the blocks of
+                    dialogue. Use what you think looks best and provides the most readable HTML
+                    output. </p></li>
+        
+        <li>The element <code>&lt;unclear&gt;</code> will need a slightly different rule
+                <strong>matching</strong> on it. If you refer back to the source document and XPath
+            your way to the empty self-closing <code>&lt;unclear/&gt;</code> elements, you might
+            notice that the purpose of this element in the original document was to take place for
+            word(s) that the project team was unable to transcribe due to the poor quality of the
+            original source images. We do not want to lose the information that there are words
+            missing when we transform this document into HTML. Like all other XML elements the
+                <code>&lt;unclear&gt;</code> element will disappear and therefore we will no longer
+            have the marker telling the reader that there is a word missing here! Since
+                <code>&lt;unclear&gt;</code> is an empty element, it contains no text of its own to
+            process, so if we want to output anything in our HTML for it, we need to generate that
+            text ourselves. To remedy this we want to write a template rule <strong>matching on
+                <code>&lt;unclear&gt;</code></strong>, and inside of that rule we want to include
+            some placeholder informational text, a kind of <dfn>pseudomarkup</dfn>, just to indicate there is a word missing. 
+            Here’s how we chose to present it (and you may choose to do this differently):
+            <pre><code>&lt;xsl:text&gt;</code>[missing word(s)]<code>&lt;/xsl:text&gt;</code></pre>
+            Check out <a href="1888-07-30_XSLTresults.html">our sample output</a> to see the result of that template rule more clearly.</li>
+        </ol>
+        <h3>Your Final Results</h3>
+        <p>What you should produce, then, is:</p>
+        <ul>
+            <li>An XSLT stylesheet that transforms the contents of the source document into HTML.
+                Including placing the <code>&lt;headline&gt;</code>,
+                    <code>&lt;newspaperTitle&gt;</code>, <code>&lt;seriesTitle&gt;</code>,
+                    <code>&lt;date&gt;</code>, and <code>&lt;byline&gt;</code> elements in relation
+                to the <code>&lt;articleBody&gt;</code> text using HTML heading elements
+                    (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.) and a
+                    <code>&lt;p&gt;</code> element.</li>
+
+            <li>The resulting HTML should also style the eight different types of in-line elements
+                listed above in detail (<code>&lt;unclear&gt;</code>, <code>&lt;headLine&gt;</code>, <code>&lt;workingConditions&gt;</code>, <code>&lt;articleBody&gt;</code>, <code>&lt;dialogue&gt;</code>, <code>&lt;femVoice&gt;</code>, <code>&lt;nellVoice&gt;</code>, <code>&lt;mascVoice&gt;</code>, and <code>&lt;company&gt;</code>) and at least some of those styles should be set
+                using <code>&lt;span&gt;</code> elements with the <code>@class</code>
+                attribute.</li>
+
+            <li>You need to create a CSS file, <strong>linked to your output HTML</strong>, that
+                specifies how to style the output document. You can look up the most useful of the
+                available CSS properties at <a href="http://www.w3schools.com/css/"
+                    >http://www.w3schools.com/css/</a>. We’d suggesting following the links on the
+                left under <q>CSS styling</q> for styling backgrounds, text, and fonts, as well as
+                the link for borders under <q>CSS box model</q>.</li>
+
+            <li>We will be checking that you transform the <code>&lt;unclear&gt;</code> elements and
+                that your transformation clearly indicates the presence of missing text for every
+                instance of this previous XML element.</li>
+
+            <li>You must link either the tones of the various voice elements
+                    (<code>&lt;nellVoice&gt;</code>,<code>&lt;femVoice&gt;</code>,<code>&lt;mascVoice&gt;</code>)
+                by the <code>@connotation</code> attribute or the tones of the
+                    <code>&lt;workingConditions&gt;</code> elements by the <code>@category</code>
+                attribute to produce <code>&lt;span&gt;</code>
+                <code>@class</code> attributes that link to the three tones provided in the
+                    <code>&lt;toneElements&gt;</code> list at the top of the XML source document.
+                You can choose to style both of these elements in this manner; however, it is only
+                required that you style one of these sets of elements (the various connotations of
+                the voice elements <strong>OR</strong> the various
+                    <code>&lt;workingConditions&gt;</code> categories) for full credit.</li>
+
+        </ul>
+        <h3>Important</h3>
+        <ul>
+            <li><em>Before submitting your homework, you must run the transformation at home</em> to
+                make sure the results are what you expect them to be. Remember, there’s a guide to running
+                XSLT transformations inside &lt;oXygen/&gt; in our <a href="explainXSLT.html">Intro to XSLT tutorial</a>.If you don’t get
+                the results you expect and can’t figure out what you’re doing wrong, remember that
+                you can post a query to our <a href="https://github.com/ebeshero/DHClass-Hub/issues">DHClass-Hub Issues board</a>. You can’t just ask for the answer, though; you
+                need to describe what you tried, what you expected, what you got, and what you think
+                the problem is. We often find, just as we’re preparing to post our own queries to
+                coding discussion boards, that having to write up a description of the problem helps
+                us think it through and solve it ourselves. We’re also encouraging you to discuss
+                the homework on the discussion boards because that’s also helpful for the person who
+                responds. Answering someone else’s inquiry and troubleshooting someone else’s
+                problem often helps us clarify matters for ourselves!</li>
+
+            <li>When you complete this assignment, submit your XSLT file, your output HTML, and your CSS file to
+                Courseweb, following our usual homework file-naming conventions. <strong>You should link the CSS in the XSLT for us!</strong></li>
+        </ul>
+    </body>
+</html>
