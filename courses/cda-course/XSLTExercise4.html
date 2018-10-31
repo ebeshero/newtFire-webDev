@@ -14,12 +14,27 @@
     <body>
         <!--#include virtual="topAuthorDJB.html" -->
         <h1><span class="banner">XSLT Exercise 4: Styling Skyrim</span></h1>
-        <h3>The input text</h3>
+       <section id="input_text"> <h3>The input text</h3>
         <p>In this exercise, we work with an XML file originally coded by a Pitt student for a project on the Skyrim legends based on the video game. The XML code is available at <a href="skyrim.xml">http://dh.newtfire.org/skyrim.xml</a>. You should
             right-click on this link, download the file, and open it in &lt;oXygen/&gt;.
             (You don’t need the Relax NG schema, but if you’d like to look at it and associate it with the file, it’s available at
-            <a href="skyrim.rnc">http://dh.newtfire.org/skyrim.rnc</a>).</p>
-        <h3>Overview of the assignment</h3>
+            <a href="skyrim.rnc">http://dh.newtfire.org/skyrim.rnc</a>).</p></section>
+       <section id="xslt_root"> <h3>The usual housekeeping:</h3>
+        <p>Because this document is not in a namespace, we do not need the
+            <code>@xpath-default-namespace</code> attribute, and the only thing we need to add
+            to &lt;oXygen&gt;’s default XSLT stylesheet template. We also add our usual
+            <code>&lt;xsl:output&gt;</code> line that we use when producing HTML (for making
+            sure we produce valid HTML 5 in XHTML format). Here’s what we need:</p>
+        <pre>
+          &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:math="http://www.w3.org/2005/xpath-functions/math" exclude-result-prefixes="xs math"
+    <span style="color:blue;">xmlns="http://www.w3.org/1999/xhtml" version="3.0"</span>&gt;
+    <span style="color:purple;">&lt;xsl:output method="xhtml" encoding="utf-8" doctype-system="about:legacy-compat"
+        omit-xml-declaration="yes"/&gt;</span>
+            
+        </pre></section>
+       <section id="overview"> <h3>Overview of the assignment</h3>
         <p>We will be preparing HTML reading view styled for the web, based on the original XML document. We’re going to work with the <code>&lt;body&gt;</code> element,
             concentrating on processing the in-line elements to style the text. You can use some of
             the basic HTML in-line elements, like <code>&lt;em&gt;</code> for emphasis or
@@ -40,8 +55,8 @@
         <p>Some are immediately inside a <code>&lt;paragraph&gt;</code> and some are inside other
             elements that are inside paragraphs. You may not know at the outset which ones can be
             inside which other ones, or how deeply they can nest. Happily, with XSLT, unlike with
-            many other programming languages, you don’t need to care about those questions!</p>
-        <h3>How to process richly mixed content</h3>
+            many other programming languages, you don’t need to care about those questions!</p></section>
+       <section id="processMixedContent"> <h3>How to process richly mixed content</h3>
         <p>Prose paragraphs with in-line elements that might contain other in-line elements are
             richly mixed content, with varied and unpredictable combinations of elements and plain
             text. This is the problem that XSLT was designed to solve. With a traditional procedural
@@ -72,8 +87,8 @@
             <code>&lt;xsl:apply-templates/&gt;</code> will apply harmlessly (as there will be nothing to process). As
             long as every element tells you to process its children, you’ll work your way down
             through the hierarchy of the paragraph without having to know which elements can contain
-            which other elements or text nodes.</p>
-        <h3>Taking stock: when to use <code>@select</code></h3>
+            which other elements or text nodes.</p></section>
+      <section id="select_att">  <h3>Taking stock: when to use <code>@select</code></h3>
         <p>In the previous XSLT assignment, where you built HTML tables from XML-coded survey data,
             you used <code>&lt;xsl:apply-templates select="…"/&gt;</code>, specifying exactly what
             you wanted to process where. That makes sense when your input (those <code>&lt;fs&gt;</code> and <code>&lt;f&gt;</code> elements and their special attributes) and your output (an
@@ -87,8 +102,8 @@
             <em>The upshot: Omit the <code>@select</code> attribute when you are processing lots of different mixed up alternatives and you do not need to rearrange them.</em> (You can still treat them all
             differently because you’ll have different template rules to <q>match</q> them, but when
             you assert that they should be processed, you don’t have to know which ones they actually
-            are.)</p>
-        <h3>Styling your output: HTML and CSS</h3>
+            are.)</p></section>
+        <section id="stylingOutput"><h3>Styling your output: HTML and CSS</h3>
         <p>HTML provides a limited number of elements for styling in-line text, which you can read
             about at <a href="http://www.w3schools.com/html/html_formatting.asp"
                 >http://www.w3schools.com/html/html_formatting.asp</a>. You can use any of these in
@@ -144,8 +159,8 @@
                 yourself how to do that here <a
                     href="http://dh.newtfire.org/explainCSS.html#link_CSS">in this section of our Intro to
                     CSS</a>). You should set that <code>&lt;link&gt;</code> element in your XSLT so it is always output every time you update your code.</p></li>
-        </ol>
-        <h3>When the smoke clears</h3>
+        </ol></section>
+       <section id="finishingUp"> <h3>When the smoke clears</h3>
         <p>What you should produce, then, is:</p>
         <ul>
             <li>An XSLT stylesheet that transforms the <code>&lt;body&gt;</code> element and its
@@ -160,6 +175,6 @@
                 left under <q>CSS styling</q> for styling backgrounds, text, and fonts, as well as
                 the link for borders under <q>CSS box model</q>.</li>
         </ul>
-        <p>Please upload your XSLT, HTML, and CSS files to CourseWeb. Remember to link your CSS to the HTML file!</p>
+        <p>Please upload your XSLT, HTML, and CSS files to CourseWeb. Remember to link your CSS to the HTML file!</p></section>
     </body>
 </html>
