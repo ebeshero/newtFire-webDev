@@ -10,7 +10,30 @@
         
         <table type="week" n="{count(preceding-sibling::table[@type='week']) + 1}"><xsl:apply-templates/></table>
     </xsl:template>
-    
+ 
+ <!--ebb: added 2019-01-06 to transform the bad old div-based template for the schedule. 
+The following templates will be unnecessary if I've already started with the TEI table structure.
+ -->
+    <xsl:template match="div[@type='day']">
+        <row role="day">
+            <xsl:apply-templates/>
+        </row>
+    </xsl:template>
+    <xsl:template match="head">
+        <cell role="date">
+            <xsl:apply-templates/>
+        </cell>
+    </xsl:template>
+    <xsl:template match="div[@type='inclass']">
+        <cell role="inclass">
+            <xsl:apply-templates/>
+        </cell>
+    </xsl:template>
+    <xsl:template match="div[@type='assign']">
+        <cell role="assign">
+            <xsl:apply-templates/>
+        </cell>
+    </xsl:template>
     
 </xsl:stylesheet>
     

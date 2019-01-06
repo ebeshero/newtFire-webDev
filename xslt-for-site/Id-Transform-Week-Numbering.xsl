@@ -7,9 +7,9 @@
     
     <xsl:mode on-no-match="shallow-copy"/>
     
-    <xsl:template match="div[@type='week']">
+    <xsl:template match="table[@type='week']">
         
-        <div type="week" n="{count(preceding-sibling::div[@type='week']) + 1}"><xsl:apply-templates/></div>
+        <table type="week" n="{count(preceding-sibling::table[@type='week']) + 1}"><xsl:apply-templates/></table>
     </xsl:template>
     
     
