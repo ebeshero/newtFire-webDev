@@ -1,0 +1,1446 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+<teiHeader>
+      <fileDesc>
+         <!--ebb: Need to rewrite XSLT to calculate dates from start to end of term. Non XSLT solution: To begin for a new year, autogenerate a list of dates and days of week in Excel (start with manually entering the first week’s dates, and add +7 to each; format as ISO dates. 
+            Paste in template xml file and autotag weeks as tables and days as rows, with cells for date, class activity, and assignments. 
+            Then manually correct with holidays and Fall Break, etc.-->
+         <titleStmt>
+            <title>Syllabus: Coding and Data Visualization</title>
+            <author>Elisa E. Beshero-Bondar</author>
+            <sponsor>The University of Pittsburgh at Greensburg</sponsor>
+         </titleStmt>
+         <editionStmt>
+            <edition>First digital edition in TEI, date: <date from="2019-01" to="2019-04">Spring 2019</date>. P5.</edition>
+         </editionStmt>
+         <publicationStmt>
+            <authority>University of Pittsburgh at Greensburg</authority>
+            <pubPlace>Greensburg, PA, USA</pubPlace>
+            <date>2016</date>
+            <availability>
+               <licence>Distributed under a Creative Commons Attribution-NonCommercial-ShareAlike
+                  4.0 International License</licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+             <p>Spring 2019 is the tenth time a version of this course has been taught, and this is the fourth XML edition of this particular syllabus. The first edition of these coding course syllabi was posted in Fall 2013 in HTML only at <ptr target="http://www.pitt.edu/~ebb8/DHDS/"/>. This current course, Coding and Digital Archives is designed an alternate course to the Coding and Digital Archives course taught in Fall semesters.</p>
+         </seriesStmt>
+         <sourceDesc>
+            <p>Born digital.</p>
+         </sourceDesc>
+
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <front>
+         <div type="courseID" style="outer">
+            <head>Coding and Data Visualization</head>
+            <p>Humanities 1050 / Social Sciences 1051</p>
+            <div type="logo">
+               <head>
+                  <graphic url="blue-eye-icon-transMed.png" mimeType="image/png"/>
+                  <desc>Pitt-Greensburg Digital Studies Logo: I Code!</desc>
+               </head>
+            </div>
+
+            <div type="meetTimes">
+               <p>
+                  <hi rend="em">Spring 2019:</hi> Classes meet M W F 11 - 11:50 AM in 136 McKenna Hall</p>
+            </div>
+            <div type="CRN">
+               <p>Course Enrollment and Electives Info: </p>
+               <list>
+                  <item>Hum 1050: course registration number:
+                      <idno>25433</idno>
+                      fulfills Q2 or HM General Elective requirement</item>
+                  <item>Socsci 1051: course registration number:
+                      <idno>29055</idno>
+                      fulfills Q2 or SS General Electives at Pitt-Greensburg
+                  </item>
+                   <item>Either course number satisfies a core course requirement for <ref target="http://greensburg.pitt.edu/academics/info/digital-studies">Pitt-Greensburg’s Digital Studies Certificate</ref>, and an Elective requirement for the <ref target="http://www.greensburg.pitt.edu/academics/information-technology">Information Technology major</ref> or <ref target="http://www.greensburg.pitt.edu/academics/computer-science">Computer Science minor at Pitt-Greensburg.</ref>
+                  </item>
+        
+               </list>
+            </div>
+            <div type="faculty">
+               <head>Instructor Team</head>
+                <list><item>Taught by: <ref target="http://www.pitt.edu/~ebb8/">Prof. Elisa
+                    Beshero-Bondar</ref>; email: ebb8 at pitt.edu; office hours in <hi>FOB 204</hi>: Wed. 3-5pm, Thurs. 4-5:30pm, after class in our classroom, and by appointment (such as T or H between 10:30am and 1:30pm). Professor Beshero-Bondar (<q>Dr. B</q>) directs Pitt-Greensburg’s <ref target="https://www.greensburg.pitt.edu/digital-humanities/center-digital-text">Center for the Digital Text</ref>, and you can find most of her projects on <ref target="http://newtfire.org">http://newtfire.org</ref>. 
+                        She and former student instructor, <ref target="http://newtfire.org/~rjp43/">Rebecca J. Parker</ref> co-authored <bibl><ref target="https://www.academia.edu/34341800/A_GitHub_Garage_for_a_Digital_Humanities_Course"><title level="a">A GitHub Garage for a Digital Humanities Course</title></ref> published in <title level="m">New Directions for Computing Education</title> (<publisher>Springer Books</publisher>, <date>2017</date>) <biblScope unit="page" from="259" to="276">pp. 259-276</biblScope></bibl>, about our work with GitHub in this class. Her first XML project was <ref target="http://pacific.obdurodon.org">Digital Archives and Pacific Cultures</ref> project on which she collaborated with a Pitt undergrad project team in a class like the one you are taking now.</item>
+                    
+                    <item>Assisted by returning students:
+                        <list>
+                            <item>Alyssa Argento; e-mail ama277 at pitt.edu; office hours to be announced. Alyssa was part of the <ref target="http://combe.newtfire.org">William Combe project</ref> in 2018.</item>
+                            <item>Kiara DeVore; e-mail ksd32 at pitt.edu; office hours to be announced. DeVore led the <ref target="http://washington.newtfire.org">George Washington project</ref> in 2018. </item>
+                            <item>Bradley Thomas; e-mail bmt45 at pitt.edu; office hours  to be announced. Thomas led the <ref target="http://magellan.newtfire.org">Magellan project</ref> in 2018.</item>
+                            
+                            <!--<item><ref target="http://newtfire.org/~jmh237/">Jonathan Horanic</ref>; e-mail: jmh237 at pitt.edu; office hours in FOB 131 (Center for the Digital Text): Tuesday and Thursday from 11:30am - 1:30pm, and by appointment. Jon organized <ref target="http://graveyard.newtfire.org/methodology.html">the Graveyard Project</ref> and contributed to the <ref target="http://newsanalysis.newtfire.org/">News Analysis Project</ref>.</item>
+                            
+                            <item><ref target="http://newtfire.org/~quantum-satire/">Allyson Hall</ref>; e-mail: afh19 at pitt.edu; office hours in FOB 131 (Center for the Digital Text): Tues. and Thurs. 4 - 5pm. Ally led the <ref target="http://warofcurrents.newtfire.org/">War of Currents</ref> project and helped develop the <ref target="http://rickandmorty.newtfire.org/">Rick and Morty Project</ref>.</item>
+                            <item>Dorothea Lint; e-mail drl43 at pitt.edu; office hours TBA. Dorothea led the <ref target="http://rickandmorty.newtfire.org/">Rick and Morty project</ref> team.</item>-->
+                      
+              </list>
+                    </item>
+                    </list>
+                
+
+            </div>
+            <div type="online">
+               <head>Class Web Resources</head>
+               <list>
+                  <item>
+                     <ref target="http://newtfire.org/dh/CDV.html">Course Home Website:
+                        http://newtfire.org/dh/CDV.html</ref> Home of our syllabus and
+                     schedule.</item>
+
+                  <item><ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub:
+                        https://github.com/ebeshero/DHClass-Hub</ref> Class GitHub Repository and Issues Board</item>
+
+
+                  <item>
+                     <ref target="https://courseweb.pitt.edu">Courseweb: https://courseweb.pitt.edu</ref> To submit homework assignments and exams
+                     and read private course announcements</item>
+                  <item>
+                      <ref target="explainFileNames.html">How to
+                        Construct Filenames for Courseweb Homework Submissions</ref>
+                  </item>
+
+                  <item>Server access instructions for web project development on newtFire: [to be announced on Courseweb]</item>
+
+               </list>
+
+            </div>
+            <div type="projects">
+               <head>Course Projects</head>
+               <list>
+                  <item>
+                     <ref target="projectGuide.html">Guidelines for Projects Developed in This
+                        Course</ref>
+                  </item>
+                  <item>
+                     <ref target="studentProjects.html">Student Course Projects</ref>
+                  </item>
+               </list>
+            </div>
+             <div type="guides">
+                 <head>
+                     <ref target="index.html">Explanatory Guides and Exercises: Complete List</ref>
+                 </head>
+                 <list>
+                     
+                     <item>
+                         <ref target="explainXML.html">Introduction to XML</ref>
+                         <list>
+                             <item><ref target="XMLExercise1.html">XML Exercise 1</ref></item>
+                             <item>Other XML exercises are more open-ended, listed in the opening weeks on <ref target="CDASyll.html">the current syllabus</ref>.</item>
+                         </list>
+                     </item>
+                     <item><ref target="explainGitShell.html">Guide to GitHub and Git Shell</ref> with our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>
+                         <list><item><ref target="GitExercise1.html">Git Exercise 1</ref></item>
+                             <item><ref target="GitExercise2.html">Git Exercise 2</ref></item>
+                             <item>The book-chapter that former student student instructor <ref target="http://newtfire.org/~rjp43/RebeccaParker_CV.pdf">Rebecca J. Parker</ref> co-authored with me about our use of GitHub in this class: <bibl><ref target="https://www.academia.edu/34341800/A_GitHub_Garage_for_a_Digital_Humanities_Course"><title level="a">A GitHub Garage for a Digital Humanities Course</title></ref> published in <title level="m">New Directions for Computing Education</title> (<publisher>Springer Books</publisher>, <date>2017</date>) <biblScope unit="page" from="259" to="276">pp. 259-276</biblScope></bibl></item>
+                         </list>
+                     </item>
+                     <item>Orientation to <ref target="http://www.tei-c.org/Guidelines/P5/">the TEI</ref>
+                         <list>
+                             <item><ref target="TEIExercise1.html">Document Analysis and TEI Exercise, Part 1 of 2</ref></item>
+                             <item><ref target="TEIExercise2.html">Document Analysis and TEI Exercise, Part 2 of 2</ref></item>
+                         </list>
+                     </item>
+                     <item>
+                         <ref target="explainRNG.html">Guide to Schema Writing with Relax NG</ref>
+                         <list><item>Relax NG exercises involve writing schemas and revising XML from the XML exercises.</item></list>
+                     </item>
+                     <item>
+                         <ref target="explainHTML.html">Introduction to XHTML (and HTML)</ref> and <ref target="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</ref>
+                         <list>
+                             <item><ref target="HTMLExercise1.html">HTML and CSS Exercise 1</ref></item>
+                             <item><ref target="HTMLExercise2.html">HTML and CSS Exercise 2</ref></item>
+                         </list>
+                     </item>
+                     
+                     <item>
+                         <ref target="explainRegex.html">Regular Expression Matching (Regex) and Up-Conversion to XML</ref>
+                         <list>
+                             <item><ref target="RegexExerciseSonnets.html">Regex Exercise: sonnets</ref></item>
+                             <item><ref target="RegexExerciseBlithedale.html">Regex Exercise: novel</ref></item>
+                             <item><ref target="RegexExerciseVoyage.html">Regex Exercise 2: voyage log</ref></item>
+                             <item><ref target="RegexExercisePlay.html">Regex Exercise 3: play</ref></item>
+                         </list>
+                     </item>
+                     <item>
+                         <ref target="explainXPath.html">Follow the XPath!</ref>
+                         <list>
+                             <item><ref target="XPathExercise1.html">XPath Exercise 1</ref></item>
+                             <item><ref target="XPathExercise2.html">XPath Exercise 2</ref></item>
+                             <item><ref target="XPathExercise3.html">XPath Exercise 3</ref></item>
+                             <item><ref target="XPathExercise4.html">XPath Exercise 4</ref></item>
+                         </list>
+                     </item>
+                     <item><ref target="explainSchematron.html">Guide to Schema Writing with Schematron</ref>
+                         <list>
+                             <item><ref target="SchematronExercise1.html">Schematron Exercise 1</ref></item>
+                             <item><ref target="SchematronExercise2.html">Schematron Exercise 2: Digital Mitford Site Index</ref></item>
+                             <item><ref target="SchematronExercise2alt.html">Alternative Schematron Exercise 2: Emily Dickinson Poems</ref></item>
+                             <item><ref target="explainSchematronIdRefs.html">Coding with Unique Identifiers and How to Test for them with Schematron</ref></item>   
+                         </list>
+                         <p>Examples from our projects</p>
+                         <list>
+                             <item><ref target="https://github.com/ebeshero/ebeshero.github.io/blob/master/MRMValidate.sch">Digital Mitford Project Schematron rules for validating attributes against an index</ref></item>
+                             <item>GitHub: <ref target="https://github.com/ebeshero/Amadis-in-Translation/blob/master/XMLandSchemas/Amadis_RomanNumeralTester.sch">Roman numeral checking in Amadis-in-Translation Project Schematron</ref></item>
+                             <item>Obdurodon challenge example: <ref target="http://dh.obdurodon.org/schematron-class-02.html">Using Schematron in Editing</ref> (flagging when text is too long or short using string-length())</item>
+                             <item>Newtfire challenge example: <ref target="SchematronExercise2alt.html">Schematron for complex poetry markup</ref> (fine-tuning whitespaces and checking witness ids in poetry using TEI critical apparatus markup)</item>
+                         </list></item>
+                     <item>
+                         <ref target="explainXSLT.html">Introduction to XSLT</ref>
+                         <p><hi rend="em">Coding and Digital Archives</hi> Sequence of Exercises:</p>
+                         <list>
+                             <item><ref target="XSLTExercise1.html">XSLT Exercise 1</ref></item>
+                             <item><ref target="XSLTExercise2.html">XSLT Exercise 2</ref></item>
+                             <item><ref target="XSLTExercise3.html">XSLT Exercise 3</ref></item>
+                             <item><ref target="XSLTExercise4.html">XSLT Exercise 4</ref></item>
+                             <item><ref target="XSLTExercise5.html">XSLT Exercise 5</ref></item>
+                             <item><ref target="XSLTExercise6.html">XSLT Exercise 6</ref></item>
+                             <item><ref target="XSLTExercise7.html">XSLT Exercise 7</ref></item>
+                         </list>
+                         <p><hi rend="em">Coding and Data Visualization</hi> Sequence of Exercises</p>
+                         <list>
+                             <item><ref target="XSLTExercise1.html">XSLT Exercise 1</ref></item>
+                             <item><ref target="XSLTExercise2_CDV.html">XSLT Exercise 2</ref></item>
+                             <item><ref target="XSLTExercise3_CDV.html">XSLT Exercise 3</ref></item>
+                             <item><ref target="XSLTExercise4_CDV.html">XSLT Exercise 4</ref></item>
+                         </list>
+                     </item>
+                     <item><ref target="explainXQuery.html">Introduction to XQuery and the eXist XML Database</ref> (Coding and Data Visualization course)
+                         <list>
+                             <item><ref target="XQueryExercise1.html">XQuery Exercise 1</ref></item>
+                             <item><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></item>
+                             <item><ref target="XQueryExercise3.html">XQuery Exercise 3: XQuery and XSLT to produce KML for Mapping</ref></item>
+                         </list>
+                     </item>
+                     <item>SVG (Scalable Vector Graphics)
+                         <p>Tutorials, Editors, and Ideas:</p> <list>
+                             <item>
+                                 <ref target="http://tutorials.jenkov.com/svg/index.html">Jakob Jenkov’s
+                                     SVG Tutorial</ref>: very thorough and handy reference</item>
+                             
+                             <item>
+                                 <ref target="http://www.w3schools.com/svg/svg_intro.asp">w3 schools SVG
+                                     tutorial</ref>: a quick introduction, but not so thorough at the
+                                 Jenkov tutorial</item>
+                             <item>
+                                 <ref target="http://www.webdesignerdepot.com/2015/01/the-ultimate-guide-to-svg/">The ultimate guide to SVG</ref>: helpful material on using SVG in site design for banners and more.</item> 
+                             <item><ref target="http://www.math.wsu.edu/kcooper/M300/svgcheat.php">SVG Cheat
+                                 Sheet</ref>
+                             </item>
+                             <item>Sarah Soueidan's tutorial on Understanding SVG Coordinate Systems and Transformations: 
+                                 <list>
+                                     <item><ref target="https://www.sarasoueidan.com/blog/svg-coordinate-systems/">Part 1: viewport, viewBox, and oreserveAspectRatio</ref></item>
+                                     <item><ref target="https://www.sarasoueidan.com/blog/svg-transformations/">Part 2: The transform attribute</ref></item>
+                                     <item><ref target="https://www.sarasoueidan.com/blog/nesting-svgs/">Part 3: Establishing new viewports</ref></item>
+                                 </list>
+                             </item>
+                             <item>Obdurodon: <ref target="http://dh.obdurodon.org/svg-embedding.xhtml">How to Embed SVG in an XHTML Page</ref>
+                             </item>
+                             <item>
+                                 <ref target="http://www.carto.net/svg/samples/xslt/">carto:net: Using
+                                     XSLT to create SVG Content</ref>: We do all this in oXygen, but this
+                                 shows an alternative command-line processing of XSLT. </item>
+                             <item>
+                                 <ref target="http://www.mathsisfun.com/geometry/unit-circle.html">Geometry of a Circle</ref> (for help if you want to plot points or
+                                 wedges on a circle). </item>
+                         </list>
+                         <p><hi rend="em">Coding and Digital Archives</hi> Sequence of Exercises:</p>
+                         <list>
+                             <item><ref target="SVGExercise1.html">SVG Exercise 1</ref></item>
+                             <item><ref target="SVGExercise2_Alice.html">SVG Exercise 2</ref>: XSLT to line graph</item>
+                             <item><ref target="SVG-XSLExercise3.html">SVG Exercise 3</ref>: XSLT to stacked bar graph</item>
+                         </list>
+                         
+                         <p><hi rend="em">Coding and Data Visualization</hi> Sequence of Exercises:</p>
+                         <list>
+                             <item><ref target="SVGExercise1.html">SVG Exercise 1</ref></item>
+                             <item><ref target="SVGExercise2_CDV.html">SVG Exercise 2</ref>: Plotting a timeline with XQuery, part 1</item>
+                             <item><ref target="SVGExercise3_CDV.html">SVG Exercise 3</ref>: Plotting a timeline with XQuery, part 2</item>
+                             <item><ref target="SVGExercise4_CDV.html">SVG Exercise 4</ref>: Bar graph or choice, with XQuery</item>
+                         </list>
+                         <p>SVG Editors:</p>
+                         <list>
+                             <item> <ref target="http://svg-edit.googlecode.com/svn/branches/2.5.1/editor/svg-editor.html">Google Code Online SVG Editor</ref>
+                             </item>
+                             <item>
+                                 <ref target="http://inkscape.org/en/">Inkscape</ref>: free SVG
+                                 software</item>
+                         </list>
+                         <p>Inspiration:</p>
+                         <list>
+                             <item> <ref target="http://en.wikipedia.org/wiki/Diagram">Wikipedia’s
+                                 page on diagrams</ref>
+                             </item>
+                             <item>
+                                 <ref target="http://en.wikipedia.org/wiki/Chart">Wikipedia on
+                                     charts</ref>
+                             </item>
+                             
+                         </list>
+                     </item>
+                     <item>
+                         <ref target="http://ebeshero.github.io/thalaba/cytosc.html">Introduction to
+                             Network Analysis and Cytoscape for XML Coders</ref> (<hi rend="em">Coding and Data Visualization</hi> Course)
+                         <list>
+                             <item><ref target="NetworkExercise1.html">XQuery to Network Analysis Exercise, part 1</ref></item>
+                             <item><ref target="NetworkExercise2.html">XQuery to Network Analysis Exercise, part 2</ref></item>
+                         </list>
+                     </item>
+                     
+                     <item>Javascript 
+                         <p>Tutorials</p><list>
+                             <item>newtFire JavaScript Intro (under development)</item>
+                             <item>
+                                 <ref target="http://dh.obdurodon.org/javascript.html">Introduction to
+                                     Javascript</ref>
+                             </item>
+                             <item>
+                                 <ref target="http://dh.obdurodon.org/javascript/classListToggle.xhtml">Javascript Toggling with classList and switch</ref>
+                             </item>
+                         </list>
+                         <p>Exercises</p>
+                         <list>
+                             <item><ref target="JavaScriptExercise1.html">JavaScript Exercise 1</ref> (with Server Side Includes)</item>
+                             <item><ref target="JavaScriptExercise2.html">JavaScript Exercise 2</ref></item>
+                             <item><ref target="JavaScript_Exercise3.html">JavaScript Exercise 3 (CDA)</ref></item>
+                             <item><ref target="JavaScript_Exercise3_CDV.html">JavaScript Exercise 3 (CDV)</ref></item>
+                         </list>
+                     </item>
+                     
+                     <item>Python 
+                         <p>Resources</p>
+                         <list>
+                             <item>Natural Language Processing: <ref target="https://github.com/djbpitt/wordnet/blob/master/Wordnet.ipynb">Wordnet Sandbox</ref>:  Python Notebook tutorial by David Birnbaum, used in Obdurodon's <ref target="http://ghost.obdurodon.org">Victorian Ghost Stories project</ref> and newtFire's <ref target="http://eldritch.newtfire.org">Eldritch project</ref></item>
+                             <item><ref target="https://www.dataquest.io/blog/web-scraping-tutorial-python/">Dataquest: Python web scraping tutorial using BeautifulSoup</ref></item>
+                         </list>
+                         
+                         
+                         
+                     </item>
+                     <item><ref target="housestyle.html">newtFire House Style</ref></item>
+                     
+                 </list>
+             </div>
+         </div>
+      </front>
+      <body>
+         <div type="description" style="main">
+            <head>Coding and Data Visualization: Course Description</head>
+            <p>This course is all about doing interesting things with texts using computers and
+                digital technology. In this course, you will learn methods for marking, extracting, and analyzing data from digital documents to produce visualizations such as graphs, charts, diagrams, maps, which you will design in the context of real projects. This course is meant to be complementary with the <ref target="CDA.html">Coding and Digital Archives course</ref>, but where the emphasis in that course is on curating and preparing reading views of documents, this course concentrates on analyzing data to produce informational graphics. Neither course is meant to be a prerequisite for the other: you may take either one as a beginner. Returning students (in either semester) serve as student instructor-mentors to beginning students for units and assignments they have already completed confidently.</p>
+             <p>Our class is one of the core courses of <ref target="http://greensburg.pitt.edu/academics/info/digital-studies">Pitt-Greensburg’s Digital Studies Certificate</ref>, and it satisifes a range of
+                 general education requirements in quantitative reasoning,
+                 behavioral sciences, and humanities. That is because this course is distinctively
+                 interdisciplinary in engaging formal and
+                 quantitative reasoning through computer coding in ways that matter to students in
+                 humanities and social sciences who are not training to be computer scientists.
+                 Students gain hands-on experience in this course with applying computer coding to
+                 represent and investigate cultural materials. As we design projects together, you
+                 will gain practical experience in editing and you will certainly fine-tune your
+                 precision in writing and thinking. You will also be learning in an openly collaborative environment (as professional coders learn and work) with an emphasis on building sustainable and freely accessible resources on the public web.</p>
+             
+             <p>Students who complete this course will gain skills in digital project management and
+                 web development, and their digital projects will distinguish them as investigators
+                 and makers, able to wield computers creatively and effectively for human interests.
+                 Your success will require patience, dedication, and regular communication and
+                 interaction with us, working through assignments on a daily basis. Your success will
+                 <hi>not</hi> require perfection, but rather your regular efforts throughout the course, your
+                 documenting of problems when your coding doesn’t yield the results you want. Homework
+                 exercises are a back-and-forth, intensive dialogue between you and your instructors,
+                 and we plan to spend a great deal of time with you individually over these as we work
+                 together. Our guiding principle in developing assignments and working with you is
+                 that the best way for you to learn and succeed is through regular practice as you
+                 hone your skills. Our goal is not to make you expert programmers (as we are far from
+                 that ourselves). Instead, we want you to learn how to apply coding technologies for
+                 your own purposes, how to track down answers to questions, how to think your way
+                 algorithmically (step-by-step) through problems to find good solutions.</p>
+         
+         </div>
+          <div type="description" style="main"><head>Survey of Coding Technologies Covered:</head>
+              <p> We work primarily with eXtensible Markup Language (XML) because it is a
+                  powerful tool for modelling texts that we can adapt creatively to our interests and questions. XML represents a standard in adaptability and human-readability in digital code, and it works together with related technologies with which you will gain
+                  working experience: You’ll learn how to write XPath expressions: a formal language for searching and extracting information from XML code which serves as the basis for
+                  transforming XML into many publishable forms. You’ll learn to
+                  write XSLT: a programming “stylesheet” transforming language designed to convert XML
+                  to publishable formats. In this course, you will also learn XQuery, an XPath-based language designed to query XML as a database, and we will use XQuery to extract information and plot it in charts in graphs in Scalable Vector Graphics (SVG). You will learn how to
+                  design your own systematic coding methods to work on projects, and how to write your
+                  own rules in schema languages (like Schematron and Relax-NG) to keep your projects
+                  organized and prevent errors. Since one
+                  of the best and most widely accessible ways to publish XML is on the worldwide web,
+                  you’ll gain working experience with HTML code (a markup language that is a kind of
+                  XML), styling HTML with Cascading Stylesheets (CSS), and adding dynamic features to your website with JavaScript.</p>
+          </div>
+         <div type="objectives" style="main">
+            <head>Learning Objectives:</head>
+            <list>
+               <item>Work with Texts as Artifacts—As Physical and Virtual Objects: <list>
+
+                     <item>Prepare digital documents to curate and organize information accessible on the worldwide web.</item>
+                     <item>Reflect and write on the issues and problems with digital representation,
+                        as well as the capacity of the digital medium to enhance or add dimensions
+                        to a physical text.</item>
+
+                     <item>Learn and practice coding in eXtensible Markup Language (XML) and related
+                        coding technologies: to "mark up," process, and extract information about
+                        the structure, physical condition, and cultural contexts of textual
+                        artifacts.</item>
+                  </list>
+               </item>
+               <item>Gain Experience with Information Retrieval, "Distant Reading," and Autotagging
+                  Techniques: <list>
+                     <item>Write code to apply searching and data extraction methods through
+                        multiple kinds of pattern-matching algorithms, including forms of regular
+                        expression matching. Take conventional boolean searches and library database
+                        searches to new levels.</item>
+                     <item>Apply "mining" and "drilling" methods to interact with texts and visualizations differently than we could do
+                        "manually" or with unassisted eyes and brains. </item>
+                     <item>Learn how to "autotag" enormous texts or collections of texts, for
+                        practical results: to code the structure of enormous texts from a distance,
+                        in order to navigate them and make them accessible through distant
+                        reading.</item>
+                     <item>Reflect on the strengths and limitations of data processing and visualization.</item>
+
+                  </list>
+               </item>
+               <item>Gain Project Design and Editing Experience: <list>
+                     <item>Gain digital editing experience with proposing, designing, and
+                        contributing to one or more digital research projects, applying coding to
+                        the preserving, sharing, and investigating of textual resources</item>
+                     <item>Transform XML code into publishable web formats, to build or contribute
+                        to a project website.</item>
+                     <item>Design navigation elements, and build visual aids and models (such as
+                        timelines and tree diagrams) from texts: to generate charts and images from
+                        extracted data</item>
+                     <item>Gain experience with plotting digital maps and charts, working with
+                        historical maps, layered maps, and Google Earth</item>
+                  </list>
+               </item>
+                <item>Last but not least: Discover that you read and write with “new eyes,” with
+                  greater precision and agility, thanks to your adventures with digital projects!</item>
+            </list>
+         </div>
+         <div type="courseMtls" style="main">
+            <head>All the Tools You Need As We Begin:</head>
+
+            <p>Download and install the following software on your own personal computer(s) on or
+               before the first day of class. These software tools are available in our campus
+               computing labs, too.</p>
+            <list type="numbered">
+               <item>
+                  <hi rend="em">All students:</hi>
+                   <ref target="https://www.oxygenxml.com/xml_editor.html/">&lt;oXygen/&gt; XML Editor</ref>. The University of
+                  Pittsburgh has purchased a site license for this software, which is installed in
+                  the Pitt computer labs on multiple campuses, and it’s in use in courses here at
+                  Greensburg and at Oakland. The license also permits students enrolled in the
+                  course to install the software on their home computers (for course-related use
+                  only). When installing this on your own computers, <hi rend="em">you will need the
+                     license key</hi>, which we have posted on our course Announcements section of
+                     <ref target="https://courseweb.pitt.edu">Courseweb</ref>.</item>
+               <item>All students require a good means of secure file transfer (SFTP) for homework
+                  assignments and projects (also available in the campus computer labs). There are
+                  several good options available. We recommend you download and install on your own
+                  computers one (or more) of the following, depending on your platform: (Feel free
+                  to experiment with these and others!)<list>
+                      <item>
+                          <hi rend="em">Windows users:</hi> one of the following FTP clients—the functionality is
+                          similar: <list>
+                              
+                              <item><ref target="https://filezilla-project.org/download.php?show_all=1">FileZilla</ref>
+                                  (This is our favorite client because it behaves the same way across platforms.)
+                              </item>
+                              <item><ref target="http://winscp.net/eng/download.php">WinSCP</ref> (This is one we used for a long time, since the 1990s, but we now use SSH and Filezilla more frequently.)</item>
+                              
+                              <item>
+                                  <ref target="http://www.wm.edu/offices/it/services/software/licensedsoftware/webeditingsftp/sshsecureshell/index.php">SSH Secure Shell Client</ref>
+                              </item>
+                          </list>
+                      </item>
+                      <item>
+                          <hi rend="em">Mac users:</hi>
+                          <list>
+                              <item><ref target="https://filezilla-project.org/download.php?show_all=1">FileZilla</ref>
+                                  (This is our favorite client because it behaves the same way across platforms.)
+                              </item>
+                              <item>or <ref target="http://fetchsoftworks.com/fetch/">Fetch</ref> (students
+                                  may obtain free licenses at <ref target="http://fetchsoftworks.com/fetch/free">http://fetchsoftworks.com/fetch/free</ref>)
+                              </item>
+                          </list>
+                      </item>
+                      <item>
+                          <hi rend="em">Linux users:</hi> You probably don’t need to install anything,
+                          but look at how your system handles secure file transfer (SFTP).
+                          <note>(FileZilla or other clients designed for Linux
+                              environments.)</note>
+                      </item>
+                  </list>
+               </item>
+
+               <item><hi rend="em">Read the <ref target="CDV.html">Course Description</ref></hi> and
+                  this Syllabus page to see how this course works on a day-to-day basis.</item>
+               <item>This course fulfills general education requirements in Q2, NS, SS, and HM, and
+                  it fulfills a core requirement for <ref target="http://greensburg.pitt.edu/academics/info/digital-studies">the Digital
+                     Studies Certificate at Pitt-Greensburg</ref>. Think about where this course
+                  might fit in your academic career, and how you might apply the skills you learn
+                  here.</item>
+               <item>No coding experience? Don’t worry! You are in very good company. We don’t
+                  expect any of you to have written a line of computer code before now. Past
+                  students in this course who never saw anything like markup or XML code have
+                  designed projects (<ref target="http://newtfire.org/dh/studentProjects.html">like
+                     these</ref>) and even spoken about them at an undergraduate conference! You’ll
+                  help continue some of these projects we’ve started, and you’ll learn to build and
+                  create digital tools for yourself with skills we hope you will keep
+                  developing.</item>
+
+
+            </list>
+         </div>
+         <div type="optionalTexts" style="main">
+            <head>Optional Textbook:</head>
+            <list>
+               <item>
+                  <bibl>
+                     <author>Michael Kay</author>, <title>XSLT 2.0 and XPath 2.0: Programmer’s
+                        Reference</title>, <edition>4th edition</edition>
+                     <publisher>(Wiley Publishing</publisher>, <date>2008</date>) <idno>ISBN-13:
+                        978-0-470-19274-0</idno>
+                  </bibl>
+                   <note> This is really <hi>the</hi> authoritative word on XSLT and XPath, written by a
+                       designer of the official W3C specifications of XSLT 2.0 that we’re using. We
+                       are learning from this book ourselves and consult it frequently! We’re not
+                       requiring that you buy it, but we recommend it to have a powerful reference at
+                       your fingertips and for learning more on your own. There’s a kindle edition
+                       available but poorly designed for searching, so we (actually) prefer the
+                       hardcover print edition. If you’re going to purchase it, be sure you pick up
+                       the current edition (not the earlier ones).</note>
+               </item>
+            </list>
+         </div>
+         <div type="grading" style="main">
+             <head>Grading:</head>
+             <div type="homework">
+                 <head>Homework Exercises (30%):</head>
+                 <p>To keep up with this class, you must work on exercises regularly.
+                     Each day will involve some small assignment, to prepare you for the next of class, and to help you to build your course project.  Students must complete on time at least 90% of all assigned homework exercises in order to pass the course. For students who complete the 90% requirement, the homework
+                     taken all together, is worth 35% of your course grade. </p>
+                 <div type="coding">
+                     <p>
+                         <hi rend="em">Coding assignments:</hi> Coding exercises in this course are about your learning and studying, and not—as in other courses—a way of testing whether you have already learned something we covered in class or in an assigned reading. You may often need to look up how to do something that you don’t already know how to do. Often, there will be multiple ways of accomplishing the task and we are not simply looking for you to do things perfectly in just one way--we are instead looking for a record of your learning process as you take on a challenge. Documenting problems is key to the learning process, and sometimes just writing out what you are trying to do helps lead you to a solution! When we post solutions for homework assignments, part of your homework may be to complete a write-up reviewing what you missed and assessing what you needed to do for the correct answer. There may be times when you don’t get the result you want in the homework, and that is to be expected! In those cases you can still get full credit for the assignment if you’ve made a serious attempt and if you submit, along with your code, a description of what else you tried, what results you expected, what results you got, and what you think went wrong. Getting stuck is part of the learning process and the instructors will be happy to help unstick you as long as you’ve described your understanding of the problem and your attempts to resolve it on your own.</p>
+                     <p>The instructors will read and evaluate all student homework, and will post an assessment in the Courseweb Grade Center. Coding assignments are assessed as <q>check plus</q>, <q>check</q>, and <q>check minus</q>, or <q>redo</q>. Don’t think of these as grades, since they all receive full credit; they are feedback, for learning purposes, about how well you engaged with the assignment. If you have not engaged with the assignment adequately (whether that means solving the tasks or discussing the coding obstacles you encountered and how you dealt with them), we will ask you to meet with us to review the issues and then complete a followup (redo) task in order to receive credit. For assignments with posted solutions, we invite you to review the posted solution on GitHub and comment on it (we will show you how to do this) to address something you learned from the solution or did in a different way. For some assignments where we review posted solutions and line-comments together in person or in class, we will write back to you with individual comments only if your specific submission raises an issue that we don’t address elsewhere. If we don’t return your assignment, that means that we have nothing to add to our posted solution, but should you have any specific questions after you’ve read our posted solution, please ask the instructors. </p>
+                 </div>
+                 <div type="posts">
+                     <p>
+                         <hi rend="em">Issue posts:</hi> Throughout the course, we’ll assign discussion posts on <ref target="https://github.com/ebeshero/DHClass-Hub/issues">our class GitHub site</ref> in which you will respond to online readings or evaluate web resources. Your posting should do more than
+                         summarize the article or site (which you could just do by skimming or reading
+                         the first paragraph), but should demonstrate a thoughtful reflection on
+                         specific ideas and issues. When evaluating a web resource, don’t simply praise
+                         or condemn it without going into details about why a key component is effective
+                         or poorly designed. Good posts demonstrate care and reflection, and
+                         you may choose to respond to the overarching ideas of a piece, or to selected
+                         details of specific interest. These posts are scored as <q>check plus</q>, <q>check</q>, and <q>check minus</q>.</p>
+                 </div>
+                 
+             </div>
+             <div type="participation">
+                 <head>Participation: In Class and on the DH-ClassHub (15%):</head>
+                 <p> Coding and programming in real life is a social activity, and professionals in
+                     the real world aren’t “know-it-all” experts who work alone, but rather are tuned
+                     into discussion boards and regularly ask and answer questions to stay sharp and to
+                     learn from their community. In this class, we want you to work together and talk
+                     to each other and your instructors as your community resource, so we have built
+                     this into our course participation grade as a formal expectation. <hi>Beginning by week two, we’ll expect each student to post at least once per
+                         week on <ref target="https://github.com/ebeshero/DHClass-Hub/issues">our course GitHub repo</ref></hi>, and we strongly encourage you
+                     to do more than this minimum. Earn an <q>A</q> in participation by asking questions, making suggestions, and sharing helpful
+                     resources you’ve found. Help each other out by trying to answer questions on GitHub (and
+                     read the instructor posts too as we wade in to help). Your instructors will likely
+                     be dominating the class time as we model concepts and methods, so the GitHub Issues board gives the students a good space to form into a coding community to help each
+                     other and reflect together. Also, if you have a question about an assignment, <hi rend="em">always think of our GitHub Issues board as your first resource</hi> to
+                     check for helpful hints and to post your questions, because others may have the
+                     same question and answers are best shared! Of course you may e-mail us, but we
+                     really prefer you go the discussion board first, and doing so is, after all, worth
+                     course credit as your participation grade.</p>
+             </div>
+             <div type="exams">
+                 <head>Tests (15%):</head>
+                 <p>As scheduled throughout the course there will be several (probably about five or six) tests on the various kinds of coding we are learning in the course, and we will drop the lowest grade.  All but the first test will be take-home and assigned over a weekend. They are open-book, open notes, but they must be completed individually and are designed to demonstrate that you have learned from the class material, coding assignments, and posted solutions.  Tests may resemble homework assignments, but unlike homework exercises, these are given letter grades. These are given grades because they are evaluative and involve demonstrating what you have learned after we have finished a coding unit.</p>
+             </div>
+             <div type="final-project">
+                 <head>Project (40%):</head>
+                 <p>Throughout the semester you will be working as part of a team on a course project. Early in the semester each student posts a proposal for a semester project to work with a text (or collection of texts) in the public domain and a set of research questions to explore in a coding project. Teams will form around a selection of these projects in mid-September and begin work, performing document analysis, developing and implementing a system of markup and project rules, marking up text following that system, writing programs to conduct research and create a resource to share on a public website you will develop together that represents your investigation and your conclusions. Each project team must meet regularly together and with a project mentor (one of the instructor team) outside of class for project planning and discussion. Each of the project components described below adds up to 40% of your grade for the course.</p> 
+                 <div type="projectChecks"><p><hi rend="em">Project Checkpoints</hi> There will be a series of project checkpoints to complete, by set due dates throughout the semester. Each is worth 5% of the final course grade (a total of 20%) and a letter grade on the following scale:  <q>exceeds target</q> (A+), <q>meets target</q> (A), <q>some progress</q> (B), <q>negligible progress</q> (C), <q>no progress</q>(F). Each checkpoint will expect you to complete a stage of serious work on the course project with your project team. Project Checkpoints are met using the Issues and/or Projects tabs on your project GitHub repository and by posting files on the project website on newtFire.</p>
+                 </div>
+                 <div type="finalProject"><p>The course project develops throughout the semester, but is fully assembled in the final weeks of the course and submitted in two places, through code and documentation shared in your GitHub repository and on your project website due in Finals Week. Projects are evaluated as a team effort, but if unequal effort is observed, project members may receive different project grades accordingly. The Final Project grade is worth 20% of the course grade.</p></div>
+                     
+                 </div>
+            <div type="scale">
+               <head>Grading Scale:</head>
+               <p>Grades are calculated and posted on Courseweb, and follow this standard scale: A: 93-100%, A-:
+                  90-92%, B+: 87-89%, B: 83-86%, B-: 80-82%, C+: 77-79%, C: 73-76%, C-: 70-72%, D+:
+                  67-69%, D: 60-66%, F: 59% and below. In taking the course on a S / NC (pass-fail)
+                  basis, students must earn a C to receive Satisfactory credit. We give G grades
+                  (incomplete) at our discretion and only in conformity with the University Registrar policy: <ref target="http://www.registrar.pitt.edu/grades.html">http://www.registrar.pitt.edu/grades.html</ref>.</p>
+            </div>
+         </div>
+         <div type="policies" style="main">
+            <head>Course Policies:</head>
+            <p>Each day we are covering material that builds on earlier material and assignments, so
+               your success depends upon regular attendance and completing each assignment on
+               time.</p>
+            <div type="daily">
+               <head>Attendance:</head>
+                <p> We strictly require your attendance, as it is not only a setback to yourself but
+                    to the entire class and the success of our projects if students are repeatedly
+                    absent. Students must attend at least 90% of our class meetings in order <hi rend="em">to pass</hi> the course (that is, a maximum of four absences for any reason). Late arrival—particularly a pattern of
+                    repeated late arrivals—may be counted as absences at our discretion. To be considered attending for a class period, you
+                    must be present in the classroom by the beginning of class and until class is
+                    dismissed. For your own sanity, do not miss two consecutive classes. If you are
+                    experiencing a genuine emergency or crisis, alert us and provide documentation.
+                    (We do not want you to attend class if you have a fever or flu-like symptoms! If
+                    you are a Greensburg student and wish to be excused from two or more consecutive class meetings due to your own
+                    documented illness, please contact one of the following: the Office of the Vice
+                    President for Academic Affairs, Prof. Jackie Horrall (724-836-7482 or jhorrall at
+                    pitt.edu), our Campus Health Center (Pamela Reed, 724-836-9947 or
+                    pmr20 at pitt.edu), or the Director of Counseling, Gayle Pamerleau (gaylep at
+                    pitt.edu), who can then officially alert all of your professors.</p>
+            </div>
+            <div type="deadlines">
+               <head>Deadlines:</head>
+               <p> Your daily homework for this course is time-sensitive! Coding assignments,
+                  response papers, and other homework exercises must be uploaded to CourseWeb (or to
+                  Box, or the Sandbox server as specified), by the date and time indicated by the
+                  instructors. Homework assignments will be posted online to our class website
+                  and linked from our schedule, so students who miss class are nevertheless expected
+                  to consult the schedule and submit assignments on time. Because we post and share
+                  answers to homework exercises after submission deadlines, we will not accept late
+                  homework submissions. In order to pass the course, students must submit at least
+                  90% of the regular homework assignments, and complete at least 90% of the work in
+                  each component of the course.</p>
+            </div>
+            <div type="makeUp">
+               <head>Exam Policy:</head>
+                <p> Similarly, because we will be posting answers or sharing them in class, we do not
+                    give make-up examinations or allow people to write exams after the solutions are posted. However, we will drop your lowest exam score for
+                    the class, so that you may miss one exam without penalty.</p>
+            </div>
+            <div type="courtesy">
+               <head>Classroom Courtesy:</head>
+               <p>Our class is fast paced, and requires that we all be making the best use we can of
+                  our in-person class sessions. Arriving late and leaving early disrupts the
+                  important collective mental activity of class. So does in-class texting and
+                  checking your cell phone. While class is in progress, talking disruptively,
+                  leaving the classroom, texting or using a cell phone or computer, reading a
+                  newspaper, or other distracting behavior will be actively discouraged, and may
+                  result in a deduction in your Participation grade. Please respect what we do in
+                  the classroom: attend class regularly, and come prepared to contribute your
+                  questions and ideas.</p>
+            </div>
+            <div type="email">
+               <head>E-mail:</head>
+               <p>Each student is issued a University email address (username@pitt.edu) upon
+                  admission. This email address may be used by the University for official
+                  communication with students. Students are expected to read email sent to this
+                  account on a regular basis. Failure to read and react to University communications
+                  in a timely manner does not absolve the student from knowing and complying with
+                  the content of the communications. The University provides an email forwarding
+                  service that allows students to read their email via other service providers
+                  (e.g., Hotmail, AOL, Yahoo). Students who choose to forward their email from their
+                  pitt.edu address to another address do so at their own risk. If email is lost as a
+                  result of forwarding, it does not absolve the student from responding to official
+                  communications sent to their University email address. To forward email sent to
+                  your University account, go to http://accounts.pitt.edu, log into your account,
+                  click on Edit Forwarding Addresses, and follow the instructions on the page. Be
+                  sure to log out of your account when you have finished. (For the full Email
+                  Communication Policy, go to <ref target="http://www.bc.pitt.edu/policies/policy/09/09-10-01.html">http://www.bc.pitt.edu/policies/policy/09/09-10-01.html</ref>.)</p>
+            </div>
+
+
+            <div type="integrity">
+               <head>Academic Integrity</head>
+               <p>
+                  <hi rend="em">Source Citation and Plagiarism:</hi> One goal of our course is to
+                  reflect on how best to cite sources in digital contexts. We will consider how and
+                  why such citations differ from documenting printed texts. We will also consider
+                  the ease and frequency with which digital texts and graphics are plagiarized on
+                  the worldwide web, and discuss how the omission of source citations detracts from
+                  the authority of a digital information resource. We expect you to practice mindful
+                  source citation, and plagiarism on your part will have very serious
+                  consequences.</p>
+               <p>Plagiarism falsely represents another source’s words or ideas as your own, and, if
+                  you commit plagiarism in this course, you will receive a final course grade of F
+                  and be reported to the Vice President of Academic Affairs. Representing the voice
+                  of another individual as your own voice constitutes plagiarism, however generous
+                  that person may be in “helping” you with an assignment. Turning in an assignment
+                  generated collectively under the name of a single individual is considered
+                  plagiarism. <hi rend="em">When instructed to collaborate on a project, project
+                     collaborators share collective authorship and should identify themselves
+                     directly as a team.</hi> To avoid plagiarism, cite your sources whenever you
+                  quote, paraphrase, or summarize material, or use digital images from any outside
+                  source (including websites, articles, books, course readings, Courseweb postings,
+                  or someone else’s notes). When using the “copy” and “paste” features as you read
+                  and research, be sure that you are carefully marking that these passages are
+                  unprocessed from their source, so that you know to process it later. Forgetting to
+                  do so not only produces sloppy work but (whether you intended it or not) results
+                  in a false representation. As long as you make a good faith and clear effort to
+                  cite your sources, you will not be faulted for plagiarism, but your work will be
+                  penalized if citations are inaccurate, unclear, or lack important information.
+                  Cheating on exams or exercises will also receive a final course grade of F and
+                  will be reported to the Vice President of Academic Affairs.</p>
+            </div>
+            <div type="disability">
+               <head>Disability Services:</head>
+               <p>If you have a disability for which you are or may be requesting an accommodation,
+                  please contact both your instructor and the Director of the
+                  Learning Resources Center, Dr. Lou Ann Sears, Room 240 Millstein Library Building
+                  (724) 836-7098 (voice) or los3 at pitt.edu as early as possible in the term.
+                 The Learning Resources Center will verify your disability and help to determine reasonable
+                  accommodations for this course.</p>
+            </div>
+         </div>
+         <div type="resources">
+            <head>Resources</head>
+            <p>We gratefully acknowledge <ref target="http://dh.obdurodon.org/">David Birnbaum’s
+                  Digital Humanities course</ref> as our starting point and resource for much of our
+               development. Other useful resources include:</p>
+            <list>
+               <item>
+                  <ref target="https://exam.obdurodon.org/">eXam Center</ref>: a learning resource
+                  for quizzing yourself on coding that we’re learning in class. <note>(We need to
+                     arrange for you to have individual accounts here to sign in and take the
+                     quizzes.)</note>
+               </item>
+               <item>
+                  <ref target="http://www.mulberrytech.com/papers/schematron-Philly.pdf">Schematron:
+                     an intro guide</ref>
+               </item>
+               <item>
+                  <ref target="http://programminghistorian.org/lessons/">The Programming Historian
+                     (full collection of tutorials)</ref>
+               </item>
+               <item>
+                  <ref target="http://programminghistorian.org/lessons/topic-modeling-and-mallet">Getting Started with Topic Modelling and MALLET</ref>
+               </item>
+               <item>
+                  <ref target="http://www.naturalearthdata.com/">Natural Earth (mapping
+                     resource)</ref>
+               </item>
+            </list>
+         </div>
+         <div type="extProjects">
+            <head>Projects and Sites That Inspire Us</head>
+            <list>
+               <item>
+                  <ref target="http://obdurodon.org">Obdurodon</ref>: where we learned what we can
+                  teach, and where we’re still learning.</item>
+                <item>The <ref target="http://www.tei-c.org/index.xml">Text Encoding Initiative</ref> community and guidelines.</item>
+               <item><ref target="http://vtm.epfl.ch/page-109337.html">Venice Time Machine</ref>:
+                  very ambitious, enormous project team of faculty and students to study and model a
+                  thousand years of Venice, digitizing "kilometers of archives."</item>
+               <item>
+                  <ref target="http://mapoflondon.uvic.ca/index.htm">Map of Early Modern
+                     London</ref>
+               </item>
+               <item>
+                  <ref target="http://lordbyron.cath.lib.vt.edu/index.php?choose=About">Lord Byron
+                     and His Times</ref>: The very thoughtful stylistic design of this important
+                  project reproduces the style of nineteenth-century print and layout. The content
+                  makes many rare materials about Lord Byron’s social network searchable and
+                  connected to the web of linked open data. </item>
+               <item>
+                  <ref target="http://shelleygodwinarchive.org/">The Shelley-Godwin Archive</ref>:
+                  digitizes the manuscripts of Percy and Mary Shelley, and Mary Shelley’s parents,
+                  William Godwin and Mary Wollstonecraft—manuscripts often written in multiple
+                  hands. Provides an important study of the Frankenstein notebooks to demonstrate
+                  how much of a role Percy Shelley played in the writing of Frankenstein. The
+                  archive provides a good model of the use of TEI for manuscript encoding and of
+                  complex and multiple visualizations of manuscript texts. </item>
+               <item>
+                  <ref target="http://jetson.unl.edu:8080/cocoon/tokenx/index.html?file=../xml/base.xml">TokenX: a text visualization, analysis, and play tool</ref>
+               </item>
+               <item>
+                  <ref target="http://homes.cs.washington.edu/~jheer//files/zoo/">A Tour Through the
+                     Visualization Zoo</ref> </item>
+               <item>
+                  <ref target="https://www.youtube.com/watch?v=Xe1TZaElTAs">Clay Shirky on Love,
+                     Internet Style</ref> (9 minutes of Youtube inspiration: on what lasts, and why
+                  community matters in our digital worlds.)</item>
+
+            </list>
+         </div>
+
+<div type="schedule">
+    <head>Coding and Data Visualization</head>
+      <table type="week" n="1">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-07">M 1-07</date>
+            </cell>
+            <cell role="inclass"> <p>Welcome! Intro to the course, and Intro to XML and working in
+                &lt;oXygen/&gt;: Write your first XML. <hi>Mindful File Management</hi>
+                (<ref target="explainFileNames.html">how
+                    to name</ref>, store, share, and submit files in this course). Setting up
+                accounts for web server and for GitHub. <ref target="https://www.washingtonpost.com/recipes/country-loaf-pain-de-campagne/14237/?utm_term=.f2369869e1e5">Bread recipe</ref></p></cell>
+            <cell role="assign">  <list>
+                <item>By Fri. 1/12: Install &lt;oXygen/&gt; software on your own computers.
+                    <ref target="https://courseweb.pitt.edu">Instructions and license key
+                        posted on Courseweb</ref>.</item>
+                <item>Read our <title level="a"><ref target="explainXML.html">Introduction
+                    to XML</ref></title>, and read <title level="a"><ref target="explainFileNames.html">File-Naming Conventions for Courseweb Homework
+                        Submissions</ref></title>.</item>
+                <item>Complete <hi rend="strong"><ref target="XMLExercise1.html">XML Exercise 1</ref></hi> </item>
+                <item><hi rend="strong">Returning Students Only:</hi>
+                    <list>
+                        <item>Work on project code or your choice of an interesting XML coding
+                            challenge.</item>
+                        <item>Meet with instructors to plan peer mentoring roles.</item>
+                    </list></item>
+            </list></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-09">W 1-09</date>
+            </cell>
+            <cell role="inclass"> <p>Getting started with GitHub and our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Discussion of the XML recipe homework: XML Comments and Well-formedness, and how to work with &lt;oXygen/&gt;. Introduce <ref target="http://newtfire.org/dh/studentProjects.html"> student projects from this class</ref>.</p></cell>
+            <cell role="assign"> <list> <item><hi rend="em"><ref target="GitExercise1.html">Git Exercise 1</ref></hi>: Read and consult our <ref target="explainGitShell.html">Guide to Git Shell</ref> as you complete this exercise.</item>
+                <item><hi rend="em"><ref target="XMLExercise2.html">XML Exercise 2</ref></hi></item></list></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-11">F 1-11</date>
+            </cell>
+            <cell role="inclass"> <p>Discussion of homework, and XML: Well-formedness vs. Validity. XML projects
+                in digital humanities.</p>
+                <p>Hands-on GitHub: Working with our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>: Open and close Issues, write markdown in Issues "help tickets" and discussions, access our class examples of code. Command line: pull and push files in Troubleshooting directory.</p></cell>
+            <cell role="assign"> <list><item><hi rend="em"><ref target="GitExercise2.html">Git Exercise 2</ref></hi></item>
+                <item><hi rend="em">XML exercise 3:</hi> Review our feedback on your coding
+                    exercises so far and submit revisions if we asked you to. Mark up a text of
+                    your choice (any genre; manageable but reasonable size; foreign languages
+                    welcome). Work on applying attributes with your elements, and doing so in a
+                    careful and systematic way. </item>
+                <item><hi rend="em"><ref target="https://github.com/ebeshero/DHClass-Hub/issues/">Reading and Discussion Post on GitHub</ref></hi>: Locate the class discussion exercise on our Issues board, which will ask you to read and discuss an article by Gabrielle
+                    Kirilloff, <ref target="Kirilloff_TraversingTree/">“&lt;Traversing_the_Tree/&gt;”</ref>, the short article, <ref target="http://www.idsnews.com/article/2015/04/frankenstein-novel-analyzed">“Frankenstein novel analyzed”</ref> and scroll through <ref target="http://balisage.net/Proceedings/vol13/html/Piez01/BalisageVol13-Piez01.html">Wendell Piez’s conference talk and images for the Balisage Markup
+                        Conference 2014</ref>. For full credit, your posts should make specific reference to passages in
+                    Kirilloff’s essay, and reflect on those passages. Please raise questions and respond to each other!</item></list></cell>
+        </row>
+    </table>
+    <table type="week" n="2">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-14">M 1-14</date>
+            </cell>
+            <cell role="inclass"><p>Overlapping hierarchies. Document Analysis and Coding: Group Exercise with <ref target="https://github.com/ebeshero/DHClass-Hub/tree/master/Class-Examples/XML/OHCO_ozymandias">Ozymandias</ref></p>
+                <p>The concept of “UX.” or User Experience, and discussion of projects.</p></cell>
+            <cell role="assign"><p><hi>GitHub Practice (starting today for seven days):</hi> Make sure your personal repo is properly set up and cloned to your local computer. Using your Git Bash Shell, practice some basic Git commands to build a habit: Always pull before you push! Then push one file per day either to your personal repo or the DHClass-Hub. On alternating days, push to the other repo (if you pushed to your personal repo today, tomorrow you will push to the DHClass-Hub). Try cloning repos on multiple computers that you may be using through the semester (including computer lab machines on campus). Pull up our quick guide <ref target="https://github.com/ebeshero/DHClass-Hub/blob/master/Git_BasicCommands.md">Using Git Through Command Line</ref> for a ready reference of commands and look up details in our <ref target="explainGitShell.html">Guide to Git Shell</ref>.</p>
+                <p><hi rend="em">UX Discussion on DHClass-Hub</hi> Choose one of the following digital archives to explore, find the appropriate discussion thread on the DHClass-Hub, and write a post discussing: 1) how visual aids are used to convey information on the site, and how well (or badly) do these work? What seems unclear to you, and/or what seems to work really well? 2) how effective is the (“UX”) in navigating at least one or two significant areas of the site? (Respond to each other as the thread develops.)</p>
+                <list><item><ref target="http://lotrproject.com/">LOTR Project: Visualizing
+                    Tolkien’s Works on the Web</ref></item>
+                    <item><ref target="http://menus.nypl.org/">What’s on the menu?</ref> (be
+                        sure to read the About page for the project goals)</item>
+                    <item><ref target="http://orbis.stanford.edu/">ORBIS: The Stanford
+                        Geospatial Network Model of the Roman World</ref></item></list>
+                <p>Read <title level="a"><ref target="explainRNG.html">Intro to Relax NG</ref></title>.</p></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-16">W 1-16</date>
+            </cell>
+            <cell role="inclass"> <p>Schema Languages: Writing the Rules. Writing Relax NG</p></cell>
+            <cell role="assign">  <list><item><hi rend="em">Relax NG exercise 1:</hi> Write a Relax NG schema for one of
+                the XML documents you created for an earlier assignment (XML exercise 2 or
+                3), and upload your schema and your XML file to Courseweb.</item>
+                <item><ref target="explainXML.html">Review XML syntax</ref> and read and work with the <title level="a"><ref target="explainRNG.html">Intro to Relax NG</ref></title> tutorial as you work on Relax NG Ex 1.</item>
+                <item>Continue <hi>GitHub Practice</hi> (see M 1-14 assignment above).</item>
+            </list></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-18">F 1-18</date><note>Add/Drop period ends.</note>
+            </cell>
+            <cell role="inclass"> <p>Relax NG: mixed content, data types.</p><p> Quick tour of course projects with strong research questions developed by coding students at two Pitt campuses in the past few years.>
+            </p></cell>
+            <cell role="assign">
+                <p><hi rend="em">Relax NG exercise 2: </hi>This time, choose a small text
+                    (maybe one of the letters from the first assignment that you did NOT mark up before, or anything you like). Perform document analysis, write a schema,
+                    and mark up the text according to the schema. Work with attributes, datatypes, and mixed content in your schema.</p> 
+                <p><hi><ref target="https://github.com/ebeshero/DHClass-Hub/issues/419">DHClass-Hub Discussion of UX and Project Research Questions</ref></hi> for Pitt-Greensburg and Pitt-Oakland student projects</p>
+                <list>
+                    <item><ref target="http://hamilton.newtfire.org">The Hamilton Project</ref></item>
+                    <item><ref target="http://graveyard.newtfire.org">The Graveyard Project</ref></item>
+                    
+                    <item><ref target="http://decameron.newtfire.org">The Decameron Project</ref></item>
+                    <item><ref target="http://bamfs.obdurodon.org/index.xhtml">Profanities in Quentin
+                        Tarantino’s Screenplays</ref> (with network analysis)</item>
+                    <item><ref target="http://translate.obdurodon.org/">Divergences in Machine
+                        Translation: Examining Harry Potter texts processed by Google
+                        Translate across multiple language families</ref></item>  
+                    <item>Continue <hi>GitHub Practice</hi> (see M 1-14 assignment above).</item>
+                    
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="3">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-21">M 1-21</date>
+            </cell>
+            <cell role="inclass"><p>Dr. Martin Luther King’s birthday observance: No classes.</p></cell>
+            <cell role="assign">Continue (and conclude) <hi>GitHub Practice</hi> (see M 1-14 assignment above).</cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-23">W 1-23</date>
+            </cell>
+            <cell role="inclass"><p><hi>Test 1 (in class: 15-20 minutes): XML markup.</hi></p>
+                <p>Course projects, further discussion. Relax-NG issues.</p><p>Collect info for personal and project webspace on newtFire.</p>
+            </cell>
+            <cell role="assign"><list>
+                <item><hi rend="em">Relax NG exercise 3:</hi> Choose a small text of a different
+                    type or genre than last time, perform document analysis, write a schema, and
+                    mark up the text according to the schema. Work with attributes, datatypes, and mixed content in your schema.</item>
+                <item><ref target="https://github.com/ebeshero/DHClass-Hub/issues/"><hi rend="em">DHClass-Hub Post and Discussion on Project
+                    Proposals:</hi></ref><list>
+                        <item>Beginning from <hi>today through M 1-28</hi>: Post proposal
+                            ideas for team projects to work on this semester. Each student
+                            should post an idea for the class to consider: a project involving
+                            XML markup to be managed within a team of 2-4 students to
+                            investigate something we could study and visualize from our markup
+                            more effectively with computers than with human reading and
+                            description alone. All projects must involve a team of at least two
+                            persons, but this first exploratory proposal is an individual
+                            assignment.</item>
+                        <item>Each student must respond to at least one of the proposed ideas
+                            from another student and indicate suggestions or further ideas. You
+                            may respond to more than one if you like, and indicate which
+                            proposals interest you to work on. </item>
+                        <item>Proposal discussions will run until class time on M 1/28 when we will form project teams.</item></list></item>
+                <item><hi>Assignment for Dr. B</hi>: Set up and test student web space on NewtFire now.</item>
+            </list></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-25">F 1-25</date>
+            </cell>
+            <cell role="inclass"><p>Review Relax NG issues. </p><p>Coding for analysis: discussion of XML modeling for research questions. Network Analysis and Mapping with XML: Discussion of XML  projects designed to explore networks: Tarantino, Akira, Hamilton, Thalaba.</p> </cell>
+            <cell role="assign">
+                <list>
+                    <item>Post a project proposal on DHClass-Hub if you have not done so already. Respond to another student's project proposal.</item>
+                    <item><hi rend="em"><ref target="https://github.com/ebeshero/DHClass-Hub/issues/113">Bad Graphs Reading and Discussion</ref>:</hi> 
+                        Read <ref target="http://people.stat.sfu.ca/~cschwarz/Stat-650/Notes/PDF/ChapterBadgraphs.pdf"><title level="a">A short tour of bad graphs</title></ref> and join our GitHub discussion exercise, which involves your posting examples of biased or otherwise problematic graphs you find on the web.</item>
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="4">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-28">M 1-28</date>
+            </cell>
+            <cell role="inclass"> <p><hi >Form project teams.</hi></p><p>Review bad graphs discussion. Ambitious graphs: See <ref
+                target="http://homes.cs.washington.edu/~jheer//files/zoo/">A Tour Through
+                the Visualization Zoo</ref>.</p><p>Review Relax-NG: common issues in homeworks.</p>
+                
+            </cell>
+            <cell role="assign">
+                <list>
+                    <item><hi>Project Checkpoint 1</hi>: New project team leaders: initiate team GitHub repos and invite team members and instructors to join. Push content to your repo to initiate the project, such as a readme markdown file. Post and respond to the first issue(s) on your team repo, to (at least) schedule regular meeting times. Team members: respond to issues, help find a time to meet, and clone team repos.</item>
+                    <item>Review our comments on your Relax NG homeworks and practice writing Relax NG in preparation for the Relax NG test.</item>
+                    
+                </list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-01-30">W 1-30</date>
+            </cell>
+            <cell role="inclass"><p>Project discussion / initiation time in class. Review of Relax NG issues, initiation of first take-home test (Relax NG). </p></cell>
+            <cell role="assign"><list>
+                <item><hi>Test 2 (take-home): Relax NG</hi></item>
+                <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular
+                    Expressions</ref></title> and start looking at <ref
+                        target="http://www.regular-expressions.info/quickstart.html">the Regular
+                        Expressions Quick Start</ref> in preparation for the next class.</item>
+            </list></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-01">F 2-01</date>
+            </cell>
+            <cell role="inclass"><p>Introducing up-conversion with Regular Expressions: Using Find &amp; Replace in &lt;oXygen/&gt;: hands-on exercise.</p></cell>
+            <cell role="assign">
+                <list>
+                    <item>Consult our <title level="a"><ref target="explainRegex.html">Intro to
+                        Regular Expressions</ref></title> and <ref
+                            target="http://www.regular-expressions.info/quickstart.html">the
+                            Regular Expressions Quick Start</ref> as you work on the
+                        exercise: <ref target="RegexExerciseSonnets.html"><hi>Regex Exercise 1: Shakespeare's Sonnets</hi></ref></item>
+                    <item><hi>FTP Client Setup</hi>: Follow the instructions <ref target="#dateRef">at the top of this Syllabus page</ref> to install an FTP client of your choice on your computer, and follow our instructions posted on <ref target="https://courseweb.pitt.edu">Courseweb’s Announcements page</ref> to use that FTP client to access your web space on newtFire.</item>
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="5">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-04">M 2-04</date>
+            </cell>
+            <cell role="inclass"> <p>Any issues with FTP setup?</p> 
+                <p>More on Regular Expressions. Inside-out or Outside-in? Greedy Matching. Regex lookahead.</p></cell>
+            <cell role="assign"><hi>Regex Exercise 2: Blithedale</hi></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-06">W 2-06</date>
+            </cell>
+            <cell role="inclass"><p>Regular Expressions: thinking algorithmically. Selecting for what’s not there. Simplifying overcomplicated expressions.</p><p>XML and the Web: Introduce HTML and CSS. SFTP into the Apache Server for newtFire.
+                File directories and their association with web URLs.</p></cell>
+            <cell role="assign"><list>
+                <item><hi>Project Checkpoint 2:</hi> Establish a clear file directory structure for GitHub, ensure all project team members are working consistently. Establish a project schema and associate that schema with project XML files in the repo. All team members work with and correct XML markup applying the project schema.</item>
+                <item><ref target="RegexExerciseVoyage.html"><hi rend="em">Regex Exercise 3: Pacific Voyage Narrative</hi></ref></item>
+                <item>Read our <title level="a"><ref target="explainHTML.html">Introduction
+                    to XHTML (and HTML)</ref></title>.</item>
+                
+            </list></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-08">F 2-08</date>
+            </cell>
+            <cell role="inclass"><p>Building on the Web: HTML and CSS. Introduction to your web space on NewtFire and the index.html page </p><p>Hands-on: SFTP to NewtFire, association with GitHub.</p><p>Mindful file directory management: File directories and their association with web URLs.</p></cell>
+            <cell role="assign"><list>
+                <item>Consult our <title level="a"><ref target="explainHTML.html"
+                    >Introduction to XHTML (and HTML)</ref></title>, and our <title
+                        level="a"><ref target="explainCSS.html">Introduction to Cascading
+                            Stylesheets (CSS)</ref></title> as you work on <hi rend="em"><ref target="HTMLExercise1.html">HTML/CSS Exercise 1</ref>:</hi> NOTE: Do not submit this assignment on Courseweb. Instead, submit this
+                    homework by using FTP to post to our newtFire web server, and do <hi rend="em">not</hi> follow standard homework naming conventions</item>
+            </list></cell>
+        </row>
+    </table>
+    <table type="week" n="6">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-11">M 2-11</date>
+            </cell>
+            <cell role="inclass"><p>HTML and CSS</p><list><item>Web browsers and display variations</item>
+            <item>CSS Box Model</item>
+                <item>Controlling page layouts: <ref target="https://internetingishard.com/html-and-css/flexbox/">Flexboxes tutorial</ref>, with simple examples [to be posted].
+                </item>
+            </list></cell>
+            <cell role="assign">
+                <list><item>Consult <title level="a"><ref target="http://learnlayout.com/">Learn CSS
+                    Layout</ref></title>, <ref target="https://internetingishard.com/html-and-css/flexbox/">Flexbox tutorial</ref>, and <ref
+                        target="http://www.w3schools.com/css/">w3 Schools CSS Reference</ref>
+                    as you code. (Also, check out <ref
+                        target="http://paletton.com/#uid=1000u0kllllaFw0g0qFqFg0w0aF"
+                        >Paletton</ref> (or hunt for other color scheme generators on the web) to help think about choosing a balanced color scheme for your website.
+                    Experiment with writing CSS to control font, layout, color, backgrounds. </item>
+                    <item><hi rend="em"><ref target="HTMLExercise2.html">HTML/CSS Exercise 2</ref></hi> (As with HTML Exercise 1, submit this
+                        homework by using FTP to post to our newtFire web server.)</item>
+                </list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-13">W 2-13</date>
+            </cell>
+            <cell role="inclass">
+                <p>HTML and CSS continued: Positioning and controlling layouts with HTML div, section, span, and CSS flex.  Troubleshooting Server Side Includes</p>
+                <p>Review Regex issues in preparation for take-home test.</p>
+               </cell>
+            <cell role="assign">
+                <list><item><hi>Project Checkpoint 3: </hi><list><item> Some team members work on developing page(s) for the project website, creating navigation menu (using a SSI), and working with section, div, and span elements. Try using CSS flex to control your horizontal layout. Work out a file directory structure for the GitHub repo to separate project website files from XML markup.</item>
+                <item>Others concentrate on completing markup, up-converting files to project XML with regex (as needed), and refining the project schema.</item></list> </item></list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-15">F 2-15</date>
+            </cell>
+            <cell role="inclass"> 
+                <p>Project meeting time in class; completion of Project Checkpoint 3.</p>
+                <p>Review and take stock of technologies learned so far. Preview of what's next: XPath. Initiate Regular Expressions Take-Home Exam</p></cell>
+            <cell role="assign">
+                <list><item><hi>Test 3 (take-home): Regular Expressions</hi></item>
+                    <item>Preview the <ref target="explainXPath.html">Introduction to XPath</ref> in preparation for the next unit.</item>
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="7">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-18">M 2-18</date>
+            </cell>
+            <cell role="inclass"><p>Navigating XML with XPath: Introducing the XPath window in &lt;oXygen/&gt;,  functions, axes, path steps <hi>/</hi>, and predicate filters <hi>[ ]</hi>.  Hands-on: navigating <ref target="http://dh.newtfire.org/bad-hamlet.xml">Hamlet</ref>. </p></cell>
+            <cell role="assign">
+                <list>
+                    <item>First, carefully read our <ref target="explainXPath.html">Introduction
+                        to XPath: <title level="a">Follow the XPath!</title></ref> As you
+                        read, try experimenting with the XPath expressions on our page, by
+                        downloading the explainXPath.html file, opening it in oXygen, and
+                        experimenting in the XPath window with some of our expressions. Then,
+                        move on to XPath Exercise 1.</item>
+                    <item><ref target="XPathExercise1.html"><hi rend="em">XPath Exercise
+                        1</hi></ref>
+                    </item>
+                </list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-20">W 2-20</date>
+            </cell>
+            <cell role="inclass"><p>Using XPath to climb trees—up and down and side to side. Predicate
+                expressions: <hi rend="em">[ ]</hi>. <hi rend="em">(Grouping)</hi> and <hi
+                    rend="em">[Position()]</hi>. XPath syntax: some tricks.</p></cell>
+            <cell role="assign">
+                <list>
+                    <item><ref target="XPathExercise2.html"><hi>XPath Exercise 2</hi></ref></item>
+                    <item>Read and experiment with <title level="a"><ref
+                        target="http://dh.obdurodon.org/functions.xhtml">The XPath
+                        Functions We Use Most</ref></title>.</item>
+                    <item></item>
+                    <item>Through next Monday: DHClass-Hub Discussion: Choose at least one of the following two posts by Steve Ramsay to continue reading and discussing on our DHClass-Hub:
+                        <list>
+                            <item> <ref
+                                target="https://web.archive.org/web/20140604085234/http://www.playingwithhistory.com/wp-content/uploads/2010/04/hermeneutics.pdf">
+                                <title level="a">The hermeneutics of screwing around</title></ref>, or</item>
+                            <item><ref
+                                target="http://digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1056&amp;context=englishfacpubs">
+                                <title level="a">In praise of pattern</title></ref> </item>
+                        </list>
+                    </item>
+                    <item> Post at least twice before next Monday’s class, to reflect and respond to each other about <title level="a">DH and CS</title> and one of the other two short articles by Stephen Ramsay on <ref
+                        target="https://github.com/ebeshero/DHClass-Hub/issues/">our DHClass-Hub Discussion of Stephen Ramsay’s work</ref>.</item>
+                </list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-22">F 2-22</date>
+            </cell>
+            <cell role="inclass"><p>XPath Functions: some common functions we use and how to write them: <hi
+                rend="em">count(), not(), distinct-values()</hi>.  </p>
+                <p>Preview functions with regular expressions in XPath.</p></cell>
+            <cell role="assign">
+                <list>
+                    <item><ref target="XPathExercise3.html"><hi rend="em">XPath Exercise 3:</hi> experimenting with functions</ref></item>  
+                    <item>Complete DHClass-Hub posts on Steve Ramsay Discussion.</item>
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="8">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-25">M 2-25</date>
+            </cell>
+            <cell role="inclass"><p>Surgical precision with XPath on text strings: regular expressions in XPath functions</p>  </cell>
+            <cell role="assign"><ref target="XPathExercise4.html"><hi>XPath Exercise 4</hi></ref></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-02-27">W 2-27</date>
+            </cell>
+            <cell role="inclass"><p>Introducing XQuery and <ref target="http://newtfire.org:8338">the eXist-db on newtFire</ref></p>
+                <p>Writing XPath in eXist-db</p>
+                <p>XPath String functions. XPath for the <hi
+                    rend="em">text() node</hi> to grab strings: <hi rend="em">string-join()</hi>, <hi rend="em">contains(string 1, string 2)</hi>.</p>
+                <p>Hands on: learning to write XQuery: collections and documents, queries and FLWORs</p></cell>
+            <cell role="assign">
+                <list>
+                    <item>Read and check out some things you can try in our newtFire eXist environment at <ref target="http://www.stylusstudio.com/xquery-primer.html">Michael Kay’s XQuery Tutorial</ref> and our <ref
+                        target="http://newtfire.org/dh/explainXQuery.html">Introduction to XQuery and the eXist XML Database</ref>.</item>
+                    <item><hi><ref target="XQueryExercise1.html">XQuery Exercise
+                        1</ref></hi></item></list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-01">F 3-01</date>
+            </cell>
+            <cell role="inclass">
+                <list> <item>XQuery: Writing FLWOR statements and outputting HTML lists and tables</item>
+                    <item>Outputting files and saving them to the eXist-db database for previewing</item>
+                    <item>XQuery online and offline: in eXist and in &lt;oXygen/&gt;</item></list>
+            </cell>
+            <cell role="assign">
+                <list>
+                    <item><hi><ref target="XQueryExercise2.html">XQuery Exercise 2</ref></hi></item>
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="9">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-04">M 3-04</date>
+            </cell>
+            <cell role="inclass">   <list>
+                
+                <item>Review and troubleshoot XQuery Ex 2: FLWOR for-loops and outputs.</item>
+                <item>Saving and Accessing files in the Newtfire eXist-db: set up individual and team project directories.</item>
+                <item>Introduce Project Checkpoint 4: Markup Analysis Sprint</item>
+                
+            </list></cell>
+            <cell role="assign">
+                <list>
+                    <item>XQuery Exercise 3: Upload one or more project files to the eXist-db database, and write some XQuery to output HTML useful for your project: try producing an HTML file containing a list or table of information.</item>
+                   
+                    <item>Prepare for Network Analysis: <ref target="http://cytoscape.org/">Install Cytoscape on your computer</ref>, together with the appropriate Java package. Note: This is also installed in the campus computer labs, so you may work with it there, too or instead of on your own computer. If you have trouble with the installation, locate Cytoscape in the campus computer labs.
+                        Begin familiarizing yourself with the Cytoscape interface, working with Cytoscape session files (with .cys extension) posted in Class Examples, Network-Workshop folder in our <ref target="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</ref>. Try importing one of my Cytoscape session files (.cys) following our tutorial instructions.
+                        
+                    </item>
+                    <item>Read <ref target="http://ebeshero.github.io/thalaba/cytosc.html"><title level="a">An Introduction to Network Analysis and Cytoscape for XML Coders</title></ref></item>
+                </list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-06">W 3-06</date>
+            </cell>
+            <cell role="inclass"> <p>XQuery from eXist to Web: Extracting from the XML database to publish in the Web Project</p>
+                <p>Network Analysis: Network graphs and structured data</p>
+                <p>XQuery to Network Analysis: generating plain text data (CSV or TSV) for Cytoscape</p>
+                <p>What we do in Cytoscape: Processing and Filtering; Running the Network Analyzer. Common network statistics: degree centrality, node centrality, edge betweenness,
+                    shortest paths</p></cell>
+            <cell role="assign"> <p><hi><ref target="NetworkExercise1.html">XQuery to Network Analysis: Exercise, Part 1</ref></hi></p> </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-08">F 3-08</date><note>Withdrawal deadline.</note>
+            </cell>
+            <cell role="inclass"><list><item>XQuery to Network Analysis: Check for problems: TSV data extracted from XML.</item><item>Importing to Cytoscape and running the Network Analyzer.</item>
+            </list></cell>
+            <cell role="assign">
+                <list><item><hi><ref target="NetworkExercise2.html">XQuery to Network Analysis: Exercise, Part 2</ref></hi></item>
+                    <item><hi>Project Checkpoint 4: Analysis Sprint: Complete as much of your project markup as you can, load good files into team project space in eXist-db, and experiment with extracting data, looking for patterns, visualizing networks (as applicable).</hi></item> 
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="10">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-11">M 3-11 - F 03-15</date>
+            </cell>
+            <cell role="inclass"><hi>Spring Break: No classes.</hi></cell>
+            <cell role="assign">Project Midterm Sprint</cell>
+        </row>
+    </table>
+    <table type="week" n="11">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-18">M 3-18</date>
+            </cell>
+            <cell role="inclass"><p>XQuery to Network Analysis: Survey issues and outputs. Altering and styling network graphs.</p>
+                <p>Project class time to complete Checkpoint 4. XQuery in Projects</p>
+            <p>Preview Schematron: Cleaning up project code with help from XPath</p>
+            </cell>
+            <cell role="assign">
+               <list> 
+                   <item>Finish up remaining work on network analysis or Project Sprint.</item>
+                   <item>Read our <ref target="explainSchematron.html">Guide
+                    to Schema Writing with Schematron</ref>.</item></list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-20">W 3-20</date>
+            </cell>
+            <cell role="inclass"><p>writing an XPath-based Schema language: Schematron, why you need it now, and how we use it with
+                Relax-NG</p></cell>
+            <cell role="assign">
+                <list>
+                    <item>Consult our <ref target="explainSchematron.html">Guide to Schema Writing with Schematron</ref> as you complete <ref target="SchematronExercise_DM.html"><hi>Schematron Exercise 1</hi></ref>.</item>
+                </list>
+                
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-22">F 3-22</date>
+            </cell>
+            <cell role="inclass">Project application of Schematron. Project meetings. <note>Dr. B will be lecturing on network analysis at the Pittsburgh campus</note></cell>
+            <cell role="assign">
+                <list>
+                    <item><hi>Schematron Exercise 2</hi>: Write Schematron to refine and correct messy or problematic code for your project team. Submit two things: 1) your Schematron file, and 2) a sample of project XML code to show how you are capturing errors. </item>
+                    <item>Preview our <ref target="http://newtfire.org/dh/explainXSLT.html">Introduction to XSLT</ref> in preparation for the next class.</item>
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="12">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-25">M 3-25</date>
+            </cell>
+            <cell role="inclass"><list>
+                <item>Orientation to XSLT (eXtensible Stylesheet Language Transformations). When we use XSLT vs. When we use XQuery. XSL Transformations from XML to XML, and from XML to HTML. Namespaces</item>
+                <item>The Weirdness that is XSL Template Matching: Where we use XPath, and where
+                    we use <hi>pseudo-XPath patterns</hi> in XSLT.</item>
+                <item>Identity Transformations</item>
+            </list></cell>
+            <cell role="assign">
+                <list>
+                    <item>Read and refer to our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
+                    <item><hi><ref target="XSLTExercise1.html">XSLT Exercise 1: an
+                        Identity Transformation</ref></hi>.</item>
+                    <item><hi rend="em">To read this week</hi>, or before you start work on XSLT
+                        2:<list>
+                            <item><title level="a"><ref
+                                target="http://dh.obdurodon.org/developing-xslt.xhtml"
+                                >Developing an XSLT Stylesheet</ref></title></item>
+                            <item><title level="a"><ref
+                                target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in                             algorithms</ref></title></item>                           
+                        </list>
+                    </item>
+                </list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-27">W 3-27</date>
+            </cell>
+            <cell role="inclass"><p>XSLT to HTML: How it works: the template rule for the document node, and
+                succeeding template rules.</p>
+                <p>What happens with <hi>xsl:apply-templates</hi>, <hi>xsl:value-of</hi>, and Attribute Value Templates.</p> </cell>
+            <cell role="assign"><list>
+                <item><hi><ref target="XSLTExercise2_CDV.html">XSLT Exercise 2</ref></hi></item>
+                <item>To help guide you with XSLT and prepare for next class, read and consult:<list>
+                    <item><title level="a"><ref
+                        target="http://dh.obdurodon.org/developing-xslt.xhtml"
+                        >Developing an XSLT Stylesheet</ref></title></item>
+                    <item><title level="a"><ref
+                        target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in
+                        algorithms</ref></title></item>
+                    <item><title level="a"><ref target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref></title></item>
+                </list>
+                </item>  
+            </list></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-03-29">F 3-29</date>
+            </cell>
+            <cell role="inclass">
+                <p>Review/Consultation/Correction of XSLT Ex 2.</p>
+                <p>Modal XSLT. Preview XSLT Ex 3.</p>  
+            </cell>
+            <cell role="assign"><hi><ref target="XSLTExercise3_CDV.html">XSLT Exercise
+                3</ref></hi></cell>
+        </row>
+    </table>
+    <table type="week" n="13">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-01">M 4-01</date>
+            </cell>
+            <cell role="inclass">Modal XSLT and HTML with internal links for site navigation</cell>
+            <cell role="assign">
+                <hi><ref target="XSLTExercise4_CDV.html">XSLT Exercise
+                    3</ref></hi>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-03">W 4-03</date>
+            </cell>
+            <cell role="inclass"><p>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+                and screen grid coordinates. </p>
+                <p><ref target="https://www.slideshare.net/ebbondar/svg-81556046">Introductory Slideshow</ref>. and <ref target="https://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</p></cell>
+            <cell role="assign">
+                <list><item>Work through <ref target="https://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
+                    Filters, gradients, examples, and reference are optional.</item>
+                    <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-05">F 4-05</date>
+            </cell>
+            <cell role="inclass">   <p>XQuery to SVG: Pulling data for visualizing.</p>
+                <p>Choosing visualization formats: Timelines</p> </cell>
+            <cell role="assign">
+                <list>
+                    <item><ref target="SVGExercise2_CDV.html">SVG Exercise 2 (plotting a timeline)</ref></item>
+                </list>
+            </cell>
+        </row>
+    </table>
+    <table type="week" n="14">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-08">M 4-08</date>
+            </cell>
+            <cell role="inclass"><p>Review of SVG timeline assignment.</p>
+                </cell>
+            <cell role="assign">
+                <p><hi><ref target="SVGExercise3_CDV.html">SVG Exercise 3 (Part 2 of the Timeline)</ref></hi></p>
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-10">W 4-10</date>
+            </cell>
+            <cell role="inclass">
+                <p>XQuery to SVG: Making line and bar graphs, plotting axes. How to plot stacked bars. </p>
+            </cell>
+            <cell role="assign">
+                <hi><ref target="SVGExercise5_CDV.html">SVG Exercise: Project XQuery to SVG</ref></hi>: Plot a clear, simple, legible, labelled graph.
+            </cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-12">F 4-12</date>
+            </cell>
+            <cell role="inclass"><p>JavaScript? or More SVG / Visualization </p>
+                <p>Pulling projects together: Incorporating SVG and HTML for project sites</p></cell>
+            <cell role="assign"><p>To be determined, based on class interests, needs.</p></cell>
+        </row>
+    </table>
+    <table type="week" n="15">
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-15">M 4-15</date>
+            </cell>
+            <cell role="inclass"><p>JavaScript? or More SVG/Visualization</p>
+                <p>Projects and Portfolios. <ref target="https://creativecommons.org/">Creative
+                    Commons Licenses</ref></p>
+            </cell>
+            <cell role="assign"><p>Web development for Project Checkpoint 5</p></cell>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-17">W 4-17</date>
+            </cell>
+            <cell role="inclass">Project Checkpoint 5: Project presentations <note>possibly in Oakland</note>.</cell>
+            <cell role="assign"/>
+        </row>
+        <row role="day">
+            <cell role="date">
+                <date when="2019-04-19">F 4-19</date>
+            </cell>
+            <cell role="inclass"><hi>Last day of classes.</hi> Project presentations <note>possibly in Oakland</note></cell>
+            <cell role="assign"/>
+        </row>
+    </table>
+    <table type="week">
+        <row role="day">
+            <cell role="date"><date when="2019-04-25">Thurs. 4/25 by 11:59 PM</date></cell>
+            <cell role="assign">
+                <p>
+                    <hi>Projects due. Submit projects with a post to the instructors from  your project GitHub repo.</hi>
+                </p>
+            </cell>
+        </row>
+    </table>
+</div>
+      
+      </body>
+   </text>
+</TEI>
