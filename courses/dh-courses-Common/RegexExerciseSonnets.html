@@ -28,7 +28,7 @@
    		<li><a href="http://www.regular-expressions.info/tutorial.html">Regular-Expressions.info Tutorial</a>: a mine of helpful detail on regular expression matching,</li>
          			  
       </ul>
-   	  <h3>The input text</h3>
+   	  <h3>Get the source text ready in &lt;oXygen/&gt;</h3>
        <p>The text we’ll be using as input for the first regex homework assignment is a plain-text
            version of Shakespeare’s sonnets produced by Project Gutenberg, which you can download from our site here: <a
                href="shakeSonnets.txt">shakeSonnets.txt</a>.</p>
@@ -36,47 +36,40 @@
            <ul><li>To download the file,  go to File and Save as in your web browser, and choose a useful name and location on your computer to save the file.
            We typically keep the <code>.txt</code> extension, and you might rename this as <code>YourName_Regex1_sonnets.txt</code>.)
            </li>
-           <li>Then open &lt;oXygen/&gt;, and open the file you saved. </li>
-               <li><strong>Make a <q>Step File</q></strong>: Next, open a <strong>new, separate text file</strong>, in which you record each step you take in up-converting this document. This needs to be a plain text file (and not something you write in a word processor (<em>not</em> a Microsoft Word document) so you do not have to struggle with autocorrections of the regex patterns you are recording. Save this file as your main homework submission for this assignment: We will duplicate the steps you record to make sure they work to up-convert the text file to XML. Save this file following our <a href="http://dh.newtfire.org/explainFileNames.html">standard homework file naming conventions</a> (for upload to Courseweb).
-               <span class="smaller"><strong>Suggestion:</strong> You can open a new plain text file in oXygen by going to open a New document (the folded piece of paper icon) and typing in "text" in the search bar. <strong>On Windows</strong>, you can find and open Notepad and record your steps in plain text form here outside of oXygen, which may be convenient, so you don’t accidentally try your find-and-replace operations on your step file instead of the main text. <strong>On Mac</strong>, we don’t really have a good separate text editor to recommend: you might try TextEdit, but it may be best to stick with oXygen, and open your window in tile view as we did with your Relax NG Schema files.</span>
-               </li>
-            <li>You should manually delete any of the Project Gutenberg publishing
-           information from the beginning and end of the sonnets file, so that what you’re left with is
-           <strong>just the sonnets in order, with roman numerals before each one</strong>.</li>
+           <li>Then open &lt;oXygen/&gt;, and open the file you saved.</li>
+          <li>Delete the lengthy Project Gutenberg publishing information from the beginning and end of the sonnets file, so that what you’re left with is <strong>just the sonnets in order, with roman numerals before each one</strong>.</li>
            </ul>
-       <p>If you find it easier to work with a small amount of text, you can make yourself a
-           document that contains just a few sonnets and use that during development. Once you
-           think you’re getting the results you want, you can then try applying the same strategy
-           to the entire file. The structure of this document is very regular, so whatever works
-           for a handful of sonnets should work for all of them.</p>
+       <h3>Prepare a <q>Step File</q></h3>
+       <ul>
+               <li>Next, open a <strong>new, separate text file</strong>, in which you will record each step you take in up-converting this document to XML. This needs to be a plain text (<code>*.txt</code>) or markdown (<code>*.md</code>) file and not something you write in a word processor (<em>not</em> a Microsoft Word document) so you do not have to struggle with autocorrections of the regex patterns you are recording.</li>
+           <li>Save this file as your main homework submission for this assignment, following our <a href="http://dh.newtfire.org/explainFileNames.html">standard homework file naming conventions</a> for upload to Courseweb. We will duplicate the steps you record to make sure they work to up-convert the text file to XML.
+               <span class="smaller"><strong>Suggestions:</strong> You can open a new plain text file in &lt;oXygen/&gt; by going to open a New document (the folded piece of paper icon) and typing in "text" in the search bar. <strong>On Windows</strong>, you can find and open Notepad and record your steps in plain text form here outside of oXygen, which may be convenient, so you don’t accidentally try your find-and-replace operations on your step file instead of the main text. <strong>On Mac</strong>, you might try TextEdit, or stick with &lt;oXygen/&gt; and open your window in Tile View as we did with your Relax NG Schema files.</span>
+               </li>
+       </ul>
        <h3>The task</h3>
-       <p>Your goal is to produce an XML version of this file by using the search-and-replace
-           techniques we discussed in class, <strong>and</strong> a plain text file that documents your step-by-step method, suitable for sharing with others. <span class="smaller">(You may, in a real-life project situation, need to share the steps you take in up-converting plain text documents to XML, and share that on your GitHub repo in GitHub’s markdown (the same that we write on the GitHub Issues board), and in that case you would save the file with a <code>.md</code> extension, like <a href="https://github.com/ebeshero/DHClass-Hub/blob/master/Class-Examples/regex/JohannForster-IntroToUpconversion/JohannForster_Upconversion.md">the instructions files we pushed into Class Examples for Regex_upConversion on the DHClass-Hub</a>).</span></p>
+       <p>Your goal is to produce an XML version of the Shakespeare Sonnets file by using the search-and-replace techniques we discussed in class, <strong>and</strong> record each step you take in a plain text or markdown file so others can reproduce exactly what you did. <span class="smaller">(You may, in a real-life project situation, need to share the steps you take in up-converting plain text documents to XML, and share that on your GitHub repo in GitHub’s markdown (the same that we write on the GitHub Issues board), and in that case you would save the file with a <code>.md</code> extension, like <a href="https://github.com/ebeshero/DHClass-Hub/blob/master/Class-Examples/regex/JohannForster-IntroToUpconversion/JohannForster_Upconversion.md">the instructions files we pushed into Class Examples for Regex_upConversion on the DHClass-Hub</a>).</span></p>
        
        <p>Your up-converted XML output should look something like <a
                href="http://dh.obdurodon.org/shakespeare-sonnets.xml">http://dh.obdurodon.org/shakespeare-sonnets.xml</a>.
            That is, each sonnet should be its own element, each line should be tagged separately,
            and the roman numerals should be encoded in a useful way (we’ve used attributes, but you
            could also put them in a child element).</p>
-       <p>Your <q>Steps file</q> needs to be detailed enough to indicate each step of your process: what regular expression patterns you attempted to find, and what expressions you used to replace them. You might record the number finds you get and even how you fine-tuned your steps when you were not finding everything you wanted to at first. <strong>Note:</strong> we strongly recommend copying and pasting your find and replace expressions into your Steps file instead of retyping them (since it is easy to introduce errors that way).</p>
+       <p>Your <q>Steps file</q> needs to be detailed enough to indicate each step of your process: what regular expression patterns you attempted to find, and what expressions you used to replace them. You might record the number finds you get and even how you fine-tuned your steps when you were not finding everything you wanted to at first. <strong>Note:</strong> we strongly recommend <strong>copying and pasting your find and replace expressions</strong> into your Steps file instead of retyping them (since it is easy to introduce errors that way).</p>
        <h3>How to proceed</h3>
-       <p>There are several ways to get to the target output, but here is how we might approach the
-           task:</p>
-       <h4>Reserved characters</h4>
-       <p>The plain text file could, at least in principle, contain characters that have special
-           meaning in XML: the ampersand and the angle brackets. You need to search for those and
-           replace them with their corresponding XML entities; if you don’t remember the entity
-           strings, you can look them up in the <q>Special Reserved Characters in XML</q>
-           section of <a href="explainXML.html"
-               >explainXML.html</a>. Note that you need to process them
-           in the correct order. What is that order, and why is it important?</p>
-       <h4>Title and author</h4>
-       <p>The title and author at the top are going to have to be tagged manually. You can either
-           remove them now and then paste them back in later, after you’ve tagged the sonnets, or
-           you can leave them in place and fix them up at the end. You’ll use global
-           find-and-replace to tag the sonnets, and if you leave the title and author in place
-           while you do that, you’ll wind up tagging them incorrectly. That isn’t a problem as long
-           as you remember to fix them manually at the end.</p>
+       <p>There are several ways to get to the target output, but the starting points are standard:</p>
+       <h4>Starting work:</h4>
+       <p>First of all, for any up-conversion of plain text, you must check for the special reserve characters: the ampersand <code>&amp;</code> and the angle brackets <code>&lt;</code> and <code>&gt;</code>. You need to search for those and, if they turn up,
+           replace them with their corresponding XML entities, so that these will not interfere with well-formed XML markup.</p>
+       <table>
+           <tr><th>Search for:</th><th>Replace with:</th></tr>
+           <tr><td><code>&amp;</code></td><td><code>&amp;amp;</code></td></tr>
+           <tr><td><code>&lt;</code></td><td><code>&amp;lt;</code></td></tr>
+           <tr><td><code>&gt;</code></td><td><code>&amp;gt;</code></td></tr>
+       </table>
+ 
+       <p>Note that you need to process the special XML reserve characters in the correct order. Why is it important that you search and replace the <code>&amp;</code> first?</p>
+       <p>Don’t worry about the title and author at the top of the file just yet. You will eventually tag them by hand, and we recommend just doing that at the end of the up-conversion process. You’ll be using &lt;oXygen/&gt;’s global Find-and-Replace tool to tag the sonnets, and if you leave the title and author in place while you do that, you’ll wind up tagging them incorrectly. That isn’t a problem as long
+           as you remember to fix them manually at the end. Or you could remove them now to another file to paste them back in at the end of the regex autotagging process.</p>
        <p>To perform regex searching, you need to check the box labeled <q>Regular expression</q>
            at the bottom of the &lt;oXygen/&gt; find-and-replace dialog box, which you open with
            Control-f (Windows) or Command-f (Mac). If you don’t check this box, &lt;oXygen/&gt;
@@ -101,28 +94,20 @@
            <em>only at the beginning of line</em>. You can use this information to match one or
            more space characters at the beginning of a line and replace them with nothing, that is,
            delete them.</p>
-       <p>We aren’t going to use the blank lines in this approach, so you can delete those if you’d
-           like, or you can leave them in place to enhance the legibility. To delete them, you need
-           to match a blank line, and the easiest way to do that is to match two new line
-           characters in a row and replace them with a single new line character. The regex for a
-           new line character is <code>\n</code>. Try it.</p>
-       <h4>Inside out or outside in</h4>
-       <p>We can create our markup either from the outside in (document, then sonnet, then divide
-           the sonnet into Roman numeral and lines) or from the inside out (lines and Roman
+       <p>We can always choose whether to work with blank lines or not. For our purposes in this exercise, we do not need them, so you can delete them if you’d like, or you can leave them in place to enhance the legibility. To delete them, you need to match a blank line, and the easiest way to do that is to match two new line characters in a row and replace them with a single new line character. The regex for a new line character is <code>\n</code>. Try it.</p>
+       <h4>Inside out or outside in?</h4>
+       <p>We can create our markup either from the <em>outside in</em> (document, then sonnet, then divide
+           the sonnet into Roman numeral and lines) or from the <em>inside out</em> (lines and Roman
            numeral, then wrap those in a sonnet, then wrap all of the sonnets in a document).
            Either strategy can be made to work, but we generally find it easier to work from the
-           inside out because when we work from outside in, it’s easy to wind up incorrectly
+           inside out. (When we work from outside in, it’s easy to wind up incorrectly
            wrapping <code>&lt;line&gt;</code> tags around the <code>&lt;sonnet&gt;</code> start and
-           end tags, etc.</p>
+           end tags, etc.)</p>
        <h4>Lines</h4>
        <p>We’ll start by tagging every line as a <code>&lt;line&gt;</code>. This will erroneously
-           tag the Roman numerals as if they were lines of poetry, which they aren’t, but it’s
-           easier to let the first find-and-replace overgeneralize and then go back and retag the
-           Roman numerals than to try to write a more constrained regex that won’t overgeneralize.
-           We don’t want to tag blank lines (if we left them in), though, so we need a regex that
-           matches only lines that have characters in them. Remember where we told you above to
-           make sure that <q>Dot matches all</q> was unchecked? Normally the dot (<code>.</code>)
-           matches any character except a new line, which means that we can use the plus sign
+           tag the Roman numerals as if they were lines of poetry, which they aren’t, but since we're using the <em>inside-out</em> method, we are just planning to correct those Roman numeral lines later.</p>
+       <p>We don’t want to tag any blank lines (if we left them in), though, so we need a regex that
+           matches only lines that have characters in them. Check your &lt;oXygen/&gt; Find / Replace setup: make sure that <q>Dot matches all</q> is <strong>unchecked</strong>! In this mode only, the dot (<code>.</code>) matches any character except a new line, which means that we can use the plus sign
            repetition indicator to match one or more instances of any character except a new line
            (that is, <code>.+</code>). By default regex selects the longest possible match, so even
            though just two characters on a line will match the pattern, when we run it it will
@@ -131,7 +116,7 @@
            continue the same match. Try it and examine the results. Now check <q>Dot matches
                all</q>, run Find all, and look at those results. Notice that the match no longer
            stops at the end of the line, and since you want to tag each line individually, you need
-           to uncheck that box to revert to the normal, default behavior.</p>
+           to uncheck that box to revert to the normal, default behavior. </p>
        <p>A human might think of our task as <q>wrap every line in <code>&lt;line&gt;</code>
            tags</q>, but regex has a find-and-replace view of the world, so a regex way to
            think about it would be <q>match every line, delete it, and replace it with itself
@@ -158,7 +143,7 @@
            sequences that aren’t Roman numerals, like <q>XVX</q>, but those don’t occur, so we
            don’t have to worry about them. This illustrates a useful strategy: a simple regex that
            overgeneralizes vacuously may be more useful than a complex one that avoids matching
-           things that won’t occur anyway. You can use the character class (wrapped in square
+           things that won’t occur anyway. You can use the <strong>character class</strong> (wrapped in square
            brackets) followed by a plus sign (meaning one or more) to complete your regex so that
            it matches only <code>&lt;line&gt;</code> elements that contain a Roman numeral and
            nothing but a Roman numeral. Try it.</p>
