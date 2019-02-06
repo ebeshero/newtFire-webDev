@@ -289,11 +289,13 @@
          <li><b>Links:</b> Use the “anchor” element <span class="code">&lt;a&gt;</span> to wrap text
             to make a clickable link, and define the target of the link with the <span class="code"
                >@href</span> attribute, like this (code view followed by browser display):<br /><br />
-            <div class="code"> &lt;p&gt;Here’s some text inside a paragraph with a &lt;a
-               href="http://www.pitt.edu/~ebb8/DHDS/"&gt;clickable link to our course
+            <div class="code"> &lt;p&gt;Here’s some text inside a paragraph with an &lt;a
+               href="http://greensburg.pitt.edu"&gt;absolute link to Pitt-Greensburg’s
                homepage&lt;/a&gt;. And then some more text.&lt;/p&gt; </div>
-            <p>Here’s some text inside a paragraph with a <a href="http://www.pitt.edu/~ebb8/DHDS/"
-                  >clickable link to our course homepage</a>. And then some more text. </p>
+            <p>Here’s some text inside a paragraph with a <a href="index.html"
+                  >relative link to our course homepage</a>. And then some more text. </p>
+            <p>An <dfn>absolute</dfn> link is a full website URL (or website address starting with the  <code>http://</code> prefix). Use this kind of link when you are pointing to a webpage or web file hosted  <em>outside</em> your own site. </p>
+            <p>A <dfn>relative</dfn> link is for pages or files in your own web directory space, and is a simple filepath mapped from the current file to the new file. To link to a file in the same directory, the link just needs to target the filename (with its extension) directly. To link to a file accessed in a directory above the current file, use <code>../</code> to climb up. </p>
          </li>
 
          <li><b>Images:</b>
@@ -329,7 +331,7 @@
             shortly</a>. Here are the generic elements that we frequently use: </p>
       <ul>
 
-         <li><span class="code">&lt;div&gt;</span>: The div element lets you wrap a portion of your
+         <li><span class="code">&lt;div&gt;</span>: The <code>div</code> element lets you wrap a portion of your
             page in a block-level division, perhaps to style in a particular way or locate in a
             particular space on your page. We’ve used <span class="code">div</span> elements all
             over this page to organize it visually. We typically use an <span class="code"
@@ -356,8 +358,7 @@
          to on remote locations on the World Wide Web will not load if you are not online).
          Typically we create web pages to have a public-facing presence on the World Wide Web, or at
          least to have a community presence on an intranet (shared within a firewall while a site is
-         under development). To make our pages available to others to access requires uploading them
-         to a web server using <strong>F</strong>ile <strong>T</strong>ransfer
+         under development). To make our pages available to others to access requires uploading all the files involved to a web server using <strong>F</strong>ile <strong>T</strong>ransfer
          <strong>P</strong>rotocol (FTP), a standard rule system for exchanging files between
          computers over a network. Various security measures have been developed to guard web
          servers from invasive hacking attacks, so that many web servers require
@@ -368,7 +369,7 @@
          more frequently people tend to use one of several freely available SFTP software clients
          with a GUI (Graphical User Interface) that stores your site connection information and, on
          connection, shows the files in your computer and the files on the remote server, making it
-         easy to upload and download. (We’ve posted information on <a href="CDASyll.html">a few good
+         easy to upload and download. (We’ve posted information on <a href="CDVSyll.html">a few good
             SFTP clients </a>on our course syllabus.) When HTML pages are uploaded on a web server,
          they are given a specific <strong>URL</strong>, or <strong>U</strong>niform
             <strong>R</strong>esource <strong>L</strong>ocator, otherwise known as a website
@@ -394,6 +395,7 @@
             >Pitt’s posted instructions</a>. Enrolled students in our course will post files to <a
             href="http://newtfire.org/">our newtFire server</a> for HTML related homework exercises and for
          course project website development, and we provide information to you privately on how to access your assigned web space.</p>
+      <p>You want to be mindful of your file management in your server space, and we recommend taking care to choose simple and easily understandable file names. Keep the names short and simple. Do not use your last names in your filenames for anything you post on a web server (this is not like posting to Courseweb and our ordinary homework submission rules do not apply here). Consider setting up special directories for different kinds of files as you build your websites in order to make everything you need easy to locate later. Mirror your file directories on your associated GitHub repositories, so that anything you post to the web server is also saved in the same file directory structure (and backed up) on your GitHub repository should our server go down or should you choose to transfer your files to a new server someday. We recommend following the guidelines on <a href="http://dh.obdurodon.org/project-structure.xhtml">Obdurodon’s Project directory and file structure tutorial</a> for sustainably organizing and managing your web space.</p>
       <h3>Setting up XSLT to Make HTML</h3>
       <p>When you learn to write XSLT to transform XML into HTML, you will need to configure some settings and create a template rule that matches on the document node. The stylesheet should start out something like this:</p>
       <pre>
