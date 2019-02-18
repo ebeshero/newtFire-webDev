@@ -56,7 +56,7 @@
          				files. Before you can write these transformations, you need to learn XPath. 
       </p>
       		</section>	
-   <section>   <h3 id="node">XML is Made of Nodes</h3>
+   <section>   <h3 id="node">XML is made of nodes</h3>
       			
       <p>Think of our nested boxes in XML as made of <b>nodes</b>. A <b>node</b> is a position
          				on the XML tree, and can be one of seven kinds:
@@ -134,8 +134,7 @@
          					<b>current context node</b> (or the current position designated in the XML
          				file). Basically, when you designate an axis in an XPath expression, you’re
          				indicating the direction you want your path expression to go: Do you want it to
-         look
-         					<b>up</b> to a parent or ancestor? Or <b>down</b> to a child or descendent? 
+         look <em>up</em> to a parent or ancestor? Or <em>down</em> to a child or descendent? 
       </p>
       			
       <table>
@@ -164,7 +163,7 @@
             					
             <td><span class="code">child::</span> or <span class="code">/</span></td>
             					
-            <td>The child axis <b>(which is the default)</b> sends you down to the immediate
+            <td>The child axis <strong>(which is the default)</strong> sends you down to the immediate
                						child of the context node.
             </td>
             				
@@ -174,7 +173,7 @@
             					
             <td><span class="code">descendant::</span> or <span class="code">//</span></td>
             					
-            <td>The descendent axis sends you down to the children and their children, and
+            <td>The descendant axis sends you down to the children and their children, and
                						their children’s children, etc. 
             </td>
             				
@@ -184,7 +183,7 @@
             					
             <td><span class="code">preceding-sibling::</span></td>
             					
-            <td>The preceding-sibling axis sends you to the “left” to the siblings that come
+            <td>The preceding-sibling axis sends you to the <q>left</q> to the sequence of siblings that come
                						before the context node (the big brothers and sisters, or earliest children
                						of a parent).
             </td>
@@ -195,7 +194,7 @@
             					
             <td><span class="code">following-sibling::</span></td>
             					
-            <td>The following-sibling axis sends you to the “right” to the siblings that
+            <td>The following-sibling axis sends you to the <q>right</q> to the sequence of siblings that
                						come after the context node (the little brothers and sisters, or younger
                						children of a parent.
             </td>
@@ -203,18 +202,18 @@
          </tr>
       	<tr>
       		<td><span class="code">preceding::</span></td>
-      		<td>The preceding:: axis sends you on a longer path than the preceding::sibling axis, as it looks for <em>any</em> nodes that precede the current context node in the document order, which includes the preceding siblings as well as the preceding nodes that are not siblings. We commonly use this axis (or its mirror-image, the following:: axis) when we are looking for preceding instances of a particular element that are not siblings, but nested inside nodes that appear earlier in a document, like looking for all the preceding paragraphs, or lines of a poem when these are nested inside earlier div elements or earlier line-groups. If you think about this axis in terms of the nodes on the XML tree, ancestors of an element are NOT on the preceding axis, even though they begin before the current context! That is because the ancestor node <em>is still open around the current context node</em> while you are invoking it. The ancestor of the current context doesn't precede it because it is currently containing it.</td>
+      		<td>The <code>preceding::</code> axis sends you on a longer path than the <code>preceding::sibling</code> axis, as it looks for <em>any</em> nodes that precede the current context node in the document order, which includes the preceding siblings as well as the preceding nodes that are not siblings. We commonly use this axis (or its mirror-image, the <code>following::</code> axis) when we are looking for preceding instances of a particular element that are not siblings, but nested inside nodes that appear earlier in a document, like looking for all the preceding paragraphs, or lines of a poem when these are nested inside earlier div elements or earlier line-groups. If you think about this axis in terms of the nodes on the XML tree, ancestors of an element are NOT on the preceding axis, even though they begin before the current context! That is because the ancestor node <em>is still open around the current context node</em> while you are invoking it. The ancestor of the current context doesn't precede it because it is currently containing it.</td>
       	</tr>
       	<tr>
       		<td><span class="code">following::</span></td>
-      		<td>The following:: axis is the mirror-image of the preceding::axis, so the following:: axis sends you to all the nodes that follow the current context in the document order, which includes the following sibilings as well as the following nodes that are not siblings.</td>
+      		<td>The <code>following::</code> axis is the mirror-image of the <code>preceding::</code> axis, so the <code>following::</code> axis sends you to all the nodes that follow the current context in the document order, which includes the following sibilings as well as the following nodes that are not siblings.</td>
       	</tr>
          				
          <tr>
             					
             <td><span class="code">self::</span> or <span class="code">.</span></td>
             					
-            <td>There’s actually a “self” axis designating the current context node. </td>
+            <td>There’s a <q>self</q> axis designating the current context node, which is useful sometimes when need to indicate the current location in a path.</td>
             				
          </tr>
          				
@@ -250,11 +249,10 @@
          				your context node?) and taking a step along an axis direction. 
       </p>
       			
-      <p>When we start writing XPath expressions, we usually begin from the root or “document
-         				node” at the top of the tree, and many of our path expressions will begin with
+      <p>When we start writing XPath expressions, we usually begin from the root or <dfn>document node</dfn> at the top of the tree, and many of our path expressions will begin with
          a
          				double slash: <span class="code">//</span>, which is shorthand for the descendant
-         				axis: If we *start* our XPath expression with the double slash, we indicate we’re
+         				axis: If we <em>start</em> our XPath expression with the double slash, we indicate we’re
          				beginning at the top-level document node and working our way down: 
       </p>
       			
@@ -262,9 +260,8 @@
       			
       <p>This expression means, <b>start at the beginning node of the document</b> and <b>look
             					for the body element anywhere below</b>. Next, switch to the child axis, and
-         					<b>take one step to find the immediate children of body--the div elements</b>
-         				(however many there are). Then find <b>all p elements</b> that are the <b>immediate
-            					children of all the div</b> elements.
+         					<b>take one step to find the immediate children of body–the sequence of <code>div</code> elements</b> (however many there are). Then find <b>all p elements</b> that are the <b>immediate
+            					children of all the div</b> elements. If there are not any child <code>p</code> elements, we will not see an error message from XPath. We will just return a sequence of zero. 
       </p>
       			
       <p>What if we want to return all the elements at a particular level, regardless of what
