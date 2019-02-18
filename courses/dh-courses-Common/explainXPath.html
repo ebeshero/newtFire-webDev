@@ -59,26 +59,27 @@
    <section>   <h3 id="node">XML is Made of Nodes</h3>
       			
       <p>Think of our nested boxes in XML as made of <b>nodes</b>. A <b>node</b> is a position
-         				on the XML tree, and can be one of three things:
+         				on the XML tree, and can be one of seven kinds:
       </p>
       			
       <ol>
+         <li>the <dfn>document node</dfn>: <code>document('URL')</code></li>				
+         <li>the <dfn>element node</dfn>: <code>element()</code>. Remember, this contains the start and end tags and everything inside: from <code>&lt;element&gt; . .
+               						.contents . .&lt;/element&gt; .</code></li>
          				
-         <li>an element (or the <b>element node</b>), which, remember, contains the start and
-            					end tags and everything inside: from <span class="code">&lt;element&gt; . .
-               						.contents . .&lt;/element&gt; .</span></li>
-         				
-         <li>an attribute (or the <b>attribute node</b>, which contains attributes and their
-            					values inside tags, as in <span class="code">@item="beads"</span> in the element
+         <li>the <dfn>attribute node</dfn>: <code>attribute()</code>. This contains an attribute name and its value, as in <span class="code">item="beads"</span> in the element
             						<span class="code">&lt;trade item="beads"&gt;</span>. <br /> (Note, we’ll
             					use the <span class="code">@</span> symbol to indicate an attribute value from
             					now on.)
          </li>
          				
-         <li>plain text (or the <b>text node</b>), which is only the text content within an
+         <li>the <dfn>text node</dfn>: <code>text()</code> which is the text content within an
             					element. (We locate the text node in cases when we want to strip out elements
-            					and preserve only the text.)
+            					and preserve only the text. This is not to be confused with the <code>string()</code> function which reaches deep into all nested elements to retrieve their text nodes.)
          </li>
+         <li>the <dfn>comment node</dfn>: <code>comment()</code> to retrieve XML comments</li>
+         <li>the <dfn>namespace node</dfn>: <code>namespace()</code> to retrieve only XML code in a specified namespace when these are mixed in a document containing, say, both HTML and KML.</li>
+         <li>the <dfn>processing-instruction node</dfn>: <code>processing-instruction()</code>. This contains special processing code with syntax that starts with <code>&lt;?</code> and ends with <code>&gt;</code></li>
          			
       </ol>
       			
