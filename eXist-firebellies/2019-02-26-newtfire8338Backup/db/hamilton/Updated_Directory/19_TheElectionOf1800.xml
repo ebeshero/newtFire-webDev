@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "The Election of 1800"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>The Election of 1800</title>
+            </head>
+            <div type="song">
+
+                <sp who="#company">
+                    <speaker>FULL COMPANY</speaker>
+                    <l>The election of <date>1800</date></l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Can we get back to politics?</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Please?</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Yo. Ev'ry action has an equal, opposite reaction</l>
+                    <l><seg type="#fact"><persName ref="#jAdams">John Adams</persName> shat the bed. I love the guy,
+                        but he's in traction</seg></l>
+                    <l>Poor <persName ref="#hamilton">Alexander Hamilton</persName>? He is missing
+                        in action</l>
+                    <l>So now I'm facing</l>
+                </sp>
+
+                <sp who="#jefferson #madison">
+                    <speaker>JEFFERSON AND MADISON</speaker>
+                    <l><persName ref="#burr">Aaron Burr</persName>!</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>With his own faction</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>He's very attractive in the <placeName>North</placeName>. New Yorkers like his
+                        chances</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>He's not very forthcoming on any particular stances</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Ask him a question: it glances off, he obfuscates, he dances</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>And they say I'm a Francophile: at least they know I know where
+                            <placeName>France</placeName> is!</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l><persName ref="#jefferson">Thomas</persName> thats the problem, see, they see
+                            <persName ref="#burr">Burr</persName> as a less extreme you</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Ha!</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>You need to change course, a key endorsement might redeem you</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Who did you have in mind?</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Don't laugh</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Who is it?</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>You used to work on the same staff</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Whaaaat</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>It might be nice, it might be nice</l>
+                    <l>To get <persName ref="#hamilton">Hamilton</persName> on your side</l>
+                </sp>
+
+                <sp who="#jefferson #madison">
+                    <speaker>JEFFERSON AND MADISON</speaker>
+                    <l>It might be nice, it might be nice</l>
+                    <l>To get <persName ref="#hamilton">Hamilton</persName> on your side</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#burr">
+                        <speaker>BURR</speaker>
+                        <l>Talk less!</l>
+                        <l>Smile more!</l>
+                        <l>Dont let 'em know what you're against or what you're for!</l>
+                        <l>Shake hands with him!</l>
+                        <l>Charm her!</l>
+                        <l>Its eighteen hundred, ladies, tell your husbands: vote for</l>
+                        <l><persName ref="#burr">Burr</persName>!</l>
+                    </sp>
+
+                    <sp who="#ensemble">
+                        <speaker>ENSEMBLE</speaker>
+                        <l><persName ref="#burr">Burr</persName>!</l>
+                        <l><persName ref="#burr">Burr</persName>!</l>
+                        <l><persName ref="#burr">Burr</persName>!</l>
+                        <l><persName ref="#burr">Burr</persName>!</l>
+                        <l><persName ref="#burr">Burr</persName>!</l>
+                        <l><persName ref="#burr">Burr</persName>!</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#men">
+                    <speaker>MALE VOTER</speaker>
+                    <l>I dont like <persName ref="#jAdams">Adams</persName></l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>FEMALE VOTER</speaker>
+                    <l>Well, he's gonna lose, that's just defeatist</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>ANOTHER MALE VOTER</speaker>
+                    <l>And <persName ref="#jefferson">Jefferson</persName></l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>TWO MEN</speaker>
+                    <l>In love with <placeName>France</placeName>!</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>ANOTHER FEMALE VOTER</speaker>
+                    <l>Yeah, he's so elitist!</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>TWO WOMEN</speaker>
+                    <l>I like that <persName ref="#burr">Aaron Burr</persName>!</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>A WOMAN</speaker>
+                    <l>I can't believe were here with him!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>A MAN</speaker>
+                    <l>He seems approachable?</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>ANOTHER MALE VOTER</speaker>
+                    <l>Like you could grab a beer with him!</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Dear <persName ref="#hamilton">Mr. Hamilton</persName>: your fellow
+                        Fedralists would like to know how you'll be voting</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>It's quiet uptown</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Dear <persName ref="#hamilton">Mr. Hamilton</persName>: <persName ref="#jAdams">John Adams</persName> doesn't stand a chance, so who are
+                        you promoting?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>It's quiet uptown</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#men">
+                        <speaker>MEN</speaker>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>We know its lose-lose</l>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>But if you had to choose</l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>We know its lose-lose</l>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>But if you had to choose</l>
+                    </sp>
+
+                </spGrp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#ensemble">
+                        <speaker>ENSEMBLE</speaker>
+                        <l>Dear <persName ref="#hamilton">Mr. Hamilton</persName>:</l>
+                        <l><persName ref="#jAdams">John Adams</persName> doesn't stand a chance so
+                            who are you promoting?</l>
+                        <l>But if you had to choose </l>
+                    </sp>
+
+                    <sp who="#men">
+                        <speaker>MEN</speaker>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>We know its lose-lose</l>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>But if you had to choose </l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>We know its lose-lose</l>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>But if you had to choose</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Well, if it isn't <persName ref="#burr">Aaron Burr</persName>. Sir!</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName>!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>You've created quite a stir, sir!</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I'm going door to door!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact">You're openly campaigning?</seg></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Sure!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>That's new</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Honestly, it's kind of draining</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#burr">Burr</persName></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Sir!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Is there anything you wouldn't do?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>No. Im chasing what I want</l>
+                    <l>And you know what?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I learned that from you</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>If you had to choose</l>
+                    <l>If you had to choose</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>It's a tie!</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>If you had to choose</l>
+                    <l>If you had to choose</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>It's up to the delegates!</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>If you had to choose</l>
+                    <l>If you had to choose</l>
+                </sp>
+
+                <sp who="#jefferson #madison">
+                    <speaker>JEFFERSON/MADISON</speaker>
+                    <l><seg type="#fiction">It's up to <persName ref="#hamilton">Hamilton</persName>!</seg></l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#ensemble">
+                        <speaker>ENSEMBLE</speaker>
+                        <l>If you had to choose</l>
+                        <l>If you had to choose</l>
+                        <l>If you had to</l>
+                        <l>Choose</l>
+                        <l>Choose</l>
+                        <l>Choose!</l>
+                    </sp>
+
+                    <sp who="#madison #ensemble">
+                        <speaker>MADISON/ENSEMBLE</speaker>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>Choose</l>
+                        <l>Choose</l>
+                        <l>Choose!</l>
+                    </sp>
+
+                    <sp who="#ensemble">
+                        <speaker>ENSEMBLE</speaker>
+                        <l><persName ref="#jefferson">Jefferson</persName> or <persName ref="#burr">Burr</persName>?</l>
+                        <l>Choose</l>
+                        <l>Choose</l>
+                        <l>Choose!</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Yo</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Oh!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>The people are asking to hear my voice</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Oh!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>For the country is facing a difficult choice</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Oh!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>And if you were to ask me who I'd promote-</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Oh!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact"><persName ref="#jefferson">-Jefferson</persName> has my vote</seg></l>
+                </sp>
+
+                <sp who="#jefferson #madison #ensemble">
+                    <speaker>JEFFERSON/MADISON/ENSEMBLE</speaker>
+                    <l>Oh!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I have never agreed with <persName ref="#jefferson">Jefferson</persName>
+                        once</l>
+                </sp>
+
+                <sp who="#jefferson #madison #ensemble">
+                    <speaker>JEFFERSON/MADISON/ENSEMBLE</speaker>
+                    <l>Oh!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>We have fought on like seventy-five diffrent fronts</l>
+                </sp>
+
+                <sp who="#jefferson #madison #ensemble">
+                    <speaker>JEFFERSON/MADISON/ENSEMBLE</speaker>
+                    <l>Oh!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>But when all is said and all is done</l>
+                    <l><persName ref="#jefferson">Jefferson</persName> has beliefs. <persName ref="#burr">Burr</persName> has none</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Oooooooooooooh</l>
+                </sp>
+
+                <sp who="#madison #jefferson">
+                    <speaker>MADISON AND JEFFERSON</speaker>
+                    <l>Well, I'll be damned</l>
+                    <l>Well, I'll be damned</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l><persName ref="#hamilton">Hamilton's</persName> on your side</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Well, I'll be damned</l>
+                    <l>Well, I'll be damned</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>And?</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>You won in a landslide</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Congrats on a race well-run</l>
+                    <l>I did give you a fight</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Uh-huh</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I look forward to our partnership</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Our partnership?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>As your vice-President</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Ha. Yeah, right</l>
+                    <l>You hear this guy? Man openly campaigns against me, talkin' 'bout, I look
+                        forward to our partnership.</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>It's crazy that the guy who comes in second gets to be Vice President</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l><seg type="#fact">Yeah, you know what? We can change that.</seg> You know why?</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Why?</l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>'Cuz I'm the President. Hey, <persName ref="#burr">Burr</persName>, when you
+                        see <persName ref="#hamilton">Hamilton</persName>, thank him for the
+                        endorsement</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>The Election of 1800</head><event xml:id="event75" when="1800-10-31"> <label>The Election of 1800</label><desc>The election of 1800 was held from October 31, 1800 to December 12, 1800. It was primarily between John Adams and Thomas Jefferson, but Aaron Burr (Jefferson's running mate) received the same amount of electoral votes as Jefferson. Thomas Jefferson won the election and became president due to the decision of the old Federalist Congress and Alexander Hamilton.</desc></event>
+                <event xml:id="event76" when="1800-03-04"><label>Thomas Jefferson Becomes President of the United State</label><desc>On March 4, 1801, Thomas Jefferson becomes the third preisdent of the United States with Aaron Burr (and later, George Clinton) as his vice president.</desc></event>
+            </listEvent>
+        </back>
+    </text>
+</TEI>

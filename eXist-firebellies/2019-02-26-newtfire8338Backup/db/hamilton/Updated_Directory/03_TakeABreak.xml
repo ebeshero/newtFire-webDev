@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Take a Break"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Take A Break</title>
+            </head>
+            <div type="song">
+
+                <spGrp type="simultaneous">
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>Un deux trois quatre</l>
+                        <l>Cinq six sept huit neuf</l>
+
+                        <l>Good! Un deux trois quatre</l>
+                        <l>Cinq six sept huit neuf</l>
+
+                        <l>Sept huit neuf</l>
+
+                        <l>Sept huit neuf</l>
+                    </sp>
+
+                    <sp who="#philipH">
+                        <speaker>PHILIP</speaker>
+                        <l>Un deux trois quatre</l>
+                        <l>Cinq six sept huit neuf</l>
+
+                        <l>Un deux trois quatre</l>
+                        <l>Cinq six sept huit neuf</l>
+
+                        <l>Sept huit neuf</l>
+
+                        <l>Sept huit neuf</l>
+                    </sp>
+
+                    <sp who="#eliza #philipH">
+                        <speaker>ELIZA AND PHILIP</speaker>
+                        <l>One two three four five six seven eight nine!</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>My dearest, <persName ref="#angelica">Angelica</persName></l>
+                    <l>"Tomorrow and tomorrow and tomorrow</l>
+                    <l>Creeps in this petty pace from day to day"</l>
+                    <l>I trust you'll understand the reference to</l>
+                    <l>Another Scottish tragedy without my having to name the play</l>
+                    <l>They think me Macbeth, and ambition is my folly</l>
+                    <l>I'm a polymath, a pain in the ass, a massive pain</l>
+                    <l><persName ref="#madison">Madison</persName> is Banquo, <persName ref="#jefferson">Jefferson's</persName> Macduff</l>
+                    <l>And Birnam Wood is Congress on its way to Dunsinane</l>
+                </sp>
+
+
+                <sp who="#hamilton #angelica">
+                    <speaker>HAMILTON/ANGELICA</speaker>
+                    <l>And there you are, an ocean away</l>
+                    <l>Do you have to live an ocean away?</l>
+                    <l>Thoughts of you subside</l>
+                    <l>Then I get another letter</l>
+                    <l>I cannot put the notion away</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Take a break</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I am on my way</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>There's a little surprise before supper</l>
+                    <l><phr type="#wait">And it cannot wait</phr></l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I'll be there in just a minute, save my plate</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName></l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Okay, okay</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Your son is nine years old today</l>
+                    <l>And he has something that he'd like to say</l>
+                    <l>He's been practicing all day</l>
+                    <l><persName ref="#philipH">Philip</persName>, take it away</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#philipH">
+                        <speaker>PHILIP</speaker>
+                        <l>Daddy, daddy, look</l>
+                        <l>My name is <persName ref="#philipH">Philip</persName></l>
+                        <l>I am a poet</l>
+                        <l>I wrote this poem just</l>
+                        <l>To show it</l>
+                        <l>And I just turned nine</l>
+                        <l>You can write rhymes</l>
+                        <l>But you can't write mine</l>
+
+
+                        <l>I practice French</l>
+                        <l>And play piano with my mother</l>
+
+
+                        <l><seg type="#fiction">I have a sister, but I want a little brother</seg></l>
+
+
+                        <l>My daddy's trying to start <placeName>America's</placeName> bank</l>
+                        <l>Un deux trois quatre cinq!</l>
+                    </sp>
+
+                    <sp who="#hamilton">
+                        <speaker>HAMILTON</speaker>
+                        <l>What!</l>
+
+
+                        <l>Uh-huh!</l>
+
+
+                        <l>Okay!</l>
+
+
+                        <l>Bravo!</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Take a break</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Hey, our kid is pretty great</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Run away with us for the summer</l>
+                    <l>Let's go upstate</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#eliza">Eliza</persName>, I've got so much on my plate</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>We can all go stay with my father</l>
+                    <l>There's a lake I know</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I know</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>In a nearby park</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I'd love to go</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>You and I can go when the night gets dark</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I will try to get away</l>
+                </sp>
+
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>My dearest <persName ref="#hamilton">Alexander</persName></l>
+                    <l>You must get through to <persName ref="#jefferson">Jefferson</persName></l>
+                    <l>Sit down with him and compromise</l>
+                    <l>Don't stop 'til you agree</l>
+                    <l>Your fav'rite older sister</l>
+                    <l><persName ref="#angelica">Angelica</persName>, reminds you</l>
+                    <l>There's someone in your corner all the way across the sea</l>
+                    <l>In a letter I received from you two weeks ago</l>
+                    <l><seg type="#ambiguous">I noticed a comma in the middle of a phrase</seg></l>
+                    <l>It changed the meaning. Did you intend this?</l>
+                    <l>One stroke and you've consumed my waking days</l>
+                    <l>It says:</l>
+                </sp>
+
+                <sp who="#hamilton #angelica">
+                    <speaker>HAMILTON/ANGELICA</speaker>
+                    <l>"My dearest <persName ref="#angelica">Angelica</persName>"</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>With a comma after "dearest". You've written</l>
+                </sp>
+
+
+                <sp who="#hamilton #angelica">
+                    <speaker>HAMILTON AND ANGELICA</speaker>
+                    <l>"My dearest, <persName ref="#angelica">Angelica</persName>."</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Anyway, all this to say</l>
+                    <l>I'm coming home this summer</l>
+                    <l>At my sister's invitation</l>
+                    <l>I'll be there with your fam’ly</l>
+                    <l>If you make your way upstate</l>
+                    <l>I know you're very busy</l>
+                    <l>I know your works important</l>
+                    <l><seg type="#fact">But I'm crossing the ocean and <phr type="#wait">I just can't wait</phr></seg></l>
+                </sp>
+
+                <sp who="#hamilton #angelica">
+                    <speaker>HAMILTON AND ANGELICA</speaker>
+                    <l>You won't be an ocean away</l>
+                    <l>You will only be a moment away</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName>, come downstairs. <persName ref="#angelica">Angelica's</persName> arriving today!</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><persName ref="#eliza">Eliza</persName>!</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>The <persName ref="#schuylerSis">Schuyler sisters</persName>!</l>
+                </sp>
+
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Hi</l>
+                </sp>
+
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>It's good to see your face</l>
+                </sp>
+
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>, tell this man <persName ref="#jAdams">John Adams</persName> spends the summer with his family</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>, tell my wife <persName ref="#jAdams">John Adams</persName> doesn't have a real job anyway</l>
+                </sp>
+
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>. . .you're not joining us? <phr type="#wait">Wait</phr></l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I'm afraid I cannot join you upstate</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#angelica">
+                        <speaker>ANGELICA</speaker>
+                        <l><persName ref="#hamilton">Alexander</persName>, I came all this way</l>
+                    </sp>
+
+
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>She came all this way</l>
+                    </sp>
+
+
+                    <sp who="#angelica">
+                        <speaker>ANGELICA</speaker>
+                        <l>All this way</l>
+                    </sp>
+
+
+                    <sp who="#eliza #angelica">
+                        <speaker>ELIZA AND ANGELICA</speaker>
+                        <l>Take a break</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact">You know I have to get my plan through Congress</seg></l>
+                </sp>
+
+
+                <sp who="#eliza #angelica">
+                    <speaker>ELIZA AND ANGELICA</speaker>
+                    <l>Run away with us for the summer</l>
+                    <l>Let's go upstate</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I lose my job if we don't get this plan through Congress</l>
+                </sp>
+
+
+                <sp who="#eliza #angelica">
+                    <speaker>ELIZA AND ANGELICA</speaker>
+                    <l>We can all go stay with our father</l>
+                </sp>
+                <spGrp type="simultaneous">
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>There’s a lake I know</l>
+
+                        <l>In a nearby park</l>
+
+                        <l>You and I can go</l>
+
+                        <l>Take a break and get away</l>
+                        <l>Let's go upstate</l>
+
+                        <l>Where we can stay</l>
+
+                        <l><phr type="#look">Look around</phr>, <phr type="#look">look around</phr></l>
+                        <l>At how lucky we are to be alive right now</l>
+                        <l>We can go</l>
+
+                        <l>When the night gets dark</l>
+                        <l>Take a break.</l>
+                    </sp>
+
+
+                    <sp who="#angelica">
+                        <speaker>ANGELICA</speaker>
+                        <l>I know I'll miss your face</l>
+
+                        <l>Screw your courage to the sticking place</l>
+
+                        <l><persName ref="#eliza">Eliza's</persName> right</l>
+
+                        <l>Take a break</l>
+
+                        <l>Run away with us for the summer</l>
+                        <l>Let's go upstate</l>
+
+                        <l>We can all go stay with our father</l>
+
+                        <l><phr type="#time">If you take your time</phr></l>
+                        <l>You will make your mark</l>
+                        <l>Close your eyes and dream</l>
+
+                        <l>When the night gets dark</l>
+                        <l>Take a break.</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I have to get my plan through Congress</l>
+                    <l>I can't stop until I get this plan through Congress</l>
+                </sp>
+
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Take a Break</head>
+                <event xml:id="event51" when="1787-12-06"> <label>Angelica and Hamilton's Letters</label><desc>Hamilton and Angelica wrote letters near the end of 1787 featuring the punctuation of the comma described in the lyrics.</desc></event>
+            <event xml:id="event52" when="1791-01-22"> <label>Philip is Nine</label><desc>Philip Hamilton turned nine in this song, making the song take place in 1791.</desc></event>
+            </listEvent>
+        </back>
+    </text>
+</TEI>

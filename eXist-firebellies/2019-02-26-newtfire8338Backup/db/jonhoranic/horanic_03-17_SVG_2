@@ -1,0 +1,38 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";      
+
+declare variable $col := collection ('/db/mitford');
+declare variable $letCol := collection ('/db/mitford/letters');
+declare variable $letFiles := $letCol/*;
+declare variable $letDates := $letCol//tei:teiHeader//tei:msDesc//tei:head/tei:date/@when/tokenize(string(), '-')[1];
+declare variable $countLet := count($letFiles);
+declare variable $distDates := distinct-values($letDates);
+
+declare variable $max := max($distDates);
+declare variable $min := xs:integer(min($distDates));
+declare variable $year := xs:integer($max) - xs:integer($min);
+declare variable $day := $year * 365;
+
+declare variable $thisFile :=
+
+<svg width="500" height="3000">
+    <g transform="translate(30, 100)">
+        <line x1="50" y1="0" x2="50" y2="{$day}" style="stroke:blue;stroke-width:4"/>
+        {
+        for $i in (0 to $year)
+                return
+            <g>
+                <line x1="25" y1="{$i*365}" x2="50" y2="{$i*365}" style="stroke:blue;stroke-width:4"/>
+                <text x="-10" y="{($i*365)+5}">{$min + $i}</text>
+                <!--The +5 moves the date titles down to be level with the lines.-->
+                <circle cx="50" cy="{$i*365}" r="{count($letDates[contains(., $min + $i)])}" stroke="orange" fill="cyan" stroke-width="2"/>
+            </g>
+        }
+    </g>
+</svg>;
+
+let $filename := "Timeline.svg"
+let $db := xmldb:store("/db/jonhoranic", $filename, $thisFile)
+return $db
+(: Output: http://dxcvm05.psc.edu:8080/exist/rest/db/jonhoranic/Timeline.svg :)

@@ -1,0 +1,13 @@
+xquery version "3.0";
+
+declare variable $thisFile := 
+string-join(
+let $schism := collection('/db/Schism')/*
+let $loc := $schism//location
+let $distLoc := distinct-values($loc)
+for $i in $distLoc
+return $i, '&#10;');
+
+let $filename := "Newton_XQueryEx3.txt"
+let $dob-db-uri := xmldb:store("/db/ajnewton1/", $filename, $thisFile)
+return $dob-db-uri

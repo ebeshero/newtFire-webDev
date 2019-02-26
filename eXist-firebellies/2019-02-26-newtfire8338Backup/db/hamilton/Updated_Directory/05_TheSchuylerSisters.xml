@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "The Schuyler Sisters"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>The Schuyler Sisters</title>
+            </head>
+            <div type="song">
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>There’s nothing rich folks love more</l>
+                    <l>Than going downtown and slummin’ it with the poor</l>
+                    <l>They pull up in their carriages and gawk</l>
+                    <l>At the students in the common</l>
+                    <l>Just to watch them talk</l>
+                    <l><seg type="#fact">Take <persName ref="#philipS">Philip Schuyler</persName>: the man is
+                        loaded</seg></l>
+                    <l>Uh-oh, but little does he know that</l>
+                    <l><seg type="#ambiguous">His daughters, <persName ref="#peggy">Peggy</persName>, <persName ref="#angelica">Angelica</persName>, <persName ref="#eliza">Eliza</persName></seg></l>
+                    <l>Sneak into the city just to watch all the guys at—</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#eliza">Eliza</persName>!</l>
+                </sp>
+
+                <sp who="#peggy">
+                    <speaker>PEGGY</speaker>
+                    <l>And <persName ref="#peggy">Peggy</persName>!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                    <l>The <persName ref="#schuylerSis">Schuyler sisters</persName>!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#peggy">
+                    <speaker>PEGGY</speaker>
+                    <l><persName ref="#peggy">Peggy</persName>!</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#eliza">Eliza</persName>!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work!</l>
+                </sp>
+
+                <sp who="#peggy">
+                    <speaker>PEGGY</speaker>
+                    <l>Daddy said to be home by sundown</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Daddy doesn’t need to know</l>
+                </sp>
+
+                <sp who="#peggy">
+                    <speaker>PEGGY</speaker>
+                    <l>Daddy said not to go downtown</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Like I said, you’re free to go</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>But—<phr type="#look">look around</phr>, <phr type="#look">look around</phr>, the</l>
+                    <l>Revolution’s happening in <placeName>New York</placeName></l>
+                </sp>
+
+                <sp who="#eliza #peggy">
+                    <speaker>ELIZA/PEGGY</speaker>
+                    <l><placeName>New York</placeName></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><persName ref="#angelica">Angelica</persName></l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy #company">
+                    <speaker>SCHUYLER SISTERS/COMPANY</speaker>
+                    <l>Work!</l>
+                </sp>
+
+                <sp who="#peggy">
+                    <speaker>PEGGY</speaker>
+                    <l>It’s bad enough daddy wants to go to war</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>People shouting in the square</l>
+                </sp>
+
+                <sp who="#peggy">
+                    <speaker>PEGGY</speaker>
+                    <l>It’s bad enough there’ll be violence on our shore</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>New ideas in the air</l>
+                </sp>
+
+                <sp who="#angelica #men">
+                    <speaker>ANGELICA/MEN</speaker>
+                    <l><phr type="#look">Look around</phr>, <phr type="#look">look around</phr>—</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>, remind me what we’re looking
+                        for…</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>She’s lookin’ for me!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><persName ref="#eliza">Eliza</persName>, I’m lookin’ for a mind at work</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’m lookin’ for a mind at work!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’m lookin’ for a mind at work!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Whooaaaaa!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy">
+                    <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                    <l>Whooaaaaa!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy #company">
+                    <speaker>SCHUYLER SISTERS/COMPANY</speaker>
+                    <l>Work!</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Wooh! There’s nothin’ like summer in the city</l>
+                    <l>Someone in a rush next to someone lookin’ pretty</l>
+                    <l>Excuse me, miss, I know it’s not funny</l>
+                    <l>But your perfume smells like your daddy’s got money</l>
+                    <l>Why you slummin’ in the city in your fancy heels</l>
+                    <l>You searchin for an urchin who can give you ideals?</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><persName ref="#burr">Burr</persName>, you disgust me</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Ah, so you’ve discussed me</l>
+                    <l><seg type="#fact">I’m a trust fund</seg>, baby, you can trust me!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’ve been reading <seg type="#fact">Common Sense by <persName ref="#paine">Thomas
+                        Paine</persName></seg></l>
+                    <l>So men say that I’m intense or I’m insane</l>
+                    <l>You want a revolution? I want a revelation</l>
+                    <l>So listen to my declaration:</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy">
+                    <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                    <l>“We hold these truths to be self-evident</l>
+                    <l>That all men are created equal”</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>And when I meet <persName ref="#jefferson">Thomas Jefferson</persName></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Unh!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’m ‘a compel him to include women in the sequel!</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Work!</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><phr type="#look">Look around</phr>, <phr type="#look">look around</phr> at how</l>
+                    <l>Lucky we are to be alive right now!</l>
+                </sp>
+
+                <sp who="#eliza #peggy">
+                    <speaker>ELIZA/PEGGY</speaker>
+                    <l><phr type="#look">Look around</phr>, <phr type="#look">look around</phr> at how</l>
+                    <l>Lucky we are to be alive right now!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy">
+                    <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                    <l>History is happening in <placeName>Manhattan</placeName> and we just happen
+                        to be</l>
+                    <l>In the greatest city in the world!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy #company">
+                    <speaker>SCHUYLER SISTERS/COMPANY</speaker>
+                    <l>In the greatest city in the world!</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#eliza #peggy">
+                        <speaker>ELIZA/PEGGY</speaker>
+                        <l><phr type="#look">Look around</phr>, <phr type="#look">look around</phr></l>
+                        <l>The revolution’s happening in—</l>
+                        <l><placeName>New York</placeName>!</l>
+                        <l>In <placeName>New York</placeName>!</l>
+                    </sp>
+
+                    <sp who="#angelica">
+                        <speaker>ANGELICA</speaker>
+                        <l>Cuz I’ve been reading Common Sense by <persName ref="#paine">Thomas
+                                Paine</persName></l>
+                        <l>So men say that I’m intense or I’m insane</l>
+                        <l>You want a revolution?</l>
+                        <l>I want a revelation</l>
+                        <l>So listen to my declaration:</l>
+                    </sp>
+
+                    <sp who="#men">
+                        <speaker>MEN</speaker>
+                        <l>Hey! Hey! Hey! Hey!</l>
+                        <l>Hey! Hey! Hey! Hey!</l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><phr type="#look">Look around</phr>, <phr type="#look">look around</phr> the revolution’s happening</l>
+                    </sp>
+                </spGrp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#angelica #eliza #peggy">
+                        <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                        <l>We hold these truths to be self evident that all men are created
+                            equal</l>
+                        <l>Whoo!</l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><phr type="#look">Look around</phr></l>
+                        <l><phr type="#look">Look around</phr></l>
+                        <l>At how lucky we are to be alive right now</l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l>Hey! Hey!</l>
+                        <l>Hey! Hey!</l>
+                        <l>Hey! Hey!</l>
+                        <l>Hey! Hey!</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><phr type="#look">Look around</phr>, <phr type="#look">look around</phr> at how lucky we are to be alive right now!</l>
+                    <l>History is happening in <placeName>Manhattan</placeName> and we just happen
+                        to be</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>In the greatest city in the world</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>In the greatest city—</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>In the greatest city in the world!</l>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#eliza">Eliza</persName>!</l>
+                </sp>
+
+                <sp who="#peggy">
+                    <speaker>PEGGY</speaker>
+                    <l>And <persName ref="#peggy">Peggy</persName>!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy">
+                    <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                    <l>The <persName ref="#schuylerSis">Schuyler sisters</persName>!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy">
+                    <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                    <l>We’re looking for a mind at work!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy">
+                    <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                    <l>Hey!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Work, work!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy">
+                    <speaker>ANGELICA/ELIZA/PEGGY</speaker>
+                    <l>Hey!</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#angelica">
+                        <speaker>ANGELICA</speaker>
+                        <l>Whoa!</l>
+                        <l>In the greatest</l>
+                        <l>City in the world</l>
+                    </sp>
+
+                    <sp who="#eliza #peggy">
+                        <speaker>ELIZA/PEGGY</speaker>
+                        <l>Hey! Hey! Hey! Hey! Hey!</l>
+                        <l>In the greatest</l>
+                        <l>City in the world</l>
+                    </sp>
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <l>Work, work!</l>
+                        <l>Work, work!</l>
+                        <l>Work, work!</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>In the greatest city in the world!</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>The Schuyler Sisters</head><event xml:id="event12" when="1776-01-10"> <label>Common Sense by Thomas Paine is Published</label><desc>In January of 1776, Thomas Paine published Common Sense.</desc></event>
+              </listEvent>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Satisfied"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Satisfied</title>
+            </head>
+            <div type="song">
+
+                <sp who="#laurens">
+                    <speaker>LAURENS</speaker>
+                    <l>Alright, alright. That’s what I’m talkin’ about!</l>
+                    <l><seg type="#fiction">Now everyone give it up for the maid of honor</seg></l>
+                    <l><persName ref="#angelica">Angelica Schuyler</persName>!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>A toast to the groom!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>To the groom!</l>
+                    <l>To the groom!</l>
+                    <l>To the groom!</l>
+                </sp>
+
+                <sp who="#women #men">
+                    <speaker>MEN/WOMEN</speaker>
+                    <l>To the groom!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#women #men">
+                    <speaker>MEN/WOMEN</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>From your sister</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#women #men">
+                    <speaker>MEN/WOMEN</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Who is always by your side</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>By your side!</l>
+                </sp>
+
+                <sp who="#eliza #women">
+                    <speaker>ELIZA/WOMEN</speaker>
+                    <l>By your side!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>To your union</l>
+                </sp>
+
+                <sp who="#eliza #men #women">
+                    <speaker>ELIZA/MEN/WOMEN</speaker>
+                    <l>To the union!</l>
+                    <l>To the revolution!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>And the hope that you provide</l>
+                </sp>
+
+                <sp who="#eliza #men #women">
+                    <speaker>ELIZA/MEN/WOMEN</speaker>
+                    <l>You provide!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>You provide!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>May you always…</l>
+                </sp>
+
+                <sp who="#hamilton #eliza #men #women">
+                    <speaker>HAMILTON/ELIZA/MEN/WOMEN</speaker>
+                    <l>Always—</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><phr type="#satisfied">Be satisfied</phr></l>
+                </sp>
+
+                <sp who="#hamilton #eliza #men #women">
+                    <speaker>HAMILTON/ELIZA/MEN/WOMEN</speaker>
+                    <l>Rewind—</l>
+                </sp>
+
+                <sp who="#recording">
+                    <speaker>Recorded Samples</speaker>
+                    <l>Rewind, Rewind</l>
+                    <l><phr type="#helpless">Helpless</phr>, sky's, sky's</l>
+                    <l>Drownin' in em</l>
+                    <l>Drownin', rewind</l>
+                    <l>I remember that night, I just might rewind</l>
+                    <l>I remember that night, I just might rewind</l>
+                    <l>I remember that night, I remember that—</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I remember that night, I just might</l>
+                    <l>Regret that night for the rest of my days</l>
+                    <l>I remember those soldier boys</l>
+                    <l>Tripping over themselves to win our praise</l>
+                    <l>I remember that dreamlike candlelight</l>
+                    <l>Like a dream that you can’t quite place</l>
+                    <l>But <persName ref="#hamilton">Alexander</persName>, I’ll never forget the
+                        first</l>
+                    <l>Time I saw your face</l>
+                    <l>I have never been the same</l>
+                    <l>Intelligent eyes in a hunger-pang frame</l>
+                    <l>And when you said “Hi,” I forgot my dang name</l>
+                    <l><seg type="#ambiguous">Set my heart aflame, ev’ry part aflame</seg></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>This is not a game…</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><phr type="#satisfied">You strike me as a woman who has never been satisfied</phr></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’m sure I don’t know what you mean. You forget yourself</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>You’re like me. <phr type="#satisfied">I’m never satisfied</phr></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Is that right?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><phr type="#satisfied">I have never been satisfied</phr></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>My name is <persName ref="#angelica">Angelica Schuyler</persName></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Where’s your fam’ly from?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Unimportant. There’s a million things I haven’t done but</l>
+                    <l><phr type="#wait">Just you wait, just you wait…</phr></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>So so so—</l>
+                    <l>So this is what it feels like to match wits</l>
+                    <l>With someone at your level! What the hell is the catch? It’s</l>
+                    <l>The feeling of freedom, of seein’ the light</l>
+                    <l>It’s <persName ref="#franklin">Ben Franklin</persName> with a key and a kite!
+                        You see it, right?</l>
+                    <l>The conversation lasted two minutes, maybe three minutes</l>
+                    <l>Ev’rything we said in total agreement, it’s</l>
+                    <l>A dream and it’s a bit of a dance</l>
+                    <l>A bit of a posture, it’s a bit of a stance. He’s a</l>
+                    <l>Bit of a flirt, but I’m ‘a give it a chance</l>
+                    <l>I asked about his fam’ly, did you see his answer?</l>
+                    <l>His hands started fidgeting, he looked askance?</l>
+                    <l>He’s penniless, he’s flying by the seat of his pants</l>
+                    <l>Handsome, boy, does he know it!</l>
+                    <l>Peach fuzz, and he can’t even grow it!</l>
+                    <l>I wanna take him far away from this place</l>
+                    <l>Then I turn and see my sister’s face and she is…</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><phr type="#helpless">Helpless…</phr></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>And I know she is…</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><phr type="#helpless">Helpless…</phr></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>And her eyes are just…</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><phr type="#helpless">Helpless…</phr></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>And I realize</l>
+                </sp>
+
+                <sp who="#angelica #company">
+                    <speaker>ANGELICA/COMPANY</speaker>
+                    <l>Three fundamental truths at the exact same time…</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Where are you taking me?</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’m about to change your life</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Then by all means, lead the way</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY EXCEPT ANGELICA</speaker>
+                    <l>Number one!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’m a girl in a world in which</l>
+                    <l>My only job is to marry rich</l>
+                    <l><seg type="#fiction">My father has no sons so I’m the one</seg></l>
+                    <l>Who has to social climb for one</l>
+                    <l>So I’m the oldest and the wittiest and the gossip in</l>
+                    <l><placeName>New York City</placeName> is insidious</l>
+                    <l>And <persName ref="#hamilton">Alexander</persName> is penniless</l>
+                    <l>Ha! That doesn’t mean I want him any less</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#eliza">Elizabeth Schuyler</persName>. It’s a pleasure to meet
+                        you</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Schuyler?</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>My sister</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number two!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>He’s after me cuz I’m a <persName ref="#schuylerSis">Schuyler
+                            sister</persName></l>
+                    <l>That elevates his status, I’d</l>
+                    <l>Have to be naïve to set that aside</l>
+                    <l>Maybe that is why I introduce him to <persName ref="#eliza">Eliza</persName></l>
+                    <l>Now that’s his bride</l>
+                    <l>Nice going, <persName ref="#angelica">Angelica</persName>, he was right</l>
+                    <l>You will never be <phr type="#satisfied">satisfied</phr></l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Thank you for all your service</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>If it takes fighting a war for us to meet, it will have been worth it</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’ll leave you to it</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number three!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><seg type="#fact">I know my sister like I know my own mind</seg></l>
+                    <l>You will never find anyone as trusting or as kind</l>
+                    <l>If I tell her that I love him she’d be silently resigned</l>
+                    <l>He’d be mine</l>
+                    <l>She would say, “I’m fine”</l>
+                </sp>
+
+                <sp who="#angelica #company">
+                    <speaker>ANGELICA/COMPANY</speaker>
+                    <l>She’d be lying</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>But when I fantasize at night</l>
+                    <l>It’s <persName ref="#hamilton">Alexander’s</persName> eyes</l>
+                    <l>As I romanticize what might</l>
+                    <l>Have been if I hadn’t sized him</l>
+                    <l>Up so quickly</l>
+                    <l>At least my dear <persName ref="#eliza">Eliza’s</persName> his wife;</l>
+                    <l>At least I keep his eyes in my life…</l>
+                    <l>To the groom!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>To the groom!</l>
+                    <l>To the groom!</l>
+                    <l>To the groom!</l>
+                </sp>
+
+                <sp who="#women #men">
+                    <speaker>MEN/WOMEN</speaker>
+                    <l>To the groom!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#women #men">
+                    <speaker>MEN/WOMEN</speaker>
+                    <l>To the bride!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>From your sister</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#women #men">
+                    <speaker>MEN/WOMEN</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l><persName ref="#angelica">Angelica</persName>!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Who is always by your side</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>By your side!</l>
+                </sp>
+
+                <sp who="#eliza #women">
+                    <speaker>ELIZA/WOMEN</speaker>
+                    <l>By your side!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>To your union</l>
+                </sp>
+
+                <sp who="#eliza #men #women">
+                    <speaker>ELIZA/MEN/WOMEN</speaker>
+                    <l>To the union!</l>
+                    <l>To the revolution!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>And the hope that you provide</l>
+                </sp>
+
+                <sp who="#eliza #men #women">
+                    <speaker>ELIZA/MEN/WOMEN</speaker>
+                    <l>You provide!</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>You provide!</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>May you always…</l>
+                </sp>
+
+                <sp who="#hamilton #eliza #men #women">
+                    <speaker>HAMILTON/ELIZA/MEN/WOMEN</speaker>
+                    <l>Always—</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>Be <phr type="#satisfied">satisfied</phr></l>
+                </sp>
+
+                <sp who="#hamilton #men">
+                    <speaker>HAMILTON/MEN</speaker>
+                    <l>Be <phr type="#satisfied">satisfied</phr></l>
+                    <l>Be <phr type="#satisfied">satisfied</phr></l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#angelica">
+                        <speaker>ANGELICA</speaker>
+                        <l>And I know</l>
+                        <l>She’ll be happy as</l>
+                        <l>His bride</l>
+                        <l>And I know</l>
+                    </sp>
+
+                    <sp who="#men">
+                        <speaker>MEN</speaker>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied.</phr> </l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied</phr></l>
+                        <l><phr type="#satisfied">Be satisfied.</phr></l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><phr type="#satisfied">He will never be satisfied</phr></l>
+                    <l><phr type="#satisfied">I will never be satisfied</phr></l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Satisfied</head><event xml:id="event24" when="1780-12-14"> <label>Eliza and Hamilton's Wedding</label><desc>Two songs in the musical focus on Eliza and Hamilton's marriage. In this song, Angelica, Eliza's sister, describes her perspective of the wedding and her feelings for Hamilton.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

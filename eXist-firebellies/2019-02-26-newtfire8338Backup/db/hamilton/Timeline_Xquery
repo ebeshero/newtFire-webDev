@@ -1,0 +1,50 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0"; 
+declare namespace htm="http://www.w3.org/1999/xhtml";
+
+declare variable $collection := collection ('/db/hamilton/Updated_Directory');
+declare variable $files := $collection/*;
+declare variable $letDatesWhen := $files//tei:back/tei:listEvent/tei:event/@when/tokenize(string(), '-')[1];
+declare variable $distinctDates := distinct-values($letDatesWhen);
+declare variable $countDistinctDates := count($distinctDates);
+declare variable $maxYear := xs:integer(1855);
+declare variable $minYear := xs:integer(1755);
+declare variable $yearSpan := xs:integer($maxYear) - xs:integer($minYear);
+declare variable $totalDays := $yearSpan * 365;
+declare variable $label := $files//tei:back/tei:listEvent/tei:event/distinct-values(tei:label);
+declare variable $head := $files//tei:back/tei:listEvent/distinct-values(tei:head);
+declare variable $description := $files//tei:back/tei:listEvent/tei:event/distinct-values(tei:desc);
+declare variable $stringDatesWhen := $files//tei:back/tei:listEvent/tei:event/@when/string();
+
+declare variable $thisFile :=
+<htm:html>
+<htm:head>
+<htm:title>Timeline of "Hamilton: An American Musical"</htm:title>
+</htm:head>
+<htm:body>
+<htm:div class="svg">
+    <svg width="5000" height="500" viewBox="0 0 39000 10">
+        <g transform="translate(200, 100)">
+           <rect x="0" y="0" width="{$totalDays + 365}" height="500" style="fill:tan;stroke:black;stroke-width:25"/>
+           {for $i in (0 to $yearSpan)
+           return
+           <g>
+              <circle cx="{$i*365}" cy="-250" r="{count($letDatesWhen[contains(., $minYear + $i)])* 35}" stroke="black" fill="goldenrod" stroke-width="2" opacity="0.8"/> 
+           <line x1="{$i*365}" y1="0" x2="{$i*365}" y2="-250" style="stroke:black;stroke-width:30"/>
+           <text x="{($i*365-45)}" y="90" text-anchor="end" transform="rotate(-45, {$i*365}, 0)" font-size="100">{$minYear+$i}</text>
+           
+           </g>
+           }
+           
+        </g>
+        
+    </svg>
+</htm:div>
+</htm:body>
+</htm:html>;
+
+let $filename := "Hamilton_Timeline.svg"
+let $doc-db-uri := xmldb:store("/db/hamilton", $filename, $thisFile)
+
+return $doc-db-uri

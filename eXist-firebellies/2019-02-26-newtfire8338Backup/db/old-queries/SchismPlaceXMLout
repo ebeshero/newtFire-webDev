@@ -1,0 +1,19 @@
+xquery version "3.0";
+<kml>
+    {
+let $Schisms := collection('/db/Schism')/*
+let $places := distinct-values($Schisms//location/string())
+let $nl := "&#10;"
+for $i in $places
+let $lookUp := $Schisms//p[.//location = $i][1]/string()
+(: Before I had: let $lookUp := $Schisms//location[. = $i]/ancestor::p[1]/string() 
+ : and the results were more than a single paragraph. Think about why!
+ : :)
+return 
+    <Placemark>
+        <name>{$i}</name>
+        <description>{$lookUp}</description>
+        </Placemark>
+        
+    }
+</kml>

@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../ODD/out/RickandMortyODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../ODD/out/RickandMortyODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Big Trouble In Little Sanchez</title>
+                <author>Justin Roiland</author>
+                <editor>D. Lint</editor>
+            </titleStmt>
+            <publicationStmt>
+                <p>Digital edition hosted on <ref target="http://rickandmorty.newtfire.org">http://rickandmorty.newtfire.org</ref> and GitHub: <ref target="https://github.com/dorothealint/Rick-and-Morty">https://github.com/dorothealint/Rick-and-Morty</ref></p>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl>
+                    <title>Big Trouble In Little Sanchez</title>
+                    <date when="2015-"/>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>Some small changes to the original transcriptions were made including fixed spelling errors and adding names and scene cuts.</p>
+        </encodingDesc>
+    </teiHeader>
+    <text>
+        <body>
+    <sp><speaker>Jerry</speaker><p>:  What’s new at school?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Nothing.</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Nothing! Oh, uh, one of the lunch ladies died. They found her in the gym with, like, two holes in her neck and all the blood drained out of her.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Good lord! Who does something like that?</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Obviously a vampire. W-w-where’s the pepper?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Wait, what?! Vampires are real?!</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Yes, Summer, vampires are real. Who knew?</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Oh, right, all humanity, for hundreds of years, now.</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Yeah, Summer, it’s a big universe.</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Get used to it. R-right, Rick?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Well, what are we going to do?!</p></sp>
+            
+    <sp><speaker>Rick</speaker><p>:  We’re gonna live our lives until we die. Possibly by vampire. More likely auto accident or heart disease, but possibly vampire.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Grandpa Rick, couldn’t you, like, use your superknowledge to turn yourself into a teenager and come to our school and help us hunt the vampire down?</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Um -- wow.</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Yeah, pretty specific pitch, Summer. I probably could turn myself into a teenager and hang out in the zit-covered, hormone-addled, low-stakes assworld that is high school. But here’s my reverse-ask -- why in the [Bleep] would I ever do that, ever? And how dare you even ask me that And why aren’t you more ashamed of yourself?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Dad!</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Be ashamed of yourself, sweetie.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Jerry! Do you know what you just said to our daughter?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Sor-ry! I wasn’t paying attention.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  To a conversation about vampires?!</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Clearly, I didn’t know it was about vampires, because I wasn’t paying attention, which you would know, if you ever paid attention to me!</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Oh, here we go, right to the victim role.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Am I a victim, Beth, or am I married to a mean, unfair monster that always hurts me?!</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Jesus Christ! Will you fix your marriage or get a divorce already?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Well, we tried a couples’ therapist.</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  That’s earth therapy. You might as well ask a horse to fix a merry-go-round. I mean, he’ll try his best, but mostly, he’s just gonna get horrified. I know about a place off-planet with a 100% success rate.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Well, we want to make it work, if we can.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  It’s just -- then it’s settled.</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  No need to pack.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Oh!</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Let’s go, go, go, go!</p></sp>
+
+    <stage>[Door opens, closes]</stage>
+    <sp><speaker>Morty</speaker><p>:  Do you think mom and dad are, you know, gonna get a divorce?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  I think it’s okay to dream, Morty. I’m gonna go make some wooden stakes.</p></sp>
+<stage>
+    ♪</stage>
+    <sp><speaker>Rick</speaker><p>:  I booked you for a two-day intensive at nuptia four, the galaxy’s most successful couples’ counseling institute. They could save the marriage of a dog and a bar of dark chocolate. They could save the marriage of a p0rn star and a p0rn star.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Well, I know I’m ready to try whatever it takes.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Which clearly implies that I’m not.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  It’s not a competition, Beth.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Oh is that how you’re gonna try to win, by implying I’m competitive?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  If the shoe fits.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  My shoe fits up your ass.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  You wish!</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Okay, have fun. See ya Thursday!</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Oh!</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Jerk.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Don’t insult my father. He’s the reason our kids are only half-stupid.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Ha! You just called yourself -- oh.</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  Beth and Jerry Smith?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Yes.</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  I’m glaxo slimslom. Welcome to nuptia four. Your marriage can rest easy now. Jerry, go ahead and sit there and put this on. This machine isolates the part of the subject’s brain containing all perceptions of its romantic partner. And we will now render Jerry’s perception of Beth with artificial biological life. [Growl] Interesting.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:What the hell is that?! Take that back! You do not think that about me!</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  I didn’t do anything! They scanned it out of my brain. Can I take it back?</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  There’s nothing to regret. We’re dealing with unconscious, unhealthy thoughts. Beth. Now, we scan for Beth’s perceptions of Jerry.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Scan hard. He’s dead to me.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Everything’s dead to you.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  What?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Nothing. [Whimper]</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Read it and weep, bitch.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  [Crying] Does everybody see what I mean?</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  I think we all see what you both mean.</p></sp>
+
+    <stage>[Bell rings]</stage>
+    <sp><speaker>Summer</speaker><p>:  Any leads on the vampire?</p></sp>
+
+    <sp><speaker>Morty</speaker><p>: No, Summer! I mean, you know, I think it might be time that we just l-let it go.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Oh, so, now, you’re too cool for this, just because grandpa Rick is?</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  It’s not that, it’s just that the universe is a little too big to care about something so small.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Aah!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  What up, my helsings? Who wants to hunt a vampire? Ha ha ha!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Rick? How -- how did you --</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Yeah, I got bored and then, I remembered, this morning, how I blew Summer off, and I thought, "hey, why are you such a grumpy douche, Rick? Go to the garage, transfer your mind into a younger clone of yourself, and get embroiled in some youthful hijinks, what’s the bfd?" So here I am. I’m tiny Rick!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  O-o-okay.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Well, it’s good you’re here, Rick. I was pretty sure we didn’t have what it takes to deal with a bloodsucker on our own.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Don’t short-sell yourself, Summer. You got everything it takes. But it’ll still be fun to do this as a [Bleep] team, mother[Bleep] tiny Rick!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Yeah! Oh, my God, Toby Matthews!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Hey, Toby. I’m tiny Rick. I’m new. Hey oh -- go easy on me. Ha ha. Just kiddin’.</p></sp>
+
+    <sp><speaker>Toby</speaker><p>:  I like your straightforward style and that lab coat’s pretty cool. Summer.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  He knows my name!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Why wouldn’t he? You’re great! But, listen, just be careful. We can’t rule anybody out as the vampire, not even the dreamboats.
+    Stop, tiny Rick.
+    Huntin’ a vampire with my grandkids!
+    [Bleep]! Tiny ri-I-ck!</p></sp>
+
+    <stage>[marriage counseling]</stage>
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  The next step is to watch your mythologues interact together and, uh -- big surprise -- it’s never pretty. [Laughter] Here we have garrrh and zharbidar gloompfschs, or, should I say, here we have the way garrrh and zharbidar perceive each other. [Roaring] [Chuckling] As we can all see, this is hardly the real garrrh and zharbidar. Which is good, because the relationship in their heads is not only ugly, it’s unsustainable. [Beep] [Roar] [Growling] You may already be learning something important -- all of these relationships are different, none of them are real, and none of them work. We are not the monsters we sometimes see each other as, because we are real and we are functional. That’s what makes us better than them We can find solutions. We can adapt. We can communicate. [Growl] And, most importantly, we can work together.</p></sp>
+
+    <stage>[Smith garage]</stage>
+            
+    <sp><speaker>Morty</speaker><p>Well, it was a tough adventure, but it paid off -- our school is vampire-free!</p></sp>
+            
+    <sp><speaker>Tiny Rick</speaker><p>:  Man, who would’ve suspected coach feratu? You did great, guys. Couldn’t have done it without ya. You know, we -- w-we should be proud of ourselves. We killed a vampire and a gym teacher. Ha ha ha. Talk about two-for-one, right?!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  So, how, exactly, is your old body living in there, grandpa Rick?</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Oh, you know, hyperbaric quantum fluid, [burp] That kind of thing. It preserves living tissue. Not that there was much to preserve. Look at that mummy! Ha! Ha ha! And I guess it’s time for me to get back inside the old-timer.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Oh, my God. Toby Matthews is asking if my parents are still out of town and if we can have a party!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  All right, way to go, Summer! What did I tell you?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Ohh! He’s asking if tiny Rick will be here.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Well, you know what, Summer? Tell him tiny Rick will be here! And tell him to bring some brews!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  For real? Y-y-y-you would stay as tiny Rick, just so we can have a party?</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Hell, yeah! What’s one more night? And who can have fun with this old b*st*rd hanging around, huh?[Laughter] Wubby lubby doob doob! Whoo! Tiny Rick!</p></sp>
+
+    <stage>[marriage counseling]
+    [Growl]</stage>
+            
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  Moving on. Now, we have Beth and Jerry Smith from the planet e-arth.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  My heart is pounding.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  This is gonna be great.</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  The e-arth relationships are simpler.
+    It’s a primitive planet, so their dysfunctions are oh -- w-wait, what? What’s going on?
+    Where are the Smith mythologues?</p></sp>
+
+    <stage>[Suspenseful music plays]</stage>
+    <sp><speaker>Jerry</speaker><p>: Oh, my God.</p></sp>
+
+            <sp><speaker>Glaxo Slimslom</speaker><p>[Shriek]
+    [Gasp]
+    Aah! Aah!
+    Oh, my God. Secure the cell!
+    Aaaah!
+    [Slice]
+    Uh, hey! You know what’s fun? Our gift shop.
+    Why don’t we proceed in an orderly --
+    [growl]
+    [ Whimpering ]
+    Oh, dear God, no.
+    They’re codependent!
+    Run!
+    [Roaring]
+    Oh!</p></sp>
+    <stage>[Crickets chirp]
+    [Chatting]
+    [Smith house]
+    [Rock music plays]
+    [ Laughter ]</stage>
+    <sp><speaker/><p>Oh, yeah, yeah, you really know how to sport that color blue.</p></sp>
+    <sp><speaker/><p>Really?</p></sp>
+    <sp><speaker/><p>You’re looking real good. Oh, my God.</p></sp>
+    <sp><speaker>Jessica</speaker><p>:  Hey, Morty.</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Oh, hey -- hey, Jessica.</p></sp>
+
+    <sp><speaker>Jessica</speaker><p>:  So, is tiny Rick your brother or cousin, or...?</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  No, my grandpa just transferred his consciousness into a clone of himself so he could be in our high school.</p></sp>
+
+    <sp><speaker>Jessica</speaker><p>:  Cool.</p></sp>
+
+    <sp><speaker>Toby</speaker><p>:  Hey, tiny Rick’s playing guitar.</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  All right, everybody. This next one’s coming straight from the heart. Making the lyrics up right off the top of my head. ♪ Let me out ♪ ♪ what you see is not the same person as me ♪ ♪ my life’s a lie ♪ ♪ I’m not who you’re looking at ♪ ♪ let me out, set me free ♪ ♪ I’m really old; This isn’t me ♪ ♪ my real body’s slowly dyin’ in a vat ♪ ♪ is anybody listening’ ♪ ♪ can anyone understand? ♪ ♪ Stop lookin’ at me like that and actually help me ♪ ♪ help me! ♪ ♪ Help me; I’m gonna die! ♪  Tiny Rick! Thanks, everybody!</p></sp>
+
+    <stage>[Cheering]</stage>
+    <sp><speaker>Party-goer</speaker><p>:  This guy’s amazing!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  I love tiny Rick!</p></sp>
+
+    <sp><speaker>Party-goer</speaker><p>:  Bad. Ass.</p></sp>
+
+    <stage>[Hooting]</stage>
+            
+    <sp><speaker>Party-goer</speaker><p>:  Yeah!</p></sp>
+
+    <stage>[Marriage counseling]
+    [Snarl]
+    [Hiss]
+    [Screaming in distance]
+    [Rattle]
+    [Aah!]
+    [Ominous music plays]
+    [Growl]
+    [Huh?]</stage>
+            
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  What the [Bleep]?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Yeah, I know! What kind of operation are you running?</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  Us?! What the hell kind of relationship do you have?!</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Oh, right, blame this on us.</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  Okay, uh, I can and I am! Your demonized mythologizations of each other are cooperating.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Isn’t that good?</p></sp>
+
+    <sp><speaker>Glaxo Slimslom</speaker><p>:  No. No! It’s bad! You have the single worst marriage I’ve ever witnessed. It shouldn’t exist! You should never, ever, ever, have gotten together and I do not understand how, or why, you would ever stay together.</p></sp>
+
+    <stage>[Aaah!]</stage>
+            
+    <sp><speaker>Beth</speaker><p>:  Well, this is just bad couples’ therapy.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Totally.</p></sp>
+
+    <stage> people I don't know
+        [Panting]
+    [Suspenseful music plays]
+    Wait for us!
+    There’s only room for one more.
+    I’m a therapist. I’ll talk to them.
+    They’re not therapists.
+    Go, go, go!
+    There’s gotta be a way to contact my dad.
+    Let’s find a control room or something.
+    [Suspenseful music plays]
+    [Creak]</stage>
+            
+    <sp><speaker>Jerry</speaker><p>:  Beth! You’ll want to see this.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  What is it?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  It’s a small, hinged panel with a tiny amount of space behind it. If you can find one, too, we should be safe for hours, maybe days!</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  You stay put, Jerry. I’ll send help, if I make it.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  You don’t want to find your own little hatch?</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Jerry, I believe that, if you hide by yourself, you might survive and I believe I, by myself, have a shot of getting out of here, but the two of us, together? I don’t know. Look, maybe the shrink was right. Good luck. [Monster Beth Roar and attacks Beth] All right, now, you listen to me. Oh! Or don’t.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Hey! Don’t! Please!</p></sp>
+
+    <stage>[Hissing]</stage>
+    <stage>[Whining]</stage>
+            
+    <sp><speaker>Jerry</speaker><p>Oh, God, oh, God, oh, God!</p></sp>
+            
+    <stage>[School]</stage>
+    
+    <sp><speaker>Mr. Goldenfold</speaker><p>:  Now, I know I’ve said, in the past, that math is important -- and it is! -- but I also think that, one day, you’ll all look back on being in high school with tiny Rick and Morty, who I hear had a great party last night. So, class dismissed. You’ve got the day off!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  All right! Good work, Mr. Goldenfold!</p></sp>
+
+    <sp><speaker>Mr. Goldenfold</speaker><p>:  Yeah, get outside. Read a book. Put on some sunscreen, Danielle!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Hey, what’s up, Summer? Ooh, nice top.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Thanks. Tiny Rick, you think you might be getting back into your old body tonight?</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  No can do. Tonight’s the big dance and Morty’s bringing Jessica. He needs his tiny wing man.</p></sp>
+
+    <sp><speaker>Both</speaker><p>: Tiny Rick! [Laughs]</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Okay, but if not tonight, when?</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  I don’t know. When I feel like it? Damn, girl! You need to chill out!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  This whole thing was your idea, in the first place, and, now, you’re trying to rush it along.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Yeah, and you know what? I like high school. I like hanging out. Tiny Rick!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  But what if the you that likes it isn’t you?</p></sp>
+
+    <stage>[Laughter]</stage>
+            
+    <sp><speaker>Both</speaker><p>:  Oh!</p></sp>
+
+    <sp><speaker>Both</speaker><p>: Oh, Summer!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  It’s just Rick in a younger body.
+    What’s the -- what’s -- what’s -- what’s -- what’s the -- what’s the problem?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Look at his art, Morty.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  I’ve got an emo streak. It’s part of what makes me so rad.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Why does it say "help me Morty and Summer!"?</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Come on, Summer, that’s the title of the art. Why was Knight Rider called Knight Rider?</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  The car’s name was kitt. Nobody rode Michael Knight.
+    You’re overthinking it, Summer. I’m tiny Rick!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Grandpa, I think that, when you put your mind into this body’s young brain, it did what young brains do -- it shoved the bad thoughts into the back and put a wall around them.  But those bad thoughts are the real Rick.  The fact that you’re old, the fact that we’re all going to die, one day, the fact that the universe is so big, nothing in it matters, those facts are who you are.  So you’re trapped in there and you can only come out in the form of tiny Rick’s teen angst!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Well, Summer, I hear Toby Matthews isn’t into psycho chicks. Can’t think of anyone that is. I’ll see you mother[Bleep] at the dance! Tiny Rick!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Morty, you have to help me!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Summer, he’s happy! I’m happy! I-I-is that why you’re doing this, you don’t want me and Rick to be happy?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  No.</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Well, then get your sh1t together! Get it all together and put it in a backpack. All your sh1t, so it’s together. And if you gotta take it somewhere, take it somewhere, you know? Take it to the sh1t store and sell it o-or put it in a sh1t museum. I don’t care what you do! You just gotta get it together. Get your sh1t together.</p></sp>
+
+    <stage>[marriage counseling]</stage>
+    <sp><speaker>Jerry</speaker><p>:  [Slug wailing]
+    [Gasping][monolog with Beth's conception of himself] Get back! [Fart] Wait, for real? [Whimpers] You’re how Beth sees me? Oh, my God. Turn around!I said turn around! How can Beth have these thoughts about me?! That judgmental monster bitch! I’m not taking this. I want to know where my wife is. You are going to help me. No! Nobody’s doing that!</p></sp>
+
+    <sp><speaker>Beth Monster</speaker><p>:  [Growling] Stay.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  What do you want?</p></sp>
+
+    <sp><speaker>Beth Monster</speaker><p>:  Jerrys.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  You want Jerry?
+    I don’t even want Jerry.</p></sp>
+
+    <sp><speaker>Beth Monster</speaker><p>:  I want Jerrys. Waahee! An army.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  [Laughs] An army of Jerrys. </p></sp>
+
+    <sp><speaker>Beth Monster</speaker><p>:  The value of his subservience is wasted on you. I will use it to dominate the universe.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Ah ha ha. Boy, Jerry must think I’m pretty stupid, for you to be this stupid. Wouldn’t it make more sense to put my dumbass husband in this chair, so you can make an army of youbadass self?</p></sp>
+
+    <sp><speaker>Beth Monster</speaker><p>:  [Laughs] There could never be more than one of me. I’m the strongest, smartest being alive because Jerry thinks you’re that much stronger and smarter than you are!</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Okay, ouch.</p></sp>
+
+    <stage>[party]
+    [♪]</stage>
+            
+    <sp><speaker>Tiny Rick</speaker><p>:  Oh, hey h-hey-y! Morty, Jessica, what’s up? Check out the new dance I made up. It’s called "ooh let me out!" ♪ Let me out ♪ ♪ let me out ♪ ♪ this is not a dance ♪ ♪ I’m beggin’ for help ♪ ♪ I’m screamin’ for help ♪ ♪ please come let me out ♪ ♪ let me out ♪ ♪ let me out ♪ ♪ this is not a dance ♪ ♪ I’m beggin’ for help ♪ ♪ I’m screamin’ for help ♪ ♪ please come let me out ♪ ♪ I’m dyin’ in a vat ♪ ♪ in the gara-a-ge ♪ [cheering Awesome!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Okay, that last part was really weird. Maybe Summer’s on to something here.</p></sp>
+
+    <sp><speaker>Jessica</speaker><p>:  I don’t know. It was fun. You want to slow dance?</p></sp>
+
+    <sp><speaker>Principal</speaker><p>:  Tiny Rick, hey, great dancing as usual. Moment of your time? Tiny Rick, this conversation is gonna break my heart wide open. You’re a great student and the fact that you’re an 80-year-old man in a clone body, it never bothered me. But this here is another matter. You recognize this? We got a tip it was in your locker. Yeah, now, because the gym coach was a vampire, the school board is embarrassed and won’t take it public, however, they can’t have students killin’ teachers. I gotta expel you for this one, tr. I’m sorry.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  I just got expelled, Summer!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Oh! So I guess there’s no need to stay young. My top!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Screw your top!
+    You ratted on me?!
+    I’m tiny Rick!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Fine! Yes! Because I love you and I’m trying to save your life!</p></sp>
+            
+    <sp><speaker>Tiny Rick</speaker><p>:  High school is my life!
+    Summer Smith is a [Bleep] psycho nerd and she just got me kicked out of school!</p></sp>
+            
+    <sp><speaker>All</speaker><p>[Gasp]
+    [Thud]
+    Boo!</p></sp>
+            
+    <sp><speaker>Toby</speaker><p>:  Summer, I thought you were cool!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  I’m sorry, okay?</p></sp>
+
+    <sp><speaker>Crowd</speaker><p>:  How can you be such a bitch?</p></sp>
+            
+    <sp><speaker>Jessica</speaker><p>:  Oh, my God, Morty. Your sister crossed tiny Rick? Talk about self-destructive. Yeah.</p></sp>
+
+    <stage>[Marriage counseling]</stage>
+            
+    <sp><speaker>Jerry</speaker><p>: Hey, Jerry-lover!
+    How about a taste of the real thing?
+    [Cocks gun]
+    [Roar]</p></sp>
+
+    <sp><speaker>Beth</speaker><p>Jerry!
+    Ah. Ah. Ah.
+    Ah ah ah ah ah aah aah.</p></sp>
+            
+    <sp><speaker>Jerry</speaker><p>Not on my watch.
+    That’s it!
+    Beth, it’s me, your husband!
+    I’m here to save you.
+    Or my name isn’t Jerry Smith!
+    Aha!
+    Yes!
+    Jerry Smith!
+    Yeah, here.
+    Aha!
+    Okay, fair enough.</p></sp>
+            
+    <stage>[Smith house]
+    [Ominous music plays]
+    [Door creaks open]</stage>
+            
+    <sp><speaker>Tiny Rick</speaker><p>:  Say goodnight, old man.[Gasp]</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  What the hell are you doing?  Put it down!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Summer, you bitch!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Don’t talk to her that way! She’s your granddaughter!</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  I don’t need a granddaughter! I’m tiny ri-I-ck!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  She’s my sister! And if tiny Rick is gonna be an asshole to my sister, then, you know, y-y-you may as well be old again.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  You think you’re tough, huh, Morty? What are you gonna do? I’m tiny Rick.I ’m the coolest kid in your school. How are you gonna just make me do whatever you say, huh?</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  I’m gonna do what real Rick would do if he was here --</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  I’m gonna kick your ass! Ohhhh!</p></sp>
+
+    <stage>[Grunting]</stage>
+            
+    <sp><speaker>Morty</speaker><p>:  Rick, I know you’re in there! I know you’re trying to get out!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  That’s it, Morty! Hold him down!</p></sp>
+
+    <stage>[Ominous music plays]
+    [Ballad]
+    ♪ drink up, baby ♪
+    ♪ stay up all night ♪</stage>
+            
+    <sp><speaker>Summer</speaker><p>:  Listen to it, tiny Rick. Listen to Elliott Smith.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Ugh! No!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Feel what he’s feeling.</p></sp>
+
+    <sp><speaker>Tiny Rick</speaker><p>:  Ugh! Noooooooo! God!</p></sp>
+
+    <stage>♪ That you’ll never see ♪</stage>
+            
+    <sp><speaker>Rick</speaker><p>:  Oh, God, what is life? How can someone so talented die so young? What is being young? I’m not young. I’m old. I’m -- I’m gonna die. My body isn’t real. Morty! Summer! It’s me! It’s Rick! Regular Rick!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:Rick! How do we get you back into your body?</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Okay, listen carefully. There’s a set of diodes on the vat’s control panel, a blue one and a red one. Oh, God, what kind of world is this? I didn’t ask to be born. I need you to connect the blue one to my left temple and the red one to -- why doesn’t anyone really like me?</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Focus, grandpa! </p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Just put the stupid wires on my head! I hate being a teenager!</p></sp>
+
+    <stage>[Marriage Counseling]
+    [Ugh! Arrgghh!]
+    [Ah! Uhhhhh!]</stage>
+            
+    <sp><speaker>Beth</speaker><p>:  Jerry, you can’t bend metal.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Then make a me that can!</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  How can I do that while I’m watching you totally fail to bend metal?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Good old Beth!</p></sp>
+
+    <sp><speaker>God Beth</speaker><p>:  The mind of a robot and the heart of an insect!</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Don’t talk that way about her.
+    What?
+    Oh, it hurts!
+    Oh, God.</p></sp>
+
+    <sp><speaker>God Beth</speaker><p>:  Stop. This representation displeases me.</p></sp>
+
+    <stage>[Aaah!]</stage>
+            
+    <sp><speaker>Beth</speaker><p>:  Good lord. How did you...?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Well, I had a feeling that, in your mind, the ideal version of me is one smart enough to see you as...</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  A goddess. Not such a stupid worm now, are you?</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Honey, when it comes to the subject of your ego, I’m Stephen [Bleep] hawkinson.</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  Ugh, it’s -- never mind. I love you.</p></sp>
+
+    <stage>[Smith garage]
+    [Processing, powering up]
+    [Buzz]</stage>
+            
+    <sp><speaker>Rick</speaker><p>:  Ugh agh.</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Rick! </p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Pants!</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Holy sh1t! Thanks, kids. You figured it out. Well, Summer did. Kind of weird that you were that willing to sell my existence out for some trim, Morty.</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  What?! </p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Pants!</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  But listen -- I forgive you both because you know what? I learned, today, something important -- the teenage mind is its own worst enemy. Oh, I also learned this... [Beeping] Operation Phoenix is not the fallback I thought it would be. I guess it’s back to the drawing board.</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Oh, my God!</p></sp>
+
+    <sp><speaker>Morty</speaker><p>:  Oh, my God!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  Oh, my God. Put some pants on! Put pants on.</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Grandpa’s back, baby! Grandpa’s -- [Buzz] Oh, man, I gotta pick up your parents. They have been blowin’ me up. One last swing for the road! Aaaaaaaaaaah!</p></sp>
+
+    <sp><speaker>Summer</speaker><p>:  For the love of God, get dressed!</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  So, what do you think? You wanna keep this marriage going a while longer?</p></sp>
+
+    <sp><speaker>Beth</speaker><p>:  At least until Morty has graduated high school. Oh. Mm.</p></sp>
+
+    <stage>[Moaning lightly]</stage>
+            
+    <sp><speaker>Rick</speaker><p>:  Aha, you see? What did I tell you two? It worked.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  You know what, Rick? I guess, in a way -- </p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  already lost interest. Get in the car. I’ve been inside a kid all day and, now, I can feel my bones scraping each other. Uh, just so you’re prepared, there’s a bunch of dead mes in the garage.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Huh! Sounds like our stories were connected by a theme.</p></sp>
+
+    <stage>[Laughter]</stage>
+            
+    <sp><speaker>Rick</speaker><p>:  Not really, Jerry. Probably a cosmetic connection your mind mistakes for thematic.</p></sp>
+
+    <sp><speaker>Jerry</speaker><p>:  Oh.</p></sp>
+
+    <sp><speaker>Rick</speaker><p>:  Old Rick! Ruinin’ everything!</p></sp>
+
+   <stage> ♪
+    [Squeaking]
+    [Ominous music plays]</stage>
+            
+    <sp><speaker>Vampire</speaker><p>:  Master.</p></sp>
+
+    <sp><speaker>Master</speaker><p>:  Speak.</p></sp>
+
+    <sp><speaker>Vampire</speaker><p>:  Coach feratu’s presence was discovered by the humans. He has been destroyed.</p></sp>
+
+    <sp><speaker>Master</speaker><p>:  No bother. The mortals shall soon -- I’m sorry, what did you say his name was?</p></sp>
+
+    <sp><speaker>Vampire</speaker><p>:  Coach feratu. Coach feratu.</p></sp>
+
+    <sp><speaker>Master</speaker><p>:  That was his real name, like his actual vampire name?</p></sp>
+
+    <sp><speaker>Vampire</speaker><p>:  No no no no. His vampire name was balik alistane.</p></sp>
+
+    <sp><speaker>Master</speaker><p>:  Why the [Bleep] would he name himself after a famous vampire movie? Was he doing a bit?</p></sp>
+
+    <sp><speaker>Vampire</speaker><p>:  I do not know, your unholiness.</p></sp>
+
+    <sp><speaker>Master</speaker><p>:  Jesus [Bleep] Christ. From now on, no more of this clever-name bullshit. When a vampire is pretending to be a human, they can just call themselves Alan Jefferson or something like that. It’s crazy, right? I mean, am I being an asshole? Okay, I feel like everybody in the room is looking at me like I’m the buzzkill. I’m not? Good. Okay. Great.</p></sp>
+
+    <stage>[Hiss]
+    Oh, my g--!
+    Did you get any of that?
+    It’s-a good-a show!
+    [Drumroll]</stage>
+    
+    </body>
+    </text>
+</TEI>

@@ -1,0 +1,27 @@
+xquery version "3.1";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare variable $mitford := collection('/db/mitford');
+declare variable $titles := $mitford//teiHeader//titleStmt/title;
+declare variable $textTitles := $mitford//teiHeader//titleStmt/title/string();
+declare variable $body := $mitford//body;
+declare variable $names := distinct-values($body//persName/@ref/string());
+
+<html>
+        <head><title>Top Ten Most Referenced People in the Digital Mitford Project</title></head>
+        <body>
+    <table>
+    <tr><th>The @ref of a Person</th><th>Filenames in Which the @ref is Used</th></tr>
+        {for $n in $names
+        let $test := $body[.//persName[@ref eq $n]]
+        let $filename := $test/tokenize(base-uri(), "/")[last()]
+        where count($test) gt 15
+        order by $n descending
+        
+        return
+            <tr><td>{tokenize($n, "#")[last()]}</td>
+            <td>{string-join(($filename), ', ')}</td>
+            </tr>
+        }
+    </table>
+    </body>
+    </html>

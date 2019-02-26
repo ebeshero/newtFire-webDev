@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "The Room Where it Happens"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>The Room Where it Happens</title>
+            </head>
+            <div type="song">
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Ah, Mister Secretary</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#burr">Mister Burr</persName>, sir</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Didja hear the news about good old <persName ref="#generalMercer">General Mercer</persName>?</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>No</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>You know Clermont Street?</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Yeah</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><seg type="#fact">They renamed it after him. The <persName ref="#generalMercer">Mercer</persName> <phr type="#legacy">legacy</phr> is secure</seg></l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Sure</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>And all he had to do was die</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>That’s a lot less work</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>We oughta give it a try</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Ha</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Now how’re you gonna get your debt plan through?</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I guess I’m gonna fin’ly have to listen to you</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Really?</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>"Talk less. Smile more."</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Ha</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Do whatever it takes to get my plan on the Congress floor</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Now, <persName ref="#madison">Madison</persName> and <persName ref="#jefferson">Jefferson</persName> are merciless.</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Well, hate the sin, love the sinner</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l><persName ref="#hamilton">Hamilton</persName>!</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I’m sorry <persName ref="#burr">Burr</persName>, I’ve gotta go</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>But—</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact">Decisions are happening over dinner</seg></l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Two Virginians and an immigrant walk into a room</l>
+                </sp>
+
+
+                <sp who="#burr #ensemble">
+                    <speaker>BURR AND ENSEMBLE</speaker>
+                    <l>Diametric’ly opposed, foes</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>They emerge with a compromise, having opened doors that were</l>
+                </sp>
+
+
+                <sp who="#burr #ensemble">
+                    <speaker>BURR AND ENSEMBLE</speaker>
+                    <l>Previously closed</l>
+                </sp>
+
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Bros</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>The immigrant emerges with unprecedented financial power</l>
+                    <l>A system he can shape however he wants</l>
+                    <l>The Virginians emerge with the nation’s capital</l>
+                    <l>And here’s the pièce de résistance:</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#burr">
+                        <speaker>BURR</speaker>
+                        <l>No one else was in</l>
+                        <l><seg type="#fact">The room where it happened</seg></l>
+                        <l>The room where it happened</l>
+                        <l>The room where it happened</l>
+                        <l>No one else was in</l>
+                        <l>The room where it happened</l>
+                        <l>The room where it happened</l>
+                        <l>The room where it happened</l>
+                        <l>No one really knows how the game is played</l>
+                        <l>The art of the trade</l>
+                        <l>How the sausage gets made</l>
+                        <l>We just assume that it happens</l>
+                        <l>But no one else is in</l>
+                        <l>The room where it happens.</l>
+                    </sp>
+
+
+                    <sp who="#ensemble">
+                        <speaker>ENSEMBLE</speaker>
+                        <l>The room where it happened</l>
+                        <l>The room where it happened</l>
+                        <l>Game is played</l>
+                        <l>How the sausage gets made</l>
+                        <l>Assume that it happens</l>
+                        <l>The room where it happens.</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l><persName ref="#jefferson">Thomas</persName> claims—</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName> was on <persName ref="#washington">Washington’s</persName> doorstep one day</l>
+                    <l>In distress ‘n disarray</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l><persName ref="#jefferson">Thomas</persName> claims—</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName> said—</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I’ve nowhere else to turn!</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>And basic’ly begged me to join the fray</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l><persName ref="#jefferson">Thomas</persName> claims—</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>I approached <persName ref="#madison">Madison</persName> and said—</l>
+                    <l>" know you hate ‘im, but let’s hear what he has to say."</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l><persName ref="#jefferson">Thomas</persName> claims—</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Well, I arranged the meeting</l>
+                    <l>I arranged the menu, the venue, the seating</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>But!</l>
+                    <l>No one else was in—</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l>The room where it happened</l>
+                    <l>The room where it happened</l>
+                    <l>The room where it happened</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>No one else was in—</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l>The room where it happened</l>
+                    <l>The room where it happened</l>
+                    <l>The room where it happened</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#burr">
+                        <speaker>BURR</speaker>
+                        <l>No one really knows how the</l>
+                        <l>Parties get to yesssss</l>
+                        <l>The pieces that are sacrificed in</l>
+                        <l>Ev’ry game of chesssss</l>
+                        <l>We just assume that it happens</l>
+                        <l>But no one else is in</l>
+                        <l>The room where it happens. </l>
+                    </sp>
+
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <l>Parties get to yesssss</l>
+                        <l>Ev’ry game of chesssss</l>
+                        <l>Assume that it happens</l>
+                        <l>The room where it happens.</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l>Meanwhile—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#madison">Madison</persName> is grappling with the fact that not ev’ry issue can be settled by
+                        committee</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Meanwhile—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Congress is fighting over where to put the capital—</l>
+                </sp>
+
+
+                <stage type="delivery">Company screams in chaos</stage>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>It isn’t pretty</l>
+                    <l>Then <persName ref="#jefferson">Jefferson</persName> approaches with a dinner and invite</l>
+                    <l>And <persName ref="#madison">Madison</persName> responds with Virginian insight:</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Maybe we can solve one problem with another and win a victory for the
+                        Southerners, in other words—</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Oh-ho!</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>A quid pro quo</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>I suppose</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Wouldn’t you like to work a little closer to home?</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Actually, I would</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Well, I propose the Potomac</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>And you’ll provide him his votes?</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Well, we’ll see how it goes</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Let’s go</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>No!</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>—one else was in</l>
+                    <l>The room where it happened</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l>The room where it happened</l>
+                    <l>The room where it happened</l>
+                    <l>No one else was in</l>
+                    <l>The room where it happened</l>
+                    <l>The room where it happened</l>
+                    <l>The room where it happened</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>My God!</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l>In God we trust</l>
+                    <l>But we’ll never really know what got discussed</l>
+                    <l>Click-boom then it happened</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>And no one else was in the room where it happened</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName>!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>What did they say to you to get you to sell <placeName>New York City</placeName> down the river?</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName>!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Did <persName ref="#washington">Washington</persName> know about the dinner?</l>
+                    <l>Was there Presidential pressure to deliver?</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName>!</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Or did you know, even then, it doesn’t matter</l>
+                    <l>Where you put the U.S. Capital?</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Cuz we’ll have the banks</l>
+                    <l>We’re in the same spot</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>You got more than you gave</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>And I wanted what I got</l>
+                    <l>When you got skin in the game, you stay in the game</l>
+                    <l>But you don’t get a win unless you play in the game</l>
+                    <l>Oh, you get love for it. You get hate for it</l>
+                    <l>You get nothing if you…</l>
+                </sp>
+
+
+                <sp who="#hamilton #company">
+                    <speaker>HAMILTON AND COMPANY</speaker>
+                    <l><phr type="#wait">Wait for it</phr>, <phr type="#wait">wait for it</phr>, <phr type="#wait">wait!</phr></l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>God help and forgive me</l>
+                    <l>I wanna build</l>
+                    <l>Something that’s gonna</l>
+                    <l>Outlive me</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#hamilton #jefferson #madison #washington">
+                        <speaker>HAMILTON/JEFFERSON/MADISON/WASHINGTON</speaker>
+                        <l>What do you want, <persName ref="#burr">Burr</persName>?</l>
+                        <l>What do you want, <persName ref="#burr">Burr</persName>?</l>
+                        <l>If you stand for nothing</l>
+                        <l><persName ref="#burr">Burr</persName>, then what do you fall for?</l>
+                    </sp>
+
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <l>What do you want, <persName ref="#burr">Burr</persName>?</l>
+                        <l>What do you want, <persName ref="#burr">Burr</persName>?</l>
+                        <l>What do you want, <persName ref="#burr">Burr</persName>?</l>
+                        <l>What do you want?</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I</l>
+                    <l>Wanna be in</l>
+                    <l>The room where it happens</l>
+                    <l>The room where it happens</l>
+                    <l>I</l>
+                    <l>Wanna be in</l>
+                    <l>The room where it happens</l>
+                    <l>The room where it happens</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#burr">
+                        <speaker>BURR</speaker>
+                        <l>I</l>
+                        <l>Wanna be</l>
+                        <l>In the room where it happens</l>
+                        <l>I</l>
+                        <l>I wanna be in the room…</l>
+                        <l>Oh</l>
+                        <l>Oh</l>
+                        <l>I wanna be</l>
+                        <l>I wanna be</l>
+                        <l>I’ve got to be</l>
+                        <l>I’ve got to be</l>
+                        <l>In that room</l>
+                        <l>In that big ol’ room</l>
+                    </sp>
+
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <l>I wanna be in</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>I wanna be in the room</l>
+                        <l>Where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>I wanna be in</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>I wanna be in</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens.</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>The art of the compromise—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Hold your nose and close your eyes</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>We want our leaders to save the day—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>But we don’t get a say in what they trade away</l>
+                </sp>
+
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>We dream of a brand new start—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>But we dream in the dark for the most part</l>
+                </sp>
+
+
+                <sp who="#burr #company">
+                    <speaker>BURR AND COMPANY</speaker>
+                    <l>Dark as a tomb where it happens</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+                    <sp who="#burr">
+                        <speaker>BURR</speaker>
+                        <l>I’ve got to be in</l>
+                        <l>The room…</l>
+                        <l>I’ve got to be...</l>
+                        <l>I’ve got to be...</l>
+                        <l>Oh, I’ve got to be in</l>
+                        <l>The room where it happens…</l>
+                        <l>I’ve got to be, I’ve gotta be, I’ve gotta be…</l>
+                        <l>In the room!</l>
+                        <l>Click-boom! </l>
+                    </sp>
+
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>The room where it happens</l>
+                        <l>I wanna be in the room</l>
+                        <l>Where it happens!</l>
+                        <l>Click-boom!</l>
+                    </sp>
+                </spGrp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Room Where It Happens</head>
+                <event xml:id="event55" when="1790-06-20"> <label>The Date of the Dinner</label><desc>June 20, 1790 was the date Jefferson claimed the dinner between himself, Hamilton, Madison, and a few others took place.</desc></event>
+                
+            </listEvent>
+        </back>
+    </text>
+</TEI>

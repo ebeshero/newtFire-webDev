@@ -1,0 +1,18 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/Nelson" version="1" owner="rparker" group="nelson" mode="775" created="2018-02-10T05:42:24.872Z">
+    <acl entries="2" version="1">
+        <ace index="0" target="GROUP" who="dh-group" access_type="ALLOWED" mode="5"/>
+        <ace index="1" target="GROUP" who="dba" access_type="ALLOWED" mode="7"/>
+    </acl>
+    <resource type="XMLResource" name="siteIndex.xml" skip="no" owner="admin" group="dba" mode="644" created="2018-02-10T05:42:32.169Z" modified="2018-02-10T05:42:32.169Z" filename="siteIndex.xml" mimetype="application/xml">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="NellCompaniesAddresses.tsv" skip="no" owner="admin" group="dba" mode="644" created="2018-02-10T05:42:28.634Z" modified="2018-02-10T05:42:28.634Z" filename="NellCompaniesAddresses.tsv" mimetype="application/octet-stream">
+        <acl entries="0" version="1"/>
+    </resource>
+    <resource type="BinaryResource" name="nelsonGrammarOutput.tsv" skip="no" owner="admin" group="dba" mode="644" created="2018-02-10T05:42:29.273Z" modified="2018-02-10T05:42:29.273Z" filename="nelsonGrammarOutput.tsv" mimetype="application/octet-stream">
+        <acl entries="0" version="1"/>
+    </resource>
+    <subcollection name="Old_grammarXML" filename="Old_grammarXML"/>
+    <subcollection name="Old_genderXML" filename="Old_genderXML"/>
+    <subcollection name="CSG_XML" filename="CSG_XML"/>
+</collection>

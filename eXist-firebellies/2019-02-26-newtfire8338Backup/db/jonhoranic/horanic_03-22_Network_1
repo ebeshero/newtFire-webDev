@@ -1,0 +1,25 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+
+declare variable $network :=
+
+string-join(
+let $f6 := collection('/db/dickinson/f6/')
+let $files := $f6/*
+let $app := $files//l//app
+let $rdg := $app/rdg
+let $wit := $rdg/@wit
+for $wGroup in $wit
+let $wTitles := tokenize($wGroup, '\s+')[starts-with(., '#')]
+for $sourceNode in $wTitles
+let $edge := $wGroup/parent::rdg
+let $poems := $wGroup/ancestor::titleStmt/title
+let $targets := $wGroup/tokenize(., '\s+')[starts-with(., '#')][not(. = $sourceNode)]
+let $TargetCount := count($targets)
+for $targetNode in $targets
+
+return concat($sourceNode, "&#x9;", $edge, "&#x9;", $poems, "&#x9;", $TargetCount, "&#x9;", $targetNode), "&#10;");
+
+let $saveAs := "f6_network.tsv"
+let $db := xmldb:store("/db/jonhoranic", $saveAs, $network)
+return $db

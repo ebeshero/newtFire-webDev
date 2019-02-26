@@ -1,0 +1,27 @@
+xquery version "3.0";
+(:  declare default element namespace "http://www.tei-c.org/ns/1.0";:)
+(: collection('/db/pacific/literary')//titleStmt/title[count(distinct-values(//body//persName)) gt 500]:)
+ 
+ (:collection('/db/pacific/literary')/distinct-values(.//body//persName):)
+ 
+for $play in collection('/db/shakespeare/plays')//PLAY
+let $title := $play/TITLE
+order by lower-case($title)
+return
+    <div>
+        <h2>{$title/string()}</h2>
+        <ul>{
+            for $char in $play//PERSONA
+            order by lower-case($char)
+            return
+                <li>{$char/string()}</li>
+        }</ul>
+    </div>
+
+
+
+(: PLAY[count(distinct-values(.//SPEAKER)) gt 40]/TITLE/text() :)
+
+
+
+
