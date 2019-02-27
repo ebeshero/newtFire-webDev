@@ -158,7 +158,7 @@
       </ul>
       
       
-      <p>Actually, both <code>doc()</code> and <code>collection()</code> are XPath functions, and we’ll be adding more XPath once you’ve designated the document
+      <p>Actually, both <code>doc()</code> and <code>collection()</code> are XPath expressions (<code>doc()</code> reaches for an XML document node and the <code>collection()</code> function retrieves a collection of document nodes). We’ll be adding more XPath once you’ve designated the document
          or collection: You can write Xpath expressions, use predicates, functions, and walk up and down axes. Your XPath expressions will locate results from all the files in a collection as long as those files are coded (at least structurally)
          in the same or similar ways.
       </p>
@@ -195,7 +195,7 @@
       <p>The above expression accesses a collection of files, the literary texts associated with our <a href="http://pacific.pitt.edu">Pacific voyages</a> project. It starts at the root of the eXist directory, always named <q>db</q> and steps down into a collection named <q>pacific</q>, and into a collection-inside-the-collection called <q>literary</q>. (There are a couple of other collections inside the <q>pacific</q> collection, named <q>voyages</q> and <q>mapping</q>, and you can access these collections by inputting their names in the appropriate directory path step inside the <code>collection()</code> function. Notice that after the <code>collection()</code> function, we are stepping down the XPath descendant axis with <code>//</code> and peering into two standard TEI elements that sit in a nested relation to one another. In the TEI header there must always be a <code>&lt;titleStmt&gt;</code> element, and it must contain a <code>&lt;title&gt;</code> element that is understood to be the title of the XML document. (You can use the <code>&lt;title&gt;</code> element elsewhere in a TEI document to mark titles of anything, say references in the document to other books, works of art, etc), but the <code>&lt;title&gt;</code> inside the <code>&lt;titleStmt&gt;</code> has a special function of identifying the title of the XML file itself. So, looking at your output you should see a list of those special <code>&lt;title&gt;</code> elements, which helps us to view at a glance the contents of a TEI collection like this. Stepping down the tree helps us to isolate just the piece of it that we want to return when we run (or <q>eval</q>) the XQuery code. </p></li>
       
      <li> <pre><code>declare default element namespace "http://www.tei-c.org/ns/1.0";
-            collection('/db/pacific/literary')/distinct-values(.//body//persName)</code></pre>
+            collection('/db/pacific/literary')/distinct-values(descendant::body//persName)</code></pre>
         <p>This XQuery illustrates the use of an XPath function, <code>distinct-values()</code>, so that we will return a list gathered from across <em>the entire </em>of the distinctly different names of people (indicated by the TEI <code>&lt;persName&gt;</code> element) referenced within the <code>&lt;body&gt;</code> portion of the document. (In the TEI, much like in HTML, the <code>&lt;body&gt;</code> is a major top-level structure in the text's hierarchy and typically contains a text, like in this case, the full text of a poem, novel, or play. Other parts of the TEI text include a header or <dfn>metadata</dfn>, or information <em>about</em> the document, such as its title (up in the <code>&lt;titleStmt&gt;</code> and publication data.) Here, we want to you to notice <em>how we positioned the <code>distinct-values()</code> function</em>: Notice that we have to keep the <code>collection()</code> function outside of <code>distinct-values()</code>, once we are <em>inside</em> the collection, we take distinct values, using <strong>the dot (<code>.</code>)</strong> which means (as it always does in XPath), <code>the self::* axis</code>. If you try running this query without the dot, the function will lake the precise context it needs to understand its starting point. The dot (or self axis)  refers to the collection as a whole.</p>
      
      
@@ -237,7 +237,7 @@
       <pre>
       declare default element namespace "http://www.tei-c.org/ns/1.0";
       let $pacific := collection('/db/pacific/voyages')/*
-      let $GeorgFile := $pacific<code>[.//author[contains(., 'Georg')]]</code>//titleStmt/title
+      let $GeorgFile := $pacific<code>[descendant::author[contains(., 'Georg')]]</code>//titleStmt/title
       return $GeorgFile
       </pre>
      
@@ -249,8 +249,7 @@
       &lt;title xmlns="http://www.tei-c.org/ns/1.0"&gt;A Voyage Round the World in His Majesty's Sloop, Resolution, commanded by Capt. James Cook, during the Years 1772, 3, 4, 5.&lt;/title&gt;
       </pre>
      
-     <p> Notice how we used <strong>the dot</strong> (<code>.</code>) in our XQuery FLWOR. We require the first dot in the variable <code>$GeorgFile</code> to set a starting point at the <code>self::*</code> axis, to indicate that we are stepping down <strong>from the position defined by the <code>$pacific</code> variable</strong>. 
-        (If we do not use the dot, we return zero results because the starting position of the XPath in the predicate is unclear to the computer parser! Try it yourself and notice what happens if you remove the dot from the expression.)</p>
+      <p> Notice how we referenced the <code>descendant::</code> axis in our XQuery FLWOR. We could also have used <code>.//</code> to indicate the <code>self::</code> axis, but we must NOT use <code>//</code>. We require the dot or the indication of the <code>descendant::</code> axis in the variable <code>$GeorgFile</code> to set a starting point, to indicate that we are <em>stepping down</em> from the position defined by the <code>$pacific</code> variable. (If we do not use the dot, we return zero results because the starting position of the XPath in the predicate is unclear to the computer parser! Try it yourself and see what happens.) </p>
       
       
       <h4>Examples of two related FLWOR Expressions, to demonstrate <code>Where</code> and <code>For</code> statements</h4>
