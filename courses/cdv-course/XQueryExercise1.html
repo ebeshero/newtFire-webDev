@@ -79,7 +79,7 @@ All's Well That Ends Well
          <li>Modify your expression to return only the main title of that play, and record your expression.</li>
          <li>Now, let’s see if we can find three very special plays that contains a count of more than 58 unique (distinct) speakers! First, see if you can find the play, and
             then return only its main title (recalling the code you wrote previously). You will need to use <code>count()</code> and <code>distinct-values()</code>, and you’ll need a construction involving 
-            <strong>count(of something) gt 58</strong> . 
+            <strong>a count(of something) greater than 58</strong> . 
             				<p>Starting from the collection, drill down to the <code>&lt;TEI&gt;</code> elements in the collection (you know there are 42 TEI root elements—one for each play), then filter them based
             on whether or not they contain more than 58 distinct speakers. You will need to tinker a little to make a filter based on getting a <code>count()</code> of <code>distinct values()</code>, either of @who attribute on <code>sp</code> or of the contents of <code>speaker</code> elements (that is up to you; either will <code>sp/@who</code> or <code>speaker</code> will work for our purposes). And you want to find out if that <code>count()</code> is greater than 58. Once you’re retreiving the three plays that meet that description, you can add
             path steps to retrieve just the main titles of those three plays.</p> 
@@ -99,7 +99,7 @@ All's Well That Ends Well
          			
       </ol>
       		
-      	<p>When you have completed the assignment copy and paste your expressions into a text file. You can save this as <code>.xql</code> or as <code>.xquery</code> (either file extension designates an XQuery script). Upload your text file containing your XQuery expressions to Courseweb.</p>
+      	<p>When you have completed the assignment copy and paste your expressions into a text file. Upload your text file containing your XQuery expressions to Courseweb.</p>
    </body>
    
    
