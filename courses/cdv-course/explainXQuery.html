@@ -218,7 +218,7 @@
          values defined by a Let statement. The <dfn>range variable</dfn> is designed to process and return a single value at a time, and we say that it <q><em>loops through</em></q> a list of multiple values.</li>
      
          <li><code>Where</code> (optional): filtering; analogous to predicates</li>
-         <li><code>Order by</code> (optional): alphabatize, etc. Always appears after a <code>Where</code> statement</li>
+         <li><code>Order by</code> (optional): alphabatize, etc. If you use it with a <code>Where</code> statement, <code>Order by</code> always has to appear after Where. Always appears after a <code>Where</code>.</li>
         
          <li><code>Return</code>: generates output</li>          
       </ul>
@@ -271,20 +271,23 @@
 
          <pre><code>declare default element namespace "http://www.tei-c.org/ns/1.0";
             let $cook := doc('/db/pacific/voyages/cookVoy2Pnum.xml') 
-            let $P := $cook//p[geo]
+            let $Paras := $cook//p[geo]
             let $geo := $cook//p/geo
             let $countlat := count ($geo[@select="lat"])
             let $countlon := count ($geo[@select="lon"])
-            <strong>for $p in $P </strong> </code>
-         (: To show the use of a range variable with <code>for</code>, try commenting this last line out, and changing the return expression to give <code>$P/@n</code> :)
+            <strong>for $p in $Paras </strong> </code>
+         (: To better understand how we use a range variable with
+            <code>for</code>, try commenting this last line out, and
+            changing the return expression below to give <code>$Paras/@n</code> :)
          <code>
             where $countlat gt $countlon
             return string-join(('paragraph',$p/@n),': ') 
             </code> 
          
          (: Note use of the string-join function, with its separator. Also notice which parts
-         of it take the <b>single-quotes</b> <code>' '</code>, and which parts don't! The single quotes,  <code>' '</code> , allow you to indicate you want some literal text to be returned here. Without it,
-         the computer thinks you are referring to an XPath expression. :) </pre>
+         of it take the <b>single-quotes</b> <code>' '</code>, and which parts don't! The single quotes,  <code>' '</code> , allow you to indicate you want some literal text 
+to be returned here. Without it, the computer thinks you are 
+referring to an XPath expression. :) </pre>
          
       </li></ol> 
       
@@ -379,7 +382,9 @@
             let $hamlet := doc('/db/shakespeare/plays/hamlet.xml')
             let $speakers := distinct-values($hamlet//SPEAKER)
             for $speaker at $pos in $speakers                                           
-            (: The above line creates a special variable named $pos that identifies the position value of each speaker in the list of all the distinct speakers :) 
+         (: The above line creates a special variable named $pos that
+         identifies the position value of each speaker in the sequence of all
+         the distinct speakers :) 
             let $speakerLength := string-length($speaker)
             where ends-with($speaker,'O')
             order by $speakerLength
