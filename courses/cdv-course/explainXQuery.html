@@ -33,7 +33,7 @@
       			
       <h3>How to Access our eXist XML database: </h3>
       			
-      <p>We are working with a particular XML database called eXist-db, which we have installed on the NewtFire server. Usually when we work on homework exercises and on project development, we will be working on the PSC eXist installation, but we can also write and run XQuery locally inside &lt;oXygen/&gt; by clicking on the little <q>XQuery Debugger</q> button right next to the <q>XSLT debugger</q> button in the top right of the &lt;oXygen/&gt; window to work with a batch of files we have saved locally. For our projects we tend to prefer working with an eXist installation either on a server or offline on a local computer because a) eXist has indexing tools that we use to make it more efficient to run over multiple collections stored on a remote server, and b) we can connect the XQuery scripts and XML files we have stored in eXist to our project websites. Here’s how to access our eXist database at the PSC:</p>
+      <p>We are working with a particular XML database called eXist-db, which we have installed on the NewtFire server. Usually when we work on homework exercises and on project development, we will be working on our NewtFire eXist installation, but we can also write and run XQuery locally inside &lt;oXygen/&gt; by clicking on the little <q>XQuery Debugger</q> button right next to the <q>XSLT debugger</q> button in the top right of the &lt;oXygen/&gt; window to work with a batch of files we have saved locally. For our projects we tend to prefer working with an eXist installation either on a server or offline on a local computer because a) eXist has indexing tools that we use to make it more efficient to run over multiple collections stored on a remote server, and b) we can connect the XQuery scripts and XML files we have stored in eXist to our project websites. Here’s how to access our NewtFire eXist database:</p>
       	<ol>
       	   <li>In a web browser, go to <a href="http://newtfire.org:8338/">http://newtfire.org:8338/</a></li>
       	   <li>Wait for eXist to load, and it will show you a page of several icons/images.</li>
@@ -246,7 +246,8 @@
      
       <pre>
        1
-      &lt;title xmlns="http://www.tei-c.org/ns/1.0"&gt;A Voyage Round the World in His Majesty's Sloop, Resolution, commanded by Capt. James Cook, during the Years 1772, 3, 4, 5.&lt;/title&gt;
+      &lt;title xmlns="http://www.tei-c.org/ns/1.0"&gt;A Voyage Round the World in His Majesty's Sloop, Resolution, commanded by Capt. James Cook, 
+      during the Years 1772, 3, 4, 5.&lt;/title&gt;
       </pre>
      
       <p> Notice how we referenced the <code>descendant::</code> axis in our XQuery FLWOR. We could also have used <code>.//</code> to indicate the <code>self::</code> axis, but we must NOT use <code>//</code>. We require the dot or the indication of the <code>descendant::</code> axis in the variable <code>$GeorgFile</code> to set a starting point, to indicate that we are <em>stepping down</em> from the position defined by the <code>$pacific</code> variable. (If we do not use the dot, we return zero results because the starting position of the XPath in the predicate is unclear to the computer parser! Try it yourself and see what happens.) </p>
@@ -256,38 +257,31 @@
       
       
     <ol>  <li>No <code>For</code> statement here):
-         <pre><code>
-            declare default element namespace "http://www.tei-c.org/ns/1.0";
+         <pre>declare default element namespace "http://www.tei-c.org/ns/1.0";
             let $cook := doc('/db/pacific/voyages/cookVoy2Pnum.xml')
             let $p := $cook//p[geo]
             let $geo := $cook//p/geo
             let $countlat := count ($geo[@select="lat"])
             let $countlon := count ($geo[@select="lon"])
             where $countlat gt $countlon
-            return $p</code></pre></li>
-      
+            return $p</pre>
+    </li>
       <li>Using a <code>For</code> statement, with an XQuery comment.<br/> 
          Note: An XQuery comment is formatted inside <q>smiley faces</q> like this: <code>(: your comment here :)</code>
 
-         <pre><code>declare default element namespace "http://www.tei-c.org/ns/1.0";
+         <pre>declare default element namespace "http://www.tei-c.org/ns/1.0";
             let $cook := doc('/db/pacific/voyages/cookVoy2Pnum.xml') 
             let $Paras := $cook//p[geo]
             let $geo := $cook//p/geo
             let $countlat := count ($geo[@select="lat"])
             let $countlon := count ($geo[@select="lon"])
-            <strong>for $p in $Paras </strong> </code>
-         (: To better understand how we use a range variable with
-            <code>for</code>, try commenting this last line out, and
-            changing the return expression below to give <code>$Paras/@n</code> :)
-         <code>
+            <strong>for $p in $Paras</strong> 
             where $countlat gt $countlon
             return string-join(('paragraph',$p/@n),': ') 
-            </code> 
-         
+             
          (: Note use of the string-join function, with its separator. Also notice which parts
-         of it take the <b>single-quotes</b> <code>' '</code>, and which parts don't! The single quotes,  <code>' '</code> , allow you to indicate you want some literal text 
-to be returned here. Without it, the computer thinks you are 
-referring to an XPath expression. :) </pre>
+         of it take the <b>single-quotes</b> <code>' '</code>, and which parts do not! The single quotes,  <code>' '</code> , allow you to indicate 
+that you want some literal text to be returned here. Without it, the computer thinks you are referring to an XPath expression. :) </pre>
          
       </li></ol> 
       
@@ -297,15 +291,14 @@ referring to an XPath expression. :) </pre>
          of results in alphabetical order, so, for example:
       </p>
       
-      <pre><code>order by $a </code></pre>
+      <div class="code"><code>order by $a</code> </div>
       
       <p>organizes results in alphabetical order sorted by the whatever is indicated in the
-         variable $a.</p>
+         variable <code>$a</code>.</p>
          <p>There are more complex ways to set up an <code>Order</code> statement to organize results. For example, you can <q>order
          by descending</q> to get reverse alphabetical order:</p> 
-      <pre><code>order by $a descending</code></pre>  
-         <p>Or order a set results according to their numerical position or count, in ascending
-         or descending order.
+      <div class="code"><code>order by $a descending</code></div>  
+         <p>Or you can order a set results according to their numerical position or count, in ascending or descending order.
       </p>
       
       <h3 id="Curly">Building New HTML or XML with XQuery: Using Curly Braces: <code>{ }</code></h3>
@@ -315,26 +308,36 @@ referring to an XPath expression. :) </pre>
          XQuery commands. So we use curly-braces<code> { } </code>to enclose any XPath or XQuery statements that we want to execute in XQuery, to separate
          them from the HTML or XML markup elements. Inside html elements, when we need to do
          some calculation or refer to a variable we defined in XQuery, we use the curly-braces
-         again. We'll work on some examples in class. Here is one example that may be helpful
+         again. We’ll work on some examples in class. Here is one example that may be helpful
          as a reference point, showing how to make an HTML page with a table of two columns,
          making a list of two related variable results side by side. The resulting html file
-         is coded to display a table of the distinct characters (&lt;SPEAKERS&gt;)in <i>Hamlet</i> from our Shakespeare collection, next to a count of their speeches (&lt;SPEECH&gt;) in
-         the play. We have highlighted the position of the curly-braces in the example:
+         is coded to display a table of the distinct characters (&lt;speaker&gt; elements) in <i>Hamlet</i> from our Shakespeare collection, next to a count of their speeches (&lt;sp&gt;) in
+         the play. Speeches in the play are coded in TEI like this, with speaker names entered as a child element. (Speaker identifiers are also coded as an attribute on the <code>sp</code> element. In the code below, we will simply work with the contents of the <code>speaker</code> element, but you could practice and see if you can adapt our example by changing it to work with the <code>@who</code> attribute instead.) </p>
+         <pre>
+&lt;sp xmlns="http://www.tei-c.org/ns/1.0" who="Francisco"&gt;
+  &lt;speaker&gt;Francisco&lt;/speaker&gt;
+  &lt;l xml:id="sha-ham101002" n="2"&gt;Nay, answer me: stand, and 
+     unfold yourself.&lt;/l&gt;
+&lt;/sp&gt;</pre>
+<p>We have highlighted the position of the curly-braces in the example:
       </p>
       
-      <pre>&lt;html&gt;
-         &lt;head&gt;&lt;title&gt;Title&lt;/title&gt;&lt;/head&gt;
+      <pre>
+      xquery version "3.1";
+declare default element namespace "http://www.tei-c.org/ns/1.0";  
+         &lt;html&gt;
+         &lt;head&gt;&lt;title&gt;Speakers and counts of their 
+         speeches in Hamlet&lt;/title&gt;&lt;/head&gt;
          &lt;body&gt;
          &lt;table&gt;
          
          <code>{</code>
-         let $hamlet := doc('/db/shakespeare/plays/hamlet.xml')
-         let $speeches := $hamlet//SPEECH
-         let $speakers := $hamlet//SPEAKER
-         
+         let $hamlet := doc('/db/apps/shakespeare/data/ham.xml')
+         let $speeches := $hamlet//sp
+         let $speakers := $hamlet//speaker
          let $distinctsp := distinct-values($speakers)
          for $sp in $distinctsp
-         let $count := count($speeches[SPEAKER = $sp])
+         let $count := count($speeches[speaker = $sp])
          order by $count descending
          return
          
@@ -346,32 +349,29 @@ referring to an XPath expression. :) </pre>
          &lt;/table&gt;
          
          &lt;/body&gt;
-         &lt;/html&gt;
-      </pre>
+         &lt;/html&gt;</pre>
       <p>Here’s what’s happening when we apply the curly braces <code>{ }</code>. These wrap the portion of our code <em>in which XQuery must be processed</em>. We write the basic structural HTML tags: the <code>HTML</code>, <code>head</code>, and <code>body</code> elements to encircle our FLWOR statement, since these do not require any special XQuery processing and just need to be output to create a well-formed and valid HTML document. We then encircle the whole FLWOR statement inside curly braces, and when you write this in the eXide window, you will notice that if you <strong>remove</strong> those curly braces and hit the <strong><q>Eval</q></strong> button, the XQuery code is simply output as text (and appears all the same color as the HTML documents). When you apply the curly braces, eXide applies color to show you the XQuery code is active. So, why do we need <em>a second set of curly braces</em> inside our return statement, where we output a <code>&lt;p&gt;</code> element? Try removing them and look at your output! The answer has to do with the use of HTML (or other nonXQuery markup code, such as XML or KML, etc) in our output: The computer parser requires the curly braces <strong>any time you are representing the contents of an angle-bracketed element</strong>, so that it can tell when a string of text inside the angle-bracketed tags is a literal text string (no curly braces) or XQuery code to be processed (nested within curly braces). 
       </p>    
       <h3 id="Strings">Applying XPath string functions to control output in XQuery
       </h3>
-      <p>Our model for the next two examples is drawn from Obdurodon’s <a href="http://dh.obdurodon.org/shakespeare-characters.html"><q>Generating a list of characters from a collection of Shakespeare plays in alphabetical order</q></a>. We have uploaded the same Shakespeare collection into our eXist database, so that these queries should work for you to run and explore the results.</p>
+      <p>Our model for the next two examples is adapted from Obdurodon’s <a href="http://dh.obdurodon.org/shakespeare-characters.html"><q>Generating a list of characters from a collection of Shakespeare plays in alphabetical order</q></a>. Try testing and exploring the XQuery scripts below with our Shakespeare collection on the newtFire eXist-db.</p>
       
       <h4>1. Returning a <code>concatenated string</code> of results in plain text:</h4>
-         <p>To follow this example, you should review the string functions in XPath, so <strong>see part III on Strings</strong> in Obdurodon’s <a href="http://dh.obdurodon.org/functions.xhtml">
-            The XPath functions we use the most</a>.</p>
+      <p>This example returns the characters in <i>Hamlet</i> whose names end with the letter “o”, and outputs the number of characters in their names. To follow this example, you should review the string functions in XPath, so <strong>see part III on Strings</strong> in Obdurodon’s <a href="http://dh.obdurodon.org/functions.xhtml">The XPath functions we use the most</a>.</p>
       
-      
-      
-      <pre><code>let $hamlet := doc('/db/shakespeare/plays/hamlet.xml')
-            let $speakers := distinct-values($hamlet//SPEAKER) 
-            for $speaker in $speakers
-            let $speakerLength := string-length($speaker)
-            where ends-with($speaker,'O')
-            (:order by string-length($speaker):)  (:commenting out! :)
-            order by $speakerLength
-            
-            (:return $speaker:) (:commenting out! :)
-            return concat ($speaker, ' has ', $speakerLength , ' characters')</code>
+      <pre>xquery version "3.1";
+     declare default element namespace "http://www.tei-c.org/ns/1.0";
+     let $hamlet := doc('/db/apps/shakespeare/data/ham.xml')
+     let $speakers := distinct-values($hamlet//speaker) 
+     for $speaker in $speakers
+     let $NameLength := string-length($speaker)
+      where ends-with($speaker,'o')
+       (:order by string-length($speaker):)  
+          (:commenting out! :)
+     order by $NameLength
          
-      </pre>
+       (:return $speaker:) (:commenting out! :)
+     return concat ($speaker, ' has ', $NameLength , ' characters.')</pre>
       
       <h4>2. Insert HTML formatting around the FLOWR statement to turn the results into a web page</h4> 
          <p>Notice the positioning of two pairs of curly braces <code>{ }</code> in this XQuery code:</p>
@@ -379,21 +379,20 @@ referring to an XPath expression. :) </pre>
        <pre>  &lt;html&gt;
          &lt;head&gt;&lt;title&gt;Title&lt;/title&gt;&lt;/head&gt;
          &lt;body&gt; <code>{</code>
-            let $hamlet := doc('/db/shakespeare/plays/hamlet.xml')
-            let $speakers := distinct-values($hamlet//SPEAKER)
-            for $speaker at $pos in $speakers                                           
+            let $hamlet := doc('/db/apps/shakespeare/data/ham.xml')
+            let $speakers := distinct-values($hamlet//speaker)
+            for $speaker at $pos in $speakers                              
          (: The above line creates a special variable named $pos that
-         identifies the position value of each speaker in the sequence of all
-         the distinct speakers :) 
+         identifies the position number of each speaker in the sequence of all the distinct speakers. We can use that position number in our output. :) 
+        
             let $speakerLength := string-length($speaker)
-            where ends-with($speaker,'O')
+            where ends-with($speaker,'o')
             order by $speakerLength
             return 
             &lt;p&gt;<code>{</code>concat ($speaker, '#', $pos, ' has ', $speakerLength , ' characters')<code>}</code>&lt;/p&gt;
            <code>}</code>
           &lt;/body&gt;  
-          &lt;/html&gt;
-       </pre>
+          &lt;/html&gt;</pre>
      
       <h3>Namespaces and XQuery output formats</h3>
  <p>While we frequently write XQuery to output plain text or HTML, we can also write it to produce output code in a namespace, such as specialized forms of XML like TEI or KML. Above, when we were processing XQuery on a TEI file for the Pacific project, we used a convenient line of code at the top of the file:
@@ -402,8 +401,7 @@ referring to an XPath expression. :) </pre>
       <pre>
          declare default element namespace "http://www.w3.org/1999/xhtml";
          declare namespace tei="http://www.tei-c.org/ns/1.0";
-         (:Continue writing XQuery here... :)
-      </pre>
+         (:Continue writing XQuery here... :)</pre>
       <p>The top line of our example above is a default element namespace line, which we're setting for our output format, the HTML namespace. (We found it by opening an HTML file in oXygen, and just pasted it in here.) The default element namespace won't require us to set prefixes, but if we want to be processing  code from a different namespace, we need to declare it too. The TEI elements being processed will all require the <code>tei:</code> prefix in front for the code to properly distinguish these elements. Note: Attributes are in no namespace at all, but their parent (hosting) elements are what is namespaced. That means you only need to use the namespace prefix on the element names, not the attributes.</p>    
       <h3>Links to Some Excellent XQuery Resources:</h3>
       
