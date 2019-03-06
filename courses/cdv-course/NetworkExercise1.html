@@ -48,36 +48,22 @@ Agolanti	novella	Pampinea
 Agolanti	novella	Filostrato 
 Agolanti	novella	Lamberti 
 Lamberti	novella	Pampinea 
-Lamberti	novella	Filostrato 
-</pre>
+Lamberti	novella	Filostrato </pre>
       <p>This is a portion of a much larger TSV file that represents <dfn><strong>co-occurrence network data</strong></dfn>, that is, it shows individual characters from <cite>The Decameron</cite> who are connected with each other by being present in the same portion of the text, whether in the introduction or concluding <q>frame</q> portions of each day of storytelling, the <q>floatingFrame</q> sections in which the frame narrators provide commentary inside the story sections, and the stories themselves in the story or <q>novella</q> level. These characters <em>appear together in the same locations</em> in the text, and this is a typical co-occurrence relationship for network analysis, which connects <code>nodes</code> (the characters, here) and <code>edges</code> (what they share or what location host them both, whether that is inside a <code>&lt;floatingText&gt;</code> or <code>&lt;div type="novella"&gt;</code> here). For more on networks of co-occurrence see our <cite><a href="http://ebeshero.github.io/thalaba/cytosc.html">Introduction to Network Analysis and Cytoscape for XML Coders</a></cite>. That is the kind of network you will be plotting from XML in this exercise.</p>    
       
-         <p>You may work with any of our student project files to plot a network of co-occurrence of any kind that interests you, but keep in mind our advice in our tutorial: <strong>keep it simple</strong> with just one kind of node (say, individual names, place names, reading witnesses, etc.) and some unit of co-occurence drawn from the structure of your XML files. Your project files are loaded into <a href="http://newtfire.org:8338/">our eXist database</a>, so you may access them from the following locations:</p>
-      <ul>
-         <li>Hamilton project (GitHub: <a href="https://github.com/ahunker/Hamilton-Project">https://github.com/ahunker/Hamilton-Project</a>) <strong>coded in TEI</strong>: There is a single collection that holds two directories, containing song lyrics from Act One and Act Two of the musical. You can choose to work with the whole musical, or with either one of the subcollections inside: 
-            <pre><code>collection('/db/hamilton/')</code></pre>
-         
-         </li>
-         <li>Decameron project (GitHub: <a href="https://github.com/jlm323/DecameronProject">https://github.com/jlm323/DecameronProject</a>) <strong>coded in TEI</strong>: You can choose to work with the English Decameron TEI file by itself: 
-         <pre><code>doc('/db/decameron/engDecameronTEI.xml')</code></pre>
-            or with the collection of the pair of English and Italian files, if you want to plot a graph that compares something between the two:
-           <pre><code>collection('/db/decameron/')</code></pre> 
-         </li>
-         <li>City Slave Girls project (GitHub: <a href="https://github.com/RJP43/CitySlaveGirls">https://github.com/RJP43/CitySlaveGirls</a>) <strong>coded in TEI</strong>:  
-         <pre><code>collection('/db/Nelson/CSG_XML/')</code></pre></li>
-         <li>Emily Dickinson project, fascicle 16 files (GitHub: <a href="https://github.com/ebeshero/EmilyDickinson16">https://github.com/ebeshero/EmilyDickinson16</a>) <strong>coded in TEI</strong>: : 
-         <pre><code>collection('/db/dickinson/f16/')</code></pre></li>
-      </ul>
-
+      <p>You may work with any of our student project files loaded into <a href="http://newtfire.org:8338/">our eXist database</a> to plot a network of co-occurrence of any kind that interests you, but keep in mind our advice in our tutorial: <strong>keep it simple</strong> with just one kind of node (say, individual names, place names, reading witnesses, etc.) and some unit of co-occurence drawn from the structure of your XML files.</p>
       
 <h3>Planning the XQuery to produce network data for Cytoscape</h3>   
-      <p>Each of these projects is coded in TEI. Since we are outputting plain text and not code in a namespace, we can simplify our XQuery by declaring the TEI as the default namespace at the top of the file (so that you will not need to use the <code>tei:</code> prefix in referring to elements). To explore the code and look for things to try plotting, we recommend you pull from the GitHub projects to open the files in &lt;oXygen/&gt; to study, using XPath and the Outline view (<code>Window → Show View → Outline</code>).</p>     	
-      <pre><code>xquery version "3.0";
-declare default element namespace "http://www.tei-c.org/ns/1.0";</code></pre>
+
+         <p>To explore the code and look for things to try plotting, we recommend you pull from <a href="https://github.com/ebeshero/DHClass-Hub/blob/master/Sites/2019CDVSites.md">your project GitHub repos</a> to open the files in &lt;oXygen/&gt; to study, using XPath and the Outline view (<code>Window → Show View → Outline</code>).</p>     	
+     
       <p>Study the XML code from a sample project file (ideally in &lt;oXygen/&gt;) to identify a <em>co-occurrence relationship</em> that interests you. For example, which places are mentioned together in the frame narration vs. the stories in <cite>The Decameron</cite>? Your network does not have to be about people and places, but could be based on something else you have marked, such as the different publications that represented particular poems in the Emily Dickinson collection.</p>
       <p><strong>Note:</strong> You may wish to update your project files in our eXist database (and as you review and plot your output data you will almost certainly see evidence of tagging errors like extra spaces in elements that might yield two separate nodes with the same name, etc.). To update the file, go to <code>File → Manage</code>, browse for your project directory and locate the file you want to change, and delete it from the database by selecting it and clicking on the trashcan symbol. Upload your new file by clicking on the upload button to the left of the trashcan.) </p>
+ 
       
       <img src="eXideManage.png" alt="location of trashcan and upload buttons in the eXist DB Manager"/>
+      <p>If the project XML was encoded in the TEI namespace you will need to declare the TEI as the default namespace at the top of the file, <a href="explainXQuery.html">following the examples in our XQuery tutorial</a>. (At the top of the XQuery script, you will need the following line:</p>
+      <pre><code>declare default element namespace "http://www.tei-c.org/ns/1.0";</code></pre>
       <p>Networks of data are created from <code>nodes</code> connected by <code>edges</code>. For Cytoscape to read and plot network data, it requires a CSV or TSV import in the form of:</p>
       <pre><code>Source-Node&#x9;Edge&#x9;Target-Node</code></pre>
       <p>We typically use a TSV because sometimes our node data contains commas and simple white spaces, but it never contains a tab character, so we know we can safely use it as a separator character. Since our output will be strings of text, we will need to use the <code>concat()</code> function to concatenate (or combine together) each single piece we need for each line, including the tab characters, <code>&amp;#x9;</code>. Read about <code>concat()</code> and its cousin <code>string-join()</code> in the Michael Kay book on p. 545 or search for <q>concat</q> on <a href="http://www.w3schools.com/xsl/xsl_functions.asp">the w3schools XSLT, XPath, and XQuery Functions page</a> . We will actually want to use these two functions together when we return our text output, because we will want to produce the following format for our TSV.</p>
@@ -127,12 +113,6 @@ string-join(</code>
    let $engpeople := [stuff]
    let $engdistinctPs := [stuff]
    for $edp in $engdistinctPs
-      let $peers:= 
-      if (<code>condition 1--the floating frames</code>) 
-            then <code>distinct-values(XPath-to-list-of-peers-in-floatingText)</code>
-      else if (<code>condition 2--the novellas</code>) 
-            then <code>distinct-values(XPath-to-list-of-peers-in-novellas)</code>
-      else <code>distinct-values(XPath-to-all-the-other-peers-not-covered-in-the-other-conditions)</code>
 
       let $edgeType:=
          if (<code>condition 1--the floating frames</code>) 
@@ -147,6 +127,13 @@ string-join(</code>
       else if (<code>condition 2--the novellas</code>) 
             then <code>count(XPath-to-list-of-peers-in-novellas)</code>
       else <code>count(XPath-to-all-the-other-peers-not-covered-in-the-other-conditions)</code>
+         
+    let $peers:= 
+      if (<code>condition 1--the floating frames</code>) 
+            then <code>distinct-values(XPath-to-list-of-peers-in-floatingText)</code>
+      else if (<code>condition 2--the novellas</code>) 
+            then <code>distinct-values(XPath-to-list-of-peers-in-novellas)</code>
+      else <code>distinct-values(XPath-to-all-the-other-peers-not-covered-in-the-other-conditions)</code>
 
       for $peer in $peers
       return
