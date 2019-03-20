@@ -1,0 +1,64 @@
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Schematron Exercise 1</title>
+        <link rel="stylesheet" type="text/css" href="explain.css" />
+    </head>
+    <body>
+        <!--#include virtual="top.html" -->
+        <section title="exerciseName">
+            <h1><span class="banner">Schematron Exercise 1: Checking the Banksy files</span></h1>
+        </section>
+        <a href="http://schematron.com"><img src="schematronLogo.png" alt="Schematroll, the Schematron mascot"/></a><span class="smaller">Meet Schematroll, the <a href="http://schematron.com/">Schematron</a> mascot! Schematroll is a cross between a <a href="http://members.optusnet.com.au/bilbies/About_Bilbies.htm">bilby</a> and a <a href="https://www.bushheritage.org.au/species/bettongs">bettong</a>.</span>
+        <section title="preliminaries">
+            <h3>Preliminaries</h3>
+            <p>Before beginning this assignment, please thoroughly read <a
+                    href="http://newtfire.org/dh/explainSchematron.html">our introduction to
+                    Schematron</a>. This tutorial will be useful to you during this assignment and
+                the <a href="http://newtfire.org/dh/SchematronExercise2.html">Schematron Exercise
+                    2</a>. To begin this assignment, you will need to open a new Schematron document
+                in &lt;oXygen/&gt; under <strong>File &#8594; New &#8594; New Document &#8594;
+                    (scroll to Schematron in the alphabetized list) &#8594; Schematron</strong>.
+                Once opened, you will keep the default xml line at the top, but you will delete
+                everything from <code>&lt;sch:schema&gt;</code> down. You will then replace this
+                with:</p>
+            <pre>&lt;schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2"
+    xmlns:sqf="http://www.schematron-quickfix.com/validator/process"
+    xmlns="http://purl.oclc.org/dsdl/schematron"&gt;
+       
+        
+        &lt;/schema&gt;</pre>
+            <p><span class="smaller">You will be writing your Schematron <strong>inside</strong> the
+                        <code>&lt;schema&gt;</code> root element.</span></p>
+        </section>
+        <section title="analysisOfTask">
+            <h3>Analysis of the task</h3>
+            <section title="background">
+                <h4>Background:</h4>
+                <p>The Banksy project team is coding <code>&lt;location&gt;</code> elements indicating where in the world Banksy artwork was made. Sometimes there are errors in their recording of latitude and longitude attributes that are hard to spot in the code and cannot really be captured with their Relax NG schema. We found one of these errors (at an early stage of the project) by browsing <a href="http://banksy.newtfire.org/html/map.html">the map on their website</a> and selecting an artwork that looked to be in Japan, and turned out to really be made in Melbourne, Australia.</p>
+                <p>The Banksy file in that is mapped in Japan when it should be in Australia (at that early stage in the project) was coins_change.xml, which you should inspect as posted in for this exercise on DHClass-Hub. <a href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Assignments/banksy_XML/coins_change.xml">Access the file here</a> and pull it in or download it to work with in this exercise. Open the file in oXygen. Take a close look at the encoding for the <code>&lt;location&gt;</code> element and its <code>@lat</code>  and <code>@long</code> attributes.</p>
+   <pre>&lt;location lat="37.8136" long="144.9631"&gt;Melbourne, AU&lt;/location&gt;</pre>
+                <p>A crash course in geocoding may be in order to understand the issue: Latitude measurements indicate how far north or south of the equator a location is. Longitude measurements tell you how far east or west of the Prime Meridian (in Greenwich near London, England) a location is. Here’s <a href="https://journeynorth.org/tm/LongitudeIntro.html">a handy explanation of these concepts with visuals</a>. The problem with the encoding in the coins_change.xml file is that it is positioning the location <strong>north</strong>  of the equator by using a positive number. From this example, we can see where errors can easily occur in coding either the <code>@lat</code>  or <code>@long</code> attributes on the Banksy project.</p>
+            </section>
+            <section title="task">
+                <h4>The task:</h4>
+                <p></p>
+                <p>Your task is to write a Schematron file and create a Schematron pattern to deal with location geocoding problems. Inside the pattern, construct some rules with the context set on the <code>location</code> element.</p>
+                <p>For the purposes of this assignment, we will ask you to work with coins_change.xml we've been looking at, as well as <a href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Assignments/banksy_XML/looting_soldier.xml">looting_soldier.xml</a> in the Banksy collection, each of which is misplaced for either the <code>@lat</code> or <code>@long</code> attribute.</p>
+                <ol>
+                    <li>Write Schematron rules to make sure that a location marked in "AU" (whose text node contains "AU") <em>must</em> have a longitude reading that is in the far east of the Prime Meridian (a value greater than 100), and <em>must</em> have a positive value, greater than zero, and that the <strong>latitude reading</strong> <em>must</em> be less than zero (or have a negative value) to place it in the eastern and southern hemispheres.</li>
+                    <li>Write a Schematron rule to make sure that a location marked in the USA <em>must</em> have a <strong>longitude reading</strong> that is west of the Prime Meridian (a value less than zero, or a negative number), and that the <strong>latitude reading</strong> <em>must</em> have a positive value, greater than zero to place it in the western and northern hemispheres.</li>
+                </ol>
+            </section>
+        </section>
+        <section title="uploading">
+            <h3>Submission:</h3>
+            <p>Upload your completed Schematron schema and your re-created XML document
+                    (<strong>with your associated Schematron line</strong>) on Courseweb. Please
+                follow our <a href="http://dh.obdurodon.org/file-naming_conventions.xhtml">standard
+                    filenaming conventions for homework assignments uploaded to Courseweb</a>.</p>
+        </section>
+    </body>
+</html>
