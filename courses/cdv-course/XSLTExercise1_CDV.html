@@ -76,18 +76,15 @@
       <span class="smaller">There is another way to copy, called "deep copy" in XSLT, but we do not want use it here. When you use "deep copy" in XSLT, you reproduce the full directory tree underneath a given element, so the understanding is that we would match on the root element <em>only</em>, and reproduce all the descendents of that one node just as they are. We like the "on-no-match-shallow-copy" approach because we do not necessarily want to copy every node just as it is in the original. We only want to copy if it we do not want to write a new template rule that will change it. </span></p>
      </li>
         <li>We will begin by processing just one file until we are certain of the changes we want to make to the whole collection. Keep one Banksy file open, and test your XSLT on this file.</li>
-           <li>Next, we will simply write our template rules to match on the particular elements we wish to change. We want to<ul> 
-              <li>add an <code>@medium</code> to the <code>title</code> element, and the value of this attribute needs to be the <code>@type</code> on the <code>medium</code> element.</li>  
-              <li><strong>remove</strong> the medium element  
-              </li></ul>
-         Review our <a href="explainXSLT.html">Introduction to XSLT</a> to see how to write a template match on any particular element, and how to output its contents using <span class="code">&lt;xsl:apply-templates/&gt;</span>.</li>		
+           <li>Next, we will simply write our template rules to match on the particular elements we wish to change. Review our <a href="explainXSLT.html">Introduction to XSLT</a> to see how to write a template match on any particular element, and how to output its contents using <span class="code">&lt;xsl:apply-templates/&gt;</span>.</li>		
         <li> We need to add an attribute value to our <code>title</code> element, and for this we will work with <strong>Attribute Value Templates</strong> (or <strong>AVT</strong>), a handy special format in XSLT. An AVT offers a special way to extract or calculate information from our input XML to output in an attribute value. You need to look at some examples of AVTs in order to write one yourself, so for this last task, go and look at the examples in Obdurodon’s <a href="http://dh.obdurodon.org/avt.xhtml">Attribute Value Templates (AVT) tutorial</a>. Apply what you learn there to position a new attribute on the title element that pulls its information from the <code>medium/@type</code> in the source file, and output its contents.</li>
         <li>Next we need to write a template rule that will <strong>suppress</strong> the <code>medium</code> element from the source file. How do you write XSLT to remove an element? Look this up in our XSLT tutorial and find out how to do this. </li>
         <li>Finally, we want to add the Schematron association line using XSLT. Look at the syntax you need by first associating a Schematron line with one of your XML files. Then, study this <a href="https://www.w3schools.com/xml/ref_xsl_el_processing-instruction.asp">w3 schools example of how to add a processing instruction with XSLT</a>. (This is a weird example showing how to associate a CSS file with an XML file. But the same logic applies with slightly different syntax to generate a processing instruction beneath the document node. Write a template rule that adds a Schematron line. To write this rule, first understand that XSLT template rules can match on <em>any</em> kind of XML node (<code>element()</code>, <code>attribute()</code>, <code>comment()</code>, <code>processing-instruction()</code>, and more). You will want to preserve the existing processing instruction, and add a new one to follow it. We will get you started here:  
         <pre>&lt;xsl:template match="processing-instruction()"&gt; 
        &lt;xsl:copy/&gt;
       
-     &lt;!--ebb: The xsl:copy instruction above says to fully copy out the existing processing-instruction, which is the Relax NG schema line. Write your code to add the Schematron line after this point. --&gt;
+     &lt;!--ebb: The xsl:copy instruction above says to fully copy out the existing processing-instruction, which is the Relax NG schema line. 
+     Write your code to add the Schematron line after this point. --&gt;
    &lt;/xsl:template&gt;</pre>
         
         </li>
