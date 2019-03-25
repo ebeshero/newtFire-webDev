@@ -1,0 +1,104 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   
+   	
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>XSLT Exercise 1</title>
+   </head>
+   
+   
+   
+   <body>
+      <!--#include virtual="top.html" -->
+      		
+      			
+      <h1><span class="banner">CDV: XSLT Exercise 1</span></h1>
+      			
+      			
+      			
+      			
+      <p>Our first XSLT assignment is an Identity Transformation, a kind transformation we have to do frequently in our projects when we need to make specific changes to our encoding. We want to make a small change to the encodin, and we want to add a Schematron association line to all of the Banksy collection files. We will work with the same collection of Banksy XML files we used on the XPath test.</p>
+     <ul><li>Do a <code>git pull</code> on the DHClass-Hub, and find the <code>Assignments/banksy_XML</code> directory. This is a modified version of the Banksy project XML collection for use in this exam.</li>
+      <li>Copy the <code>banksy_XML</code> directory into your own local space (*outside of DHClass-Hub*) to work on this assignment.</li> 
+      </ul>
+      
+      
+      <p>
+         To begin, open any one of the Banksy XML files in oXygen and look at the encoding. In the <code>blinded_napoleon.xml</code> file, take a look at the <code>sourceDesc</code> element: </p>
+  <pre>
+     &lt;sourceDesc&gt;
+          &lt;bibl&gt;
+              &lt;title&gt;Blinded Napoleon&lt;/title&gt;
+              &lt;date when="2018"/&gt;
+              &lt;medium type="spray_paint"/&gt;
+              &lt;location lat="48.8566101" long="2.3514992"&gt;Paris, FR&lt;/location&gt;
+              &lt;ref target="http://www.banksy.co.uk/"&gt;
+              Banksy's Personal Site&lt;/ref&gt;
+              &lt;ref target="https://www.instagram.com/banksy/?hl=en"&gt;
+              Banksy's Personal Instagram&lt;/ref&gt;
+              &lt;ref target="https://www.thisiscolossal.com/2018/06/banksy-in-paris/"&gt;
+              Article That Supplied Information for Markup&lt;/ref&gt;
+          &lt;/bibl&gt;
+      &lt;/sourceDesc&gt;
+  </pre>
+  
+      <p>Here are two changes we want to make to our XML file:</p> 
+      <ul><li>Let’s pretend that the Banksy team recently decided to change its XML encoding to get rid of the <code>medium</code> element and move the information from its <code>@type</code> attribute up to the <code>title</code> element. They want to change all the encoding to move the information from <code>&lt;medium type="??"&gt;</code> to  <code>&lt;title medium="??">.....&lt;/title&gt;</code>.</li>
+         <li>We want to add a Schematron association line to apply the Schematron you wrote for Schematron Exercise 1 to every file in the collection.</li>
+      </ul>
+         <p>You may already be calculating how to do these tasks with a regular expression Find and Replace and by going through the collection one by one and adding a Schema association line, but these would be very tedious to do file by file in a collection. Not only will writing XSLT make this easier to process the entire collection at once, but when you write an XSLT script to handle these changes, you will be producing documentation of a major project change you are implementing. </p>
+      <p>To begin, open a new XSLT stylesheet in &lt;oXygen&gt; and switch to the XSLT view. We will have some housekeeping to do as we get started:</p>
+      <h3>Setting up the Stylesheet</h3>
+
+     .<p>Change the XSLT root element to process with version 3.0: Change the version line as marked in purple below: </p>
+      <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    exclude-result-prefixes="xs"
+    <span style="color:purple;">version="3.0"</span>>
+    
+&lt;/xsl:stylesheet&gt;</pre>
+      
+      
+      <h3>Writing the Identity Transformation!</h3>
+      
+      
+     <ol> <li>We will give you your first template rule, to set this as an <em>identity transformation</em>. We’re going to use a new form for this in version XSLT 3.0,
+        so that is why we have set <code>version="3.0"</code> in our stylesheet template above. <span class="smaller">(If you are curious about older 2.0 approaches, you can see an old form here in the first template rule of our Identity transformation of Shakespeare’s sonnets, which you can download, save and open from <a href="SonnetIDTransform.xsl">here</a>. That old first rule matches on all nodes, elements and attributes throughout the document and simply copies them. It’s perfectly fine to use that older template rule in place of the one we show you below, but we like the simplicity of this new form much better.)</span>.
+      <div class="code">
+         &lt;xsl:mode on-no-match="shallow-copy"/&gt; 
+      </div>
+      <p> This XSLT statement is the <em>opposite</em> of the <span class="code">xsl:template match</span> we have been showing you in <a href="explainXSLT.html">our XSLT tutorial</a>. You basically say, if I do not write a template rule to <em>match</em> an element, attribute, or comment node, really of any part of the document that I do not mention in a template match rule, XSLT should simply make a copy of that element and output it. Try running this and look at your output: it will look exactly <em>identical</em> to the current XML document. Obviously we do not need to do this <em>unless</em> we want to make changes with template match rules! 
+      <span class="smaller">There is another way to copy, called "deep copy" in XSLT, but we do not want use it here. When you use "deep copy" in XSLT, you reproduce the full directory tree underneath a given element, so the understanding is that we would match on the root element <em>only</em>, and reproduce all the descendents of that one node just as they are. We like the "on-no-match-shallow-copy" approach because we do not necessarily want to copy every node just as it is in the original. We only want to copy if it we do not want to write a new template rule that will change it. </span></p>
+     </li>
+        <li>We will begin by processing just one file until we are certain of the changes we want to make to the whole collection. Keep one Banksy file open, and test your XSLT on this file.</li>
+           <li>Next, we will simply write our template rules to match on the particular elements we wish to change. We want to<ul> 
+              <li>add an <code>@medium</code> to the <code>title</code> element, and the value of this attribute needs to be the <code>@type</code> on the <code>medium</code> element.</li>  
+              <li><strong>remove</strong> the medium element  
+              </li></ul>
+         Review our <a href="explainXSLT.html">Introduction to XSLT</a> to see how to write a template match on any particular element, and how to output its contents using <span class="code">&lt;xsl:apply-templates/&gt;</span>.</li>		
+        <li> We need to add an attribute value to our <code>title</code> element, and for this we will work with <strong>Attribute Value Templates</strong> (or <strong>AVT</strong>), a handy special format in XSLT. An AVT offers a special way to extract or calculate information from our input XML to output in an attribute value. You need to look at some examples of AVTs in order to write one yourself, so for this last task, go and look at the examples in Obdurodon’s <a href="http://dh.obdurodon.org/avt.xhtml">Attribute Value Templates (AVT) tutorial</a>. Apply what you learn there to position a new attribute on the title element that pulls its information from the <code>medium/@type</code> in the source file, and output its contents.</li>
+        <li>Next we need to write a template rule that will <strong>suppress</strong> the <code>medium</code> element from the source file. How do you write XSLT to remove an element? Look this up in our XSLT tutorial and find out how to do this. </li>
+        <li>Finally, we want to add the Schematron association line using XSLT. Look at the syntax you need by first associating a Schematron line with one of your XML files. Then, study this <a href="https://www.w3schools.com/xml/ref_xsl_el_processing-instruction.asp">w3 schools example of how to add a processing instruction with XSLT</a>. (This is a weird example showing how to associate a CSS file with an XML file. But the same logic applies with slightly different syntax to generate a processing instruction beneath the document node. Write a template rule that adds a Schematron line. To write this rule, first understand that XSLT template rules can match on <em>any</em> kind of XML node (<code>element()</code>, <code>attribute()</code>, <code>comment()</code>, <code>processing-instruction()</code>, and more). You will want to preserve the existing processing instruction, and add a new one to follow it. We will get you started here:  
+        <pre>&lt;xsl:template match="processing-instruction()"&gt; 
+       &lt;xsl:copy/&gt;
+      
+     &lt;!--ebb: The xsl:copy instruction above says to fully copy out the existing processing-instruction, which is the Relax NG schema line. Write your code to add the Schematron line after this point. --&gt;
+   &lt;/xsl:template&gt;</pre>
+        
+        </li>
+        
+        <li>When you have made these changes to one Banksy XML file, we will pause a moment, and continue this together in class to apply this to a collection of XSLT files. We will do this part together in class at our next meeting. </li>
+     </ol>
+      <p>When you are finished, save your XSLT file  with the <code>.xsl</code> file extension and following our usual homework filenaming conventions. (You don’t need to alter the filenames of the XML files.) Submit 1) your XSLT file, 2) your input XML, and 3) your output XML to the appropriate place in Courseweb.</p>					
+    
+   </body>
+   
+   
+   
+   
+</html>
