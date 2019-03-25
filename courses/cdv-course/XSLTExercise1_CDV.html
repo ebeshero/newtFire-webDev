@@ -47,7 +47,7 @@
   </pre>
   
       <p>Here are two changes we want to make to our XML file:</p> 
-      <ul><li>Let’s pretend that the Banksy team recently decided to change its XML encoding to get rid of the <code>medium</code> element and move the information from its <code>@type</code> attribute up to the <code>title</code> element. They want to change all the encoding to move the information from <code>&lt;medium type="??"&gt;</code> to  <code>&lt;title medium="??">.....&lt;/title&gt;</code>.</li>
+      <ul><li>Let’s pretend that the Banksy team recently decided to change its XML encoding inside this <code>sourceDesc</code> element, to get rid of the <code>medium</code> element and move the information from its <code>@type</code> attribute up to the <code>title</code> element. They want to change all the encoding to move the information from <code>&lt;medium type="??"&gt;</code> to  <code>&lt;title medium="??">.....&lt;/title&gt;</code>.</li>
          <li>We want to add a Schematron association line to apply the Schematron you wrote for Schematron Exercise 1 to every file in the collection.</li>
       </ul>
          <p>You may already be calculating how to do these tasks with a regular expression Find and Replace and by going through the collection one by one and adding a Schema association line, but these would be very tedious to do file by file in a collection. Not only will writing XSLT make this easier to process the entire collection at once, but when you write an XSLT script to handle these changes, you will be producing documentation of a major project change you are implementing. </p>
