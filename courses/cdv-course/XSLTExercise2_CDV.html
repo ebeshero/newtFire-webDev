@@ -15,16 +15,13 @@
         <!--#include virtual="top.html" -->
         <h1><span class="banner">XSLT Exercise 2</span></h1>
         <h3>The input text</h3>
-        <p>For this assignment we’ll be producing HTML from a TEI XML file developed by the Akira project team on newtFire in the spring of 2018. The XML file is available here: <a
-                href="Akira_tei.xml"
-                >http://dh.newtfire.org/Akira_tei.xml</a>. You should right-click on
+        <p>For this assignment we’ll be producing HTML from a TEI XML file developed by the Akira project team on newtFire in the spring of 2018. The XML file is available here: <a href="Akira_tei.xml">http://dh.newtfire.org/Akira_tei.xml</a>. You should right-click on
             this link, download the file, and open it in &lt;oXygen/&gt; (or you can pull it in locally from the DHClass-Hub where it is in Class Examples --> XSLT).</p>
  <h3>Housekeeping: Setting Up a TEI to HTML Transformation</h3> 
-       <p>When you create an new XSLT document in &lt;oXygen/&gt; it won’t contain that instruction by default, so whenever you are working with TEI you need to add it (See the text in blue below). To ensure that the output would be in the XHTML namespace, we
-        added a default namespace declaration (in <span style="color: purple;">purple</span>
-        below). To output the required DOCTYPE declaration, we also created
+       <p>When you create an new XSLT document in &lt;oXygen/&gt; it won’t be able to read namespaced TEI input by default, so whenever you are working with TEI you need to add a special xpath-default-namespace for reading the input (see the text in blue below). To ensure that the output would be in the XHTML namespace, we also need to add an HTML namespace declaration (in <span style="color: purple;">purple</span>
+        below). To output the required DOCTYPE declaration for our HTML, we also created
         <code>&lt;xsl:output&gt;</code> element as the first child of our root
-        <code>&lt;xsl:stylesheet&gt;</code> element (in <span style="color:#006400;">green</span> below), and we needed to include an attribute there to omit the default XML declaration because if we output that XML line in our XHTML output, it will not produce valid HTML with the w3C and might produce quirky problems with rendering in various web browsers. So, you should copy our modified stylesheet template and xsl:output line here into your stylesheet: </p>
+        <code>&lt;xsl:stylesheet&gt;</code> element (in <span style="color:#006400;">green</span> below), and we needed to include an attribute there to omit the default XML declaration because if we output that XML line in our XHTML output, it will not produce valid HTML with the w3C and might produce quirky problems with rendering in various web browsers. So, you should copy our modified stylesheet template and xsl:output line here into your XSLT file: </p>
         
         <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -53,10 +50,10 @@
             possible.</p>
         
   <p>For this assignment, we aim to produce an HTML reading view of the Akira script, to help orient readers to the cast of characters and to help visualize some special markup the team has applied to help locate special scenes. The exercise will help orient you to styling and layout decisions connected with transforming XML to HTML, and it will also give you a chance to <q>remix</q> the XML creatively into something designed for display in a web browser.</p> 
-        <p>Surveying the <q>input</q> TEI document, you will see it has a TEI header to hold information <em>about</em> the Akira document, its source, and the work of the project team. We will pick and choose which portions of this to process and output in the body of an HTML document (remembering that the <code>body</code> element in HTML is the part that is visible in a web browser), and we may want to change the order it appears in the new document. We will take some material from the TEI header to display in the HTML body, for example, and we will try sorting the list of characters that appears in the TEI <code>profileDesc</code> to present a title and cast list at the top of the HTML file.</p>
+        <p>Surveying the <q>input</q> TEI document, you will see it has a TEI header to hold information <em>about</em> the Akira document, its source, and the work of the project team. We will pick and choose which portions of this to process and output in the body of our HTML document (remembering that the <code>body</code> element in HTML is the part that is visible in a web browser), and we may want to change the order it appears in the new document. We will try sorting the list of characters that appears in the TEI <code>profileDesc</code> to present a title and cast list in the HTML <code>body</code> element as our first output in the file.</p>
         <p>The following portions of the input document are especially important to us to display in HTML:</p>
         <ul>
-          <li>The <code>profileDesc</code> in the <code>teiHeader</code> contains a list of characters we will want to sort alphabetically. We will want to output make a cast list or key of names and abbreviations.</li> 
+          <li>The <code>profileDesc</code> in the <code>teiHeader</code> contains a list of characters we will want to sort alphabetically. We will want to output make a cast list in an HTML table with two columns to help us quickly read names and abbreviations.</li> 
             <li>We will want to process the script itself, with its <code>sp</code> elements and the information coded in the attributes, including the speaker id, the number, and, where available, the time segment.</li>
                 <li>Within those <code>sp</code> elements we want to process the <code>l</code> elements to hold them on separate lines.</li>
             <li>When <code>sp</code> elements are inside special sections coded as <code>spGrp</code>, we want to hold these in their own HTML <code>div</code> elements to distinguish them from other parts of the script.</li>
@@ -161,7 +158,7 @@
                 <code>&lt;xsl:apply-templates select="…"/&gt;</code> in order to reach for attribute values like the <code>@xml:id</code> on <code>person</code> to output them inside HTML table cell (<code>td</code>) elements. By setting up these very
             specific selections of these elements and attributes, we are paring down or <q>trimming</q> the XML tree of the input document to designate exactly and only what we want.  <span class="smaller">Remember. what is represented in the <code>&lt;html&gt;</code>
                 element of your XSLT is the basic superstructure of your output HTML document. The content inside the HTML <code>&lt;head&gt;</code> element, including
-                the <code>&lt;title&gt;</code> element, will not appear in the web browswerunless someone is reading your HTML source code. Hence the importance in creating visible body headings with elements (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.) that contain the document title information.</span></p>
+                the <code>&lt;title&gt;</code> element, will not appear in the web browser unless someone is reading your HTML source code. Hence the importance in creating visible body headings with elements (<code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, etc.) that contain the document title information.</span></p>
         <p>After you have selected the portions of the document to process for your Cast of Characters table, and to output the script, for the rest of this assignment you don’t need to write the template rules in any particular order. Those template matches will fire as elements in the document turn up to be processed, whenever it comes up.
                 Basically, <code>&lt;xsl:apply-templates/&gt;</code> without the <code>@select</code> attribute
             says <q>apply templates to whatever you find.</q>
