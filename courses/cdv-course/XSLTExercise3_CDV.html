@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="explain.css" />
         <title>XSLT Exercise 3 (CDV)</title>
         <!--ebb 2016-02-26: This assignment corresponds, with slight alterations, to XSLT Exercise 7 in CDA-->
+        <!--2019-03-26 ebb: Updated for Spring 2019 project processing. NO ONE IS WORKING IN A NAMESPACE IN 2019 CDV class and everyone's markup is in a reasonable state for processing, so I shared a simple stylesheet template for everyone here. Change in future if people are working in TEI or past projects. -->
     </head>
 
 
@@ -16,29 +17,41 @@
         <!--#include virtual="top.html" -->
         <h1><span class="banner">XSLT Exercise 3</span></h1>
         <h3>The texts</h3>
-        <p>For this assignment, we set you free to write XSLT on your own project files. Alternatively, you may choose to work on files prepared by another team, or with TEI XML files you have discovered and downloaded from other projects. Here are some projects and resources you could pull from:</p>
-            <ul>
+        <p>For this assignment, we set you free to write XSLT on your own project files. Alternatively, you may choose to work with XML files you have discovered and downloaded from <a href="studentProjects.html">the GitHub repos of other newtFire projects</a>.</p>
+         <!--   <ul>
                 <li>The <a href="http://digitalmitford.org">Digital Mitford</a> project and its full <a href="http://digitalmitford.org/si.xml">Site Index</a>)</li>
                 <li><a href="https://github.com/laurenmcguigan/DecameronProject/blob/master/engDecameronTEIpersName.xml">TEI file in the GitHub repo</a> from <a href="http://decameron.newtfire.org/">the Decameron project</a></li>
-                <!--<li><a href="http://pacific.pitt.edu">Digital Archives and Pacific Cultures project</a>: look for links to TEI files here.</li>-->
+                <!-\-<li><a href="http://pacific.pitt.edu">Digital Archives and Pacific Cultures project</a>: look for links to TEI files here.</li>-\->
                 <li><a href="https://github.com/RJP43/CitySlaveGirls-ChicagoDailyTimes1888">GitHub repo</a> of the <a href="http://nelson.newtfire.org">City Slave Girls (Nell Nelson) project</a>. </li>
-                <li>Other XML file(s) from <a href="http://newtfire.org/dh/studentProjects.html">GitHub repos of other newtFire projects</a></li>
+                <li>Other XML file(s) from <a href="studentProjects.html">GitHub repos of other newtFire projects</a></li>
                 
-            </ul>
-          <p>Because the XML texts for all of these projects could still be under development, they may be inconsistently or incompletely marked up. As long as they are well formed, however, they can be explored with XML tools, including XSLT. While you are welcome to use XML files from any of these sources, we will be especially pleased to see you do something interesting with your own project XML files to begin building interesting and useful pages for your projects.</p>
+            </ul>-->
+          <p>Because the XML texts in these projects may still be under development, they may be inconsistently or incompletely marked up. As long as they are well formed, however, you can explore them with XPath-based tools, including XSLT. While you are welcome to use XML files from any of these sources, we will be especially pleased to see you create something interesting from your own project XML files to build new HTML pages for your project website.</p>
         <h3>The assignment</h3>
-        <p>Select an XML file from one of the projects and spend a few minutes looking at it to
-            familiarize yourself with its overall structure. (Notice whether it’s in a namespace and change your stylesheet template accordingly!)
+        <p>Select an XML file from one of the projects and take a few minutes to study it and familiarize yourself with its overall structure. (Notice whether it’s in a namespace and change your stylesheet template accordingly!)
             Visit the project site to learn more about the general project. You may use your own XML
             files or someone else’s. Download an XML file from whichever project you choose into
             &lt;oXygen/&gt;.</p>
+        <h3>XSLT Stylesheet setup</h3>
+        <p>In Spring 2019, none of the project teams have been coding XML in a namespace like TEI. So if working with 2019 project code, your XSLT stylesheet template just needs to process non-namespaced XML and output code in the HTML namespace. Here is a template for that purpose: </p>
+        <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    exclude-result-prefixes="xs"
+    <span style="color:blue;">xmlns="http://www.w3.org/1999/xhtml"</span>
+         version="3.0"&gt;
+    
+         <span style="color:#006400;">&lt;xsl:output method="xhtml" encoding="utf-8" doctype-system="about:legacy-compat"
+        omit-xml-declaration="yes"/&gt;</span>
+    
+&lt;/xsl:stylesheet&gt;</pre> 
         <h3>Advice in case you need it: Downloading files from GitHub</h3>
         <p>The easiest way to download a file from GitHub is to clone the project onto your own
             machine, which will copy all files, and then open the file you need. If you want to
             download just one file (which is all you need for this assignment), <em>you can’t just
                 right-click and download</em> because you’ll download a version with extraneous
             GitHub specific markup mixed into the file, which will render the file unusable for your
-            purposes. What you can do instead is</p>
+            purposes. What you can do instead is:</p>
         <ol>  <li>Connect to the repo in a browser;</li> 
             <li>Click on the file you want, which will display its contents;</li>
             <li>Click on the button labeled <q>Raw</q> at the top of the code window, which will display its contents without
@@ -48,9 +61,9 @@
         <h3>What to do with the file or collection once you’ve downloaded it</h3>
         <p>Transform the XML into some form of HTML using XSLT, whether that’s a reading view or
             some sorts of lists or tables or other reports. You should decide yourself on the type
-            of output you would find interesting or useful, but so that you’ll gain practice with
-            a range of XSLT techniques, your transformation must require
-            meaningful use of <strong>at least two of the following:</strong></p>
+            of output you find interesting or useful, but so that you’ll gain practice with
+            a range of XSLT techniques, this assignment requires that you make
+            meaningful use of <strong>at least two of the following in your XSLT:</strong></p>
         <ul>
             <li>Attribute value templates (see <a href="http://dh.obdurodon.org/avt.xhtml">Attribute value templates
                 (AVT)</a>)</li>
@@ -61,7 +74,7 @@
                 >XSLT, part 2: conditionals and push and pull</a>)</li>
             
             <li>Modal XSLT (see <a href="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</a>)</li>
-            <li>Internal linking (see <a href="http://newtfire.org/dh/XSLTExercise6.html">XSLT Exercise 6</a>)</li>
+            <li>Internal linking (see <a href="XSLTExercise6.html">XSLT Exercise 6</a>)</li>
         </ul>
         <p>Please upload your XSLT and the XML to CourseWeb. You do not have to upload the HTML
             output of your transformation (we’re going to run the transformation and generate the
