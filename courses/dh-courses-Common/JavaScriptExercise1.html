@@ -18,18 +18,40 @@
       			
       				
       <h1><span class="banner">JavaScript Exercise 1</span></h1>
+      <h3>Preliminary: tinker with JavaScript first</h3>
       <p>Begin this exercise by carefully reading and testing the examples on Obdurodon’s introductory
          <cite class="sub"><a href="http://dh.obdurodon.org/javascript.html">JavaScript Overview page</a></cite>. When you reach the section titled, <q>Okay, Time to Write your First JavaScript</q>, we’d
          like you to do just that: experiment with what you have learned so far by writing
-         some JavaScript code to work within an HTML page you have prepared. Your page could
+         some JavaScript code to work within a project webpage, or a page you designed for your personal webspace on newtFire. Your page could
          be an HTML file you have generated for your project, or just a random page you write
          on the fly for the purposes of this assignment, but should not simply be a repetition
          of the model on the Obdurodon intro page. (Adapt what you’ve learned there to experiment
-         a little on your own.) For more examples to tinker with, have a look at <a href="http://www.w3schools.com/js/default.asp">the JavaScript tutorial pages at w3schools</a>. Don’t worry too much about making this complicated: We just want to see you write some functional JavaScript code.
+         a little on your own.) For more examples to tinker with, have a look at <a href="http://www.w3schools.com/js/default.asp">the JavaScript tutorial pages at w3schools</a>. Don’t worry too much about making this complicated: just aim to write some JavaScript code that works to make changes when you interact with an HTML page.
       </p>
       			
-      				
-      <p>Now, go on and <a href="http://dh.obdurodon.org/javascript-assignment-01.xhtml">do Obdurodon’s JavaScript Exercise 1</a>, and if you like, adapt the sample code to fit into the page on which you have been experimenting. The goal here is to write a separate JavaScript file that you associate with your HTML (instead of applying JavaScript inline). If you have experimented with inline JavaScript as you were learning, see if you can express that JavaScript in functions in the separate file you are writing for this assignment. You may adapt this assignment as you wish to write some JavaScript for one of your project pages that makes something dynamic happen. (Note: we don’t permit the use of JavaScript libraries—just using
+      <h3>Write some serious JavaScript for your website</h3>				
+      <p>Now, go on to write a separate JavaScript file to associate with your page. (For reference, you may find <a href="http://dh.obdurodon.org/javascript-assignment-01.xhtml">do Obdurodon’s JavaScript Exercise 1</a> helpful.) To associate a separate JavaScript file with an HTML page, set a <code>script</code> element within the <code>&lt;head&gt;</code> element. Add the script line to be a sibling of any CSS link element for your page:</p>
+         <pre>
+            &lt;script type="text/javascript" src="showHide.js"&gt;/**/&lt;/script&gt;
+         </pre>
+         
+         <p>Adapt the sample code to fit into the page on which you have been experimenting. Since this file is going on your newtFire webspace, do NOT use our Courseweb filenaming conventions for homework, but instead, add your name in JavaScript comment inside the file (along with any comments about what you want your JavaScript to do, questions, etc.) Give your JavaScript file a name that indicates something about its functionality: what does this file do? (If it is showing and hiding something, you could call it showHide.js like I did in my example.)</p>
+      <h4>Script out the sequence of DOM events</h4>
+      <p>When writing JavaScript as a separate file, you need to be explicit about exactly when and how events must happen (more explicit than when you write JavaScript embedded in HTML display elements). To begin, you need to set up your <code>event listeners</code> that listen for events like the webpage loading in the browser window, and the user clicking on a particular element or group of elements. Begin with a first event listener that observes when the page is loaded, and triggers a first JavaScript function that sets other event listeners on the page. We usually call this first triggered function <code>function init()</code>. You could set it up like this, just to get started: </p>
+      <pre>
+window.addEventListener('DOMContentLoaded',init,false);
+            
+function init() {
+    alert('The page loaded!');
+}
+
+      </pre>
+      <p>Now, test your HTML file and see if you get an alert event (a pop-up window telling you <q>The page loaded!</q>. (We like using alert() events to test when functions are actually being fired, and you can remove this one when you know things are working.) We usually set more <code>event listeners</code> inside <code>function init()</code>, this time selecting not the whole window but a specific set of elements.So, if you want to trigger an event by having people click on <a href="https://www.w3schools.com/tags/tag_button.asp">an HTML button element</a> on your webpage, first make sure you have a button element present in your HTML page. Then, you can create a <em>local variable</em> inside your function init() that defines the button element so you can easily refer to it.</p> 
+      <pre>var buttons = document.getElementsByTagName("button")</pre>
+         
+      <p>And next, you can write an event listener in your JavaScript function init() to listen for users to click that button. Note that this variable can return a sequence (or array) of multiple buttons if you have more than one, and JavaScript will <em>require</em> that you be specific about identifying just <em>one of these at at time</em> for setting your event listeners. Look at <a href="https://github.com/ebeshero/DHClass-Hub/blob/master/Class-Examples/JavaScript/Intro/intro.js">our intro exampleon DHClass-Hub</a> to see how we isolate the very first button on the page, and remember that JavaScript, unlike XPath, understands position (or <q>index</q>) as beginning with 0, not 1. Write your event listener to trigger a new function! </p>         
+      <p>Finally, script out the new function to make the change. You will likely (easily) have typo issues wtih JavaScript syntax, so be careful about its quirky punctuation conventions. Also, if you are copying and adapting JavaScript code from our examples to your own page, remember to change your variables and event listeners and actions to address the specific code on your site. </p>
+         <p>The goal here is to write a separate JavaScript file that you associate with your HTML (instead of applying JavaScript inline). If you have experimented with inline JavaScript as you were learning, see if you can express that JavaScript in functions in the separate file you are writing for this assignment. You should adapt this assignment as you wish to write some JavaScript for one of your project pages that makes something dynamic happen. (Note: we don’t permit the use of JavaScript libraries—just using
          someone else’s JavaScript and force-fitting it to your HTML—because we want you to write your own code independently
          and know what each line of it means. It is okay, though, to learn from JavaScript others have written and apply what you are learning to your project needs; in which case we want you to credit your source in comments in your JavaScript file (marked by <code>//</code> or within <code>/* comment */</code> and be able to explain how you are applying it to your project.)   
       </p>
@@ -44,7 +66,7 @@
      <h3 id="upload">What to upload, and where to upload it:</h3>
          <p>This assignment involves working within your personal webspace on newtFire, so that is where you will submit your homework for this assignment (instead of Courseweb). Use an SFTP program (the same you used for the HTML assignments earlier in this course), and</p>
       <ol>
-         <li>Locate your personal folder on newtFire. (If you have trouble locating this, check on our Courseweb Announcements page for the information we posted earlier in the semester, and ask on our DHClass-Hub. While you are at it, make sure you review how to access your shared project space, too.) </li>
+         <li>Locate your personal webspace folder on newtFire. (If you have trouble locating this, check on our Courseweb Announcements page for the information we posted earlier in the semester, and ask on our DHClass-Hub. While you are at it, make sure you review how to access your shared project space, too.) </li>
        
          <li>Upload your files for this assignment: the HTML, the JavaScript, any associated CSS here.</li>
      
