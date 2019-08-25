@@ -1136,85 +1136,128 @@
         <cell role="date">
             <date when="2019-10-21">M 10-21</date>
         </cell>
-        <cell role="inclass"><p>Work on XPath and manipulating text strings. Using Regular Expressions in XPath.</p></cell>
-        <cell role="assign"><ref target="XPathExercise4.html"><hi>XPath Exercise 4:</hi> finding and remixing strings</ref></cell>
+        <cell role="inclass"><p>Work on XPath and manipulating text strings. Using Regular Expressions in XPath. Preview Schematron if time.</p></cell>
+        <cell role="assign"><list><item><ref target="XPathExercise4.html"><hi>XPath Exercise 4:</hi> finding and remixing strings</ref></item>
+            <item>Preview our <ref
+                target="explainSchematron.html">Guide
+                to Schema Writing with Schematron</ref> in preparation for next class.</item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-23">W 10-23</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>writing an XPath-based Schema language: Schematron, and how we use it with
+            Relax-NG</p>
+            <p>How we use Schematron in project management.</p></cell>
+        <cell role="assign">Consult our <ref target="explainSchematron.html">Guide to Schema Writing with Schematron</ref> as you complete <ref target="SchematronExercise-Banksy.html"><hi>Schematron Exercise 1</hi></ref>.</cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-25">F 10-25</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass">More applications of Schematron to your ongoing project. Schemas to work with Personographies, Placeographies, Prosopographies (Relax NG, ODD with Relax NG, Schematron: <ref target="explainSchematronIdRefs.html">Keeping track of xml:ids with Schematron</ref>).</cell>
+        <cell role="assign"><list>
+            <item><hi>Schematron Exercise 2</hi>: Write Schematron to refine and correct messy or problematic code for your project team. Submit two things: 1) your Schematron file, and 2) a sample of project XML code to show how you are capturing errors. </item>
+            <item>Preview our <ref target="explainXSLT.html">Introduction to XSLT</ref> in preparation for the next class.</item>
+        </list></cell>
     </row>
     </table><table type="week" n="10"><row role="day">
         <cell role="date">
             <date when="2019-10-28">M 10-28</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><list><item>Introducing XSLT (eXtensible Stylesheet Language Transformations). XSL Transformations from XML to XML, and from XML to HTML. Namespaces</item>
+            <item>Start hands on together in class: <ref target="XSLTExercise1.html">XSLT Exercise 1</ref></item></list></cell>
+        <cell role="assign"><list>
+            <item><hi>Project Checkpoint 4</hi>: <list><item>Complete most XML markup for your project according to a refined project schema.</item> 
+                <item>Start checking and revising XML code with Schematron.</item>
+                <item>Review/refine project research question.</item><item>Make some significant content for the website.</item></list></item>
+            <item><hi><ref target="XSLTExercise1.html">XSLT Exercise 1: an Identity Transformation</ref></hi>.</item>
+            <item>Read more about XSLT: <list><item>See our <ref target="explainXSLT.html">Intro to XSLT</ref>.</item>
+                <item><ref target="http://dh.obdurodon.org/identity.xhtml">The XSLT Identity Transformation (examples: our method is <q>The XSLT 3.0 way</q>.)</ref></item>
+                <item><ref
+                  target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                    Templates</ref>.</item>
+            </list></item>
+            <item>What kinds of things can you do with XSLT? Skim a little background in the Michael Kay book: <ref target="http://media.wiley.com/product_data/excerpt/47/04701927/0470192747.pdf">Michael Kay’s Chapter 1</ref> and read pages 3-7, <title level="a">A Simple XSLT Stylesheet</title>: pp. 10-12, <title level="a">How it Works</title>: pp. 17-18, and <title level="a">Example: Displaying a Poem,</title> pp. 35-38 (to review a sample XSLT stylesheet). </item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-30">W 10-30</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>XSLT to HTML: How it works.</p></cell>
+        <cell role="assign"><list><item><hi><ref target="XSLTExercise2.html">XSLT Exercise 2</ref></hi> To read as you work on this series of XSLT exercises: 
+            <list>
+                <item><title level="a"><ref target="http://dh.obdurodon.org/algorithms.xhtml">Thinking in algorithms</ref></title></item>
+                <item><title level="a"><ref target="http://dh.obdurodon.org/developing-xslt.xhtml">Developing an XSLT Stylesheet</ref></title></item>
+            </list>
+        </item></list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-11-01">F 11-01</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass">XPath and XPath Patterns. XPath review: axes, functions, and predicates in prep for XPath test. Using XPath functions to make counts and do calculations for charts and graphs.</cell>
+        <cell role="assign"><hi>Test 4 (take-home): XPath</hi><!--2019-08-25 ebb: Gear this to prepare them for XSLT 3: making calculations. --> </cell>
     </row>
     </table><table type="week" n="11"><row role="day">
         <cell role="date">
             <date when="2019-11-04">M 11-04</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>XSLT: What template rules are doing. Push and Pull processing. Attribute value templates (review). XSLT to HTML Table transformation in class. </p></cell>
+        <cell role="assign"><list>
+            <item><hi><ref target="XSLTExercise3.html">XSLT Exercise 3</ref></hi></item>
+            <item>In prep for next class, read about / review:
+                <list>
+                    <item><ref target="http://dh.obdurodon.org/xslt-basics-2.xhtml">XSLT Conditionals, and Push and Pull</ref></item>
+                    <item><ref
+                        target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                        Templates</ref>.</item></list></item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-11-06">W 11-06</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass">XSLT templates, <hi>push</hi> processing, and preparing/styling HTML for editions. Putting it all together with CSS.</cell>
+        <cell role="assign"><list>
+            <item><hi><!--This is now David's Skyrim exercise. --><ref target="XSLTExercise4.html">XSLT Exercise 4</ref></hi>. (Consult <ref target="http://dh.obdurodon.org/avt.xhtml">XSLT Attribute Value
+                Templates</ref> as you work on the coding exercise.)</item>
+            <item>In prep for the next XSLT exercise, read <ref
+                target="http://dh.obdurodon.org/modal-xslt.html">Modal XSLT</ref>.</item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-11-08">F 11-08</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>How Modal XSLT works.</p>
+            <p>Processing collections of files</p></cell>
+        <cell role="assign"><hi><ref target="XSLTExercise5.html">XSLT Exercise 5</ref></hi>. Consult <ref target="http://dh.obdurodon.org/modal-xslt.html">Modal
+            XSLT</ref> page as you work on the coding exercise.</cell>
     </row>
     </table><table type="week" n="12"><row role="day">
         <cell role="date">
             <date when="2019-11-11">M 11-11</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Sorting with XSLT</p>
+            <p>HTML with internal links: how it works and how to create with XSLT</p></cell>
+        <cell role="assign"><hi><ref target="XSLTExercise6.html">XSLT Exercise 6</ref></hi></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-11-13">W 11-13</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Writing XSLT for your projects. Review of metadata and TEI, and using XSLT to extract metadata: Example: <ref target="http://digitalmitford.org/getLetterText.php?uri=1821-01-29_Webb.xml">Digital Mitford letter</ref>.</p></cell>
+        <cell role="assign"><!--2019-08-25 ebb: Revisit this? Make it attuned to current projects' XML --><hi><ref target="XSLTExercise7.html">XSLT Exercise 7</ref></hi></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-11-15">F 11-15</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Semester Project Development: Review <ref target="projectGuide.html">Project Guidelines</ref></p><p>XSLT for projects: Work on Project Checkpoint 4; project applications. Checking your HTML with the <ref target="https://validator.w3.org/">w3c Markup Validation Service</ref>.</p></cell>
+        <cell role="assign"><hi>Project Checkpoint 5</hi></cell>
     </row>
     </table><table type="week" n="13"><row role="day">
         <cell role="date">
