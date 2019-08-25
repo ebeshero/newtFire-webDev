@@ -14,7 +14,7 @@
  <!--ebb: added 2019-01-06 to transform the bad old div-based template for the schedule. 
 The following templates will be unnecessary if I've already started with the TEI table structure.
  -->
-    <xsl:template match="div[@type='day']">
+   <!-- <xsl:template match="div[@type='day']">
         <row role="day">
             <xsl:apply-templates/>
         </row>
@@ -33,7 +33,7 @@ The following templates will be unnecessary if I've already started with the TEI
         <cell role="assign">
             <xsl:apply-templates/>
         </cell>
-    </xsl:template>
+    </xsl:template>-->
     
 </xsl:stylesheet>
     
