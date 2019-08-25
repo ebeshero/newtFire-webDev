@@ -1022,10 +1022,10 @@
                         <item>Indicating where an include goes on a page: <ref target="https://github.com/ebeshero/newtFire-webDev/blob/master/courses/dh-courses-Common/explainCSS.html">Example</ref></item>
                         <item>Full page <ref target="http://dh.newtfire.org/explainCSS.html">on the web</ref>: and <ref target="view-source:http://dh.newtfire.org/explainCSS.html">page source</ref></item>  
                     </list></item>
-                <item>Hands on: Add SSI's to your personal or project website.</item>
+                <item>Hands on: Add SSI’s to your personal or project website.</item>
                 
             </list></cell>
-        <cell role="assign"><list><item><hi>Project Checkpoint 2:</hi> <list><item>Establish a clear file directory structure on your project GitHub, including a distinct directory for website files.</item><item>Ensure all project team members are working consistently with the GitHub directory structure (all agree on it, and no one changes without notice).</item> <item>Establish a project schema and associate that schema with project XML files in the repo.</item> <item>All team members are actively testing the project schema on XML markup.</item></list></item>
+        <cell role="assign"><list><item><hi>Project Checkpoint 2:</hi> <list><item>Locate all sources for project XML markup.</item><item>Establish a clear file directory structure on your project GitHub, including a distinct directory for website files.</item><item>Ensure all project team members are working consistently with the GitHub directory structure (all agree on it, and no one changes without notice).</item> <item>Establish a project schema and associate that schema with project XML files in the repo.</item> <item>All team members are actively testing the project schema on XML markup.</item><item>A significant quantity of project markup is present in the GitHub repo.</item></list></item>
             <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start reading
                 <ref target="http://www.regular-expressions.info/quickstart.html">the
                     Regular Expressions Quick Start</ref> in prep for next class.</item>
@@ -1083,8 +1083,8 @@
         <cell role="inclass">Hands-on Project Team work together in class on Project Checkpoint 3</cell>
         <cell role="assign"><list>
            
-            <item><hi>Project Checkpoint 3: </hi><list><item> Some team members work on developing page(s) for the project website, creating navigation menu (using a SSI), and working with section, div, and span elements. Try using CSS flex to control your horizontal layout. Work out a file directory structure for the GitHub repo to separate project website files from XML markup.</item>
-            <item>Others concentrate on completing markup and refining the project schema.</item></list> </item></list></cell>
+            <item><hi>Project Checkpoint 3: </hi><list><item> Some team members work on developing page(s) for the project website, creating a navigation menu (using a SSI), and working with section, div, and span elements. Try using CSS flex to control your horizontal layout. Make a file directory in the GitHub repo to separate project website files from XML markup.</item>
+            <item>Others concentrate on completing XML markup and refining the project schema to ensure a clear, well-developed XML hierarchy.</item><item>Significantly more XML markup and/or improved XML markup is prepared by this time by comparison with Project Checkpoint 2</item></list> </item></list></cell>
     </row>
     </table><table type="week" n="8"><row role="day">
         <cell role="date">
@@ -1257,56 +1257,81 @@
             <date when="2019-11-15">F 11-15</date>
         </cell>
         <cell role="inclass"><p>Semester Project Development: Review <ref target="projectGuide.html">Project Guidelines</ref></p><p>XSLT for projects: Work on Project Checkpoint 4; project applications. Checking your HTML with the <ref target="https://validator.w3.org/">w3c Markup Validation Service</ref>.</p></cell>
-        <cell role="assign"><hi>Project Checkpoint 5</hi></cell>
+        <cell role="assign"><hi>Project Checkpoint 5</hi>: 
+        <list>
+            <item>Goal: complete and refine the project’s XML markup, and be actively processing it with XSLT for this stage.</item>
+            <item>Work on XSLT to HTML transformations that help present your texts as a web archive.</item>
+            <item>Work on improving the project website, updating its organization and navigation, describing and introducing the project and its team members.</item>
+            <item>(Other goals: specific to project teams)</item>
+        </list>
+        </cell>
     </row>
     </table><table type="week" n="13"><row role="day">
         <cell role="date">
             <date when="2019-11-18">M 11-18</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><list><item>XML that makes graphics: SVG (Scalable Vector Graphics). Drawing elements,
+            and screen grid coordinates.</item>
+            <item><ref target="https://www.slideshare.net/ebbondar/svg-81556046">Introductory slideshow</ref></item>
+            <item>Play with <ref target="http://www.w3schools.com/graphics/svg_intro.asp">w3Schools SVG Tutorial</ref>.</item></list></cell>
+        <cell role="assign"><list><item>Work through <ref target="https://www.w3schools.com/graphics/svg_intro.asp">the w3schools SVG tutorial</ref> to complete the SVG basic and SVG shapes pages. 
+            Filters, gradients, examples, and reference are optional.</item>
+            <item><hi><ref target="SVGExercise1.html">SVG Exercise 1</ref></hi></item></list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-11-20">W 11-20</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>SVG from XSLT, working with variables to plot coordinate space</p></cell>
+        <cell role="assign">SVG Exercise 2: XSLT to SVG: timeline or simple plot</cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-11-22">F 11-22</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>User experience (UX): Setting SVG in a webpage and providing explanation. Project applications of SVG.</p><p>Introducing JavaScript and <q>client side</q> interaction with users</p></cell>
+        <cell role="assign">
+            <list>
+                <item>SVG work for projects (customized assignments for project teams)</item>
+                <item><hi rend="em"><ref target="JavaScriptExercise1.html">Javascript Exercise 1</ref></hi></item>
+            
+            </list>
+        </cell>
     </row>
     </table><table type="week" n="14"><row role="day">
         <cell role="date">
             <date when="2019-11-25">M 11-25 to F 11-29</date>
         </cell>
         <cell role="inclass"><hi>Thanksgiving Recess: no classes</hi></cell>
-        <cell role="assign"/>
+        <cell role="assign">Work on project websites, SVG, JavaScript Exercise 1.</cell>
     </row>
     </table><table type="week" n="15"><row role="day">
         <cell role="date">
             <date when="2019-12-02">M 12-02</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Working with global variables and for loops in JavaScript.</p> <p>Putting it all together: JavaScript with CSS to interact with SVG</p></cell>
+        <cell role="assign">Project code and web development.</cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-12-04">W 12-04</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass">Work on <hi>Project Checkpoint 6</hi>: preparing material for project presentations, final project code sprint.</cell>
+        <cell role="assign">Project code and web development.</cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-12-06">F 12-06</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><hi>Project Checkpoint 6:</hi> <list><item>Teams present their projects to the class, invite comments and feedback.</item> <item>Classmates (from other teams) ask questions, offer commentary on project GitHub repos.</item></list></cell>
+    </row>
+    </table>
+              <table type="week">
+                  <row role="day">
+        <cell role="date"><date when="2019-12-12">Thurs. 12/12 by 11:59pm</date></cell>
+        <cell role="assign"><p>
+            <hi>Projects due. Submit projects with a post to the instructors from  your project GitHub repo.</hi>
+        </p></cell>
     </row>
     </table>
     </div>
