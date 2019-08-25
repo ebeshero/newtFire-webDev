@@ -1064,24 +1064,17 @@
      <item>Regex searching over highlighted portions of a document</item>   
         </list></cell>
         <cell role="assign"><list><item><ref target="RegexExercisePlay.html"><hi rend="em">Regex Exercise 3:</hi> <hi rend="italics">Pygmalion</hi></ref></item>
-            <item>Preview the <title level="a"><ref target="explainXPath.html">Introduction to XPath</ref></title> in preparation for the next unit.</item></list></cell>
+          <!--  <item>Preview the <title level="a"><ref target="explainXPath.html">Introduction to XPath</ref></title> in preparation for the next unit.</item>--></list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-09">W 10-09</date>
         </cell>
-        <cell role="inclass"><p>Navigating XML with XPath: Introducing the XPath window in &lt;oXygen/&gt;,  functions, axes, path steps <hi>/</hi>, and predicate filters <hi>[ ]</hi>.  Hands-on: navigating <ref target="http://dh.newtfire.org/bad-hamlet.xml">Hamlet</ref>. </p></cell>
-        <cell role="assign"><list>
-            <item>First, carefully read our <ref target="explainXPath.html">Introduction
-                to XPath: <title level="a">Follow the XPath!</title></ref> As you
-                read, try experimenting with the XPath expressions on our page, by
-                downloading the explainXPath.html file, opening it in oXygen, and
-                experimenting in the XPath window with some of our expressions. Then,
-                move on to XPath Exercise 1.</item>
-            <item><ref target="XPathExercise1.html"><hi rend="em">XPath Exercise
-                1</hi></ref>
-            </item>
-        </list></cell>
+        <cell role="inclass"><list><item>Review, work through issues with Regex exercise 3. Prep for Regex test.</item>
+        <item>Project management tools for improving communication, completing tasks: hands on with GitHub projects, Slack</item>
+        </list>
+</cell>
+        <cell role="assign"><hi>Test 3 (take-home): Regular Expressions</hi></cell>
     </row>
     <row role="day">
         <cell role="date">
@@ -1089,7 +1082,7 @@
         </cell>
         <cell role="inclass">Hands-on Project Team work together in class on Project Checkpoint 3</cell>
         <cell role="assign"><list>
-            <item><ref target="XPathExercise2.html"><hi>XPath Exercise 2</hi></ref></item>
+           
             <item><hi>Project Checkpoint 3: </hi><list><item> Some team members work on developing page(s) for the project website, creating navigation menu (using a SSI), and working with section, div, and span elements. Try using CSS flex to control your horizontal layout. Work out a file directory structure for the GitHub repo to separate project website files from XML markup.</item>
             <item>Others concentrate on completing markup and refining the project schema.</item></list> </item></list></cell>
     </row>
@@ -1097,39 +1090,54 @@
         <cell role="date">
             <date when="2019-10-14">M 10-14</date>
         </cell>
+        <cell role="inclass"> <p>Navigating XML with XPath: Introducing the XPath window in &lt;oXygen/&gt;,  functions, axes, path steps <hi>/</hi>, and predicate filters <hi>[ ]</hi>.  Hands-on: navigating <ref target="http://dh.newtfire.org/bad-hamlet.xml">Hamlet</ref>. </p></cell>
+        <cell role="assign"><list>
+            <item>First, carefully read our <ref target="explainXPath.html">Introduction
+                to XPath: <title level="a">Follow the XPath!</title></ref> As you
+                read, try experimenting with the XPath expressions on our page, by
+                downloading the explainXPath.html file, opening it in oXygen, and
+                experimenting in the XPath window with some of our expressions. Then,
+                move on to XPath Exercise 1.</item>
+            <item><ref target="XPathExercise1.html"><hi rend="em">XPath Exercise 1</hi></ref>
+            </item>
+        </list>
+</cell>
+    </row>
+    <row role="day">
+        <cell role="date">
+            <date when="2019-10-16">W 10-16</date>
+        </cell>
         <cell role="inclass"><p>Using XPath to climb trees—up and down and side to side. Predicate
             expressions: <hi rend="em">[ ]</hi>. <hi rend="em">(Grouping)</hi> and <hi
-                rend="em">[Position()]</hi>. XPath syntax: some tricks.</p></cell>
+                rend="em">[Position()]</hi>. XPath syntax: some tricks.</p>
+</cell>
         <cell role="assign"> <list>
             <item><ref target="XPathExercise2.html"><hi rend="em">XPath Exercise
                 2</hi></ref></item>
             <item>Read and experiment with <title level="a"><ref
                 target="http://dh.obdurodon.org/functions.xhtml">The XPath
                 Functions We Use Most</ref></title> to learn more about XPath functions.</item>
-        </list></cell>
-    </row>
-    <row role="day">
-        <cell role="date">
-            <date when="2019-10-16">W 10-16</date>
-        </cell>
-        <cell role="inclass"><p>XPath Functions: some common functions we use and how to write them: <hi
-            rend="em">count(), not(), distinct-values()</hi>.  </p>
-            <p>Preview functions with regular expressions in XPath.</p></cell>
-        <cell role="assign"><ref target="XPathExercise3.html"><hi rend="em">XPath Exercise 3:</hi> experimenting with functions</ref></cell>
+        </list>
+  </cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-18">F 10-18</date>
         </cell>
-        <cell role="inclass"><p>Surgical precision with XPath on text strings: regular expressions in XPath functions</p></cell>
-        <cell role="assign"><ref target="XPathExercise4.html"><hi>XPath Exercise 4</hi></ref></cell>
+        <cell role="inclass"><p>XPath Functions: some common functions we use and how to write them: <hi
+            rend="em">count(), not(), distinct-values()</hi>. Preview string functions.</p>
+            <p>How to combine functions: when to use simple map vs. the arrow operator.</p>
+            <p>How to put functions in a predicate filter to return XML nodes that have qualities that you test for with functions. </p>
+</cell>
+        <cell role="assign"><ref target="XPathExercise3.html"><hi rend="em">XPath Exercise 3:</hi> experimenting with functions</ref>
+</cell>
     </row>
     </table><table type="week" n="9"><row role="day">
         <cell role="date">
             <date when="2019-10-21">M 10-21</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"></cell>
+        <cell role="assign"><p>Work on XPath and manipulating text strings. Using Regular Expressions in XPath.</p><ref target="XPathExercise4.html"><hi>XPath Exercise 4:</hi> finding and remixing strings</ref></cell>
     </row>
     <row role="day">
         <cell role="date">
