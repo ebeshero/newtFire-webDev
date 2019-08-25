@@ -971,85 +971,158 @@
         <cell role="date">
             <date when="2019-09-23">M 09-23</date>
         </cell>
-        <cell role="inclass"><!-- Wrap up TEI Roma and Schemas. Discuss Relax NG Test. Introduce HTML --></cell>
-        <cell role="assign"/>
+        <cell role="inclass">Wrap up TEI ODDs and Relax NG schemas. Discuss Relax NG Test. Publishing on the web, markup for web browser software: introduction to HTML.</cell>
+        <cell role="assign"><list>
+            <item>Read our <title level="a"><ref target="explainHTML.html">Introduction to HTML</ref></title> in preparation for next class.</item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-09-25">W 09-25</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Building on the Web: HTML and CSS.</p>
+            <p>Hands-on: SFTP into the Apache Server for newtFire. File directories and their association with web URLs.</p></cell>
+        <cell role="assign"><list>
+            <item>Consult our <title level="a"><ref target="explainHTML.html">Introduction to and HTML</ref></title>, and our <title level="a"><ref target="explainCSS.html">Introduction to Cascading Stylesheets (CSS)</ref></title> as you work on the homework exercise: <hi rend="em"><ref target="HTMLExercise1.html">HTML/CSS Exercise 1</ref></hi>. NOTE: <hi>Do not submit this assignment on Courseweb.</hi> Instead, submit this homework by using SFTP to post to our newtFire web server.</item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-09-27">F 09-27</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>HTML and CSS</p><list>
+            <item>Mindful file management: mirroring directory structures on GitHub and the web server</item>
+            <item>Web browsers and display variations</item>
+            <item>CSS Box Model</item>
+            <item>Controlling page layouts: <ref target="https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc">Flexboxes tutorial</ref>, with simple examples.
+            </item>
+        </list></cell>
+        <cell role="assign"><list><item>Consult <title level="a"><ref target="http://learnlayout.com/">Learn CSS
+            Layout</ref></title>, <ref target="https://medium.com/@js_tut/the-complete-css-flex-box-tutorial-d17971950bdc">Flexbox tutorial</ref>, and <ref
+                target="http://www.w3schools.com/css/">w3 Schools CSS Reference</ref>
+            as you code. (Also, check out <ref
+                target="http://paletton.com"
+                >Paletton</ref> (or hunt for other color scheme generators on the web) to help think about choosing a balanced color scheme for your website.
+            Experiment with writing CSS to control font, layout, color, backgrounds. </item>
+            <item><hi rend="em"><ref target="HTMLExercise2.html">HTML/CSS Exercise 2</ref></hi> (As with HTML Exercise 1, submit this
+                homework by using FTP to post to our newtFire web server, and do NOT use standard filename conventions, but rather simple filenames for your own website.)</item>
+        </list></cell>
     </row>
     </table><table type="week" n="6"><row role="day">
         <cell role="date">
             <date when="2019-09-30">M 09-30</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Project customizations and boilerplate with Server Side Includes</p>
+            <list>
+                <item>How to customize SFTP (Filezilla)</item>
+                <item>Decide on project website directory names and URLs.</item>
+                <item>Server Side Includes for boilerplate content: Example: 
+                    <list>
+                        <item>Include file for newtFire assignment pages: <ref target="https://github.com/ebeshero/newtFire-webDev/blob/master/courses/dh-courses-Common/top.html">a fragment of HTML</ref></item>
+                        <item>Indicating where an include goes on a page: <ref target="https://github.com/ebeshero/newtFire-webDev/blob/master/courses/dh-courses-Common/explainCSS.html">Example</ref></item>
+                        <item>Full page <ref target="http://dh.newtfire.org/explainCSS.html">on the web</ref>: and <ref target="view-source:http://dh.newtfire.org/explainCSS.html">page source</ref></item>  
+                    </list></item>
+                <item>Hands on: Add SSI's to your personal or project website.</item>
+                
+            </list></cell>
+        <cell role="assign"><list><item><hi>Project Checkpoint 2:</hi> <list><item>Establish a clear file directory structure on your project GitHub, including a distinct directory for website files.</item><item>Ensure all project team members are working consistently with the GitHub directory structure (all agree on it, and no one changes without notice).</item> <item>Establish a project schema and associate that schema with project XML files in the repo.</item> <item>All team members are actively testing the project schema on XML markup.</item></list></item>
+            <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start reading
+                <ref target="http://www.regular-expressions.info/quickstart.html">the
+                    Regular Expressions Quick Start</ref> in prep for next class.</item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-02">W 10-02</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass">Introducing up-conversion with Regular Expressions:
+            <list><item> Using Find &amp; Replace in &lt;oXygen/&gt;: hands-on exercise with <ref target="https://github.com/ebeshero/DHClass-Hub/tree/master/Class-Examples/Regex/chocChipCookies">Chocolate Chip Cookies recipe on DHClass-Hub</ref> and <ref target="RegexExerciseSonnets.html"><hi>Regex Exercise 1: Shakespeare's Sonnets</hi></ref></item>
+            <item>How to start: inside-out, or outside-in?</item>
+            <item>The <q>close-open</q> strategy: The beginning of a thing comes at the <hi rend="em">end</hi> of the previous thing!</item>
+            </list>
+            </cell>
+        <cell role="assign"><ref target="RegexExerciseSonnets.html">Complete <hi>Regex Exercise 1: Shakespeare’s Sonnets</hi></ref>. Consult our <title level="a"><ref target="explainRegex.html">Intro to
+            Regular Expressions</ref></title> and <ref
+                target="http://www.regular-expressions.info/quickstart.html">the
+                Regular Expressions Quick Start</ref> as you work on the regex exercises.</cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-04">F 10-04</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Regular Expressions: thinking algorithmically. Greedy Matching.</p></cell>
+        <cell role="assign"> <list>
+            <item><ref target="RegexExerciseBlithedale.html"><hi rend="em">Regex Exercise 2:</hi> Blithedale</ref></item>
+        </list>
+        </cell>
     </row>
     </table><table type="week" n="7"><row role="day">
         <cell role="date">
             <date when="2019-10-07">M 10-07</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><list><item>Regular Expressions: Selecting for what’s not there, simplifying over-complicated patterns</item>
+     <item>Regex searching over highlighted portions of a document</item>   
+        </list></cell>
+        <cell role="assign"><list><item><ref target="RegexExercisePlay.html"><hi rend="em">Regex Exercise 3:</hi> <hi rend="italics">Pygmalion</hi></ref></item>
+            <item>Preview the <title level="a"><ref target="explainXPath.html">Introduction to XPath</ref></title> in preparation for the next unit.</item></list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-09">W 10-09</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Navigating XML with XPath: Introducing the XPath window in &lt;oXygen/&gt;,  functions, axes, path steps <hi>/</hi>, and predicate filters <hi>[ ]</hi>.  Hands-on: navigating <ref target="http://dh.newtfire.org/bad-hamlet.xml">Hamlet</ref>. </p></cell>
+        <cell role="assign"><list>
+            <item>First, carefully read our <ref target="explainXPath.html">Introduction
+                to XPath: <title level="a">Follow the XPath!</title></ref> As you
+                read, try experimenting with the XPath expressions on our page, by
+                downloading the explainXPath.html file, opening it in oXygen, and
+                experimenting in the XPath window with some of our expressions. Then,
+                move on to XPath Exercise 1.</item>
+            <item><ref target="XPathExercise1.html"><hi rend="em">XPath Exercise
+                1</hi></ref>
+            </item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-11">F 10-11</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass">Hands-on Project Team work together in class on Project Checkpoint 3</cell>
+        <cell role="assign"><list>
+            <item><ref target="XPathExercise2.html"><hi>XPath Exercise 2</hi></ref></item>
+            <item><hi>Project Checkpoint 3: </hi><list><item> Some team members work on developing page(s) for the project website, creating navigation menu (using a SSI), and working with section, div, and span elements. Try using CSS flex to control your horizontal layout. Work out a file directory structure for the GitHub repo to separate project website files from XML markup.</item>
+            <item>Others concentrate on completing markup and refining the project schema.</item></list> </item></list></cell>
     </row>
     </table><table type="week" n="8"><row role="day">
         <cell role="date">
             <date when="2019-10-14">M 10-14</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Using XPath to climb trees—up and down and side to side. Predicate
+            expressions: <hi rend="em">[ ]</hi>. <hi rend="em">(Grouping)</hi> and <hi
+                rend="em">[Position()]</hi>. XPath syntax: some tricks.</p></cell>
+        <cell role="assign"> <list>
+            <item><ref target="XPathExercise2.html"><hi rend="em">XPath Exercise
+                2</hi></ref></item>
+            <item>Read and experiment with <title level="a"><ref
+                target="http://dh.obdurodon.org/functions.xhtml">The XPath
+                Functions We Use Most</ref></title> to learn more about XPath functions.</item>
+        </list></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-16">W 10-16</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>XPath Functions: some common functions we use and how to write them: <hi
+            rend="em">count(), not(), distinct-values()</hi>.  </p>
+            <p>Preview functions with regular expressions in XPath.</p></cell>
+        <cell role="assign"><ref target="XPathExercise3.html"><hi rend="em">XPath Exercise 3:</hi> experimenting with functions</ref></cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-10-18">F 10-18</date>
         </cell>
-        <cell role="inclass"/>
-        <cell role="assign"/>
+        <cell role="inclass"><p>Surgical precision with XPath on text strings: regular expressions in XPath functions</p></cell>
+        <cell role="assign"><ref target="XPathExercise4.html"><hi>XPath Exercise 4</hi></ref></cell>
     </row>
     </table><table type="week" n="9"><row role="day">
         <cell role="date">
