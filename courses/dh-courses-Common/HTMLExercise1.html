@@ -7,7 +7,7 @@
         <title>HTML/CSS Exercise 1</title>
     </head>
     <body>
-        
+        <!--#include virtual="topAuthorRJP43.html" --> 
         <h1><span class="banner">HTML and CSS Exercise 1</span></h1>
         <section title="preliminaries">
             <h3>Preliminaries</h3>
@@ -18,7 +18,7 @@
                 begin, open a new HTML file in &lt;oXygen/&gt; by clicking on the icon that looks like a piece of paper in the top left (or going to <strong>File → New</strong>, entering <code>HTML</code> in the search bar, and clicking on the HTML result. Paste in the highlighted meta elements below at the appropriate place in the <code>head</code> element at the start of your file:</p>
             <pre>
                 &lt;!DOCTYPE html&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en"&gt;
             &lt;head&gt;
                   &lt;title&gt;&lt;!--title of your page here--&gt;&lt;/title&gt;
                  <code>&lt;meta charset="UTF-8" /&gt;
@@ -61,34 +61,19 @@
                 <li>on Windows: <code>control + o</code>
                     <br /> on Mac: <code>command + o</code>
                 </li>
-                <li>browse your local file explorer for your webpage</li>
+                <li>browse your local file explorer for your webpage.</li>
             </ol>
-        </section>
-        <section title="how_to_submit">
-            <h3>Submitting your work</h3>
-            <p>You are required to save your HTML page(s) and CSS file in your <q>personal
-                    webpage</q> Git repository AND move them to your personal web space accounts at
-                newtFire.org using the FTP client that we showed you how to configure (see Courseweb for configuration instructions if you need to configure your FTP client). Be sure to
-                    <em>add</em>, <em>commit</em>, and <em>push</em> your files from your local Git
-                repository to your remote GitHub repository.</p>
-            <p><em>A note on mindful file management:</em> We recommend you save your CSS stylesheet
-                in the same directory with your HTML pages, because then you simply need to indicate
-                the filename in the <code>&lt;link&gt;</code> element that sits in the
-                    <code>&lt;head&gt;</code> element of each HTML page. The same applies for pages
-                that are linked from other pages. Otherwise, you will need to declare the folder
-                (directory) followed by a <code>/</code> and then the filename. Mindful file
-                management is a key component of creating a well organized website.</p>
             <p>By convention, the first page you place in your website folder is designated your
-                index.html page. You don’t have to have an index.html, but if you do, the main page
+                <code>index.html</code> page. You don’t have to have an index.html, but if you do, the main page
                 of your site can be abbreviated to the name of the site directory holding the web
                 files, like this one for Dr. Beshero-Bondar’s personal Pitt homepage:
-                http://www.pitt.edu/~ebb8/ . By default, when given that address, the web browser
-                retrieves the index.html file placed in her account’s space, and if it doesn’t find
+                <code>http://www.pitt.edu/~ebb8/</code> . By default, when given that address, the web browser
+                retrieves the <code>index.html</code> file placed in her account’s space, and if it doesn’t find
                 one it generates an error. (The site address leads to exactly the same place as
-                http://www.pitt.edu/~ebb8/index.html .) By assigning any other name to your homepage
+                <code>http://www.pitt.edu/~ebb8/index.html</code> .) By assigning any other name to your homepage
                 someone visiting your site is required to call on that specific file/file path to
                 get to your homepage. <strong>For this assignment please name your homepage
-                        <code>index.html</code>.</strong></p>
+                    <code>index.html</code>.</strong></p>
             <p>Access your personal web space accounts at newtFire.org using your preferred file transfer program (FTP client). Move
                 all of your developed HTML pages and your CSS file into the <code>public_html</code>
                 folder. Be sure the file permissions on your main folder allow the group and others
@@ -97,6 +82,29 @@
                 and our recommended settings using WinSCP on a Windows machine; however, the setup
                 should be similar on other platforms and in other file transfer programs.</p>
             <img src="filePermissions.jpg" alt="WinScp Changing File Permissions" />
+        </section>
+        <section title="how_to_submit">
+            <h3>Submitting your work</h3>
+            <p>For the HTML unit, you will NOT be submitting your homework on Courseweb! Instead,
+            you will be posting it to your web server space on Newtfire and backing it up on your personal GitHub repository.
+            This means your HTML page(s) and CSS file need to be posted in two places:</p>
+                <ul>
+                    <li>your personal web space accounts at
+                        newtfire.org using the SFTP client (probably FileZilla) that we showed you how to configure. (See Courseweb for configuration instructions if you need to configure your SFTP client).</li> 
+                    <li>Your personal GitHub repo, which should <em>always</em> contain your web files. We recommend making
+                a <code>web</code> directory in your GitHub repo, and make its file structure the same as what 
+                    you want in your <code>public_html</code> directory on Newtfire. You will need to <em>add</em>, <em>commit</em>, and <em>push</em> your files from your local Git
+                    repository to your remote GitHub repository.</li>
+                   
+                    </ul>
+         
+            <p>Finally, let us know that your site is “live” and ready for the class to view! Submit your 
+                homework by posting a link to your website on the DHClass-Hub Issue that we will set up to collect these.
+            Your link will look like this, replacing <code>username</code> with your own username on Newtfire:
+               <code>https://newtfire.org/~username/</code>. 
+                That link will point to your <code>index.html</code> page, understood to be your home page for your personal website on Newtfire.
+
+            </p>
         </section>
     </body>
 </html>
