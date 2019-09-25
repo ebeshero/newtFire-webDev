@@ -11,20 +11,75 @@
         <h1><span class="banner">Document Analysis and TEI Exercise, Part 2 of 2</span></h1>
         <section title="about_metadata">
             <h3>Metadata and the TEI header</h3>
-            <p>In <a href="TEIExercise1.html">Part 1</a> of this exercise, you produced a coded representation of the Cheese Straws documents in the <code>&lt;text&gt;</code> portion of the TEI document. Now we will concentrate on identifying <dfn>metadata</dfn>, which literally means data about data. When preparing digital editions, the metadata is information about how documents were prepared, what materials they are made of, how those materials are represented (for example, a photograph of a physical piece of paper, or the piece of paper itself). The metadata also includes information about who prepared the documents, where they are stored, and who is involved in transcribing and representing them in the current document. The people who were involved in producing and reproducing the documents all had a hand in its transmission, and their identities and roles are also part of a document’s metadata.</p>
-            <p>The TEI Header (or the TEI document encoded in the <code>&lt;teiHeader&gt;</code> element) is designed to store metadata, and it can be very complex when representing a digital edition, because it should contain information about the document being represented and whatever is known of its <dfn>provenance</dfn> (or origins), as well as information about the person encoding it now and the date and time of its encoding as a TEI document. Part 2 of this exercise with the TEI is designed to give you experience with thinking about how to encode metadata, following the TEI Guidelines as a standard for sustainable practice. Whether or not you choose to work with the TEI for your course projects, the experience of coding metadata should be a useful exercise that you may later adapt in the XML architecture that you design.</p>
+            <p>In <a href="TEIExercise1.html">Part 1</a> of this exercise, you produced a coded
+                representation of the Cheese Straws documents in the <code>&lt;text&gt;</code>
+                portion of the TEI document. Now we will concentrate on identifying
+                    <dfn>metadata</dfn>, which literally means data about data. When preparing
+                digital editions, the metadata is information about how documents were prepared,
+                what materials they are made of, how those materials are represented (for example, a
+                photograph of a physical piece of paper, or the piece of paper itself). The metadata
+                also includes information about who prepared the documents, where they are stored,
+                and who is involved in transcribing and representing them in the current document.
+                The people who were involved in producing and reproducing the documents all had a
+                hand in its transmission, and their identities and roles are also part of a
+                document’s metadata.</p>
+            <p>The TEI Header (or the TEI document encoded in the <code>&lt;teiHeader&gt;</code>
+                element) is designed to store metadata, and it can be very complex when representing
+                a digital edition, because it should contain information about the document being
+                represented and whatever is known of its <dfn>provenance</dfn> (or origins), as well
+                as information about the person encoding it now and the date and time of its
+                encoding as a TEI document. Part 2 of this exercise with the TEI is designed to give
+                you experience with thinking about how to encode metadata, following the TEI
+                Guidelines as a standard for sustainable practice. Whether or not you choose to work
+                with the TEI for your course project, the experience of coding metadata should be a
+                useful exercise that you may later adapt in the XML architecture that you
+                design.</p>
         </section>
         <section title="research_planning">
             <h3>Researching the TEI Header and Manuscript Representation</h3>
-            <p>Begin by reviewing the Cheese Straw Recipe documents and jot down some notes about what metadata you have available. Who was writing the various documents? What are the documents made of? What kind of image do you have of the manuscript? What do you know of dates when the documents were found or produced? What else might qualify as metadata here? </p><p>Now, read and sift the TEI Guidelines from <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">Chapter 2: The TEI Header</a> and <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html">Chapter 10: Manuscript Description</a>, and consider what information to place in the header, and what TEI elements you could use to describe the material and condition of the documents. You may, if you wish, reorganize your TEI document as a whole: Are any parts of the <code>&lt;text&gt;</code> perhaps better represented in the <code>&lt;teiHeader&gt;</code>? Think about how to distinguish between the <q>hands</q> involved in the recipe and its context: How can TEI markup help to distinguish Prof. Triplette’s writing from her grandmother’s?</p><p>It may help you to look at an example from a manuscript edition project, so you may want to look now at the TEI header in <a href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Class-Examples/TEI_Samples/1818-01-12_WElford.xml">our sample letter file</a> from the Digital Mitford project. (You can also view how we represented the metadata and the letter in <a href="http://digitalmitford.org/getLetterText.php?uri=1818-01-12_WElford.xml">our web rendering</a>.) There is far more metadata on the Mitford letter than we have to record for this small exercise, but we hope it gives you some ideas of metadata to look for.</p>
+            <p>Begin by reviewing the Cheese Straw Recipe documents and jot down some notes about
+                what metadata you have available. Who was writing the various documents? What are
+                the documents made of? What kind of image do you have of the manuscript? What do you
+                know of dates when the documents were found or produced? What else might qualify as
+                metadata here? </p>
+            <p>Now, read and sift the TEI Guidelines from <a
+                    href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html">Chapter 2:
+                    The TEI Header</a> and <a
+                    href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html">Chapter 10:
+                    Manuscript Description</a>, and consider what information to place in the
+                header, and what TEI elements you could use to describe the material and condition
+                of the documents. You may, if you wish, reorganize your TEI document as a whole: Are
+                any parts of the <code>&lt;text&gt;</code> perhaps better represented in the
+                    <code>&lt;teiHeader&gt;</code>? Think about how to distinguish between the
+                    <q>hands</q> involved in the recipe and its context: How can TEI markup help to
+                distinguish Prof. Triplette’s writing from her grandmother’s?</p>
+            <p>It may help you to look at an example from a manuscript edition project, so you may
+                want to look now at the TEI header in <a
+                    href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Class-Examples/TEI_Samples/1818-01-12_WElford.xml"
+                    >our sample letter file</a> from the Digital Mitford project. (You can also view
+                how we represented the metadata and the letter in <a
+                    href="http://digitalmitford.org/getLetterText.php?uri=1818-01-12_WElford.xml"
+                    >our web rendering</a>.) There is far more metadata on the Mitford letter than
+                we have to record for this small exercise, but we hope it gives you some ideas of
+                metadata to look for.</p>
         </section>
-        <section title="coding_teiHeader"> 
-        <h3>Coding the TEI Header</h3>
-            <p>Return to your TEI document. The version of the header that you see in &lt;oXygen/&gt; contains only the absolutely minimal necessary information to satisfy the TEI validation, but you will certainly want to add more, concentrating, for example, on fleshing out the <code>&lt;sourceDesc&gt;</code> with <code>&lt;msDesc&gt;</code> elements. Develop the TEI header to represent the metadata you observed about the documents you are coding as well as metadata about your own involvement in coding them in this document. Feel free to revise and reorganize the encoding of the material in the <code>&lt;text&gt;</code> element as you are building up your TEI header.</p>
+        <section title="coding_teiHeader">
+            <h3>Coding the TEI Header</h3>
+            <p>Return to your TEI document. The version of the header that you see in
+                &lt;oXygen/&gt; contains only the absolutely minimal necessary information to
+                satisfy the TEI validation, but you will certainly want to add more, concentrating,
+                for example, on fleshing out the <code>&lt;sourceDesc&gt;</code> with
+                    <code>&lt;msDesc&gt;</code> elements. Develop the TEI header to represent the
+                metadata you observed about the documents you are coding as well as metadata about
+                your own involvement in coding them in this document. Feel free to revise and
+                reorganize the encoding of the material in the <code>&lt;text&gt;</code> element as
+                you are building up your TEI header.</p>
         </section>
         <section title="how_to_submit">
             <h3>Submitting your work</h3>
-            <p>When you are ready to turn in your work, rename your file according to the <a href="http://dh.newtfire.org/explainFileNames.html">homework file submission rules</a>, and upload it at the appropriate place on Courseweb.</p>
+            <p>When you are ready to turn in your work, rename your file according to the <a
+                    href="http://dh.newtfire.org/explainFileNames.html">homework file submission
+                    rules</a>, and upload it at the appropriate place on Courseweb.</p>
         </section>
     </body>
 </html>

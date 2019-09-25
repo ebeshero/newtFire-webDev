@@ -999,44 +999,64 @@
                 
             </list>
        </cell>
-        <cell role="assign"><list>
-            <item><hi>Test 2 (take-home): Relax NG</hi></item>
-            
-        </list></cell>
+        <cell role="assign">Work on your HTML and website development over the weekend if you did not finish the HTML exercises.</cell>
     </row>
     </table><table type="week" n="5"><row role="day">
         <cell role="date">
             <date when="2019-09-23">M 09-23</date>
         </cell>
-        <cell role="inclass"><p>Document Analysis of Manuscripts: Hands-on Workshop</p>
-            <p>Project schemas and community schemas: controlled markup vocabularies:  Introduction and discussion of the <ref target="http://www.tei-c.org/index.xml">The Text Encoding Initiative (TEI)</ref>Text Encoding Initiative (TEI)</p>         
+        <cell role="inclass">
+            <p>Review of tech so far. File dependencies (XML and Relax NG; HTML and CSS). Sharing over the web (GitHub, SFTP with SSH keys) </p>
+            <p>Project web directories on NewtFire</p>
+            <p>Document Analysis of Manuscripts: Hands-on Workshop</p>
+            <p>Project schemas and community schemas: controlled markup vocabularies. Introduction to the <ref target="http://www.tei-c.org/index.xml">The Text Encoding Initiative (TEI)</ref>Text Encoding Initiative (TEI)</p>         
            </cell>
-        <cell role="assign"><hi>Document Analysis and TEI Exercise, Part 1</hi> (TBD)</cell>
+        <cell role="assign"><list><item><hi><ref target="TEIExercise1.html">Document Analysis and TEI Exercise, Part 1</ref></hi></item>
+        <item>Correct Relax NG assignments if asked to revise; review Relax NG</item>
+            
+        </list> </cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-09-25">W 09-25</date>
         </cell>
-        <cell role="inclass"> Work together on the Document Analysis and TEI Exercise [TBD]. Data and metadata in the TEI document model: exploring the TEI Header</cell>
-        <cell role="assign"><hi>Document Analysis and TEI Exercise, Part 2</hi> [TBD]</cell>
+        <cell role="inclass"> <p>Review Relax NG for take-home test.</p> 
+           <p>Document Analysis and TEI Exercise continued: review code developed so far.</p>
+            <p>Data and metadata in the TEI document model: exploring the TEI Header</p></cell>
+        <cell role="assign"><list><item><hi>Test 2 (take-home): Relax NG</hi></item>
+            <item>Resolve SSH key and SFTP issues if you are having issues with accessing NewtFire.</item>
+        </list>
+            </cell>
     </row>
     <row role="day">
         <cell role="date">
             <date when="2019-09-27">F 09-27</date>
         </cell>
-        <cell role="inclass"> <list><item>Explore <ref target="https://romabeta.tei-c.org/">Roma JS</ref> and work on developing a TEI ODD.</item>
-            <item>Generate a Relax NG schema from the ODD file in &lt;oXygen/&gt;.</item>
-            <item>Relax NG Review</item>
-            <item>TEI ODD-schemas versus hand-coded Relax-NG: Which is better for your project?</item>
+        <cell role="inclass"> <list>
+            <item>Project management tools for improving communication, completing tasks: GitHub projects, Slack.</item>
+            <item>The TEI Header and organizing a TEI document</item>
+            <item>TEI ODD customizations: choosing only the elements and attributes you need. 
+                Introduce <ref target="https://romabeta.tei-c.org/">Roma JS</ref>.</item>
         </list></cell>
-        <cell role="assign"><hi>TEI ODD and Schema Development Exercise</hi> (TBD)</cell>
+        <cell role="assign"><list>
+            <item><hi><ref target="TEIExercise2.html">Document Analysis and TEI Exercise, Part 2</ref></hi></item>
+            <item>Work on Project Checkpoint 2 (see below).</item>
+        </list>
+            
+            
+           </cell>
     </row>
     </table><table type="week" n="6"><row role="day">
         <cell role="date">
             <date when="2019-09-30">M 09-30</date>
         </cell>
-        <cell role="inclass">Discussion and review of TEI ODDs and Relax NG schemas. Application to projects? </cell>
-        <cell role="assign"><list><item><hi>Project Checkpoint 2:</hi> <list><item>Locate all sources for project XML markup.</item><item>Establish a clear file directory structure on your project GitHub, including a distinct directory for website files.</item><item>Ensure all project team members are working consistently with the GitHub directory structure (all agree on it, and no one changes without notice).</item> <item>Establish a project schema and associate that schema with project XML files in the repo.</item> <item>All team members are actively testing the project schema on XML markup.</item><item>A significant quantity of project markup is present in the GitHub repo.</item></list></item>
+        <cell role="inclass"><list> <item>How to write a TEI ODD. Explore <ref target="https://romabeta.tei-c.org/">Roma JS</ref> and work on developing a TEI ODD.
+            </item>
+            <item>Generate a Relax NG schema from the ODD file in &lt;oXygen/&gt;.</item>
+            <item>TEI ODD-schemas versus hand-coded Relax-NG: Which is better for your project?</item></list></cell>
+        <cell role="assign"><list>
+            <item>Finish TEI ODD exercise.</item>
+            <item><hi>Project Checkpoint 2:</hi> <list><item>Locate all sources for project XML markup.</item><item>Establish a clear file directory structure on your project GitHub, including a distinct directory for website files.</item><item>Ensure all project team members are working consistently with the GitHub directory structure (all agree on it, and no one changes without notice).</item> <item>Establish a project schema and associate that schema with project XML files in the repo.</item> <item>All team members are actively testing the project schema on XML markup.</item><item>A significant quantity of project markup is present in the GitHub repo.</item></list></item>
             <item>Read our <title level="a"><ref target="explainRegex.html">Intro to Regular Expressions</ref></title> and start reading
                 <ref target="http://www.regular-expressions.info/quickstart.html">the
                     Regular Expressions Quick Start</ref> in prep for next class.</item>
@@ -1082,7 +1102,7 @@
             <date when="2019-10-09">W 10-09</date>
         </cell>
         <cell role="inclass"><list><item>Review, work through issues with Regex exercise 3. Prep for Regex test.</item>
-        <item>Project management tools for improving communication, completing tasks: hands on with GitHub projects, Slack.</item>
+        <item>Revisit Project Management tools (Slack, GitHub Projects)</item>
         </list>
 </cell>
         <cell role="assign"><hi>Test 3 (take-home): Regular Expressions</hi></cell>
