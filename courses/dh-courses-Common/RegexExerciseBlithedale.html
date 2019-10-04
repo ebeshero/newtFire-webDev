@@ -46,10 +46,70 @@
            <li>Prepare a Step File: open a <strong>new, separate text file</strong>, in which you will record each step you take in up-converting this document to XML. This needs to be a plain text (<code>*.txt</code>) or markdown (<code>*.md</code>) file and not something you write in a word processor (<em>not</em> a Microsoft Word document) so you do not have to struggle with autocorrections of the regex patterns you are recording. In this file you will record each step you take and paste in the patterns you apply in the Find and Replace windows in &lt;oXygen/&gt;. (Save your Step file following our standard homework filenaming conventions for homework submitted on Courseweb.)
        </li>
        </ul>
+       <h3>Overview of the conversion process</h3>
+       We will try to do this conversion in a set order just to guide you as you are learning. 
+       In reality, you can do some of these tasks in a different sequence, but if you want to follow our tutorial guide below, try to stick to this order.
+       Each step in this overview is linked to a detailed explanation of how to approach the task.
+       <ol>
+           <li>Start your record each of your steps in a markdown file, that you save as `.md`. Record your steps like this, using tic marks to wrap the regular expressions you use:
+               <pre>
+                  1. First I looked for blah blah...
+                     Find: `&amp;`
+                     Replace `&amp;amp;`
+                  2. Then I tried to blah blah... 
+               </pre>
+           </li>
+           <li><a href="#reserv">Search and replace reserved characters</a>: <code>&amp;</code>, <code>&lt;</code>, <code>&gt;</code></li>
+           <li><a href="#blanks">Set up regex find &amp; replace in oXygen, and remove extra blank lines</a> (Replace with just two blanks in a row so you can see the chapter and paragraph divisions.)</li>
+           <li><a href="#paras">Find and mark all blocks of text as paragraphs</a>: 
+               <ul>
+               <li>Most of the text blocks are paragraphs, though some of them are titles. That’s okay because we will handle the titles and chapter boundaries later.</li>
+                   <li>For the replace, we recommend our <q>close-open</q> strategy: <code>&lt;/p&gt;  &lt;p&gt;</code>. (Remember you will have some small manual clean-up to do with that afterwards.)</li> 
+               </ul>
+           </li>
+           <li><a href="#titles">Find all chapter titles and wrap them in <code>&lt;title&gt;</code> start and end tags.</a>
+               <ul><li>You will need a regular expression pattern that isolates just the titles.</li>
+               <li>Your replace will need to remove the <code>&lt;p&gt;</code> tags around the titles. (Use capturing groups in your find, and refer to them in your replace.)</li>
+               </ul>
+           </li>
+           <li><a href="#chaps">Wrap whole chapters with <code>&lt;chapter&gt;</code> start and end tags</a>. (Use our <q>close-open</q> strategy.)
+           After this, the chapter titles and body paragraphs will be nested inside chapter elements in your XML hierarchy. 
+           Here is a simple view of the hierarchy you are building:
+           <pre>
+               &lt;xml&gt; 
+                   &lt;chapter&gt;
+                       &lt;title&gt;.....&lt;/title&gt;
+                       &lt;p&gt;....&lt;/p&gt;
+                       &lt;p&gt;.....&lt;/p&gt;
+                       &lt;p&gt;.....&lt;/p&gt;
+                       ...
+                   &lt;/chapter&gt; 
+                   &lt;chapter&gt;
+                       &lt;title&gt;....&lt;/title&gt;
+                       &lt;p&gt;........&lt;/p&gt;
+                       &lt;p&gt;....&lt;/p&gt;
+                       &lt;p&gt;.....&lt;/p&gt;
+                       &lt;p&gt;.....&lt;/p&gt;
+                       ...
+                   &lt;/chapter&gt;
+                  ...
+  
+               &lt;/xml&gt;
+           </pre>
+           </li>
+           <li><a href="#quotes">Find and auto-tag all the passages in quotes</a>, including the ones that run across multiple lines. 
+               Experiment with <q>Dot matches all</q> option in the oXygen find and replace window. 
+               Replace the quotation marks with <code>&lt;quote&gt;</code> start and end tags.</li>
+           <li><a href="#cleanup">Manually clean up the XML you have created</a>: look for extra close tags from the times you used the <q>close-open</q> strategy on paragraphs and chapters for example.
+           (Make sure you have a root element, and do anything that only needs to be marked once by you.) 
+           </li>
+           <li><a href="#check">Check if your work is well-formed XML</a>: Save the file as XML with a <code>.xml</code> file extension. Close it and re-open it in oXygen and make sure it is well-formed. </li>
+           <li><a href="#submit">Submit your work</a>: We need to see your Markdown file where you recorded your steps, and you may also submit the XML file you created on Courseweb. </li>
+       </ol>
         <h3>Step by step</h3>
         <p>There’s more than one way to accomplish this task, but one way to approach the problem is
             as follows:</p>
-        <h4>Reserved characters</h4>
+        <h4 id="reserv">Reserved characters</h4>
        <p>The plain text file could, at least in principle, contain characters that have special
            meaning in XML: the ampersand and the angle brackets. You need to search for those and
            replace them with their corresponding XML entities. (These are those character strings that start with an <code>&amp;</code> character.) 
@@ -59,7 +119,7 @@
            in the correct order, because of the ampersand (<code>&amp;</code>) in each one! 
            Think about this carefully: You <strong>always</strong> want to replace the &amp; characters first. (Why? Explain in your homework write-up.)</p>
      
-        <h4>Extra blank lines</h4>
+        <h4 id="blanks">Extra blank lines</h4>
         <p>The blank lines are pseudo-markup that tell us where titles and paragraphs begin and end,
             but in some cases there are multiple blank lines in a row (for example, there are two
             blank lines between the title and the word <q>by</q>). Those extra blank lines don’t
@@ -96,7 +156,7 @@
             new lines). You can use the <q>Find</q> or <q>Find all</q> options in the
             find-and-replace dialog to explore the document and make sure that you’re matching what
             you want to match before you use <q>Replace all</q> to make the changes.</p>
-        <h4>Paragraphs</h4>
+        <h4 id="paras">Paragraphs</h4>
         <p>What’s left after deleting the beginning and ending metadata and extra blank lines is
             mostly (except for the stuff at the top) a bunch of chapter titles and paragraphs,
             separated from one another by a single blank line, and we can use a regex to find all
@@ -111,7 +171,7 @@
             contain chapter titles, rather than paragraphs. We’ll fix that below. At the top of the
             file, the title, author, and list of chapter titles will need special handling. We’ll
             talk about those below, too.</p>
-        <h4>Chapter titles</h4>
+        <h4 id="titles">Chapter titles</h4>
         <p>The title of the first chapter within the body looks like:</p>
         <pre>&lt;p&gt;I. OLD MOODIE&lt;/p&gt;</pre>
         <p>the second looks like:</p>
@@ -223,7 +283,7 @@
             <li>Putting this all together, you should be able to retag your titles automatically,
                 distinguishing them from the paragraphs. Try it.</li>
         </ul>
-        <h4>Chapters</h4>
+        <h4 id="chaps">Chapters</h4>
         <p>A book isn’t just a series of paragraphs with titles strewn among them; the book has
             logical chapters, which must begin with a title, and you want to represent this part of
             the logical document hierarchy in your markup by inserting <code>&lt;chapter&gt;</code>
@@ -233,7 +293,7 @@
             markup before the first chapter and after the last one manually, since in those cases
             the <code>&lt;title&gt;</code> element doesn’t have the same milestone function as
             elsewhere.</p>
-        <h4>Quotes</h4>
+        <h4 id="quotes">Quotes</h4>
         <p>How are quotations represented in the plain text? How would you find the text of a
             quotation, that is, how would you find where it starts, where it ends, and what goes
             between the start and the end? Files on the Internet sometimes have errors and
@@ -290,7 +350,7 @@
             mark characters themselves in the capture group; those are plain-text pseudo-markup, and
             now that you’re going to be tagging quotations with real markup, you don’t want the
             quotation mark characters included.</p>
-        <h4>Cleanup</h4>
+        <h4 id="cleanup">Cleanup</h4>
         <p>At this point you can fix the title and author lines manually (we’d just delete the line
             that reads <q>by</q>, since the new <code>&lt;author&gt;</code> tags will make that
             explicit), as well as the table of contents, and you need to wrap the entire document in
@@ -310,7 +370,7 @@
             tags. You’ll want to get rid of the paragraph tags that are wrapping the whole table of
             contents, since it isn’t a paragraph, and replace it with something like
                 <code>&lt;toc&gt;</code> (for <q>table of contents</q>).</p>
-        <h4>Checking your results</h4>
+        <h4 id="check">Checking your results</h4>
         <p>Although you’ve added XML markup to the document, &lt;oXygen/&gt; remembers that you
             opened it as plain text, which means that you can’t check it for well-formedness. To fix
             that, save it as XML with File → Save as and give it the extension <q>.xml</q>. Even
@@ -319,8 +379,8 @@
             so you can verify that it’s well formed in the usual way: Control+Shift+W on Windows,
             Command+Shift+W on Mac, or click on the arrow next to the red check mark in the icon bar
             at the top and choose <q>Check well-formedness</q>.</p>
-        <h3>What to submit</h3>
-        <p>We don’t need to see the XML that you produce as the output of your transformation
+        <h3 id="submit">What to submit</h3>
+        <p>Technically we don’t need to see the XML that you produce as the output of your transformation
             because we’re going to recreate it ourselves anyway, but you do need to upload a
             step-by-step description of what you did. Your write-up can be brief and concise, but it
             should provide enough information to enable us to duplicate the procedure you
