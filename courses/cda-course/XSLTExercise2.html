@@ -225,7 +225,7 @@
             >green</span> below), and we needed to include an attribute there to omit the default XML declaration because if we output it that XML line in our XHTML output, it will not produce valid HTML with the w3C and might produce quirky problems with rendering in various web browsers. So, our modified stylesheet template and xsl:output line is this, and you should copy this into your stylesheet:</p>
       
       <pre>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-         &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+         &lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="3.0"
     <span style="color:purple;">xmlns="http://www.w3.org/1999/xhtml"</span>
    <span style="color:blue;"> xpath-default-namespace="http://www.tei-c.org/ns/1.0"</span>&gt;
     
