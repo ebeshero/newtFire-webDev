@@ -92,14 +92,14 @@
         <p>This is using the symbol for multiplication (<code>*</code>). We can use the following basic <dfn>numeric operators</dfn> in XPath and XSLT: <code>+</code> (for adding one value to another), <code>-</code> (for subtracting one value from another), and <code>*</code> (for multiplying one value by another). For division, we cannot use the forward slash because that literally means taking an XPath step, so we use <code>div</code> (to divide one value by another), and one more: <code>mod</code> to return the remainder after dividing one value by another. 
             (Here is <a href="https://www.w3schools.com/xml/xpath_operators.asp">a handy page to look at examples of each notation</a>.) 
             In our example above, if we’ve previously defined <code>$Xinterval</code> as equal to <q>100</q>, our code for multiplication will set
-            the value of the <code>$Xpos</code> variable to <q>100</q> for chapter 1 (the first of
-            the twelve chapters, and therefore in position #1), to <q>200</q> for chapter 2, etc. (You will also calculate the Y
+            the value of the <code>$Xpos</code> variable to "100" for chapter 1 (the first of
+            the twelve chapters, and therefore in position #1), to "200" for chapter 2, etc. (You will also calculate the Y
             position and assign that value to the variable <code>$Ypos</code>.) We
             can then plot the dot with something like:</p>
         <pre>&lt;circle cx="{$Xpos}" cy="{$Ypos} r="5" fill="red"&gt;</pre>
         <p>Note the curly braces, which create an <strong>attribute value template (AVT)</strong> that causes the
             variable to be interpreted and its value to be output. (If you don’t use an AVT, you’ll
-            set your X position to a literal value of <q>$Xpos</q>, which is invalid because the X
+            set your X position to a literal value of <code>$Xpos</code>, which is invalid because the X
             position of an SVG <code>&lt;circle&gt;</code> element must be numeric.) You don’t need
             curly braces for the <code>@r</code> attribute (the radius of the circle) if you just plug in a literal number for it like we did here, and you don’t need it for the <code>@fill</code> (color)
             because that value should be a literal color name or some other representation of a
@@ -110,17 +110,21 @@
             and stash it in a variable, you reuse the variable to position two things without having
             to redo the calculation.</p>
         <h3>Writing the XSLT</h3>
-        <p>Writing SVG with XSLT almost always involves using the “pull” approach, which selects for just the bits of data you need. 
+        <p>Writing SVG with XSLT almost always involves using the <q>pull</q> approach, which selects for just the bits of data you need. 
             After you create the SVG superstructure, plot the X and Y axes, and label the Y axis at intervals, you
-            can draw the dots, the lines between dots, and the labels on the X axis either by
-            applying templates to all <code>&lt;chapter&gt;</code> elements or by using
-                <code>&lt;xsl:for-each select="//chapter"&gt;</code>. If you use the
-                <code>&lt;xsl:for-each&gt;</code> strategy, you’ll need only one template for the
-            document node, and you’ll put the <code>&lt;xsl:for-each&gt;</code> inside that. If you
-            apply templates to chapters, you’ll need two templates: a template for the document
-            node, in which you’ll create the SVG superstructure, and a template that matches
-                <code>&lt;chapter&gt;</code> elements.</p>
-        <p>You can draw the dot for each chapter when you process that chapter, but to draw
+            can draw the dots, the lines between dots, and the labels on the X axis in one of two ways:</p>
+        <ul>
+            <li>You can use <code>&lt;xsl:apply-templates select="descendant::chapter"&gt;</code>.  If you
+                apply templates to chapters, you’ll need two templates: a template for the document
+                node, in which you’ll create the SVG superstructure, and a second template that matches
+                <code>&lt;chapter&gt;</code> elements.</li>
+            <li>Or you can use <code>&lt;xsl:for-each select="descendant::chapter"&gt;</code>. If you use the
+                <code>&lt;xsl:for-each&gt;</code> strategy, you’ll need only one template in your XSLT file for the
+                document node, and you’ll put the <code>&lt;xsl:for-each&gt;</code> inside that.</li>
+        </ul>
+            
+        <p>Whether you use <code>xsl:apply-templates</code> or <code>xsl:for-each</code> to process the chapters, you will be drawing a dot (using an SVG circle element) when you process each chapter. The <code>@cx</code> coordinate for your circles needs to advance across your X axis regularly with each chapter by its number, and the <code>@cy</code> needs to represent the count of Alice’s speeches within the chapter you are processing. </p>
+        <p>To draw
             connecting lines between the dots, you’ll need to access information about two chapters
             at once. One will be the one you’re processing; the other will be either the one before
             or the one after. There are several ways to do that, and we’ll talk about them when we
