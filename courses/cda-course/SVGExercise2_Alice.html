@@ -90,7 +90,7 @@
         using the position() function to return the position of each chapter, or just use the number value coded in the <code>@which</code> attribute:
         <pre>&lt;xsl:variable name="Xpos" select="@which * $Xinterval"/></pre>
         <p>This is using the symbol for multiplication (<code>*</code>). We can use the following basic <dfn>numeric operators</dfn> in XPath and XSLT: <code>+</code> (for adding one value to another), <code>-</code> (for subtracting one value from another), and <code>*</code> (for multiplying one value by another). For division, we cannot use the forward slash because that literally means taking an XPath step, so we use <code>div</code> (to divide one value by another), and one more: <code>mod</code> to return the remainder after dividing one value by another. 
-            (Here is <a href="https://www.safaribooksonline.com/library/view/xpath-and-xpointer/0596002912/ch04s03.html">a handy page to look at examples of each notation</a>.) 
+            (Here is <a href="https://www.w3schools.com/xml/xpath_operators.asp">a handy page to look at examples of each notation</a>.) 
             In our example above, if we’ve previously defined <code>$Xinterval</code> as equal to <q>100</q>, our code for multiplication will set
             the value of the <code>$Xpos</code> variable to <q>100</q> for chapter 1 (the first of
             the twelve chapters, and therefore in position #1), to <q>200</q> for chapter 2, etc. (You will also calculate the Y
