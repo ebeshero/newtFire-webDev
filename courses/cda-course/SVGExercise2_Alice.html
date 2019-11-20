@@ -110,9 +110,11 @@
             and stash it in a variable, you reuse the variable to position two things without having
             to redo the calculation.</p>
         <h3>Writing the XSLT</h3>
-        <p>Writing SVG with XSLT almost always involves using the <q>pull</q> approach, which selects for just the bits of data you need. 
-            After you create the SVG superstructure, plot the X and Y axes, and label the Y axis at intervals, you
-            can draw the dots, the lines between dots, and the labels on the X axis in one of two ways:</p>
+        <p>Writing SVG with XSLT almost always involves using the <q>pull</q> approach, which selects for just the bits of data you need from your source XML file. It always helps to look at an example file to get started, and we have prepared one that will help show you how we plotted an X and Y axis and worked with XPath to make some estimates for how big our plot would be: See <a href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Class-Examples/SVG/Undertale/Starter_waterfallSettingChoices-to-SVG.xsl">this example starter XSLT file</a> from the Fall 2019 course’s Undertale project. (It may help to open this in oXygen and read my comments, while you're preparing this assignment.)</p>  
+           
+            <p>We've usually presumed for this plot that you'd want to spread the chapters of Allice along the X axis, and plot the number of times Alice speaks to up up the Y axis. But you should feel free to flip this around and plot it the way we did the Undertale graph in class. (This is up to you.)</p>
+        <p>After you create the SVG superstructure, plot the X and Y axes, and add some labels to the plot, you
+            can draw the dots, the lines between dots, and the labels on the X (or Y) axis in one of two ways:</p>
         <ul>
             <li>You can use <code>&lt;xsl:apply-templates select="descendant::chapter"&gt;</code>.  If you
                 apply templates to chapters, you’ll need two templates: a template for the document
@@ -124,6 +126,15 @@
         </ul>
             
         <p>Whether you use <code>xsl:apply-templates</code> or <code>xsl:for-each</code> to process the chapters, you will be drawing a dot (using an SVG circle element) when you process each chapter. The <code>@cx</code> coordinate for your circles needs to advance across your X axis regularly with each chapter by its number, and the <code>@cy</code> needs to represent the count of Alice’s speeches within the chapter you are processing. </p>
+        
+        <h4>What do you want to make: a bar graph or a line graph?</h4>
+        This is totally up to you, and we will show you both ways in class. The decision you make has a lot to do with whether you consider speech events to be a continuous activity throughout a novel, so you want to plot lines that show slopes that incline or decline. But you might prefer to see each chapter plotted separately.
+        
+        <h5>Bar Graph: </h5>
+        <p>We usually find it easiest to make bar graphs using the SVG <code>line</code> element, and giving it a <code>@stroke-width</code> attribute that basically makes a thick line. (Dealing with width of an SVG rectangle element can be a little challenging, but feel free to adapt that if you wish.) You will need to plot lines that run from the axis up (or out) to the circle you plotted. </p>
+        
+        <h5>Line Graph: </h5>
+        
         <p>To draw
             connecting lines between the dots, you’ll need to access information about two chapters
             at once. One will be the one you’re processing; the other will be either the one before
