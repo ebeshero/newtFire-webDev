@@ -6,7 +6,7 @@ body {background-color: #e6e6e6 /*#cccccc*/ /*#b0b2b0*/ /*#f9f4de*/ /*#f4ebc8*/ 
 /*div#space {background-color:#FFFFFF; width:99%; margin:auto; padding: 20px; line-height:1.2em; }
  */
 
-div#top {width:100%; display:flex; justify-content:space-around; align-items:center; flex-direction:row;}
+div#top {width:100%; display:flex; justify-content:space-around; align-items:center; flex-direction:row; flex-wrap: wrap;}
 div#bannerImage {/* width:20%; */ flex:1}
 div#bannerImage img {width:275px;}
 div#text_top{/* width:80%; */ flex:2}
@@ -93,12 +93,12 @@ span.indentMore {margin-left:5em;}
 span.indentEvMore {margin-left:7em}
 
 
-ul {list-style-type: none; display:flex;  justify-content:space-around; align-items:flex-start; flex-direction:row;}
+ul {list-style-type: none; display:flex;  justify-content:space-around; align-items:flex-start; flex-direction:row; flex-wrap: wrap;}
 
 ul li {padding-left: 10px; padding-right:10px; display:flex; justify-content:space-around; align-items:center; flex-direction:column; font-weight:bold;}
-ul li a {display:flex; justify-content:space-around; align-items:center; flex-direction:column;}
+ul li a {display:flex; justify-content:space-around; align-items:center; flex-direction:column; flex-wrap: wrap;}
 
-ul li ul  {list-style-type:circle; display:flex; justify-content:space-between; align-items:flex-start; flex-direction:row;}
+ul li ul  {list-style-type:circle; display:flex; justify-content:space-between; align-items:flex-start; flex-direction:row; flex-wrap: wrap;}
 ul li ul li {font-size:smaller; padding:5px}
 ol li { padding: 3px}
 
