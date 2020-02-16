@@ -288,8 +288,8 @@
             </span> will return the name of the parent element for the current context node,
             whatever it is. (“Who’s my mommy?“) The last one I wrote for the sake of writing it:
             What if we were somehow lost in an XML file and just wanted to return the name and
-            location of the current context node: (“Where am I??” or “Who am I?”). We will have other reasons for using the <code>self::</code> axis when we write predicate expressions to check 
-            whether an element exists in a particular kinship relationship with other elements, as in <code>//div[self::*//]</code>  </p>
+            location of the current context node: (“Where am I??” or “Who am I?”). We do not often have to reference the self::* axis, 
+            but I just invoked it while typing inside the <code>p</code> element forming this paragraph, and returned the entire element node in which I am currently typing this.</p>
 
          <p>Now, a single slash, <span class="code">/</span>, typically indicates taking a step in a
             path expression, that is, “take one step down and find
@@ -349,7 +349,7 @@
             look inside this one div that has this distinguishing characteristic. Then, we step down
             and find its first p child. Make sense? </p>
 
-         <p>Now, you can actually set multiple predicates [][] right next to each other in an XPath
+         <p>Now, you can actually set multiple predicates <code>[][]</code> right next to each other in an XPath
             expression. Here’s an example of when you might need to do this: Say you have a file
             divided up into multiple sections using <span class="code">div</span> elements. Let’s
             say that several of these <span class="code">div</span> elements are designated with
@@ -410,6 +410,8 @@
             start with only one <span class="code">div</span>, the one with the <span class="code"
                >@id="space"</span> . Then you count the number of <span class="code">p</span>
             elements in that <span class="code">div</span>. </p>
+         <p>Following the introduction of XPath 3.0 (and currently in XPath 3.1), we have an alternative syntax for applying functions using <strong>simple map</strong> and <strong>the arrow operator</strong>. 
+            We find these new notations a little easier to read and write, so we have prepared <a href="https://github.com/ebeshero/DHClass-Hub/wiki/XPath-Simple-Map-and-Arrow-Operator">a short tutorial on how to use them on our DHClass-Hub</a> and now use these notations in class.</p>
 
          <h3 id="combine">Using Functions and Predicates Together: Some Complex XPath!</h3>
 
