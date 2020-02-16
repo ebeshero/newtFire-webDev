@@ -242,25 +242,27 @@
          <h3 id="write">How to write an XPath expression</h3>
 
          <p>So you want to start writing an XPath expression already! Here we go. <b>Use the XPath
-               2.0 window</b> in the upper left of your &lt;oXygen/&gt; screen. An XPath expression
+               window</b> in the upper left of your &lt;oXygen/&gt; screen, and select XPath 3.1 in the drop-down menu to its left. An XPath expression
             is a kind of journey, and it begins by figuring out where you are (what’s your context
             node?) and taking a step along an axis direction. </p>
 
          <p>When we start writing XPath expressions, we usually begin from the <dfn>document
                node</dfn> at the top of the tree. (The root element is actually the child in XPath terms of that document node.) Many of our path expressions will begin with a
-            double slash: <span class="code">//</span>, which is shorthand for the descendant axis:
-            If we <em>start</em> our XPath expression with the double slash, we indicate we’re
+            double slash: <span class="code">//</span>, and at the start of an XPath expression that always means, 
+            start at the document node and search through all XML nodes that descend from here (on the <code>descendant::</code> axis all the way through the XML tree hierarchy.
+            If we <em>start</em> our XPath expression with the double slash, we indicate we are
             beginning at the top-level document node and working our way down one or more levels to whatever node we indicate next: </p>
 
          <p><span class="code">//body/div/p</span></p>
 
          <p>This expression means, <b>start at the beginning node of the document</b> and <b>look
-               for the body element anywhere below</b>. Next, switch to the child axis, and <b>take
+               for the body element anywhere below</b>. Next, switch to the <code>child::</code> axis, and <b>take
                one step to find the immediate children of body–the sequence of <code>div</code>
                elements</b> (however many there are). Then find <b>all p elements</b> that are the
-               <b>immediate children of all the div</b> elements. If there are not any child
+            <b>immediate children of all the div</b> elements. XPath expressions are designed to return a sequence of results, whether that's a sequence of zero, one, or many items. 
+            If the <code>div</code> elements just do not have any child
                <code>p</code> elements, we will not see an error message from XPath. We will just
-            return a sequence of zero. </p>
+            return a sequence of zero results.</p>
 
          <p>What if we want to return all the elements at a particular level, regardless of what
             they are? Here’s where we use the asterisk: <span class="code">*</span>. Examples: </p>
@@ -286,10 +288,11 @@
             </span> will return the name of the parent element for the current context node,
             whatever it is. (“Who’s my mommy?“) The last one I wrote for the sake of writing it:
             What if we were somehow lost in an XML file and just wanted to return the name and
-            location of the current context node: (“Where am I??” or “Who am I?”) </p>
+            location of the current context node: (“Where am I??” or “Who am I?”). We will have other reasons for using the <code>self::</code> axis when we write predicate expressions to check 
+            whether an element exists in a particular kinship relationship with other elements, as in <code>//div[self::*//]</code>  </p>
 
          <p>Now, a single slash, <span class="code">/</span>, typically indicates taking a step in a
-            path expression, and when it’s used by itself, it means, “take one step down and find
+            path expression, that is, “take one step down and find
             the immediate children of the context node.” When we’re writing XQuery and XSLT we’ll
             find ourselves writing XPath expressions from specific points inside a document (not
             necessarily from the root or document node up at the top), so in those cases we might
