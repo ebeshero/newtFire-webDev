@@ -66,7 +66,7 @@
             					latitude measurements. How many are there (only in Book I)? Check the number
             in
             					the oXygen result window (Description line). Then rewrite the expression to use the <code>count()</code> function and return just the result window. Be careful when you use
-            					the count() function here that you're getting only the count in Book I.
+            					the <code>count()</code> function here that you're getting only the count in Book I.
          </li>
          				
          <li>These latitude measurements you've just looked up are all held inside
@@ -87,7 +87,7 @@
          </li>
          				
          <li>Are there any paragraphs in this WHOLE file that do NOT have a latitude
-            					measurement, but DO have a longitude? What XPath expression reveals these? And
+            					measurement, but DO have a longitude? (Hint: You will need to use a <code>not()</code> function to ensure you are finding only paragraphs that do NOT have latitudes marked.) What XPath expression reveals these? And
             					how many of these paragraphs are there? <br /><br /></li>
          
          
@@ -98,9 +98,9 @@
             					expression is returning. 
             <ul>
                						
-               <li><span class="code">//p[geo]/placeName[1]</span></li>
+               <li><code>//p[geo]/placeName[1]</code></li>
                						
-               <li><span class="code">(//p[geo]/placeName)[1]</span><br /><br /></li>
+               <li><code>(//p[geo]/placeName)[1]</code><br /><br /></li>
                					
             </ul>
          </li>
