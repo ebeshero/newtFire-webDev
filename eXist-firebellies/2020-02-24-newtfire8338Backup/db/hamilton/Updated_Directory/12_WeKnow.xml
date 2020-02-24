@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "We Know"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>We Know</title>
+            </head>
+            <div type="song">
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#jefferson">Mr. Vice President</persName></l>
+                    <l><persName ref="#madison">Mr. Madison</persName></l>
+                    <l><persName ref="#burr">Senator Burr</persName></l>
+                    <l>What is this?</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l><seg type="#fiction">We have the check stubs.</seg> From separate accounts…</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Almost a thousand dollars, paid in different amounts…</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>To a <persName ref="#reynolds">Mr. James Reynolds</persName> way back in</l>
+                    <l>Seventeen ninety-one</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Is that what you have? Are you done?</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>You are uniquely situated by virtue of your position—</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Though 'virtue’ is not a word I’d apply to this situation—</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>To seek financial gain, to stray from your sacred mission—</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>And the evidence suggests you’ve engaged in speculation—</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>An immigrant embezzling our government funds—</l>
+                </sp>
+
+
+                <sp who="#jefferson #madison">
+                    <speaker>JEFFERSON/MADISON</speaker>
+                    <l>I can almost see the headline, your career is done</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I hope you saved some money for your daughter and sons</l>
+                </sp>
+
+
+                <sp who="#burr #jefferson #madison">
+                    <speaker>BURR/JEFFERSON/MADISON</speaker>
+                    <l>Ya best g'wan run back where ya come from!</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Ha! You don’t even know what you’re asking me to confess</l>
+                </sp>
+
+
+                <sp who="#jefferson #madison #burr">
+                    <speaker>JEFFERSON/MADISON/BURR</speaker>
+                    <l>Confess</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>You have nothing. I don’t have to tell you anything at all</l>
+                    <l>Unless</l>
+                </sp>
+
+
+                <sp who="#jefferson #madison #burr">
+                    <speaker>JEFFERSON/MADISON/BURR</speaker>
+                    <l>Unless</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>If I can prove that I never broke the law</l>
+                    <l>Do you promise not to tell another soul what you saw?</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>No one else was in the room where it happened</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Is that a yes?</l>
+                </sp>
+
+
+                <sp who="#jefferson #madison #burr">
+                    <speaker>JEFFERSON/MADISON/BURR</speaker>
+                    <l>Um, yes</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>“Dear Sir, I hope this letter finds you in good health</l>
+                    <l>And in a prosperous enough position to put wealth</l>
+                    <l>In the pockets of people like me: down on their luck</l>
+                    <l>You see, it was my wife who you decided to—”</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>Whaaaat—</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>She courted me</l>
+                    <l>Escorted me to bed and when she had me in a corner</l>
+                    <l>That’s when <seg type="#fact"><persName ref="#reynolds">Reynolds</persName> extorted me</seg></l>
+                    <l>For a sordid fee</l>
+                    <l>I paid him quarterly</l>
+                    <l>I may have mortally wounded my prospects</l>
+                    <l>But my papers are orderly!</l>
+                    <l>As you can see I kept a record of every check in my checkered</l>
+                    <l>History. Check it again against your list n’ see consistency</l>
+                    <l>I never spent a cent that wasn’t mine</l>
+                    <l>You sent the dogs after my scent, that’s fine</l>
+                    <l>Yes, I have reasons for shame</l>
+                    <l>But I have not committed treason and sullied my good name</l>
+                    <l>As you can see I have done nothing to provoke legal action</l>
+                    <l>Are my answers to your satisfaction?</l>
+                </sp>
+
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>My God</l>
+                </sp>
+
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l>Gentlemen, let’s go</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>So?</l>
+                </sp>
+
+
+                <sp who="#jefferson #madison">
+                    <speaker>JEFFERSON AND MADISON</speaker>
+                    <l>The people won't know what we know</l>
+                </sp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#burr">Burr</persName>!</l>
+                    <l>How do I know you won’t use this against me</l>
+                    <l>The next <phr type="#time">time</phr> we go toe to toe?</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName>, rumors only grow. And we both</l>
+                    <l>Know what we know</l>
+                </sp>
+
+
+            </div>
+        </body>
+        <back>
+            <listEvent><head>We Know</head><event xml:id="event65" when="1797-01-01"> <label>No Distinct Dates</label><desc>This song has no distinct dates, but since the musical is intended to be in chronological order, this song would follow the established dates from the previous songs.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

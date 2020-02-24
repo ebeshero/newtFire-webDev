@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Best of Wives and Best of Women"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Best of Wives and Best of Women</title>
+            </head>
+            <div type="song">
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName>, come back to sleep</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I have an early meeting out of town</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>It's still dark outside</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact">I know. I just need to write something down</seg></l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><phr type="#time">Why do you write like you're running out of time?</phr></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Shhh</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Come back to bed. That would be enough</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I'll be back before you know I'm gone</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Come back to sleep</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>This meeting's at dawn</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Well, I'm going back to sleep</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Hey. Best of wives and best of women</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Best of Wives and Best of Women</head><event xml:id="event78" when="1804-07-04"><label>Hamilton Writes Eliza the Letter</label><desc>Hamilton wrote Eliza a letter for if he should die in the upcoming duel with Aaron Burr. He ends the letter addressing Eliza as "best of wives and best of women."</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+     <dexNum num="086">086</dexNum>
+     <name>Seel</name>
+     <typing type="Water">Water</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Seafoam Islands">Seafoam Islands<lvl min="28" max="32"> level 28-32</lvl><rate perc="40"> encounter rate: 40%</rate></landmark>
+        <landmark n="Pokemon Lab">Pokemon Lab<lvl min="1" max="100"> level same as traded pokemon</lvl></landmark>
+    </locations>
+    
+    </pokemon>

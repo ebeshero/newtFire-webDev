@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="ODD/out/OverholtODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="ODD/out/OverholtODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <particDesc>
+            <listPerson>
+               <person xml:id="KFO" sex="m">
+                  <persName>Karl Frick Overholt</persName>
+                  <birth when="1877-04-19">April 19, 1877</birth>
+                  <death when="1938">1938</death>
+                  <note>Author the Karl Frick Overholt Diary. Born in <placeName>Wooster,
+                        OH</placeName>. Son of <persName ref="#JSRO">John SR Overholt</persName> and
+                        <persName ref="#MFO">Maria Overholt Frick Overholt</persName>. Nephew of
+                        <persName ref="#HCF">Henry Clay Frick</persName> and the great-grandson of
+                        <persName ref="#AO">Abraham Overholt</persName>.</note>
+               </person>
+               <person xml:id="AO" sex="m">
+                  <persName>Abraham Overholt</persName>
+                  <birth when="1784-04-19">April 19, 1784</birth>
+                  <death when="1870-01-15">January 15, 1870</death>
+                  <note>Born in <placeName>Bucks County, PA</placeName>, but spent a majority of his
+                     life in <placeName>West Overton, PA</placeName>. Distilled whiskey in
+                        <placeName>West Overton, PA</placeName> and sold it commercially. Built the
+                     homestead that currently stands on the property. Father of <persName ref="#JSO">Jacob Stauffer Overholt</persName>, <persName ref="#CSO">Christian Stauffer
+                        Overholt</persName>, and <persName ref="#HSO">Henry Stauffer
+                        Overholt</persName>. Grandfather of <persName ref="#MFO">Maria Overholt
+                        Frick Overholt</persName> and great-grandfather of <persName ref="#KFO">Karl
+                        Frick Overholt</persName>.</note>
+               </person>
+               <person xml:id="HCF" sex="m">
+                  <persName>Henry Clay Frick</persName>
+                  <birth when="1849-12-19">December 19, 1849</birth>
+                  <death when="1919-12-02">December 2, 1919</death>
+                  <note>Became one of the richest men in the world from the coal and coke industry.
+                     Born in the springhouse in the village of <placeName>West Overton,
+                        PA</placeName>. Husband of <persName ref="#ACF">Adelaide Childs
+                        Frick</persName>and the brother of <persName ref="#MFO">Maria Overholt Frick
+                        Overholt</persName>. Grandson of <persName ref="#AO">Abraham
+                        Overholt</persName>, and the uncle of <persName ref="#KFO">Karl Frick
+                        Overholt</persName></note>
+               </person>
+               <person xml:id="ACF" sex="f">
+                  <persName>Adelaide Howards Clay Frick</persName>
+                  <birth when="1859-12-16">December 16, 1859</birth>
+                  <death when="1931-10-04">October 4, 1931</death>
+                  <note>She was born in <placeName>Pittsburgh, PA</placeName>. Wife of <persName ref="#HCF">Henry Clay Frick</persName>.</note>
+               </person>
+               <person xml:id="GMO" sex="f">
+                  <persName>Grace M Overholt</persName>
+                  <birth when="1872-10-25">October 25, 1872</birth>
+                  <death when="1894-04-04">April 4, 1894</death>
+                  <note>Passed away at 21 years of age. Daughter of <persName ref="#MFO">Maria
+                        Overholt Frick Overholt</persName> and <persName ref="#JSRO">John SR
+                        Overholt</persName>. Older sister of <persName ref="#KFO">Karl Frick
+                        Overholt</persName>.</note>
+               </person>
+               <person xml:id="MFO" sex="f">
+                  <persName>Maria Overholt Frick Overholt</persName>
+                  <birth when="1849-12-19">February 9, 1848</birth>
+                  <death when="1919-12-02">January 24, 1939</death>
+                  <note>She was born in <placeName>Westmoreland County, PA</placeName> but also
+                     lived in <placeName>Wooster, OH</placeName>. Wife of <persName ref="#JSRO">John
+                        SR Overholt</persName> and mother of <persName ref="#KFO">Karl Frick
+                        Overholt</persName>. Older sister of <persName ref="#HCF">Henry Clay
+                        Frick</persName>.</note>
+               </person>
+               <person xml:id="JSRO" sex="m">
+                  <persName>John SR Overholt</persName>
+                  <birth when="1847-12-13">December 13, 1847</birth>
+                  <death when="1925-01-17">January 17, 1925</death>
+                  <note>Fought for the Union in the Civil War. Born in <placeName>Westmoreland
+                        County, PA</placeName> but also lived in <placeName>Wooster, OH</placeName>.
+                     Husband of <persName ref="#MFO">Maria Overholt Frick Overholt</persName> and
+                     twin brother of <persName ref="#ASRO">Aaron S.R. Overholt</persName>. Son of
+                        <persName ref="#JDO">John D. Overholt</persName> and <persName ref="#ESO">Elizabeth Stauffer Overholt</persName>. Father of <persName ref="#GMO">Grace M Overholt</persName> and <persName ref="#KFO">Karl Frick
+                        Overholt</persName></note>
+               </person>
+               <person xml:id="CSRO" sex="m">
+                  <persName>Christian SR Overholt</persName>
+                  <birth when="1840">1840</birth>
+                  <death when="1919">1919</death>
+                  <note>He was born in <placeName>Westmoreland County, PA</placeName>. Older brother
+                     of <persName ref="#JSRO">John SR Overholt</persName>.</note>
+               </person>
+               <person xml:id="AOT" sex="m">
+                  <persName>Abraham Overholt Tinstman</persName>
+                  <birth when="1834-09-13">September 13, 1834</birth>
+                  <death when="1915-12-14">December 14, 1915</death>
+                  <note>Took control of the distillery and mill in <placeName>West Overton,
+                        PA</placeName> after <persName ref="#AO">Abraham Overholt passed
+                        away</persName>. Born in <placeName>Westmoreland County, PA</placeName>.
+                     Son-in-law of <persName ref="#AO">Abraham Overholt</persName>.</note>
+               </person>
+               <person xml:id="HOT" sex="f">
+                  <persName>Harriet Overholt Tinstman</persName>
+                  <birth when="1847-09-28">September 28, 1847</birth>
+                  <death when="1926-08-09">August 9, 1926</death>
+                  <note>Her maiden name was Harriet Cornelia Markle. She was born in
+                        <placeName>Westmoreland County, PA</placeName>. Wife of <persName ref="#AOT">Abraham Overholt Tinstman</persName>.</note>
+               </person>
+               <person xml:id="ALT" sex="f">
+                  <persName>Anna Leighty Tinstman</persName>
+                  <birth when="1829-12-31">December 31, 1829</birth>
+                  <death when="1909-01-26">January 26, 1909</death>
+                  <note>Her maiden name was Anna Leighty.</note>
+               </person>
+               <person xml:id="CSO" sex="m">
+                  <persName>Christian Stauffer Overholt</persName>
+                  <birth when="1824-10-18">October 18, 1824</birth>
+                  <death when="1911-01-31">January 31, 1911</death>
+                  <note>He was born in <placeName>Westmoreland County, PA</placeName>. Son of
+                        <persName ref="#AO">Abraham Overholt</persName> and brother of <persName ref="#JSO">Jacob Stauffer Overholt</persName> and <persName ref="#HSO">Henry
+                        Stauffer Overholt</persName>.</note>
+               </person>
+               <person xml:id="JSO" sex="m">
+                  <persName>Jacob Stauffer Overholt</persName>
+                  <birth when="1814">1814</birth>
+                  <death when="1859">1859</death>
+                  <note>He was born in <placeName>Westmoreland County, PA</placeName>. Husband of
+                        <persName ref="#MFFO">Mary F. Fox Overholt</persName>. Son of <persName ref="#AO">Abraham Overholt</persName> and brother of <persName ref="#CSO">Christian Stauffer Overholt</persName> and <persName ref="#HSO">Henry
+                        Stauffer Overholt</persName>.</note>
+               </person>
+               <person xml:id="MFFO" sex="f">
+                  <persName>Mary F. Fox Overholt</persName>
+                  <birth when="1816">1816</birth>
+                  <death when="1895">1895</death>
+                  <note>Her maiden name was Mary F. Fox. She lived in <placeName>West Overton,
+                        PA</placeName>. Wife of <persName ref="#JSO">Jacob Stauffer
+                        Overholt</persName>.</note>
+               </person>
+               <person xml:id="ASRO" sex="m">
+                  <persName>Aaron S.R. Overholt</persName>
+                  <birth when="1837-12-13">December 13, 1837</birth>
+                  <death when="1905-12-27">December 27, 1905</death>
+                  <note>Fought for the Union in the Civil War. Born in <placeName>Westmoreland
+                        County, PA</placeName> and lived in the West Overton Homestead after the
+                     death of <persName ref="#AO">Abraham Overholt</persName>. Husband of <persName ref="#SAO">Sarah Ann Overholt</persName>. Twin brother of <persName ref="#JSRO">John S.R. Overholt</persName>. Son of <persName ref="#JDO">John
+                        D. Overholt</persName> and <persName ref="#ESO">Elizabeth Stauffer
+                        Overholt</persName>.</note>
+               </person>
+               <person xml:id="JDO" sex="m">
+                  <persName>John Detweiler Overholt</persName>
+                  <birth when="1797-04-19">April 19, 1797</birth>
+                  <death when="1878-08-29">August 29, 1878</death>
+                  <note>Minister of a Mennonite church in the West Overton community for 48 years.
+                     He was born in <placeName>Bucks County, PA</placeName>. Husband of <persName ref="#ESO">Elizabeth Stauffer Overholt</persName> and father of <persName ref="#JSRO">John S.R. Overholt</persName>, <persName ref="#ASRO">Aaron S.R.
+                        Overholt</persName> and <persName ref="#CSRO">Christian S.R.
+                        Overholt</persName>. Later remarried to <persName ref="#NB">Nancy
+                        Bixler</persName>.</note>
+               </person>
+               <person xml:id="ESO" sex="f">
+                  <persName>Elizabeth Stauffer Overholt</persName>
+                  <birth when="1804-08-30">August 30, 1804</birth>
+                  <death when="1842-11-04">November 4, 1842</death>
+                  <note>Born in <placeName>Westmoreland County, PA</placeName>. First wife of
+                        <persName ref="#JDO">John Detweiler Overholt</persName>. Mother of <persName ref="#JSRO">John S.R. Overholt</persName>, <persName ref="#ASRO">Aaron S.R.
+                        Overholt</persName>, and <persName ref="#CSRO">Christian S.R.
+                        Overholt</persName>. </note>
+               </person>
+               <person xml:id="NB" sex="f">
+                  <persName>Nancy Bixler</persName>
+                  <birth when="1801">1801</birth>
+                  <death when="1894">1894</death>
+                  <note>Second wife of <persName ref="#JDO">John Detweiler Overholt</persName>. Was
+                     also known as Mary and Betty.</note>
+               </person>
+               <person xml:id="JB" sex="m">
+                  <persName>Jessie Bixler</persName>
+                  <note>Brother of <persName ref="#NB">Nancy Bixler</persName>. Worked for <persName ref="#JDO">John Detweiler Overholt</persName> at <placeName>West
+                        Overton</placeName>.</note>
+               </person>
+               <person xml:id="LS" sex="m">
+                  <persName>John Lloyd Shallenberger</persName>
+                  <birth when="1829-04-12">April 12, 1829</birth>
+                  <death when="1910-01-30">January 30, 1910</death>
+                  <note>He was born in <placeName>Westmoreland County, PA</placeName>. Ran the West
+                     Overton general store.</note>
+               </person>
+               <person xml:id="HSO" sex="m">
+                  <persName>Henry Stauffer Overholt</persName>
+                  <birth when="1810-08-10">August 10, 1810</birth>
+                  <death when="1870-06-18">June 18, 1870</death>
+                  <note>Business partner with his <persName ref="#AO">father</persName> in the mill
+                     and distillery. He was born in <placeName>Westmoreland County,
+                     PA</placeName>.Oldest son of <persName ref="#AO">Abraham Overholt</persName>.
+                     Brother of <persName ref="#CSO">Christian Stauffer Overholt</persName> and
+                        <persName>Jacob Stauffer Overholt</persName>.</note>
+               </person>
+               <person xml:id="SAO" sex="f">
+                  <persName>Sarah Ann Overholt</persName>
+                  <birth when="1846-12-12">December 12, 1846</birth>
+                  <death when="1921-07-21">July 21, 1921</death>
+                  <note>She was born in <placeName>Westmoreland County, PA</placeName>. Wife of
+                        <persName ref="#ASRO">Aaron S.R. Overholt</persName>.</note>
+               </person>
+               <person xml:id="JR" sex="m">
+                  <persName>Joseph Rist</persName>
+                  <birth when="1839">1839</birth>
+                  <death when="1913-05-14">May 14, 1913</death>
+                  <note>Was a business partner of <persName ref="#HCF">Henry Clay Frick</persName>,
+                        <persName ref="#JSRO">John S.R. Overholt</persName>, and <persName ref="#AOT">Abraham Overholt Tinstman</persName> in the coal industry.</note>
+               </person>
+               <person xml:id="RO" sex="m">
+                  <persName>Ralph Overholt</persName>
+                  <birth when="1870-06-23">June 23, 1870</birth>
+                  <death when="1956-06-26">June 26, 1956</death>
+                  <note>Lived in the Overholt homestead with his younger brother <persName ref="#CO">Clyde Overholt</persName></note>
+               </person>
+               <person xml:id="CO" sex="m">
+                  <persName>Clyde Overholt</persName>
+                  <birth when="1876-06-25">June 25, 1876</birth>
+                  <death when="1921-11">November, 1921</death>
+                  <note>Lived in the Overholt homestead with his older brother <persName ref="#RO">Ralph Overholt</persName></note>
+               </person>
+            </listPerson>
+
+         </particDesc>
+
+      </profileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="entry">
+            <head><pb n="74"/>Christmas at West Overton.</head>
+
+            <p>On the night before <persName ref="#MFO">mother</persName> + J.F.O. would place
+               plates on the living room table, and would find them on <abbr>Xmas</abbr> morning
+               heaped with fancy cakes, dried cherries + candies! Also, on the night before,
+                  <persName ref="#MFO">mother</persName> would place a plate of oats on the basement
+               porch bench, and on <abbr>Xmas</abbr> morning the plate would be empty but one-half
+               dollar would be there!</p>
+
+            <p>No gifts. No Christmas tree. They would attend Christmas service at the Mennonite
+               Church at <placeName>Alverton</placeName> and have a special <abbr>Xmas</abbr> dinner
+               at </p>
+
+            <p><pb n="75"/>home after the Service.</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="76"/>New Year's Eve at <placeName>Overton</placeName></head>
+
+            <p>There would be a merry company gathered in the home, awaiting the coming of the
+               patron Saint Belschnickel!</p>
+
+            <p>Ide Would finally come, + throw nuts out for all</p>
+
+            <p>When little, mother was afraid of him. Ide was so big + <unclear reason="illegible">qu???</unclear>. She would stick close to <persName ref="#ALT">Anna
+                  Leighty</persName> .</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="89"/><persName ref="#MFO">Mothers</persName> duties, when a little girl,+
+               later</head>
+
+            <p>Would keep water pitcher on G+JFO's wash-stand full: also would keep drinking water
+               pitcher filled. G+JFO always wanted pitchers full.</p>
+
+            <p>Later, would start living room grate fire each morning. - bringing up shavings from
+               below + bringing in coal from the rear porch, second floor (had kept filled there by
+                  <unclear reason="illegible">??</unclear>). Would lift ashes + place <unclear reason="illegible">??</unclear> on back porch (to be carried off by <unclear reason="illegible">??</unclear>
+            </p>
+
+            <p>Would milk, getting up long before daylight + milking by lantern light. After 15 yrs
+               of age, didnt have this to do.</p>
+
+            <p><persName ref="#MFFO">Mrs. Fox</persName> taught her how to bake. Washing woman
+               taught her howto wash; then When she knew how, she didnt have to do it.</p>
+
+            <p>Would sweep + dust on the 2nd, 3rd floors; Would <unclear reason="illegible">???</unclear> the big porch floor + scour the threshold stone!</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="90"/><persName ref="#CSRO">C.S.R.O.</persName> history + incidents</head>
+
+            <p>When nightman at <abbr><placeName>W. 0.</placeName></abbr>
+               <unclear reason="illegible">w'ill?</unclear>, once he by mistake took a jug
+               containing concentrated dye, used in washing (a midnight lunch + a jug of home-made
+               beer was always set out for him) He drank from the dye jug but as soon as he
+               discovered it, he drank milk which prevented poisoning</p>
+
+            <p>When watchmen at <placeName>Broadford</placeName>, once all alligator was set out for
+               him in his midnight lunch. However he was wise, + didnt mistake it for
+                  <unclear>fish?</unclear> + eatit!</p>
+
+            <p><persName ref="#CSRO">C.S.R.O.</persName> worked at <placeName>Broadford</placeName>
+               twice . (1) During + near close of Cine? bar, <date when="1865">1865</date>, was
+               watchman, lived at the old stone house near the River, where <persName ref="#JSO">Jacob S.O.</persName> had lived. Suceeded by <persName ref="#AOT">A.O.
+                  Tinstman</persName></p>
+
+            <p><pb n="91"/>(2) From late <date when="1867">'67</date> to early <date when="1869">'69</date>, when he was in the <abbr><placeName>Bfd</placeName></abbr>
+               Distillery. He lived in a second floor room in the hash? house on the <persName ref="#HOT">H.O. Tinstman</persName> place, and boarded at the <persName ref="#HOT">H.O.T</persName> house, where <unclear>Mrs. Chain?</unclear> ran a boarding
+               house.</p>
+
+            <p>While there, <persName ref="#HCF">Uncle Clay</persName> came to
+                     <abbr><placeName>Bfd</placeName></abbr>, + lived in the
+                  <unclear>hashabaugh?</unclear> house across the street, but boarded with
+                  <unclear>Mrs. Chain?</unclear> in the <persName ref="#HOT">H.O.T.</persName>
+               house.</p>
+
+            <p><persName ref="#AOT">A.O.T</persName> + <unclear>??? O.J.</unclear> lived in
+                  <persName ref="#HOT">H.O.T.</persName> house, as had Sr. Porter.?</p>
+
+            <p>Upon leaving <abbr><placeName>Bfd</placeName></abbr> second time,<persName ref="#CSRO">Uncle Cris S.R.O.</persName> worked in
+                     <abbr><placeName>W.O.</placeName></abbr> distillery, + boarded with <persName ref="#AO">Granpap O.</persName> However he was ill with fever at his own home in
+                  <date when="1870-01">Jan. '70</date> when <persName ref="#AO">GFO</persName>
+               died.</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="92"/><date when="1870-01-15">Jan. 15, 1870</date> - 6a.m.)</head>
+
+            <p><persName ref="#AO">Grandpap O.</persName> died suddenly from a stroke, having gone
+               to outhouse with lantern before breakfast.<unclear reason="illegible"> ??
+                  ???</unclear> him + found him there, having fallen off upon entering outhouse.</p>
+
+            <p>He was 85 years 9 months of age. ---------------------------------------------- At
+                  <unclear reason="illegible">??</unclear> he had had pains in back of his head, but
+               seemed in his usual health, + on preceding evening he had <unclear reason="illegible">p??? q???</unclear> with Chester Booker.</p>
+
+            <p><persName ref="#JSRO">Father</persName> + <persName ref="#CSO">C.S.O.</persName> had
+               been receiving Royal Area decree in Chapter Masonry at
+                     <abbr><placeName>Gbg</placeName></abbr> night before + were riding horseback
+               home next morning when they heard of his health, at top of hill at <unclear reason="illegible">??</unclear></p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="141"/>My dear <persName ref="#MFO">Sister</persName>:</head>
+
+            <p>We are deeply shocked and pained to hear of the death of <persName ref="#GMO">Grace</persName>. We had heard some time ago that she was ailing but presumed she
+               had recovered.</p>
+
+            <p>I am afraid it will not be possible for any of us to attend her funeral, as we are
+               having so much trouble in the Coke region.</p>
+
+            <p>Your loss is a great one, but it is what we all have to <unclear reason="illegible">??</unclear> to. <persName ref="#ACF">Ada</persName>
+               <unclear reason="illegible">?? ??</unclear> tender sympathy and much love</p>
+
+            <p>Affectionately yours</p>
+
+            <p><persName ref="#HCF">Clay</persName></p>
+
+            <p><date when="1894-04-05">Apl 5/94</date></p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="147"/><date when="1902-05-26">May 26. 1902</date></head>
+
+            <p><persName ref="#HCF">Uncle Clay</persName> sent <persName ref="#MFO">mother</persName> check for 3.000$ to buy lot (195' by 225') on <placeName>Bealle
+                  Ave, Wooster, Ohio</placeName>, and wrote</p>
+
+            <p>"My dear <persName ref="#MFO">Maria</persName></p>
+
+            <p>You can go ahead and build you house and I will furnish the money as needed. I
+               enclose check to pay for the lot.</p>
+
+            <p>Always yours</p>
+
+            <p><persName ref="#HCF">Clay</persName></p>
+
+            <p><date when="1902-05-26">May 26 / 1902</date>"</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="159"/>Crock Cheese</head>
+
+            <p>Put thick milk in a large pot. Heat and remove curds with skimmer. Put sauce in
+               cheese cloth + drain dry. Then place sauce in crock + <unclear reason="illegible">??</unclear> by hand the cheese inside the cloth.</p>
+
+            <p>Then place in flat 1/2 gallon crock, tying a cloth over the top of the crock and
+               placing in a harm? place.</p>
+
+            <p>Stir each day. After 3 days or more when it commences to have an odor, put butter in
+               a skillet on the stove + place cheese in it, with a little salt sprinkled over the
+               cheese and with half a cup of cream added.</p>
+
+            <p>Then heat until all dissolved and smooth, then place in a crock to <unclear reason="illegible">??</unclear>.</p>
+         </div>
+
+         <div type="entry">
+            <head><pb n="181"/><date when="1837-12-13">Dec. 13th, 1837</date></head>
+
+            <p><persName ref="#JSRO">Father</persName> + <persName ref="#ASRO">Uncle Aaron
+                  S.R.O.</persName> born on <persName ref="#JDO">his fathers</persName> 147 acre
+               farm, east of <placeName>West Overton, East Huntingdon <abbr>Twp</abbr>.,
+                  Westmoreland <abbr>Co</abbr>., <abbr>Penna</abbr>.</placeName></p>
+
+            <p>House was torn down in <date when="1840">1840</date>, when <unclear reason="illegible">??</unclear> brick dualling house was built on site.</p>
+
+            <p><persName ref="#JSRO">Father</persName> born first. <persName ref="#ASRO">Uncle
+                  Aaron</persName> born half hour later, and a ribbon was tied around arm of one to
+               distinguish them.</p>
+
+            <p>Dr. McCauanghey officiated. <persName ref="#ESO">Fathers mother, E.S.O.</persName>,
+               died in <date when="1842">1842</date> when <persName ref="#JSRO">father</persName>
+               was about 5 yrs. old. <persName ref="#CSRO">CSRO</persName> says she was slender +
+               tall, dark hair brown eyes.</p>
+
+            <p><pb n="182"/><persName ref="#JDO">Father's father, Bishop John D.O.</persName>
+               married again about one year later. His second marriage seemed necessary to hold the
+               family together and to bring them up properly. His second wife was <persName ref="#NB">Nancy Bixler</persName>, born <date when="1801">1801</date>, who had
+               married a Rist and was a widow. (She died in <date when="1894">1894</date>).
+                  <persName ref="#JB">Jessie Bixler</persName> was her brother and worked some for
+                  <persName ref="#JDO">Bishop J.D.O.</persName> later.</p>
+
+            <p>Father's sister Aunt Bettie was aged about 12 when their <persName ref="#ESO">mother</persName> died. She worked hard + looked after the family from her
+               mothers' death on.</p>
+
+            <p>Place of <persName ref="#JDO">Bishop JDO's</persName> house, built in <date when="1840">1840</date> (after plan of <persName ref="#AO">A.O.</persName> house
+               but 10' shorter + narrower.</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="184"/>School Days</head>
+
+            <p>Went to the West Overton School (at crest of hill east of town) until about 20
+                  <abbr>yrs.</abbr> of age.</p>
+
+            <p>Farm Days</p>
+
+            <p>Worked on farm in summer + took care of stock in winter. In <date when="1859">1859</date>
+               <persName ref="#JDO">his father</persName> entered into an agreement with him whereby
+                  <persName ref="#JSRO">JRSO</persName> was to manage the farm, and in return
+                  <persName ref="#JDO">his father</persName> was to board him, provide all farm
+               utensils + seeds etc, + to give him 1/3rd of all crops.</p>
+
+            <p>There was a big frost that year, and the crops were a failure. <persName ref="#JDO">His father</persName>, however, said that he should have something, and he paid
+               him $300.00</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="188"/><date when="1860-10"><abbr>Oct.</abbr> 1860</date> to <date when="1862-08">August 1862</date>.</head>
+
+            <p>After graduating from the Business College course, <persName ref="#JSRO">father</persName> went back home and worked in the West Overton Store at
+                  <persName ref="#CSO">C.S. Overholt's</persName> place. <persName ref="#LS">Lloyd
+                  Shallenberger</persName> ran the store, + <persName ref="#JSRO">father</persName>
+               was only other clerk.</p>
+
+            <p><persName ref="#CSO">Uncle Cris S. O.</persName> was managing the West Overton
+               Distillery for <persName ref="#AO">Grandfather Abraham O.</persName> and <persName ref="#HSO">"Uncle" Henry S. Overholt</persName>.</p>
+
+            <p>When the Civil War began, <persName ref="#JSRO">father</persName> + <persName ref="#ASRO">Uncle Aaron</persName> worked to enlist, but <persName ref="#JDO">Grandfather Bishop John D Overholt</persName> did not want them to enlist right
+               away, and forbade their so doing then.</p>
+
+            <p>In the summer of <date when="1862">1862</date>
+               <persName ref="#JSRO">Father</persName> brought up the matter again, speaking to
+                  <persName ref="#ASRO">Uncle Aaron</persName> about it, who thought it would be of
+               no avail to ask JDO again.</p>
+
+            <p><pb n="189"/>However <persName ref="#JSRO">father</persName> said that he was going
+               to ask <persName ref="#JDO">his father JDO</persName> and was going to insist upon
+               enlisting + getting <persName ref="#JDO">JDO's</persName> consent.</p>
+
+            <p>When approached <persName ref="#JDO">JDO</persName> first remonstrated as before in
+                  <date when="1861">'61</date>, but finally consented. <persName ref="#JDO">JDO</persName> of course was in favor of the War. No one was prouder of his sons
+               + their being in the Service than he. Every day he would go to the West Overton
+                  <abbr>P.O.</abbr> for his "Philadelphia Inquirer" paper, to get the news of the
+               War.</p>
+         </div>
+         <div type="entry">
+            <head><pb n="226"/><date when="1871-03-10">Mar. 10th 1871</date></head>
+
+            <p><persName ref="#HCF">Uncle Clay's</persName> first coal purchase was at
+                  <placeName>Broadford</placeName>, + his partners were <persName ref="#JSRO">Father</persName>, <persName ref="#JR">Joseph Rist</persName>, + <persName ref="#AOT">A.O. Tinstman</persName>. (see work entries of firm)</p>
+
+            <p><persName ref="#HCF">Uncle Clay</persName> sent word to <placeName>West
+                  Overton</placeName> to <persName ref="#JSRO">Father</persName> to come to
+                  <placeName>Broadford</placeName> to see him. He suggested that they buy a coal
+               tract of 150 acres from <persName ref="#JR">John Rist</persName>, in payment in which
+               each should give a <unclear reason="illegible">??</unclear> for $13,000.00.</p>
+
+            <p><persName ref="#HCF">Uncle Clay</persName>
+               <unclear reason="illegible">??</unclear> + <persName ref="#JSRO">Father</persName>
+               the management + the firm was styled "Overholt, Frick + Co"</p>
+
+            <p><persName ref="#JSRO">Father</persName> was manager + <persName ref="#HCF">Uncle
+                  Clay</persName> head, each at a salary of $1000 a year.</p>
+
+            <p><pb n="227"/>Fifty ovens were first constructed, called "Novelty Works."</p>
+
+            <p>During excavation work for the ovens, 25 or 30 men were almost burned alive, being
+               saved in the nick of time by <persName ref="#JSRO">Fathers</persName> calling to them
+               in time.</p>
+
+            <p>This incident, together with the uncertain times, induced <persName ref="#JSRO">Father</persName> to resign + sell out his interest (<persName ref="#HCF">Uncle
+                  Clay</persName> buying 1/2 of it, + <persName ref="#AOT">A.O. Tinstman</persName>
+               the other 1/2).</p>
+
+            <p><persName ref="#JSRO">Father</persName> retired from the firm, "O, F. + CO." on <date when="1871-06-20">June 20, '71</date>, + the firm became known thereafter as
+               "Frick + Co." (50 ovens just furnished when <persName ref="#JSRO">father</persName>
+               retired.)</p>
+
+            <p><persName ref="#JSRO">Father</persName> then remarked how <unclear reason="illegible">??</unclear> far sighted <persName ref="#HCF">Uncle Clay</persName> was, far
+               above everyone else.</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="228"/><date when="1871-07-06">July 6th 1871</date>.</head>
+            <p>Father's father + step mother, I.E. <persName ref="#JDO">Bishop John DO</persName> +
+                  <persName ref="#NB">Nancy</persName> his 2nd wife deeded home farm of 147 acres to
+                  <persName ref="#JSRO">Father</persName>, Aunt Bettie + <persName ref="#CSRO">Uncle
+                  Cris</persName>, in consideration of support by them for wife.</p>
+
+            <p><persName ref="#CSRO">C.S.R.O.</persName> + <persName ref="#JSRO">J.S.R.O.</persName>
+               leased the home farm to Blair Frances "on equal shares" for one year (<date when="1871-04-01">4/1/71</date> to <date when="1872-04-01">4/1/72</date>)</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="236"/><date when="1869-01-06">Jan. 6th, 1869</date></head>
+
+
+            <p><persName ref="#JSRO">Father's</persName> twin brother <persName ref="#ASRO">Aaron
+                  S.R. Overholt</persName> married <persName ref="#SAO">Sarah Ann
+                  Overholt</persName> at <placeName>West Overton</placeName>.</p>
+
+            <p><date when="1869-01-12">Jan. 12, '69</date> - Photographed in <placeName>Phila, Arch
+                  St.</placeName></p>
+
+            <p><date when="1871-06-23">June 23, 1871</date> - <persName ref="#RO">Ralph</persName>
+               born on Etta Husband <date when="1899-10-26">Oct. 26, 1899</date></p>
+
+            <p><date when="1876-06-25">June 25, 1876</date> - <persName ref="#CO">Clyde</persName>
+               born single.</p>
+
+         </div>
+         <div type="entry">
+            <head><pb n="264"/><date when="1877-04-19">April 19, 1877</date></head>
+
+            <p><persName ref="#KFO">K.F.O.</persName> born</p>
+
+            <p><date when="1878-08-28">Aug. 28, 1878</date></p>
+
+            <p>Father's father, <persName ref="#JDO">Bishop JDO</persName> died at <placeName>West
+                  Overton</placeName> at age of 83 yrs, 4 mos + 9 days.</p>
+
+         </div>
+      </body>
+   </text>
+</TEI>

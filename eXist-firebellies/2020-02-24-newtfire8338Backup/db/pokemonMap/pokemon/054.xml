@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+        <dexNum num="054">054</dexNum>
+        <name>Psyduck</name>
+        <typing type="Water">Water</typing>
+    </info>
+    
+    <locations>
+        <route num="24">Route 24<lvl min="15" max="15"> level 15</lvl><rate perc="33"> encounter rate: 33%</rate></route>
+        <route num="25">Route 25<lvl min="15" max="15"> level 15</lvl><rate perc="33"> encounter rate: 33%</rate></route>
+        <landmark n="Seafoam Island">Seafoam Island<lvl min="28" max="30"> level 28-30</lvl><rate perc="15"> encounter rate: 15%</rate></landmark>
+        <landmark n="Cerulean City">Cerulean City<lvl min="15" max="15"> level 15</lvl><rate perc="33"> encounter rate: 33%</rate></landmark>
+        <landmark n="Cerulean Gym">Cerulean Gym<lvl min="15" max="15"> level 15</lvl><rate perc="34"> encounter rate: 34%</rate></landmark>
+        <landmark n="Safari Zone">Safari Zone<lvl min="15" max="15"> level 15</lvl><rate perc="25"> encounter rate: 25%</rate></landmark>
+    </locations>
+    
+</pokemon>

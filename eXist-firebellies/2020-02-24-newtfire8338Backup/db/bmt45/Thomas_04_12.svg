@@ -1,0 +1,39 @@
+xquery version "3.1";
+declare variable $banksyColl := collection('/db/Assignments/banksyForSVG/');
+declare variable $when := $banksyColl//sourceDesc//bibl//date/@when ! string();
+declare variable $title := $banksyColl//sourceDesc//bibl//title ! string();
+declare variable $whenYear := $when ! tokenize(., "-")[1];
+
+declare variable $medium := $banksyColl//sourceDesc//bibl//medium/@type ! string();
+declare variable $maxYear := $whenYear ! xs:integer(.) => max();
+declare variable $minYear := $whenYear ! xs:integer(.) => min();
+declare variable $lineLength := $maxYear - $minYear;
+declare variable $whenCount := $when => count();
+ declare variable $timelineSpacer := 100;
+ declare variable $ThisFileContent :=
+ <svg width="2500" height="3000">
+   <g transform="translate (30,30)">
+      <line x1="0" y1="0" x2="0" y2="{$lineLength * $timelineSpacer}" style="stroke:blue"/>  
+{
+    for $i in (0 to $lineLength)
+    let $matchYear := $minYear + $i
+    let $dateSearch := $banksyColl//sourceDesc[descendant::date/@when ! tokenize(., "-") ! xs:integer(.)= $matchYear]
+    let $titleSearch := $dateSearch//title
+    let $titleCount := $titleSearch => count()
+    let $medium_Spray := $banksyColl//sourceDesc//medium[@type='spray_paint'] => count()
+    let $medium_Canvas := $banksyColl//sourceDesc//medium[@type='canvas'] => count()
+    return
+<g>
+    <circle cx="0" cy="{$i * $timelineSpacer}" r="{$titleCount}" stroke="purple" stroke-width="3" fill="violet"></circle>
+    <text x='5' y='{$i * $timelineSpacer}'>{$matchYear}</text>
+    <rect text='canvas' x='10' y='{$i//$medium_Canvas * $timelineSpacer}' height='100' width='100' stroke='blue' fill='blue'>{$medium_Canvas}</rect>
+</g>
+
+}
+   </g>
+</svg>;
+$ThisFileContent
+
+
+
+

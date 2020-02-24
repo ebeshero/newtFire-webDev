@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+     <dexNum num="104">104</dexNum>
+     <name>Cubone</name>
+     <typing type="Ground">Ground</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Pokemon Tower">Pokemon Tower<lvl min="20" max="22"> level 20,22</lvl><rate perc="9"> encounter rate: 9%</rate></landmark>
+    </locations>
+    
+    </pokemon>

@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Right Hand Man"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Right Hand Man</title>
+            </head>
+            <div type="song">
+
+                <stage type="business">The company sees a full armada, offstage.</stage>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><seg type="#fact">British <persName ref="#admiralHowe">Admiral Howe’s</persName> got troops on
+                        the water</seg></l>
+                    <l>Thirty-two thousand troops in <placeName>New York harbor</placeName></l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#ensemble">
+                        <speaker>ENSEMBLE 1</speaker>
+                        <l>Thirty-two thousand troops in <placeName>New York harbor</placeName></l>
+                        <l>When they surround our troops!</l>
+                        <l>They surround our troops!</l>
+                        <l>When they surround our troops!</l>
+                    </sp>
+
+                    <sp who="#ensemble">
+                        <speaker>ENSEMBLE 2</speaker>
+                        <l>Thirty-two thousand troops in <placeName>New York harbor</placeName></l>
+                        <l>They surround our troops!</l>
+                        <l>They surround our troops!</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>As a kid in the <placeName>Caribbean</placeName> I wished for a war</l>
+                    <l>I knew that I was poor</l>
+                    <l>I knew it was the only way to—</l>
+                </sp>
+
+                <sp who="#hamilton #burr #mulligan #lafayette #laurens">
+                    <speaker>HAMILTON/BURR/MULLIGAN/LAFAYETTE/LAURENS</speaker>
+                    <l><phr type="#rise">Rise up!</phr></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>If they tell my story</l>
+                    <l>I am either gonna die on the battlefield in glory or—</l>
+                </sp>
+
+                <sp who="#hamilton #burr #mulligan #lafayette #laurens">
+                    <speaker>HAMILTON/BURR/MULLIGAN/LAFAYETTELAURENS</speaker>
+                    <l><phr type="#rise">Rise up!</phr></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I will fight for this land</l>
+                    <l>But there’s only one man</l>
+                    <l>Who can give us a command so we can—</l>
+                </sp>
+
+                <sp who="#hamilton #burr #mulligan #lafayette #laurens">
+                    <speaker>HAMILTON/BURR/MULLIGAN/LAFAYETTELAURENS</speaker>
+                    <l><phr type="#rise">Rise up!</phr></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Understand? It’s the only way to—</l>
+                </sp>
+
+                <sp who="#hamilton #burr #mulligan #lafayette #laurens">
+                    <speaker>HAMILTON/BURR/MULLIGAN/LAFAYETTE/LAURENS</speaker>
+                    <l><phr type="#rise">Rise up!</phr> <phr type="#rise">Rise up!</phr></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Here he comes!</l>
+                </sp>
+
+                <stage type="entrance">George Washington enters, heralded by soldiers.</stage>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Ladies and gentlemen!</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>The moment you’ve been waiting for!</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>The pride of <placeName>Mount Vernon</placeName>!</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#washington">George Washington</persName>!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>We are outgunned</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Outmanned</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Outnumbered</l>
+                    <l>Outplanned</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Buck, buck, buck, buck, buck!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>We gotta make an all out stand</l>
+                    <l>Ayo, I’m gonna need a right-hand man.</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Buck, buck, buck, buck, buck!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Check it—</l>
+                    <l>Can I be real a second?</l>
+                    <l>For just a millisecond?</l>
+                    <l>Let down my guard and tell the people how I feel a second?</l>
+                    <l>Now I’m the model of a modern major general</l>
+                    <l><seg type="#fact">The venerated Virginian veteran</seg> whose men are all</l>
+                    <l>Lining up, to put me up on a pedestal</l>
+                    <l><seg type="#fact">Writin’ letters to relatives</seg></l>
+                    <l>Embellishin’ my elegance and eloquence</l>
+                    <l>But the elephant is in the room</l>
+                    <l>The truth is in ya face when ya hear the British cannons go…</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Boom!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Any hope of success is fleeting</l>
+                    <l>How can I keep leading when the people I’m</l>
+                    <l>Leading <seg type="#fact">keep retreating?</seg></l>
+                    <l>We put a stop to the bleeding as the British take
+                            <placeName>Brooklyn</placeName></l>
+                    <l>Knight takes rook, but look</l>
+                    <l>We are outgunned</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Outmanned</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Outnumbered</l>
+                    <l>Outplanned</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Buck, buck, buck, buck, buck!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>We gotta make an all out stand</l>
+                    <l>Ayo, I’m gonna need a right-hand man.</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Buck, buck, buck, buck, buck!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Incoming!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>They’re battering down the Battery check the damages</l>
+                </sp>
+
+                <sp who="#mulligan">
+                    <speaker>MULLIGAN</speaker>
+                    <l>Rah!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>We gotta stop ‘em and rob ‘em of their advantages</l>
+                </sp>
+
+                <sp who="#mulligan">
+                    <speaker>MULLIGAN</speaker>
+                    <l>Rah!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Let’s take a stand with the stamina God has granted us</l>
+                    <l><persName ref="#hamilton">Hamilton</persName> won’t abandon ship</l>
+                    <l><seg type="#fact">Yo, let’s steal their cannons—</seg></l>
+                </sp>
+
+                <sp who="#mulligan">
+                    <speaker>MULLIGAN</speaker>
+                    <l>Shh-boom!</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Boom!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Goes the cannon, watch the blood and the shit spray and…</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Boom!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Goes the cannon, <seg type="#fact">we’re abandonin’ <placeName>Kips Bay</placeName></seg> and…</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Boom!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>There’s another ship and…</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Boom!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>We just lost the southern tip and…</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Boom!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><seg type="#fact">We gotta run to <placeName>Harlem</placeName> quick</seg>, we can’t afford another
+                        slip</l>
+                    <l>Guns and horses giddyup</l>
+                    <l>I decide to divvy up</l>
+                    <l>My forces, they’re skittish as the British cut the city up</l>
+                    <l>This close to giving up, facing mad scrutiny</l>
+                    <l>I scream in the face of this mass mutiny:</l>
+                    <l>Are these the men with which I am to defend
+                        <placeName>America</placeName>?</l>
+                    <l>We ride at midnight, <placeName>Manhattan</placeName> in the distance</l>
+                    <l>I cannot be everywhere at once, people</l>
+                    <l>I’m in dire need of assistance…</l>
+                </sp>
+
+                <stage type="mixed">Washington's tent. Burr enters.</stage>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Your excellency, sir!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Who are you?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#burr">Aaron Burr</persName>, Sir?</l>
+                    <l>Permission to state my case?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>As you were</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Sir</l>
+                    <l><seg type="#fact">I was a captain under <persName ref="#generalMontgomery">General
+                        Montgomery</persName></seg></l>
+                    <l>Until he caught a bullet in the neck in <placeName>Quebec</placeName></l>
+                    <l>And well, in summary</l>
+                    <l>I think that I could be of some assistance</l>
+                    <l>I admire how you keep firing on the British</l>
+                    <l>From a distance</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Huh</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I have some questions, a couple of suggestions on how to fight instead of
+                        fleeing west</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Yes?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Well—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact">Your excellency, you wanted to see me?</seg></l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><persName ref="#hamilton">Hamilton</persName>, come in, have you met
+                            <persName ref="#burr">Burr</persName>?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Yes, sir</l>
+                </sp>
+
+                <sp who="#hamilton #burr">
+                    <speaker>HAMILTON/BURR</speaker>
+                    <l>We keep meeting</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>As I was saying, sir, I look forward to seeing your strategy play out</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><persName ref="#burr">Burr</persName>?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Sir?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Close the door on your way out</l>
+                </sp>
+
+                <stage type="exit">Burr exits.</stage>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Have I done something wrong, sir?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>On the contrary</l>
+                    <l>I called you here because our odds are beyond scary</l>
+                    <l>Your reputation precedes you, but I have to laugh</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Sir?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><persName ref="#hamilton">Hamilton</persName>, how come no one can get you on
+                        their staff?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Sir!</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Don’t get me wrong, you’re a young man of great renown</l>
+                    <l>I know you stole British cannons when we were still downtown</l>
+                    <l><seg type="#fact"><persName ref="#green">Nathaniel Green</persName> and <persName ref="#knox">Henry Knox</persName> wanted to hire you…</seg></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>To be their Secretary? I don’t think so</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Why’re you upset?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I’m not—</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>It’s alright, you want to fight, you’ve got a hunger</l>
+                    <l>I was just like you when I was younger</l>
+                    <l>Head full of fantasies of dyin’ like a martyr?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Yes</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Dying is easy, young man. Living is harder</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Why are you telling me this?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>I’m being honest</l>
+                    <l><seg type="#fact">I’m working with a third of what our Congress has promised</seg></l>
+                    <l>We are a powder keg about to explode</l>
+                    <l>I need someone like you to lighten the load. So?</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY EXCEPT HAMILTON</speaker>
+                    <l><phr type="#shot">I am not throwin’ away my shot!</phr></l>
+                    <l><phr type="#shot">I am not throwin’ away my shot!</phr></l>
+                    <l>Ayo, I’m just like my country, I’m young</l>
+                    <l>Scrappy and hungry!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><phr type="#shot">I am not throwing away my shot!</phr></l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Son</l>
+                </sp>
+
+                <sp who="#washington #company">
+                    <speaker>WASHINGTON/COMPANY</speaker>
+                    <l>We are outgunned, outmanned!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>You need all the help you can get</l>
+                    <l>I have some friends. <persName ref="#laurens">Laurens</persName>, <persName ref="#mulligan">Mulligan</persName></l>
+                    <l><persName ref="#lafayette">Marquis de Lafayette</persName>, okay, what
+                        else?</l>
+                </sp>
+
+                <sp who="#washington #company">
+                    <speaker>WASHINGTON/COMPANY</speaker>
+                    <l>Outnumbered, outplanned!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>We’ll need some spies on the inside</l>
+                    <l>Some King’s men who might let some things slide</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Boom!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy #women">
+                    <speaker>ELIZA/ANGELICA/PEGGY/WOMEN</speaker>
+                    <l>Whoa, whoa, whoa...</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact">I’ll write to Congress and tell ‘em we need supplies,</seg> you rally the guys,</l>
+                    <l>Master the element of surprise</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Chicka-boom!</l>
+                </sp>
+
+                <sp who="#angelica #eliza #peggy #women">
+                    <speaker>ANGELICA/ELIZA/PEGGY/WOMEN</speaker>
+                    <l>Whoa, whoa, whoa...</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I’ll rise above my station, organize your information, ‘til we rise to the
+                        occasion of our new nation. Sir!</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><phr type="#rise">Rise up!</phr></l>
+                </sp>
+
+                <sp who="#mulligan #lafayette #laurens">
+                    <speaker>MULLIGAN/LAFAYETTE/LAURENS</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#hamilton #angelica #eliza #peggy #women">
+                    <speaker>HAMILTON/SCHUYLER SISTERS/WOMEN</speaker>
+                    <l><phr type="#rise">Rise up!</phr></l>
+                </sp>
+
+                <sp who="#mulligan #lafayette #laurens">
+                    <speaker>LAURENS/LAFAYETTE/MULLIGAN</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#ensemble">
+                    <speaker>ENSEMBLE</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#hamilton #angelica #eliza #peggy">
+                    <speaker>HAMILTON/SCHUYLER SISTERS</speaker>
+                    <l><phr type="#rise">Rise up!</phr></l>
+                </sp>
+
+                <sp who="#mulligan #lafayette #laurens">
+                    <speaker>MULLIGAN/LAFAYETTE/LAURENS</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Here comes the <persName ref="#washington">General</persName>!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>What?</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><seg type="#fact">And his right hand man!</seg></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Boom!</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Right Hand Man</head><event xml:id="event17" when="1775-06-15"> <label>George Washington Becomes Commander in Chief of the Continental Army</label><desc>In 1775, Washington was unanimously selected as Commander in Chief of the Contintental Army.</desc></event>
+                <event xml:id="event18" when="1775-08-25"> <label>Hamilton Captures British Canons</label><desc>Hamilton and volunteers from a musket drill unit at King’s College captured twenty-one cannons at a British stockade on the tip of Manhattan Island in New York.</desc></event>
+                <event xml:id="event19" when="1776-09-15"> <label>The Battle of Kip's Bay</label><desc>The British won over the unexperienced American troops during this battle when the heavy fire from British ships caused the American troops to flee. This battle gave the British control of New York City on the lower half of the island. Washington estbalished strong positions in Harlem, though.</desc></event>
+                <event xml:id="event20" when="1775-09-13"> <label>Burr in Quebec</label> <desc> At this point of time, Aaron Burr was in Quebec with Benedict Arnold and General Richard Montgomery.</desc></event>
+                <event xml:id="event21" when="1777-01-25"> <label>Washington Invites Hamilton to his Military Staff</label> <desc>Hamilton becomes a lieutetant colonel under Washington.</desc></event>
+            </listEvent>
+        </back>
+    </text>
+</TEI>

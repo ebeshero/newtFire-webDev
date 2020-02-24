@@ -1,0 +1,18 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+
+let $biggerLetters := collection ('/db/mitford/letters')
+
+let $MissJames := $biggerLetters/TEI//text//p//persName[@ref="#James_Miss"]
+let $MJpeeps := distinct-values($MissJames/parent::p/persName[not(@ref="#James_Miss")]/@ref)
+
+let $MJbooktitle := $MissJames/parent::p[persName[@ref="#James_Miss"]]/title/@ref
+
+let $MJbooks := $MissJames/parent::p[persName[@ref="#James_Miss"]]/title/@ref | 
+$MissJames/parent::p[persName[@ref="#James_Miss"]]/bibl/@corresp
+
+let $distinct_MJbooks := distinct-values($MJbooks)
+return distinct-values($MJbooktitle)
+
+
+

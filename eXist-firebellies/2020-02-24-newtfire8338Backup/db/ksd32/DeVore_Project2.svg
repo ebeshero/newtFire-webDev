@@ -1,0 +1,52 @@
+xquery version "3.1";
+declare variable $wanderings := collection('/db/ulysses/wanderings');
+declare variable $homecoming := collection('/db/ulysses/Homecoming');
+declare variable $telemachiad := collection('/db/ulysses/telemachiad');
+
+declare variable $walluwho := $wanderings//allusion/@who ! string();
+declare variable $walluto := $wanderings//allusion/@to ! string();
+declare variable $hallwho := $homecoming//allusion/@who ! string();
+declare variable $hallto := $homecoming//allusion/@to ! string();
+declare variable $tallwho := $telemachiad//allusion/@who ! string();
+declare variable $tallto := $telemachiad//allusion/@to ! string();
+declare variable $CountWal := count($walluwho);
+declare variable $CountWalt := count($walluto);
+declare variable $CountHal := count($hallwho);
+declare variable $CountHalt := count($hallto);
+declare variable $CountTal := count($tallwho);
+declare variable $CountTalt := count($tallto);
+declare variable $graphSpacer := 10;
+declare variable $Yspacer := 100;
+declare variable $ThisFileContent :=
+
+<svg width="2000" height="7000" viewBox = "0 0 2000 3000">
+
+   <g transform="translate(50,30)">
+    <rect x="{-$graphSpacer+75}" y="525" width="75" height="{$CountWal*9.9}" style="fill:rgb(255, 77, 77)" /> (:Bar for the count of allusion/@who in wanderings:)
+    <rect x="{-$graphSpacer +75}" y="325" width="75" height="{$CountWalt *11.2}"style="fill:rgb(255, 179, 179)" /> (:Bar for the count of allusion/@to in wanderings:)
+      <rect x="{-$graphSpacer + 200}" y="675" width="75" height="{$CountHal *8.3}" style="fill:rgb(255, 77, 77)" />
+      <rect x="{-$graphSpacer +200}" y="89" width="75" height="{$CountHalt*11.1}" style="fill:rgb(255, 179, 179)" />
+      <rect x="{-$graphSpacer + 325}" y="685"width="75" height="{$CountTal*10.7}" style="fill:rgb(255, 77, 77)" />
+      <rect x="{-$graphSpacer +325}" y="420" width="75" height="{$CountTalt *9.5}" style="fill:rgb(255, 179, 179)" />
+      <text x="{-$graphSpacer +200}" y="920" fill="red">Homecoming</text>
+      <text x="{-$graphSpacer + 325}" y="920" fill="red">Telemachiad</text>
+      <text x="{-$graphSpacer+75}" y="920" fill="red">Wanderings</text>
+      
+      
+      <text x="20" y="901" fill="black">0</text>
+      <text x="0" y="{901 - $Yspacer}" fill="black">10</text>
+      <text x="0" y="{801 - $Yspacer}" fill="black">20</text>
+      <text x="0" y="{701 - $Yspacer}" fill="black">30</text>
+      <text x="0" y="{601 - $Yspacer}" fill="black">40</text>
+      <text x="0" y="{501 - $Yspacer}" fill="black">50</text>
+      <text x="0" y="{401 - $Yspacer}" fill="black">60</text>
+      <text x="0" y="{301 - $Yspacer}" fill="black">70</text>
+      <text x="0" y="{201 - $Yspacer}" fill="black">80</text>
+      <text x="50" y="50" fill="black">Allusion divided by Sections of Ulysses</text>
+      <line x1="40" y1="900" x2="500" y2="900" style="stroke:rgb(0,0,0);stroke-width:2" />
+      <line x1="41" y1="75" x2="40" y2="901" style="stroke:rgb(0,0,0);stroke-width:2" />
+     
+      
+  </g>
+</svg>;
+$ThisFileContent

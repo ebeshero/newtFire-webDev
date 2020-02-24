@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/LocationSchema.rnc" type="application/relax-ng-compact-syntax"?><location type="city/town">
+    <name n="Viridian City">Viridian City</name>
+    <des>A beautiful city that is enveloped in green year-round.</des>
+    <PoI>
+
+        <place>
+            <placeName>Pokemon Academy</placeName>
+            <des> This academy is located in the center of <pref>Viridian</pref>. It is a place
+                dedicated to teaching the basics of Pokémon to inexperienced Trainers.</des>
+        </place>
+
+        <place>
+            <placeName>Old Man</placeName>
+            <des>here is a grumpy old man in central <pref>Viridian</pref> who will not let Trainers
+                pass through to <pref>Route 2</pref> until he has had his daily coffee. The man is
+                simply a barrier in the game, preventing players from wandering past <pref>Viridian
+                    City</pref> until the player has gone to the <pref>Viridian Poké Mart</pref> and
+                delivered Oak's <item>Parcel</item> to <pers>Professor Oak</pers>.</des>
+        </place>
+
+        <place>
+            <placeName>Viridian Gym</placeName>
+            <des>The <pref>Viridian Gym</pref> is the official Gym of <pref>Viridian City</pref>.
+                Trainers who defeat this Gym's Leader receive the <item>Earth Badge</item>. The Gym
+                is usually strewn with the same one-way spin tiles seen in the <pref>Team Rocket
+                    Hideout</pref>.</des>
+        </place>
+
+        <place>
+            <placeName>Move Tutor</placeName>
+            <des>The man in the area that requires <item>Cut</item> or <item>Surf</item> to access
+                gives out the <item>TM</item> for Dream Eater</des>
+        </place>
+
+    </PoI>
+</location>

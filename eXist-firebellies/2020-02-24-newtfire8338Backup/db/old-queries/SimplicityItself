@@ -1,0 +1,4 @@
+xquery version "3.0";
+for $x in collection('/db/shakespeare/plays')//PLAY
+where count(distinct-values($x//SPEAKER))>40
+return $x/TITLE

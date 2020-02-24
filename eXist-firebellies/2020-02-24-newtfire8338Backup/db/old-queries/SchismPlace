@@ -1,0 +1,9 @@
+xquery version "3.0";
+let $Schisms := collection('/db/Schism')/*
+let $places := distinct-values($Schisms//location/string())
+let $count := count($places)
+let $newline := "&#10;"
+return string-join($places, $newline)
+(:  :return ($places, $newline) :)
+
+(: or this works too: return string-join($places, $nl) :)

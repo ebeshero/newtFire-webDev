@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+     <dexNum num="084">084</dexNum>
+     <name>Doduo</name>
+     <typing type="Normal Flying">Normal Flying</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Safari Zone">Safari Zone<lvl min="26" max="26"> level 26</lvl><rate perc="15"> encounter rate: 15%</rate></landmark>
+        <route num="18">route 18<lvl min="24" max="28"> level 24-28</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="17">route 17<lvl min="24" max="28"> level 24-28</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="16">route 16<lvl min="18" max="22"> level 18-22</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+    </locations>
+    
+    </pokemon>

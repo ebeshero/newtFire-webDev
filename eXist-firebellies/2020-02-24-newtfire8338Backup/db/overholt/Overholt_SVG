@@ -1,0 +1,44 @@
+xquery version "3.1";
+declare default element namespace "http://www.w3.org/2000/svg";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+declare variable $overholt := collection('/db/overholt');
+declare variable $diaryFiles := $overholt/*;
+declare variable $diaryDates := $overholt//tei:teiHeader//tei:profileDesc//tei:listPerson/tei:person/tei:birth/@when/tokenize(string(), '-')[1];
+declare variable $diaryNames := $overholt//tei:teiHeader//tei:profileDesc//tei:listPerson/tei:person/tei:persName;
+
+declare variable $minDate := min($diaryDates);
+declare variable $maxDate := max($diaryDates);
+declare variable $yearNum := xs:integer($maxDate) - xs:integer($minDate);
+declare variable $lineLength := $yearNum * 365;
+
+
+declare variable $ThisFileContent := 
+<svg width="500" height="3000">
+   <g transform="translate(30, 100)">
+      <line x1="100" y1="0" x2="100" y2="{$lineLength}" stroke="maroon" stroke-width="5"/>  
+      
+         {
+         for $i in (0 to $yearNum)
+         (:Define a variable that tells you the current year in your loop. Add $i to the xs:integer() version of your $minDate: You want to know that so you can output what date it is next to your hashmark.:)
+         (:Define another "tree-walker" variable that helps you find the names associated with that year. See comments below on how to do that. :)
+                return
+                 <g>
+                <line x1="50" y1="{$i*365}" x2="115" y2="{$i*365}" stroke="black" stroke-width="3"/>
+                <text x="120" y="{($i*365)}">{$diaryNames + $i}</text>
+                <!--2018-04-08 ebb: This text SVG is throwing an error because XQuery can't calculate a string plus a number. The problem here is that diary names is a list of all the persNames in the overholt files It's not a number. You could make it a number with count(), but it's a total for the WHOLE diary (all years at once), and isn't a total per year. To get the total count per year, you need some new variables inside this for loop. 
+                * You need one variable that gets the current year by calculating it with the current $i
+                * You need a second "tree-walker" variable that walks through the Overholt XML and finds all the names mentioned within a particular year's entries. STUDY YOUR XML to see the relationship between $diaryNames and the dates you're wanting to plot here: is it a following-sibling:: relationship to get from tei:persName to tei:birth?               
+                -->
+                
+            </g>
+         }
+         
+   </g>
+</svg>;
+
+let $filename := "overholtSVG.svg"
+let $doc-db-uri := xmldb:store("/db/overholt", $filename, $ThisFileContent)
+return $ThisFileContent
+(:  :Output at http://newtfire.org:8338/exist/rest/db/overholt/overholtSVG.svg :)
+

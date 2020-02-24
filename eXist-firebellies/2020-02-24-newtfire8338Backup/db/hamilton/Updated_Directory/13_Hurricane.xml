@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Hurricane"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Hurricane</title>
+            </head>
+            <div type="song">
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>In the eye of a hurricane</l>
+                    <l>There is quiet</l>
+                    <l>For just a moment</l>
+                    <l>A yellow sky</l>
+
+
+                    <l><seg type="#fiction">When I was seventeen a hurricane</seg></l>
+                    <l>Destroyed my town</l>
+                    <l>I didn’t drown</l>
+                    <l>I couldn’t seem to die</l>
+
+
+                    <l><seg type="#fact">I wrote my way out</seg></l>
+                    <l>Wrote everything down far as I could see</l>
+                    <l>I wrote my way out</l>
+                    <l>I looked up and the town had its eyes on me</l>
+
+
+                    <l>They passed a plate around</l>
+                    <l>Total strangers</l>
+                    <l>Moved to kindness by my story</l>
+                    <l>Raised enough for me to book passage on a</l>
+                    <l>Ship that was <placeName>New York</placeName> bound…</l>
+
+
+                    <l>I wrote my way out of hell</l>
+                    <l>I wrote my way to revolution</l>
+                    <l>I was louder than the crack in the bell</l>
+                    <l>I wrote <persName ref="#eliza">Eliza</persName> love letters until she fell</l>
+                    <l>I wrote about The Constitution and defended it well</l>
+                    <l>And in the face of ignorance and resistance</l>
+                    <l>I wrote financial systems into existence</l>
+                    <l>And when my prayers to God were met with indifference</l>
+                    <l>I picked up a pen, I wrote my own deliverance</l>
+
+
+                    <l>In the eye of a hurricane</l>
+                    <l>There is quiet</l>
+                    <l>For just a moment</l>
+                    <l>A yellow sky</l>
+
+
+                    <l><seg type="#fiction">I was twelve when my mother died</seg></l>
+                    <l>She was holding me</l>
+                    <l>We were sick and she was holding me</l>
+                    <l>I couldn’t seem to die</l>
+                </sp>
+
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><phr type="#wait">Wait for it</phr>, <phr type="#wait">wait for it</phr>, <phr type="#wait">wait for it</phr>…</l>
+                </sp>
+
+
+                <spGrp type="simultaneous">
+
+
+                    <sp who="#burr #ensemble">
+                        <speaker>BURR AND ENSEMBLE</speaker>
+                        <l><phr type="#wait">Wait for it</phr>, <phr type="#wait">wait for it</phr>, <phr type="#wait">wait for it</phr>…</l>
+
+
+                        <l><phr type="#wait">Wait for it</phr>, <phr type="#wait">wait for it</phr>, <phr type="#wait">wait for it</phr>,<phr type="#wait"> wait</phr>… </l>
+                    </sp>
+
+
+                    <sp who="#hamilton">
+                        <speaker>HAMILTON</speaker>
+                        <l>I’ll write my way out…</l>
+                        <l>Write ev’rything down, far as I can see…</l>
+                        <l>I’ll write my way out…</l>
+                        <l>Overwhelm them with honesty. </l>
+                    </sp>
+
+
+                    <sp who="#washington #eliza #angelica #maria">
+                        <speaker>WASHINGTON/ELIZA/ANGELICA/MARIA</speaker>
+                        <l>History has its eyes on you</l>
+                    </sp>
+
+
+                    <sp who="#hamilton">
+                        <speaker>HAMILTON</speaker>
+                        <l>This is the eye of the hurricane, this is the only</l>
+                        <l>Way I can protect my <phr type="#legacy">legacy</phr>…</l>
+                    </sp>
+
+
+                    <sp who="#company">
+                        <speaker>COMPANY</speaker>
+                        <stage type="delivery">Except Hamilton</stage>
+                        <l><phr type="#wait">Wait for it</phr>, <phr type="#wait">wait for it</phr>, <phr type="#wait">wait for it</phr>,<phr type="#wait"> wait</phr>…</l>
+                    </sp>
+                </spGrp>
+
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact">The <persName ref="#reynolds">Reynolds</persName> Pamphlet</seg></l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Hurricane</head><event xml:id="event66" when="1797-02-01"><label>No Distinct Dates</label><desc>This song has no distinct dates, but since the musical is intended to be in chronological order, this song would follow the established dates from the previous songs.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

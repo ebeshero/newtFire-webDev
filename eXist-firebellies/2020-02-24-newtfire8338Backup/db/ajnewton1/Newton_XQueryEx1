@@ -1,0 +1,35 @@
+xquery version "3.0";
+
+declare variable $ThisFileContent :=
+let $shakespeare := collection('/db/shakespeare/plays')
+let $allElementNames := $shakespeare/descendant::*/name()
+let $distinctElements := distinct-values($allElementNames)
+let $countElementNames := count($distinctElements)
+
+return
+    <html>
+        <head><title>Count and List of all XML Elements Used in Shakespeare Play Collection</title></head>
+        <body>
+            <p>{$countElementNames}</p>
+            <table>
+                <tr>
+                    <th>Element Name</th>
+                    <th>Whole Collection</th>
+                </tr>
+                {for $i in $distinctElements
+                let $count := count($shakespeare//*[name() = $i])
+                return
+                    <tr>
+                        <td>{$i}</td>
+                        <td>{$count}</td>
+                    </tr>
+                    
+                }
+            </table>
+        </body>
+    </html>;
+
+let $filename := "Newton_XQueryEx2.html"
+let $dob-db-uri := xmldb:store("/db/ajnewton1/", $filename, $ThisFileContent)
+return $dob-db-uri
+(:output = http://dxcvm05.psc.edu:8080/exist/rest/db/ajnewton1/Newton_XQueryEx2.html:)

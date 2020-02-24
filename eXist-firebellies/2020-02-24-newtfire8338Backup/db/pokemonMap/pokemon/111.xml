@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+     <dexNum num="111">111</dexNum>
+     <name>Rhyhorn</name>
+     <typing type="Ground Rock">Ground Rock</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Safari Zone">Safari Zone<lvl min="25" max="26"> level 25-26</lvl><rate perc="20"> encounter rate: 20%</rate></landmark>
+    </locations>
+    
+    </pokemon>
