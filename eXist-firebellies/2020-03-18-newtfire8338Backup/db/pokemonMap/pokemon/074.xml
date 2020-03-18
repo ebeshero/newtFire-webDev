@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+        <dexNum num="074">074</dexNum>
+        <name>Geodude</name>
+        <typing type="Rock Ground">Rock Ground</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Mt. Moon">Mt. Moon<lvl min="8" max="10"> level 18-10</lvl><rate perc="15"> encounter rate: 15%</rate></landmark>
+        <landmark n="Rock Tunnel">Rock Tunnel<lvl min="16" max="18"> level 16-18</lvl><rate perc="26"> encounter rate: 26%</rate></landmark>
+        <landmark n="Victory Road">Victory Road<lvl min="26" max="26"> level 26</lvl><rate perc="15"> encounter rate: 15%</rate></landmark>
+    </locations>
+    
+</pokemon>

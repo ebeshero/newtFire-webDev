@@ -1,0 +1,159 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare variable $graveyard := doc("/db/graveyard/graveyardInfo-TEI.xml");
+declare variable $deceased := $graveyard//tei:person[tei:death];
+declare variable $surnames := $deceased//tei:surname;
+declare variable $dSurnames := distinct-values($surnames);
+
+declare variable $selectSurnames := 
+for $i in $dSurnames
+let $deathC := count($deceased[descendant::tei:surname = $i])
+where $deathC gt 3
+order by $deathC descending
+return $i;
+
+
+declare variable $deathCount := 
+for $i in $dSurnames
+let $deathC:= count($deceased[descendant::tei:surname = $i])
+where $deathC gt 3
+order by $deathC descending
+return $deathC;
+
+
+declare variable $regions := $deceased//tei:region/text();
+
+
+declare variable $deathRegion :=
+for $i in $selectSurnames
+let $deathC := count($deceased[descendant::tei:surname = $i])
+let $region := $deceased[descendant::tei:surname = $i]//tei:region/text()
+order by $deathC descending
+return $region;
+declare variable $dRegion := distinct-values($deathRegion);
+
+declare variable $surname_region_deathCount := 
+    for $i in $selectSurnames
+    let $deathC := count($deceased[descendant::tei:surname = $i])
+    let $deathRegions := $deceased[descendant::tei:surname = $i]//tei:death//tei:region[text()]
+    for $r in $deathRegions 
+    let $deathRegionC := count($deceased[descendant::tei:surname = $i][descendant::tei:death//tei:region = $r])
+    where $deathC gt 3
+    order by $deathRegionC descending
+    return concat($i, "_", $r, "-", $deathRegionC);
+    
+declare variable $dSurname_region_deathCount := distinct-values($surname_region_deathCount);
+
+declare variable $countSurname :=
+   for $i in $dSurnames
+    let $deathC := count($deceased[descendant::tei:surname = $i])
+    return $deathC;
+    
+declare variable $intSurname := count($selectSurnames);
+declare variable $spacer_X := 60;
+declare variable $X_axis := $intSurname * $spacer_X;
+    
+declare variable $maxCS := max($countSurname);
+declare variable $spacer_Y := 40;
+declare variable $Y_axis := $maxCS * $spacer_Y;
+
+declare variable $color1 := "#451ea8";
+declare variable $color2 := "#1a83a3";
+declare variable $color3 := "#ecd3ff";
+declare variable $color4 := "#050b7f";
+declare variable $color5 := "#449ee2";
+declare variable $color6 := "#0fa896";
+declare variable $color7 := "#0a844b";
+declare variable $colorArray := ("#451ea8","#1a83a3","#ecd3ff","#050b7f","#449ee2","#0fa896","#0a844b");
+
+declare variable $colorRegions :=
+ for $i at $pos1 in $dRegion
+ let $color := 
+    for $c at $pos2 in $colorArray
+    where $pos1 = $pos2
+    return $c
+ return concat($i, "_", $color);
+
+<svg width="1000" height="1000" viewbox="0,0,1150,1150">
+return
+    <g transform="translate(100,500)">
+        <text x="10" y="-488">Geographic Distribution of Families with more than 3 deaths in Brush Creek Section I</text>
+       <rect x="700" y="-500" height="425" width="200"
+        style="stroke:black; stroke-width: 2; fill: none"/>
+<text x="715" y="-470">Legend:</text>
+
+{for $i at $pos1 in $dRegion
+ let $color := 
+    for $c at $pos2 in $colorArray
+    where $pos1 = $pos2
+    return $c
+return
+    <g>
+    <text x="715" y="{-460 + $pos1 * 45}">{$i}</text>
+    <rect x="830" y="{-475 + ($pos1 * 45)}" height="20" width="20" style="stroke: black; stroke-width: 2; fill: {$color}"/>
+    </g>}
+    {<g>
+            <text x="715" y="{-415 + count($dRegion) * 45}">Unmarked</text>
+    <rect x="830" y="{-432 + count($dRegion) * 45}" height="20" width="20" style="stroke: black; stroke-width: 2; fill: none"/>
+    
+    
+    
+    
+    
+    
+</g>}
+{<g> (: X and Y axis :)
+<line x1="0" y1="0" x2="{$X_axis}" y2="0" style="stroke: black; stroke-width: 2"/>
+<line x1="0" y1="0" x2="0" y2="-{$Y_axis}" style="stroke: black; stroke-width: 2"/>
+<text x="-15" y="-340" style="writing-mode: tb; glyph-orientation-horizontal: 10">Number of Deaths</text>
+
+{
+for $i at $pos in $selectSurnames 
+let $deathC := count($deceased[descendant::tei:surname = $i])
+let $Yvalue := $deathC * $spacer_Y
+return 
+   <g>
+   <text x="{$pos * $spacer_X}" y="10" style="writing-mode: tb; glyph-orientation-horizontal: 5">{$i}</text>
+   <rect x="{$pos * $spacer_X}" y="-{$Yvalue}" width="20" height="{$Yvalue}" style="stroke:black; stroke-width: 2; fill: none"/>
+       
+<g>{ let $matchesRegionList :=
+          let $mr := distinct-values($deceased[descendant::tei:surname = $i]//tei:death//tei:region[text()])
+          for $r in $mr
+          let $ct :=  count($deceased[descendant::tei:surname = $i][descendant::tei:death//tei:region[text()] = $r])
+          order by $ct descending
+          return $r
+           
+    
+     for $m at $posM in $matchesRegionList
+     let $count := count($deceased[descendant::tei:surname = $i][descendant::tei:death//tei:region[text()] = $m])
+     let $intCount := xs:integer($count)
+     let $regYVal := $intCount * $spacer_Y
+     let $accumYVal := 
+          for $a in (0 to $posM - 1)
+          let $accum := $matchesRegionList[$posM - $a]
+          let $countAccum := count($accum)
+          let $intCountAccum := xs:integer($countAccum)
+          let $accumY := $intCountAccum * $spacer_Y
+          return $accumY
+     let $accumPos := sum($accumYVal)
+     let $cVal :=
+         for $v in $colorRegions
+         where $m = substring-before($v, '_')
+         return substring-after ($v, '_')
+order by $count descending 
+     return
+        <g>
+      <rect class="{$m}_{$count}" x="{$pos * $spacer_X}" y="-{$accumPos}" width="20" height="{$regYVal}" style="stroke: black; stroke-width:1; fill: {$cVal}"/>   
+</g>
+          }
+ </g>          (: I am definitely doing something wrong here with the code as I can not figure out how to get the stacked bar graphs to show up on the graph. I kinda understand the principles of the code that was posted as an example on newtfire and I think I properly enocded it to fit with my variables, but I am missing something for sure. I'm thinking that probably my values for the X and Y axis may be affecting it as I don't think I coded those properly earlier?? :)
+ </g>}
+
+</g>
+}
+</g>
+   
+      </svg>
+
+

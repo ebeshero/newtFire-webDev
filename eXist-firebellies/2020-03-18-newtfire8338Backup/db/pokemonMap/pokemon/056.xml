@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+        <dexNum num="056">56</dexNum>
+        <name>Mankey</name>
+        <typing type="Fighting">Fighting</typing>
+    </info>
+    
+    <locations>
+        <route num="5">Route 5<lvl min="10" max="16"> level 10-16</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="6">Route 6<lvl min="10" max="16"> level 10-16</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="7">Route 7<lvl min="17" max="20"> level 17-20</lvl><rate perc="30"> encounter rate: 30%</rate></route>
+        <route num="8">Route 8<lvl min="18" max="20"> level 18-20</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+    </locations>
+    
+</pokemon>

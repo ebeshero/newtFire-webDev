@@ -1,0 +1,36 @@
+xquery version "3.1";
+declare variable $ThisFileContent:=
+string-join(
+let $master := doc('/db/bloodborne/mainXML.xml')/*
+let $weapon := (//lore/equipment/weapon)
+let $location := (//lore/equipment/locationArea)
+for $edp in $weapon
+
+let $edgeType :=
+if ($weapon/ancestor::equipment)
+then "This weapon is an equipment item"
+else if ($weapon/ancestor::caryllRune)
+then "There is a problem"
+else "the weapon is NPC controlled only"
+
+let $edgeWeight :=
+if ($weapon/ancestor::equipment)
+then count($weapon/ancestor::equipment/weapon)
+else if ($weapon/ancestor::caryllRune)
+then count($weapon/ancestor::equipment/weapon)
+else count($weapon/ancestor::npc/weapon)
+
+let $peers:=
+if ($weapon/ancestor::equipment)
+then distinct-values($weapon/ancestor::equipment/weapon)
+else if ($weapon/ancestor::caryllRune)
+then distinct-values($weapon/ancestor::equipment/weapon)
+else distinct-values($weapon/ancestor::npc/weapon)
+
+for $peer in $peers
+return
+concat($edp, "&#x9;", $edgeType, "&#x9;", $edgeWeight, "&#x9;", $peer),"&#10;");
+(: 2019-03-07 ebb: You can return results from this now just in the file return window. When you're ready and getting output, uncomment the stuff below. You're going to need to REVISE the $doc-db-uri variable, too, because you won't be able to write to a new directory named myOutput at the top level of my database. Change the filepath to a location you're allowed to write to. So for example if you want to save to your dtd21 directory, change that first argument to "db/dtd21" . :)
+let $filename := "MyNetworkData.tsv"
+let $doc-db-uri := xmldb:store("/db/dtd21", $filename, $ThisFileContent, "text/plain")
+return $doc-db-uri

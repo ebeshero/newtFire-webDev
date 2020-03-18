@@ -1,0 +1,47 @@
+xquery version "3.1";
+declare variable $banksyColl := collection('/db/Assignments/banksyForSVG/');
+declare variable $sourceDesc := $banksyColl//sourceDesc;
+declare variable $titles := $sourceDesc//title;
+declare variable $title := $titles => string-join('; ');
+declare variable $medium := $sourceDesc//medium/@type/string();
+declare variable $date := $sourceDesc//date/@when/string();
+declare variable $minDate := $date => min();
+(: minDate is 1999 :)
+declare variable $maxDate := $date => max();
+(: maxDate is 2018-12-19 :)
+declare variable $years := $date ! tokenize(., '-')[1];
+declare variable $minYear := $years ! number() => min();
+declare variable $maxYear := $years ! number() => max();
+declare variable $difference := xs:integer($maxYear) - xs:integer($minYear);
+declare variable $timelineSpacer := 100;
+declare variable $ThisFileContent := 
+<svg width="2000" height="3000">
+   <g transform="translate(30, 30)">
+          <line x1="0" y1="0" x2="0" y2="{($maxYear - $minYear) * $timelineSpacer}" style="stroke:blue;stroke-width:2;"/>  
+        {
+         for $i in (0 to $difference)
+         let $year := $minYear + $i
+         return
+          <g>     
+            <circle cx="0" cy="{$i * $timelineSpacer}" r="3" stroke="purple" stroke-width="2" fill="violet" />
+  <!--2019-04-08 ebb: You tried to set and return an XQuery variable below this, but you're already in a return statement. 
+  You want to move these lines up in your previous for-loop. Also, you probably want to be working with $year to write a 
+  "treewalker" variable that will look through the banksy files to find which titles go with each specific year on your for loop. 
+  -->          
+            for $d in $date
+            return
+                 
+                 <text x="15" y="{$i*$timelineSpacer}" style="fill:green; stroke-width: 2; ">{$title}</text>
+            <!--ebb: this is returning the text of ALL 106 titles in the entire collection, at every date. It's not returning 
+            titles specific to a single date on the for loop.-->
+         </g>
+         
+        
+           
+        }
+    </g>
+
+</svg>;
+$ThisFileContent
+(: 2019-04-08 ebb: check minus. You experimented a bit with trying to build on my output, but you're outputting ALL the titles for the entire collection at each year 
+ : (instead of identifying only the artwork made in the $year of your for loop. Please review our posted solution here in db/2019_ClassExamples/banksyTimelineSVGComplete.svg (also in DHClass-Hub), and let me know if you'd like to go over how to make the for loop work and how to make a "treewalker" variable. :)

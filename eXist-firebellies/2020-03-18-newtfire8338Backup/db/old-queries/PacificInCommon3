@@ -1,0 +1,85 @@
+   xquery version "3.0";
+   declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+        <head><title>Lists of Pacific Places Mentioned in Common</title></head>
+        <body>
+      <h3>Distinct People in All collections</h3>
+<table>
+    {
+    let $voycoll:= collection('/db/pacific/voyages')    
+    let $voytexts := $voycoll//text 
+    let $voypersNames := $voytexts//persName
+    let $poetrycoll := collection('/db/pacific/literary')
+    let $poetrytexts := $poetrycoll//text
+    let $poepersNames := $poetrytexts//persName
+  
+    let $distPeeps := distinct-values($voypersNames | $poepersNames)
+    return
+        <tr><th>Count of All Distinct PersNames Across the Pacific Collections: {count($distPeeps)}</th></tr>
+    }
+    {
+    let $temp:=
+    let $voycoll:= collection('/db/pacific/voyages')    
+    let $voytexts := $voycoll//text 
+    let $voypersNames := $voytexts//persName
+    let $poetrycoll := collection('/db/pacific/literary')
+    let $poetrytexts := $poetrycoll//text
+    let $poepersNames := $poetrytexts//persName
+  
+    let $distPeeps := distinct-values($voypersNames | $poepersNames)
+          for $distpers in $distPeeps
+          order by $distpers 
+          return $distpers
+    for $item at $pos in $temp
+    
+         let $distpers := $item
+     order by $pos 
+                         return
+                    <tr>    
+                        <td n="{$pos}">{normalize-space($distpers)}</td>
+                       </tr>
+                    }
+                    </table>
+        
+                
+<h3>Distinct Places in ALL collections</h3>
+<table>
+    {
+    let $voycoll:= collection('/db/pacific/voyages')    
+    let $voytexts := $voycoll//text 
+    let $voyplaceNames := $voytexts//placeName
+    let $poetrycoll := collection('/db/pacific/literary')
+    let $poetrytexts := $poetrycoll//text
+    let $poeplaceNames := $poetrytexts//placeName
+  
+    let $distPlaces := distinct-values($voyplaceNames | $poeplaceNames)
+    return
+        <tr><th>Count of All Distinct Place Names Across the Pacific Collections: {count($distPlaces)}</th></tr>
+    }
+    {
+    let $temp:=
+    let $voycoll:= collection('/db/pacific/voyages')    
+    let $voytexts := $voycoll//text 
+    let $voyplaceNames := $voytexts//placeName
+    let $poetrycoll := collection('/db/pacific/literary')
+    let $poetrytexts := $poetrycoll//text
+    let $poeplaceNames := $poetrytexts//placeName
+  
+    let $distPlaces := distinct-values($voyplaceNames | $poeplaceNames)
+          for $distplace in $distPlaces
+          order by $distplace 
+          return $distplace
+    for $item at $pos in $temp
+    
+         let $distplace := $item
+     order by $pos 
+                         return
+                    <tr>    
+                        <td n="{$pos}">{normalize-space($distplace)}</td>
+                       </tr>
+                    }
+                    </table>
+    
+    </body>
+    </html>
+

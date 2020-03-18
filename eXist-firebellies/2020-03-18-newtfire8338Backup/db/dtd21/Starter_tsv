@@ -1,0 +1,9 @@
+xquery version "3.1";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare variable $blood := doc('/db/bloodborne/mainXML.xml');
+declare variable $location := $blood//locationArea/location/@place;
+
+                for $i at $pos in $location
+                let $gun := $location[//firearm/firarmName/@firearmList]
+                let $gunCount := count($gun)
+                return $gunCount

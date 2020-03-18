@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><pokemon>
+    
+    <info>
+        <dexNum num="023">023</dexNum>
+        <name>Ekans</name>
+        <typing type="Poison">Poison</typing>
+    </info>
+    
+    <locations>
+        <route num="4">Route 4<lvl min="6" max="12"> level 6-12</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="8">Route 8<lvl min="17" max="19"> level 17-19</lvl><rate perc="20"> encounter rate: 20%</rate></route>
+        <route num="9">Route 9<lvl min="11" max="17"> level 11-17</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="10">Route 10<lvl min="11" max="17"> level 11-17</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="11">Route 11<lvl min="12" max="15"> level 12-15</lvl><rate perc="45"> encounter rate: 45%</rate></route>
+        <route num="23">Route 23<lvl min="26" max="26"> level 26</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+    </locations>
+    
+</pokemon>

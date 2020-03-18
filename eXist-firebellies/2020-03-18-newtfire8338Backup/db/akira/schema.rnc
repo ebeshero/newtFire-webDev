@@ -1,0 +1,29 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = akira
+akira = element akira {teiHeader, body}
+teiHeader = element teiHeader {fileDesc}
+fileDesc = element fileDesc {titleStmt, publicationStmt}
+titleStmt = element titleStmt {title}
+title = element title {text}
+publicationStmt = element publicationStmt {p}
+p = element p {text}
+body = element body {sp} #2018-03-12 ebb: If you're continuing with this, you'll need to add other elements to be legal inside body as siblings of sp: there is no legal place for the number and time elements you are using.
+sp = element sp {who, l*}
+who = attribute who {text} #ref:id
+l = element l {text}
+#persName, controlScene, plot, action, place
+persName = element persName {"#kaneda" | "#tetsuo"} #quantum-satire: You'll make an id ref sheet for these characters, and you refer to them with a hashtag. Will explain this in further detail in an issue...
+controlScene = element controlScene {text}
+plot = element plot {setting}
+setting = attribute setting {text}
+action = element action {powers, yelling, riding}
+powers = attribute powers {"using" | "gaining" | "losing" | "wanting"}
+yelling = attribute yelling {text}
+riding = attribute riding {text} #Adding to this...
+place = element place {highway, stadium, school, policeStation, lab}
+highway = attribute highway {"bikeBattle"}
+stadium = attribute stadium {"olympic"}
+school = attribute school {"vocational"}
+policeStation = attribute policeStation {"makeshift"}
+lab = attribute Lab {"Research"}

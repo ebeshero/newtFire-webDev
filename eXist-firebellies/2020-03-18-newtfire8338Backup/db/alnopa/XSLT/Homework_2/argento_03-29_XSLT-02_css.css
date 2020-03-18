@@ -1,0 +1,56 @@
+html { background-color: teal; background-size: cover;}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+h1, h2, h3{text-align: center;}
+.cast{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.castAlphabet{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: flex-start;
+}
+.castMentions{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: flex-end;
+}
+table{border: 1px solid #bbbbbb; background-color: white; color: black}
+td, th{text-align: center; border-bottom: 1px solid #aaaaaa;}
+tr:nth-child(even){background-color: #bbbbbb}
+tr:hover{background-color: teal; color: white;}
+.script{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    width: 100%;
+}
+.sp{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+.num{display: flex; width: 5%; justify-content: center;}
+.lines{display: flex; width: 63%; justify-content:flex-start;}
+.capsule, .clown, .government, .extra, .espers, .resistance{display: flex; width: 13%; justify-content: center;}
+.time{display: flex; width: 20%; text-align: left;}
+.capsule{color: purple}
+.clown{color:orange}
+.espers{color: yellow}
+.resistance{color: red}
+.government{color:brown}
+.extra{color: black}

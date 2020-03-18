@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Tomorrow There'll Be More Of Us"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from https://genius.com/Lin-manuel-miranda-tomorrow-therell-be-more-of-us-lyrics
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Tomorrow There'll Be More Of Us</title>
+            </head>
+            <spGrp>
+                <sp who="#laurens">
+                    <speaker>JOHN LAURENS</speaker>
+                    <l>I may not live to see our glory</l>
+                </sp>
+                
+                <sp who="#eliza">
+                    <speaker>ELIZA HAMILTON</speaker>
+                    <l><seg type="#fiction"><persName ref="#hamilton">Alexander</persName>? There's a letter for you.</seg></l>
+                </sp>
+                
+                <sp who="#hamilton">
+                    <speaker>ALEXANDER HAMILTON</speaker>
+                    <l>It's from <persName ref="#laurens">John Laurens</persName>. I'll read it later.</l>
+                </sp>
+                
+                <sp who="#laurens">
+                    <speaker>JOHN LAURENS</speaker>
+                    <l>But I will gladly join the fight</l>
+                </sp>
+                
+                <sp who="#eliza">
+                    <speaker>ELIZA HAMILTON</speaker>
+                    <l>No. It's from his father.</l>
+                </sp>
+                
+                <sp who="#hamilton">
+                    <speaker>ALEXANDER HAMILTON</speaker>
+                    <l>His father?</l>
+                </sp>
+                
+                <sp who="#laurens">
+                    <speaker>JOHN LAURENS</speaker>
+                    <l>And when our children tell our story</l>
+                </sp>
+                
+                <sp who="#hamilton">
+                    <speaker>ALEXANDER HAMILTON</speaker>
+                    <l>Will you read it?</l>
+                </sp>
+                
+                <sp who="#laurens">
+                    <speaker>JOHN LAURENS</speaker>
+                    <l>They'll tell the story of tonight</l>
+                </sp>
+                
+                <sp who="#eliza">
+                    <speaker>ELIZA HAMILTON</speaker>
+                    <l><seg type="#fact">"On Tuesday the 27th, my son was killed in a gunfight against British troops retreating from <placeName>South Carolina</placeName>. The war was already over. As you know, <persName ref="#laurens">John</persName> dreamed of emancipating and recruiting 3000 men for the first all-black military regiment.
+                        His dream of freedom for these men dies with him."</seg></l>
+                </sp>
+                
+                <sp who="#laurens">
+                    <speaker>JOHN LAURENS</speaker>
+                    <l>Tomorrow there'll be more of us...</l>
+                </sp>
+                
+                <sp who="#eliza">
+                    <speaker>ELIZA HAMILTON</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName>. Are you alright?</l>
+                </sp>
+                
+                <sp who="#hamilton">
+                    <speaker>ALEXANDER HAMILTON</speaker>
+                    <l>I have so much work to do.</l>
+                </sp>
+            </spGrp>
+        </body>
+        <back>
+            <listEvent><head>Tomorrow There'll Be More of Us</head>
+                <event xml:id="event38" when="1782-08-27"> <label>The Death of John Laurens</label> <desc>In the musical, Alexander Hamilton receives a letter from John's father telling him that John Laurnes had died on August 27, 1782.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,38 @@
+xquery version "3.0";
+let $oHara := collection('/db/oHara1')/*
+let $countTotalPoems := count($oHara)
+let $poemsWithForeignLanguage := $oHara//ref[@language]/base-uri()
+let $distinctPoemsWithForeignLanguage := distinct-values($poemsWithForeignLanguage)
+let $countPoemsWithForeignLanguage := count($distinctPoemsWithForeignLanguage)
+let $percentagePoemsWithForeignLanguage := ($countPoemsWithForeignLanguage div $countTotalPoems) *100 *4 *2
+
+return 
+       <svg xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g transform="translate(300,500)">
+                <line x1="20" y1="0" x2="200" y2="0" stroke="black" stroke-width="1"/>
+                <line x1="20" y1="0" x2="20" y2="-400" stroke="black" stroke-width="1"/>
+                
+                
+                <line x1="20" y1="-200" x2="200" y2="-200" style=" stroke: black; stroke-dasharray: 10 10; stroke-width: 3; "/>
+                <line x1="20" y1="-400" x2="200" y2="-400" style=" stroke: black; stroke-dasharray: 10 10;
+                    stroke-width: 3; "/>
+                
+                <text x="0" y="-200" text-anchor="middle">25%</text>
+                <text x="0" y="-400" text-anchor="middle">50%</text>
+                
+                
+                <text x="-150" y="-200" text-anchor="middle">Percentage of Poems</text>
+                <text x="-150" y="-175" text-anchor="middle">with Foreign Language</text>
+                <text x="100" y="30" text-anchor="middle">Poems with Foreign Language</text>
+                <text x="100" y="45" text-anchor="middle">({$countPoemsWithForeignLanguage})</text>
+
+                
+                    <line x1="{100}" y1="0" x2="{100}" y2="-{$percentagePoemsWithForeignLanguage}" stroke="blue" stroke-width="25"/>
+                    
+                
+                
+            </g>
+        </svg>
+
+

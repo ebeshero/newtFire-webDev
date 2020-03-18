@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><pokemon>
+    
+    <info>
+        <dexNum num="123">123</dexNum>
+        <name>Scyther</name>
+        <typing type="Bug Flying">Bug Flying</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Safari Zone">Safari Zone<lvl min="23" max="28"> level: 23-28</lvl><rate perc="4"> encounter rate: 4%</rate></landmark>
+        <landmark n="Celadon Game Corner">Celadon Game Corner<lvl min="25" max="25"/></landmark>
+    </locations>
+    
+</pokemon>

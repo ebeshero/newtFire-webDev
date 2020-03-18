@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "I Know Him"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>I Know Him</title>
+            </head>
+            <div type="song">
+
+                <sp who="#kingGeorge">
+                    <speaker>KING GEORGE</speaker>
+
+                    <l>They say</l>
+                    <l><persName ref="#washington">George Washington’s</persName> yielding his power and stepping away</l>
+                    <l>‘Zat true?</l>
+                    <l>I wasn’t aware that was something a person could do</l>
+                    <l>I’m perplexed</l>
+                    <l>Are they gonna keep on replacing whoever’s in charge?</l>
+                    <l>If so, who’s next?</l>
+                    <l>There’s nobody else in their country who looms quite as large…</l>
+
+
+                    <stage type="mixed">A sentinel whispers in King George’s ear</stage>
+
+
+                    <l><persName ref="#jAdams">John Adams</persName>?!</l>
+                    <l><seg type="#fact">I know him</seg></l>
+                    <l>That can’t be</l>
+                    <l>That’s that little guy who spoke to me</l>
+                    <l>All those years ago</l>
+                    <l>What was it, eighty-five?</l>
+                    <l>That poor man, they’re gonna eat him alive!</l>
+                    <l>Oceans rise</l>
+                    <l>Empires fall</l>
+                    <l>Next to <persName ref="#washington">Washington</persName>, they all look small</l>
+                    <l>All alone</l>
+                    <l>Watch them run</l>
+                    <l>They will tear each other into pieces</l>
+                    <l>Jesus Christ, this will be fun!</l>
+
+
+                    <l>Da da da dat da dat da da da da ya da</l>
+                    <l>Da da da dat dat da ya daaaaa!</l>
+                    <l>Hahahahahahahahaha</l>
+
+
+                    <l>“<persName ref="#jAdams">President John Adams</persName>”</l>
+                    <l>Good Luck</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>I Know Him</head><event xml:id="event61" when="1797-03-04"> <label>John Adams Becomes President</label><desc>John Adams was elected as the president in 1797.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

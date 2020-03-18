@@ -1,0 +1,45 @@
+xquery version "3.1";
+declare namespace svg="http://www.w3.org/2000/svg";
+declare variable $banksyColl := collection('/db/Assignments/banksyForSVG/');
+declare variable $sourceDesc := $banksyColl//sourceDesc;
+declare variable $titles := $sourceDesc//title;
+declare variable $medium := $banksyColl//sourceDesc//medium/@type/string();
+declare variable $dates := $banksyColl//sourceDesc//date/@when/string();
+declare variable $years := $dates ! tokenize(.,'-')[1];
+declare variable $minYear := $years ! number() => min();
+declare variable $maxYear := $years ! number() => max();
+declare variable $difference := xs:integer($maxYear) - xs:integer($minYear);
+declare variable $x_spacer := 30;
+declare variable $y_spacer := 10;
+<svg width="{($difference * $x_spacer) + 100 }" height="500">
+   <g transform="translate(30, 400)">
+          <line x1="-5" y1="0" x2="{$difference * $x_spacer + 20}" y2="0" style="stroke:blue;stroke-width:2;"/>
+          <text x="-10" y="{-20*$y_spacer}" style="fill:navy; stroke-width: 2; writing-mode: tb; glyph-orientation-vertical:">Number of paintings</text>
+          <line x1="-5" y1="0" x2="-5" y2="{-100*$y_spacer}" style="stroke:blue;stroke-width:2;"/>
+          <text x="135" y="20" style="fill:navy; stroke-width: 2; writing-mode: tb; glyph-orientation-vertical:">Canvas</text>
+          <text x="40" y="20" style="fill:navy; stroke-width: 2; writing-mode: tb; glyph-orientation-vertical:">Spray Paint</text>
+          
+            {
+                let $distinctMediums := $medium => distinct-values() => sort()
+                let $sprayPaint := $medium[. = "spray_paint"]
+                let $countSprayPaint := $sprayPaint => count()
+                let $label := if ($countSprayPaint = 0) 
+                    then ""
+                    else $countSprayPaint
+                     let $canvas := $medium[. = "canvas"]
+                     let $countCanvas := $canvas => count()
+                     let $Clabel := if ($countCanvas = 0) 
+                                          then ""
+                                    else $countCanvas
+                     return
+                         <g>
+                             <rect x="{$x_spacer}" y="{$y_spacer*-33}" height="{$countSprayPaint*5}" width="20"style="fill: purple"/>
+                             <text x="{$x_spacer+35}" y="{$y_spacer*-20}" style="fill:navy; stroke-width: 2; text-anchor:start"> {$label}</text> 
+                             <rect x="{$x_spacer+100}" y="{$y_spacer*-20}" height="{$countCanvas*5}" width="20"style="fill: violet"/>
+                             <text x="{$x_spacer+135}" y="{$y_spacer*-15}" style="fill:navy; stroke-width: 2; text-anchor:start"> {$Clabel}</text> 
+                             
+                        </g>
+            }
+
+   </g> 
+</svg>

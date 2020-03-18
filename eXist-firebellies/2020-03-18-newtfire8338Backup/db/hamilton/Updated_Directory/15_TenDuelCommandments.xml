@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Ten Duel Commandments"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Ten Duel Commandments</title>
+            </head>
+            <div type="song">
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>One, two, three, four</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>FULL COMPANY</speaker>
+                    <l>Five, six, seven, eight, nine…</l>
+                </sp>
+
+                <sp who="#hamilton #burr #laurens #lee">
+                    <speaker>HAMILTON/BURR/LAURENS/LEE</speaker>
+                    <l><seg type="#ambiguous">It’s the Ten Duel Commandments</seg></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>FULL COMPANY</speaker>
+                    <l>It’s the Ten Duel Commandments</l>
+                    <l>Number one!</l>
+                </sp>
+
+                <sp who="#laurens">
+                    <speaker>LAURENS</speaker>
+                    <l>The challenge: demand satisfaction</l>
+                    <l>If they apologize, no need for further action</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number two!</l>
+                </sp>
+
+                <sp who="#laurens">
+                    <speaker>LAURENS</speaker>
+                    <l>If they don’t, grab a friend, that’s your second</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Your lieutenant when there’s reckoning to be reckoned</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number three!</l>
+                </sp>
+
+                <sp who="#lee">
+                    <speaker>LEE</speaker>
+                    <l>Have your seconds meet face to face</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Negotiate a peace…</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Or negotiate a time and place</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>This is commonplace, ‘specially ‘tween recruits</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Most disputes die, and no one shoots</l>
+                    <l>Number four!</l>
+                </sp>
+
+                <sp who="#laurens">
+                    <speaker>LAURENS</speaker>
+                    <l>If they don’t reach a peace, that’s alright</l>
+                    <l>Time to get some pistols and a doctor on site</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>You pay him in advance, you treat him with civility</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>You have him turn around so he can have deniability</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Five!</l>
+                </sp>
+
+                <sp who="#lee">
+                    <speaker>LEE</speaker>
+                    <l>Duel before the sun is in the sky</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Pick a place to die where it’s high and dry</l>
+                    <l>Number six!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Leave a note for your next of kin</l>
+                    <l>Tell ‘em where you been. Pray that hell or heaven lets you in</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Seven!</l>
+                </sp>
+
+                <sp who="#lee">
+                    <speaker>LEE</speaker>
+                    <l>Confess your sins. Ready for the moment</l>
+                    <l>Of adrenaline when you finally face your opponent</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number eight!</l>
+                </sp>
+
+                <sp who="#hamilton #burr #laurens #lee">
+                    <speaker>HAMILTON/BURR/LAURENS/LEE</speaker>
+                    <l>Your last chance to negotiate</l>
+                    <l>Send in your seconds, see if they can set the record straight…</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><persName ref="#hamilton">Alexander</persName></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#burr">Aaron Burr</persName>, sir</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Can we agree that duels are dumb and immature?</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Sure</l>
+                    <l><seg type="#fact">But your man has to answer for his words, <persName ref="#burr">Burr</persName></seg></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>With his life? We both know that’s absurd, sir</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Hang on, how many men died because <persName ref="#lee">Lee</persName> was
+                        inexperienced and ruinous?</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Okay, so we’re doin’ this</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Number nine!</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Look ‘em in the eye, aim no higher</l>
+                    <l>Summon all the courage you require</l>
+                    <l>Then count</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l>One two three four</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>FULL COMPANY</speaker>
+                    <l>Five six seven eight nine</l>
+                </sp>
+
+                <sp who="#hamilton #burr">
+                    <speaker>HAMILTON/BURR</speaker>
+                    <l>Number</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Ten paces!</l>
+                </sp>
+
+                <sp who="#hamilton #burr">
+                    <speaker>HAMILTON/BURR</speaker>
+                    <l>Fire!</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Ten Duel Commandments</head>
+                <event xml:id="event28" when="1778-12-23"> <label>John Laurens and Charles Lee Duel</label><desc>On December 23, 1778 John Laurens and Charles Lee have a duel.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

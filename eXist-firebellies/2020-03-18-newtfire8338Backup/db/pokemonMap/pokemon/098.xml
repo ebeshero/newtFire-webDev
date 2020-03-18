@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+     <dexNum num="098">098</dexNum>
+     <name>Krabby</name>
+     <typing type="Water">Water</typing>
+    </info>
+    
+    <locations>
+        <route num="6">route 6<lvl min="15" max="15"> level 15</lvl><rate perc="50"> encounter rate: 50%</rate></route>
+        <route num="11">route 11<lvl min="15" max="15"> level 15</lvl><rate perc="50"> encounter rate: 50%</rate></route>
+        <route num="12">route 12<lvl min="15" max="15"> level 15</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="13">route 13<lvl min="15" max="15"> level 15</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="17">route 17<lvl min="15" max="15"> level 15</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="18">route 18<lvl min="15" max="15"> level 15</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="24">route 24<lvl min="15" max="15"> level 15</lvl><rate perc="33"> encounter rate: 33%</rate></route>
+        <route num="25">route 25<lvl min="15" max="15"> level 15</lvl><rate perc="33"> encounter rate: 33%</rate></route>
+        <landmark n="Cerulean City">Cerulean City<lvl min="15" max="15"> level 15</lvl><rate perc="33"> encounter rate: 33%</rate></landmark>
+        <landmark n="Vermilion City">Vermilion City<lvl min="15" max="15"> level 15</lvl><rate perc="50"> encounter rate: 50%</rate></landmark>
+        <landmark n="Fuchsia City">Fuchsia City<lvl min="15" max="15"> level 15</lvl><rate perc="25"> encounter rate: 25%</rate></landmark>
+        <landmark n="Safari Zone">Safari Zone<lvl min="15" max="15"> level 15</lvl><rate perc="25"> encounter rate: 25%</rate></landmark>
+        <landmark n="Seafoam Islands">Seafoam Islands<lvl min="18" max="33"> level 28-33</lvl><rate perc="40"> encounter rate: 40%</rate></landmark>
+    </locations>
+    
+    </pokemon>

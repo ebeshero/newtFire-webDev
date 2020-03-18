@@ -1,0 +1,45 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare variable $hamilton := collection('/db/hamilton/');
+declare variable $actOne := collection('/db/hamilton/Act_One');
+declare variable $actTwo := collection('/db/hamilton/Act_Two');
+declare variable $speakers := 
+   if ($hamilton//sp[contains(@who, ' #')])
+   then $hamilton//sp/@who/tokenize(normalize-space(string()), ' ')
+   else $hamilton//sp/@who/normalize-space(string());
+(:ebb: Some of the speakers are listed as doubled, so we need to tokenize on white space if it's present.
+ : DISCUSS in context with normalize-space(), too. :)
+declare variable $distinctSpks := distinct-values($speakers);
+declare variable $ThisFileContent:=
+string-join(
+for $i in $distinctSpks
+(:THIS IS WRONG BECAUSE IT'S IMPRECISE! Sometimes a long name might contain the same letters as a shorter one: 
+ : let $treewalker := $hamilton//text[descendant::sp[contains(@who, '$i')] 
+ : When we run this code, it's actually generating a line of text without a $i in it, and jumps to the next value, because $i isn't being precisely aligned
+ :  WE CHANGED IT TO WHAT'S BELOW.:)
+let $treewalker := $hamilton//text[descendant::sp[@who/tokenize(string(), ' ') = $i]]
+(:  :let $iCount := count($treewalker//sp[contains(@who, $i)]) 
+ : ebb: This is the wrong level to take this count! Counts are for the whole collection. Move the count into the $itunes loop!:) 
+let $itunes := $treewalker//head/title
+
+for $it in $itunes
+let $treeWalkerTune := $treewalker[descendant::head/title = $it]
+let $iCount := count($treeWalkerTune//sp/@who[tokenize(string(), ' ') = $i])
+
+let $otherSpksInTune := $treeWalkerTune//sp/@who/tokenize(string(), ' ')[. ne $i]
+let $distOtherSpks := distinct-values($otherSpksInTune)
+(:ebb: Notice the quantity difference when we don't take distinct-values here. :)
+
+for $o in $distOtherSpks
+let $treeWalkerOths := $treeWalkerTune//sp/@who[tokenize(string(), ' ') = $o]
+let $oCount := count($treeWalkerOths)
+return 
+    
+concat(substring-after($i, '#')(:source node:), "&#x9;"(:tab character:), $iCount, "&#x9;",  $it(:shared interaction or edge:), 
+"&#x9;", substring-after($o, '#')(:target node:), "&#x9;", $oCount),  "&#10;");
+
+let $filename := "networkOutput.txt"
+let $doc-db-uri := xmldb:store("/db/classExampleQueries", $filename, $ThisFileContent)
+return $doc-db-uri
+(: Output at http://dxcvm05.psc.edu:8080/exist/rest/db/classExampleQueries/networkOutput.txt :)  
+

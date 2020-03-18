@@ -1,0 +1,25 @@
+xquery version "3.1";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
+declare variable $akira := doc("/db/akira/akira-tei.xml");
+declare variable $characterLines := $akira//tei:sp/@who => count();
+declare variable $tesuoLines :=
+    for $i in $akira
+    return $akira//tei:sp/@who[., "#tetsuo"]/string() => count();
+
+(:  I'm not sure how to finish this, but you get what I was trying to do :)
+
+declare variable $ThisFileContent := 
+<svg width="2000" height="3000">
+    <g transform="translate(20, 10)">
+    
+        <rect x = "100" y = "10" width = "200" height = "{$tesuoLines}" style = "fill:red"/>
+        
+        <line x1 = "25" y1 = "10" x2 = "25" y2 = "{$characterLines + 10}" style="stroke:blue;stroke-width:2"/>
+        <line x1 = "500" y1 = "{$characterLines + 10}" x2 = "25" y2 = "{$characterLines + 10}" style="stroke:blue;stroke-width:2"/> 
+        
+    </g>
+</svg>;
+
+$ThisFileContent

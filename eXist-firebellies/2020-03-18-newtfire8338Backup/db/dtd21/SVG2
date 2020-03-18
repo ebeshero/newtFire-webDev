@@ -1,0 +1,20 @@
+xquery version "3.1";
+declare variable $banksyColl := collection('/db/Assignments/banksyForSVG/');
+ (: declare more global variables to pull data from the Banks collection. :)
+  declare variable $timelineSpacer := 100;
+ declare variable $ThisFileContent := 
+<svg>
+   <g>
+      <line x1='10' y1="10" x2="10" y2="20" style="stroke:rgb(255,0,0);stroke-width:2"/>  
+      
+         {
+         <!--ebb: FLWOR statements will go here when we are ready to make a for-loop over each year value one by one, inside a pair of curly braces-->
+         }
+      
+   </g>
+</svg>;
+  for $date in $banksyColl (:2019-04-04 ebb: This for-loop is returning every total file in the collection. You can CALL it $date, but that doesn't mean it's going to return a date element or its @when attribute string. :)
+  let $year := tokenize($date,'[\-T:]')[1]
+  let $minYear := min($year)
+  let $maxYear := max($year)
+  return tokenize($date,'[\-T:]')[1]

@@ -1,0 +1,1165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema.rnc" type="application/relax-ng-compact-syntax"?><root>
+    <head>
+        <episode>DIVIDE AND CONQUER</episode>
+        <writer>David Slack</writer>
+        <director>Ciro Nieli</director>
+        <storyboard>Kalvin Lee, Rafael Rosado, Alan Wan</storyboard>
+        <animation>Dong Woo Animation Company, Ltd.</animation>
+        <source>https://teentitans.fandom.com/wiki/Final_Exam_(Transcript)</source>
+        <issueList>
+            <issueInfo none="y"/>
+        </issueList>
+    </head>
+    <characterList>
+        <charList type="recurring" id="Narrator">Narrator</charList>
+        <charList type="recurring" id="Headmistress" subtype="villain">Headmistress</charList>
+        <charList type="recurring" id="Slade" subtype="villain">Slade</charList>
+        <charList type="recurring" id="Cyborg" subtype="titan">Cyborg</charList>
+        <charList type="recurring" id="BeastBoy" subtype="titan">BeastBoy</charList>
+        <charList type="recurring" id="Raven" subtype="titan">Raven</charList>
+        <charList type="recurring" id="Starfire" subtype="titan">Starfire</charList>
+        <charList type="recurring" id="Robin" subtype="titan">Robin</charList>
+        <charList type="recurring" id="Gizmo" subtype="villain">Gizmo</charList>
+        <charList type="recurring" id="Mammoth" subtype="villain">Mammoth</charList>
+        <charList type="recurring" id="Jinx" subtype="villain">Jinx</charList>
+    </characterList>
+    <body>
+        <act n="0">
+            <title>Prologue</title>
+            <sd>Opening shot: a screenful of static, which resolves into a school crest. The field
+                is hexagonal, black-and-white checkered within a gold border. A large H is
+                superimposed on it in gold script; across the bottom is a white banner bearing the
+                letters "H.A.E.Y.P." Behind the crest, a square corridor can be seen, with yellow
+                walls, ceiling, and floor marked in a honeycomb pattern. A cool female voice begins
+                to narrate.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>The H.I.V.E. Academy for Extraordinary Young
+                People is proud to introduce...</sp>
+
+            <sd>A platform rises into view in front of the crest, carrying three young individuals
+                on it to block the crest. One is a very short, bald boy in a jumpsuit; a pair of
+                goggles is propped on his forehead, and assorted controls are mounted at chest and
+                waist level. Behind him is a very tall, beefy fellow with collar-length brown hair
+                and a small beard. His sleeveless shirt and pants are black, and studded gold bands
+                cross his chest and run around his shoulders. Off to the right of these two, our
+                left, is a slim girl in an off-the-shoulder black dress trimmed with blue ruffles,
+                black-and-blue striped stockings, and black platform boots with blue soles. Her
+                lavender hair is bound into two large horn-like tufts that stick up above her ears,
+                her catlike eyes are the same color, and her skin is an odd shade of bluish-pink. A
+                small pendant hangs from a black ribbon that encircles her throat.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>...this year's top graduates.</sp>
+
+            <sd>They leap from the platform; the big one and the girl drop out of the frame, and the
+                camera zooms in on the runt. The big one's motion reveals studded gold
+                wristbands.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>Gizmo, the boy genius whose intellect can
+                conquer any problem with an inventive solution.</sp>
+
+            <sd>During this line, cut to an extreme close-up of his chest control; he presses a
+                button, and the camera pulls back as a pair of large metal wings sprouts from his
+                back. He takes hold of the device at his waist, and the wings respond and carry him
+                into the air. Lasers pop out from the wall panels and open fire against him, but he
+                easily avoids all the shots and goes for another button. Now a small missile
+                launcher comes up between the wings and unleashes a salvo that destroys all the guns
+                with remarkable efficiency.</sd>
+
+            <sd>Gizmo lands on the platform he and his classmates originally stood on, then glides
+                away as two large robots step in from portals that open up in the walls. The girl
+                takes his place.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>Jinx, the enchanting sorceress whose powerful
+                hexes mean bad luck for her enemies.</sp>
+
+            <sd>During this line, she extends her arms to both sides and does a 360-degree twirl,
+                throwing off a wave of energy that causes a couple of wall panels to fall away. She
+                leaps high off the platform, and the panels crash down on the robots' heads. Two
+                others have moved in during this sequence and meet the same fate. She backflips down
+                the corridor a short dittance.</sd>
+
+            <sd>Three large laser cannons emerge from recessed panels in the floor, but the giant
+                drops into view and bends its the barrel of one of them as if it were a piece of
+                taffy.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>And Mammoth, the genetically enhanced giant
+                whose unstoppable strength speaks for itself.</sp>
+
+            <sd>During this line, he tears the cannon from its moorings and does an Olympic-style
+                hammer throw to sling it away. It skids across the floor and wrecks the other two.
+                Close-up of him, looking very pleased with himself; a robot looms up behind the
+                strongman and catches him in its huge hands. Gizmo jumps onto its back and attaches
+                a small unit. Close-up of this as it screws itself down, sending up a small puff of
+                smoke, then pull back. During the next line, Gizmo jumps free and sparks start to
+                fly from the head; he has hot-wired the thing to put it out of action.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>Well-organized, highly trained, and
+                combat-equipped...</sp>
+
+            <sd>Mammoth throws off the robot, which collapses, and Gizmo lands in a crouch near the
+                camera before running off again. As the narration continues, Jinx runs to Mammoth
+                and springs up just before reaching him; he catches one foot and boosts her into a
+                series of flips that carries her down the corridor.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>...these new H.I.V.E. agents are the perfect
+                fighting force.</sp>
+
+            <sd>She pronounces the acronym like the word "hype." Batteries of lasers emerge from
+                behind the walls and cut loose against Jinx, who continues her gymnastic advance.
+                Not one shot hits her, but the positioning of the turrets on opposite walls results
+                in their blowing each other to bits by the time she has reached the end of the
+                gauntlet. She lands with her back to the camera, surveying her triumph, then turns
+                to face front.</sd>
+
+            <sp><spkr ref="#Narrator">Narrator</spkr>And for the right price..<sd>Gizmo and Mammoth
+                    slide up on either side; pull back slightly.</sd>...this ideal team can be
+                yours.</sp>
+
+            <sd>The image gives way to static, which resolves into the H.I.V.E. Academy's crest
+                against a dark field. A gray-haired woman steps into view; severe dark outfit with a
+                hexagonal gold patch on one sleeve. This is the school's headmistress.</sd>
+
+            <sp><spkr ref="#Headmistress">Headmistress</spkr>Well, Mr. Slade?</sp>
+
+            <sd>Cut to just behind her. Slade's shadowy form stands behind a railing on a slightly
+                elevated platform across the area-the same industrial machine room seen in "Divide
+                and Conquer." Wisps of steam rise from the floor. This has been a sort of highlight
+                reel and sales pitch that was displayed on the monitor, and her words mark the first
+                time someone refers to Slade by name.</sd>
+
+            <sp><spkr ref="#Slade">Slade</spkr>Impressive. Truly. However, robots and obstacle
+                courses only prove so much.</sp>
+
+            <sd>Extreme close-up of his eye on the end of this, then pull back across the space to
+                give a good view of it for the first time. The monitor is one of several in a row,
+                and the platform on which the headmistress stands stops short of them in an
+                overhang. Slade's vantage point is at the other end. He leads her away from the
+                screen and deeper into the machinery; pan to follow.</sd>
+
+            <sp><spkr ref="#Slade">Slade</spkr>My plans demand operatives who can function in the
+                real world<sd>They step onto a catwalk.</sd>If your students are going to serve
+                me...</sp>
+
+            <sd>They reach a darkened area with two spotlights shining down from above. One pool of
+                light is occupied by the three graduates; she steps into the other while he sits in
+                the blackness.</sd>
+
+            <sp><spkr ref="#Slade">Slade</spkr>...they'll have to pass one final exam<sd>Extreme
+                    close-up of his eye.</sd>Destroy the Teen Titans<sd>Pull back to frame
+                all.</sd>and then we'll talk.</sp>
+
+            <sd>The light on the trio goes out, and the headmistress bows before hers is
+                extinguished as well. Only the outline of Slade's figure and his eye are visible
+                now. The remaining light source is switched off to black out the screen.</sd>
+
+
+            <cue>OPENING THEME</cue>
+
+        </act>
+        <act n="1">
+            <title>Act One</title>
+            <sd>Opening shot: the exterior of Titans Tower during the day.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from inside</sd>Aw, man, come on!</sp>
+
+            <sd>Cut to a slow pan across the kitchen. The sink and counter are piled high with dirty
+                dishes, and the floor is strewn with garbage.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from o.c.</sd>It's gotta be around here someplace!</sp>
+
+            <sd>Beast Boy, as a bloodhound, sniffs at some of the trash as a frustrated groan is
+                heard from Cyborg's direction.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from o.c.</sd>I don't believe this!</sp>
+
+            <sd>Pull back to frame the entire operations center, in total disarray. Beast Boy keeps
+                nosing around on the floor while Cyborg hoists the couch and shakes it in search of
+                whatever has been lost. Raven is reading a book at the kitchen table.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>How could you lose the remote</sp>
+
+            <sd>Beast Boy returns to human form.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>
+                <sd>rummaging</sd>What makes you so sure I lost it</sp>
+
+            <sd>They lean into each other's faces.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Uh...'cause you're you.</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Hey! Just because I lost that video
+                game--</sp>
+
+            <sd>Sight gag: a new shot swings into view showing both in "Super Deformed" style
+                against a red field. A thought balloon is above their heads; as Cyborg mentions each
+                of the next three items, it rolls by as if on a stock ticker, is marked with a red
+                X, and disappears. Raven also appears sitting on the couch.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>--And the toothpaste, and my football, and the
+                waffle iron-</sp>
+
+            <sd>Sight gag ends; close-up of Raven.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>
+                <sd>from o.c.</sd>Things disappear. How am I supposed to know where they go?</sp>
+
+            <sd>She lowers her book on this line to give the camera a good look at the annoyance in
+                her eyes. During the next one, a vein starts to throb in her temple.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from o.c.</sd>Well, how am I supposed to watch TV without a remote</sp>
+
+            <sd>Raven slams her book shut and stands up.</sd>
+
+            <sp><spkr ref="#Raven">Raven</spkr>
+                <sd>icily</sd>Simple. You just get up and change the channel.</sp>
+
+            <sd>The two squabbling boys give her and each other a very long and puzzled look.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Don't even joke like that</sp>
+
+            <sd>Back to Raven.</sd>
+
+            <sp><spkr ref="#Raven">Raven</spkr>I wasn't joking.</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from o.c.</sd>Good, 'cause it wasn't funny! Now either help us look for the
+                    remote<sd>She grimaces; angry spark by her head.</sd>or go back to your nasty
+                old book and--</sp>
+
+            <sp><spkr ref="#Raven">Raven</spkr>
+                <sd>over end of previous line, face flushing</sd>This is a pointless argument over a
+                useless device.</sp>
+
+            <sd>A big drop of sweat appears on her temple briefly as she says this. Her face returns
+                to its normal color as she walks o.c.</sd>
+
+            <sp><spkr ref="#Raven">Raven</spkr>
+                <sd>from o.c.</sd>You are wasting your energy and disrupting my concentration</sp>
+
+            <sd>The side door behind her opens to show Robin and Starfire.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>
+                <sd>from o.c.</sd>I'm telling you, I didn't lose it! You were the one watching TV
+                last!</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>
+                <sd>to Robin, over the previous line</sd>And that is the secret to traveling faster
+                than light.</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>
+                <sd>from o.c.</sd>So if you want to blame someone<sd>Starfire gasps; Robin
+                    stares.</sd>look in the mirror, buddy!</sp>
+
+            <sp><spkr ref="#Robin">Robin</spkr>
+                <sd>over the end of the previous line</sd>Whoa! Take it easy, Titans! Combat
+                practice is this afternoon!</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>We must mend your dispute by the sharing of
+                unhealthy junk foods. I shall fetch them</sp>
+
+            <sd>Both cross the room.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from o.c.</sd>I don't need food, what I need is a time machine, I didn't--</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Back me up here, Robin!! Have I ever lost
+                any--?</sp>
+
+            <sp><spkr ref="#Robin">Robin</spkr>
+                <sd>from o.c</sd>Okay! Okay</sp>
+
+            <sd>whistles</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>To stop him from taking the REMOTE!!!</sp>
+
+            <sp><spkr ref="#Robin">Robin</spkr>
+                <sd>from o.c</sd>Hey! Come on!! Settle down! ENOUGH!!!</sp>
+
+            <sd>Snap to black, accompanied by louder arguing from all but Starfire. The view
+                resolves into the inside of the refrigerator as she opens it to look in. There is a
+                jumble of half-eaten leftovers, all covered with a thick layer of blue mold; this
+                thing has not been cleaned out in who knows how long. Her perspective of the mess,
+                tilting down from top shelf to bottom. The growth on a wheel of cheese starts to
+                move and screech. Pull back out of the fridge; Starfire shrieks in alarm and throws
+                a starbolt, blowing up everything inside and splattering blue crud throughout the
+                operations center. Tilt down from the ceiling to four Titans who have just had the
+                living daylights scared out of them, not to mention a healthy dose of the mold
+                dripped on their heads.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>Maybe we should just go out for pizza.</sp>
+
+            <sd>Wipe to an overhead view of a pizza joint in the heart of Jump City. It is built at
+                the intersection of two streets at an acute angle, with a second-story patio that
+                takes advantage of this detail. The floor's coloring and the placement of tables
+                makes this entire affair look like a huge slice of pepperoni. Zoom in slowly to the
+                sound of arguing from four Titans, then cut to the group's table; all have cleaned
+                up from the fridge blowout. Beast Boy squats on his stool instead of sitting. When
+                the dispute over toppings finally stops, Raven speaks up; she is the only one who
+                did not take part in it.</sd>
+
+            <sp><spkr ref="#Raven">Raven</spkr>Can we please just order something?</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>As long as it's vegetarian.</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Come on, man, how can you deny me the all-meat
+                experience?</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>
+                <sd>offended</sd>Dude, I've been most of those animals!</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>I suggest a large pizza with pickles, bananas,
+                and mint frosting.</sp>
+
+            <sd>She beams at her suggestion, but Beast Boy is visibly repulsed by the combination,
+                and Cyborg and Raven think just as little of it, as we see when they slide into view
+                next to him. Robin leans over to her.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>Uh, Starfire? Not everything on the menu is a pizza
+                topping.</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Oh!</sp>
+
+            <sd>She blushes over the gaffe she has made. Cut to an overhead view of the table, seen
+                through a set of green lenses.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Double pepperoni!</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>I'm not eating meat!</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>There's no meat in pepperoni!</sp>
+
+            <sd>The argument begins anew as crosshairs appear on each Titan's head. At the bottom of
+                the view, the words "INITIATE MISSION" flash red. Gizmo's voice is heard; this is
+                his perspective, spying on the group.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Gizmo to Jinx.</sp>
+
+            <sd>Cut to her, standing next to a parked bus and with a hand cupped to her ear: she is
+                receiving his transmission on a hidden radio.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>over the radio</sd>Begin Phase One.</sp>
+
+            <sd>She carelessly tosses a spell at the bus, causing it to start rolling downhill. Back
+                to the pizza joint; as the vehicle's horn blares from down the street, the Titans
+                stand up from the table. The sound of a baby crying from ground level elicits a
+                shocked gasp from Beast Boy. Cut to the source, a carriage in the crosswalk, and
+                tilt up to show the bus on a collision course.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>Titans! Go!</sp>
+
+            <sd>They immediately spring into action while the bus keeps bearing down on the
+                crosswalk. Starfire pushes the carriage out of the way, and Cyborg and Raven plant
+                themselves in the vehicle's path. When the bus reaches him, he pushes back against
+                the front fender to slow it down. Close-up of his feet grinding against the
+                pavement, then of Raven as she casts a spell, then of the bus' gearshift lever. It
+                is in neutral, but under her influence it slides into park. From here, cut to a
+                close-up of one tire, which stops spinning and goes into a tearing skid, then pull
+                back. Cyborg has finally brought the thing to a stop with only a foot or two to
+                spare between him and Raven. The doors have come open, revealing an empty driver's
+                seat. He straightens himself up.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Um...don't buses normally have drivers?</sp>
+
+            <sd>Pull back. Beast Boy and Starfire look on, while Robin is peering into the carriage,
+                whose back is to the camera. He too straightens up.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>And don't baby carriages normally have babies?</sp>
+
+            <sd>The two Titans near him look in as well. His perspective: he is holding a teddy bear
+                that had been taking the place of the typical occupant. Its eyes are green, the same
+                color as the lenses of Gizmo's goggles, and his voice is heard next. This was the
+                source of the crying as well.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>over a hidden speaker</sd>Are you pit-sniffers normally this stupid?</sp>
+
+            <sd>The bear's head swivels slightly toward the camera on the end of this, and the eyes
+                suddenly glow and fire laser beams. Pull back; Robin, Beast Boy, and Starfire are
+                projected screaming through the air as a result of the hit, with smoke trailing
+                behind them. Tilt down to Raven and Cyborg, still standing in front of the bus,
+                which suddenly seems to tilt back onto its rear wheels of its own volition. They
+                look up, completely flabbergasted as the shadow falls over them, and the camera
+                pulls back to show the reason for the spontaneous wheelie. Mammoth has seized the
+                rear bumper and levered the mode of mass transit into the air, and he brings it down
+                on top of the two. As the dust clears, he walks forward and brushes dust from his
+                hands, and Gizmo's nasty laughter is heard. He and Jinx step into view just in front
+                of the camera, which has backed up to ground level.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>from o.c.</sd>That was too easy<sd>Cut to these two.</sd>What a buncha
+                cludge-heads. You guys want to get pizza?</sp>
+
+            <sd>Quick pan to Robin, Beast Boy, and Starfire, who have ended up in an alley, on the
+                next line. Beast Boy is in a trash can, with a banana peel on his head.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>This isn't over!</sp>
+
+            <sd>He dusts himself off a bit. Back to Mammoth and the bus, which, without warning,
+                gets blasted to one side. Cyborg's sonic cannon, protruding from a hole in the
+                ground, is revealed as the driving force.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>standing up from the hole</sd>We're just getting started!</sp>
+
+            <sd>A bird-shaped shadow looms up behind him. It resolves into Raven as she brings her
+                arms back in and wraps her cloak around herself.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Who are these guys<sd>A question mark appears
+                    by his head.</sd>And what's a cludge-head?</sp>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>We are the H.I.V.E.!</sp>
+
+            <sp><spkr ref="#Mammoth">Mammoth</spkr>Your worst nightmare!</sp>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>And this is Attack Pattern Alpha!</sp>
+
+            <sd>She and Mammoth scramble, and a jet pack on Gizmo's back carries him into the air.
+                He fires a volley of laser shots at the alley, chipping loose large hunks of masonry
+                so that they fall on the three Titans. Cut to Raven and Jinx in close quarters
+                spell-to-spell combat, then pan to the grappling Cyborg and Mammoth. The H.I.V.E.
+                alumnus is pushed back down the street at Robin and company emerge from the
+                rockslide Gizmo set off.</sd>
+
+            <sp><spkr ref="#Mammoth">Mammoth</spkr>What do you call an idiot with a rocket on his
+                back?</sp>
+
+            <sd>Gizmo zooms over and sticks one between Cyborg's shoulder blades.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Huh?</sp>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Doomed!</sp>
+
+            <sd>He gets clear and touches a control; igniting the rocket and sending Cyborg veering
+                crazily over the buildings. Robin, Beast Boy, and Starfire watch from the alley as
+                his yells of panic drift down to them. She gasps.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Cyborg!</sp>
+
+            <sd>She takes off to catch up with him, but a sudden change in direction throws her off.
+                Tilt down from the sky to Raven; Jinx comes at her with a jumping spin kick, but she
+                ducks away and gets behind the funny-haired sorceress. Dodging two more strikes,
+                Raven counters with a backhand. Close-up of Jinx as she blocks it.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>You fight like a boy</sp>
+
+            <sd>Tilt up; Gizmo is overhead, now balanced on four tall spider-like legs.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>And you're gonna croak like a frog!</sp>
+
+            <sd>The contraption fires a blast that hurls her down the street and squarely into the
+                charging Robin. Beast Boy passes them both; close-up of him.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Hah!</sp>
+
+            <sd>He turns into an elephant ad continues his rush, but stops short suddenly at the
+                sound of grunting from Mammoth. Pull back to show that the big lummox has lifted him
+                clean off his feet; his fellow graduates are watching.</sd>
+
+            <sp><spkr ref="#Mammoth">Mammoth</spkr>Mammoth's gonna make you extinct</sp>
+
+            <sd>Back to Robin and Raven, on the ground.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>
+                <sd>getting up and charging</sd>Beast Boy! Hang on!</sp>
+
+            <sd>Mammoth throws the green elephant straight up into the air and hits it with a
+                jumping punch on the way down. Robin suddenly finds himself directly in the path of
+                his teammate, who changes back to human form just before slamming into him. They
+                skid to a stop near Raven.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Is it me, or are we getting our butts
+                kicked</sp>
+
+            <sd>The others stand up.</sd>
+
+            <sp><spkr ref="#Robin #Raven">Robin and Raven</spkr>
+                <sd>in unison</sd>It's just you.</sp>
+
+            <sp><spkr ref="#Robin">Robin</spkr>Listen up, team. I have a plan.</sp>
+
+            <sd>Two of Gizmo's shots flash into view and send Raven and Beast Boy flying. Robin
+                manages to get out of the way; they end up almost a block away.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>from o.c.</sd>Gee, scrum-buffer<sd>Cut to the H.I.V.E. team; he is back on the
+                    ground.</sd>Sure hope your fancy plan includes getting fried!</sp>
+
+            <sd>The weapon that fired those shots is poking over his shoulder. It levels itself at
+                Robin, who stands his ground.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>You'll just have to find out the hard way.</sp>
+
+            <sd>He takes up a fighting stance, holding one hand out with its back to the trio, and
+                flicks the fingers toward himself: "bring it on." The shoulder-mounted laser zeroes
+                in and fires a shot, and the camera cuts to the point of impact on the street and
+                starts to pull back quickly. A long crack opens in the asphalt ahead of the strike;
+                Jinx leaps backward into view, landing on her knees, and throws a spell that breaks
+                the fissure wider. Tilt up from her to Mammoth, who leaps in with a mighty yell and
+                brings all his weight down on the fault line. Pull back to an overhead view to
+                reveal that the net effect of this three-way combo has been to open a very wide
+                chasm, which runs straight down the middle of the road toward Robin. Cut to this; he
+                tumbles screaming into the darkness beneath Jump City and is lost to our eyes.</sd>
+
+            <sd>Shift to just beneath the road surface, looking out past the edge of the massive
+                fracture zone. Raven and Beast Boy arrive at the scene, and the camera dissolves to
+                a longer shot of them while pulling back slowly to the surface of the murky tide
+                that flows down here. The Titans' leader is nowhere to be seen in the murky tide.
+                Close-up of the two.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Robin!</sp>
+
+            <sd>Fade to black.</sd>
+
+        </act>
+        <act n="2">
+            <title>Act Two</title>
+            <sd>Opening shot: the exterior of the Tower. A door is heard moving; inside, on the
+                ground floor, the main entrance is opening. Tilt down from the upper threshold to
+                show two figures entering, silhouetted against the sunlight; Raven and Beast Boy. He
+                is limping somewhat and leaning against her for support. Cut to them and pan to
+                follow their movement as the door is heard closing. The entrance hall has armchairs
+                along both walls.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>That didn't just happen<sd>She helps him into
+                    a chair; he rubs his leg.</sd>Tell me that didn't just happen.</sp>
+
+            <sp><spkr ref="#Raven">Raven</spkr>It did happen. We cannot change the truth, no matter
+                how much we dislike it.</sp>
+
+            <sd>She holds her hands near the injured leg; a brief glow of healing energy envelops
+                them.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>
+                <sd>smiling</sd>Who knew we had a doctor in the house? Thanks.</sp>
+
+            <sp><spkr ref="#Raven">Raven</spkr>No problem.</sp>
+
+            <sd>The door has closed, but it now opens again, and the two trade a very nervous look
+                before Cyborg and Starfire walk in with ear-to-ear smiles. He no longer has Gizmo's
+                rocket stuck to his back. The door closes on his next line.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Maybe y'all should call me Flyborg. I was halfway
+                to Gotham City before Star zapped that thing off my back. So what'd I miss?</sp>
+
+            <sd>Raven cannot meet his eyes; neither can Beast Boy when the camera pans to him.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Tell me how we kicked their butts. Come on, I gotta
+                have the play-by-play.</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Where is Robin</sp>
+
+            <sd>Cut to Beast Boy.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Um, Star? We're not sure.</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>
+                <sd>from o.c.</sd>Not sure<sd>Back to her.</sd>Why are you not--?</sp>
+
+            <sp><spkr ref="#Raven">Raven</spkr>We searched everywhere<sd>Cut to her waist
+                    level.</sd>And all we found was this.</sp>
+
+            <sd>She produces his utility belt from beneath her cloak. Starfire gasps in horror;
+                Cyborg groans and claps both hands to his forehead.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>I shoulda been there. I let that kid sneak up on me
+                and, what was I--? It was a trap, and I-- I shoulda known.</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>I do not understand<sd>Cut to Raven and Beast
+                    Boy; she continues o.c.</sd>How could you not find him<sd>Pull back; she looks
+                    straight at Raven.</sd>People do not just vanish! He has to be someplace, so go
+                there and look!</sp>
+
+            <sd>Beast Boy puts himself between the two girls to keep things from getting ugly.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Easy, Star. Come on. This is Robin we're
+                talking about. I'm sure he's fine. He'll probably turn up any second.</sp>
+
+            <sd>Pull back to frame the entire group; the door mechanism kicks into gear once
+                more.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Awesome timing.</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Robin!</sp>
+
+            <sd>She flies toward the door; cut to it as she lands there. It has not yet opened, and
+                she walks toward the threshold to see who has arrived. A moment later, the whole
+                entrance disappears in a mighty crash that throws her backward. The dust clears to
+                show the H.I.V.E. team walking in; Gizmo is back up on his mechanical spider
+                legs.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Oh, no</sp>
+
+            <sd>Mammoth cracks his knuckles.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>Oh, yes</sp>
+
+            <sd>The four Titans get ready to fight.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>You guys got lucky last time, but you're in our
+                house now</sp>
+
+            <sd>The trio advances.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Yeah, nice place. We'll take it!</sp>
+
+            <sd>By now, they have moved close enough to the camera to frame Jinx's face in extreme
+                close-up. From here, cut to a corner of the hall, which is promptly lost under the
+                glare and dust cloud of a large o.c. explosion. When the view clears, Raven is
+                levitating chairs and sending them in the H.I.V.E.'s direction, while Starfire
+                tosses off some starbolts from overhead. Beast Boy tumbles into view and clambers
+                away to make room for Cyborg; tilt up to his head level as he backs up again, firing
+                his cannon.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Split up!</sp>
+
+            <sd>Raven flies to a landing on the stairs and, after Starfire passes her, projects a
+                couple of nearby fire extinguishers toward Mammoth at the bottom. He merely swats
+                them away and charges. Cut to a hall, where Beast Boy runs into view from around a
+                corner and dodges the collapse of several wall panels. Emerging fro the dust and
+                debris as a bobcat, he runs o.c; when the view clears, Jinx steps unhurriedly after
+                him, she caused the panels to fall.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>Here, kitty, kitty. What's the matter<sd>More panels
+                    blow out.</sd>Afraid of a little bad luck?</sp>
+
+            <sd>Cut to inside the gym. Raven and Starfire burst through the closed doors and slam
+                them shut again. A starbolt is fired against the frame and traced along the doors'
+                outer edges to weld them closed. The two girls then back up a bit and trade a very
+                nervous look, wondering whether the barricade will hold. It proves to be a moot
+                point when the wall behind them blows out, throwing them to the floor. They look
+                back toward it and find Mammoth's head protruding from a fresh hole: he just
+                delivered a mother of a headbutt.</sd>
+
+            <sp><spkr ref="#Mammoth">Mammoth</spkr>Hello, ladies.</sp>
+
+            <sd>The stairs again. Cyborg retreats upward as one of Gizmo's long metal legs swings
+                into view near the camera. Cut to a hall in which the runt's spidery shadow advances
+                into view against the far wall, followed by the runt himself. He turns and
+                approaches the camera; cut to inside a door, which opens to admit him. Cyborg peeks
+                out from a corner across the hall, nips over, and peers in carefully after Gizmo.
+                Pull back; he steps in boldly. Except for the light spilling from the hall, the
+                place is completely dark. The blackness becomes total when the door slides shut
+                without warning.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Hey!</sp>
+
+            <sd>A wall of TV screens comes to life, every one showing a close-up of Gizmo's grinning
+                visage.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>from all screens</sd>So, Tin Man, you got a heart under all that outdated
+                crud-ware?</sp>
+
+            <sd>He turns away, but a single giant screen, also showing Gizmo, comes on next to
+                him.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Not telling<sd>Pull back to frame them all.</sd>
+                Guess I'll have to take you apart and find out!</sp>
+
+            <sd>Tilt up to the ceiling on the end of this. The whiz kid's spider legs carry him into
+                the light from those screens and lower him steadily toward Cyborg, who can only
+                stare in complete shock. Cut to yet another hall; Beast Boy, back in human form,
+                races around the corner and into view. Seeing no one behind him, he stops to catch
+                his breath.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Lost her.</sp>
+
+            <sd>He is, of course, referring to Jinx, and he has spoken too soon. A couple of her
+                spells pass just over his head, and the camera tilts up to show them hitting the
+                ceiling there. A panel swings loose and cracks him dead in the face. His head
+                rattles on his neck for a moment before he collapses; she walks up behind him.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>This just isn't your lucky day.</sp>
+
+            <sd>He sits rubbing his head for a second before transforming into a tyrannosaurus rex
+                and roaring with enough force to shake the entire building. Jinx does a few
+                backflips to get out of range, then stops and fixes a glowing stare on him. Around
+                the green reptile, a ring of pink fire flares up briefly and floats toward his head
+                before disappearing. There is a loud crackling from the floor, followed by the
+                collapse of the section on which Beast Boy is standing due to her hex; he drops from
+                sight. Cut to below floor level, the camera pointing up out of the hole, as she
+                walks up to it and smiles.</sd>
+
+            <sd>Now we see a storage area of the Tower, with a large circular hatchway in the back
+                wall. This is smashed off its hinges by Cyborg, who emerges into this place
+                unscathed. He is not alone; however; Gizmo comes out of the dust clouds and moves in
+                on him. Cyborg steadily backs up before the advance; one of the metal legs swings at
+                him, but he catches the end in both hands.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Gotcha!</sp>
+
+            <sd>Gizmo just grins and swings another leg. Cyborg shifts his grip to free up one hand
+                and catch this one as well. A good strong wrenching motion throws the little jerk
+                off balance and sends him to the floor; when he hits, sparks fly from the central
+                unit on his back. He is quickly yanked free of the legs and held aloft by the
+                chuckling Titan. The unit is still on his back, but it is soon pulled off.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Let me go, you scuzz-munching zit!</sp>
+
+            <sd>During this line, Cyborg puts him down so he can run away and then crushes the
+                device. The big guy tosses the remains aside like a candy wrapper. Gizmo runs off
+                among the crates and boxes; now Cyborg walks after him at a leisurely pace.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>How you gonna fight me without your tech?</sp>
+
+            <sd>A small, shadowy figure passes in front of him, and he goes after it. Close-up of
+                Gizmo, peeking out from behind a panel; he gasps as it is lifted away. Cut to a very
+                pleased Cyborg, who suddenly looks down with surprise at the sound of a crunch.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Huh?</sp>
+
+            <sd>Cut to floor level. His foot has come down on a flashlight-like unit and damaged it
+                somewhat. Looking up again, he sees Gizmo's image grin and then flicker out; it was
+                merely a hologram projected by that unit. Cyborg backs cautiously away; the real
+                Gizmo is perched on a piece of equipment behind him, and he jumps down onto the back
+                and pulls out a tool. Sparks fly.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Yo, what are you--?</sp>
+
+            <sd>Close-up of his back. The gadget genius pops open a panel and goes to work on the
+                circuitry.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>strained</sd>Get out of my systems! Nobody hacks my systems!</sp>
+
+            <sd>He runs back and forth, clearly against his will due to the hotwiring, then stops as
+                his limbs start to flail randomly. His right arm is raised.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Ooh, ejector arm. Cool!</sp>
+
+            <sd>He makes it pop off-hand, forearm, and half the upper arm. Close-up: it rolls
+                uselessly away across the floor. Tilt up to the shadows of the two combatants
+                projected against the far wall.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from o.c.</sd>My arm!</sp>
+
+            <sd>Cut to the exterior of the Tower, which shakes and bends as the fight inside
+                continues. It is now later in the day.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from inside</sd>Get off! Get off me! Stop!</sp>
+
+            <sd>He flies screaming off the roof as if shot from a cannon, and the camera pulls back
+                a distance as he comes down in the middle of Jump City Bay. Another set of yells and
+                three more splashes mark the forcible eviction of Beast Boy, Raven, and Starfire.
+                Back to the long shot of the Tower and zoom in; the H.I.V.E. team can be seen
+                looking out from the top-floor window of the operations center. Zoom in and cut to
+                them.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Have a nice afterlife, you snot-eating losers!</sp>
+
+            <sd>Jinx casts a spell; cut to the Tower exterior and tilt down to the water level as it
+                radiates over the island. The hex stirs up a huge tidal wave that leaves the
+                foursome too scared to move as its shadow falls over them. Down comes the wall of
+                water, and back goes the camera to the H.I.V.E. operatives, who smile smugly and
+                walk away.</sd>
+
+            <sd>Dissolve to the sky and tilt down to the bridge across the bay. Two seagulls are
+                perched on pilings near the camera. The next ten lines, all delivered in voice over,
+                echo slightly.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>That didn't just happen. Tell me that didn't
+                just happen.</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Get out of my systems<sd>The seagulls fly
+                    away.</sd>Get off me.</sp>
+
+            <sd>Dissolve to a close-up of a soda can washing up on the shore. Now the spoken words
+                start to overlap.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Robin. Where is Robin? I do not
+                understand.</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Gotta go out for the others</sp>
+
+            <sd>Long shot of the Tower and the bridge.</sd>
+
+            <sp><spkr ref="#Raven">Raven</spkr>We searched everywhere</sp>
+
+            <sd>Tilt down slowly to the shore.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>How could you not find him?</sp>
+
+            <sp><spkr ref="#Raven">Raven</spkr>All we found was this</sp>
+
+            <sd>Cyborg makes his way up the slope.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>People do not just vanish.</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Oh, no.</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>I shoulda been there. I shoulda known.</sp>
+
+            <sd>Pull back from him to put the other three Titans in view as they approach.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>So, uh...who else never wants to go surfing
+                again?</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>really annoyed</sd>Not now, man.</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Hey, I was just trying to--</sp>
+
+            <sd>Raven puts a hand on his shoulder to cut him off. Cyborg extends a small acetylene
+                torch from his left forefinger. The panel on his thigh opens, revealing a plethora
+                of sparks and short circuits. Pull back to behind him; Starfire approaches as he
+                bends down to the self-repair work.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Perhaps I could be of some assistance.</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>I got it.</sp>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>But you are so damaged and--</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>rounding on her; she gasps</sd>I got it!</sp>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Hey! She only wanted to help! What is your
+                problem?</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>What do you think<sd>Long shot of them and the
+                    Tower.</sd>We got kicked out of our house, a pint-size Poindexter took me for a
+                joyride, and in case you haven't noticed, I just became left-handed!</sp>
+
+            <sp><spkr ref="#Raven">Raven</spkr>Enough! We need to control our emotions.</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Or what? Our bad vibes will keep you from
+                meditating</sp>
+
+            <sd>Cut to Starfire.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>I wish Robin were here.</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>from o.c.</sd>Well, he's not<sd>Pull back to frame them all.</sd>Don't you guys
+                get it? They won, we lost. IT"S OVER!!</sp>
+
+            <sd>Cut to a patch of water and pan slowly to the shore. The four heroes stand slumped
+                in defeat.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Then...the Teen Titans are finished?</sp>
+
+            <sp><spkr ref="#Robin">Robin</spkr>
+                <sd>from o.c.</sd>Not yet.</sp>
+
+            <sd>His voice draws four very surprised glances over four assorted pairs of shoulders.
+                Pan quickly in that direction to show him standing in front of some bushes; arms
+                crossed, confident smile, cape waving in the breeze. Except for his missing belt,
+                everything is in proper order. Dissolve to a close-up of his chest and tilt up to
+                his face.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>Not if I can help it.</sp>
+
+            <sd>Fade to black.</sd>
+
+        </act>
+        <act n="3">
+            <title>Act Three</title>
+            <sd>Opening shot: the exterior of the Tower that night. The new occupants have started
+                extensive renovations to the place, as follows. One, the vertical bar of the T has
+                been extended. Two, the lights in one half of the crossbar top floor have been put
+                out. Three, a second vertical portion has been built to join with the half that is
+                still lit; it reaches the same height as the central extension. The entire effect is
+                to make the lighted Tower portions and new construction look like a giant H for
+                H.I.V.E., and the honeycomb pattern has been applied to the add-ons.</sd>
+
+            <sd>Zoom in on the Tower, then cut to inside. Gizmo's hands reach into view, thumbs and
+                forefingers extended to make a box in which he is framing a patch of blank wall.
+                This is his perspective. Two small robots whiz into view, carrying Cyborg's detached
+                arm-mounted as if it were a stuffed fish, between them, and follow his instructions
+                as they hang it up.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Higher...a little to the left...a little
+                    more...and..<sd>take his hands down and gives a thumbs-up</sd>...perfect!</sp>
+
+            <sd>Pull back across the room and down to ground level to put him in view. The arm is
+                mounted high on the wall.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>walking away</sd>Slade's gonna have kittens when he hears we whipped the Titans
+                and took their stinking Tower!</sp>
+
+            <sd>On the end of this, cut to the kitchen as he passes it. Mammoth looks in the fridge,
+                while Jinx comes down the stairs. Close-up of her; she has donned Robin's belt,
+                which sits askew on her hips similar to the way Raven wears hers, and has one of the
+                latter's spare cloaks over her arm.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>Not to mention Robin's favorite fashion
+                    statement<sd>She eyes the cloak and sighs with contempt.</sd>But that's the only
+                thing fashionable around here</sp>
+
+            <sd>Pull back to put Mammoth in view.</sd>
+
+            <sp><spkr ref="#Mammoth">Mammoth</spkr>Tell me about it<sd>He pulls a moldy hamburger
+                    from the fridge.</sd>Hmph. All their food is way out of date.</sp>
+
+            <sd>This does not stop him from downing the burger in one gulp.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>from o.c.</sd>You think that stuff's rotten<sd>Cut to him in the operations
+                    center; he holds up a CD.</sd>Wait 'til you see their music<sd>tossing it aside,
+                    then another</sd>Crud...snot...</sp>
+
+            <sd>Dissolve to the mounted arm and zoom in slowly, then dissolve to an extreme close-up
+                of the middle finger and keep zooming in.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>from o.c., sighing</sd>...mega-crud...snot...</sp>
+
+            <sd>The fingertip pulls loose of the hand, remaining connected to it by two thin jointed
+                armatures. It swivels to point its open and at us and reveals a tiny camera lens
+                inside. A brief change in focus, and it turns to point elsewhere. Camera eye: it is
+                zooming in on Jinx, who has put on Raven's cloak.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>Does she have anything that's not blue?</sp>
+
+            <sd>Pan to Mammoth, now gorging himself on the spoiled food in the fridge, then move
+                quickly to Gizmo at the CD rack in the operations center. The ones he hated are
+                strewn about the floor behind him. The tiny camera roves on, stopping at one of the
+                computer consoles.</sd>
+
+            <sd>Normal view: Jinx inspecting herself with a hand mirror. The arm scuttles into view,
+                walking on its fingers with the camera still active, and turns here and there to
+                scope out the place. Finally, it moves toward us; cut to an extreme close-up of
+                Mammoth as he eagerly lifts a moldy chicken drumstick to his mouth and licks it. The
+                arm makes is way along a ledge on the far side of the kitchen while he eats the meat
+                off the bone.</sd>
+
+            <sd>Back to Gizmo, who has yet another CD in hand.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>throwing it and the next one away</sd>Ugh. Crud...snot...</sp>
+
+            <sd>The arm moves along the ledge behind him and is not noticed. It stops near one of
+                the consoles and points its camera around the area before jumping down into the
+                seat. Close-up of it, then pull back; thin tentacles fly out from the joint where
+                the limb connected to the stump of Cyborg's natural arm. They press several keys,
+                and the view cuts to an overhead shot of the keyboard as they go to work and the
+                screen lights up with a schematic of the Tower. Piece by piece, the diagram goes
+                red. When it has all turned this color, the screen winks out and alarms and buzzers
+                start to sound, accompanied by red flashing lights throughout the operations center.
+                The security systems have been triggered.</sd>
+
+            <sd>Jinx gasps and throws the cloak aside, and Mammoth stands up from the fridge. All
+                the cabinet doors in the kitchen start opening and closing at random. Next, Gizmo
+                stands up from the CD rack; without warning, one disc after another is ejected past
+                him at high speed.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Hey!</sp>
+
+            <sd>This is the only intelligible word he gets out before trailing off into surprised
+                yells and losing his balance to tumble on the floor. He slides backward as the rack
+                continues its impression of a skeet-shooting target launcher.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>What the hairball?</sp>
+
+            <sd>The chair of the nearest console swivels to give him a good look at the arm
+                occupying it; he cries out in surprise and fear. The tentacles have retracted, but
+                now, they shoot forth again and wrap around his arms and legs. The bionic limb jumps
+                down and speeds across the floor, dragging one very surprised pipsqueak, and pops a
+                couple of small jet thrusters out from the forearm. These ignite and carry it into
+                the air; the hand balls into a fist as the thing aims itself toward the ceiling and
+                carries Gizmo up with it.</sd>
+
+            <sd>Long shot of a ceiling air vent. The arm closes in on it and punches through; cut to
+                inside the ductwork as it races along and takes Gizmo for one very wild ride and out
+                of sight around a bend. Back in the kitchen, a large shadowy hand reaches down
+                behind Jinx and seizes her. She has time for one startled cry before it recedes into
+                the ceiling and takes her with it; the sort of thing only Raven could do. The big
+                lug is left standing by himself; the side door opens on its own, and a starbolt
+                rockets into view from the left side of the screen to knock him through it. Starfire
+                has made it into the Tower. The door closes.</sd>
+
+            <sd>Cut to the exterior of the Tower, at roof level, and zoom in before dissolving to
+                the surface. A large black raven emerges from the surface and rises o.c., leaving
+                Jinx there to drop to her knees. We have just witnessed Raven's "soul-self" at work;
+                a projection that can carry individuals from one place to another. Behind Jinx,
+                Cyborg's arm bursts out of a vent pipe and carries the screaming Gizmo higher and
+                higher before veering back toward his classmate. Zoom in to an extreme close-up of
+                her face as she gasps in shock and her eyes widen-just before she is hit head-on and
+                both roll halfway across the roof. Having released Gizmo, the arm flies away, and
+                the closed door of the stairs or elevator leading up here slide open. A green flash
+                of a starbolt plays across the screen, and Mammoth is blasted out onto the roof. He
+                ends up next to the other two H.I.V.E. agents.</sd>
+
+            <sd>Close-up of Robin's upraised hand; his belt lands neatly in it.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>
+                <sd>from o.c.</sd>Sorry to interrupt the victory celebration<sd>Cut to his waist
+                    level; he fastens it.</sd>But like I said..<sd>Head level.</sd>...this isn't
+                over.</sp>
+
+            <sd>Pull back. Cyborg is there, reattaching his arm, and the other three Titans soon
+                arrive.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>It's just getting started</sp>
+
+            <sd>The trio stands up.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>Attack Pattern Alpha!</sp>
+
+            <sd>Gizmo and Mammoth scatter while she shouts and throws a spell. The Titans scramble
+                to avoid it; when it hits the rooftop, a panel swells and explodes. Beast Boy comes
+                down from his jump only to find Mammoth coming straight at him. He jumps away again
+                and turns into a falcon as the giant slams his fist down on the roof and sends a
+                shock wave toward Cyborg. Jinx lands behind the latter and vaults high over his
+                shoulders, hurling a spell down at him as she sails through the air. It knocks out
+                the base of a water tank and causes the while thing to topple toward Cyborg, who
+                gets out of the way just in time before a second tank collapses nearby.</sd>
+
+            <sd>Cut to Starfire in midair, throwing a few Tamaranean fastballs, then to Jinx as she
+                nimbly dodges them and ducks out of sight behind part of the new construction.
+                Starfire flies in after her. Cyborg, meanwhile, looks around himself a bit. All
+                clear, but that changes in an instant when Gizmo jumps down from the fallen water
+                tanks and lands on his back.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Hey, Robo-Wimp<sd>He pulls out his tool.</sd>Feel
+                like getting hacked?</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Nope. How 'bout you? Robin! Now!</sp>
+
+            <sd>Cut to Robin in mid-leap; he throws a small device, and the camera follows it over
+                to Cyborg and Gizmo. It attaches itself to the machinery on the latter's back, and
+                sparks fly as he yells in pain and frustration. Long shot: Robin drops back to the
+                roof.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>
+                <sd>runs around, trying to pull the thing off</sd>Cut it out! It's gonna crash my
+                whole system<sd>He rips off his shoulder-mounted laser.</sd>Get it off me! Get it
+                off me!</sp>
+
+            <sd>Robin's device triggers the jet pack, carrying him off the roof. Jinx runs like mad
+                to avoid getting fried by Starfire's bombardment.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Beast Boy! Go!</sp>
+
+            <sd>Beast Boy is back in human form and crouching on an overhead girder to watch Jinx.
+                Flipping Starfire a hand sign to acknowledge, he dives from his perch and transforms
+                into a monkey to come down squarely on the face of the fleeing girl. She has made
+                her way into a framework of pipes. Unable to see, she fires spells in all directions
+                in an attempt to get him off; finally, she gets all ten fingers into the game, yanks
+                him away, and throws him across the roof. He reverts to human form before touching
+                down.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>Your luck just ran out!</sp>
+
+            <sd>Getting a running start, he again becomes a falcon and flies into the open sky
+                Close-up of a very puzzled Jinx.</sd>
+
+            <sp><spkr ref="#Jinx">Jinx</spkr>Huh?</sp>
+
+            <sd>Creaks and groans from the o.c. pipework draw her attention; cut to a view of the
+                overhead lines from the ground and pan to follow them. One after another, the joints
+                start to pop, having been hit by the spells she was casting every which way. Tilt
+                down to ground level just in time to see one pipe burst and start spewing water and
+                steam. The sound of a nervous little shudder is she can manage as more lines rupture
+                and collapse around her.</sd>
+
+            <sd>From here, cut to Mammoth, running like sixty, and pull back to show him advancing
+                on Raven. He aims a colossal punch at her, but she flies up to avoid it and comes
+                down behind him. When he turns to charge again, Cyborg rams a shoulder into him. It
+                takes some time for him to touch down on the roof and stop skidding; when he does,
+                the view shifts to letterbox, in the top third of the screen. Pan ahead of Mammoth
+                just a bit to show Beast Boy, as a T-rex, waiting for him. One snarl is all it takes
+                to make the overgrown villain completely freak out and run for his life. Fullscreen:
+                Starfire gathers all her strength for a starbolt and lets it go, hitting Mammoth
+                dead center in the gut. The hit leaves him spinning in the air as Robin dashes over.
+                One mighty flying kick drives him back into Gizmo and Jinx and leaves all three in a
+                weary, groaning pile. Tilt down to Gizmo at the bottom of it; he has a transmitter
+                in hand.</sd>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Cram it. I'm calling Slade</sp>
+
+            <sd>Robin yanks him up to eye level as he switches it on.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>Who is Slade?</sp>
+
+            <sp><spkr ref="#Gizmo">Gizmo</spkr>Wouldn't you like to know, barf-brain?</sp>
+
+            <sd>Snap to black and pan until the long shot of Slade's lair, as seen in the prologue,
+                comes into view. The H.I.V.E. Academy's headmistress speaks during this movement and
+                comes into view at the edge of the platform.</sd>
+
+            <sp><spkr ref="#Headmistress">Headmistress</spkr>I assure you, such failures are not
+                tolerated within the H.I.V.E<sd>Close-up of her.</sd>Once the agents have been
+                retrieved from the authorities, they will be disciplined<sd>Cut to waist level; she
+                    socks a fist into her palm.</sd>Strictly disciplined.</sp>
+
+            <sd>Cut to another part of the platform. Slade steps out from among the pipes; the
+                Headmistress has been addressing herself to him. The light glinting off his figure
+                shows the colors from "Divide and Conquer", gray on the right side of his head,
+                red-orange on the left.</sd>
+
+            <sp><spkr ref="#Slade">Slade</spkr>Actually, your agents served my plans quite well. I
+                never expected them to succeed<sd>Extreme close-up of his eye; light shines on
+                    it.</sd>They were merely messengers. And the message has been received.</sp>
+
+            <sd>On the end of this, pan slightly to a transmitter in his raised left hand, a
+                counterpart of the one Gizmo carried. He activates it, and on the monitor behind the
+                headmistress, an image of Robin appears; caught on film by Gizmo and asking "Who is
+                Slade?" over and over. Pull back slowly as more images of different sizes appear to
+                fill the screen, then back to the long shot of the lair as they pop up on the entire
+                row of screens. That three-word question is repeated countless times by all of them.
+                If Slade's intent was to bring his name to the Titans' attention, the H.I.V.E. crew
+                did indeed meet his expectations.</sd>
+
+            <sd>Cut to the exterior of the Tower. The original architecture has been restored.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>
+                <sd>from inside</sd>NOOOO!! This is the worst thing that could ever happen!</sp>
+
+            <sd>Close-up of him. He is in human form, with hands to head and ready to pull his green
+                hair out.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>My tunes! They've been..<sd>He steps
+                    back.</sd>...alphabetized.</sp>
+
+            <sd>Pull back again. He tosses CDs around the operations center as Cyborg looks high and
+                low, much as he did at the start of Act One. Robin stands behind the couch and
+                watches the two.</sd>
+
+            <sp><spkr ref="#BeastBoy">Beast Boy</spkr>How am I ever gonna find anything?</sp>
+
+            <sd>Raven comes downstairs, carrying the cloak Jinx borrowed.</sd>
+
+            <sp><spkr ref="#Raven">Raven</spkr>
+                <sd>icily</sd>They went into my room. No one should ever go into my room</sp>
+
+            <sd>Starfire gasps and pops up from under the kitchen counter.</sd>
+
+            <sp><spkr ref="#Starfire">Starfire</spkr>Someone has disposed of all our blue furry
+                food!</sp>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>
+                <sd>lifting the couch</sd>You gotta be kidding me! The whole place gets cleaned and
+                I still can't find the--</sp>
+
+            <sd>A whistle from o.c. stops him short; cut to Robin, who points down toward the couch.
+                Close-up of the coffee table, with the missing remote lying on it in plain
+                sight.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>Ha!</sp>
+
+            <sd>He drops the couch and sits down on it with Robin, who has started to flip
+                channels.</sd>
+
+            <sp><spkr ref="#Cyborg">Cyborg</spkr>I guess we really oughta be training for battles,
+                tracking down clues, and trying to figure out who Slade is, huh</sp>
+
+            <sd>Pull back as the other three gather around the couch on this line.</sd>
+
+            <sp><spkr ref="#Robin">Robin</spkr>We will. But right now, I'm just happy to be part of
+                the team.</sp>
+
+            <sd>Pull back past the coffee table. Robin points the remote at the camera and clicks,
+                and the whole screen winks out.</sd>
+        </act>
+    </body>
+</root>

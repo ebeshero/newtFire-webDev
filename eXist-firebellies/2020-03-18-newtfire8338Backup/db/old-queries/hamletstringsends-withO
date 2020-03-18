@@ -1,0 +1,11 @@
+xquery version "3.0";
+let $hamlet := doc('/db/shakespeare/plays/hamlet.xml')
+let $speakers := distinct-values($hamlet//SPEAKER)           
+for $speaker in $speakers
+let $speakerLength := string-length($speaker)
+where ends-with($speaker,'O')
+(:order by string-length($speaker):)
+order by $speakerLength
+(:return $speaker:)
+return concat ($speaker, ' has ', $speakerLength , ' characters')
+(:return {concat ($speaker, ' has ', $speakerLength , ' characters')}</p>:)  

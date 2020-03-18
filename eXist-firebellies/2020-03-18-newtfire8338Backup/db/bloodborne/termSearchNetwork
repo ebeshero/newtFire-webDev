@@ -1,0 +1,25 @@
+xquery version "3.1";
+
+string-join(
+
+let $weapons := collection('/db/bloodborne')//weapon
+
+let $input := ("CHURCH","BEAST", "CAINHURST", "VILEBLOOD")
+
+(: Switch out $weapons for a different directory to search,
+ : change the terms in $input to search for different things.
+ : The output will be a TSV :)
+
+for $item in $input
+
+let $qualified := $weapons/*[contains(upper-case(.),$item)]
+
+let $names := $qualified/../weaponName/text()
+
+for $name in $names
+
+let $string := concat($name,"&#x9;", "mentions","&#x9;",$item,"&#xa;")
+
+let $output := $string
+
+return distinct-values($output))

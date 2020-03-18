@@ -1,0 +1,36 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $mitfordColl:=collection('/db/mitford/')
+let $root:= $mitfordColl/TEI
+let $titles:= $root/teiHeader//titleStmt/title
+let $back:=$root//back[.//listPerson | .//listPlace | .//listOrg | .//listEvent | .//person | .//event | .//place | .//bibl | .//org | .//list[@type="art"] | .//figure | .//listNym | .//nym]
+let $titleBacks := $back/ancestor::TEI/teiHeader//titleStmt/title
+
+
+return
+<list>
+    <head>Titles of documents with back lists containing a listPerson or listPlace element</head> 
+    <item>{count($titleBacks)}</item>
+{    
+
+for $titleBack in $titleBacks
+let $dateLine := $titleBack/ancestor::TEI//dateline//date
+let $head := $titleBack/ancestor::TEI/teiHeader//msDesc/head
+let $dateLineAtt := $dateLine/@when/string()
+let $uri := tokenize(base-uri($titleBack),'/')[last()]
+
+return 
+
+
+    <item><file>{$uri}</file> 
+        <a>{normalize-space($titleBack)} and where applicable: {normalize-space($dateLine)}, {$dateLineAtt}</a>
+        <b>msDesc head: {normalize-space($head)} </b>
+      
+    </item>
+    }
+    
+    
+        
+        
+    </list>
+

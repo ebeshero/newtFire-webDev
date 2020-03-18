@@ -1,0 +1,6 @@
+xquery version "3.1";
+let $ulysses := collection('/db/ulysses/ulysses')/*
+let $lotusEaters := $ulysses[descendant:: chapter[@chapterName = "The Lotus Eaters"]]
+let $location := $lotusEaters//location
+let $locationName := $location//@name/string()
+return $locationName

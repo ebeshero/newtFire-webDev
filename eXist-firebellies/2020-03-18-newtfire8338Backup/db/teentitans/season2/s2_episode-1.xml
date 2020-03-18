@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema_v2.rnc" type="application/relax-ng-compact-syntax"?><root>
+   <head>
+      <episode> HOW LONG IS FOREVER?</episode>
+      <writer>David Slack</writer>
+      <director>Alex Soto</director>
+      <storyboard>Mike Goguen, Sam Liu, Irineo Maramba, Chap Yaep</storyboard>
+      <animation>Dong Woo Animation Company, Ltd.</animation>
+      <source>https://transcripts.fandom.com/wiki/How_Long_Is_Forever%3F</source>
+   </head>
+   <characterList>
+      <charList type="recurring" subtype="titan" id="Starfire">Starfire</charList>
+      <charList type="recurring" subtype="titan" id="Cyborg">Cyborg</charList>
+      <charList type="recurring" subtype="titan" id="BeastBoy">Beast Boy</charList>
+      <charList type="recurring" subtype="titan" id="Raven">Raven</charList>
+      <charList type="recurring" subtype="titan" id="Robin">Robin</charList>
+      <charList type="nonrecurring" id="Voice">Voice</charList>
+      <charList type="recurring" subtype="villain" id="Warp">Warp</charList>
+      <charList type="nonrecurring" id="FCyborg">Future Cyborg</charList>
+      <charList type="nonrecurring" id="Kid">Kid</charList>
+      <charList type="nonrecurring" id="FBeastBoy">Future Beast Boy</charList>
+      <charList type="nonrecurring" id="FRaven">Future Raven</charList>
+      <charList type="nonrecurring" id="FWarp">Future Warp</charList>
+      <charList type="nonrecurring" id="FRobin">Future Robin</charList>
+      <charList type="nonrecurring" id="Nightwing">Nightwing</charList>
+   </characterList>
+   <locationList>
+      <locList id="tower">Titans Tower</locList>
+      <locList id="muse">Museum</locList>
+      <locList id="future">Future</locList>
+   </locationList>
+   <body>
+      <act n="0">
+         <title>PROLOGUE</title>
+         <sd><setNote shot="yes">Opening shot: the exterior of <location>Titans Tower</location> at
+               night.</setNote> As an alarm clock's ticking is heard, the sky pivots about the
+            center of the horizon; the dark panorama rotates out of view and is replaced by the
+            morning sun against wild blue yonder. The alarm begins to ring, and the camera cuts to
+            an extreme close-up of the sleeping <action mrkr="Starfire" with="all" move="1" place="tower"/><char>Starfire</char>'s closed eyes. She opens them
+            with a gasp, then squeezes them shut excitedly on the next line.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>The day has arrived!</sp>
+         
+         <sd>She looks off to one side; cut to the source of the ringing, an alarm clock shaped like
+            <char>the Amazing Mumbo</char> that sits on her dresser. She reaches into view to shut it off, and we
+            see a close-up of a drawer, which she opens to reveal a pile of toys and party favors.
+            She sweeps up the lot and giggles o.c.; outside in the hall, her door opens and she
+            peeks cautiously back and forth. More bubbly little laughs escape her as she zips out
+            and starts to ease toward the corner, whisking from one wall to the other as she goes.
+            Her armload jingles slightly. One item falls away when she ducks around the bend and out
+            of sight, but she reaches back to pick it up.</sd>
+         
+         <sd>Now she makes her way past the stairs. Cut to inside a closed door; it slides open to
+            admit her, and she lowers her goodies to expose her beaming face. Hearts float up around
+            it.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> HAPPY BLORTHOG!! <sd>A question mark pops up by
+               her head.</sd> Huh?</sp>
+         
+         <sd>Her perspective, looking into <location>the operations center</location>. <action mrkr="Raven" with="all" move="1" place="tower"/><char>Raven</char> sits off to one
+            side and reads, <action mrkr="Robin" with="all" move="1" place="tower"/><char>Robin</char> stands before a boom box in <location>the kitchen</location>, and
+               <action mrkr="BeastBoy" with="all" move="1" place="tower"/><char>Beast Boy</char> and <action mrkr="Cyborg" with="all" move="1" place="tower"/><char>Cyborg</char> are playing GameStation-the racing
+            game seen in "Sisters." A thundering hip-hop track drowns out all other sound at this
+            point. Close-up of <char>Robin</char>, whose hair is being blown back by the wall of
+            sound, then of <char>Cyborg</char> and <char>Beast Boy</char>. They are having a
+            tug-of-war over the game controller.</sd>
+         
+         <sp><spkr ref="Cyborg">Cyborg</spkr> Come on, <char>Beast Boy</char>, gimme that thing!</sp>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr> Dude! I'm in the middle of a game,
+               <char>Cyborg</char>!</sp>
+         <sp><spkr ref="Cyborg">Cyborg</spkr> Yeah, my game, 'cause it's my turn!</sp>
+         <sd>Cut to the completely unflappable reader.</sd>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr>
+            <sd>from o.c.</sd> Give me the controller!</sp>
+         <sd>To <char>Starfire</char>.</sd>
+         <sp><spkr ref="Cyborg">Cyborg</spkr>
+            <sd>from o.c.</sd> No! Let go!</sp>
+         <sd>She walks in.</sd>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr>
+            <sd>from o.c.</sd> It is my turn!</sp>
+         <sp><spkr ref="Starfire">Starfire</spkr> Friends! We must frolic and leap in glorious
+            celebration, for today is Blorthog-the Tamaranean festival of friendship!</sp>
+         
+         <sd>Sight gag: roses bloom all around her head as she says this. When she finishes, she
+            grins broadly for several seconds-and then the flowers fall away, to the sound of a
+            mental car wreck, as she realizes that no one is paying the least attention.
+            Disgruntled, she looks around the place and drops the items she has carried in, except
+            for a few strands of jingling bells that hang from her wrists. <char>Cyborg</char> leans
+            into view, still struggling with the o.c. <char>Beast Boy</char>, and she turns
+            cheerfully to him.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Joyous greeting, friend! <sd>as a tentacle snakes
+               into view</sd> I, <char>Starfire</char>, give you this tinnabula as a symbol of-</sp>
+         <sd>It wraps around his neck; she gasps.</sd>
+         <sp><spkr ref="Cyborg">Cyborg</spkr>
+            <sd>as he is yanked o.c.</sd> You're gonna pay for that, you little grass stain!</sp>
+         
+         <sd>Sight gag: his eye implant hangs in the air a moment after he is pulled back, then zips
+            after him. A few seconds later, there is yell and a camera-shaking crash from the two
+            boys' direction, and <char>Beast Boy</char> hops into view as a frog, with the
+            GameStation controller in his mouth. Reverting to human form, he laughs and starts
+            playing again. <char>Starfire</char> holds a string of bells out to him.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Many blessings, friend. May your ears be filled
+            with sugar candies and-</sp>
+         <sp><spkr ref="Cyborg">Cyborg</spkr>
+            <sd>from o.c., on end of previous</sd>
+            <char>BEAST BOY</char>!!</sp>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr>
+            <sd>yelling over shoulder</sd> Look! I'll give you back the controller as soon as
+               <char>Raven</char> gives back my nail clippers!</sp>
+         
+         <sd>There is a loud, furious growl from o.c., and <char>Cyborg</char> reaches into view to
+            yank him away. Cut to <char>Raven</char>-still buried in her book, with the
+            aforementioned pair of clippers floating nearby under her influence.</sd>
+         
+         <sp><spkr ref="Raven">Raven</spkr> Not gonna happen. How else am I supposed to keep your
+            toenails off the coffee table?</sp>
+         <sd><char>Starfire</char> holds the bells out to her.</sd>
+         <sp><spkr ref="Starfire">Starfire</spkr> Happiness and delight, friend. On this wondrous
+            day I wish you sunshine and bunny-</sp>
+         
+         <sd><char>Raven</char>'s eyebrow twitches as a skull pops up by her head;
+               <char>Starfire</char> takes the hint and backs off with a nervous little laugh. Now a
+            vein starts to throb on <char>Raven</char>'s forehead on her next words.</sd>
+         
+         <sp><spkr ref="Raven">Raven</spkr>
+            <char>Robin</char>, could the music be a little louder? I can still hear myself
+            think.</sp>
+         
+         <sd>Pull back to frame him; <char>Starfire</char> makes as if to offer him the bells. As
+            the free-for-all continues from <location>the vicinity of the couch</location>, <char>Robin</char> glares off
+            toward it and one vein after another stands out below his hairline. Finally he has had
+            enough.</sd>
+         
+         <sp><spkr ref="Robin">Robin</spkr> I only turned the music up to DROWN OUT ALL THE
+            YELLING!!</sp>
+         
+         <sd>Sight gag: his face goes red on the end of this line, his head swells, and he shouts
+            with enough force to blow <char>Starfire</char>'s hair back. Second gag: now she is
+            seen, rather tired of this whole idiocy, in close-up against a red background and
+            holding her bells. <char>Robin</char>'s throbbing head is at top left,
+               <char>Raven</char>'s at top right, and a laughing <char>Beast Boy</char> runs past
+            with the controller while <char>Cyborg</char> chases him. Both of these Titans are in
+            "Super Deformed" style. A moment later, they back into view; <char>Cyborg</char> has put
+               <char>Beast Boy</char> in a headlock with one hand and seized the device with the
+            other.</sd>
+         
+         <sp><spkr ref="Cyborg">Cyborg</spkr> Whose turn is it now, tough guy? Whose turn is it
+            now?</sp>
+         
+         <sd>They slide o.c. Sight gag: flames shoot from <char>Robin</char>'s mouth on the next
+            line.</sd>
+         
+         <sp><spkr ref="Robin">Robin</spkr>
+            <sd>calling after them</sd> Knock it off! I can't work with you two acting like idiots!</sp>
+         <sp><spkr ref="Raven">Raven</spkr> Great, <char>Robin</char>. More yelling will definitely
+            stop all the yelling.</sp>
+         
+         <sd>He turns to growl at her as <char>Cyborg</char> runs screaming across the screen; he
+            has the controller, but <char>Beast Boy</char> has turned into a bear and is charging
+            after him. The former runs back and perches on <char>Starfire</char>'s bells, while the
+            latter comes back in human form and tries to catch his breath.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Friends, please! <sd><char>Cyborg</char> laughs
+               and waves it.</sd> You must not-if we could simply-happy Blor-</sp>
+         <sd>The strand breaks.</sd>
+         <sp><spkr ref="Cyborg">Cyborg</spkr>
+            <sd>dropping o.c.</sd> Whoa!</sp>
+         
+         <sd>The bells fall loose and hit the floor in slow motion, bouncing all over the place.
+               <char>Starfire</char>'s disbelieving gaze turns down after them as <char>Robin</char>
+            and <char>Raven</char> grimace at each other and <char>Beast Boy</char> stays half
+            slumped over. The Tamaranean's shock gives way to fist-clenching anger, and she does her
+            best to keep from blowing her top-but eventually she loses the struggle, and the other
+            three Titans retreat o.c. on her next word.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> STTTTTOOOOOPPPPP!!</sp>
+         
+         <sd>All the sight gags end and the music cuts off. Pull back across <location>the operations center</location>
+            at ground level; the broken bells lie near the camera, while the Titans are at a
+            distance.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Friends must never behave this way-and especially
+            not on Blorthog! Do you wish to invite the Rekmas?</sp>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr> Gesundheit?</sp>
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <sd>turning away</sd> On my world, "Rekmas" means "the Drifting."</sp>
+         
+         <sd>Everything but the five teens' images fades to black, and all but <char>Starfire</char>
+            slowly float o.c. in different directions.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> The point at which close friends begin to drift
+            apart-and their friendship begins to die.</sp>
+         
+         <sd>She fades away as well. Snap to <char>Cyborg</char> and <char>Beast Boy</char>.</sd>
+         
+         <sp><spkr ref="Cyborg">Cyborg</spkr> Aw, come on, <char>Starfire</char>.</sp>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr> We are so not Rek-whatever-ing.</sp>
+         <sp><spkr ref="Raven">Raven</spkr> We're getting on each other's nerves a little. Big deal.</sp>
+         <sp><spkr ref="Robin">Robin</spkr> Yeah. This is just typical roommate stuff. We're not
+            going to drift apart, <char ref="Starfire">Star</char>. I promise. We'll all be friends
+            forever.</sp>
+         <sp><spkr ref="Starfire">Starfire</spkr> Forever?</sp>
+         
+         <sd>A beeping starts up and cuts off her pondering. The source is <char>Robin</char>'s
+            communicator, which he pulls out of his belt. As its show-theme ringtone goes off, the T
+            on its outer casing flashes red.</sd>
+         
+         <sp><spkr ref="Robin">Robin</spkr> Titans! Trouble!</sp>
+         
+         <sd>All but <char>Starfire</char> follow him out of <location>the operations
+               center</location>. Close-up of her; after a long moment, she flies out after them,
+            and the camera tilts down to ground level, where the broken bells lie near a string she
+            has dropped. Fade to black.</sd>
+         
+         <cue>OPENING THEME</cue>
+         
+      </act>
+      <act n="1">
+         <title>Act One</title>
+         <sd><setNote shot="yes">Opening shot: the exterior of <location>a museum in Jump
+                  City</location>.</setNote> The sun has just barely begun to rise here. Inside, the
+            camera pans across <location>a gallery</location> filled with ticking clocks from many historical periods,
+            and it stops on a particular display case by the far wall to zoom in a bit. Next to
+            this, a portal of white light opens up and turns black after a moment as if a second
+            hand had just swept across it. <charDesc ref="Warp">Out steps a goateed man in black
+               armor, with gold reinforcements at wrists and ankles; he also wears a gold
+               breastplate and helmet that leaves his face exposed.</charDesc> This is
+               <char>Warp</char>.</sd>
+         
+         <sd>Close-up of the item in the case-a small clock in a cylindrical gold housing, with a
+            glass hemisphere on top. Inside is an assembly of parts that could be a model of a
+            galaxy. <char>Warp</char>'s footsteps approach as his shadow falls over the case; pull
+            back to frame him in front of it.</sd>
+         
+         <sp><spkr ref="Voice">Voice</spkr> Hey, stop!</sp>
+         
+         <sd>The sound of a weapon being cocked is heard with this. The intruder turns toward it,
+            showing a small blue lens on the forehead of his helmet, and the camera cuts to behind
+            him. The speaker is one of two armed guards who have moved in and are ready to
+            fire.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> Stop yourselves!</sp>
+         
+         <sd>He waves a hand carelessly at them; an instant later both men are frozen in ice. Cut
+            from them to him on the next line. He turns back to the case, showing his breastplate to
+            have a larger blue lens set in it.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> I didn't journey back in time one hundred years to
+            squabble, I came to steal. <sd>His perspective of the timepiece.</sd> The Clock of
+            Eternity. <sd>Back to him.</sd> Valuable in the past, priceless in the future.</sp>
+         
+         <sd>He reaches for it, only to have his hand deflected by one of <char>Robin</char>'s
+            discs. Pull back to frame the Titans at the balcony railing; the projectile embeds
+            itself in the floor near the camera.</sd>
+         
+         <sp><spkr ref="Robin">Robin</spkr> But for the present- <sd>Close-up of them.</sd> -you'll
+            keep your filthy hands off it.</sp>
+         <sp><spkr ref="Warp">Warp</spkr> The Teen Titans. This is a treat. <sd>as a laser pops out
+               of each shoulder</sd> I read all about you in the historical archives. And now you're
+            all history!</sp>
+         <sd>He opens fire.</sd>
+         <sp><spkr ref="Robin">Robin</spkr> Titans! Go!</sp>
+         
+         <sd>They are over the railing in a heartbeat to avoid the blasts. <char>Warp</char> pivots
+            off to one side and fires again with a shout, aiming at <action mrkr="Robin" with="all" move="2" place="muse"/><char>Robin</char>; the latter
+            has his fighting staff out and extended to full length, and he parries the barrage with
+            ease. The last shot, however, breaks the weapon in half and forces him to retreat. A
+            starbolt blasts across the screen from behind, and <action mrkr="Starfire" with="all" move="2" place="muse"/><char>Starfire</char> flies in to
+            take his place, followed by <action mrkr="BeastBoy" with="all" move="2" place="muse"/><char>Beast Boy</char> as a lion. Her beams carve a long
+            double groove in the floor, closing in on <char>Warp</char>, but he effortlessly
+            deflects when they reach him. One ricochet comes back at her and knocks her out of the
+            air.</sd>
+         
+         <sd>Extreme close-up of his face; he looks incuriously off to one side as <char>Beast
+               Boy</char>'s growl is heard. The big green jungle cat is charging, but up comes one
+            gold glove, out pops a blaster from the back of it, and off goes a crackling blast. Pull
+            back to show that he has immobilized <char>Beast Boy</char> in mid-leap. Cut to
+               <action mrkr="Raven" with="all" move="2" place="muse"/><char>Raven</char> in midair on the next line; she is levitating two grandfather
+            clocks.</sd>
+         
+         <sp><spkr ref="Raven">Raven</spkr> Azarath Metrion Zinthos!</sp>
+         
+         <sd>The fixtures are hurled at him, only to go flying off to the side when he waves his
+            arms. Now he fires a beam from his helmet that drives her to the ground. He is in the
+            clear for only a moment, though; <action mrkr="Cyborg" with="all" move="2" place="muse"/><char>Cyborg</char>'s sonic cannon blast flashes in,
+            connecting dead on and throwing up a cloud of dust. Cut to him.</sd>
+         
+         <sp><spkr ref="Cyborg">Cyborg</spkr> Boo-yah!...Huh?</sp>
+         
+         <sd>Pull back. As the view clears, we see that <char>Warp</char> has put up a force field
+            to absorb the energy and is quite unharmed. Taking it down, he throws something at the
+            camera; cut to <char>Cyborg</char> as it lands on his chest and sticks there. It is
+            circular, resembling a kitchen timer, and the pointer turns a notch to send up sparks
+            from every part of the bionic teen's body.</sd>
+         
+         <sp><spkr ref="Cyborg">Cyborg</spkr>
+            <sd>groaning in pain</sd> Draining my power cell!</sp>
+         <sp><spkr ref="Warp">Warp</spkr>
+            <sd>holding up a disc</sd> You cannot defeat <char>Warp</char>. I am from the
+            future.</sp>
+         
+         <sd>He scales it across <location>the gallery</location> toward the charging <char>Robin</char>, who throws a
+            handful of his own discs. <char>Warp</char>'s projectile, however, smashes cleanly
+            through them, then doubles back and homes in again. <char>Robin</char> and
+               <char>Starfire</char> dive aside as it sails the full length of the room and explodes
+            at the other end.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> And you relics are one hundred years out of date.</sp>
+         
+         <sd>He turns away; close up of the case holding the Clock of Eternity. <char>Warp</char>
+            reaches out, his hand passing through the glass, and removes it. Pull back; he takes a
+            few steps across <location>the gallery</location>, stops, and presses the blue lens on his breastplate. It
+            glows blinding white and emits a beam that forms into a portal identical to the one that
+            brought him here. A little adjustment turns the passage black as before.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> Ta-ta, Titans. I have enjoyed our time together, but I've
+            got a very bright future ahead of me.</sp>
+         
+         <sd>Cut to <char>Starfire</char> and <char>Robin</char> on the end of this, then back to
+            him. He turns to make his exit, but before he can clear out, she roars in fury and flies
+            straight at him. Surprised, he turns to look back with one foot out the door.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> What?</sp>
+         
+         <sd>She plows into him; her momentum carries both of them through the portal, which winks
+            out behind them-an instant before <char>Robin</char> hurls himself across the screen in
+            attempt to follow. He ends up sprawled on the floor. Long overhead shot of <location>the gallery</location>,
+            pulling back slowly-there are four Titans, spread out and looking at the now-empty case,
+            and the fifth nowhere in sight. <char>Beast Boy</char> has returned to human form. Pull
+            back slowly.</sd>
+         
+         <sp><spkr ref="Robin">Robin</spkr>
+            <char>Starfire</char>!</sp>
+         
+         <sd>Fade to black.</sd>
+         
+         <sd>The view resolves into the center of a clock face, the point where the hands are
+            attached, as the camera pulls back. It is advancing very quickly, and as the camera
+            movement continues, other timepieces are seen in the background, all working at high
+            speed. <char>Starfire</char> and <char>Warp</char> grapple in midair; pan to keep them
+            in view. We are within the portal he opened.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> Let go!</sp>
+         <sd>Close-up.</sd>
+         <sp><spkr ref="Starfire">Starfire</spkr> You have endangered my friends and ruined
+            Blorthog!</sp>
+         <sp><spkr ref="Warp">Warp</spkr> Stop! If you damage the suit before we reach my future-
+               <sd>She gets hold of the chest lens.</sd> No!</sp>
+         
+         <sd>She rips it away; there is a great flash of white, which clears to leave her floating
+            alone. She gasps and covers her eyes as he drops screaming o.c. Cut to just above her;
+            he falls away from the camera, the background blacking out as he goes. When he has
+            receded from view entirely, a second white flash emanates from the immeasurable depths
+            and washes out the screen. This clears to leave a black field and <char>Starfire</char>
+            falling toward the camera from above. <setNote shot="no">Fade to black, then immediately
+               snap to a deep snowdrift, where she lands very hard and stands up after a moment. It
+               is nighttime, and a bitter winter wind whistles over the landscape.</setNote></sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Huh? <sd>shivering</sd> What has happened? Why is
+            it cold? And where are my...</sp>
+         
+         <sd>She turns her eyes upward on the end of this line. Cut to her perspective-looking
+            straight at the base of <location>the Tower</location>, whose windows are all dark and
+            drifted deep with snow at the sills. She gasps softly; tilt up to follow her gaze to the
+            top floor, where the main window is broken. The entire impression is one of a building
+            that has fallen into advanced disrepair.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> ...friends?</sp>
+         
+         <sd>Dissolve to inside, near the ceiling of the top floor. A hole has been smashed here,
+            allowing the snowflakes to enter. Tilt down to the unlit stairs as she mounts them
+            slowly. The device she tore from <char>Warp</char>'s armor is clipped to her belt.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Friends? Hello? Friends? Hello!</sp>
+         
+         <sd>Finding a set of closed doors in her path, she strains to push them open. Cut to the
+            other side; one door is forced away, then the other, revealing her silhouette in the
+            meager light from outside. She gasps in shock and advances slowly; pull back to reveal
+            that she has entered the remains of <location>the operations center</location>. Walking
+            through <location>the kitchen</location>, she looks left and right, not believing a bit
+            of what she sees, and the camera cuts to floor level. Her boots pass the GameStation
+            controller that sparked such a furor between <char>Cyborg</char> and <char>Beast
+               Boy</char>, and nudge one of the bells she dropped-now badly rusted.</sd>
+         
+         <sd>Her level again; the jingling causes her to stop and recoil in fear for a moment, and
+            she stops and picks up a loose bell. She fixes it with a wide-eyed look of stunned
+            sadness for a long second and watches it crumble on her palm. In the darkness off to one
+            side, a spot of red light begins to glow as some machinery is heard; she gasps and looks
+            toward this.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <char>Cyborg</char>!</sp>
+         
+         <sd>The red dot does not move, so she holds up one glowing hand to shed some light.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Oh, <char>Cyborg</char>, thank goodness you
+            are-</sp>
+         
+         <sd>The illumination reaches the dark niche and exposes something that has
+               <char>Cyborg</char>'s approximate body shape, but is built entirely of mechanical
+            parts. The source of the red spot is an electronic brain sitting in one side of the
+            head. <action mrkr="Starfire" with="none" move="3" place="future"/><char>Starfire</char> cries out in fear and throws a starbolt that blows the
+            collection of circuitry away, only to be confronted by several spider-like robots that
+            jump up from behind the shoulders. Each looks like the part she just destroyed. Now she
+            tosses one shot after another to knock them out, but is interrupted by the arrival of a
+            new figure at the entrance. The voice is that of <char>Cyborg</char>, but considerably
+            older, and the outline has some wires hooked to it.</sd>
+         
+         <sd>*** All lines marked with an asterisk are spoken by the older, future counterparts of
+            present-day characters. Stage directions follow this convention as well until further
+            notice. *** </sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> Yo!</sp>
+         
+         <sd>He walks in, giving the camera a full view of himself. The face is lined, the armored
+            panels that cover most of his body are damaged or missing, and the blue lights that used
+            to glow in his circuitry have gone out. Thick cables are connected to his back, snaking
+            out of view, and he has armed himself with a piece of pipe.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> Who's up here blasting my... <sd>He stops, lowers
+               the pipe, and stares dumbfounded.</sd>
+            <char ref="Starfire">Star</char>?</sp>
+         
+         <sd>The bludgeon slides from his fingers and clatters to the floor, and he comes closer to
+            look her over from head to toe. We now see that he has had to replace part of one leg
+            with some random components.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <char>Starfire</char>. I don't believe it. You...you haven't aged a day!</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <char>Cyborg</char>, what has happened? Why are...you...</sp>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> Old? <sd>He smiles gently, then crosses <location>the
+               operations center</location>.</sd> Well, that's what happens to folks when you go away for
+            twenty years.</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Twenty years?!</sp>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> You disappeared, <char ref="Starfire">Star</char>.
+               <sd>He slides some junk aside.</sd> That battle with <char>Warp</char>, that was a
+            long time ago. You fell through a wormhole, and...</sp>
+         
+         <sd>He looks out the cracked window; cut to the view from it. <setNote shot="no">Across the frozen bay, the
+            skyline of Jump City huddles under its blanket of snow and the cruel dark sky.</setNote></sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <sd>from o.c.</sd> Welcome to the future.</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> The future? But...</sp>
+         
+         <sd>She removes the lens from her belt and holds it up.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> ...I damaged his technology.</sp>
+         <sd>He takes the thing and looks at it.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <char>Warp</char> was planning to jump ahead one hundred years, right? Looks like you
+            stopped him at twenty.</sp>
+         
+         <sd>She takes it back.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Still, I am confused. Please, why are you in
+            disrepair?</sp>
+         
+         <sd>He looks down at himself, then turns away.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> Let's just say things haven't gone so well since you
+            left.</sp>
+         
+         <sd>He approaches the windows; she follows.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> But what of the other Titans? Where are our
+            friends?</sp>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> The Titans are history, <char ref="Starfire">Star</char>. Your friends aren't friends anymore.</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> No. You are wrong. This...everything is wrong! How
+            could such terrible things...</sp>
+         
+         <sd>She looks at the lens in her hand.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <char>Warp</char>! His interference in the past must have changed our future.</sp>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <char ref="Starfire">Star</char>, I don't think-</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> He caused all this badness to happen. He made this
+            technology, and he is the one who can make things right! <sd>She flies over and lands by
+               him.</sd> We must find <char>Warp</char>. You will help me?</sp>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> I wish I could.</sp>
+         
+         <sd>He looks off toward one corner; cut to a piece of equipment there. It resembles a
+            gasoline-powered electric generator, and his cables are hooked up to it. Zoom in
+            slowly.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <sd>from o.c.</sd> My last power cell burned out years ago. <sd>Back to the pair.</sd>
+            I've tried adapting this new stuff to my old circuits, but...I can't leave <location>the Tower</location>,
+               <char ref="Starfire">Star</char>. I'm obsolete.</sp>
+         
+         <sd>Silhouette view of them at the windows.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> Maybe one of the others can help.</sp>
+         
+         <sd>Cut to an extreme close-up of her eye and pull back to show her in flight.</sd>
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <sd>voice over</sd> I can tell you how to find <char ref="BeastBoy">BB</char> and
+               <char>Raven</char>.</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <sd>voice over</sd> And <char>Robin</char>?</sp>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <sd>voice over</sd> We lost touch a long time ago. If you're looking for him- <sd>She
+               disappears into the city skyline.</sd> -you're on your own.</sp>
+         
+         <sd>Fade to black.</sd>
+      </act>
+      <act n="2">
+         <title>Act Two</title>
+         <sd><setNote shot="yes">Opening shot: the interior of a stable or similar
+               enclosure.</setNote> As a circus calliope plays outside, a green seal pops up into
+            view and barks-it can only be <char>Beast Boy</char>. He jumps onto a nearby crate and
+            balances a ball on his nose. It bounces up, the camera following, and when we see him
+            again, he becomes a frog and balances it again. Cut to two young boys outside, watching
+            the exhibition; they are mostly bald except for small spikes of hair, and they wear pink
+            visor/sunglasses that hide their eyes completely. One holds an ice cream cone, and
+            neither is too impressed by the whole spectacle.</sd>
+         
+         <sd>The sound of another transformation is heard; cut to behind the two. <char>Beast
+               Boy</char>'s enclosure is now revealed as a large cage. He has assumed panda form to
+            keep that ball poised just so. Close-up of him, changing into a pig-but a snowball flung
+            in knocks him over and sends the ball flying.</sd>
+         
+         <sp><spkr ref="Kid">Kid</spkr> You stink, pig!</sp>
+         
+         <sd>Laughing and jeering, both of them start throwing now; <char>Beast Boy</char> pokes his
+            head out from behind the crate, but is quickly driven to the floor. Pull back to a long
+            shot, revealing the cage to be <location>a circus wagon</location>. After one last
+            salvo, the ice cream cone is thrown in and the two kids leave. The green porker sits
+            dejectedly as the cone melts on his head; it slides off, and he looks down and
+            sighs.</sd>
+         
+         <sd><char>Starfire</char> lands on the other side of the bars to peer in. <char>Beast
+               Boy</char> returns to human form-bald on top, having gained a great deal of weight,
+            and not wearing his belt. Defeat permeates every syllable of his voice.</sd>
+         
+         <sp><spkr ref="FBeastBoy">*Beast Boy</spkr> No way! <sd>He moves to the bars.</sd> It's
+            you. But how?</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> I require your help.</sp>
+         
+         <sp><spkr ref="FBeastBoy">*Beast Boy</spkr> What kinda help?</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> The future is not as it should be. We must find
+               <char>Warp</char>. <sd>warming up starbolts</sd> I will free you from this-</sp>
+         
+         <sp><spkr ref="FBeastBoy">*Beast Boy</spkr>
+            <sd>panicked</sd> This cage isn't to keep me in! It's to keep those maniacs out! <sd>She
+               winds down and leans in closer.</sd> Look. After the Titans broke up, I tried the
+            whole solo-hero thing. Got my butt kicked-a lot. So now, well...</sp>
+         
+         <sd>He turns briefly into a squawking chicken to make the point.</sd>
+         
+         <sp><spkr ref="FBeastBoy">*Beast Boy</spkr>
+            <sd>smiling weakly, chuckling</sd> Besides, I'm in the showbiz now.</sp>
+         
+         <sd>Her eyes tell just how false this excuse rings with her. Cut to a long shot of the
+            wagon and pan to a banner on lighted poles nearby: "The Amazing One Man Zoo-Freakish
+            Wonder," showing a creature with the heads and body parts of many different animals.
+            This is what passes for <char>Beast Boy</char>'s life now.</sd>
+         
+         <sd>Dissolve to <char>Starfire</char>'s perspective, <setNote shot="no">walking along a
+               balcony in a broken-down building</setNote>. At the far end, a single fluorescent
+            tube flickers and throws its inadequate light onto a steel door. Close-up; she gets a
+            hand to the knob and turns. <location>The room</location> inside is pure white, with no
+            features of any kind visible. In the far corner, wearing a white cloak with the hood up,
+            a short figure stands with its back to the camera and its head bowed. This is still
+               <char>Starfire</char>'s point of view.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <char>Raven</char>? <sd>Close-up.</sd>
+            <char>Raven</char>, it is <char>Starfire</char>, your friend.</sp>
+         
+         <sd>She moves into <location>the room</location>. The white-cloaked figure does not turn from the corner; the
+            voice is <char>Raven</char>'s, but sounding as if the past twenty years have broken her
+            mind and body entirely.</sd>
+         
+         <sp><spkr ref="FRaven">*Raven</spkr> No such thing.</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Please, <char>Raven</char>, I-</sp>
+         
+         <sp><spkr ref="FRaven">*Raven</spkr> Just another figment. Don't even look.</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> You must listen! I am here because-</sp>
+         
+         <sd>Camera shift: <char>Raven</char> seen head-on, still facing the wall,
+               <char>Starfire</char> behind her.</sd>
+         
+         <sp><spkr ref="FRaven">*Raven</spkr>
+            <sd>suddenly furious</sd> I'm never coming back! Go away!</sp>
+         
+         <sd>She half-walks, half-floats to another corner of <location>the room</location>.</sd>
+         
+         <sp><spkr ref="FRaven">*Raven</spkr> It has to go away. Just like before. Just like all the
+            others.</sp>
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <sd>from o.c.</sd> Your mind. <sd>Shift: both head-on again, and she approaches.</sd>
+            Without friends, you must have-</sp>
+         
+         <sd>As she is about to touch her former teammate's back, a shield pops up to block her and
+            she gasps. Dropping her head, resignedly, she exits and closes the door behind her.
+               <char>Raven</char> keeps her face to the wall and that black barrier up.</sd>
+         
+         <sd><setNote shot="no">Cut to a patch of sky, seen from between several rooftops, and tilt
+               down to ground level. <char>Starfire</char> plods through the snow that thickly
+               covers the street, but a laser blast from o.c. knocks her backward.</setNote> Cut to
+            a long shot of a ledge, where <char>Warp</char> stands with his
+            shoulder-mounted weapons deployed. Circuitry is visible through the hole where she
+            pulled that lens away, and his voice reveals that he too has aged.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> What's the matter, dear? Have I come at a bad time?</sp>
+         
+         <sd>Close-up: his face is lined and drawn from the past two decades. He cuts loose with a
+            fusillade that peppers the snow all around her; she stands for a moment, pinned down,
+            and then gets clear of the ground. Flying past him and over the buildings, she dodges
+            his shots and returns fire, but as in <location>the museum</location>, he puts up a force field to stop her
+            starbolts. Now she floats down to his level and gets ready to lay a big one on him-but
+            he merely waves a hand and encases her in ice, just as he did to those two guards. She
+            drops to the street; the frozen layer shatters, and she is left twitching and groaning
+            in a crater of snow. <char>Warp</char> steps close to her and soon finds himself on the
+            receiving end of her angry glare. However, it gives way to bewilderment once she gets a
+            good close look at him.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> You have also become old.</sp>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> That's what happens when someone steals my vortex
+            regulator. <sd>holding out hand</sd> The regulator, if you please. I really must get
+            back to my future.</sp>
+         <sd>She stands and pulls it off her belt.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <sd>menacingly</sd> If you ever wish to see your future- <sd>warming up a starbolt</sd>
+            -you will repair the damage you have done to my past!</sp>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> Damage? Silly girl. There's nothing wrong with your
+            past. <sd>Cut to her; he continues o.c.</sd> One cannot damage history, because history
+            cannot be changed. <sd>Back to him, holding up the Clock, and zoom in slowly.</sd> I
+            went back in time to steal this because history says it disappeared. And history says it
+            disappeared because I went back to steal it. Past, present, future. It's all written in
+            stone, my dear.</sp>
+         
+         <sd>The minute hand advances, showing the time at 12: 00. <char>Starfire</char> winds down
+            the blast she was about to throw; he takes the lens, or regulator, from her hand.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> And nothing you do can ever change it.</sp>
+         
+         <sd>He raises one arm and extends a blaster from his wrist, ready to fire-but something
+            hurtles into view and <setNote shot="no">knocks him into <location>an
+               alley</location></setNote>. Standing up, it is a black silhouette with long hair, and
+            it throws <char>Warp</char>
+            <setNote shot="no">even farther down the way to bounce off a dead-end wall</setNote>.
+            The figure produces a couple of discs between its fingers and throws, revealing a gray
+            utility belt and wrist guards; they explode in a fireball that engulfs the time
+            traveler, and the thrower runs straight toward the blast zone for a jump. Flame and
+            smoke clear to show that <char>Warp</char> has once again shielded himself with a force
+            field. He lets it down and looks skyward to see this new figure dropping straight toward
+            him.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> Another time, perhaps.</sp>
+         
+         <sd>He drops into the ground an instant before the leaping shadow lands there.
+               <char>Starfire</char> moves cautiously into <location>the alley</location> as this
+            person straightens up. No features can be seen, but the voice is unmistakable.</sd>
+         
+         <sp><spkr ref="FRobin">*Robin</spkr> It's good to see you again.</sp>
+         <sd>Her eyes pop.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <char>Robin</char>?</sp>
+         <sp><spkr ref="FRobin">*Robin</spkr>
+            <sd>in shadow</sd> I haven't used that name in a long time.</sp>
+         
+         <sd>He advances into the light. <charDesc ref="Nightwing">Skintight black uniform, with a
+               large angular design of a blue hawk on the chest; black gloves and matching eye mask
+               that angles down to cover his nose as well; the aforementioned long
+            hair.</charDesc></sd>
+         
+         <sp><spkr ref="FRobin">*Robin</spkr> Call me <char>Nightwing</char>.</sp>
+         
+         <sd>Fade to black.</sd>
+      </act>
+      <act n="3">
+         <title>Act Three</title>
+         <sd><setNote shot="yes">Opening shot: a slow pan across the Jump City skyline.</setNote>
+            Machinery makes itself heard, and <setNote shot="no">the view dissolves to a group of
+               turning gears in a machine room</setNote>. These part to reveal blackness beyond;
+            zoom in through them, then fade in to an overhead shot of a large room. A bank of
+            computers and control panels is on one side, with a chair in front, and two cylindrical
+            storage containers are across from them. A walkway bisects the area.</sd>
+         
+         <sd>Cut to just behind one of the containers. It is glass, and a part of
+            <char>Robin</char>'s old outfit is visible at the edge of the screen.
+               <char>Starfire</char> walks into view and stops to look, wrapping her arms around her
+            body for warmth; cut to a head-on shot. The costume, mask and all, has been placed on a
+            faceless store-window dummy for display purposes. She sighs quietly and gets a blanket
+            wrapped around her shoulders by <char>Nightwing</char>-this is <location>his new base of
+               operations</location>.</sd>
+         
+         <sp><spkr ref="Nightwing">Nightwing</spkr> I heard you've been looking for help.</sp>
+         <sp><spkr ref="Starfire">Starfire</spkr> There is nothing you can do. There is nothing
+            anyone can do. The past cannot be repaired, the future cannot be altered, no matter how
+            wrong it seems.</sp>
+         <sp><spkr ref="Nightwing">Nightwing</spkr> So, it's impossible. <sd>walking to
+               computers</sd> Good. If memory serves, we've done the impossible before.</sp>
+         
+         <sd>She cannot find any words for a moment, but her eyes tell enough about the hope that
+            has sprung up in her mind.</sd>
+         
+         <sp><spkr ref="Nightwing">Nightwing</spkr> I held on to this- <sd>Close-up of a panel; he
+               presses a button and continues o.c.</sd> -just in case.</sp>
+         
+         <sd>The panel slides open, and up pops his old communicator. <char>Starfire</char> moves
+            closer to make sure her eyes are not deceiving her. He picks it up and presses a button;
+            instantly its T starts to flash red, just as in the prologue. She is delighted to find
+            that the black stones in her neck piece and wrist guards are coming to life in the same
+            manner-an emergency signal built into them.</sd>
+         
+         <sd>Cut to a long shot of <char>Beast Boy</char>'s cage and zoom in. As a dog, he is up on
+            his hind legs and bouncing his ball on his snout; pan from here to his old belt, which
+            hangs on a peg in the corner. Its buckle starts to flash, drawing his attention and
+            making him forget the bouncing. Close-up of the red signal, then of him in human form;
+            his jaw drops slightly open in surprise, then closes as he hangs his head sadly.</sd>
+         
+         <sd>In <location>the white room</location>, <char>Raven</char> has not turned her face from the wall, though she
+            has put down the shield she used to block <char>Starfire</char>. Red pulses issue from
+            the area of her throat; close-up of her neck, where the brooch on her cloak is going
+            off. She puts a hand up to cover it, revealing that she now wears white wrist guards
+            rather than black.</sd>
+         
+         <sd>Cut to a long shot of <location>the Tower</location>. Inside, <char>Cyborg</char> sits in <location>the operations
+            center</location> and ponders the wreck his life has become. Suddenly his eye implant flickers red,
+            responding to the call. He gets to his feet and starts out the door, but the cables in
+            his back pull taut and stop him. He gasps softly and looks back over his shoulder; pan
+            to the power source that anchors him to this place.</sd>
+         
+         <sd><setNote shot="yes">Cut to the exterior of <location>the former museum</location>, whose sign out front now identifies it as
+            <location>Metro Art Technologies</location>.</setNote> Inside, two armed guards stand frozen in ice among the computer
+            equipment.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr>
+            <sd>from o.c.</sd> Tick-tock.</sp>
+         
+         <sd>Pull back. This used to be <location>the gallery</location> full of clocks; he is at the far end of it.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> Tick-tock. <sd>Close-up; he is welding the regulator
+               back onto his chest.</sd> Just a few more seconds, and I shall finally-</sp>
+         
+         <sd>The sentence is cut off when a short staff flies into view and strikes the tool from
+            his hand. Close-up of it in flight, returning nextly to <char>Nightwing</char>'s hand.
+            He and <char>Starfire</char> are at the balcony railing, and she has starbolts ready to
+            go in both hands.</sd>
+         
+         <sp><spkr ref="Nightwing">Nightwing</spkr> The future will have to wait. <sd>extending
+               staff</sd> You just ran out of time.</sp>
+         
+         <sd>With a frustrated growl, <char>Warp</char> brings up his shoulder lasers and fires off
+            a few rounds that send the two heroes diving away. <char>Nightwing</char> scales a
+            handful of explosive discs at him, <char>Starfire</char> unloads a blast, and he uses a
+            force field to stop their onslaught. The two come down to ground level as he drops the
+            barrier and the smoke clears. Now he gives them both barrels; they rush in closer, and
+               <char>Starfire</char> fires off a shot that he deflects just as he did twenty years
+            earlier. This time, though, she gets out of the way of the ricochet.</sd>
+         
+         <sd><char>Nightwing</char>, meanwhile, is charging ahead through <char>Warp</char>'s laser
+            blasts. Silhouette view, slow motion: he is in mid-leap, bearing down on the
+            time-jumping thief, and the end of his staff shatters one of the two lasers. Normal
+            view, normal speed: the former Titan lands behind him, and <char>Warp</char> turns
+            around only to get a starbolt in the back that bowls him over. He fires his remaining
+            laser at <char>Starfire</char>, who leaps away, and then turns his attention back to
+               <char>Nightwing</char>. The latter is jumping in again, staff at the ready, and he
+            brings it down in a mighty overhead swing that just misses <char>Warp</char>. One laser
+            blast after another is batted away without breaking the shaft this time; next the
+            black-clad fighter starts swinging for the fences, forcing <char>Warp</char> to back up
+            as he blocks each strike.</sd>
+         
+         <sd><char>Nightwing</char> fights like a bojutsu master on speed, his staff flashing
+            everywhere almost at once. One final roundhouse finds its mark and sends
+               <char>Warp</char> to the ground; <char>Nightwing</char> and <char>Starfire</char>
+            step up to him as she winds down her starbolts. The villain, however, just grins and
+            adjusts the aim of his working laser. A shot goes straight up to the roof and blows a
+            hole through it, dumping in a pile of snow and rubble that buries
+            <char>Starfire</char>.</sd>
+         
+         <sp><spkr ref="Nightwing">Nightwing</spkr>
+            <char ref="Starfire">Star</char>!</sp>
+         
+         <sd>He is blasted away; cut to <char>Warp</char>, who has used his wrist weapon to do this
+            job. He retracts it and runs across the place to pick up the welding torch that was
+            knocked out of his hand. Before he can do any more repair work, though, a mighty blast
+            from <char>Cyborg</char>'s cannon connects squarely with his chest and launches him over
+            the length of the place to slam down behind a cabinet. <char>Starfire</char>, having
+            been dug out of the rubble, and <char>Nightwing</char> look confusedly back toward the
+            source, and the camera cuts to the bionic man himself, on the scene and free of the
+            wiring that had held him in place. His circuitry glows blue with life as he lowers the
+            cannon.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> Boo-yah.</sp>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <char>Cyborg</char>! <sd>She flies over to him.</sd> You are repaired!</sp>
+         <sd><char>Nightwing</char> joins her.</sd>
+         <sp><spkr ref="Nightwing">Nightwing</spkr> Glad you could make it.</sp>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr> Wouldn't have missed it. Now who said y'all could
+            start without me?</sp>
+         
+         <sd>Pull back to ground level. <char>Warp</char> steps partway into view near the
+            camera.</sd>
+         <sp><spkr ref="FWarp">*Warp</spkr>
+            <sd>from o.c.</sd> So sorry.</sp>
+         
+         <sd>Cut to him, holding up a timer device like the one he used to drain
+            <char>Cyborg</char>'s power cell back in the day.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> Perhaps I should finish you first!</sp>
+         
+         <sd><char>Beast Boy</char>, as a lion, charges in and rakes his claws along the gold armor
+            to send sparks up from it. <char>Warp</char> raises his arm and brings the blaster up
+            from his wrist-but before he can use it, <char>Raven</char>'s powers exert themselves
+            over the hand, then the whole body, and he is flung back to the far wall. The four
+            heroes look that way, completely at a loss, and see her "soul self" materialize from the
+            floor. It rises high into the air, and the black bird outline swirls to become the
+            telekinetic former Titan. Under the cloak, her outfit is still black.</sd>
+         
+         <sp><spkr ref="FRaven">*Raven</spkr> Nobody hurts my friends.</sp>
+         
+         <sd>She backs up to join the others. <char>Beast Boy</char>, back in human form, looks up
+            at <char>Nightwing</char>'s full head of hair and rubs his own bald scalp
+            enviously.</sd>
+         
+         <sp><spkr ref="FBeastBoy">*Beast Boy</spkr> Dude, that is so unfair.</sp>
+         
+         <sd><char>Warp</char> activates the regulator, now back on his chest, to open a wormhole
+            and turn it black.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> It seems my time has come.</sp>
+         
+         <sd><char>Nightwing</char> hurls something at him; he counters with one of his own.
+            Close-up of the first weapon-a compact device with wings folded in by the body; these
+            flick out after a moment to show the entire thing similar in design to
+               <char>Robin</char>'s birdarangs. <char>Warp</char>'s disc moves into view,
+            approaching, but is sliced neatly in half by one wing. The device slams into his
+            regulator and cracks it; electricity crackles all over his body as he begins to grow
+            younger before our eyes.</sd>
+         
+         <sp><spkr ref="FWarp">*Warp</spkr> Uh!?! No! Noooo! NOOOOOOO!!</sp>
+         
+         <sd>As he ages in reverse, his body shrinks and his outfit starts to flap emptily. In
+            addition, the pitch of his voice goes higher and higher. Finally the sparks stop
+            spitting and the armored suit lies deflated on the floor; no head is visible in the
+            helmet. With the other Titans watching, totally mystified, <char>Beast Boy</char>
+            reaches down and pulls the breastplate away. Underneath it is <char>Warp</char>, now a
+            screaming baby.</sd>
+         
+         <sp><spkr ref="FBeastBoy">*Beast Boy</spkr> Okay. I am not changing any diapers.</sp>
+         
+         <sd>Pan from them to the wormhole, which is starting to close.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg</spkr>
+            <sd>to <char>Starfire</char></sd> We gotta get you home. Come on!</sp>
+         
+         <sd>He pulls the regulator free and fits it to the muzzle of his cannon. A sustained blast
+            hits the wormhole, which is nearly closed, and forces it back to its original size.</sd>
+         
+         <sp><spkr ref="FCyborg">*Cyborg </spkr>I'm redirecting the wormhole. <sd>Cut to
+                  <char>Starfire</char> and <char>Nightwing</char>; he continues o.c.</sd>
+            <char>Starfire</char>, go!</sp>
+         
+         <sd>She steps uneasily toward it, but stops to look back pleadingly at her former
+            friends.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr> Please, must this really be our future? <sd>No
+               answer.</sd> Is there nothing I can do to change it?</sp>
+         <sd><char>Nightwing</char> moves up to look her in the eye; close-up of both.</sd>
+         <sp><spkr ref="Nightwing">Nightwing</spkr> I'm sorry, <char ref="Starfire">Star</char>.
+            There isn't time.</sp>
+         
+         <sd>He takes her hand and places the Clock in it-the artifact that started this whole mess
+            two acts and two decades ago-and she lowers her head for a moment. Raising it as he puts
+            a hand on her shoulder, she gives him a tender smile with her eyes full of tears. He
+            takes a few steps back to join the rest of the old crew, the last thing she sees as she
+            moves into the black gateway. It closes behind her and winks out.</sd>
+         
+         <sd>A flash of white, and we are back in the time-traveling passage. A single clock,
+            running backward, floats toward the camera until the center attachment point for its
+            hands fills the screen with black. Now a second flash puts us back in <location>the museum gallery</location>
+            at the present time. <char>Warp</char> is about to escape through the wormhole with the
+            Clock.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> Ta-ta, Titans. I have enjoyed our time together, but I've
+            got a very bright future ahead of me.</sp>
+         
+         <sd>Same camera movements and actions as before: he starts through, but she makes her leap
+            straight at him.</sd>
+         
+         <sp><spkr ref="Warp">Warp</spkr> What?</sp>
+         
+         <sd>She plows into him; both go through the wormhole; <char>Robin</char> jumps after them
+            but misses as it closes up. New cut: he lands near the camera, which is at ground level
+            and pointing back toward <char>Cyborg</char> and <char>Beast Boy</char>.</sd>
+         
+         <sp><spkr ref="Robin">Robin</spkr>
+            <char>Starfire</char>!</sp>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr> Um, where did she-</sp>
+         
+         <sd>A flash fills <location>the gallery</location>, followed by a second wormhole that opens behind him and
+               <char>Cyborg</char>. <action mrkr="Starfire" with="all" move="4" place="muse"/><char>Starfire</char> is dumped out to land in a huddled
+            kneeling position, cradling the Clock, and the three boys lean in.</sd>
+         
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr> Dude!</sp>
+         <sp><spkr ref="Cyborg">Cyborg</spkr> Whoa!</sp>
+         <sp><spkr ref="Robin">Robin</spkr>
+            <char ref="Starfire">Star</char>! What happened?</sp>
+         <sd>The wormhole closes.</sd>
+         <sp><spkr ref="Starfire">Starfire</spkr> History said it disappeared. <sd>She straightens
+               up, showing the Clock intact.</sd> But history was wrong!</sp>
+         
+         <sd>They can only stare thunderstruck at this instant reversal of fortune and recorded
+            evens. <setNote shot="yes">Dissolve to the exterior of <location>the Tower</location>.</setNote> It is later in the day-that is, the modern
+            day when this episode began.</sd>
+         
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <sd>from inside</sd> Then <char>Nightwing</char> handed me the Clock- <sd>Cut to her in
+               <location>the operations center</location>.</sd> -and I entered the vortex.</sp>
+         
+         <sd>Cut to behind her; she is addressing the other four Titans. <action mrkr="BeastBoy" with="all" move="3" place="tower"/><char>Beast Boy</char>'s
+            cheeks are streaked with tears. Long silence as they turn over the whole out-there
+            account of future events in their minds.</sd>
+         
+         <sp><spkr ref="Raven">Raven</spkr> Whoa.</sp>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr> Bald?! <sd>tearing out most of his hair</sd>
+            You're telling me I'm going to be bald?!</sp>
+         <sd>He whines a bit.</sd>
+         <sp><spkr ref="Cyborg">Cyborg</spkr> Guess you were right about all that Rekmas stuff.</sp>
+         <sp><spkr ref="Robin">Robin</spkr> I don't want us to drift apart. Does it all have to
+            happen? Isn't there anything we can-</sp>
+         <sd>Cut to <action mrkr="Starfire" with="all" move="5" place="tower"/><char>Starfire</char>.</sd>
+         <sp><spkr ref="Starfire">Starfire</spkr> Our friendship has already changed
+               <char>Warp</char>'s past. I believe it can also change our future.</sp>
+         
+         <sd>One by one, the loose bells from the string that broke under <action mrkr="Cyborg" with="all" move="3" place="tower"/><char>Cyborg</char>'s feet
+            float up in <action mrkr="Raven" with="all" move="3" place="tower"/><char>Raven</char>'s influence.</sd>
+         
+         <sp><spkr ref="Raven">Raven</spkr>
+            <sd>from o.c.</sd> So... <sd>Cut to her; they are reassembling themselves.</sd> ...is it
+            too late to do this festival-of-friendship thing?</sp>
+         <sp><spkr ref="Starfire">Starfire</spkr>
+            <sd>ecstatically</sd> Oh, it's never too late!</sp>
+         
+         <sd><char>Raven</char> levitates strings down around <char>Beast Boy</char>'s and
+               <char>Cyborg</char>'s necks; she is already wearing one of her own, and the
+            shape-shifter's hairline has fixed itself.</sd>
+         
+         <sp><spkr ref="Cyborg">Cyborg</spkr>
+            <sd>in <char>Raven</char>'s ear; her bells jingle</sd> HAPPY BLORTHOG!!</sp>
+         <sp><spkr ref="BeastBoy">Beast Boy</spkr> I thought it was "Blort-hog."</sp>
+         <sp><spkr ref="Raven">Raven</spkr> Okay, I feel like a wind chime.</sp>
+         
+         <sd><char>Starfire</char> puts a string around <action mrkr="Robin" with="all" move="3" place="tower"/><char>Robin</char>'s neck; tilt up from it
+            to his face.</sd>
+         
+         <sp><spkr ref="Robin">Robin</spkr>
+            <sd>cocking an eyebrow</sd> So...<char>Nightwing</char>, huh?</sp>
+         
+         <cue>Dissolve to the exterior of <location>the Tower</location> and fade to black.</cue>
+      </act>
+   </body>
+</root>

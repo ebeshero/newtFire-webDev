@@ -1,0 +1,5 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $letters := collection('/db/letters')
+return count($letters/TEI/text//persName)
+

@@ -1,0 +1,31 @@
+xquery version "3.1";
+
+declare variable $fileContent := string-join(
+
+let $discog := collection('/db/brandnew/Albums')
+let $albums := $discog//album/string()! normalize-space()
+let $distAlbums := $albums => distinct-values()
+
+for $nameIndex in $distAlbums
+let $songName := $discog//title[following-sibling::album = $nameIndex]/string() ! normalize-space()
+let $distName := $songName => distinct-values()
+
+for $bpmIndex in $distName
+let $songBPM := $discog//title[following-sibling::album = $nameIndex]/title[following-sibling::tempo/@bpm = $bpmIndex]/string() ! normalize-space()
+let $distBPM := $songBPM => distinct-values()
+
+(:let $songBPM := $discog//tempo/@bpm/string()
+let $distBPM := $songBPM => distinct-values()
+
+for $bpmIndex in $distBPM
+let $songKey := $discog//tempo[@bpm = $bpmIndex]/following-sibling::key/string()
+let $distKey := $songKey => distinct-values():)
+
+order by $bpmIndex
+
+return string-join(($nameIndex,"in album:", $albums, $bpmIndex, "Song's BPM"), "&#x9;"), "&#10;");
+
+let $fileName := "brandNewBPMandHarmony.tsv"
+let $doc-db-uri := xmldb:store("/db/bab184/", $fileName, $fileContent, "text/plain")
+return $doc-db-uri 
+(: Output at http://newtfire.org:8338/exist/rest/db/bab184/brandNewBPMandHarmony.tsv :) 

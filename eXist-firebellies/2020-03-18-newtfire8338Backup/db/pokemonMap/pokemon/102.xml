@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><pokemon>
+    
+    <info>
+     <dexNum num="102">102</dexNum>
+     <name>Exeggcute</name>
+     <typing type="Grass Psychic">Grass Psychic</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Safari Zone">Safari Zone<lvl min="24" max="25"> level 24-25</lvl><rate perc="20"> encounter rate: 20%</rate></landmark>
+    </locations>
+    
+    </pokemon>

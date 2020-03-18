@@ -1,0 +1,22 @@
+xquery version "3.1";
+declare variable $ThisFileContent as element ():=
+<html>
+    <head><title>Song Length</title></head>
+    <body>
+        <table>
+        <tr><th>Time</th><th>Song Title</th></tr>
+{let $BNsongs := collection('/db/brandnew/Albums')
+let $title := $BNsongs//title
+for $t in $title
+let $length := $t/following::songLength
+return <tr><td>{$length}</td> <td>{$t}</td></tr>}
+
+
+</table></body>
+</html>
+;
+
+
+let $filename := "bnTable.html"
+let $doc-db-uri := xmldb:store("/db/rap159/", $filename, $ThisFileContent)
+return $doc-db-uri 

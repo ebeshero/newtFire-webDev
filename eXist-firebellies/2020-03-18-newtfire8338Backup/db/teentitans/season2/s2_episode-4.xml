@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema_v2.rnc" type="application/relax-ng-compact-syntax"?><root>
+    <head>
+        <episode>ONLY HUMAN</episode>
+        <writer>Adam Beechen </writer>
+        <director>Alex Soto</director>
+        <storyboard>Sam Liu, Irineo Maramba, Scooter Tidwell, Chap Yaep</storyboard>
+        <animation>Dong Woo Animation Company, Ltd.</animation>
+        <source>https://transcripts.fandom.com/wiki/Only_Human</source>
+    </head>
+    <characterList>
+        <charList type="recurring" subtype="titan" id="Raven">Raven</charList>
+        <charList type="recurring" subtype="titan" id="Cyborg">Cyborg</charList>
+        <charList type="recurring" subtype="titan" id="Robin">Robin</charList>
+        <charList type="recurring" subtype="titan" id="BeastBoy">Beast Boy</charList>
+        <charList type="recurring" subtype="titan" id="Starfire">Starfire</charList>
+        <charList type="nonrecurring" id="Voice">Voice</charList>
+        <charList type="nonrecurring" subtype="villain" id="Atlas">Atlas</charList>
+        <charList type="nonrecurring" id="Spike">Spike</charList>
+        <charList type="nonrecurring" id="Reflection">Cyborg's Reflection</charList>
+    </characterList>
+    <locationList>
+        <locList id="tower">Titans Tower</locList>
+        <locList id="shore">Island Shore</locList>
+        <locList id="stadium">Football Stadium</locList>
+        <locList id="lockerRoom">Underground Locker Room</locList>
+        <locList id="city">City Street</locList>
+    </locationList>
+    <body>
+<act n="0">
+<title>Prologue</title>
+
+<sd><setNote shot="yes">Opening shot: the exterior of <location>Titans Tower</location></setNote>, seen from slightly above roof level during the day. Zoom in slowly to the sound of blows landing, then cut to an extreme close-up of a target fighting dummy being pummeled by<action mrkr="Robin" with="all" move="1" place="tower"/><char>Robin</char> in the <location>gym</location>. Alternate twice between closer zooms on the <location>Tower</location>'s top floor and the spiky-haired Titan attacking the bag. On the last of these gym shots,<action mrkr="Starfire" with="all" move="1" place="tower"/><char>Starfire</char> flies past, followed by a barrage of lasers and the shooters; several small flying spheres. Flipping onto her back, she throws a handful of starbolts and turns one after another into scrap metal. She stops in midair to look back at one explosion, only to find three more spheres coming at her from that direction; she bails out.</sd>
+
+<sd>Extreme close-up of<action mrkr="Raven" with="all" move="1" place="tower"/><char>Raven</char>'s closed eyes.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Azarath Metrion Zinthos!</sp>
+
+<sd>As she speaks the incantation, pull back to an overhead view. She levitates three long, thick poles and sends them flying toward<char>Starfire</char>, who weaves neatly through them. The shooters, however, crash into them head on and wipe out very badly. From here, cut to a digital readout panel on the wall. It shows a set of bar graphs, a human outline, and the number 002 next to the letters "BST BOY." Pan/tilt down to a nearby treadmill, on which <action mrkr="BeastBoy" with="all" move="1" place="tower"/><char>Beast Boy</char> is running as a turtle: the number is his speed in miles per hour. Back to the display, the digits ticking up from 005 to 006; he turns into a bighorn sheep and starts to move faster. Now the readout quickly increases from 032 to 038, and he transforms into a cheetah and hits the gas.</sd>
+
+<sd>Pull back across the gym as a wrecked laser sphere bounces across the floor.<char>Starfire</char>'s boots touch down in front of the treadmill; tilt up to her face, which she angles off in another direction to see what else is going on. Large metal slabs are being loaded onto an enormous sled, and the camera tilts down to show<action mrkr="Cyborg" with="all" move="1" place="tower"/><char>Cyborg</char> straining to hold the immense burden aloft. His forearm panel shows a reading of 93% and separate bar graphs marked R and L-power output from each side of his body and overall. It ticks up to 95% as he groans under the load, sweat pouring down his face.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Just a...little more...</sp>
+
+<sd>Another weight is added to the stack. Now<char>Robin</char> stops attacking the dummy and crosses the gym to watch.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Come on,<char>Cyborg</char>, push!</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> What's it...look like I'm doing</sp>
+
+<sd><char>Beast Boy</char>, back in human form, and<char>Raven</char> come over.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Punch it, Cy! Straight through the roof</sp>
+
+<sd><char>Starfire</char> joins them.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Yes! Inform that large mass of metal who is the boss!</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Uh...go,<char>Cyborg</char>.</sp>
+
+<sd>His voice screaming as loudly as his muscles, he puts every bit of effort he can muster into keeping the pile up. Now all the other Titans cheer at once, but his panel notches up to 100%, with the R and L bars indicating full power.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> It's no good! Shut it down!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> No way,<char>Cyborg</char>! I won't let you quit! Come on, push!</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>shaking badly</sd> I can't!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Yes, you can!</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> No...I...CAN'T!!</sp>
+
+<sd>His knees finally start to buckle, and with a yell of agony, he collapses and is thrown clear of the sled as it crashes to the floor. He glares up to find<char>Robin</char> extending a hand to get him vertical;<char>Beast Boy</char> leans into view, holding up a judge's scorecard with a 9 on it.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> I give you a nine for the dive<sd>shows a 2 card instead</sd>but a two for the landing.</sp>
+
+<sd><char>Robin</char> throws a very dirty look his way, complete with throbbing forehead vein, and he backs off. Now<char>Cyborg</char> stands up, ignoring the proffered hand, and shoulders his way past the two.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Nobody asked you.</sp>
+
+<sd>They stare after the departing armor-plated back with obvious concern; pull back to show the girls watching him leave as well. Fade to black.</sd>
+
+
+<cue>OPENING THEME</cue>
+</act><act n="1">
+<title>Act One</title>
+
+<sd><setNote shot="yes">Opening shot: the closed door of the <location>gym</location></setNote>, seen from the hall. It slides open to let out an angry, frustrated<char>Cyborg</char>, then again to allow<char>Robin</char> to pass.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr><char>Cyborg</char>! What happened back there?</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Get off my back.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> I'm on your side, remember? I was just trying to get you to kick it up a notch.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> I don't have another notch! I'm not like you, okay? When I say I can't, I can't!</sp>
+
+<sd>He takes a couple of steps off down the hall, then stops and sighs wearily.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> When I was an athlete, when I was human, I loved pushing my limits. Getting stronger, faster, better, just by trying harder than I ever had before. My coaches would always tell me to give a hundred and ten percent. And I always did.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> You still can.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> My muscles are mechanical now. Limits are built in. No matter how hard I try, a hundred percent is all I've got.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> I didn't know.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Well, now you do.</sp>
+
+<sd>He strides off down the hall. Dissolve to a shot of a rocky outer-space landscape. Two large robots, one blue and the other yellow, charge into view and begin to slug it out. After a few seconds at close quarters, Blue throws Yellow to the ground. Pull back to show this fight going on in the <location>operations center</location>, on the window/screen:<char>Cyborg</char> is playing GameStation by himself. The other four Titans slide into view to watch from <location>the kitchen</location>. He pays them no mind, but keeps hammering at the controller buttons with a very sour look on his face.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Whoa. And I thought<char>Raven</char> looked grumpy</sp>
+
+<sd>She does now.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Our friend is more dismal than the swamp moons of Mulwark. Measures must be taken.</sp>
+
+<sd>She goes to the couch and pops up grinning behind him.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> To replenish your heart with warmness and cheer, I offer a traditional Tamaranean folk song.</sp>
+
+<sd>She sucks in a huge breath and lets it out in the form of an insanely shrill wail at eardrum-shattering volume. Sight gag: her head inflates as she "sings" until all we can see is the inside of her mouth. It then shrinks a few notches, stopping at slightly bigger than normal; the background has gone red behind her and<char>Cyborg</char> yells in response. His head grows as hers did; tools and spare parts go flying out of his mouth.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> STARFIRE, CUT IT OUT!!</sp>
+
+<sd>The view cracks vertically between them and falls away to show the normal background again; the control drops back into his hands, while she stands frozen with her hair blown back from her head. On screen, Yellow does a victory dance over supine Blue as "Cyborg: 1-Atlas: 1" flashes up, with the word "WINNER" in red below hem. Now he growls angrily at her as veins throb all around him: her interruption made him lose the round, and she ducks out of sight. As the video game combat resumes,<char>Beast Boy</char> puts himself in front of the screen with a broad grin.<char>Cyborg</char> is not amused.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>holding up a cookie</sd> Okay, dude. Keep your eye on the cookie.</sp>
+
+<sd>He tosses it into his mouth, leaps high, and quickly changes into a whale to shoot the snack from his blowhole. Sight gag: behind him, the background is replaced by circus tents that slide in. Becoming an elephant next, he sucks the cookie into his trunk. The gag ends, and he drops to the floor in human form except for his nose; this retracts in an instant, allowing him to stick out his tongue with the cookie sitting neatly on it.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Ta-da!</sp>
+
+<sd><char>Cyborg</char> boils over, turning red from the bottom up as veins pop all over his face, and wraps one huge hand around the green joker's head. Eyeballs, tongue, and cookie protrude between the fingers; steam rises as well due to drool touching the red-hot surfaces. The next thing<char>Beast Boy</char> knows, he has been flung backward to crash down behind the rest of the group. Tilt down to him on the floor.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>groaning</sd> You're supposed to laugh! What do I have to do, make it fly out my--?</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>pushing the others aside</sd> Let me try.</sp>
+
+<sd>She pops up uneasily behind<char>Cyborg</char>, whose temperature is back to normal. Close-up of her.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Uh...</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> I don't want to talk about it.</sp>
+
+<sd>Sight gag: he appears in "Super Deformed" style on a hilltop, wearing an army helmet and standing amid a battery of anti-aircraft guns. He aims them into the sky and fires off a volley; cut to the air, where<char>Raven</char>, normal style, in leather aviator helmet, goggles, and scarf, is piloting a World War I biplane. The shells explode all around her, after which the gag ends and the camera cuts to<char>Robin</char> and<char>Beast Boy</char>, to the sound of a plane crash. Charred from head to toe, SD<char>Raven</char> floats down with a parachute and returns to normal style.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> I tried.</sp>
+
+<sd>She cleans herself up in a tick, and question marks pop up over the heads of all three. The source of this puzzlement is revealed when<char>Starfire</char> pops up in front of them. In her arms is something that looks roughly like an alien set of bagpipes; the very sight of them is enough to set<char>Beast Boy</char>'s eyes spinning crazily.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Tamaranean folk songs are even more cheerful when accompanied by the gorka pipes.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Uh,<char>Starfire</char>! Maybe he just needs some time alone. Come on, guys.</sp>
+
+<sd>He ushers the three out of <location>the operations center</location>, nudging the instrument as he does so to produce a small noise of air being forced out.<char>Cyborg</char> does not even budge from his spot on the couch. The two robots trade blows on screen.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Aw, you picked the wrong day to come online and mess with Cyborg
+
+    <sd>to himself</sd> 'Least I can still push myself in cyberspace.</sp>
+
+<sd>More back-and-forth, which ends with<char>Cyborg</char>'s blue robot slamming<char>Atlas</char>' yellow one into the dirt. New message: "Cyborg: 2-Atlas: 1-WINNER." Cut to just behind the screen; he leans toward it.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Boo-yah
+
+    <sd>plants his palms on the screen</sd> I don't know who you are or where you're from, but,<char>Atlas</char>, I just kicked your virtual butt!</sp>
+
+<sd>With a James Brown yell, he sweeps to his feet and whirls across the screen, which goes black behind him, and stops at its center. Spotlights switch on to illuminate a stage, complete with microphone on stand; he stops at this, doing the splits and a victory dance.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Go,<char>Cyborg</char>! Yo, Cy!</sp>
+
+<sd>He knocks the mic stand over, sending up a squeal of feedback, and kneels as<char>Beast Boy</char> slides in to drape a towel over him. The shape-shifter backs up; suddenly we are back in the operations center, and the following words are typed onto the screen as an angry voice speaks them.</sd>
+
+<sp><spkr ref="Voice">Voice</spkr> No one defeats<char>Atlas</char>! I demand a rematch.</sp>
+
+<sd>The victor stands, shaking off the towel, and takes up his controller to peck out a reply. Close-up of the screen; the words appear as he says them.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> Anytime, anywhere.</sp>
+
+<sp><spkr ref="Voice">Voice</spkr> <sd>in time with typing</sd> How about here and now?</sp>
+
+<sd>The letters go red and melt away, as does the entire screen a moment later. When the view clears, the reason quickly becomes visible; <charDesc ref="Atlas">an enormous red-and-yellow robot, looking very much like the character<char>Cyborg</char> beat, with a large red A at the waist and the glowing muzzle of a blaster in place of the right hand.</charDesc> It perches at the sill of the ruined window. This is<char>Atlas</char>. As<char>Cyborg</char> stands stunned in the growing shadow, the left hand shoots in and hauls him up. The robot's voice is the same one heard a moment ago.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr><char>Atlas</char> is ready. Let the rematch begin!</sp>
+
+<sd><char>Cyborg</char> is flung out through the hole; cut to the exterior of the <location>Tower</location> as he sails out screaming and splashes down off the <location>island shore</location>. <action mrkr="Cyborg" with="none" move="2" place="shore"/>After he gets to his feet,<char>Atlas</char> leaps down to face him.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> You do not want to start with me, man, especially not over a stupid video game.</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr><char>Atlas</char> never loses.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> First time for everything.</sp>
+
+<sd>They rush at one another.<char>Atlas</char> raises both fists with a roar and brings them down on the water surface, creating a line of waves that extends ahead and behind.<char>Cyborg</char> is thrown backward, but soon moves in again with a string of body blows that forces the opponent to give ground. This comes to an end when one of his fists is caught in a huge yellow hand and pushed aside;<char>Atlas</char> grins down at him before delivering a king-daddy haymaker. The impact sends waves spreading over the bay in all directions. Now the other Titans gather at the windowsill.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr><char>Cyborg</char>?</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Looks like he went out for some air</sp>
+
+<sd>The brawl continues.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr>Titans! Go!</sp>
+
+<sd>They are over the sill and charging toward <location>the shore</location> in no time flat, but before they can reach the fight, <charDesc ref="Spike">a barrel-chested fellow descends into view, using a jet pack on his back, to block their approach. He wears shorts, a long-sleeved blue jersey, matching cap, and a tool belt; one cheek sports a bandage</charDesc>. This is<char>Spike</char>, a.k.a. the Mechanic.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr>Sorry, folks, can't let you interrupt the master. This match is one on--</sp>
+
+<sd><action mrkr="Robin" with="S BB R" move="2" place="shore"/> Robin gets a double handful of fabric and throws him to one side, clearing the path for him and the other Titans to charge again.<char>Atlas</char> throws a punch that dumps<char>Cyborg</char> into the water on his face; before he can stand, though, he is seized and thrown against the rocky slopes near the <location>shore</location>. Just after he falls away,<char>Atlas</char> wraps a set of fingers around him and lets fly; the yelling Titan sails up, neatly through the hole in <location>the operations center</location> window, and out the other side of <location>the Tower</location>. A loud splash marks his meeting with the bay.</sd>
+
+<sd>Cut to a close-up profile of<char>Atlas</char> and pull back slowly.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Goodbye, loser</sp>
+
+<sd>Something explodes in his face.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> Hope you came looking for a fight, 'cause you definitely found one!</sp>
+
+<sd>Cut to him in mid-leap; he hurls several explosive discs, but<char>Atlas</char> raises both hands to block them and their blasts do no damage.<action mrkr="Starfire" with="RB BB R " move="2" place="shore"/><char>Starfire</char> yells and zips past for a strafing run, but her shots are also ineffective. The metal face grins evilly up toward her, but is soon put into shadow; pull back to show a huge wall of water bearing down on him under<action mrkr="Raven" with="S BB RB" move="2" place="shore"/><char>Raven</char>'s control. She floats up above the crest and sends the tsunami crashing down on<char>Atlas</char>.</sd>
+
+<sd>The water drains away, leaving the robot still standing and grinning, but an approaching yell from the o.c.<action mrkr="BeastBoy" with="S RB R" move="2" place="shore"/><char>Beast Boy</char> catches him by surprise. Cut to the green hero, plunging toward the camera from overhead, and pull back to ground level, now a whale, he comes down on<char>Atlas</char> like a few hundred tons of bricks. Broad smiles from<char>Robin</char>,<char>Starfire</char>, and<char>Raven</char> on the shore, looking out at their now-oversized colleague, then cut to an extreme close-up of his eye. It turns downward, widening in surprise, and his vast bulk is slowly hoisted up by<char>Atlas</char>. Chuckling savagely, he throws the mammal hard toward the island. Resuming human form on the fly and yelling all the way across,<char>Beast Boy</char> drops neatly into<char>Robin</char>'s arms.</sd>
+
+<sd>Close-up of<char>Atlas</char>, pulling back.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Humans provide no challenge.</sp>
+
+<sd>The right fist retracts into the arm to expose the blaster seen earlier, and a shot rips toward the four spectators, who scatter before it.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Mechanic!
+
+    <sd>holds up his right arm</sd> Refit!</sp>
+
+<sd><char>Spike</char> grins, flies over, and quickly switches out a forearm panel.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> Looking sharp out there,<char>Atlas</char>.
+
+    <sd>The retracted fist extends.</sd> Keep up the good--</sp>
+
+<sd>Before he can finish the sentence, the combatant is dashing back into the fight. A landing on the <location>shore</location>, four blasts from the cannon, and one by one the other Titans roll backward, each now imprisoned within a large, spherical force field.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> No challenge at all.</sp>
+
+<sd>Cut to a pan across the trapped heroes, all of whom are trying their best to break out.<char>Beast Boy</char>'s swipe at the sphere wall as a tiger,<char>Raven</char>'s dark energy,<char>Starfire</char>'s point-blank starbolts,<char>Robin</char>'s punches, all are fruitless efforts.<char>Atlas</char> steps onto the island and is met by a glare from the team leader.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> But you will make amusing trophies.</sp>
+
+<sd>A sonic cannon blast connects high on the shoulder. The captor glares back and finds<char>Cyborg</char> now on the shore, his weapon locked and loaded.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Let 'em go!</sp>
+
+<sd><char>Atlas</char> points his own blaster and fires. The shot hits<char>Cyborg</char>'s arm and knocks out the cannon; he raises its smashed muzzle to his face and stares in disbelief.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Hold!<char>Atlas</char> will defeat you, but later, in a fair fight. No weapons, no friends.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> No! We finish this now!</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> As you wish.</sp>
+
+<sd>He puts the cannon muzzle up against<char>Robin</char>'s sphere, ready to make good on the second condition for that fair fight.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr><char>Cyborg</char>! We'll be all right! Get your strength back, then get<char>Atlas</char>!</sp>
+
+<sd>Close-up of the underdog Titan, who thinks this over very hard as a bell is heard ringing from o.c. Cut to a patch of sky; a platform descends into view, resembling one corner of a boxing ring.<char>Spike</char> stands behind the post, operating the flight controls, and brings the rig behind<char>Atlas</char> to hover just above the ground.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>sits on his seat in front of the post</sd> The old <location>stadium</location>. Sunset.
+
+<sd>Extreme close-up, profile.</sd> Come, if you dare<sd>Pull back.</sd> and I will let you have your friends back.</sp>
+
+<sd>The platform and the four captives dematerialize. Cut to a close-up of<char>Cyborg</char>'s grimly determined face and fade to black.</sd>
+</act><act n="2">
+<title>Act Two</title>
+
+<sd>Opening shot: the exterior of the <location>Tower</location>, seen from ground level. Zoom in slowly on the hole in the top-floor window, then cut to a series of extreme close-ups of<action mrkr="Cyborg" with="none" move="3" place="tower"/><char>Cyborg</char>'s assorted circuit panels-on shoulder, arm, and head. Each snaps into place and glows bright blue. Next, we see him smacking a fist against his other palm, followed by a pair of eyes narrowed in icy fury; he has worked himself up for this fight, physically and otherwise. Pull back to show him heading out an open door. Before he reaches it, though, he stops and looks back over his shoulder; cut to his weight sled, hanging a few feet above the floor of the gym. Now his resolve diminishes somewhat as he turns to leave the<location> workout area</location>.</sd>
+
+<sd>Dissolve to an overhead view of a run-down <location>football stadium</location> and zoom in slowly, then cut to field level. It is now evening. Each of the four Titans' spheres has been mounted atop a large gold trophy cup, and<char>Spike</char> is making a few last adjustments to fix them in place.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> You can't hold us here forever</sp>
+
+<sd><action mrkr="Robin" with="BB R S" move="3" place="stadium"/>Inside his sphere, looking out.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> Now don't be a sore loser.<char>Atlas</char> is just better than you. Better than all of us</sp>
+
+<sd>Cut to outside<action mrkr="Starfire" with="RB BB R" move="3" place="stadium"/><char>Starfire</char>'s sphere on the next line.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Your<char>Atlas</char> is nothing but a...ZOLWARG TUBEK-PLIXING ZORDMORKER!!</sp>
+
+<sd>Sight gag: her head grows a few notches as she shouts these Tamaranean obscenities, and after she is done, SD<action mrkr="BeastBoy" with="S RB R" move="3" place="stadium"/><char>Beast Boy</char> rolls into view.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Yeah! What she said</sp>
+
+<sd>He rolls away and the gag ends.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> You watch your tone.
+
+    <sd>rises to face them</sd><char>Atlas</char> is the greatest. He deserves your respect.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> So...do we get bathroom breaks?</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>from o.c.</sd> Mechanic!</sp>
+
+<sd><action mrkr="Raven" with="RB BB S" move="3" place="stadium"/>Cut to just behind the handyman;<char>Atlas</char> sits on his floating platform near one of the locker room entrances, a short distance away.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Buff me</sp>
+
+<sd><char>Spike</char> grins.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> You got it, champ.</sp>
+
+<sd>He flies over and plies a rag on the broad metal back.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> Now remember, that<char>Cyborg</char>'s got a decent left hook. So keep an eye out for-</sp>
+
+<sd>Atlas' head swivels to face him.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>icily</sd> Never tell me what to do.</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> <sd>nervously</sd> Heh...yeah, uh...sure thing, chief.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> Yo, Goldilocks!</sp>
+
+<sd>The head turns slightly to look downfield. Sure enough, there is<action mrkr="Cyborg" with="all" move="4" place="stadium"/><char>Cyborg</char>, coming in from the other locker room at the far end of the <location>stadium</location>. He walks unhurriedly to the approximate location of the fifty-yard line, then stops and jerks his head from side to side to loosen up his neck.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Let's do this!</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>smugly</sd> I did not think you would come. Humans scare so easily.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> I'm only half human.</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> And half of nothing is still nothing. Mechanic!</sp>
+
+<sd>Close-up of one forearm. On the next line,<char>Spike</char> reaches into view and removes a panel from it, then does likewise on the other side.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>from o.c.</sd> I want a fair fight, human, so I shall willingly forgo my arsenal</sp>
+
+<sd>Pull back to frame both.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> Say, Tool Boy! While you're at it..
+
+    <sd>Cut to him.</sd> ...why don't you shut off his big fat mouth?</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> Nobody talks that way to--</sp>
+
+<sd>[Animation goof:<char>Atlas</char>' hands change from yellow to red during the previous sequence.]</sd>
+
+<sd>Before he can finish,<char>Atlas</char> is out of his seat and moving across the grass.<char>Cyborg</char> yells during his own charge,<char>Atlas</char> does the same, and both hurl themselves into the air toward each other. Cut to the four living trophies, who press themselves against the walls of their cells to watch as the camera shakes from the collision;<char>Spike</char> leans into view and stares openmouthed.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> You respect<char>Atlas</char>. Does he respect you?</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> Quiet, human!</sp>
+
+<sd><char>Cyborg</char> fetches up in the cheap seats and knocks out several rows of them. He comes to with an angry growl. Cut to<char>Atlas</char>, barreling straight up the steps; there is a white flash as he throws a punch, after which the camera shifts to outside the<location> stadium</location>'s upper level. A chunk crashes out in a cloud of dust, which clears to show the Titan hanging over the edge of a brand new hole by his fingertips. The blow was strong enough to drive him through the structure and almost clear down to the street.</sd>
+
+<sd>As<char>Atlas</char> stands waiting on the steps,<char>Cyborg</char> hauls himself back in and races down them with a growing snarl. The hit he delivers sends the giant robot to the turf, where he crashes down on his back, but<char>Cyborg</char> does not stop there. He leaps from the steps, both legs braced for a high-powered stomping attack, and the camera pulls back to the far sideline as he lands.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Yeah!</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> All right!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> All right, Cy!</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Kick the butt!</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> Go,<char>Atlas</char>! Take him down!</sp>
+
+<sd><char>Atlas</char> and<char>Cyborg</char> circle; the Titan dodges under a roundhouse punch and fires a string of body blows, but is stopped when<char>Atlas</char> grabs one of his fists.<char>Cyborg</char> is whisked off his feet and flung down hard, and the camera cuts to the support structure beneath ground level as he smashes through it from the force of that slam. The dust clears to show him lying at the edge of the new hole; he is promptly yanked back, and at field level,<char>Atlas</char> hurls him into the far wall.<char>Cyborg</char> stands where he hits, very badly dazed, and falls to all fours after a long moment. Not giving him any respite,<char>Atlas</char> rushes in. Cut to outside the <location>stadium</location> wall at ground level; the bionic teen comes crashing through it and sprawls on the sidewalk.</sd>
+
+<sd><char>Atlas</char> grins broadly down at him, and it takes only a moment for this taunting look to get him fired up again; he is on his feet with a loud growl and moving fast. Pull back across the field as the melee throws up enough dust to hide both of them from view, then cut to a long shot of the <location>stadium</location>. One after another, thick plumes rise from different spots within, each accompanied by a crash that shakes the camera. Night has fallen, and a full moon hangs over the scene.</sd>
+
+<sd>Dissolve to field level, a long shot of the two brawlers-some distance apart and trying to collect themselves for another go. Close-up of<char>Cyborg</char>, then of<char>Atlas</char>, then of<char>Cyborg</char> again. A beeping draws his attention down toward his forearm; cut to it: the power readout stands at 96%. He looks up in alarm and sees<char>Atlas</char> moving in fast once more. A huge punch sends him flying, but he soon recovers and deals a high jab to the robot's chin. The exchange of blows continues and rapidly turns against<char>Cyborg</char>, who staggers backward under the assault and comes back with a right hook that<char>Atlas</char> catches easily.</sd>
+
+<sd>Now they grapple,<char>Atlas</char> slowly pushing<char>Cyborg</char> back and making his feet grind the dirt. He looks at his forearm; close-up of the power readout, which has maxed out just as it did in the gym.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>from o.c.</sd> It seems you have reached your limit.<sd>Pull back to frame him on the end of this.</sd> But<char>Atlas</char> has power to spare.</sp>
+
+<sd>He increases the force of his grip and pushes<char>Cyborg</char> down to one knee, then laughs as the Titan tries with every scrap of his strength to stand again. One final punch finds its mark on his jaw and sends him through a graceless arc; cut to<char>Robin</char> and<char>Starfire</char>, who stare popeyed, and pan from them to the other two incredulous spectators and the grinning<char>Spike</char>.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr><char>Atlas</char>!</sp>
+
+<sd><char>Cyborg</char> hits the turf face first and tries weakly to get upright, while the metal behemoth towers over him.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> No one defeats Atlas</sp>
+
+<sd>He turns away.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Fine. You win. Now let my friends go.</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> No.</sp>
+
+<sd>This catches everyone on the sidelines flat-footed.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> But, boss..
+
+    <sd><char>Atlas</char> passes him...</sd> ...you said that..</sp>
+
+<sd>...and sits on his platform.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Your friends will remain as my trophies, and there is nothing you can do about it</sp>
+
+<sd><char>Starfire</char> gasps.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>beating on the sphere</sd><char>Cyborg</char>!</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Please!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Get up,<char>Cyborg</char>! Get up and fight! You can still beat him!</sp>
+
+<sd><char>Cyborg</char>, still tumbled on the ground, looks reproachfully toward the group for a moment and then turns his face away. His forearm panel is still showing maximum power on all fronts.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> No. I can't.</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Fool! Did you actually believe you could defeat<char>Atlas</char>? I am all robot...</sp>
+
+<sd>He,<char>Spike</char>, and the other Titans begin to sink out of sight on an unseen elevator. Extreme close-up of<char>Cyborg</char>'s bitter, beaten expression as he continues.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> ...and you are only human.</sp>
+
+<sd>The four captives stare in wordless amazement as they are carried past the level of the <location>field</location>. Cut to the edge of the descending lift, the camera pointing out at<char>Cyborg</char> and passing into the shadows beneath the <location>stadium</location> to black out the screen.</sd>
+</act><act n="3">
+<title>Act Three</title>
+
+<sd>Opening shot: an overhead view of one of the <location>stadium's locker rooms</location>, which has deteriorated as much as the rest of the facility. The sound of a video game is heard o.c., and the camera pans toward it to show<char>Atlas</char> sitting in front of a big-screen television. Behind him are several oil drums, some crumpled like soda cans. Close-up of the screen; we see the fighting game<char>Cyborg</char> was playing in Act One.<char>Atlas</char>' yellow robot deals a finishing blow to its opponent, smashing it to pieces, and stands erect in triumph.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>from o.c.</sd> Victory
+
+<sd>"GAME OVER" slides onto the screen; pull back to frame his controller.</sd><char>Atlas</char> wins again
+
+    <sd>Cut to him.</sd> Derrick Wyatt of East Gotham City, I dominate you.</sp>
+
+<sd>Pan slightly to bring the four trophies into view.<action mrkr="BeastBoy" with="S RB R" move="4" place="lockerRoom"/><char>Beast Boy</char> turns into a bighorn sheep to ram the wall of his sphere, then tries to chisel out as a woodpecker, then does another bighorn turn. Resuming human form next, he groans and staggers woozily about, the attempts left him with quite a thump on the noggin, before passing out. Close-up of<action mrkr="Raven" with="BB RB S" move="4" place="lockerRoom"/><char>Raven</char> and<action mrkr="Starfire" with="R RB BB" move="4" place="lockerRoom"/><char>Starfire</char>.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Give it a rest. You're starting to repeat yourself.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> But we must discover a way out.</sp>
+
+<sd>Pan to bring<action mrkr="Robin" with="R BB S" move="4" place="lockerRoom"/><char>Robin</char> into view. She tries a kick, but gets only a sore foot for her trouble and has to hop around on the other one.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Ow...ow...ow..</sp>
+
+<sd>Pull back;<char>Spike</char> flies over, a drum under each arm.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> There is no way out. Now be quiet, humans! Master's trying to relax.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>icily</sd> I am not human.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>to Spike</sd> But you are. You should be on our side.</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> I'm on the winning side.<char>Atlas</char> is the greatest. No one can defeat him. No one!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> If<char>Atlas</char> is so great, why does he treat you like a loser</sp>
+
+<sd>This gives him pause for a moment.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Mechanic! Oil!</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> <sd>a bit uncertainly, glancing at the Titans</sd> Coming right up, boss!</sp>
+
+<sd>He zooms over. Cut to a close-up of<char>Robin</char>, now very concerned for both his team's welfare and the assistant's state of mind, then dissolve to a long shot of the <location>stadium</location>. Tilt down from here an overhead view of a deserted <location>city street</location>;<action mrkr="Cyborg" with="none" move="5" place="city"/><char>Cyborg</char> is trudging along the sidewalk.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> How could I?</sp>
+
+<sd>Close-up of him. He is passing a long row of windows on a building's first floor.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> They were counting on me and...I just couldn't do it.<char>Atlas</char> was right.<sd>He stops to face his reflection.</sd> I am a loser.</sp>
+
+<sd>The image draws itself up to full height and speaks in a strong voice.</sd>
+
+<sp><spkr ref="Reflection">Reflection</spkr> So that's it, man? You're just gonna give up?</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> What else can I do? I gave everything I had. A hundred percent.</sp>
+
+<sp><spkr ref="Reflection">Reflection</spkr> Give more. Your friends are in trouble. You have to go back. You have to win!</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> I can't win.<char>Atlas</char> is stronger.<char>Atlas</char> is faster. He's just a better robot.</sp>
+
+<sp><spkr ref="Reflection">Reflection</spkr> But you aren't all robot. Half of you is human, and that's the half that can beat him!</sp>
+
+<sd>Now<char>Cyborg</char> is the one who gets jolted into thinking for a moment. Beeping from his forearm panel draws his attention; now it is showing 50% power overall and the same on the bar for each side of his body.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Time to take it up a notch.</sp>
+
+<sd>He hurries away. Cut to an overhead view of the <location>stadium</location>, zooming in slowly, then cut to<char>Atlas</char> at play in the locker room. One of<char>Spike</char>'s two oil drums has been set by his chair; after a few seconds, he grabs it, chugs the whole thing, and crushes it against his forehead. Pan back as he tosses the empty over his shoulder, then cut to the patch of floor where it lands and follow it over to<char>Spike</char>. He still has the other drum.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>from o.c.</sd> Mechanic! More oil!</sp>
+
+<sd>The man flies over and hands him the container.<char>Atlas</char> takes a drink and promptly spits it all over him.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>wipes his mouth</sd> This is cold, human! Bring me warm oil!</sp>
+
+<sd>The human in question hangs his head and looks over at the captured Titans.<char>Robin</char>'s expression says it all, "where you go from here is up to you", and the lowering eyebrows above that cheek bandage show that<char>Spike</char> has gotten the point.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> Get it yourself.</sp>
+
+<sd>In a twinkling, he finds himself in the enormous shadow of his boss, who is getting to his feet.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> What was that?<sd>hauls him up</sd> No human tells<char>Atlas</char> what to do.</sp>
+
+<sd>He throws<char>Spike</char> across the <location>locker room</location> to fetch up against the wall headfirst. The latter sits up, rubbing his head.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> You sure about that?</sp>
+
+<sd><action mrkr="Cyborg" with="all" move="6" place="lockerRoom"/>He plants a leg in view near the camera. Cut to a close-up of his legs and tilt up to his head. He is ready to pick things up right where he left off, thumping a fist against his other palm to emphasize this fact.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> I'm human, and I'm telling you to let my friends go</sp>
+
+<sd><char>Starfire</char> gasps happily.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr><char>Cyborg</char>!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Yes!</sp>
+
+<sd><char>Spike</char> backs up to the trophies, hoping to get himself out of the battle zone. Pan across the <location>locker room</location> from<char>Cyborg</char> to<char>Atlas</char>, who takes a few steps toward him, then cut to a close-up of each one's face in turn. The tense standoff ends when they charge toward each other, growling and snarling in rage. When they connect, there is a mighty flash that clears to show the yellow robot sliding backward across the floor to crash into his television.<char>Cyborg</char> steps up; in an instant,<char>Atlas</char> is up and punching at him. The Titan dodges easily, grinning all the while, but is caught off guard by a big uppercut. Field level; he crashes up through the dirt and lands well down the length of the <location>stadium</location>.</sd>
+
+<sd>He stands and looks up with a gasp; cut to the roaring leviathan, descending with full weight ready to drive him underground again.<action mrkr="Cyborg" with="all" move="7" place="stadium"/><char>Cyborg</char> gets out of the way just in the nick of time; the impact sends up a thick curtain of dust, which clears to reveal<char>Atlas</char> embedded to his waist in the playing surface. He turns to face<char>Cyborg</char>, smiles, and climbs out. Behind him, a lift brings<char>Spike</char> and the Titans up to the sidelines. The former is now very unnerved by what he has seen, heard, and had done to him.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> He doesn't respect you. He doesn't even like you. Why do you serve him?</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> I have no choice.<char>Atlas</char> is stronger than me.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> No, he isn't.<char>Atlas</char> needs you. You're the one who fixes him. You're his strength. Without you, he's nothing..<sd>Extreme close-up of the man's eyes, zooming in;<action mrkr="Robin" with="all" move="5" place="stadium"/><char>Robin</char> continues o.c.</sd> ...and he knows it. That's why he pushes you around.<char>Atlas</char> is afraid of you.</sp>
+
+<sd><char>Cyborg</char> backs up before<char>Atlas</char>' advance, dodges a couple of punches, and catches a giant yellow fist in his left hand, just as easily as his own attacks were foiled time and again earlier on. Raising his right arm and balling its fist, he ejects it from his shoulder; it rockets straight at<char>Atlas</char>' jaw and lands a thundering uppercut that lifts him off his feet. The opponent lands in a half-sitting position and rubs his jaw as<char>Cyborg</char> walks up while reattaching the limb.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Still got power to spare?</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Plenty.</sp>
+
+<sd><char>Atlas</char> yanks a buried electric cable out of the ground and thrusts the sparking free end against<char>Cyborg</char>'s chassis, causing him to scream in agony as circuits short out all over his body. Smoke rises from him as he collapses and<char>Spike</char> watches. Now<char>Atlas</char> stands up and holds both arms toward his second.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Mechanic! Concussion blaster! Heat cannon! Now!</sp>
+
+<sd>The long-suffering man looks uncertainly toward him, then to the groaning, medium-well-done Titan, and finally makes up his mind. He gets in the boss' face.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> No</sp>
+
+<sd>He is shoved aside.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Then stay out of my way!</sp>
+
+<sd>He rushes across the field and stops in front of the Titans. Pressing a button embedded in the platform that brought them up, he causes a panel to pop up from beneath it. He smiles nastily; cut to it and zoom in as it opens to reveal the weapons he said he would not use in Act Two. However, his expression quickly gives way to bewilderment as he looks from one side to the other; the camera shifts from item to item quickly, his perspective, and then cuts to<char>Spike</char>.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> Let's see how far you get without my help!</sp>
+
+<sd>He brings out a control device from his tool belt and presses a button on it-and one after another, the force fields holding the Titans on their trophies collapse. He smiles grimly as<char>Atlas</char> backs away from them.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> No</sp>
+
+<sd>He runs.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Titans! Go!</sp>
+
+<sd>He fires a grappling hook into the air and swings away on the line, and<action mrkr="BeastBoy" with="all" move="5" place="stadium"/><char>Beast Boy</char> becomes a falcon to charge alongside<action mrkr="Raven" with="all" move="5" place="stadium"/><char>Raven</char> and<action mrkr="Starfire" with="all" move="5" place="stadium"/><char>Starfire</char>.<char>Robin</char> touches down in front of the locker room entrance to cut off the robot's escape.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> You wanted a fair fight? That's what you're going to get.</sp>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Five against one? This is a fair fight</sp>
+
+<sd><char>Raven</char> floats up behind him.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Oh, we're not fighting</sp>
+
+<sd>Pan to his other shoulder on the following;<char>Beast Boy</char> and<char>Starfire</char> are there.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Think of us as referees.</sp>
+
+<sd>Cut to behind the group and pull back at ground level.<char>Cyborg</char>'s foot lands near the camera.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> It's just you and me.</sp>
+
+<sd>Cut to frame him. As before, he works his head back and forth, limbering up his neck; now<char>Atlas</char> turns to face him and cracks al his knuckles. The last pop has barely died away when one bionic punch after another rocks the metal giant from head to toe.<char>Cyborg</char>'s power readout quickly rises to 93%, and the other Titans cheer him on as<char>Atlas</char> slides past. Their noise dies away to make room for one more voice;<char>Spike</char>'s.</sd>
+
+<sp><spkr ref="Spike">Spike</spkr> Yeah,<char>Cyborg</char>! Take him down!</sp>
+
+<sd><char>Robin</char> flips him a quick smile. Another roundhouse drops<char>Atlas</char> like a rock near the wall.<char>Cyborg</char> steps closer to inspect his work, but soon finds himself facing one very angry, charging enemy. They lock arms and grapple,<char>Atlas</char> grinning savagely down at<char>Cyborg</char>. Beeping from the forearm panel; power level increases to 98%, throwing a scare into its owner, and his knees start to give.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> What's the matter? Running out of steam?</sp>
+
+<sd>As the five onlookers stare,<char>Cyborg</char> is slowly pushed backward past them.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Push,<char>Cyborg</char>! You can do it!</sp>
+
+<sd>He pours in every bit of strength he can muster and is met by derisive chuckling from the foe. Now the power output hits 100%, but he does not let up one bit. Extreme close-up of<char>Atlas</char>' narrowed eyes.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> You have reached your limit. You cannot win</sp>
+
+<sd><char>Cyborg</char> is now on one knee.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Yes...I...CAN!!</sp>
+
+<sd>The panel's covering cracks as the readout quickly notches up to 130%.<char>Atlas</char>' eyes go wide in sudden surprise, and<char>Cyborg</char> regains his footing. With a scream as tortured as his muscles, he lifts the huge metal body over his head and throws it down the field to smash into the abandoned trophies. Everyone cheers wildly.</sd>
+
+<sd>Cut to just inside this new hole in the field surface, the camera pointing up at the sky as the Titans walk up, then cut to just behind<char>Cyborg</char>.<char>Atlas</char>' outstretched hands are just in view; tilt up to frame the rest of him, lying half-buried in the wreckage of the <location>locker room</location>.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> <sd>hoarsely</sd> No more. I am defeated. You...are a better robot.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> No. I'm a better person.</sp>
+
+<sd>He and his teammates walk away, leaving<char>Spike</char> to walk up to the crater by himself.</sd>
+
+<sp><spkr ref="Atlas">Atlas</spkr> Mechanic...refit.</sp>
+
+<sp><spkr ref="Spike">Spike</spkr> <sd>removes his tool belt</sd> Ah, do it yourself!</sp>
+
+<sd>He throws the belt into the hole; it lands just out of<char>Atlas</char>' reach, and he tries to get at it, but gives up with a weary groan. Dissolve to the exterior of the <location>stadium</location>, the camera angled up at the upper deck, and tilt down to the entrance on the next line. It is now sunrise, and the Titans are emerging.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> And the winner by technological knockout, the Mechanical Maniac, the Bionic Bruiser, the one, the only,<char>Cyborg</char>!</sp>
+
+<sd>He holds said winner's arm aloft on the last word, as a referee would do with the victor in a boxing match, and a bell and cheering crowd are heard.<char>Starfire</char> gives<char>Cyborg</char> a big hug and backs up next to<char>Raven</char>.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> I shall express my gratitude with a Tamaranean folk song.</sp>
+
+<sd>Remembering how the first one sounded, the boys recoil in fright. This does not stop her windup, though; she sucks in a breath and gets ready to sing, but<char>Raven</char> slaps a hand over her mouth to cut it off.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Way to go, champ</sp>
+
+<sd><char>Beast Boy</char> sighs, relieved.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>pointing at<char>Cyborg</char>'s forearm</sd> Guess we better get you a new one of those.</sp>
+
+<sd><char>Cyborg</char> looks down at the damaged power readout, whose displays have all gone dark.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Don't need it anymore. My body may have its limitations, but if I put my mind to it, there's no limit to what I can do.</sp>
+
+<sd>Long shot of the group, walking down the street away from the camera.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> After all, I'm only human.</sp>
+
+<sd>Fade to black.</sd> 
+</act>
+    </body>
+
+</root>
