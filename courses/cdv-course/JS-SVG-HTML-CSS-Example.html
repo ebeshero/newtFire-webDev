@@ -1,0 +1,212 @@
+
+<!DOCTYPE html
+  SYSTEM "about:legacy-compat">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      <title>SVG, HTML, CSS, JavaScript</title>
+   </head>
+
+
+
+   <body>
+      <!--#include virtual="top.html" -->
+      <h1><span class="banner">Putting the pieces together: SVG in HTML with CSS and JavaScript</span></h1>
+      <p>We have created an SVG timeline with XQuery from the Digital Mitford letters collection stored in our eXist
+         database. This is actually multiple timelines combined: One represents a total quantity of letters encoded in each year, 
+         and the others represent data about the timespans associated with specific correspondents in the collection.</p>
+      <p>We embedded this SVG in <a href="Timeline_CDV_JSEx3.html">an HTML document</a>, and associated it with CSS and JavaScript in order to control its layout and interactivity.
+    
+      </p>
+      <h2>Step by step</h2>
+      <p>Here is how we put the pieces together.</p>
+      <ul>
+         <li>From XQuery: output SVG lines and data, including parallel lines for <em>for each</em> of the correspondents in the collection.
+         </li>
+         <li>Output a clickable web form in HTML listing each correspondent, and assemble a document
+            that successfully integrates HTML with SVG.</li>
+         <li>Write CSS and JavaScript so that the SVG timelines for each of Mitford's correspondents
+            can be toggled from the HTML portion of the page. Our visitors should be able to show
+            and hide particular lines so they can compare the time spans associated with particular
+            correspondents on the list. On click of one or more names, we should be able to reveal
+            the lines we are interested in seeing.</li>
+      </ul>
+      <h2>Details</h2>
+      <h3>XQuery to output HTML with SVG</h3>
+      <p>Optimally, we want to generate our HTML page with SVG set within it, so that the same
+         XQuery functions generate the entire page. This is a bit of a challenge for outputting code
+         when working within multiple namespaces. Remember that we need to apply <code>Q{}</code> in XPath within code
+         writtin in a different namespace, when you need to pull-process data from your project code.</p>
+         
+       <!--  <p>Here is one way to do this with namespace prefixes: </p>
+      <ul>
+         <li>First, we set up multiple namespaces in our XQuery script. We need to account for three
+            namespaces: <ol>
+               <li>A default output namespace (which we set to SVG, though you could set it to HTML
+                  if you like). The default output namespace one will <strong>not</strong> require
+                  prefixes.</li>
+               <li>A namespace for the HTML output, with a prefix that we designate.</li>
+               <li>A namespace identifying the TEI elements when you are reading them from our
+                  collection in eXist-db.</li>
+            </ol>
+            <p> Note that you can really reverse the default output namespace and make it HTML
+               rather than SVG. That is up to you, but whatever output namespace you choose, the
+                  <em>other</em> one must be prefixed in your XQuery script. That means that in our
+               script, every time we indicate an HTML element, we place an <code>htm:</code> prefix
+               in front of it. </p>
+            <p>Here is the code we used to define the namespaces as global variables at the top of
+               our XQuery script (highlighting the prefix definitions):</p>
+            <pre>
+               xquery version "3.0";
+               declare default element namespace "http://www.w3.org/2000/svg"; 
+               declare namespace <code>tei=</code>"http://www.tei-c.org/ns/1.0"; 
+               declare namespace <code>htm=</code>"http://www.w3.org/1999/xhtml";</pre>
+         </li>
+         <li>Unless we noted errors in your original SVG homework, your original global variable
+            definitions for the SVG assignment should be fine and will be necessary for this
+            assignment, too. We added three new variables to help us identify to <q>dereference</q>
+            (or look up) the first standard full name of each correspondent as listed in the Digital
+            Mitford site index file, which is posted on the web here: <code><a
+                  href="http://digitalmitford.org/si.xml"
+               >http://digitalmitford.org/si.xml</a></code>:
+            <pre>declare variable $col := collection ('/db/mitford');
+                 declare variable $letCol := collection ('/db/mitford/letters');
+                       (: other variables here. . . :)
+                <code>declare variable $letterRecipients := $letFiles/descendant::tei:titleStmt/tei:title/tei:persName/@ref;
+                 declare variable $distLetterRecips := distinct-values($letterRecipients);
+                 declare variable $si := doc('http://digitalmitford.org/si.xml');</code></pre>
+            Dereferencing isn’t strictly necessary for our assignment, but it is a nice touch for
+            display on the Mitford project’s website, where we can use it in our output HTML to list
+            a full name rather than just an id value as our list of letter correspondents. Consider
+            that a bonus challenge for the assignment: instead of just listing out the @ref values,
+            can you output in the HTML a list of the full names of the letter writers? Hint: In our
+            code, when we wrote a <code>for loop</code> to step through the distinct
+               <code>@ref</code> values, we looked up in the
+               <code>http://digitalmitford.org/si.xml</code> file the first
+               <code>&lt;tei:persName&gt;</code> child of the <code>&lt;tei:person&gt;</code>
+            element whose <code>@xml:id</code> equals the current index variable in the loop. </li>-->
+ <ul>
+         <li>Our XQuery needs to output an HTML page, with the SVG timelines tucked inside. You will
+            need to build an outer shell of HTML elements around your XQuery script (just as you
+            have done in previous assignments in the XQuery series), and within the content of that
+            page, we recommend placing an HTML <code>&lt;div id="svg"&gt;</code> or <code>&lt;section id="svg"&gt;</code>element (with the
+            namespace prefix if you prefixed HTML: <code>&lt;htm:div type="svg"&gt;</code>). You can set the dimensions of
+            the SVG viewport so that your timelines will fit on a screen on their own, and then as you incorporate them in the HTML,
+            apply CSS styling to adjust the dimensions of the div or section (for example, with CSS flexboxes).  </li>
+         <li>In the HTML, we needed to output a list of correspondents. These need to share some corresponding attributes with
+           the line elements associated with them in the SVG. While it would be satisfying to
+            output these as the return of the same <code>FLWOR</code>, we found we had to create two
+               <code>for loops</code> over the set of distinct values of correspondents in the
+            collection, one placed near the top of the HTML page, and the other within the SVG
+            portion of the file. Note the following: <ul>
+               <li>We used the HTML <code>&lt;htm:input type="checkbox"&gt;</code> element to
+                  generate our checkboxes, and we placed an <code>@id</code> attribute on each one.
+                  (To read more about HTML checkbox inputs, see <a
+                     href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox"
+                     >https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox</a>
+                  ).Our checkbox basically just responds to a mouseclick, and with JavaScript we
+                  will make the presence or absence of a check correspond with the display
+                  properties of the corresponding SVG line. Note: You do not have to use a checkbox:
+                  you could use a <code>htm:button</code> or even an <code>htm:span</code> element
+                  that you might stylize in CSS. You simply need for the element to hold an
+                     <code>@id</code> attribute that corresponds to each member of your list of
+                  distinct values. In order for that <code>@id</code> value to be valid, you will
+                  need to remove the hashtag from the front of the string retrieved from the TEI
+                     <code>@ref</code> attributes.</li>
+               <li>How do we make the SVG lines for each correspondent pair up with the HTML input
+                  elements? We set up a <code>for loop</code> to output SVG
+                     <code>&lt;line&gt;</code> and <code>&lt;text&gt;</code> elements spaced down
+                  the page, and we wrap these in an SVG <code>&lt;g&gt;</code>, on which we place an
+                     <code>@id</code> attribute. However, we are not allowed to use the same
+                     <code>@id</code> value twice on the same document, so we wrote a short string
+                  of prefixing text to distinguish one from the other. (We put <code>SVG_</code> in
+                  front of the distinct correspondent value identifying its group of SVG elements,
+                  but we could just as easily have put something like <code>HTM_</code> in front of
+                  the <code>@id</code> on the HTML input element.)</li>
+               <li>Think about how we spaced the lines for each correspondent in relation to one another? 
+                  One approach may be to
+               try to plot these all on or near the timeline for the entire collection so that they superimpose on one another (realizing that you will use CSS to hide all the lines at first, and expose them with JavaScript when a visitor selects particular correspondents from the HTML input options. A different approach (the one we took in the version we showed above) is to plot each correspondent line running down the screen. To achieve that, we used the <code>$pos</code> variable in our XQuery <code>for loop</code>: <code>for $i at $pos in $variableWeAreLoopingThrough</code>.</li>
+              
+        
+            </ul>
+         </li>
+
+         <li>When outputting SVG within HTML, save the result file with an <code>.html</code> extension. </li>
+         <li>You may want to add the <code>script</code> element signalling your JavaScript file in
+            your XQuery script, in case you need to go back and alter the XQuery to correct your
+            HTML.</li>
+         <li>Your output HTML and SVG may be missing the proper DOCTYPE declaration and the HTML
+            root element will be missing its namespace attribute. <strong>Download</strong> the file
+            from eXide, save it in your GitHub repo (so you can post it to your Newtfire project web space), and
+               <strong>open it in &lt;oXygen/&gt;</strong>. Check your document to make sure it is well-formed and valid, and add what you need by opening a
+            new HTML 5 document in &lt;oXygen/&gt; and adding the Doctype line and the namespace
+            attribute to the <code>html</code> root element:
+            <pre>
+               &lt;!DOCTYPE html&gt;
+               &lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;</pre>
+            &lt;oXygen/&gt; should then give you a green light if all is well. Note: if there are
+            hashtags (<code>#</code>) starting your @id attributes, these will raise an HTML
+            validation error: you want to avoid outputting those.</li>
+ </ul>
+
+      
+      <h3>CSS and JavaScript Walk-through</h3>
+      <p>In your JavaScript you will likely be doing some familiar things you have already tried,
+         but you will face new challenges, too.<strong> Think about what needs to happen in sequence:</strong></p>
+      <ul>
+         <li>Your CSS may be as elaborate as you like, but it should at the very least be set to
+            hide the individual SVG <code>g</code> elements associated with particular correspondent
+            timelines. To toggle the display properties off and on involves writing JavaScript to
+            show or hide a particular line that the user is clicking on, that is, to change the
+            state from hidden to showing. In the CSS we set the default style for the correspondent
+            SVG <code>g</code> elements (the ones on which we had set <code>@id</code> attributes) to <code>g[id] {display:none;}</code>. We then wrote a JavaScript
+            function to override that and return <code>display="block"</code>, which is the proper
+            display value for SVG elements.</li>
+         <li>On load of the window, you will want to fire a function, the one we typically call
+               <code>init()</code>. That <code>init()</code> or <code>initial(</code>) function
+            should add event listeners on the HTML elements that you expect your site visitors to
+            interact with. This is familiar territory, but we found ourselves writing the element
+            selection a little differently than we have done in the past: In our SVG, we set
+               <code>@id</code> attributes on each <code>&lt;input&gt;</code> element. We could have
+            just used <code>getElementsByTagName()</code>, but we thought we would show you a handy
+            selector in JavaScript that uses CSS syntax to identify <em>elements that hold a
+               specific attribute</em> called <code>querySelectorAll()</code>: We wrote it like this
+            to define an array of elements:
+            <pre>
+                var inputSelect = document.querySelectorAll('input[id]');</pre>
+            That code creates an array of all the <code>&lt;input&gt;</code> elements that hold an
+               <code>@id</code> attribute. After this we set up a JavaScript for-loop with the range
+            variable <code>i</code> to step through each member of the array of
+               <code>inputSelect.length</code>, and then we set up our
+               <code>addEventListener()</code> to run on the <code>inputSelect[i]</code> (or the
+            svgSelect variable at position i), and to fire the next function in sequence in the
+            event of <code>'click'</code>, just as you have already done on previous
+            assignments.</li>
+         <li>Our JavaScript defines just one (or two) more functions to fire after <code>function
+               init()</code>.This function needs to check the <code>@id</code> value on the HTML
+            element that was clicked on, and to refer to that element, the one the user has just now
+            clicked on, we use the special JavaScript word <code>this</code>. To find the
+               <code>@id</code> on <code>this</code>, we write: <code>this.id</code>. What you need
+            to do with <code>this.id</code> is use it to find the corresponding SVG element whose
+               <code>@id</code> best matches. In our code, we added the string <code>SVG_</code>, so
+            we sought out the element with the id <code>'SVG_' + this.id</code> to find the matching
+            group of SVG elements associated with a particular selected correspondent.</li>
+         <li>We then manage the show-hide toggling. You could do this in one or two ways:<ol><li> To do it all in one function, you could write JavaScript <code>if() else()</code>
+            to change the display property of the matching SVG element. Remember that to check the
+            display condition of <code>this</code>, we need to use the double equal sign:
+               <code>==</code>, and use the single equal sign <code>=</code> to indicate a change in
+            value.</li>
+         <li>The other way, which could be simpler to script, involves two functions. The function that fires on <code>this</code> must <i>first</i> trigger another function that you write to make sure that the SVG elements are ALL hidden, before you trigger <code>this</code> to be visible. This does not require JavaScript to test conditions: it simply turns off the display for a selection as soon as the user visits another selection. We have examples of both approaches on the DHClass-Hub for you to consult.</li>
+         </ol></li>
+
+      </ul>
+    
+   </body>
+
+
+
+
+</html>
