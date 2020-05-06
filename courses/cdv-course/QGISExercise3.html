@@ -1,52 +1,134 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <title>QGIS Exercise 3</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <link rel="stylesheet" type="text/css" href="explain.css" />
-    </head>
-    <body>
-        <!--#include virtual="topAuthorFRC.html" -->
-        <h1 id="qgis-exercise-3">QGIS Exercise 3</h1>
-        <p>For this assignment, you’ll use a couple of different export options to create maps that you can publish on a website.</p>
-        <p>For this assignment, you should use one of the maps you made previously or make a new map using guidelines and techniques covered earlier. We advise working with a simpler map, perhaps just a base map and a set of points. You might want to pull some data from your working project code, and if you have a set of place names without geocoordinates, you could try looking up latitude and longitude coordinates or visiting a geomapping API service.</p>
-        <h2 id="geocoding-tip">Geocoding Tip</h2>
-        <p>This is for people who have place names but need to find out latitude and longitude coordinates. Some of you completed a “TimeMapper” assignment with Dr. B in other classes using a simpler mapping program running with Google Sheets. In that program, you can keep an column of place names, and then add a column that does an “API lookup” of the first available geocoordinates associated with a location. Here is the formula we used in Google Sheets to do that lookup, which returns latitude and longitude coordinates:</p>
-        <pre><code>=JOIN(",", ImportXML(CONCATENATE("http://nominatim.openstreetmap.org/search/?format=xml&amp;q=",A2), "//place[1]/@lat | //place[1]/@lon"))
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+   
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      <title>QGIS Exercise 3</title>
+      
+      
+      <link rel="stylesheet" type="text/css" href="explain.css" />
+      </head>
+   
+   <body><!--#include virtual="topAuthorFRC.html" -->
+      <h1 id="qgis-exercise-3">QGIS Exercise 3</h1>
+      <section title="contents"><h2>Contents</h2>
+      <ul>
+         <li><a href="#geocoding-tip">Geocoding Tip</a></li>
+         <li><a href="#export-to-png">Export to PNG</a></li>
+         <li><a href="#export-to-svg">Export to SVG</a></li>
+         <li><a href="#export-to-leaflet">Export to Leaflet</a></li>
+         <li><a href="#what-to-submit">What to Submit</a></li>
+         <li><a href="#furtherLearning">QGIS Exercises and learning resources</a></li>
+      </ul></section>
+      <section title="intro"><p>For this assignment, you’ll use a couple of different export options to create maps
+         that you can publish on a website.</p>
+      <p>For this assignment, you should use one of the maps you made previously or make a
+         new map using guidelines and techniques covered earlier. We advise working with a
+         simpler map, perhaps just a base map and a set of points. You might want to pull some
+         data from your working project code, and if you have a set of place names without
+         geocoordinates, you could try looking up latitude and longitude coordinates or visiting
+         a geomapping API service.</p></section>
+      <section title="geocoding-tip"><h2 id="geocoding-tip">Geocoding Tip</h2>
+      <p>This is for people who have place names but need to find out latitude and longitude
+         coordinates. Some of you completed a “TimeMapper” assignment with Dr. B in other classes
+         using a simpler mapping program running with Google Sheets. In that program, you can
+         keep an column of place names, and then add a column that does an “API lookup” of
+         the first available geocoordinates associated with a location. Here is the formula
+         we used in Google Sheets to do that lookup, which returns latitude and longitude coordinates:</p>
+      <pre><code>=JOIN(",", ImportXML(CONCATENATE("http://nominatim.openstreetmap.org/search/?format=xml&amp;q=",A2), "//place[1]/@lat | //place[1]/@lon"))
 </code></pre>
-        <p>(Be sure to scroll to the right to read the complete formula.) If you have a column of place names output in Column A, and paste this formula to fill in Column B (like we've done in QGIS 2), it will read the place name in the corresponding cell in Column A and look up and return the first set of geocoordinates it finds. Note the XPath in the formula, as Open Street Maps' data is stored in XML. If you wanted to return <em>all</em> the available sets of geocordinates, or data associated with them, you could remove the <code>[1]</code> predicates after <code>//place</code> and look at the content of the <code>//place</code> element.</p>
-        <p>To split this data so that you have latitude in one column, and longitude in the other, you can just split up that XPath so that one column (B) reports ONLY the <code>@lat</code> and the next column (C) reports ONLY the <code>@lon</code> associated with your place name in Column A.</p>
-        <p>It will be possible to pull this geodata in XQuery, too, by the way, working with Open Street Maps as an external database. Happy experimenting! You will be able to import a TSV or CSV into Google Sheets and export it from there as a TSV or CSV as well. There may be a working variation on this <code>JOIN()</code> function in Excel or other spreadsheet software, and this may require a little investigating. Please report on your experiences with pulling geodata and raise questions on the <a href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</a> and find us on Slack if you want some help! You will want to inspect your results to do a “sanity check” and make sure they are the correct locations, and make any corrections you need to make for your map.</p>
-        <h2 id="export-to-png">Export to PNG</h2>
-        <p>From working on previous assignments, you’re probably already familiar with the process for exporting to PNG. From the Print Layout window, you can use the “Export to Image” icon, pictured below, in the top menu bar, and then select PNG as the file type.</p>
-        <p><a target="_blank" rel="noopener noreferrer" href="/ebeshero/DHClass-Hub/blob/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.21.23PM.png"><img src="/ebeshero/DHClass-Hub/raw/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.21.23PM.png" alt="" style="max-width:100%;"/></a></p>
-        <p>The “Export to Image” icon is the first of the three icons pictured above.</p>
-        <h2 id="export-to-svg">Export to SVG</h2>
-        <p>Scalable vector graphic, or SVG files, are composed of vectors, something you’ve learned about previously. Because of that, they’re able to be scaled without compromising the image appearance, clarity, or integrity. You can zoom in on these pictures without them becoming pixelated.</p>
-        <p>To export to SVG, in the Print Layout menu, click on the second of the three icons pictured above.</p>
-        <p>You might be presented with several error messages warning you about exporting to SVG. This is particularly true if you’re trying to work with a more complicated map, like the one you created for the second assignment. However, you should just click through them.</p>
-        <p>You should eventually be presented with the “SVG Export Options” window, pictured below.</p>
-        <p><a target="_blank" rel="noopener noreferrer" href="/ebeshero/DHClass-Hub/blob/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.25.19PM.png"><img src="/ebeshero/DHClass-Hub/raw/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.25.19PM.png" alt="" style="max-width:100%;"/></a></p>
-        <p>You should make sure that the boxes next to “Export map layers as SVG groups,” “Always export as vectors,” and “Export RDF metadata” are selected. You’ll learn more about why using groups are important in the upcoming SVG unit.</p>
-        <p>You should then have a file that you can open in a web browser. You could also open up the SVG file in Oxygen; if you did, you might notice that it’s written in XML.</p>
-        <p>Note: There are issues with exporting to SVG if you used a color ramp or a raster layer. Furthermore, transparency settings do not translate well to SVG.</p>
-        <h2 id="export-to-leaflet">Export to Leaflet</h2>
-        <p><a href="https://leafletjs.com" rel="nofollow">Leaflet is a JavaScript library for interactive maps</a>. There is a QGIS plugin called qgis2web that will generate the code for a Leaflet web map for you.</p>
-        <p>To install qgis2web, go to the main QGIS window, and then go to, in the top ribbon, Plugins&gt;Manage and Install Plugins…</p>
-        <p>In the “All” plugins tab, search for “qgis2web.” Then, click on “Install plugin” on the bottom right-hand side of the page. I already have qgis2web installed, so my options, pictured below, are to uninstall the plugin or to reinstall it.</p>
-        <p><a target="_blank" rel="noopener noreferrer" href="/ebeshero/DHClass-Hub/blob/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.32.38PM.png"><img src="/ebeshero/DHClass-Hub/raw/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.32.38PM.png" alt="" style="max-width:100%;"/></a></p>
-        <p>Once you’ve installed qgis2web, close the Plugin window. Go to the “Web” section of the top ribbon and hover over “qgis2web” from the dropdown menu, then select “Create web map.”</p>
-        <p>You should now see the “Export to web map” window. Make sure that the layers you wish to be included in your web map are checked in the list of “Layers and Groups.” Furthermore, at the bottom of the window, make sure that “Leaflet” is selected as the type of web map to be generated. To see a preview of your map, click on “Update preview.” In the “Export” tab, you can select the location to which you want your web map to be exported.</p>
-        <p><a target="_blank" rel="noopener noreferrer" href="/ebeshero/DHClass-Hub/blob/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.58.55PM.png"><img src="/ebeshero/DHClass-Hub/raw/master/Assignments/QGIS/qgis_3/ScreenShot2020-03-24at2.58.55PM.png" alt="" style="max-width:100%;"/></a></p>
-        <p>When you are finished, click on “Export” to create the web map.</p>
-        <p>A progress screen should pop up, indicating the progress of the map. When it is finished, you can close the window and navigate to the folder that you put the web map into.</p>
-        <p>There will be a folder, the name of which will start with “qgis2web.” Inside the folder, there will be different web page files and folders: a folder for javascript, a folder for css, and so on. There will also be an index.html file that you can open on a web browser to view your map.</p>
-        <h2 id="what-to-submit">What to Submit</h2>
-        <p>When you are finished making the exports, submit two files to Canvas:</p>
-        <ul>
-            <li>A PNG image file</li>
-            <li>An SVG image file</li>
-        </ul>
-        <p>Then, upload your web map folder to your personal website. Let us know in a comment on your submission on Canvas what the name of the folder is so that we can navigate to the index.html file.</p>
-    </body>
-</html>
+      <p>(Be sure to scroll to the right to read the complete formula.) If you have a column
+         of place names output in Column A, and paste this formula to fill in Column B (like
+         we've done in QGIS 2), it will read the place name in the corresponding cell in Column
+         A and look up and return the first set of geocoordinates it finds. Note the XPath
+         in the formula, as Open Street Maps' data is stored in XML. If you wanted to return
+         <em>all</em> the available sets of geocordinates, or data associated with them, you could remove
+         the <code>[1]</code> predicates after <code>//place</code> and look at the content of the <code>//place</code> element.</p>
+      <p>To split this data so that you have latitude in one column, and longitude in the other,
+         you can just split up that XPath so that one column (B) reports ONLY the <code>@lat</code> and the next column (C) reports ONLY the <code>@lon</code> associated with your place name in Column A.</p>
+      <p>It will be possible to pull this geodata in XQuery, too, by the way, working with
+         Open Street Maps as an external database. Happy experimenting! You will be able to
+         import a TSV or CSV into Google Sheets and export it from there as a TSV or CSV as
+         well. There may be a working variation on this <code>JOIN()</code> function in Excel or other spreadsheet software, and this may require a little investigating.
+         Please report on your experiences with pulling geodata and raise questions on the
+         <a href="https://github.com/ebeshero/DHClass-Hub">DHClass-Hub</a> and find us on Slack if you want some help! You will want to inspect your results
+         to do a “sanity check” and make sure they are the correct locations, and make any
+         corrections you need to make for your map.</p>
+      </section><section title="export-to-png"><h2 id="export-to-png">Export to PNG</h2>
+      <p>From working on previous assignments, you’re probably already familiar with the process
+         for exporting to PNG. From the Print Layout window, you can use the “Export to Image”
+         icon, pictured below, in the top menu bar, and then select PNG as the file type.</p>
+      <p><a target="_blank" rel="noopener noreferrer" href="qgis_3/ScreenShot2020-03-24at2.21.23PM.png"><img alt="" style="max-width:100%;" src="qgis_3/ScreenShot2020-03-24at2.21.23PM.png" /></a></p>
+      <p>The “Export to Image” icon is the first of the three icons pictured above.</p>
+      </section><section title="export-to-svg"><h2 id="export-to-svg">Export to SVG</h2>
+      <p>Scalable vector graphic, or SVG files, are composed of vectors, something you’ve learned
+         about previously. Because of that, they’re able to be scaled without compromising
+         the image appearance, clarity, or integrity. You can zoom in on these pictures without
+         them becoming pixelated.</p>
+      <p>To export to SVG, in the Print Layout menu, click on the second of the three icons
+         pictured above.</p>
+      <p>You might be presented with several error messages warning you about exporting to
+         SVG. This is particularly true if you’re trying to work with a more complicated map,
+         like the one you created for the second assignment. However, you should just click
+         through them.</p>
+      <p>You should eventually be presented with the “SVG Export Options” window, pictured
+         below.</p>
+      <p><a target="_blank" rel="noopener noreferrer" href="qgis_3/ScreenShot2020-03-24at2.25.19PM.png"><img alt="" style="max-width:100%;" src="qgis_3/ScreenShot2020-03-24at2.25.19PM.png" /></a></p>
+      <p>You should make sure that the boxes next to “Export map layers as SVG groups,” “Always
+         export as vectors,” and “Export RDF metadata” are selected. You’ll learn more about
+         why using groups are important in the upcoming SVG unit.</p>
+      <p>You should then have a file that you can open in a web browser. You could also open
+         up the SVG file in Oxygen; if you did, you might notice that it’s written in XML.</p>
+      <p>Note: There are issues with exporting to SVG if you used a color ramp or a raster
+         layer. Furthermore, transparency settings do not translate well to SVG.</p>
+      </section><section title="export-to-leaflet"><h2 id="export-to-leaflet">Export to Leaflet</h2>
+      <p><a href="https://leafletjs.com" rel="nofollow">Leaflet is a JavaScript library for interactive maps</a>. There is a QGIS plugin called qgis2web that will generate the code for a Leaflet
+         web map for you.</p>
+      <p>To install qgis2web, go to the main QGIS window, and then go to, in the top ribbon,
+         Plugins&gt;Manage and Install Plugins…</p>
+      <p>In the “All” plugins tab, search for “qgis2web.” Then, click on “Install plugin” on
+         the bottom right-hand side of the page. I already have qgis2web installed, so my options,
+         pictured below, are to uninstall the plugin or to reinstall it.</p>
+      <p><a target="_blank" rel="noopener noreferrer" href="qgis_3/ScreenShot2020-03-24at2.32.38PM.png"><img alt="" style="max-width:100%;" src="qgis_3/ScreenShot2020-03-24at2.32.38PM.png" /></a></p>
+      <p>Once you’ve installed qgis2web, close the Plugin window. Go to the “Web” section of
+         the top ribbon and hover over “qgis2web” from the dropdown menu, then select “Create
+         web map.”</p>
+      <p>You should now see the “Export to web map” window. Make sure that the layers you wish
+         to be included in your web map are checked in the list of “Layers and Groups.” Furthermore,
+         at the bottom of the window, make sure that “Leaflet” is selected as the type of web
+         map to be generated. To see a preview of your map, click on “Update preview.” In the
+         “Export” tab, you can select the location to which you want your web map to be exported.</p>
+      <p><a target="_blank" rel="noopener noreferrer" href="qgis_3/ScreenShot2020-03-24at2.58.55PM.png"><img alt="" style="max-width:100%;" src="qgis_3/ScreenShot2020-03-24at2.58.55PM.png" /></a></p>
+      <p>When you are finished, click on “Export” to create the web map.</p>
+      <p>A progress screen should pop up, indicating the progress of the map. When it is finished,
+         you can close the window and navigate to the folder that you put the web map into.</p>
+      <p>There will be a folder, the name of which will start with “qgis2web.” Inside the folder,
+         there will be different web page files and folders: a folder for javascript, a folder
+         for css, and so on. There will also be an index.html file that you can open on a web
+         browser to view your map.</p>
+      </section><section title="what-to-submit"><h2 id="what-to-submit">What to Submit</h2>
+      <p>When you are finished making the exports, submit two files to Canvas:</p>
+      <ul>
+         
+         <li>A PNG image file</li>
+         
+         <li>An SVG image file</li>
+         </ul>
+      <p>Then, upload your web map folder to your personal website. Let us know in a comment
+         on your submission on Canvas what the name of the folder is so that we can navigate
+         to the index.html file.</p>
+      <section title="furtherLearning"><h3 id="furtherLearning">QGIS Exercises and learning resources</h3>
+      <p>Here is the complete series of QGIS exercises on newtFire:</p>
+      <ol>
+         <li><a href="explainQGIS">Making a Basic Map with QGIS</a>: introductory tutorial exercise</li>
+         <li><a href="QGISExercise1.html">QGIS Exercise 1</a>: Mapping the Pokemon</li>
+         <li><a href="QGISExercise2.html">QGIS Exercise 2</a>: Researching historic Pacific voyages with weather and ocean temperature data</li>
+         <li><a href="QGISExercise3.html">QGIS Exercise 3</a>: Exploring export formats from QGIS for websites</li>
+      </ol>
+      <p>For more on QGIS, feel free to consult <a href="http://www.qgistutorials.com/en/index.html" rel="nofollow">the QGIS
+         Tutorials and Tips website</a>, which will teach you how to do pretty much
+         anything with this software.</p>
+      </section>
+      </section>
+   </body>
+   </html>
