@@ -40,7 +40,7 @@
                 different, and if you install a version earlier than 3.0 you might have serious
                 difficulty following along with the tutorial. Let me know if downloading an earlier
                 version of QGIS (earlier than 3.0) is necessary for you.</p>
-            <h2 id="user-content-projects-and-layers">Projects and Layers</h2>
+            <h2 id="projects-and-layers">Projects and Layers</h2>
             <p>In QGIS, we work in Projects. To create a new project, first open QGIS. One option
                 would be to click the icon of a piece of white paper in the upper left-hand corner
                 of the page. It is circled in red in the image below.</p>
@@ -118,7 +118,7 @@
                 next to the layer name, which means that that layer should be visible on the map. To
                 deactivate that layer, click on the checkbox to remove the checkmark; you should
                 then see the map of the world disappear from view.</p>
-            <h2 id="user-content-delimited-text-layers">Delimited Text Layers</h2>
+            <h2 id="delimited-text-layers">Delimited Text Layers</h2>
             <p>Next, we will import a TSV (tab-separated values) file and use it to generate another
                 layer, which we will place on top of our base map.</p>
             <p>Please download the following text file, which is a TSV file with the latitude and
@@ -166,7 +166,7 @@
                 Perhaps the easiest connection to make is for each row in the table to have X and Y
                 coordinates. Otherwise, you’ll have to join tables, which is something that we will
                 get into later.</p>
-            <h3 id="user-content-making-your-own-delimited-text-layer">Making Your Own Delimited Text Layer</h3>
+            <h3 id="making-your-own-delimited-text-layer">Making Your Own Delimited Text Layer</h3>
             <p>If you have project data that you would like to map, you can create your own CSV or
                 TSV files to import as Delimited Text Layers. For a good introduction on how to
                 generate a TSV from project data with XQuery or XSLT, please refer to Dr. B’s (<a
@@ -222,7 +222,7 @@
             <p>Finally, the fourth column, “place_name”, contains the names of the locations
                 described by the latitude and longitude coordinates in the second and third
                 columns.</p>
-        <h3 id="user-content-how-to-know-if-your-project-data-is-suitable-for-the-creation-of-qgis-layers-and-how-to-make-it-suitable-for-such-endeavors">How to Know if your Project Data is Suitable for the
+        <h3 id="how-to-know-if-your-project-data-is-suitable-for-the-creation-of-qgis-layers-and-how-to-make-it-suitable-for-such-endeavors">How to Know if your Project Data is Suitable for the
                 Creation of QGIS Layers and How to Make it Suitable for such Endeavors</h3>
             <p>As implied by the section above, your project data will be suitable for QGIS mapping
                 if it <em>includes latitude and longitude coordinates</em>. This of course implies
@@ -238,7 +238,7 @@
                     latitude and longitude coordinates in your XML,</strong> then you will need to
                 put latitude and longitude coordinates in your XML so that you can then extract such
                 data using XSLT or XQuery.</p>
-            <h4 id="user-content-where-to-find-latitude-and-longitude-coordinates">Where to Find Latitude and Longitude Coordinates</h4>
+            <h4 id="where-to-find-latitude-and-longitude-coordinates">Where to Find Latitude and Longitude Coordinates</h4>
             <p>Perhaps the simplest way to go about putting latitude and longitude coordinates into
                 your XML is to go manually look them up and manually type them into attribute values
                 or an element or so on.</p>
@@ -316,7 +316,7 @@
                 locations, it may be easier to utilize an API. Reference <a
                     href="https://github.com/ebeshero/DHClass-Hub/issues/622">Dr. B’s GitHub issue
                     on using an API</a> for more on that.</p>
-            <h2 id="user-content-adding-a-delimited-text-layer-in-qgis">Adding a Delimited Text Layer in QGIS</h2>
+            <h2 id="adding-a-delimited-text-layer-in-qgis">Adding a Delimited Text Layer in QGIS</h2>
             <p>To import the data file, go to “Layer” in the top ribbon, hover over “Add Layer,” and
                 then select “Add Delimited Text Layer.” If you remember from before, the file that
                 we want to add is a delimited text file, and so the layer that we want to add is a
@@ -390,7 +390,7 @@
                 “OpenStreetMap” would then be layered on top of it; it would cover it and render it
                 invisible.</p>
             <p>Congratulations! You’ve added your first layer to your first project.</p>
-            <h2 id="user-content-creating-a-map-in-qgis">Creating a Map in QGIS</h2>
+            <h2 id="creating-a-map-in-qgis">Creating a Map in QGIS</h2>
             <p>Now, we’ll work on creating a map from the project.</p>
             <p>Use the Pan and Zoom controls in the QGIS menu bar, pictured below, to zoom in on
                 California.</p>

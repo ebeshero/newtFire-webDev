@@ -19,7 +19,7 @@
             elements, to be placed on a QGIS map. The goal of this assignment is to use that
             collection of XML files with geocoordinates to create a map of where certain Pokemon
             types would exist in the real world.</p>
-        <h2 id="user-content-collecting-the-data">Collecting the Data</h2>
+        <h2 id="collecting-the-data">Collecting the Data</h2>
         <p>A collection of carefully curated XML files from the Pokemon Map Project is in <a
                 href="http://newtfire.org:8338/exist/apps/eXide/index.html" rel="nofollow"
             >eXide</a>, in '_db/2020_ClassExamples/pokemonQGIS/'. Your first task is to write an
@@ -53,8 +53,8 @@
             for those.</p>
         <p>Be sure to output your XQuery as a TSV file (or a CSV file, if you’re feeling bold), and
             then save it to your computer.</p>
-        <h2 id="user-content-making-the-map">Making the Map</h2>
-        <h3 id="user-content-using-qgis-plugins">Using QGIS Plugins</h3>
+        <h2 id="making-the-map">Making the Map</h2>
+        <h3 id="using-qgis-plugins">Using QGIS Plugins</h3>
         <p>In the QGIS Tutorial, we used the OpenStreetMap XYZ Tile Layer as a base map. In that
             tutorial, we focused on making a map of California; however, you may have noticed, if
             you navigated to other countries on the map, that the labels for those countries used
@@ -115,7 +115,7 @@
         </p>
         <p>You should then notice that there is a layer called “Google Road” in the Layer list on
             the lower left-hand side of the main QGIS window.</p>
-        <h3 id="user-content-adding-the-pokemon-delimited-text-layer">Adding the Pokemon Delimited Text Layer</h3>
+        <h3 id="adding-the-pokemon-delimited-text-layer">Adding the Pokemon Delimited Text Layer</h3>
         <p>Next, you’ll want to add the Pokemon TSV that you created with XQuery as a delimited text
             layer to your QGIS project. To do that, follow the steps outlined for adding a delimited
             text layer in the <a
@@ -166,7 +166,7 @@
                     alt="" style="max-width:100%;"/>
             </a>
         </p>
-        <h3 id="user-content-changing-point-colors-according-to-type">Changing Point Colors According to Type</h3>
+        <h3 id="changing-point-colors-according-to-type">Changing Point Colors According to Type</h3>
         <p>First, look again at the data in the TSV that makes up the delimited text layer. To do
             that, right click on the Pokemon delimited text layer, and then select “Open Attribute
             Table” in the resulting menu.</p>
@@ -211,7 +211,7 @@
         </p>
         <p>Under the “Expression” section of the menu, click on “Edit…” to edit an expression that
             governs how the colors of the points should be adjudicated.</p>
-        <h4 id="user-content-case-statements-in-qgis">Case Statements in QGIS</h4>
+        <h4 id="case-statements-in-qgis">Case Statements in QGIS</h4>
         <p>A case statement is like an “If, then” statement, only it’s more convenient to write when
             you have numerous conditions that you want to test for.</p>
         <p>With an If, then statement, you want to test to see if a condition returns true. If it
@@ -228,7 +228,7 @@
         <p>With this, WHEN a condition is true THEN a result shall occur.</p>
         <p>You use CASE and END to bracket all of the accompanying WHEN statements so that QGIS is
             able to recognize them for what they are: multiple cases that could be true.</p>
-        <h4 id="user-content-using-case-statements-to-change-point-colors">Using Case Statements to Change Point Colors</h4>
+        <h4 id="using-case-statements-to-change-point-colors">Using Case Statements to Change Point Colors</h4>
         <p>After clicking “Edit…”, the Expression String Builder window should open. It should look
             something like the image below.</p>
         <p>
@@ -299,11 +299,11 @@
             being developed for a project website, we'd want to prepare a label and a legend to
             associate colors with Pokemon types, but that part is optional for this homework
             assignment.</p>
-        <h3 id="user-content-finishing-touches">Finishing Touches</h3>
+        <h3 id="finishing-touches">Finishing Touches</h3>
         <p>As explained in the introductory QGIS tutorial, use Print Layout to create a nice picture
             of your map, adding perhaps a label or even an explanation for the different type
             colors.</p>
-        <h3 id="user-content-submitting-your-exercise">Submitting Your Exercise</h3>
+        <h3 id="submitting-your-exercise">Submitting Your Exercise</h3>
         <p>When you’re finished, upload the following files to Canvas:</p>
         <ul>
             <li>Your XQuery file to produce the Pokemon data (saved as .xql)</li>

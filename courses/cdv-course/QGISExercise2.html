@@ -30,8 +30,8 @@
             spatially similar the voyages were to each other with nearest-neighbor analysis.</p>
         <p>Could weather have impacted the routes of Cook, Forster, or Magellan, and would that
             result in them have described similar locations in their logs?</p>
-        <h2 id="user-content-using-weather-data-to-create-an-informative-base-map">Using Weather Data to Create an Informative Base Map</h2>
-        <h3 id="user-content-historical-geodata">Historical Geodata</h3>
+        <h2 id="using-weather-data-to-create-an-informative-base-map">Using Weather Data to Create an Informative Base Map</h2>
+        <h3 id="historical-geodata">Historical Geodata</h3>
         <p>Projects looking at historical subjects often have the added challenge of needing to work
             with historical data, which can sometimes be messy. Furthermore, sometimes data is
             missing or incomplete. As such, sometimes it can be challenging to merely find relevant
@@ -40,7 +40,7 @@
                 href="http://www.aag.org/cs/projects_and_programs/historical_gis_clearinghouse/hgis_databases"
                 rel="nofollow">The American Association of Geographers’ Historical GIS Clearinghouse
                 and Forum</a>.</p>
-        <h3 id="user-content-sea-surface-temperature-raster-layer">Sea Surface Temperature Raster Layer</h3>
+        <h3 id="sea-surface-temperature-raster-layer">Sea Surface Temperature Raster Layer</h3>
         <p>First, download the Network Common Data Form (NetCDF) file of global sea surface
             temperatures from 1850-2020, created by the Hadley Centre in conjunction with the
             Climatic Research Unit of the University of East Anglia.</p>
@@ -121,7 +121,7 @@
         </p>
         <p>Now, the continents are now more visible on the map, and we can more easily contextualize
             the ocean surface temperature information.</p>
-        <h3 id="user-content-wind-speed-vector-layer">Wind Speed Vector Layer</h3>
+        <h3 id="wind-speed-vector-layer">Wind Speed Vector Layer</h3>
         <p>Now, we’ll work with wind speed data from the Global Forecast System (GFS) of the US
             National Weather Service.</p>
         <p>Download the following .csv file and save it to your machine. It was acquired from the
@@ -131,7 +131,7 @@
                 href="https://raw.githubusercontent.com/ebeshero/DHClass-Hub/master/Assignments/QGIS/qgis_2/wind_vectors.csv"
                 rel="nofollow">wind_vectors.csv</a>
         </p>
-        <h4 id="user-content-prepping-the-data">Prepping the Data</h4>
+        <h4 id="prepping-the-data">Prepping the Data</h4>
         <p>The data in this file has already been cleaned and corrected; however, as it is, it is
             incomplete.</p>
         <p>You should open the file in a spreadsheet editing program, such as Microsoft Excel or
@@ -143,7 +143,7 @@
             longitude columns are pretty self-explanatory, because they hold the geocoordinates for
             the wind vectors. The u component and the v component columns hold the u-component and
             v-component of the wind vectors, respectively.</p>
-        <h5 id="user-content-a-short-math-lesson-calculating-wind-direction-and-speed">A Short Math Lesson: Calculating Wind Direction and Speed</h5>
+        <h5 id="a-short-math-lesson-calculating-wind-direction-and-speed">A Short Math Lesson: Calculating Wind Direction and Speed</h5>
         <p>A vector is a direction with magnitude. It’s, graphically, an arrow pointing in a certain
             direction with a certain size, or length. Because we often want to graph vectors on the
             Cartesian plane, we talk of vectors as having x-components, also sometimes called
@@ -289,7 +289,7 @@
             </a>
         </p>
         <p>Save the file. Congratulations! You’ve prepped the data.</p>
-        <h4 id="user-content-importing-and-styling-the-data">Importing and Styling the Data</h4>
+        <h4 id="importing-and-styling-the-data">Importing and Styling the Data</h4>
         <p>Import the .csv file that you just saved to QGIS as a delimited-text layer. Yes, you
             should then see that it completely takes over your QGIS screen.</p>
         <p>
@@ -394,7 +394,7 @@
             context. The areas of high wind speed and high sea surface temperature are areas where
             storms are more likely to occur.</p>
         <p>Congratulations! You’ve finished the base map.</p>
-        <h2 id="user-content-importing-the-voyagers-log-data">Importing the Voyagers’ Log Data</h2>
+        <h2 id="importing-the-voyagers-log-data">Importing the Voyagers’ Log Data</h2>
         <p>Download and save the following three files, which were grabbed via XQuery from Magellan
             and Pacific Project data.</p>
         <ul>
@@ -439,7 +439,7 @@
                     alt="" style="max-width:100%;"/>
             </a>
         </p>
-        <h3 id="user-content-labelling-the-magellan-data-points">Labelling the Magellan Data Points</h3>
+        <h3 id="labelling-the-magellan-data-points">Labelling the Magellan Data Points</h3>
         <p>What the “magellan_desc” layer DOES contain are labels for each of the Magellan data
             points. However, before we can label the Magellan points with the labels contained in
             the “magellan_desc” layer, we need to join the “magellan_desc” layer to the “magellan”
@@ -495,7 +495,7 @@
             </a>
         </p>
         <p>There are now labels for each of the Magellan points!</p>
-        <h3 id="user-content-cleaning-the-pacific-data">Cleaning the Pacific Data</h3>
+        <h3 id="cleaning-the-pacific-data">Cleaning the Pacific Data</h3>
         <p>It may not be immediately apparent, but there is incomplete data in the “pacific.csv”
             file. Some rows contain only a latitude or a longitude point. These points can’t
             actually be mapped because they are incomplete, and they will be harmful for the
@@ -529,7 +529,7 @@
             from the box next to the “pacific” layer to hide it, now. This new layer is exactly the
             same as the “pacific” layer, only without any of the null geometries.</p>
         <p>This layer will be what we will use for our upcoming analysis.</p>
-        <h3 id="user-content-analyzing-routes-through-the-pacific-over-time">Analyzing Routes Through the Pacific Over Time</h3>
+        <h3 id="analyzing-routes-through-the-pacific-over-time">Analyzing Routes Through the Pacific Over Time</h3>
         <p>The last part of this assignment is to use nearest-neighbor analysis to construct a
             visualization of how close the Magellan points were to some of the Forster/Cook points.
             To do this, we’ll first construct a distance matrix.</p>
@@ -607,7 +607,7 @@
         <p>You can see that the Magellan points are closest to Pacific Project points most often in
             areas of high wind speed and high surface water temperature - areas where storms are
             likely to occur.</p>
-        <h2 id="user-content-conclusion">Conclusion</h2>
+        <h2 id="conclusion">Conclusion</h2>
         <p>Of course, more data, especially more Magellan data, would make this graph more
             interesting. However, I think it is apparent that weather may possibly have affected the
             Cook and Forster voyages, because you can see that those points are clustered in areas
@@ -616,7 +616,7 @@
             or legend that make your map more easily understood by others. NOTE: We found that if we
             exported the map to SVG this time the file size was enormous, and it was better to
             export an image and choose .PNG as the file type for a more portable graphic.</p>
-        <h2 id="user-content-submitting-the-assigment">Submitting the Assigment</h2>
+        <h2 id="submitting-the-assigment">Submitting the Assigment</h2>
         <p>When you’re finished, upload the following files to Canvas:</p>
         <ul>
             <li>Your Wind Vector file (saved as .csv)</li>
