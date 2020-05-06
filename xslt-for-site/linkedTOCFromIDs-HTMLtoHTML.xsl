@@ -8,6 +8,9 @@
     <xsl:output method="html" version="5.0" encoding="utf-8" />
     <!--2020-05-06 eb: This stylesheet reads ids from any heading element in the content of an HTML document, 
         and creates a linked table of contents at the top of the document following the first top-level title.
+    This is also an up-conversion from github markdown files as they were displayed on a GitHub repo, 
+    so the stylesheet is also relocating pointers to images. 
+    
     NOTE: Learned from this how to deliver the simple <!DOCTYPE html> at the top of the file from 
     https://stackoverflow.com/questions/3387127/set-html5-doctype-with-xslt
     -->
@@ -24,6 +27,23 @@
        </ul>
         <xsl:apply-templates select="child::*[position() gt 1]"/>
       </body>
+   </xsl:template>
+   <xsl:template match="a[img] | img">
+       <xsl:element name="{name()}">
+           <xsl:copy-of select="current()/@*[not(name() = ('href', 'src'))]"/>
+           <xsl:if test="name() = 'a'">
+               <xsl:attribute name="href">
+                   <xsl:value-of select="substring-after(@href, 'QGIS/')"/>
+               </xsl:attribute>
+           </xsl:if>
+           <xsl:if test="name() = 'img'">
+               <xsl:attribute name="src">
+                   <xsl:value-of select="substring-after(@src, 'QGIS/')"/>
+               </xsl:attribute>
+           </xsl:if>
+           <xsl:apply-templates/>
+       </xsl:element>
+       
    </xsl:template>
     
 </xsl:stylesheet>
