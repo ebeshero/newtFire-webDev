@@ -5,24 +5,29 @@
     xmlns="http://www.w3.org/1999/xhtml"
     exclude-result-prefixes="xs"
     version="3.0">
-    <xsl:output method="html" version="5.0" encoding="utf-8" />
+    <xsl:output method="xhtml" encoding="utf-8" omit-xml-declaration="yes" />
     <!--2020-05-06 eb: This stylesheet reads ids from any heading element in the content of an HTML document, 
         and creates a linked table of contents at the top of the document following the first top-level title.
     This is also an up-conversion from github markdown files as they were displayed on a GitHub repo, 
     so the stylesheet is also relocating pointers to images. 
-    
-    NOTE: Learned from this how to deliver the simple <!DOCTYPE html> at the top of the file from 
-    https://stackoverflow.com/questions/3387127/set-html5-doctype-with-xslt
+   Note: This stylesheet also updates how I get the DOCTYPE declaration following advice on the oXygen forum:
+    https://www.oxygenxml.com/forum/topic6745.html
     -->
+    
     <xsl:mode on-no-match="shallow-copy"/>
+    <xsl:template match="/">
+        <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
+        <xsl:apply-templates/>
+    </xsl:template>
     
    <xsl:template match="body">
       <body>
        <xsl:apply-templates select="comment()"/>
         <xsl:apply-templates select="child::*[1]"/>
+        <h2>Contents</h2>
        <ul>
            <xsl:for-each select="descendant::*[name()[matches(., '^h[2-9]$')]][@id]">
-               <li><a href="#{@id}"><xsl:apply-templates select="current()"/></a></li>
+               <li><a href="#{@id}"><xsl:value-of select="current()"/></a></li>
            </xsl:for-each>
        </ul>
         <xsl:apply-templates select="child::*[position() gt 1]"/>
