@@ -1,0 +1,1741 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Higher Laws</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</p>
+               </licence>
+            </availability>          
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Students of <hi rend="style(italics)">ENG 390: Literature in the
+            Digital Age</hi> at SUNY Geneseo using Text Encoding Initiative (TEI) P5 XML Schema, using the Parallel
+            Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and includes critical apparatus
+               laid out by Ronald Clapper, and annotations provided by Ronald Clapper, J. Lyndon Shanley, and Walter
+               Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised edition of dissertation
+               originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc11">
+      <body>
+         <div>
+            
+            <head> Higher Laws <note type="general" resp="#clapper" ana="#wc_0e #wc_0f">The title “Animal Food” is
+                  inserted at the top of the leaf containing Higher Laws 1a.</note>
+               <anchor type="hn" xml:id="hn-11-001"/>
+            </head>
+            
+            <p n="1" change="#wc_0e">
+               <seg n="1a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 1a written: E; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">1a</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>AS I came home through the woods with my string of fish,
+                  trailing my <app xml:id="walc11-app-0001">
+                     <lem>pole,</lem>
+                     <rdg wit="#wc_0e">pole <add>along</add>,</rdg>
+                     <rdg wit="#wc_0f">pole along</rdg>
+                  </app> it being now quite dark, I caught a glimpse of a woodchuck stealing across my path, and felt a strange<app xml:id="walc11-app-0002">
+                     <lem>thrill</lem>
+                     <rdg wit="#wc_0e">thrill as it were </rdg>
+                     <rdg wit="#wc_0f">thrill <del>as it were</del>
+                     </rdg>
+                  </app> of savage delight, and was strongly tempted to seize and devour him raw;<anchor type="hn" xml:id="hn-11-002"/>
+                  <app xml:id="walc11-app-0003">
+                     <lem>not that I was hungry then, except for that wildness which he represented.</lem>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">not that I was hungry but for that wildness which he
+                           represented</add>.</rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-11-003"/>
+                  <app xml:id="walc11-app-0004">
+                     <lem> Once or twice, however, while I lived at the pond, I found myself ranging the woods, like a
+                        half-starved hound, with a strange abandonment, seeking some kind of venison which I might
+                        devour, and no morsel could have been too savage for me.</lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">Once or twice, however, while I lived at the pond, I found
+                           myself ranging the woods, like a half-starved hound, with a strange abandonment, seeking some
+                           kind of venison which I might devour, and no morsel could have been too savage for
+                        me</add>.</rdg>
+                  </app> The wildest scenes had become unaccountably <app xml:id="walc11-app-0005">
+                     <lem>familiar. I found</lem>
+                     <rdg wit="#wc_0e">familiar to me. <add>Indeed</add> I find </rdg>
+                     <rdg wit="#wc_0f">familiar <del>to me. Indeed I find</del>
+                        <add>I found</add>
+                     </rdg>
+                  </app> in myself, <app xml:id="walc11-app-0006">
+                     <lem>and still find,</lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">and still find</add>,</rdg>
+                  </app> an instinct toward a higher, <app xml:id="walc11-app-0007">
+                     <lem>or, as it is named, spiritual life, as do most men, and </lem>
+                     <rdg wit="#wc_0e">what <del>is called</del>
+                        <del>
+                           <add>you may call</add>
+                           <add>is called</add>
+                        </del>
+                        <del>
+                           <hi rend="underline">spiritual</hi>
+                        </del>
+                        
+                        <add rendition="pencil">moral</add> life,— <del>I use the word with hesitation, because though
+                           we have the idea, we have not the reality,—</del> and <del>also</del>
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">or</add> what is called <del>moral</del>
+                        <add>spiritual</add> life, <add rendition="pencil">as do most men</add> and</rdg>
+                  </app> another toward a primitive rank and savage one, and I reverence them<app xml:id="walc11-app-0008">
+                     <lem>both.</lem>
+                     <rdg wit="#wc_0e">both. <del>Some would say that the one impulse was directly from God, the other
+                           through nature</del>
+                     </rdg>
+                  </app> I love the wild not less than the good. </seg>
+               
+               <seg n="1b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 1b written: A; rewritten: E, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">1b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E, F</seg>
+                     </ab>
+                     <ab change="#wc_0a">Higher Laws 1b follows Higher Laws 3a and precedes
+                     Higher Laws 3b. The order of the material in A is as follows: 5a, 1c, 3a, 1b, 3b, 1d, 3d,
+                     5b.</ab>
+                     <ab change="#wc_0a">[Higher Laws 1b appears as follows. I love sometimes
+                     to take rank hold on life, and spend my day more as the animals do. The novelty and adventure that
+                     are in this pursuit recommend it to me. </ab>
+                  </note>
+                  
+                   The<app xml:id="walc11-app-0009">
+                     <lem>wildness</lem>
+                     <rdg wit="#wc_0e">novelty </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>novelty</del>
+                        <add rendition="pencil">wildness</add>
+                     </rdg>
+                  </app> and adventure that are in fishing<app xml:id="walc11-app-0010">
+                     <lem>still recommended</lem>
+                     <rdg wit="#wc_0e">
+                        <del>recommend</del>
+                        <add rendition="pencil">recommended</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">still</add> recommended</rdg>
+                  </app> it to me.<anchor type="hn" xml:id="hn-11-004"/> I <app xml:id="walc11-app-0011">
+                     <lem>like</lem>
+                     <rdg wit="#wc_0e #wc_0f">love</rdg>
+                  </app> sometimes to take rank hold on life and spend my day more as the animals do. Perhaps I have
+                  owed to this employment and to hunting, <app xml:id="walc11-app-0012">
+                     <lem>when quite young,</lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">when quite young</add>,</rdg>
+                  </app> my closest acquaintance with Nature.</seg>
+               
+               <seg n="1c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 1c written: A; rewritten: E, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">1c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E, F</seg>
+                     </ab>
+                     <ab change="#wc_0a">Higher Laws 1c follows Higher Laws 5a and precedes
+                     Higher Laws 3a.</ab>
+                     <ab change="#wc_0a">Higher Laws 1c appears as follows. It tempts me
+                     continually because <del>
+                           <add rendition="pencil">perhaps, if I attempt to analyze my
+                        motive</add>
+                        </del>
+                        <add rendition="pencil">perhaps, if I can analyze my motive</add> it is a means of becoming
+                     acquainted with nature—not <del>only</del>
+                        <add>merely</add> with fishes—<del>but with night and water—and the scenery—which I should not
+                        otherwise see under the same aspects.</del>
+                        <add rendition="pencil">It introduces me to the night &amp; to the wildest scenes &amp; detains me
+                        there. The best way to become acquainted with any scenery is to follow some pursuit in it which
+                        harmonizes with it. Fishermen &amp; hunters see nature at an advantage which the philosopher
+                        never enjoys. She is not afraid to exhibit herself to them</add>
+                     </ab>
+                     <ab change="#wc_0e">Higher Laws 1c appears as follows. They introduced
+                     me early to the wildest scenes and detained me there. The best way to become acquainted with any
+                     scenery is to engage in some pursuit in it which harmonizes with it. Fishermen &amp; hunters see
+                     nature under some advantages which poets and philosophers do not enjoy. She is not afraid to
+                     exhibit herself to them. </ab>
+                     <ab change="#wc_0f">Higher Laws 1c appears as follows. They introduced
+                     me early to the wildest scenes and detained me there. The best way to become acquainted with any
+                     scenery is to engage in some pursuit in it which harmonizes with it. <del>Fishermen and hunters see
+                        nature under some advantages which poets and philosophers do not enjoy</del>
+                        <add rendition="pencil">Fishermen, hunters, woodchoppers &amp; the like—spending their lives in her
+                        midst as a part of herself—in the intervals of their pursuits are in a more favorable mood for
+                        observing her than philosophers or poets even who approach her with expectation</add>. She is
+                     not afraid to exhibit herself to them.</ab>
+                  </note>
+                  
+                  
+                  
+                   They early introduce us to and detain us in scenery
+                  with which otherwise, at that age, we should have little acquaintance. Fishermen, hunters,
+                  woodchoppers, and others, spending their lives in the fields and woods, in a peculiar sense a part of
+                  Nature themselves, are often in a more favorable mood for observing her, in the intervals of their
+                  pursuits, than philosophers or poets even, who approach her with expectation. She is not afraid to
+                  exhibit herself to them. </seg>
+               
+               <seg n="1d" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 1d written: A; rewritten: E, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">1d</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E, F</seg>
+                     </ab>
+                     <ab change="#wc_0a">Higher Laws 1d follows Higher Laws 3b and precedes
+                     Higher Laws 3d.</ab>
+                     <ab change="#wc_0a">Higher Laws 1d appears as follows. But the ramble by
+                     the river and meadow <del>seems to be</del>
+                        <add rendition="pencil">is otherwise</add> incomplete, and <del>to want</del>
+                        <add rendition="pencil">wants</add> a sufficient <del>aim for itself without this</del> purpose.
+                     The traveller of the prairie is a hunter—of the head-waters of the Missouri &amp; Columbia—a
+                     trapper. Those who go to the Falls of St. Mary are fishermen. The traveller who is only a traveller
+                     learns things by the halves, and at 2<hi rend="style(superscript)">nd</hi> hand—and is poor
+                     authority.</ab>
+                  </note>
+                  
+                   The traveller on the prairie is naturally a hunter, on the head waters of the
+                  Missouri and Columbia a trapper, and at the Falls of St. Mary<anchor type="hn" xml:id="hn-11-005"/> a fisherman.<app xml:id="walc11-app-0013">
+                     <lem>He</lem>
+                     <rdg wit="#wc_0e">The ramble by the river and meadow seemed sometimes incomplete, and without a
+                        sufficient purpose, if I did not carry a fish-pole,—<del>I sold my gun long before I went to the
+                           woods.</del> The traveller </rdg>
+                     <rdg wit="#wc_0f">The ramble by the river and meadow <add>might have</add> seemed sometimes
+                        incomplete, and without a sufficient purpose, if I <del>did not carry</del>
+                        <add>had not carried</add> a fish-pole. The traveller</rdg>
+                  </app> who is only a traveller learns things at second-hand and by the halves, and is poor authority.<app xml:id="walc11-app-0014">
+                     <lem> We are most interested when science reports what those men already know practically or
+                        instinctively, for that alone is a true <hi rend="style(italics)">humanity</hi>, or account of human experience. </lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">We are most interested when science reports what those men
+                           already know—for this is some human life in those scenes</add>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="2" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 2 written: E; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">2</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0e">Higher Laws 2 and Higher Laws 3c were added to the
+                  manuscript after Higher Laws 3b and before Higher Laws 3d. A fair copy of Higher Laws 2 was made in
+                  its present order.</ab>
+               </note>
+                They mistake who assert that the Yankee has few amusements, because he has
+               not so many public holidays, and men and boys do not play<app xml:id="walc11-app-0015">
+                  <lem>so</lem>
+                  <rdg wit="#wc_e1">as </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>as</del>
+                     <add>so</add>
+                  </rdg>
+               </app> many games as they do in England, for here the more primitive but solitary amusements of hunting
+               fishing <app xml:id="walc11-app-0016">
+                  <lem>and the like</lem>
+                  <rdg wit="#wc_e1">nutting &amp;c. </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>nutting &amp;c.</del>
+                     <add rendition="pencil">&amp; the like</add>
+                  </rdg>
+               </app> have not yet given place to the former. <app xml:id="walc11-app-0017">
+                  <lem>Almost</lem>
+                  <rdg wit="#wc_e1">I remember when almost </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>
+                        <add>As</add>
+                     </del>
+                     <del>
+                        <add>Even</add>
+                     </del>
+                     <del>I remember when</del> almost</rdg>
+               </app> every New England boy <app xml:id="walc11-app-0018">
+                  <lem>among my contemporaries</lem>
+                  <rdg wit="#wc_e1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <add rendition="pencil">among my contemporaries</add>
+                  </rdg>
+               </app> shouldered <app xml:id="walc11-app-0019">
+                  <lem>a</lem>
+                  <rdg wit="#wc_e1">
+                     <del>his</del>
+                     <add>a</add>
+                  </rdg>
+               </app> fowling piece between the ages of ten and fourteen; and his hunting and fishing <app xml:id="walc11-app-0020">
+                  <lem>grounds were</lem>
+                  <rdg wit="#wc_e1">ground was </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>ground was</del>
+                     <add rendition="pencil">grounds were</add>
+                  </rdg>
+               </app> not limited like the preserves of an English nobleman, but<app xml:id="walc11-app-0021">
+                  <lem>were</lem>
+                  <rdg wit="#wc_e1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <add>were</add>
+                  </rdg>
+               </app> more boundless<app xml:id="walc11-app-0022">
+                  <lem>even</lem>
+                  <rdg wit="#wc_e1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <add>even</add>
+                  </rdg>
+               </app> than those of a savage. No wonder, then, that he did not <app xml:id="walc11-app-0023">
+                  <lem>oftener</lem>
+                  <rdg wit="#wc_e1">
+                     <add rendition="pencil">oftener</add>
+                  </rdg>
+               </app> stay to play on the common.<anchor type="hn" xml:id="hn-11-006"/> But already a change is taking place, owing,
+               not to an increased humanity, but to an increased scarcity of <app xml:id="walc11-app-0024">
+                  <lem>game, for perhaps the hunter is the greatest friend of the animals hunted, not excepting the
+                     Humane Society.</lem>
+                  <rdg wit="#wc_e1">large game. A distinction was made by my compeers between blackbirds and robins, and
+                     often that boy lost cast who was known to have killed one of the latter </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>large</del> game. <del>A distinction was made by my compeers between blackbirds
+                        and robins, and often that boy lost cast who was known to have killed one of the latter</del>
+                     <add>
+                        <del>Yet</del> perhaps the hunter is the greatest friend of the animals hunted not excepting
+                        the humane society</add>
+                  </rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-11-007"/>
+            </p>
+            
+            <p n="3" change="#wc_0a">
+               <seg n="3a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 3a written: A; rewritten: E, E, E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">3a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, E, E</seg>
+                  </ab>
+               </note> —and occasionally, though not so often, because I wish to add fish to my fare for variety—I actually fish
+                  sometimes <del>as naturally—and</del> from the same kind of necessity—as the first fishermen did.
+                  Moreover, when at the pond, I wished sometimes to add fish to my fare for variety. I have actually
+                  fished from the same kind of necessity that the first fishers did. </seg>
+               
+               <seg n="3b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 3b written: A; rewritten: E, E, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">3b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E, E, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Higher Laws 3b follows Higher Laws 1b and precedes
+                     Higher Laws 1d.</ab>
+                     <ab change="#wc_0a"> Higher Laws 3b appears as follows. Whatever
+                     humanity I may conjure up against it is all factitious, &amp; concerns my philosophy more than my
+                     actual feelings—not that I am less humane than others—but I do not perceive that <del>these are
+                        affected very much</del>
+                        <add>my feelings are much affected</add>. I do not pity the fishes nor the worms. This is
+                     habit.</ab>
+                  </note>
+                  
+                   Whatever humanity I might conjure up against it was all factitious, and concerned my
+                  philosophy more than my<app xml:id="walc11-app-0025">
+                     <lem>feelings.</lem>
+                     <rdg wit="#wc_e1">actual feelings </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>actual</del> feelings</rdg>
+                  </app>
+                  <app xml:id="walc11-app-0026">
+                     <lem> I speak of fishing only now, for I had long felt differently about fowling, and sold my gun
+                        before I went to the woods.</lem>
+                     <rdg wit="#wc_e1">
+                        <add> I speak of fishing only now, for I had long felt differently about fowling,
+                           and sold my gun before I went to the woods</add>. I speak of fishing <add>only</add> now for
+                        I had long felt differently about <del>it</del> gunning </rdg>
+                     <rdg wit="#wc_e2">I speak of fishing only now, for I had long felt differently about
+                           <del>gunning</del>
+                        <add>fowling</add>
+                     </rdg>
+                     <rdg wit="#wc_e3">I speak of fishing only now, for I had long felt differently about
+                           fowling—<add>and sold my gun before I went to the woods</add>
+                     </rdg>
+                  </app> Not that I am less humane than others, but I did not perceive that my feelings were much
+                  affected. I did not pity the fishes nor the worms. This was habit.</seg>
+               
+               <seg n="3c" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 3c written: E; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">3c</seg>
+                        <seg type="written">E</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">Higher Laws 2 and 3c were added to the manuscript
+                     between Higher Laws 3b and 3d. A fair copy of only <quote>As for fowling, during the last years
+                        … I have been willing to omit the gun</quote> was made when Higher Laws 2 was copied in
+                     its present order.</ab>
+                  </note>
+                  
+                  <app xml:id="walc11-app-0027">
+                     <lem>As for fowling, during the last years that I carried a gun</lem>
+                     <rdg wit="#wc_e1">In after years </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>In after years</del>
+                        <del>
+                           <add>In later years</add>
+                        </del>
+                        <add rendition="pencil">As for fowling during the last years that I carried a gun</add>
+                     </rdg>
+                  </app> my excuse was that I was studying ornithology, <anchor type="hn" xml:id="hn-11-008"/> and <app xml:id="walc11-app-0028">
+                     <lem>sought</lem>
+                     <rdg wit="#wc_e1">I sought </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>I</del> sought</rdg>
+                  </app> only new or rare birds. But I <app xml:id="walc11-app-0029">
+                     <lem>confess that I am now inclined to </lem>
+                     <rdg wit="#wc_e1">now </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>now</del>
+                        <add>confess that I am now inclined to</add>
+                     </rdg>
+                  </app> think that there is a finer way of studying ornithology than this. It requires so much closer
+                  attention to the habits of the birds, that, if for that reason only, I <app xml:id="walc11-app-0030">
+                     <lem>have been</lem>
+                     <rdg wit="#wc_e1">am </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>am</del>
+                        <add rendition="pencil">have been</add>
+                     </rdg>
+                  </app> willing to omit the gun.<app xml:id="walc11-app-0031">
+                     <lem>Yet</lem>
+                     <rdg wit="#wc_e1">But</rdg>
+                  </app> notwithstanding the objection on the score of humanity, I am compelled to doubt if equally
+                  valuable sports are ever substituted for these; </seg>
+               
+               <seg n="3d" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 3d written: A; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">3d</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0a">[Higher Laws 3d follows Higher Laws 1d and precedes
+                     Higher Laws 5b.</ab>
+                     <ab change="#wc_0a"> Higher Laws 3d appears as follows. When <add>some
+                        of</add> my friends have asked me anxiously about their boys—whether they should let them hunt
+                     or not—I have answered yes—remembering that it was the best part of my education. <add>Aye, make
+                        them hunters of such skill &amp; tenacity &amp; enterprise that at last they shall not find game
+                        large enough for them in these woods</add>
+                     </ab>
+                  </note>
+                  
+                  
+                  <app xml:id="walc11-app-0032">
+                     <lem>and when</lem>
+                     <rdg wit="#wc_0e">When</rdg>
+                  </app> some of my friends have asked me anxiously about their boys, whether they should let them hunt,
+                  I have answered, yes,—remembering that it was one of the best parts of my education,— <hi>make</hi>
+                  them hunters, though sportsmen only at first, if possible, mighty hunters at last, so that they shall
+                  not find game large enough for them in <app xml:id="walc11-app-0033">
+                     <lem>this or</lem>
+                     <rdg wit="#wc_0e">these woods, or in</rdg>
+                  </app> any vegetable wilderness,— <app xml:id="walc11-app-0034">
+                     <lem>hunters as well as fishers of men.</lem>
+                     <rdg wit="#wc_0e">
+                        <add>hunters as well as fishers of men</add>.</rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-11-009"/>
+               </seg>
+               
+               <seg n="3e" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 3e written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">3e</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                  </note>Thus far I am of the opinion of Chaucer’s nun, who <quote>
+                     <lg>
+                        <l> “yave not of the text a pulled hen </l>
+                        <l>That saith that hunters ben not holy men.” </l>
+                     </lg>
+                  </quote>
+                  <anchor type="hn" xml:id="hn-11-010"/> There is a period in the history of the individual,
+                  as of the race, when the hunters are the “best men,” as the Algonquins<anchor type="hn" xml:id="hn-11-011"/> called them. We cannot but pity the
+                  boy who has never fired a gun; he is no more humane, while his education <app xml:id="walc11-app-0035">
+                     <lem>has been sadly neglected.</lem>
+                     <rdg wit="#wc_0e">
+                        <del>is</del>
+                        <add>has been</add> sadly incomplete</rdg>
+                  </app>
+                  <app xml:id="walc11-app-0036">
+                     <lem>This was my answer with respect to those youths who were bent on this pursuit, trusting that
+                        they would soon outgrow it.</lem>
+                     <rdg wit="#wc_0e">
+                        <add>This was my answer with respect to those youths who were bent on this
+                           pursuit, trusting that they would soon outgrow it</add>.</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="3f" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 3f written: A; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">3f</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0g">Higher Laws 3f is interlined.</ab>
+                  </note>
+                   No humane
+                  being, past the thoughtless age of boyhood, will wantonly murder any creature, which holds its life by
+                  the same tenure that he does. The hare in its extremity cries like a child. I warn you, mothers, that
+                  my sympathies do not always make the usual phil-<hi>anthropic</hi> distinctions.<anchor type="hn" xml:id="hn-11-012"/>
+               </seg>
+            </p>
+            
+            <p n="4" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 4 written: F; rewritten: G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">G</seg>
+                  </ab>
+                  <ab change="#wc_0g">A fair copy was made of only <quote>know nothing about
+                     the hook of hooks … the hunter stage of development</quote>.</ab>
+               </note>
+                Such is oftenest the
+               young man’s introduction to the forest, <app xml:id="walc11-app-0037">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0f">and <del>wild, and to</del>
+                  </rdg>
+               </app> the most original part of himself. He goes thither at first as a hunter and fisher, until at last, <app xml:id="walc11-app-0038">
+                  <lem>if he has the seeds of a better life in him, he distinguishes his proper objects, as a poet or
+                     naturalist it may be,</lem>
+                  <rdg wit="#wc_0f">
+                     <del>the poet or naturalist in him distinguishes his proper object</del>
+                     <add rendition="pencil">if he has the seeds of a better life in him he distinguishes his proper
+                        objects, as a poet or naturalist perhaps</add>
+                  </rdg>
+               </app> and leaves the gun and fish-pole behind. The mass of men are still and always young in this
+               respect. <app xml:id="walc11-app-0039">
+                  <lem>In some countries a hunting parson is no uncommon sight. Such a one might make a good shepherd’s
+                     dog, but is far from being the Good Shepherd.</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">In some countries a hunting person is no uncommon sight who
+                        is death to the foxes that steal his parishioners’ mutton, but has never trained himself to
+                        destroy the wolf that harries his own flock, the parishioners themselves</add>
+                  </rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-11-013"/> I have been surprised
+               to consider that the only obvious employment, except <app xml:id="walc11-app-0040">
+                  <lem>wood-chopping, ice-cutting, or the like</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">wood-chopping, ice-cutting, or the like</add>
+                  </rdg>
+               </app> business, which ever to my knowledge detained at Walden Pond for a whole half day any of my
+               fellow-citizens, whether fathers or children of the town, with just one exception, was fishing.<app xml:id="walc11-app-0041">
+                  <lem>Commonly</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">Commonly</add>
+                  </rdg>
+               </app> they did not think that they were lucky, or well paid for their time, unless they got a long
+               string of fish, though they had the opportunity of seeing the pond all the <app xml:id="walc11-app-0042">
+                  <lem>while.</lem>
+                  <rdg wit="#wc_0f">while. <del>They measured their success by the length of a string of
+                     fish.</del>
+                  </rdg>
+               </app> They might go there a thousand times before the sediment of fishing would sink to the bottom and
+               leave their purpose pure; <app xml:id="walc11-app-0043">
+                  <lem>but no doubt such a clarifying process would be going on all the while.</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">but no doubt such a clarifying process would be going on all
+                        the while</add>.</rdg>
+               </app> The governor and his council<anchor type="hn" xml:id="hn-11-014"/> faintly remember the pond, for
+               they went a-fishing there when they were boys; but now they are too old and dignified to go a-fishing,
+               and so they know it no more forever. <app xml:id="walc11-app-0044">
+                  <lem>Yet even they expect to go to heaven at last.</lem>
+                  <rdg wit="#wc_0f">
+                     <add>Yet even they expect to go to heaven at last</add>.</rdg>
+               </app> If the legislature regards it, it is chiefly to regulate the number of hooks to be <app xml:id="walc11-app-0045">
+                  <lem>used</lem>
+                  <rdg wit="#wc_0f">used <del>in fishing</del>
+                  </rdg>
+               </app> there;<anchor type="hn" xml:id="hn-11-015"/> but they know nothing about the book of hooks with which to angle for the
+               pond itself, impaling the legislature for a bait. Thus, even in civilized <app xml:id="walc11-app-0046">
+                  <lem>communities,</lem>
+                  <rdg wit="#wc_0f">society </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>societies</del>
+                     <add>communities</add>
+                  </rdg>
+               </app> the embryo man passes through the hunter stage of development. </p>
+            
+            <p n="5" change="#wc_0a">
+               <seg n="5a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 5a written: A; rewritten: E, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">5a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, G</seg>
+                  </ab>
+               </note> I have found repeatedly, of late years, that I cannot fish without falling a little
+                  in self-respect. I have tried it again and again. I have skill at it, and, <app xml:id="walc11-app-0047">
+                     <lem>like many of my fellows,</lem>
+                     <rdg wit="#wc_0e">as I have said </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>as I have said</del>
+                        <add>like many of my fellows</add>
+                     </rdg>
+                  </app> a certain instinct for it, which revives from time to time, but always when I have done I feel
+                  that it would have been better if I had not fished. I think <app xml:id="walc11-app-0048">
+                     <lem>that I do not mistake.</lem>
+                     <rdg wit="#wc_0e">I am not mistaken </rdg>
+                     <rdg wit="#wc_0g">that I <del>am not mistaken</del>
+                        <add>do not mistake</add>
+                     </rdg>
+                  </app> It is a faint intimation, yet so are the first streaks of morning.</seg>
+               
+               <seg n="5b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 5b written: A; rewritten: E, E, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">5b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E, E, G</seg>
+                     </ab>
+                     <ab change="#wc_0a">Higher Laws 5b follows Higher Laws 3d and precedes a
+                     missing leaf (#153). The next leaf (#155) contains Higher Laws 7.</ab>
+                     <ab change="#wc_0e">A second fair copy was made of only <quote>kind. It
+                        is a significant fact … abdomens betray them</quote>.</ab>
+                     <ab change="#wc_0g">A fair copy was made of only <quote>There is
+                        unquestionably this instinct … at present I am no fisherman at all</quote>.</ab>
+                     <ab change="#wc_0a">Higher Laws 5b appears as follows. There is
+                     unquestionably this instinct in me which belongs to the lower order of creation. Yet with every
+                     year I am less a fisherman, though without more humanity <add rendition="pencil"> or even
+                        wisdom</add>. When I have caught my fish &amp; cooked them, I have gained nothing by it, but
+                     perhaps lost</ab>
+                  </note>
+                  
+                  
+                  
+                   There is unquestionably this instinct in me which belongs to the lower orders
+                  of creation; yet with every year I am less a fisherman, though without more humanity or even wisdom; <app xml:id="walc11-app-0049">
+                     <lem>at present</lem>
+                     <rdg wit="#wc_e1">in fact, at present </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>in fact,</del> at present</rdg>
+                  </app> I am no fisherman at all. <app xml:id="walc11-app-0050">
+                     <lem>But I see that if I were to live in a wilderness I should again be tempted to become a fisher
+                        and hunter in earnest.</lem>
+                     <rdg wit="#wc_e1">
+                        <add>But I see that if I were to live in a wilderness I should again be tempted
+                           to become a fisher and hunter in earnest</add>.<del>though</del>
+                        <add>but</add> I see that if I were to live in a wilderness I should again be tempted to <del>be
+                           a fisherman</del>
+                        <add>become a fisher</add> and hunter in earnest</rdg>
+                  </app>
+                  <app xml:id="walc11-app-0051">
+                     <lem>Beside, there</lem>
+                     <rdg wit="#wc_e1">When I <del>have</del>
+                        <add rendition="pencil">had</add> caught my fish and cooked them, I <del>have</del>
+                        <add rendition="pencil">had</add> gained nothing by it, but perhaps lost rather. There</rdg>
+                  </app> is something essentially unclean about this diet and all flesh, and I began to see where
+                  housework commences, and whence the endeavor, which costs so much, to wear a tidy and respectable
+                  appearance each day, to keep the house sweet and free from all ill odors and sights. <app xml:id="walc11-app-0052">
+                     <lem>Having been</lem>
+                     <rdg wit="#wc_e1">Being</rdg>
+                  </app> my own butcher and scullion and cook, as well as the gentleman for whom the dishes <app xml:id="walc11-app-0053">
+                     <lem>were</lem>
+                     <rdg wit="#wc_e1">are</rdg>
+                  </app> served up, I can speak from an unusually complete experience. The practical objection to animal
+                  food in my case was its uncleanness;<anchor type="hn" xml:id="hn-11-016"/>
+                  <app xml:id="walc11-app-0054">
+                     <lem>and, besides,</lem>
+                     <rdg wit="#wc_e1">
+                        <add>and, besides</add>,</rdg>
+                  </app> when I had caught and cleaned and cooked and eaten my fish, they seemed not to have fed me
+                  essentially. It was insignificant and unnecessary, <app xml:id="walc11-app-0055">
+                     <lem>and cost more than it came to.</lem>
+                     <rdg wit="#wc_e1">after all. It was always to pay too dear for your whistle</rdg>
+                  </app> A little bread or a few potatoes would have done as well, with less trouble and filth. Like
+                  many of my contemporaries, I had rarely for many years used animal food, or tea, or coffee, &amp;c.;
+                  not so much because of any ill effects which I had traced to <app xml:id="walc11-app-0056">
+                     <lem>them,</lem>
+                     <rdg wit="#wc_e1">them in my own case, <del>though I had my theories on that subject</del>
+                     </rdg>
+                  </app> as because they were not agreeable to my imagination. The repugnance to animal food is not the
+                  effect of experience, but is an instinct. It appeared more beautiful to live low and fare hard in many
+                  respects; and though I never did so, I went far enough to please my imagination. I believe that every<app xml:id="walc11-app-0057">
+                     <lem>man</lem>
+                     <rdg wit="#wc_e1">man since Adam, <del>and</del> including him,</rdg>
+                  </app> who has ever been earnest to preserve his higher or poetic faculties in the best condition has
+                  been particularly inclined to abstain from animal food, and from much food of any kind. It is a
+                  significant fact, <app xml:id="walc11-app-0058">
+                     <lem>stated</lem>
+                     <rdg wit="#wc_e1">affirmed </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>affirmed</del>
+                        <add>stated</add>
+                     </rdg>
+                  </app> by entomologists, <app xml:id="walc11-app-0059">
+                     <lem>I find it in Kirby and Spence,</lem>
+                     <rdg wit="#wc_e1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_e2">
+                        <add>I find it in Kirby and Spence</add>,</rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-11-017"/> that “some insects in their perfect state,
+                  though furnished with organs of feeding, make no use of <app xml:id="walc11-app-0060">
+                     <lem>them;</lem>
+                     <rdg wit="#wc_e1">them <del>, and consume no food whatever</del>
+                     </rdg>
+                  </app> and they <app xml:id="walc11-app-0061">
+                     <lem>lay it</lem>
+                     <rdg wit="#wc_e1">
+                        <del>say, “it may be laid</del>
+                        <add rendition="pencil">lay it</add>
+                     </rdg>
+                  </app> down as “a general rule, that almost all insects in this state eat much less than in that of
+                  larvæ. The voracious caterpillar when transformed into a <app xml:id="walc11-app-0062">
+                     <lem>butterfly,”</lem>
+                     <rdg wit="#wc_e1">butterfly <del>needs only a small quantity of honey</del>
+                     </rdg>
+                  </app>. . “and the gluttonous maggot when become a fly,” <app xml:id="walc11-app-0063">
+                     <lem>content themselves</lem>
+                     <rdg wit="#wc_e1">
+                        <del>contents itself</del>
+                        <add rendition="pencil">content themselves</add>
+                     </rdg>
+                  </app> with a drop or two of <app xml:id="walc11-app-0064">
+                     <lem>honey or some other</lem>
+                     <rdg wit="#wc_e1">
+                        <del>any</del>
+                        <add rendition="pencil">honey or some other</add>
+                     </rdg>
+                  </app> sweet liquid. <app xml:id="walc11-app-0065">
+                     <lem>The abdomen under the wings of the butterfly stir represents the larva. This is the tid-bit
+                        which tempts his insectivorous fate. The gross feeder is a man in the larva state; and there are
+                        whole nations in that condition, nations without fancy or imagination, whose vast abdomens
+                        betray them.</lem>
+                     <rdg wit="#wc_e1">The gross feeder is a man in the larva state, and there are whole nations in that
+                        condition. The abdomen of the butterfly still represents it </rdg>
+                     <rdg wit="#wc_e2">
+                        <add>The abdomen under the wings of the butterfly still represents the larva.
+                           This is the tidbit that tempts his insectivorous fate.</add> The gross feeder is a man in the
+                        larva state, and there are whole nations in that condition <del>. The abdomen of the butterfly
+                           still represents it</del>
+                        <add>nations without fancy or imagination whose vast abdomens betray them</add>
+                        <del>
+                           <add>By a certain portion of Christendom the custom of doing without meat at certain
+                              seasons, which no doubt has a higher origin &amp; significance than they are aware of, is
+                              made synonomous with fasting</add>
+                        </del>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="6" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 6 written: E; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">6</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0e">A fair copy was made of only <quote>It is hard to
+                     provide and cook … True, he can and does live, in a great measure</quote>.</ab>
+               </note>
+               
+               <app xml:id="walc11-app-0066">
+                  <lem>It is hard</lem>
+                  <rdg wit="#wc_e1">Indeed it is hard in practice </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>Indeed</del> it is hard <del>in practice</del>
+                  </rdg>
+               </app> to provide and cook so simple and clean a diet as will not offend the imagination; <app xml:id="walc11-app-0067">
+                  <lem>but</lem>
+                  <rdg wit="#wc_e1">and </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>and</del>
+                     <add>but</add>
+                  </rdg>
+               </app> this, I think, is to be fed when we feed the body; they should both sit down at the same table. Yet<app xml:id="walc11-app-0068">
+                  <lem>perhaps</lem>
+                  <rdg wit="#wc_e1">perchance </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>perchance</del>
+                     <add rendition="pencil">perhaps</add>
+                  </rdg>
+               </app> this may be done. The fruits eaten temperately need not make us ashamed of our appetites, nor
+               interrupt the worthiest pursuits. But put an extra condiment into your dish, and it will poison you. It <app xml:id="walc11-app-0069">
+                  <lem>is</lem>
+                  <rdg wit="#wc_e1">seems </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>seems</del>
+                     <add>is</add>
+                  </rdg>
+               </app> not worth the while to live by<app xml:id="walc11-app-0070">
+                  <lem>rich</lem>
+                  <rdg wit="#wc_e1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <add>rich</add>
+                  </rdg>
+               </app> cookery. Most men would feel shame if caught preparing with their own hands precisely such a
+               dinner, whether of animal or vegetable food, as is every day <app xml:id="walc11-app-0071">
+                  <lem>prepared</lem>
+                  <rdg wit="#wc_e1">provided </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>provided</del>
+                     <add rendition="pencil">prepared</add>
+                  </rdg>
+               </app> for them by others. Yet till this is otherwise we are not civilized, and, if gentlemen and ladies,<app xml:id="walc11-app-0072">
+                  <lem>are</lem>
+                  <rdg wit="#wc_e1">we are </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>we</del> are</rdg>
+               </app> not true men and women. This certainly suggests what change is to be made. It may be vain to ask
+               why the imagination will not be reconciled to flesh and fat. <app xml:id="walc11-app-0073">
+                  <lem>I am satisfied</lem>
+                  <rdg wit="#wc_e1">
+                     <del>It is obvious</del>
+                     <add>I am satisfied</add>
+                  </rdg>
+               </app> that it is not. Is it not a reproach that man is a carnivorous<anchor type="hn" xml:id="hn-11-018"/>
+               <app xml:id="walc11-app-0074">
+                  <lem> animal?</lem>
+                  <rdg wit="#wc_e1">animal? <add>I speak now while I am bringing home a string of fish, or a partridge
+                        or rabbit which I have snared, or if you prefer it a lamb which I have slaughtered</add>
+                  </rdg>
+                  <rdg wit="#wc_e2">animal? <del>I speak now while I am bringing home a string of fish, or a partridge
+                        or rabbit which I have snared, or if you prefer it a lamb which I have slaughtered.</del>
+                  </rdg>
+               </app> True, he can and does live, in a great measure, by preying on other animals; but this is a miserable<app xml:id="walc11-app-0075">
+                  <lem>way,</lem>
+                  <rdg wit="#wc_e1">way of sustaining himself</rdg>
+               </app>—<app xml:id="walc11-app-0076">
+                  <lem>as any one who will go to snaring rabbits, or slaughtering lambs, may learn,</lem>
+                  <rdg wit="#wc_e1">
+                     <add>as any one who will go to snaring rabbits, or slaughtering lambs, may
+                        learn</add>,</rdg>
+               </app>—and he will be regarded as a benefactor of his <app xml:id="walc11-app-0077">
+                  <lem>race</lem>
+                  <rdg wit="#wc_e1">race <del>, along with Prometheus and Christ</del>
+                     <del>
+                        <add>together with Prometheus and Christ</add>
+                     </del>
+                  </rdg>
+               </app> who shall teach man <app xml:id="walc11-app-0078">
+                  <lem>to confine himself to</lem>
+                  <rdg wit="#wc_e1">
+                     <add>to confine himself to</add>
+                  </rdg>
+               </app> a more innocent and wholesome diet. <app xml:id="walc11-app-0079">
+                  <lem>Whatever my own practice may be, I have no doubt that it is a part of the destiny of the human
+                     race, in its gradual improvement, to leave off eating animals,<anchor type="hn" xml:id="hn-11-019"/> as surely as the savage
+                     tribes have left off eating each other when they came in contact with the more civilized.</lem>
+                  <rdg wit="#wc_e1">
+                     <add>Whatever my own practice may be, I have no doubt that it is a part of the
+                        destiny of the human race, in its gradual improvement, to leave off eating animals,<anchor type="hn" xml:id="hn-11-020"/> as surely as the savage tribes have left off eating each other when they came in
+                        contact with the more civilized</add>.</rdg>
+               </app>
+            </p>
+            
+            <p n="7" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 7 written: A; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">7</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0a">Higher Laws 7 follows a missing leaf (#153).</ab>
+               </note>
+               
+               <app xml:id="walc11-app-0080">
+                  <lem>If one listens to the faintest but constant suggestions of his genius, which are certainly true,
+                     he sees not to what extremes, or even insanity, it may lead him; and yet that way, as he grows more
+                     resolute and faithful, his road lies.</lem>
+                  <rdg wit="#wc_0a">If I listen to the faintest but constant suggestions of my genius <add rendition="pencil"> which are certainly true</add> I see not to what extremes or <add rendition="pencil"> even</add> insanity it would lead me—and yet that way as I grow more
+                     resolute and faithful my road lies </rdg>
+                  <rdg wit="#wc_0e">If <del>I listen</del>
+                     <add rendition="pencil">one listens</add> to the faintest but constant suggestions of <del>my</del>
+                     <add rendition="pencil">his</add> genius, which are certainly true, <del>I see</del>
+                     <add rendition="pencil">he sees</add> not to what extremes or even insanity it <del>would lead
+                        me</del>
+                     <add rendition="pencil">may lead him</add> and yet that way as <del>I grow</del>
+                     <add rendition="pencil">he grows</add> more resolute and faithful <del>my</del>
+                     <add rendition="pencil">his</add> road lies</rdg>
+               </app> The faintest assured objection which one healthy man feels will at length prevail over the
+               arguments and customs of mankind. No man ever followed his genius till it misled him.<anchor type="hn" xml:id="hn-11-021"/> Though the result were bodily weakness, yet <app xml:id="walc11-app-0081">
+                  <lem>perhaps no one</lem>
+                  <rdg wit="#wc_0a">no man perhaps </rdg>
+                  <rdg wit="#wc_0e">no <del>man</del>
+                     <add>one</add> perhaps</rdg>
+               </app> can say that the consequences were to be regretted, for these were a life in conformity to higher
+               principles. If the day and the night are such that you greet them with joy, and life emits a fragrance
+               like flowers and sweet-scented herbs, <app xml:id="walc11-app-0082">
+                  <lem>is more</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+               </app> elastic, more starry, more immortal,— that is your success. All nature is your congratulation, and
+               you have cause momentarily to bless yourself. The greatest gains and values are farthest from being
+               appreciated. We<app xml:id="walc11-app-0083">
+                  <lem>easily</lem>
+                  <rdg wit="#wc_0a">can easily</rdg>
+               </app> come to doubt if they exist. We soon forget them. They are the highest reality. <app xml:id="walc11-app-0084">
+                  <lem>Perhaps</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0e">
+                     <add>Perhaps</add>
+                  </rdg>
+               </app> the facts most astounding and most real are never communicated by man to man. The true harvest of
+               my daily life is somewhat as intangible and indescribable as the tints of morning or evening. It is a
+               little star-dust caught, <app xml:id="walc11-app-0085">
+                  <lem>a segment</lem>
+                  <rdg wit="#wc_0a">It is a segment</rdg>
+               </app> of the rainbow which I have<app xml:id="walc11-app-0086">
+                  <lem>clutched.</lem>
+                  <rdg wit="#wc_0a">
+                     <add>clutched</add> But practically I am <del>but</del>
+                     <add rendition="pencil">only</add> half-converted by my own arguments for I still fish</rdg>
+               </app>
+            </p>
+            
+            <p n="8" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 8 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">8</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+               </note>Yet, <app xml:id="walc11-app-0087">
+                  <lem>for my part,</lem>
+                  <rdg wit="#wc_0e">
+                     <add>for my own part</add>
+                  </rdg>
+               </app> I was never unusually<app xml:id="walc11-app-0088">
+                  <lem>squeamish;</lem>
+                  <rdg wit="#wc_0e">squeamish <add>I assure you</add>
+                  </rdg>
+               </app> I could sometimes eat a fried rat<anchor type="hn" xml:id="hn-11-022"/> with a good relish, if
+               it were necessary. I am glad to have drunk water so long, for the same reason that I prefer the natural
+               sky to an opium-eater’s heaven.<anchor type="hn" xml:id="hn-11-023"/> I would
+               fain keep sober always; and there are infinite degrees of drunkenness. I believe that<app xml:id="walc11-app-0089">
+                  <lem>water</lem>
+                  <rdg wit="#wc_0e">
+                     <del>it</del>
+                     <add>water</add>
+                  </rdg>
+               </app> is the only drink for a wise man; <app xml:id="walc11-app-0090">
+                  <lem>wine is not so noble a liquor; and</lem>
+                  <rdg wit="#wc_0e">
+                     <add>wine is not so noble a liquor <del>if it is to drink</del>, and</add>
+                  </rdg>
+               </app> think of dashing the hopes of a morning with a cup of warm coffee, or of an evening with a dish of
+               tea! <app xml:id="walc11-app-0091">
+                  <lem>Ah, how low I fall when I am tempted by them!</lem>
+                  <rdg wit="#wc_0e">
+                     <add>Ah how low I fell when I was tempted by them</add>
+                  </rdg>
+               </app> Even music may be intoxicating. Such apparently slight causes destroyed Greece and Rome, and will
+               destroy England and America. Of all ebriosity, <app xml:id="walc11-app-0092">
+                  <lem>who does not prefer to be intoxicated by the air he breathes?</lem>
+                  <rdg wit="#wc_0e">
+                     <del>I</del>
+                     <add>who does not</add> prefer to be intoxicated on the air <del>I breathe</del>
+                     <add>he breathes</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc11-app-0093">
+                  <lem>I have found it to be the most serious objection to coarse labors long continued, that they
+                     compelled me to eat and drink coarsely also.</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+               </app> But to tell the truth, I find myself at present somewhat less particular in these respects. I
+               carry less religion to the table, ask no blessing; not because I am wiser than I was, but, I am obliged
+               to confess, because, however much it is to be regretted, with years I have grown more coarse and
+               indifferent. <app xml:id="walc11-app-0094">
+                  <lem>Perhaps these questions are entertained only in youth, as most believe of poetry. My practice is
+                     “nowhere,” my opinion is here. Nevertheless I am far from regarding</lem>
+                  <rdg wit="#wc_0e">However, I do not regard</rdg>
+               </app> myself as one of those privileged ones to whom the Ved<anchor type="hn" xml:id="hn-11-024"/>
+               refers when it says, that “he who has true faith in the Omnipresent Supreme Being may eat all that
+               exists,” that is, is not bound to inquire what is his food, or who prepares it; and even in their case it
+               is to be observed, as <app xml:id="walc11-app-0095">
+                  <lem>a Hindoo commentator</lem>
+                  <rdg wit="#wc_0e">Rammohun Roy</rdg>
+               </app> has remarked, that the Vedant limits this privilege to “the time of distress.”</p>
+            
+            <p n="9" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 9 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+               </note>Who has not sometimes derived an inexpressible satisfaction from his food in which
+               appetite had no share? I have been thrilled to think that I owed a mental perception to the commonly
+               gross sense of taste, that I have been inspired through the palate, that some berries which I had eaten
+               on a hill-side had fed my<app xml:id="walc11-app-0096">
+                  <lem>genius.</lem>
+                  <rdg wit="#wc_0e">
+                     <del>brain, my fancy and imagination</del>
+                     <add rendition="pencil">genius</add>
+                  </rdg>
+               </app> “The soul not being mistress of herself,” says Thseng-tseu,<anchor type="hn" xml:id="hn-11-025"/> “one looks, and one does not see; one listens, and one does not hear; one eats, and one
+               does not know the savor of <app xml:id="walc11-app-0097">
+                  <lem>food.”</lem>
+                  <rdg wit="#wc_0e">
+                     <del>food.”</del>
+                     <del>And his master Confucius says</del>
+                     <add>says Confucius</add> “Of all men there is no one who does not eat and drink, but very few
+                     among them know how to distinguish savors.”</rdg>
+               </app> He who distinguishes the true savor of his food can never be a glutton; he who does not cannot be otherwise.<app xml:id="walc11-app-0098">
+                  <lem>a puritan may</lem>
+                  <rdg wit="#wc_0e">
+                     <del>I have seen a puritan</del>
+                     <add rendition="pencil">A puritan may</add>
+                  </rdg>
+               </app> go to his brown-bread crust with as gross an appetite as ever an alderman<anchor type="hn" xml:id="hn-11-026"/> to his <app xml:id="walc11-app-0099">
+                  <lem>turtle.</lem>
+                  <rdg wit="#wc_0e">turtle. <del>I need not look beyond myself for my examples</del>
+                  </rdg>
+               </app> Not that food which entereth into the mouth defileth a man, but the appetite with which it is
+                  eaten.<anchor type="hn" xml:id="hn-11-027"/> It is neither the quality nor
+               the quantity, but the devotion to sensual savors; <app xml:id="walc11-app-0100">
+                  <lem>when that which is eaten is not a viand to sustain our animal, or inspire our spiritual life, but
+                     food for the worms that possess us.</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">when that which is eaten is not a viand which sustains our
+                           <del>peculiar</del> human life but food for the worms that possess us</add>
+                  </rdg>
+               </app> If the hunter has a taste for mud-turtles, muskrats, and other such savage tid-bits, the fine lady
+               indulges a taste for <app xml:id="walc11-app-0101">
+                  <lem>jelly</lem>
+                  <rdg wit="#wc_0e">some form of potted cheese, or jelly</rdg>
+               </app> made of a calf’s foot, or for sardines from over the sea, and they are even. He goes to the
+               mill-pond, she to her preserve-pot. The wonder is how they, how <app xml:id="walc11-app-0102">
+                  <lem>you and</lem>
+                  <rdg wit="#wc_0e">
+                     <add>you and</add>
+                  </rdg>
+               </app> I, can live this slimy beastly life, eating and <app xml:id="walc11-app-0103">
+                  <lem>drinking.</lem>
+                  <rdg wit="#wc_0e">drinking. <add rendition="pencil">Though</add> We are wont to attribute to woman a
+                     finer and more sibylline nature than to man, <del>but I am struck with the fact that so many of the
+                        most refined young women are so intolerant of these reforms, and that the philosopher</del>
+                     <del>
+                        <add>but I am struck with the fact that in these respects she is rarely a reformer is so
+                           intolerant of reform and that the philosopher</add>
+                     </del>
+                     <add rendition="pencil">I am not sure but he</add> who seeks most faithfully to refine and ennoble
+                     life in these respects, will <del>after all</del> find more sympathy in the intellect &amp;
+                     philosophy of man, than in the refinement and delicacy of woman. Can it be that woman yields a more
+                     implicit obedience to her animal instincts than man,—or are the harshness &amp; crudity of all
+                     reform more repugnant to her taste &amp; to her easy conforming nature?</rdg>
+               </app>
+            </p>
+            
+            <p n="10" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 10 written: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">10</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc11-app-0104">
+                  <lem>Our whole life is startlingly moral.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>How wonderfully moral is our whole life</del>
+                     <add>Our whole life is startlingly moral</add>
+                  </rdg>
+               </app> There is never an instant’s truce between virtue and vice. Goodness is the only investment that
+               never fails. In the <app xml:id="walc11-app-0105">
+                  <lem>music of the harp</lem>
+                  <rdg wit="#wc_0f">
+                     <del>harp music</del>
+                     <add>music of the harp</add>
+                  </rdg>
+               </app> which trembles round the world it is the insisting on this which thrills us. The harp is the
+               travelling patterer for the Universe’s Insurance Company, recommending its laws, and our little goodness
+               is all the assessment that we pay. Though the youth at last grows indifferent, the laws of the universe
+               are not indifferent, but are forever on the side of the most sensitive. Listen to every zephyr for some
+               reproof, <app xml:id="walc11-app-0106">
+                  <lem>for it is surely there, and he is unfortunate who does not hear it.</lem>
+                  <rdg wit="#wc_0f">
+                     <add>for it is surely there, and he is unfortunate who does not hear it</add>. for
+                        <del>sure</del> it is <add>surely</add> there, &amp; <del>fortunate is he that hears it</del>
+                     <add>unfortunate is he that does not hear it</add>
+                  </rdg>
+               </app> We cannot touch a string or <app xml:id="walc11-app-0107">
+                  <lem>move a stop</lem>
+                  <rdg wit="#wc_0f">
+                     <del>make a sound</del>
+                     <add>move a stop</add>
+                  </rdg>
+               </app> but the charming moral transfixes us. Many an irksome noise, go a long way off, is heard as music,
+               a proud sweet satire on the meanness of our <app xml:id="walc11-app-0108">
+                  <lem>lives.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>life</del>
+                     <add>lives</add>
+                  </rdg>
+               </app>
+            </p>
+            
+            <p n="11" change="#wc_0e">
+               <seg n="11a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 11a written: E; rewritten: G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">11a</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">G</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc11-app-0109">
+                     <lem>We are conscious of an animal in us, which awakens in proportion as our higher nature
+                        slumbers.</lem>
+                     <rdg wit="#wc_0e">I am conscious in myself of an animal nature which awakens when <del>the
+                           spirit</del>
+                        <add rendition="pencil">my intellectual nature</add> slumbers, but while <del>the spirit</del>
+                        <add rendition="pencil">this</add> is awake is inactive </rdg>
+                     <rdg wit="#wc_0g">We are conscious <del>in ourselves</del> of an animal <add>in us</add> which
+                        awakens in proportion as our <del>intellectual</del>
+                        <add rendition="pencil">higher</add> nature slumbers</rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-11-028"/> It is reptile and sensual, and perhaps cannot <app xml:id="walc11-app-0110">
+                     <lem>be wholly</lem>
+                     <rdg wit="#wc_0e #wc_0g">wholly be</rdg>
+                  </app> expelled; like the worms which, even in life and health, occupy our bodies. <app xml:id="walc11-app-0111">
+                     <lem>Possibly we may withdraw from it, but</lem>
+                     <rdg wit="#wc_0e">It feeds and drinks, and reposes, and would fain gratify the most sensual
+                        appetite, in spite of the <del>spirit</del>
+                        <add rendition="pencil">intellect</add>. It would seem as if I might withdraw from it, but
+                        could</rdg>
+                  </app> never change its nature. I fear that it<app xml:id="walc11-app-0112">
+                     <lem>may</lem>
+                     <rdg wit="#wc_0e">may even</rdg>
+                  </app> enjoy a certain health of its own; that we may be well, yet not pure. <app xml:id="walc11-app-0113">
+                     <lem>The other day I picked up</lem>
+                     <rdg wit="#wc_0e">I picked up the other day</rdg>
+                  </app> the lower jaw of a hog,<anchor type="hn" xml:id="hn-11-029"/> with white and sound teeth and tusks, which suggested
+                  that there was an animal health and vigor distinct from the <app xml:id="walc11-app-0114">
+                     <lem>spiritual.</lem>
+                     <rdg wit="#wc_0e">spiritual<add rendition="pencil">as it is called</add>
+                     </rdg>
+                     <rdg wit="#wc_0g">spiritual <del>as it is called</del>
+                     </rdg>
+                  </app> This creature succeeded by other means than temperance and purity. “That in which men differ
+                  from brute beasts,” says Mencius,<anchor type="hn" xml:id="hn-11-030"/> “is a thing very inconsiderable; the common
+                  herd lose it very soon; superior men preserve it carefully.”<app xml:id="walc11-app-0115">
+                     <lem>Who knows what sort of life would result if we had attained to purity?</lem>
+                     <rdg wit="#wc_0e">I do not know how it is with other men, but I find it very difficult to be chaste.
+                           <del>Methinks I can be chaste in my relation to persons, and yet I do not find myself
+                           clean.</del> I have <add rendition="pencil">frequent</add> cause to be ashamed of myself. I
+                        am well, but I am not pure. What other sort of life would result if I were I cannot say</rdg>
+                  </app> If I knew so wise a man as could teach me purity I would go to seek him forthwith. “A command
+                  over our passions, and over the external senses of the body, and good acts, are declared by the
+                     Ved<anchor type="hn" xml:id="hn-11-031"/> to be indispensable in the mind’s approximation
+                  to God.” <app xml:id="walc11-app-0116">
+                     <lem>Yet the spirit can for the time</lem>
+                     <rdg wit="#wc_0e">Yet I have experienced that the spirit can</rdg>
+                  </app> pervade and control every member and function of the body, and transmute what in form<app xml:id="walc11-app-0117">
+                     <lem>is the</lem>
+                     <rdg wit="#wc_0e">may be the lowest and</rdg>
+                  </app> grossest sensuality into</seg>
+               
+               <seg n="11b" change="#wc_0d">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Higher Laws 11b written: D; rewritten: E, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">11</seg>
+                        <seg type="chapterTitle">Higher Laws</seg>
+                        <seg type="paragraph">11b</seg>
+                        <seg type="written">D</seg>
+                        <seg type="rewritten">E, G</seg>
+                     </ab>
+                     <ab change="#wc_0d">Higher Laws 11b follows a missing leaf.
+                        <quote>Perhaps there is none … and made them worse</quote> was added to the manuscript on
+                     a separate leaf.</ab>
+                     <ab change="#wc_0g">A fair copy was made of only <quote>purity and
+                        devotion. The generative … allied to beasts, the creatures of</quote>.</ab>
+                  </note>
+                  
+                  
+                  <app xml:id="walc11-app-0118">
+                     <lem>purity</lem>
+                     <rdg wit="#wc_0d #wc_0e">inspiration</rdg>
+                  </app> and devotion.<anchor type="hn" xml:id="hn-11-032"/> The <app xml:id="walc11-app-0119">
+                     <lem>generative energy,</lem>
+                     <rdg wit="#wc_0d">divine liquors </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>divine liquors</del>
+                        <add rendition="pencil">vital energies</add>
+                     </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>vital energies</del>
+                        <add>generative energy</add>
+                     </rdg>
+                  </app> which, when we are loose, <app xml:id="walc11-app-0120">
+                     <lem>dissipates and makes us unclean,</lem>
+                     <rdg wit="#wc_0d">and profligate and dissipated, defile and make us unclean &amp; bestial </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>and debauched, defile and</del> make us unclean and bestial </rdg>
+                     <rdg wit="#wc_0g">
+                        <add>dissipates and</add> makes us unclean <del>and bestial</del>
+                     </rdg>
+                  </app> when we are continent <app xml:id="walc11-app-0121">
+                     <lem>invigorates and inspires us.</lem>
+                     <rdg wit="#wc_0d">and chaste, inspire and invigorate us </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>and chaste, inspire and invigorate us</del>
+                        <add rendition="pencil">invigorates and inspires us</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc11-app-0122">
+                     <lem>Chastity is the flowering of man; and what are called Genius, Heroism, Holiness, and the like,
+                        are but various fruits which succeed it.</lem>
+                     <rdg wit="#wc_0d">A heroic and chaste man tastes his vigor sweet in his mouth. <add rendition="pencil"> Chastity which includes all temperance and purity is the secret of
+                           genius</add>
+                     </rdg>
+                     <rdg wit="#wc_0e">A heroic and chaste man tastes his vigor sweet in his mouth. Chastity which
+                        includes all temperance and purity is the secret of genius </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>A heroic man tastes his vigor sweet in his mouth. Chastity is the secret of
+                           genius.</del>
+                        <add rendition="pencil">Chastity is the flowering of man &amp; what are called
+                           Genius—Heroism—Holiness and the like, are <del>the</del>
+                           <add rendition="pencil">but</add> various fruits which succeed it</add>
+                     </rdg>
+                  </app> Man flows at once to God <app xml:id="walc11-app-0123">
+                     <lem>when the channel of purity</lem>
+                     <rdg wit="#wc_0d">as soon as the channel of purity, physical intellectual and moral </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>as soon as the channel of purity, physical and moral</del>
+                        <add>when the channel of purity</add>
+                     </rdg>
+                  </app> is open. By turns <app xml:id="walc11-app-0124">
+                     <lem>our purity inspires and our impurity casts us</lem>
+                     <rdg wit="#wc_0d">my purity has inspired <add>me</add> and my impurity has cast me </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>my purity has inspired <add>me</add> and my impurity cast me</del>
+                        <add rendition="pencil">our purity inspires and our impurity casts us</add>
+                     </rdg>
+                  </app> down. He is<app xml:id="walc11-app-0125">
+                     <lem>blessed</lem>
+                     <rdg wit="#wc_0d">a happy man </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>a happy man</del>
+                        <add>blessed</add>
+                     </rdg>
+                  </app> who is assured that the animal is dying out in him day by day, and the <app xml:id="walc11-app-0126">
+                     <lem>divine</lem>
+                     <rdg wit="#wc_0d">spiritual </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>spiritual <add>man</add>
+                        </del>
+                        <add rendition="pencil">divine</add>
+                     </rdg>
+                  </app> being established. Perhaps there is<app xml:id="walc11-app-0127">
+                     <lem>none</lem>
+                     <rdg wit="#wc_0d">no man </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>no man</del>
+                        <del>
+                           <add>no human being</add>
+                        </del>
+                        <add rendition="pencil">none</add>
+                     </rdg>
+                  </app> but has cause for shame on account of the inferior and brutish nature to which he is<app xml:id="walc11-app-0128">
+                     <lem>allied.</lem>
+                     <rdg wit="#wc_0d #wc_0e">allied, though his superior divine nature be not subjected to it</rdg>
+                  </app>
+                  <app xml:id="walc11-app-0129">
+                     <lem>I fear that we</lem>
+                     <rdg wit="#wc_0d">We </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>
+                           <add rendition="pencil">Perhaps</add>
+                        </del>
+                        <add rendition="pencil">I fear</add> We</rdg>
+                  </app> are such gods or demigods only as fauns and satyrs,<anchor type="hn" xml:id="hn-11-033"/> the divine allied to beasts,
+                  the creatures of <app xml:id="walc11-app-0130">
+                     <lem>appetite, and that,</lem>
+                     <rdg wit="#wc_0d #wc_0e">instinct and appetite, and </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>instinct and</del> appetite, and that</rdg>
+                  </app> to some extent, our very life is our disgrace.— <quote>
+                     <lg>
+                        <l>“How happy’s he who hath due place assigned</l>
+                        <l>To his beasts and disafforested his mind!</l>
+                        </lg>
+                     <span> * * * </span>
+                     <lg>
+                        <l>Can use this horse, goat, wolf, and ev’ry beast,</l>
+                        <l>And is not ass himself to all the rest!</l>
+                        <l>Else man not only is the herd of swine,</l>
+                        <l>But he’s those devils too which did incline</l>
+                        <l>Them to a headlong rage, and made them worse.”</l>
+                     </lg>
+                  </quote>
+                  <anchor type="hn" xml:id="hn-11-034"/>
+               </seg>
+            </p>
+            
+            <p n="12" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 12 written: D; rewritten: E, E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">12</seg>
+                     <seg type="written">D</seg>
+                     <seg type="rewritten">E, E</seg>
+                  </ab>
+                  <ab change="#wc_0d">
+                     <quote>In the student sensuality is … performance
+                     of rites merely</quote> does not appear in the manuscript.</ab>
+                  <ab change="#wc_0e">A second fair copy was made of only <quote>If you would
+                     be chaste … performance of rites merely</quote>.</ab>
+               </note>
+               
+                All sensuality is one, though it
+               takes many forms; all<app xml:id="walc11-app-0131">
+                  <lem>purity</lem>
+                  <rdg wit="#wc_0d">spirituality </rdg>
+                  <rdg wit="#wc_e1">
+                     <del>spirituality</del>
+                     <add rendition="pencil">purity</add>
+                  </rdg>
+               </app> is one. It is the <app xml:id="walc11-app-0132">
+                  <lem>same whether a man</lem>
+                  <rdg wit="#wc_0d #wc_e1">same thing whether we</rdg>
+               </app> eat, or drink, or cohabit, or sleep sensually. They are but one appetite, and we only need to see
+               a person do any one of these things to know how great a sensualist he<app xml:id="walc11-app-0133">
+                  <lem>is.</lem>
+                  <rdg wit="#wc_0d">is, and how he might do any other </rdg>
+                  <rdg wit="#wc_e1">is <del>, and how he might do any other</del>
+                  </rdg>
+               </app> The impure can neither stand nor sit with<app xml:id="walc11-app-0134">
+                  <lem>purity.</lem>
+                  <rdg wit="#wc_0d">purity; the pure cannot eat nor drink nor cohabit with impurity </rdg>
+                  <rdg wit="#wc_e1"> purity <del>; the pure cannot eat, nor drink nor drink nor cohabit with
+                        impurity</del>
+                  </rdg>
+               </app> When the reptile is attacked at one mouth of his burrow, he shows himself at<app xml:id="walc11-app-0135">
+                  <lem>another.</lem>
+                  <rdg wit="#wc_0d #wc_e1">another. It is therefore vain to watch, or to pour water to drown him out at
+                     one alone, when he may be far out in the clover field by another</rdg>
+               </app> If you would be chaste, you must be temperate. What is chastity? How shall a man know if he is
+               chaste? He shall not know it. We have heard of this virtue, but we know not what it is. We speak
+               conformably to the rumor which we have heard. From exertion come wisdom and purity; from sloth ignorance and<app xml:id="walc11-app-0136">
+                  <lem>sensuality.</lem>
+                  <rdg wit="#wc_e1">sensuality. If you seek the warmth even of affection from a similar motive to that
+                     from which cats &amp; dogs &amp; slothful persons hug the fire, you are on the downward road.
+                     Better the cold affection of the sun, reflected from fields of ice &amp; snow or his warmth in some
+                     still <note type="general" subtype="inline" resp="#clapper">a leaf is missing</note>
+                     <del>attain to. We may love and not elevate one another. The love that takes us as it finds us,
+                        degrades us. What watch we must keep over the fairest &amp; finest of our affections lest there
+                        be some taint about them. May we so love as never to have occasion to repent of our love</del>
+                  </rdg>
+                  <rdg wit="#wc_e2">sensuality. <del>Go not to a warm latitude in order to live a simple and pure life.
+                        It will be harder there than it is here. If you migrate let it be to a colder and more stubborn
+                        soil still. Be a highlander, a mountaineer in virtue. Virtue was not born under a palm
+                        tree</del>
+                  </rdg>
+               </app>
+               <app xml:id="walc11-app-0137">
+                  <lem>In the student sensuality is a sluggish habit of mind.</lem>
+                  <rdg wit="#wc_e1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <add> In the student sensuality is a sluggish habit of mind</add>.</rdg>
+               </app> An unclean person is<app xml:id="walc11-app-0138">
+                  <lem>universally</lem>
+                  <rdg wit="#wc_e1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <add>universally</add>
+                  </rdg>
+               </app> a slothful one, one who sits <app xml:id="walc11-app-0139">
+                  <lem>by a stove,</lem>
+                  <rdg wit="#wc_e1 #wc_e2">astride of a stove; who remains in bed after the light-bringer has awakened
+                     him</rdg>
+               </app> whom the sun shines on prostrate, who reposes without being fatigued. If you would avoid <app xml:id="walc11-app-0140">
+                  <lem>uncleanness,</lem>
+                  <rdg wit="#wc_e1 #wc_e2">uncleanness, impurity</rdg>
+               </app> and all the sins, work<app xml:id="walc11-app-0141">
+                  <lem>earnestly,</lem>
+                  <rdg wit="#wc_e1">earnestly and industriously </rdg>
+                  <rdg wit="#wc_e2">earnestly <del>and industriously</del>
+                  </rdg>
+               </app> though it be at cleaning a stable.<anchor type="hn" xml:id="hn-11-035"/> Nature<app xml:id="walc11-app-0142">
+                  <lem>Nature</lem>
+                  <rdg wit="#wc_e1">And considering the state of the worker, how can his work be other than cleaning a
+                     stable? It is the first job he will find to do. Ah! nature </rdg>
+                  <rdg wit="#wc_e2">And considering the state of the worker, how can his work be other than cleaning a
+                     stable? <del>It</del>
+                     <add>This</add> is the first <del>job</del>
+                     <add>work</add> he will find to do. <add>Though it is made an important object with some reformers
+                        to put their washing out &amp; get it done by the community—but they will find at last that they
+                        have got to take it further in—their washing and their purifying</add> Ah! nature </rdg>
+               </app> is hard to be overcome, but she must be overcome. What avails it that you are Christian, if you
+               are not<app xml:id="walc11-app-0143">
+                  <lem>purer</lem>
+                  <rdg wit="#wc_e1">more pure </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>more pure</del>
+                     <add rendition="pencil">purer</add>
+                  </rdg>
+               </app> than the heathen, if you deny yourself no more, if you are not more religious? I know of many
+               systems of religion esteemed heathenish whose precepts fill the reader with shame,<anchor type="hn" xml:id="hn-11-036"/> and
+               provoke him to new endeavors, though it be to the performance of rites merely.</p>
+            
+            <p n="13" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 13 written: D; rewritten: E, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">13</seg>
+                     <seg type="written">D</seg>
+                     <seg type="rewritten">E, G</seg>
+                  </ab>
+                  <ab change="#wc_0g">A fair copy was made of only <quote>however offensive
+                     it may be … calling these things trifles</quote>.</ab>
+               </note>
+                I hesitate to say these things, but
+               it is not because of the subject,— <app xml:id="walc11-app-0144">
+                  <lem>I care not how obscene my <hi>words</hi> are,—but because I cannot speak of them without
+                     betraying my impurity.</lem>
+                  <rdg wit="#wc_0d">but because I cannot speak of them without betraying my impurity </rdg>
+                  <rdg wit="#wc_0e">but because I cannot speak of them without betraying my impurity. <add rendition="pencil"> I am not afraid that my words will be obscene—nobody is—I am only afraid
+                        that you will think me obscene—</add>
+                     <add>because I <hi rend="underline">am</hi>
+                     </add>
+                  </rdg>
+               </app> We discourse freely without shame of one form of sensuality, and are silent about another. We are
+               so degraded that we cannot speak simply of the necessary functions of human nature. <app xml:id="walc11-app-0145">
+                  <lem>In earlier ages, in some countries, every function was reverently spoken of and regulated by
+                     law.</lem>
+                  <rdg wit="#wc_0d">
+                     <add>In earlier ages, every function was reverently spoken of and regulated by
+                        law</add>.</rdg>
+               </app> Nothing<app xml:id="walc11-app-0146">
+                  <lem>was</lem>
+                  <rdg wit="#wc_0d">
+                     <del>is</del>
+                     <add rendition="pencil">was</add>
+                  </rdg>
+               </app> too trivial <app xml:id="walc11-app-0147">
+                  <lem>for the Hindoo lawgiver, however offensive it may be to modern taste.</lem>
+                  <rdg wit="#wc_0d">or offensive to modern taste for the Hindoo lawgiver </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>or</del>
+                     <add rendition="pencil">however</add> offensive to modern taste for the Hindoo lawgiver </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>however offensive to modern taste</del> for the Hindoo lawgiver <add>however
+                        offensive it may be to modern taste</add>
+                  </rdg>
+               </app> He teaches how to eat, drink, cohabit, void excrement and urine, <app xml:id="walc11-app-0148">
+                  <lem>and the like,</lem>
+                  <rdg wit="#wc_0d">sleep, &amp;c., &amp;c. </rdg>
+                  <rdg wit="#wc_0e">sleep, <del>&amp;c., &amp;c.</del>
+                     <add rendition="pencil">and the like</add>
+                  </rdg>
+               </app> elevating what is mean, and does not falsely excuse himself by calling these things trifles.</p>
+            
+            <p n="14" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 14 written: E; rewritten: G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">14</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">G</seg>
+                  </ab>
+                  <ab change="#wc_0e">
+                     <quote>Every man is the builder … by hammering
+                     marble instead</quote> is interlined.</ab>
+                  <ab change="#wc_0e">
+                     <quote>We are all sculptors and painters …
+                     sensuality to imbrute them</quote> does not appear in the manuscript in E or in the original
+                  copying of G but is interlined in pencil in G.</ab>
+               </note>
+               
+                Every man is the builder of a temple, called his
+               body, to the god he worships,<anchor type="hn" xml:id="hn-11-037"/> after a<app xml:id="walc11-app-0149">
+                  <lem>style</lem>
+                  <rdg wit="#wc_0e">style, neither Egyptian nor Grecian, nor Gothic—but </rdg>
+                  <rdg wit="#wc_0g">style <del>, neither Egyptian, nor Grecian, nor Gothic, but</del>
+                  </rdg>
+               </app> purely his own, nor can he get off by hammering marble instead.<app xml:id="walc11-app-0150">
+                  <lem>We</lem>
+                  <rdg wit="#wc_0g">
+                     <del>Who can doubt the influence of the character on the bodily features?</del>
+                     We</rdg>
+               </app> are all sculptors and painters, and our material is our own flesh and blood and bones. Any
+               nobleness begins at once to refine a man’s features, any meanness or sensuality to imbrute them. </p>
+            
+            <p n="15" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Higher Laws 15 written: D; rewritten: E, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">11</seg>
+                     <seg type="chapterTitle">Higher Laws</seg>
+                     <seg type="paragraph">15</seg>
+                     <seg type="written">D</seg>
+                     <seg type="rewritten">E, G</seg>
+                  </ab>
+                  <ab change="#wc_0g">A fair copy was made of only <quote>John Farmer set at
+                     his door … Those same stars twinkle over other fields</quote>.</ab>
+               </note>
+                John<app xml:id="walc11-app-0151">
+                  <lem>Farmer</lem>
+                  <rdg wit="#wc_0d #wc_0e #wc_0g">Spaulding</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-11-038"/> sat at his door one <app xml:id="walc11-app-0152">
+                  <lem>September evening,</lem>
+                  <rdg wit="#wc_0d">evening in September </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>evening in September</del>
+                     <add rendition="pencil">September evening</add>
+                  </rdg>
+               </app> after a hard day’s work, his mind still running on his<app xml:id="walc11-app-0153">
+                  <lem>labor</lem>
+                  <rdg wit="#wc_0d">work </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>work</del>
+                     <add rendition="pencil">labor</add>
+                  </rdg>
+               </app> more or less. Having bathed, he sat down to recreate<anchor type="hn" xml:id="hn-11-039"/>
+               his intellectual man.<app xml:id="walc11-app-0154">
+                  <lem>sat down to recreate his intellectual man</lem>
+                  
+                  <rdg wit="#wc_0d">had sat down to think a quiet thought, and recreate his intellectual part </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>had</del> sat down to think a quiet thought, and recreate his intellectual
+                        <del>part</del>
+                     <add rendition="pencil">man</add>
+                  </rdg>
+                  <rdg wit="#wc_0g">sat down to <del>think a quiet thought, and</del> recreate his intellectual man</rdg>
+               </app> It was a rather cool evening, and some of his neighbors were apprehending a <app xml:id="walc11-app-0155">
+                  <lem>frost.</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">frost</add>. but his <del>instinct</del>
+                     <add>Genius</add> apprehended something else </rdg>
+                  <rdg wit="#wc_0g">frost <del>—but his Genius was apprehending something else</del>
+                  </rdg>
+               </app> He had not attended to the train of his thoughts long when he heard some one playing on a
+                  flute,<anchor type="hn" xml:id="hn-11-040"/> and that sound harmonized with his mood.<app xml:id="walc11-app-0156">
+                  <lem>some one playing on a flute, and that sound harmonized with his mood</lem>
+                  
+                  <rdg wit="#wc_0d">one of his neighbors playing on his flute and that was a sound which harmonized with
+                     his mood </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>one of his neighbors playing on his flute, and that was a sound which harmonized
+                        with his mood</del>
+                     <add rendition="pencil">some one playing on a flute, and that sound guided him back toward a path
+                        he had lost <del>in the morning</del>
+                     </add>
+                  </rdg>
+                  <rdg wit="#wc_0g">some one playing on a flute, and that sound <del>guided him back toward a path he had
+                        lost</del>
+                     <add rendition="pencil">harmonized with his mood</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc11-app-0157">
+                  <lem>Still</lem>
+                  <rdg wit="#wc_0d">
+                     <add rendition="pencil">Still</add>
+                  </rdg>
+               </app> he thought of his <app xml:id="walc11-app-0158">
+                  <lem>work;</lem>
+                  <rdg wit="#wc_0d">work <del>at first</del>
+                  </rdg>
+               </app>
+               <app xml:id="walc11-app-0159">
+                  <lem>but the burden of his thought was,</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">but the burden of his thought was</add>,</rdg>
+               </app> that though<app xml:id="walc11-app-0160">
+                  <lem>this</lem>
+                  <rdg wit="#wc_0d">it </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>it</del>
+                     <add rendition="pencil">this</add>
+                  </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>his work</del>
+                     <add>this</add>
+                  </rdg>
+               </app> kept running in his head, and he found himself planning and contriving it against his will, yet <app xml:id="walc11-app-0161">
+                  <lem>it concerned him very little.</lem>
+                  <rdg wit="#wc_0d">how little it concerned him </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>how little</del> it concerned him <add rendition="pencil">very
+                     little</add>
+                  </rdg>
+               </app> It was no more than the scurf of his skin, which was constantly shuffled <app xml:id="walc11-app-0162">
+                  <lem>off.</lem>
+                  <rdg wit="#wc_0g">off <del>—or rather by this effort he cast his slough from time to time</del>
+                  </rdg>
+               </app> But the notes of the flute came home to his ears out of a different sphere from that he worked in, <app xml:id="walc11-app-0163">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0d">or his neighbors lived in &amp; they </rdg>
+                  <rdg wit="#wc_0e">or his neighbors lived in, and <del>they</del>
+                  </rdg>
+                  <rdg wit="#wc_0g">or his neighbors lived in, and</rdg>
+               </app> suggested work for certain faculties which slumbered in him. They gently did away with the street,
+               and the village, and the state in which he lived. A voice<app xml:id="walc11-app-0164">
+                  <lem>said</lem>
+                  <rdg wit="#wc_0d #wc_0e">seemed to say </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>seemed to say</del>
+                     <add rendition="pencil">said</add>
+                  </rdg>
+               </app> to him,—Why do you stay here and live this<app xml:id="walc11-app-0165">
+                  <lem>mean</lem>
+                  <rdg wit="#wc_0d">mean dusty </rdg>
+                  <rdg wit="#wc_0e">mean <del>dusty</del>
+                  </rdg>
+               </app> moiling life, when a<app xml:id="walc11-app-0166">
+                  <lem>glorious</lem>
+                  <rdg wit="#wc_0d">worthy and glorious </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>worthy and</del> glorious</rdg>
+               </app> existence is possible for you? Those same stars twinkle over other fields than <app xml:id="walc11-app-0167">
+                  <lem>these.</lem>
+                  <rdg wit="#wc_0d #wc_0e">this</rdg>
+               </app> —But how to come out of this<app xml:id="walc11-app-0168">
+                  <lem>condition</lem>
+                  <rdg wit="#wc_0d #wc_0e"><!--[not in ms.]--></rdg>
+               </app> and actually migrate thither? All that he could think of was to practise some new austerity, to
+               let his mind descend into his body and redeem it, and treat himself with ever increasing respect. </p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,2138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: House-Warming</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
+                     Unported License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY
+               Geneseo using Text Encoding Initiative (TEI) P5 XML Schema, using the Parallel
+               Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and
+               includes critical apparatus laid out by Ronald Clapper, and annotations provided by
+               Ronald Clapper, J. Lyndon Shanley, and Walter Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised
+               edition of dissertation originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc13">
+      <body>
+         <div>
+            <head>House-Warming <note type="general" resp="#clapper">The original chapter title
+                  “Fire” appears at the top of the otherwise blank verso of the leaf containing
+                  House-Warming 4, indicating that House-Warming 1, 3, and 4 were originally part of
+                  the preceding chapter. The title “House-Warming” appears in pencil in the margin
+                  of the leaf containing House-Warming 1.</note>
+            </head>
+
+            <p n="1" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 1 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+                  <ab change="#wc_0e">House-Warming 1 is apparently a partial fair copy of material
+                     contained on a missing leaf in A. <quote>In October I went a-graping … pearly
+                        and red, which the farmer</quote> appears in pencil in the margin.</ab>
+               </note> IN October I went a-graping to the river meadows, and loaded myself with
+               clusters <app xml:id="walc13-app-0001">
+                  <lem>more</lem>
+                  <rdg wit="#wc_0e">commonly more</rdg>
+               </app> precious for their beauty and fragrance than for food. There, too, I admired,
+               though I did not gather, the cranberries, small waxen gems, pendants of the meadow
+               grass, pearly and red, which the farmer <app xml:id="walc13-app-0002">
+                  <lem>plucks with an ugly rake, leaving the smooth meadow in a snarl, heedlessly
+                     measuring them by the bushel and the dollar only,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>bushel and the dollar; a fairy fruit which he</del> plucks with an ugly
+                     rake, leaving the smooth meadow in a snarl <add rendition="pencil">heedlessly
+                        measuring them by the bushel &amp; the dollar only</add>
+                  </rdg>
+               </app> and sells the spoils of the meads to Boston and New York; destined to be <hi rend="style(italics)">jammed</hi>, to satisfy the tastes of lovers of Nature there.
+               So butchers rake the tongues of bison out of the prairie grass, regardless of the
+               torn and drooping plant. The barberry’s brilliant fruit was likewise food for my eyes
+                  <app xml:id="walc13-app-0003">
+                  <lem>merely;</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">merely</add>;</rdg>
+               </app> but I collected a small store of wild apples <app xml:id="walc13-app-0004">
+                  <lem>for coddling,<anchor type="hn" xml:id="hn-13-001"/> which
+                     the proprietor and travellers had overlooked.</lem>
+                  <rdg wit="#wc_0e">which the proprietor and the <del>traveller</del>
+                     <add rendition="pencil">travellers</add> had overlooked, for coddling</rdg>
+               </app> When chestnuts<anchor type="hn" xml:id="hn-13-002"/> were
+               ripe I laid up half a bushel<app xml:id="walc13-app-0005">
+                  <lem>for winter.</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">of these</add> for <del>my</del> winter
+                        <del>store</del>
+                     <del>
+                        <add rendition="pencil">use</add>
+                     </del>
+                  </rdg>
+               </app> It was very <app xml:id="walc13-app-0006">
+                  <lem>exciting</lem>
+                  <rdg wit="#wc_0e">
+                     <del>pleasant and</del> exciting</rdg>
+               </app> at that season to roam the then boundless chestnut woods <app xml:id="walc13-app-0007">
+                  <lem>of Lincoln,</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">of Lincoln</add>,</rdg>
+               </app>— they now sleep <app xml:id="walc13-app-0008">
+                  <lem>their long sleep<anchor type="hn" xml:id="hn-13-003"/>
+                  </lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">their long sleep</add>
+                  </rdg>
+               </app> under the railroad,— <app xml:id="walc13-app-0009">
+                  <lem>with a bag on my shoulder, and a stick to open burrs with in my hand, for I
+                     did not always wait for the frost,</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">with a bag on my shoulder, and a stick to open burrs
+                        with in my hand, for I did not always wait for the frost</add>,</rdg>
+               </app> amid the rustling of leaves and the loud reproofs of the red-squirrels and the
+               jays, whose half-consumed nuts I sometimes stole, for the burrs which they had
+               selected were sure to contain sound <app xml:id="walc13-app-0010">
+                  <lem>ones.</lem>
+                  <rdg wit="#wc_0e">
+                     <del>nuts</del>
+                     <add rendition="pencil">ones</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc13-app-0011">
+                  <lem>Occasionally I climbed and shook the trees.</lem>
+                  <rdg wit="#wc_0e">
+                     <del>Sometimes in unexplored and pathless depths meeting some adventurous boy
+                        even from other towns, from Lincoln, Weston, or Wayland, as wild as myself,
+                        with his bag on his shoulder and his stick to open burrs with. Perhaps two
+                        or three had clubbed together and shaken a large tree and shared the spoil.
+                           <add>Sometimes</add>
+                     </del>
+                     <add rendition="pencil">Occasionally I climbed &amp; shook the trees</add>
+                  </rdg>
+               </app> They grew also behind my house, and one large tree which almost overshadowed
+                  it,<app xml:id="walc13-app-0012">
+                  <lem>was, when in flower,</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">was</add> when in flower <del>was</del>
+                  </rdg>
+               </app> a bouquet which scented the whole neighborhood, but the squirrels and the jays
+               got most of its fruit; the last coming in flocks early in the morning and picking the
+               nuts out of the burrs before they fell, I relinquished these trees to them and
+               visited the more distant woods composed wholly of<app xml:id="walc13-app-0013">
+                  <lem>chestnut.</lem>
+                  <rdg wit="#wc_0e">chestnut <del>trees</del>
+                  </rdg>
+               </app>
+               <app xml:id="walc13-app-0014">
+                  <lem>These nuts, as far as they went, were</lem>
+                  <rdg wit="#wc_0e">
+                     <del>With a little more industry I might have collected a large quantity for
+                        winter use, and they would have been</del>
+                     <add rendition="pencil">These nuts as far as they went were</add>
+                  </rdg>
+               </app> a good substitute for bread. Many<app xml:id="walc13-app-0015">
+                  <lem>other</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">other</add>
+                  </rdg>
+               </app> substitutes might, perhaps, be found. Digging one day <app xml:id="walc13-app-0016">
+                  <lem>for fish-worms, I discovered the ground-nut (<hi rend="style(italics)">Apios
+                        tuberosa</hi>) on its string, the potato</lem>
+                  <rdg wit="#wc_0e">
+                     <del>to find worms for bait</del>
+                     <add rendition="pencil">for fish worms</add>, I <del>found</del>
+                     <add rendition="pencil">discovered</add> the ground-nut on its string.
+                        <del>This with corn was the bread</del>
+                     <add>
+                        <del>This was</del> the potatoe</add>
+                  </rdg>
+               </app> of the aborigines, a sort of fabulous fruit, which I had begun to doubt if I
+               had ever dug and eaten in childhood, as I had told,<anchor type="hn" xml:id="hn-13-004"/> and had not dreamed it. I had
+               often since seen its crimpled red velvety blossom <app xml:id="walc13-app-0017">
+                  <lem>supported by</lem>
+                  <rdg wit="#wc_0e">
+                     <del>running over</del>
+                     <add>supported by</add>
+                  </rdg>
+               </app> the stems of other plants without knowing it to be the same. <app xml:id="walc13-app-0018">
+                  <lem>Cultivation has</lem>
+                  <rdg wit="#wc_0e">
+                     <del>The white man’s swine and cultivation have</del>
+                     <add rendition="pencil">Cultivation has</add>
+                  </rdg>
+               </app> well nigh exterminated it. <app xml:id="walc13-app-0019">
+                  <lem>It has a sweetish taste, much like that of a frostbitten potato, and I found
+                     it better boiled than roasted.</lem>
+                  <rdg wit="#wc_0e">
+                     <add>It had a sweetish taste much like that of a frost-bitten potatoe, &amp; I
+                           <del>have</del> found it better boiled than roasted</add>
+                  </rdg>
+               </app> This <app xml:id="walc13-app-0020">
+                  <lem>tuber</lem>
+                  <rdg wit="#wc_0e">
+                     <del>root</del>
+                     <add>tuber</add>
+                  </rdg>
+               </app> seemed like a faint promise of Nature <app xml:id="walc13-app-0021">
+                  <lem>to rear her own children and feed them simply here</lem>
+                  <rdg wit="#wc_0e">
+                     <del>to feed men simply and worthily</del>
+                     <add rendition="pencil">to rear her own children &amp; feed them simply
+                        here</add>
+                  </rdg>
+               </app> at some future period. In these days of fatted cattle and waving grainfields
+               this humble <app xml:id="walc13-app-0022">
+                  <lem>root, which was once the <hi rend="style(italics)">totem</hi>
+                     <anchor type="hn" xml:id="hn-13-005"/> of an Indian tribe, is
+                     quite forgotten, or known only by its</lem>
+                  <rdg wit="#wc_0e">
+                     <del>tuber</del>
+                     <add rendition="pencil">root which was once the totem or armorial bearings of
+                        an Indian tribe</add> is quite forgotten, <del>and the ground-nut is known
+                        only as a</del>
+                     <add rendition="pencil">or known only by its</add>
+                  </rdg>
+               </app> flowering vine; but let wild Nature reign here once more, and the tender and
+               luxurious English grains<app xml:id="walc13-app-0023">
+                  <lem>will probably</lem>
+                  <rdg wit="#wc_0e">
+                     <del>would</del>
+                     <add>will</add> perchance</rdg>
+               </app> disappear before a myriad<app xml:id="walc13-app-0024">
+                  <lem>of</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+               </app> foes, and without the care of man the crow<app xml:id="walc13-app-0025">
+                  <lem>may</lem>
+                  <rdg wit="#wc_0e">
+                     <del>might</del>
+                     <add rendition="pencil">may</add>
+                  </rdg>
+               </app> carry back even the last seed of corn to the great cornfield of the Indian’s
+               God in the south-west, whence he <app xml:id="walc13-app-0026">
+                  <lem>is said to have</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+               </app> brought it;<anchor type="hn" xml:id="hn-13-006"/> but the
+               now almost exterminated ground-nut <app xml:id="walc13-app-0027">
+                  <lem>will perhaps</lem>
+                  <rdg wit="#wc_0e">
+                     <del>would</del>
+                     <add rendition="pencil">will</add>
+                  </rdg>
+               </app> revive and flourish in spite of frosts and wildness,<app xml:id="walc13-app-0028">
+                  <lem>prove itself indigenous,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>and</del> prove itself <del>native and aboriginal</del>
+                     <add rendition="pencil">indigenous</add>
+                  </rdg>
+               </app> and resume its ancient importance and dignity as the diet of the hunter tribe.
+               Some Indian Ceres or Minerva<anchor type="hn" xml:id="hn-13-007"/>
+               must have been the inventor and bestower of <app xml:id="walc13-app-0029">
+                  <lem>it;</lem>
+                  <rdg wit="#wc_0e">
+                     <del>the fruit</del>
+                     <add>it</add>
+                  </rdg>
+               </app> and when the reign of poetry commences here, its <app xml:id="walc13-app-0030">
+                  <lem>leaves and string of nuts may be represented on</lem>
+                  <rdg wit="#wc_0e">
+                     <del>form</del>
+                     <add>leaves &amp; string of nuts</add> will <del>perhaps be adapted into</del>
+                     <add rendition="pencil">perchance be represented on</add>
+                  </rdg>
+               </app> our works of art.<anchor type="hn" xml:id="hn-13-008"/>
+            </p>
+
+            <p n="2" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 2 written D; rewritten E, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">2</seg>
+                     <seg type="written">D</seg>
+                     <seg type="rewritten">E, F</seg>
+                  </ab>
+                  <ab change="#wc_0d #wc_0e">House-Warming 2, which is interlined in D, follows
+                     Ponds 16.</ab>
+               </note> Already, by the first of September, I <app xml:id="walc13-app-0031">
+                  <lem>had seen</lem>
+                  <rdg wit="#wc_0d #wc_0e">see </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>see</del>
+                     <add>had seen</add>
+                  </rdg>
+               </app> two or three small maples turned scarlet across the pond, beneath where the
+               white stems of three<app xml:id="walc13-app-0032">
+                  <lem>aspens diverged,</lem>
+                  <rdg wit="#wc_0d">birches diverge </rdg>
+                  <rdg wit="#wc_0e">aspens diverge </rdg>
+                  <rdg wit="#wc_0f">aspens <del>diverge</del>
+                     <add rendition="pencil">diverged</add>
+                  </rdg>
+               </app> at the point of a promontory, next the water. Ah, many a tale<anchor type="hn" xml:id="hn-13-009"/> their color <app xml:id="walc13-app-0033">
+                  <lem>told! And</lem>
+                  <rdg wit="#wc_0d #wc_0e">tells </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>tells</del>
+                     <add rendition="pencil">told &amp;</add>
+                  </rdg>
+               </app> gradually from week to week the character of each tree<app xml:id="walc13-app-0034">
+                  <lem>came</lem>
+                  <rdg wit="#wc_0d #wc_0e">comes </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>comes</del>
+                     <add rendition="pencil">came</add>
+                  </rdg>
+               </app> out, and it<app xml:id="walc13-app-0035">
+                  <lem>admired</lem>
+                  <rdg wit="#wc_0d #wc_0e">admires </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>admires</del>
+                     <add rendition="pencil">admired</add>
+                  </rdg>
+               </app> itself reflected in the smooth mirror of the lake.<app xml:id="walc13-app-0036">
+                  <lem>Each</lem>
+                  <rdg wit="#wc_0d">
+                     <del>&amp;</del> each</rdg>
+               </app> morning the manager of this gallery<app xml:id="walc13-app-0037">
+                  <lem>substituted </lem>
+                  <rdg wit="#wc_0d">
+                     <del>hangs</del>
+                     <add>substitutes</add>
+                  </rdg>
+                  <rdg wit="#wc_0e">substitutes </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>substitutes</del>
+                     <add rendition="pencil">substituted</add>
+                  </rdg>
+               </app> some new picture, distinguished by more brilliant<app xml:id="walc13-app-0038">
+                  <lem>or</lem>
+                  <rdg wit="#wc_0f">or <add rendition="pencil">else more</add>
+                  </rdg>
+               </app> harmonious coloring, for the old upon the<app xml:id="walc13-app-0039">
+                  <lem>walls.</lem>
+                  <rdg wit="#wc_0d">walls. <del>This is the only gallery to which I have a season
+                        ticket</del>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="3" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 3 written E; rewritten F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">3</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0f">A fair copy was made of only <quote>The wasps came by
+                        thousands … sometimes deterring visitors from</quote>.</ab>
+               </note> The wasps came by thousands to my lodge in October, as to winter quarters,
+               and settled on my windows within and on the walls <app xml:id="walc13-app-0040">
+                  <lem>over-head,</lem>
+                  <rdg wit="#wc_0e #wc_0f">over my head</rdg>
+               </app> sometimes deterring visitors from entering. Each morning, when they were
+               numbed with cold, I swept some of them out, but I did not trouble myself much to get
+               rid of them; I even felt complimented by their regarding my house as a desirable
+               shelter. They never molested me seriously, though they bedded with me; and they
+               gradually disappeared, into what crevices I do not know, avoiding winter<anchor type="hn" xml:id="hn-13-010"/> and unspeakable cold. </p>
+
+            <p n="4" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 4 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+               </note>Like the wasps, before I finally went into winter quarters in November, I used
+               to resort to the northeast side of Walden, which the sun, reflected from the
+               pitch-pine woods and the stony shore, made the fire-side of the pond; it is so much
+               pleasanter and wholesomer to be warmed by the sun while you can be, than by an
+               artificial fire. I thus warmed myself by the still glowing embers which the summer,
+               like a departed hunter, had left. 
+               <app>
+                  <lem>
+                     <lb/> <!--Paragraph break in Princeton edition was inferred, being 'over' the turn of a page-->
+                  </lem>
+               </app>
+            </p>
+
+            <p n="5" change="#wc_0a">
+               <seg n="5a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 5a written A; rewritten B, F, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">5a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B, F, G</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0b">House-Warming 5 and House-Warming 10 form part of
+                        the material in Economy. House-Warming 5a follows a missing leaf in A and
+                        precedes House-Warming 10a and Economy 69. The order in B is House-Warming
+                        5a, House-Warming 10a, House-Warming 5b, Economy 69. <quote>The mortar on
+                           them was … to save work and waste, and</quote> does not appear in the
+                        manuscript in A or in the original copying of B but is interlined in pencil
+                        in B.</ab>
+                     <ab change="#wc_0f">House-Warming 5 and House-Warming 10 have been removed from
+                        Economy but still appear in the following order—5a, 10a, 5b, 10b.</ab>
+                  </note> When I came to build my chimney<app xml:id="walc13-app-0042">
+                     <lem>I studied masonry.<anchor type="hn" xml:id="hn-13-011"/>
+                     </lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">I studied masonry</add>.</rdg>
+                  </app> My bricks <app xml:id="walc13-app-0043">
+                     <lem>being second-hand ones required</lem>
+                     <rdg wit="#wc_0a">were old ones and had </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">which</add> were old ones <del>and</del> had</rdg>
+                  </app> to be cleaned with a trowel, so that I learned more than<app xml:id="walc13-app-0044">
+                     <lem>usual</lem>
+                     <rdg wit="#wc_0a #wc_0b #wc_0f">is usual </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>is</del> usual</rdg>
+                  </app> of the<app xml:id="walc13-app-0045">
+                     <lem>qualities of</lem>
+                     <rdg wit="#wc_0a">
+                        <del>manufacture of</del>
+                        <add>art of making</add>
+                     </rdg>
+                     <rdg wit="#wc_0b">art of making </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>art of making</del>
+                        <add rendition="pencil">qualities of</add>
+                     </rdg>
+                  </app> bricks and trowels. The mortar on them was fifty years old, and was said to
+                  be still growing harder;<app xml:id="walc13-app-0046">
+                     <lem> but this is one of those sayings which men love to repeat whether they
+                        are true or not. Such sayings themselves grow harder and adhere more firmly
+                        with age, and it would take many blows with a trowel to clean an old
+                        wiseacre of them. Many of the villages of Mesopotamia<anchor type="hn" xml:id="hn-13-012"/> are built of second-hand
+                        bricks of a very good quality, obtained from the ruins of Babylon, and the
+                        cement on them is older and probably harder still. However that may
+                        be,</lem>
+                     <rdg wit="#wc_0b"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">but that is one of those sayings which men love to repeat
+                        whether <del>it is</del>
+                        <add>they are</add> true or not. Such sayings themselves grow harder and
+                        adhere more firmly with age, and it would take many blows of a trowel to
+                        clean an old wiseacre of them. <del>Nevertheless</del>
+                        <add rendition="pencil">Many of the villages of Mesopotamia are said to be
+                           built of 2<hi rend="superscript">nd</hi> hand bricks of a very good
+                           quality obtained from the ruins of Babylon—&amp; the cement on them is
+                           older still. However that may be</add>
+                     </rdg>
+                     <rdg wit="#wc_0g">but <del>that</del>
+                        <add>this</add> is one of those sayings which men love to repeat whether
+                        they are true or not. Such sayings themselves grow harder and adhere more
+                        firmly with age, and it would take many blows of a trowel to clean an old
+                        wiseacre of them. Many of the villages of Mesopotamia are <del>said to
+                           be</del> built of second-hand bricks of a very good quality, obtained
+                        from the ruins of Babylon, and the cement on them is older <add>and probably
+                           harder</add> still. However that may be</rdg>
+                  </app> I was struck by the peculiar<app xml:id="walc13-app-0047">
+                     <lem>toughness</lem>
+                     <rdg wit="#wc_0b">hardness and toughness</rdg>
+                  </app> of the steel which bore so many violent blows without being worn out. <app xml:id="walc13-app-0048">
+                     <lem>As my bricks had been in a chimney before, though I did not read the name
+                        of Nebuchadnezzar<anchor type="hn" xml:id="hn-13-013"/> on
+                        them, I picked out as many fire-place bricks as I could find,</lem>
+                     <rdg wit="#wc_0b">I picked out such bricks as were already trimmed for
+                        fireplace bricks </rdg>
+                     <rdg wit="#wc_0f">As my bricks had been in a chimney before <add rendition="pencil">though I did not read the name of Nebuchadnezzar on
+                           them</add>, I picked out as many fire-place bricks as I could find</rdg>
+                  </app> to save work and waste, and I filled the spaces between the bricks about
+                  the fire-place with stones from the pond<app xml:id="walc13-app-0049">
+                     <lem>shore,</lem>
+                     <rdg wit="#wc_0b #wc_0f">shore, instead of the usual rubbish </rdg>
+                     <rdg wit="#wc_0g">shore, <del>instead of the usual rubbish</del>
+                     </rdg>
+                  </app> and also made my mortar with the white sand from the same place. </seg>
+               <seg n="5b" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 5b written B; rewritten F, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">5b</seg>
+                        <seg type="written">B</seg>
+                        <seg type="rewritten">F, G</seg>
+                     </ab>
+                     <ab change="#wc_0b #wc_0f">House-Warming 5b, which is interlined in pencil in
+                        B, follows House-Warming 10a.</ab>
+                     <ab change="#wc_0g">A fair copy was made of only <quote>I lingered most about
+                           the fireplace … through the house to the heavens</quote>.</ab>
+                     <ab change="#wc_0b">House-Warming 5b appears as follows: The fire-place is the
+                        most vital part, the very nucleur and heart, of the house. The chimney
+                        stands as the grove of pines to the sky and rises through the house and the
+                        sky above. When the house is burned down its importance and significance
+                        appear. It conducts our thoughts to heaven.</ab>
+                  </note>
+                  <app xml:id="walc13-app-0052">
+                     <lem>I</lem>
+                     <rdg wit="#wc_0f">
+                        <del>In building the chimney,</del> I</rdg>
+                  </app> lingered most about the fireplace, as the most vital part of the house.
+                  Indeed, I worked so deliberately, that <app xml:id="walc13-app-0053">
+                     <lem>though I commenced at the ground in the morning, a course of bricks raised
+                        a few inches above the floor</lem>
+                     <rdg wit="#wc_0f">
+                        <del>the new</del>
+                        <add rendition="pencil">successive</add> courses of brick <del>were not so
+                           high but they</del>
+                     </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>successive courses of brick</del>
+                        <add>though I commenced at the ground in the morning—a course of bricks
+                           raised a few inches above the floor</add>
+                     </rdg>
+                  </app> served for my pillow<anchor type="hn" xml:id="hn-13-014"/>
+                  <app xml:id="walc13-app-0054">
+                     <lem>at night;</lem>
+                     <rdg wit="#wc_0f">for one or two nights </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>for one or two nights</del>
+                        <add>at night</add>
+                     </rdg>
+                  </app> yet I did not get a stiff neck<anchor type="hn" xml:id="hn-13-015"/> for it that I remember; my stiff neck is of older date.
+                     <app xml:id="walc13-app-0055">
+                     <lem>I took a poet<anchor type="hn" xml:id="hn-13-016"/> to
+                        board for a fortnight about those times, which caused me to be put to it for
+                        room. He brought his own knife, though I had two, and we used to scour them
+                        by thrusting them into the earth. He shared with me the labors of
+                        cooking.</lem>
+                     <rdg wit="#wc_0f"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0g">
+                        <add>I took a poet to board for a fortnight about those times, which caused
+                           me to be put to it for room. He brought his own knife, though I had two,
+                           and we used to scour them by thrusting them into the earth. He shared
+                           with me the labors of cooking</add>,</rdg>
+                  </app> I was pleased to see my work rising so square and solid by degrees, and
+                  reflected, that, if it proceeded slowly, it was calculated to endure a long time.
+                  The chimney is to some extent an independent structure, standing on the ground and
+                  rising through the house to the heavens;<app xml:id="walc13-app-0056">
+                     <lem>even</lem>
+                     <rdg wit="#wc_0f">and even</rdg>
+                  </app> after the house is burned it still stands sometimes, and its importance and
+                  independence are apparent. <app xml:id="walc13-app-0057">
+                     <lem>This was toward the end of summer. It was now November.</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">This is to be remembered was toward the end of
+                           summer. </add>
+                        <add>But to return to November</add>
+                     </rdg>
+                  </app>
+               </seg>
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+
+            <p n="6" change="#wc_0f">
+               <seg n="6a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 6a written F; rewritten G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">6a</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                     <ab change="#wc_0g">A fair copy was made of only <quote>–room and whatever
+                           satisfaction parent … I enjoyed it all</quote>.</ab>
+                  </note> The north wind had<app xml:id="walc13-app-0059">
+                     <lem>already</lem>
+                     <rdg wit="#wc_0f">
+                        <del>already</del>
+                        <add>now</add>
+                     </rdg>
+                  </app> begun to cool the pond, though it took many weeks of steady blowing to
+                  accomplish it, it is so deep. When I began to have a fire at evening, before I
+                  plastered my house, the chimney carried smoke particularly well, because of the
+                  numerous chinks between the boards. Yet I passed some cheerful evenings in that
+                  cool and airy apartment, surrounded by the rough brown boards full of knots, and
+                  rafters with the bark on high overhead. My house never pleased my eye so much
+                  after it was plastered, though I was obliged to confess that it was more
+                  comfortable. <app xml:id="walc13-app-0060">
+                     <lem>Should not every apartment in which man dwells be</lem>
+                     <rdg wit="#wc_0f">
+                        <del>I think that</del>
+                        <add>Should not</add> every apartment in which man dwells <del>should</del>
+                        <del>
+                           <add rendition="pencil">perchance</add>
+                        </del> be</rdg>
+                  </app> lofty enough to create some obscurity over-head,<app xml:id="walc13-app-0061">
+                     <lem>where</lem>
+                     <rdg wit="#wc_0f">where <del>, at least,</del>
+                     </rdg>
+                  </app> flickering shadows may play at evening about the rafters? These forms
+                     are<app xml:id="walc13-app-0062">
+                     <lem>more</lem>
+                     <rdg wit="#wc_0f">far more</rdg>
+                  </app> agreeable to the fancy and imagination than fresco paintings<anchor type="hn" xml:id="hn-13-017"/> or other the most expensive
+                  furniture. I now first began to inhabit my house, I may say, when I began to use
+                  it for warmth as well as shelter. <app xml:id="walc13-app-0063">
+                     <lem>I had got a couple of old fire-dogs<anchor type="hn" xml:id="hn-13-018"/> to keep the wood from the hearth, and it did me good
+                        to see the soot form on the back of the chimney which I had built, and I
+                        poked the fire with more right and more satisfaction than usual.</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">I had got a couple of old fire-dogs to keep the wood
+                           from the hearth, and it did me good to see the soot form on the back of
+                           the chimney which I had built, and I poked the fire with more right and
+                           more satisfaction than usual</add>.</rdg>
+                  </app>
+                  <app xml:id="walc13-app-0064">
+                     <lem>My dwelling</lem>
+                     <rdg wit="#wc_0f">
+                        <del>It</del>
+                        <add rendition="pencil">My house</add>
+                     </rdg>
+                  </app> was small, and I could hardly entertain an echo in it; but it seemed larger
+                  for being a single apartment and remote from neighbors. All the attractions of a
+                  house were concentrated in one room; it was kitchen, chamber, parlor, and
+                     keeping-room;<anchor type="hn" xml:id="hn-13-019"/>
+                  <app xml:id="walc13-app-0065">
+                     <lem>and whatever satisfaction parent or child, master or</lem>
+                     <rdg wit="#wc_0f">
+                        <add>&amp;</add> whatever satisfaction parent and child, master and</rdg>
+                  </app> servant, derive from living in a house, I enjoyed it all. </seg>
+               <seg n="6b" change="#wc_0g">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 6b written G; rewritten G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">6b</seg>
+                        <seg type="written">G</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                     <ab change="#wc_0g">A fair copy was made of House-Warming 6b on a partial
+                        leaf.</ab>
+                  </note> Cato says, the master of a family (<hi rend="style(italics)">patremfamilias</hi>) must have in his rustic villa “cellam oleariam, vinariam,
+                  dolia multa, uti lubeat caritatem expectare, et rei, et virtuti, et gloriæ
+                     erit,”<anchor type="hn" xml:id="hn-13-020"/> that is, “an oil
+                  and wine cellar, many casks, so that it may be pleasant to expect hard times; it
+                  will be for his advantage, and virtue, and glory.” I had in my cellar a
+                     firkin<anchor type="hn" xml:id="hn-13-021"/> of potatoes,
+                  about two quarts of peas with the weevil in them, and on my shelf a little rice, a
+                  jug of molasses, and <app xml:id="walc13-app-0067">
+                     <lem>of rye and Indian meal a peck each.</lem>
+                     <rdg wit="#wc_g1">a peck each of rye &amp; Indian meal</rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="7" change="#wc_0f">
+               <seg n="7a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 7a written F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">7a</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">House-Warming 7a is apparently a fair copy of material on a
+                        missing leaf in E.</ab>
+                  </note>
+                  <anchor type="hn" xml:id="hn-13-022"/> I sometimes dream of a
+                  larger and more populous house, <app xml:id="walc13-app-0069">
+                     <lem>standing in a golden age,</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">standing in a golden age but not a gilded one</add>
+                     </rdg>
+                  </app> of enduring materials, and without ginger-bread<anchor type="hn" xml:id="hn-13-023"/> work, which shall still
+                  consist of only one room, a <app xml:id="walc13-app-0070">
+                     <lem>vast,</lem>
+                     <rdg wit="#wc_0f">
+                        <del>large</del>
+                        <add>vast</add>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="7b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 7b written E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">7b</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                  </note> rude, substantial, primitive hall, without ceiling or plastering, with
+                  bare rafters and purlins<anchor type="hn" xml:id="hn-13-024"/>
+                  supporting a sort of lower heaven over<app xml:id="walc13-app-0071">
+                     <lem>one’s</lem>
+                     <rdg wit="#wc_0e">
+                        <del>your</del>
+                        <add rendition="pencil">one’s</add>
+                     </rdg>
+                  </app> head,—<app xml:id="walc13-app-0072">
+                     <lem>useful to keep off rain and snow;</lem>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">useful to keep off rain and snow</add>;</rdg>
+                  </app> where the king and queen posts<anchor type="hn" xml:id="hn-13-025"/> stand out to receive your homage, when you have<app xml:id="walc13-app-0073">
+                     <lem>done</lem>
+                     <rdg wit="#wc_0e">
+                        <del>already</del> done</rdg>
+                  </app> reverence to the prostrate Saturn<anchor type="hn" xml:id="hn-13-026"/> of an older dynasty<app xml:id="walc13-app-0074">
+                     <lem>on stepping over the sill;</lem>
+                     <rdg wit="#wc_0e">
+                        <del>by</del>
+                        <add>on</add> stepping over the sill <del>at your entrance</del>
+                        <del>
+                           <add>at the entrance</add>
+                        </del>
+                     </rdg>
+                  </app> a cavernous house, wherein you must reach up a torch upon a pole to see the
+                  roof; where some may live in the <app xml:id="walc13-app-0075">
+                     <lem>fire-place,</lem>
+                     <rdg wit="#wc_0e">fire-place and</rdg>
+                  </app> some in the recess of a window, and some on settles, some at one end of the
+                  hall, some at<app xml:id="walc13-app-0076">
+                     <lem>another,</lem>
+                     <rdg wit="#wc_0e">
+                        <del>the other</del>
+                        <add>another</add>
+                     </rdg>
+                  </app> and some aloft on rafters with the spiders, if they choose; a house which
+                  you have got into when you have opened the outside door, and the ceremony is over;
+                  where the weary traveller may wash, and eat, and converse, and sleep, without
+                  further journey; such a shelter as you would be glad to reach in a tempestuous
+                  night, containing all the essentials of a house, and<app xml:id="walc13-app-0077">
+                     <lem>nothing</lem>
+                     <rdg wit="#wc_0e">
+                        <del>nothing more,—</del> nothing</rdg>
+                  </app> for house-keeping; where you can see all the treasures of the house at one
+                  view, and every thing hangs upon its peg that a man should use; at once <app xml:id="walc13-app-0078">
+                     <lem>kitchen, pantry, parlor, chamber,</lem>
+                     <rdg wit="#wc_0e">kitchen and pantry, and parlor and chamber</rdg>
+                  </app> store-house, and garret; where you can see <app xml:id="walc13-app-0079">
+                     <lem>so necessary a</lem>
+                     <rdg wit="#wc_0e">such a necessary</rdg>
+                  </app> thing as a barrel or a ladder, so convenient a thing as a cupboard, and
+                  hear the pot <app xml:id="walc13-app-0080">
+                     <lem>boil,</lem>
+                     <rdg wit="#wc_0e">boil <add rendition="pencil">instead of a tinkling
+                           piano</add>
+                     </rdg>
+                  </app> and pay your respects to the fire that cooks your dinner and the oven that
+                  bakes your<app xml:id="walc13-app-0081">
+                     <lem>bread,</lem>
+                     <rdg wit="#wc_0e">bread <add rendition="pencil">bread, I say, not biscuit</add>
+                     </rdg>
+                  </app> and the necessary furniture and utensils are the chief ornaments; where the
+                  washing is not put out, nor the fire, nor the mistress, and<app xml:id="walc13-app-0082">
+                     <lem>perhaps </lem>
+                     <rdg wit="#wc_0e">
+                        <add>where perhaps</add>
+                     </rdg>
+                  </app> you are sometimes<app xml:id="walc13-app-0083">
+                     <lem>requested</lem>
+                     <rdg wit="#wc_0e">
+                        <del>invited</del>
+                        <add>requested</add>
+                     </rdg>
+                  </app> to move from off the trap-door, when the cook would descend into the
+                  cellar, and so learn whether the ground is solid or hollow beneath you
+                  without</seg>
+               <seg n="7c" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 7c written F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">7c</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">House-Warming 7c is apparently a fair copy of material on a
+                        missing leaf in E.</ab>
+                  </note> stamping. A house whose inside is as open and manifest as a bird’s nest,
+                  and <app xml:id="walc13-app-0085">
+                     <lem>you cannot go</lem>
+                     <rdg wit="#wc_0f">
+                        <del>not such a one as you may go through</del>
+                        <add rendition="pencil">you cannot go</add>
+                     </rdg>
+                  </app> in at the front door<anchor type="hn" xml:id="hn-13-027"/> and out at the back<app xml:id="walc13-app-0086">
+                     <lem>without seeing some</lem>
+                     <rdg wit="#wc_0f">and never see one</rdg>
+                  </app> of its inhabitants; where to be a guest is to be presented with the freedom
+                  of the house, and not to be carefully excluded from seven eighths of it, shut up
+                  in a particular cell, and told to make yourself at home there,—<app xml:id="walc13-app-0087">
+                     <lem>in solitary confinement.</lem>
+                     <rdg wit="#wc_0f">
+                        <add>in solitary confinement</add>.</rdg>
+                  </app> Nowadays the host does not admit you to <hi rend="style(italics)">his</hi>
+                  hearth, but has got the mason to build one for yourself somewhere in his alley,
+                  and hospitality is the art of <hi rend="style(italics)">keeping</hi>
+                  <app xml:id="walc13-app-0088">
+                     <lem>you</lem>
+                     <rdg wit="#wc_0f">
+                        <del>your guest</del>
+                        <add rendition="pencil">you</add>
+                     </rdg>
+                  </app> at the greatest distance. <app xml:id="walc13-app-0089">
+                     <lem>There is as much secrecy about the cooking as if he had a design to poison
+                        you.</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">There is as much secrecy about the cooking as if he
+                              <del>meant</del> had a design to poison you</add>. For my own
+                        part</rdg>
+                  </app> I am aware that I have been on many a man’s premises, and might have been
+                  legally ordered off, but I am not aware that I have been in many men’s houses. I
+                  might visit in my old clothes a king and queen who lived simply in such a house as
+                  I have described, <app xml:id="walc13-app-0090">
+                     <lem>if I were going their way; but backing out<anchor type="hn" xml:id="hn-13-028"/> of a modern palace will
+                        be all that I shall desire to learn, if ever I am caught in one.</lem>
+                     <rdg wit="#wc_0f">
+                        <del>but I trust that I shall never be found backing out of a modern palace
+                           in a court dress</del>
+                        <add>if I were going by their door, but backing out of a modern palace will
+                           be</add>
+                        <del>the most</del>
+                        <add rendition="pencil">all</add> that I shall desire to learn if <del>I
+                           ever got into one</del>
+                        <add rendition="pencil">ever I am caught in one</add>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="8" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 8 written F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">8</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note> It would seem as if the very language of our parlors would lose all its<app xml:id="walc13-app-0091">
+                  <lem>nerve</lem>
+                  <rdg wit="#wc_0f">nerve and force</rdg>
+               </app> and degenerate into <hi rend="style(italics)">palaver</hi> wholly, our lives
+               pass at such remoteness from its symbols, and its metaphors and tropes are
+               necessarily so far fetched, through slides and dumb-waiters, as it were; in other
+               words, the parlor is so far from the kitchen and workshop. <app xml:id="walc13-app-0092">
+                  <lem>The dinner even is only the parable of a dinner, commonly.</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">The dinner even is only the parable of a dinner,
+                        commonly</add>.</rdg>
+               </app> As if only the savage dwelt near enough to Nature and Truth to borrow a trope
+               from them. How can the scholar, who dwells away in the North West Territory<anchor type="hn" xml:id="hn-13-029"/> or the Isle of Man,<anchor type="hn" xml:id="hn-13-030"/> tell what is parliamentary in the
+               kitchen? </p>
+
+            <p n="9" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 9 written F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note> However, only one or two of my guests were ever bold enough to stay and eat a
+                  hasty-pudding<anchor type="hn" xml:id="hn-13-031"/> with me; but
+               when they saw that crisis approaching they <app xml:id="walc13-app-0093">
+                  <lem>beat a hasty retreat rather,</lem>
+                  <rdg wit="#wc_0f">
+                     <del>hastily withdrew</del>
+                     <add rendition="pencil">beat a hasty <del>departure</del>
+                     </add>
+                     <add rendition="pencil">retreat</add> rather</rdg>
+               </app> as if it would shake the house to its foundations. <app xml:id="walc13-app-0094">
+                  <lem>Nevertheless, it stood through a great many hasty-puddings.</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">Nevertheless it stood through a great many hasty
+                        puddings without injury</add>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="10" change="#wc_0a">
+               <seg n="10a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 10a written A; rewritten B, F, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">10a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B, F, F</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0b #wc_0f">House-Warming 10a follows House-Warming 5a.
+                        The passage was canceled in F and inserted in its present order in pencil in
+                        the margin.</ab>
+                  </note>
+                  <app xml:id="walc13-app-0096">
+                     <lem>I did not plaster<anchor type="hn" xml:id="hn-13-032"/>
+                        till it was freezing weather.</lem>
+                     <rdg wit="#wc_0a #wc_0b #wc_f1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_f2">
+                        <add>I did not plaster till it was freezing weather</add>.</rdg>
+                  </app>
+                  <app xml:id="walc13-app-0097">
+                     <lem>I brought over some whiter and cleaner sand for this purpose</lem>
+                     <rdg wit="#wc_0a #wc_0b">Some whiter and cleaner sand for plastering I brought
+                        over </rdg>
+                     <rdg wit="#wc_f1">I brought over some whiter and cleaner sand for
+                        plastering</rdg>
+                  </app> from the opposite shore <app xml:id="walc13-app-0098">
+                     <lem>of the pond</lem>
+                     <rdg wit="#wc_0a #wc_0b"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_f1">
+                        <add>of the pond</add>
+                     </rdg>
+                  </app> in a boat, <app xml:id="walc13-app-0099">
+                     <lem>a sort of conveyance which would have tempted me to go much farther if
+                        necessary.</lem>
+                     <rdg wit="#wc_0a">several cartloads at once <add>together</add> with my spade
+                        and barrow, and I was very glad to avail myself of this sort of conveyance—a
+                        highway that never needs to be mended—and over which you pass with the
+                        heaviest loads without a jar or a scar </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>several cart loads at once together with my spade and barrow, and I was
+                           very glad to avail myself of this sort of conveyance—a highway that never
+                           needs to be mended—and over which you pass with the heaviest loads
+                           without a jar or a scar</del>
+                        <add>a sort of conveyance which particularly pleased my fancy</add>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="10b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 10b written F written: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">10b</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">House-Warming 10b follows House-Warming 5b; present order
+                        interlined in pencil.</ab>
+                  </note>
+                  <app xml:id="walc13-app-0101">
+                     <lem>My house had in the mean while been shingled down to the ground on every
+                        side.</lem>
+                     <rdg wit="#wc_0f">
+                        <add>My house had in the mean while been shingled down to the ground on
+                           every side</add>.</rdg>
+                  </app> In lathing I was pleased to be able to send home each nail with a single
+                  blow of the hammer, and <app xml:id="walc13-app-0102">
+                     <lem>it was my ambition to transfer the plaster</lem>
+                     <rdg wit="#wc_0f">
+                        <del>in plastering</del> it was my ambition to transfer the
+                           <del>plastering</del>
+                        <add rendition="pencil">plaster</add>
+                     </rdg>
+                  </app> from the board to the wall neatly and rapidly. I<app xml:id="walc13-app-0103">
+                     <lem>remembered the story of</lem>
+                     <rdg wit="#wc_0f">
+                        <del>remember hearing that</del>
+                        <del>remember</del>
+                        <add>
+                           <add rendition="pencil">remembered</add> the story of</add>
+                     </rdg>
+                  </app> a conceited fellow, who, in fine clothes,<app xml:id="walc13-app-0104">
+                     <lem>in</lem>
+                     <rdg wit="#wc_0f">
+                        <del>dressed</del> in</rdg>
+                  </app> was wont to lounge about the village<app xml:id="walc13-app-0105">
+                     <lem>once,</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">once</add>,</rdg>
+                  </app> giving advice to workmen. Venturing one day to substitute deeds for
+                     words,<app xml:id="walc13-app-0106">
+                     <lem>he</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">he</add>
+                     </rdg>
+                  </app> turned up his cuffs,<app xml:id="walc13-app-0107">
+                     <lem>seized</lem>
+                     <rdg wit="#wc_0f">
+                        <del>seized</del>
+                        <add>took</add>
+                     </rdg>
+                  </app> a plasterer’s board, and having loaded his trowel without mishap, with a
+                  complacent look toward the lathing overhead, made a bold gesture thitherward; and
+                  straightway, to his complete discomfiture, received the whole contents in his
+                  ruffled bosom. I admired anew the economy and convenience of plastering, which so
+                  effectually shuts out the cold and takes a handsome finish, and I learned the
+                  various casualties to which the plasterer is liable. I<app xml:id="walc13-app-0108">
+                     <lem>was surprised to see</lem>
+                     <rdg wit="#wc_0f">
+                        <del>saw</del>
+                        <add rendition="pencil">was surprised to see</add>
+                     </rdg>
+                  </app> how thirsty the bricks were which drank up all the moisture in my <app xml:id="walc13-app-0109">
+                     <lem>plaster before I had smoothed</lem>
+                     <rdg wit="#wc_0f">
+                        <del>plastering</del>
+                        <add rendition="pencil">plaster</add> before I <del>could smooth</del>
+                        <add>had smoothed</add>
+                     </rdg>
+                  </app> it, and how many pailfuls of water it takes to christen a new hearth. I had
+                  the previous winter made a small quantity of lime by burning the shells of the <hi rend="style(italics)">Unio</hi>
+                  <hi rend="style(italics)">fluviatilis</hi>,<anchor type="hn" xml:id="hn-13-033"/> which our river affords, for the sake of the experiment;
+                  so that I knew where my materials came<app xml:id="walc13-app-0110">
+                     <lem>from.</lem>
+                     <rdg wit="#wc_0f">from—indeed</rdg>
+                  </app> I might have got good limestone<anchor type="hn" xml:id="hn-13-034"/> within a mile or two and burned it myself, if I had cared
+                  to do so.</seg>
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+
+            <p n="11" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 11 written A; rewritten E, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">11</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, G</seg>
+                  </ab>
+                  <ab change="#wc_0g">A fair copy was made of only <quote>broad for them to make …
+                        from a bag, one overlapping another</quote>.</ab>
+               </note>
+               <app xml:id="walc13-app-0111">
+                  <lem>The pond had in the mean while skimmed over in the shadiest and shallowest
+                     coves,</lem>
+                  <rdg wit="#wc_0f">
+                     <del>But to return to the pond—It commonly begins</del>
+                     <add rendition="pencil">The pond had in the meanwhile begun</add> to freeze `in
+                     the shadiest &amp; shallowest coves, where it <del>skims</del>
+                     <add rendition="pencil">skimmed</add> over</rdg>
+               </app> some days or even weeks before the general freezing. The first<app xml:id="walc13-app-0112">
+                  <lem>ice</lem>
+                  <rdg wit="#wc_0f">ice that forms</rdg>
+               </app> is especially interesting and perfect, being hard, dark, and transparent, and
+               affords the best opportunity that ever offers for<app xml:id="walc13-app-0113">
+                  <lem>examining the bottom where</lem>
+                  <rdg wit="#wc_0f">
+                     <del>studying</del>
+                     <add rendition="pencil">examining</add> the bottom <del>of the pond when</del>
+                     <add>where</add>
+                  </rdg>
+               </app> it is shallow; for you can<app xml:id="walc13-app-0114">
+                  <lem>lie</lem>
+                  <rdg wit="#wc_0f">lie down</rdg>
+               </app> at your length on ice only an inch thick, like a <app xml:id="walc13-app-0115">
+                  <lem>skater insect</lem>
+                  <rdg wit="#wc_0f">
+                     <del>water bug</del>
+                     <add rendition="pencil">skater insect</add>
+                  </rdg>
+               </app> on the surface of the water, and study<app xml:id="walc13-app-0116">
+                  <lem>the bottom</lem>
+                  <rdg wit="#wc_0f">it</rdg>
+               </app> at your leisure, only two or three inches distant, like a picture behind a
+               glass, and the water is necessarily always smooth <app xml:id="walc13-app-0117">
+                  <lem>then. There are many furrows in the sand where some creature has travelled
+                     about and doubled on its tracks; and, for wrecks, it is strewn with the cases
+                     of cadis worms made of minute grains of white quartz. Perhaps these have
+                     creased it,</lem>
+                  <rdg wit="#wc_0f">
+                     <del>For wrecks you can see the sandy bottom strewn with the cases if cadiz
+                        worms made of minute grains of white quartz which forms the sand, and the
+                        bottom is seen to be much creased or furrowed where some creature has
+                        travelled about and doubled on its tracks—perhaps the caddis worm</del>
+                     <add>there</add>. <add rendition="pencil">The sandy bottom is seen to be much
+                        creased or furrowed where some creature has travelled about and doubled on
+                        its tracks, and for wrecks it is strewn with the cases of cadis worms made
+                        of minute grains of white quartz. Perhaps these have creased it</add>
+                  </rdg>
+               </app> for you find some of their cases in the furrows, though they are deep and
+               broad for them to make.<app xml:id="walc13-app-0118">
+                  <lem>But</lem>
+                  <rdg wit="#wc_0f">
+                     <del>However</del>
+                     <add rendition="pencil">But</add>
+                  </rdg>
+               </app> the ice itself is the object of <app xml:id="walc13-app-0119">
+                  <lem>most interest, though</lem>
+                  <rdg wit="#wc_0f">
+                     <del>chief</del>
+                     <add rendition="pencil">most</add> interest <del>but</del>
+                     <add rendition="pencil">though</add>
+                  </rdg>
+               </app> you must improve the earliest opportunity to study it. If you examine it
+               closely <app xml:id="walc13-app-0120">
+                  <lem>the morning after it freezes,</lem>
+                  <rdg wit="#wc_0f">
+                     <add>the morning after it freezes</add>,</rdg>
+               </app> you find that the greater part of the bubbles, which<app xml:id="walc13-app-0121">
+                  <lem>at first</lem>
+                  <rdg wit="#wc_0f">had </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>had</del>
+                     <add>at first</add>
+                  </rdg>
+               </app> appeared to be within<app xml:id="walc13-app-0122">
+                  <lem>it,</lem>
+                  <rdg wit="#wc_0f">its substance </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>its substance</del>
+                     <add>it</add>
+                  </rdg>
+               </app> are against its under surface, and that more are continually <app xml:id="walc13-app-0123">
+                  <lem>rising</lem>
+                  <rdg wit="#wc_0f">rising up </rdg>
+                  <rdg wit="#wc_0g">rising <del>up</del>
+                  </rdg>
+               </app> from the bottom; while the ice is as yet comparatively solid and dark, that
+               is, you see the<app xml:id="walc13-app-0124">
+                  <lem>water</lem>
+                  <rdg wit="#wc_0f">color of the water</rdg>
+               </app> through it. These bubbles are from an eightieth to an eighth of an inch in
+               diameter, very <app xml:id="walc13-app-0125">
+                  <lem>clear and beautiful, and you see your face reflected in them through the
+                     ice.</lem>
+                  <rdg wit="#wc_0f">beautiful &amp; clear in which you <del>
+                        <add rendition="pencil">can</add>
+                     </del> see your face reflected through the <del>thin</del> ice </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>beautiful &amp;</del> clear <add>&amp; beautiful</add>, <del>in
+                        which</del>
+                     <add>and</add> you see your face reflected <add>in them</add> through the
+                     ice</rdg>
+               </app> There may be thirty or forty of them to a square inch. There are also<app xml:id="walc13-app-0126">
+                  <lem>already</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">already</add>
+                  </rdg>
+               </app> within the ice narrow oblong perpendicular bubbles <app xml:id="walc13-app-0127">
+                  <lem>about half an inch long, sharp cones</lem>
+                  <rdg wit="#wc_0f">
+                     <del>
+                        <add rendition="pencil">or</add>
+                     </del> sharp cones half an inch long more or less </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>that are</del>
+                     <add>about</add> half an inch long, <del>more or less</del>
+                     <add>sharp cones</add>
+                  </rdg>
+               </app> with the apex upward; or oftener, if the ice is quite fresh, minute spherical
+               bubbles one directly above another, like a string of beads. But these within the ice
+               are not so numerous<app xml:id="walc13-app-0128">
+                  <lem>nor</lem>
+                  <rdg wit="#wc_0f">or</rdg>
+               </app> obvious as those beneath. I <app xml:id="walc13-app-0129">
+                  <lem>sometimes used to</lem>
+                  <rdg wit="#wc_0f">used <add>sometimes</add> to </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>used</del> sometimes <del>to</del>
+                  </rdg>
+               </app> cast on stones to try the strength of the ice, and those which broke through
+                  <app xml:id="walc13-app-0130">
+                  <lem>carried in</lem>
+                  <rdg wit="#wc_0f">would carry </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>would carry</del>
+                     <add>carried</add> in</rdg>
+               </app> air with them, which formed very large and conspicuous white bubbles <app xml:id="walc13-app-0131">
+                  <lem>beneath.</lem>
+                  <rdg wit="#wc_0f">beneath <del>the ice</del>
+                  </rdg>
+               </app> One day when I came to the same place forty-eight hours afterward, I found
+               that those large bubbles were still<app xml:id="walc13-app-0132">
+                  <lem>perfect,</lem>
+                  <rdg wit="#wc_0f">
+                     <del>there and</del> perfect</rdg>
+               </app> though an inch more of ice had<app xml:id="walc13-app-0133">
+                  <lem>formed,</lem>
+                  <rdg wit="#wc_0f">since formed </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>since</del> formed</rdg>
+               </app> as <app xml:id="walc13-app-0134">
+                  <lem>as I could see distinctly by the seam in the edge of the cake.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>and I could see the seam distinctly</del>
+                     <add>as I could see distinctly by the seam</add>
+                     <add rendition="pencil">on the edge of a cake</add>
+                  </rdg>
+               </app> But as the last two days had been very warm, like an Indian summer, the ice
+               was not now transparent, showing the dark green color of the water, and the bottom,
+               but opaque and whitish or gray, and though twice as thick was hardly stronger than
+               before, for the air bubbles<app xml:id="walc13-app-0135">
+                  <lem> had greatly expanded under this heat</lem>
+                  <rdg wit="#wc_0f">
+                     <del>under this heat</del> had greatly expanded <add rendition="pencil">under
+                        this heat</add>
+                  </rdg>
+               </app> and run together, and lost their regularity; they were no longer one directly
+               over another, but often like silvery coins poured from a bag, one overlapping
+               another, or in thin flakes, <app xml:id="walc13-app-0136">
+                  <lem>as if occupying slight cleavages.</lem>
+                  <rdg wit="#wc_0f"><!--[not in ms.]--></rdg>
+               </app>
+               <app xml:id="walc13-app-0137">
+                  <lem>The</lem>
+                  <rdg wit="#wc_0f">Now the</rdg>
+               </app> beauty of the ice was gone, and it was too late to study the bottom. Being
+               curious to know what position my great bubbles occupied with regard to the new ice, I
+               broke out a cake <app xml:id="walc13-app-0138">
+                  <lem>containing a middling sized one, and turned it bottom upward.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>of ice</del> containing a middling sized one <del>about 4 inches in
+                        diameter</del> &amp; turned it bottom side upward <del>on the ice</del>
+                     —for</rdg>
+               </app> The new ice had formed around and under the bubble, so that it was included
+               between the two ices. It was wholly in the lower ice, <app xml:id="walc13-app-0139">
+                  <lem>but close against the upper,</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">but close against the upper</add>,</rdg>
+               </app> and was<app xml:id="walc13-app-0140">
+                  <lem>flattish,</lem>
+                  <rdg wit="#wc_0f">
+                     <del>flat</del>
+                     <add>flattish</add>,</rdg>
+               </app> or perhaps slightly lenticular, with a rounded edge, a quarter of an inch deep
+               by four inches in diameter;<app xml:id="walc13-app-0141">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0f">
+                     <add>But</add>
+                  </rdg>
+               </app> I was surprised to find that directly under the bubble the ice was melted with
+               great regularity in the form of a saucer reversed, to the height of five eighths of
+               an inch in the middle, leaving a thin partition there between the water and the
+               bubble, hardly an eighth of an inch thick; and in many<app xml:id="walc13-app-0142">
+                  <lem>places</lem>
+                  <rdg wit="#wc_0f">
+                     <del>instances</del>
+                     <add rendition="pencil">laces</add>
+                  </rdg>
+               </app> the small bubbles in this<app xml:id="walc13-app-0143">
+                  <lem>partition </lem>
+                  <rdg wit="#wc_0f"><!--[not in ms.]--></rdg>
+               </app> had burst out downward, and probably there was no ice at all under the largest
+                  bubbles,<app xml:id="walc13-app-0144">
+                  <lem> which were a foot in diameter.</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">which were a foot in diameter</add>,</rdg>
+               </app> I<app xml:id="walc13-app-0145">
+                  <lem>inferred</lem>
+                  <rdg wit="#wc_0f">inferred therefore</rdg>
+               </app> that the infinite number of minute bubbles which I had first seen against the
+               under surface of the ice were now frozen in<app xml:id="walc13-app-0146">
+                  <lem>likewise,</lem>
+                  <rdg wit="#wc_0f">like the others</rdg>
+               </app> and that each, in its<app xml:id="walc13-app-0147">
+                  <lem>degree,</lem>
+                  <rdg wit="#wc_0f">degree like these large ones</rdg>
+               </app> had operated like a burning glass<anchor type="hn" xml:id="hn-13-035"/> on the ice beneath to melt and rot it. These are the little
+               air-guns which contribute to make the ice crack and whoop.
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+
+            <p n="12" change="#wc_0f">
+               <seg n="12a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 12a written F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">12a</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                  </note>At length the winter set in in good earnest, just as I had finished
+                  plastering, and the wind began to howl around the house as if it had not had
+                  permission to do so till then. Night after night the geese came lumbering in the
+                  dark with a clangor and a whistling of wings, even after the ground was covered
+                  with snow, some to alight in Walden, and some flying low over the woods toward
+                  Fair Haven, </seg>
+               <seg n="12b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 12b written A; rewritten E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">12b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">The original leaf, which begins <quote>to hear the tread of
+                           a flock of geese</quote> …, apparently follows a missing leaf. A fair
+                        copy was made of only <quote>bound for Mexico. Several times … though
+                           waterlogged past drying</quote>.</ab>
+                  </note>
+                  <app xml:id="walc13-app-0149">
+                     <lem>bound for Mexico. Several times, when returning from the village at ten or
+                        eleven o’clock at night, I heard the tread of a flock of geese, or else
+                        ducks, on the dry leaves in the woods by a pond-hole behind my dwelling,
+                        where they had come up to feed, and the faint honk or quack</lem>
+                     <rdg wit="#wc_e1">to hear the tread of a flock of geese on the dry leaves in
+                        the woods—where they come up to feed—and the <del>clank</del>
+                        <add rendition="pencil">faint honk</add>
+                     </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>I used frequently</del>
+                        <add>Several times</add> when returning from the village at ten or eleven
+                        o’clock at night, <del>to hear</del>
+                        <add>I heard</add> the tread of a flock of geese <add>or</add>
+                        <add rendition="pencil">perhaps</add>
+                        <add>ducks</add> on the dry leaves in the woods <add>
+                           <del>near a pond hole</del> behind my dwelling</add>, where they had come
+                        to feed <add>by a pond hole</add>, and the faint honk <add>or quack</add>
+                     </rdg>
+                  </app> of their leader as they hurried off. In 1845 Walden froze<app xml:id="walc13-app-0150">
+                     <lem>entirely</lem>
+                     <rdg wit="#wc_e1">
+                        <add rendition="pencil">entirely</add>
+                     </rdg>
+                  </app> over for the first time on the night of the 22d of December, <app xml:id="walc13-app-0151">
+                     <lem>Flint’s and other shallower ponds and the river having been frozen ten
+                        days or more; in ’46, the 16th; in ’49, about the 31st; and in ’50, about
+                        the 27th of December; in ’52, the 5th of January; in ’53, the 31st of
+                        December.</lem>
+                     <rdg wit="#wc_e1">
+                        <add rendition="pencil">
+                           <del>in ’46</del> the next year on the 16<hi rend="style(superscript)">th</hi> of Dec; in ’49, the 29<hi rend="style(superscript)">th</hi>
+                           or 30<hi rend="style(superscript)">th</hi> of Dec;</add> Flint’s and
+                        other shallower ponds <add rendition="pencil">&amp; the river</add> having
+                        been frozen for <del>a fortnight</del>
+                        <add rendition="pencil">10 days</add> or more </rdg>
+                     <rdg wit="#wc_e2">the next year on the 16<hi rend="style(superscript)">th</hi>
+                        of December, Flint’s and other shallower ponds and the river having been
+                        frozen <add>in each case</add> for ten days or more</rdg>
+                  </app> The snow had already covered the ground since the 25th of November, and
+                  surrounded me suddenly with the scenery of winter. I withdrew yet farther into my
+                  shell, and <app xml:id="walc13-app-0152">
+                     <lem>endeavored to keep</lem>
+                     <rdg wit="#wc_e1">
+                        <del>kept</del>
+                        <add rendition="pencil">endeavored to keep</add>
+                     </rdg>
+                  </app> a bright fire both within my house and within my breast. My employment out
+                  of doors now was to collect the dead wood in the forest,<app xml:id="walc13-app-0153">
+                     <lem>bringing it in my hands or on my shoulders, or sometimes trailing a dead
+                        pine tree under each arm to my shed.</lem>
+                     <rdg wit="#wc_e1">bringing it on my shoulders to my shed, <del>or</del>
+                        <add rendition="pencil">&amp; sometimes</add> trailing a dead pine tree
+                        under each arm “minuti blaterones quercuum, culi, et curbi,” as the old
+                        forest law terms “wind-falls,” “dotterels, <del>and</del> scrags, &amp;c” </rdg>
+                     <rdg wit="#wc_e2">“minuti blaterones quercuum, culi, et curbi,” as the old
+                        forest law terms “wind falls,” dotterels, scrags, &amp;c.,” bringing it <add rendition="pencil">in my hands or</add> on my shoulders, <del>to my
+                           shed</del>, <del>and</del>
+                        <add rendition="pencil">or</add> sometimes trailing a dead pine tree under
+                        each arm <add rendition="pencil"> to my shed</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc13-app-0154">
+                     <lem>An old forest fence which had seen its best days was a great haul for me.
+                        I sacrificed it to Vulcan, for it was past serving the god Terminus.<anchor type="hn" xml:id="hn-13-036"/>
+                     </lem>
+                     <rdg wit="#wc_e1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_e2">
+                        <add rendition="pencil">An old forest fence which had seen its best days was
+                           a great haul for me. I sacrificed it to Vulcan, for it was past serving
+                           the god Terminus</add>. An old forest fence which had seen its best days
+                        was a great haul for me. I sacrificed it to <del>Jove</del>
+                        <add rendition="pencil">Vulcan</add> for it <del>had served the god of
+                           boundaries long enough</del>
+                        <add rendition="pencil">was past serving the god Terminus</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc13-app-0155">
+                     <lem>How much more interesting an event is that man’s supper who has just been
+                        forth in the snow to hunt, nay, you might say, steal, the fuel<anchor type="hn" xml:id="hn-13-037"/> to cook it with! His
+                        bread and meat are sweet.<anchor type="hn" xml:id="hn-13-038"/>
+                     </lem>
+                     <rdg wit="#wc_e1">
+                        <add>How much more interesting an event is that man’s supper who has just
+                           been forth in the snow to hunt or perchance to steal the fuel to cook it
+                           with! His bread &amp; meat are sweet</add>
+                     </rdg>
+                     <rdg wit="#wc_e2">How much more interesting an event is that man’s supper who
+                        has just been forth in the snow to hunt, <del>or perchance to</del>
+                        <add rendition="pencil">nay you might say</add> steel, the fuel to cook it
+                        with! His bread &amp; meat are sweet</rdg>
+                  </app> There are enough fagots and waste wood of all kinds in the forests of <app xml:id="walc13-app-0156">
+                     <lem>most of our towns</lem>
+                     <rdg wit="#wc_e1">
+                        <del>every <add rendition="pencil">American</add> town</del>
+                        <add>most of our towns</add>
+                     </rdg>
+                  </app> to support many fires, but which at present warm none, and, <app xml:id="walc13-app-0157">
+                     <lem>some think,</lem>
+                     <rdg wit="#wc_e1">
+                        <add rendition="pencil">perhaps</add>
+                     </rdg>
+                     <rdg wit="#wc_e2">
+                        <del>perhaps</del>
+                        <add rendition="pencil">some think</add>
+                     </rdg>
+                  </app> hinder the growth of the young wood. There was also the drift-wood of the
+                  pond. In the course of the summer I <app xml:id="walc13-app-0158">
+                     <lem>had</lem>
+                     <rdg wit="#wc_e1">
+                        <add rendition="pencil">had</add>
+                     </rdg>
+                  </app> discovered a raft of pitch-pine <app xml:id="walc13-app-0159">
+                     <lem>logs with bark on, pinned together</lem>
+                     <rdg wit="#wc_e1">
+                        <del>trees</del>
+                        <add rendition="pencil">logs</add> with the bark on, <del>&amp;</del> pinned
+                        together <del>which was made</del>
+                     </rdg>
+                  </app> by the Irish when the railroad was built. This I hauled up partly<app xml:id="walc13-app-0160">
+                     <lem>on</lem>
+                     <rdg wit="#wc_e1 #wc_e2">on to</rdg>
+                  </app> the shore. After soaking two years and then lying<app xml:id="walc13-app-0161">
+                     <lem>high</lem>
+                     <rdg wit="#wc_e1">
+                        <del>dry</del>
+                        <add rendition="pencil">high</add>
+                     </rdg>
+                  </app> six months it was perfectly sound, though waterlogged past drying. I amused
+                  myself one winter day with sliding this<app xml:id="walc13-app-0162">
+                     <lem>piecemeal</lem>
+                     <rdg wit="#wc_e1">
+                        <add rendition="pencil">piecemeal</add>
+                     </rdg>
+                  </app> across the pond, nearly half a mile,<app xml:id="walc13-app-0163">
+                     <lem>skating</lem>
+                     <rdg wit="#wc_e1">while I skated</rdg>
+                  </app> behind with one end of a log fifteen feet long on my shoulder, and the
+                  other on the ice; or I tied several logs together with a birch withe, and then,
+                  with a longer birch or<app xml:id="walc13-app-0164">
+                     <lem>alder</lem>
+                     <rdg wit="#wc_e1">alder pole</rdg>
+                  </app> which had a hook at the<app xml:id="walc13-app-0165">
+                     <lem>end,</lem>
+                     <rdg wit="#wc_e1">
+                        <add>very</add> end</rdg>
+                  </app> dragged them<app xml:id="walc13-app-0166">
+                     <lem>across.</lem>
+                     <rdg wit="#wc_e1">
+                        <del>over the smooth ice, skating before</del>
+                        <add rendition="pencil">across</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc13-app-0167">
+                     <lem>Though completely waterlogged and almost as heavy as lead, they not only
+                        burned long, but made a very hot fire; nay, I thought that they burned
+                        better for the soaking, as if the pitch, being confined by the water, burned
+                        longer as in a lamp.</lem>
+                     <rdg wit="#wc_e1">
+                        <add>Though completely waterlogged and almost as heavy as lead I was
+                           surprised to find that it not only burned long but made a very hot fire;
+                           nay I thought it burned better for the soaking</add>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="13" change="#wc_0e">
+               <seg n="13a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 13a written E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">13a</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                  </note>Gilpin,<app xml:id="walc13-app-0168">
+                     <lem>in his account</lem>
+                     <rdg wit="#wc_0e">
+                        <del>speaking</del>
+                        <add rendition="pencil">in his account</add>
+                     </rdg>
+                  </app> of the forest borderers of England,<anchor type="hn" xml:id="hn-13-039"/> says that “the encroachments of trespassers, and the
+                  houses and fences thus raised on the borders of the forest,” were “considered as
+                  great nuisances by the old forest law, and were severely punished under the name
+                  of <hi rend="style(italics)">purprestures</hi>, as tending <hi rend="style(italics)">ad</hi>
+                  <hi rend="style(italics)">terrorem</hi>
+                  <hi rend="style(italics)">ferarum</hi>— <hi rend="style(italics)">ad</hi>
+                  <hi rend="style(italics)">nocumentum</hi>
+                  <hi rend="style(italics)">forestæ</hi>, <hi rend="style(italics)">&amp;c</hi>.,”
+                     <app xml:id="walc13-app-0169">
+                     <lem>to the frightening of the game and the detriment of the forest.</lem>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">to frighten the game &amp; damage the forest</add>
+                     </rdg>
+                  </app> But I was interested in the preservation of the venison and the vert<anchor type="hn" xml:id="hn-13-040"/> more than the <app xml:id="walc13-app-0170">
+                     <lem>hunters or woodchoppers, and</lem>
+                     <rdg wit="#wc_0e">
+                        <del>wood choppers or</del> hunters <add rendition="pencil">or wood
+                           choppers</add>
+                        <del>even</del>
+                        <add rendition="pencil">&amp;</add>
+                     </rdg>
+                  </app> as much as though I had been the Lord <anchor type="hn" xml:id="hn-13-041"/> himself; and if any part was burned, though I burned it
+                  myself by accident,<anchor type="hn" xml:id="hn-13-042"/> I
+                  grieved with a grief that lasted longer and was more inconsolable than that of the
+                  proprietors; nay, I grieved when it was cut down by the proprietors
+                  themselves.</seg>
+               <seg n="13b" change="#wc_0g">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 13b written G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">13b</seg>
+                        <seg type="written">G</seg>
+                     </ab>
+                     <ab change="#wc_0g">House-Warming 13b is inserted on a partial leaf.</ab>
+                  </note> I would that our farmers when they<app xml:id="walc13-app-0172">
+                     <lem>cut down a forest</lem>
+                     <rdg wit="#wc_0g">
+                        <del>come to</del> cut down a <del>wood</del>
+                        <add>forest</add>
+                     </rdg>
+                  </app> felt some of that awe which the old Romans did when they came to thin, or
+                  let in the light to, a consecrated grove (<hi rend="style(italics)">lucum</hi>
+                  <hi rend="style(italics)">conlucare</hi>),<anchor type="hn" xml:id="hn-13-043"/> that is, would<app xml:id="walc13-app-0173">
+                     <lem>believe</lem>
+                     <rdg wit="#wc_0g">
+                        <del>realize</del>
+                        <add>believe</add>
+                     </rdg>
+                  </app> that it is sacred to some god. The Roman made an expiatory offering, and
+                  prayed, Whatever god or goddess thou art to whom this grove is sacred,<app xml:id="walc13-app-0174">
+                     <lem>be</lem>
+                     <rdg wit="#wc_0g">
+                        <del>I pray thee</del> be</rdg>
+                  </app> propitious to me, my family, and children, &amp;c. </seg>
+            </p>
+
+            <p n="14" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 14 written E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">14</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc13-app-0175">
+                  <lem>It is remarkable what a value</lem>
+                  <rdg wit="#wc_0e">I am struck by the value that</rdg>
+               </app> is still put upon wood even in this age and in this new country, a value more
+                  <app xml:id="walc13-app-0176">
+                  <lem>permanent and universal</lem>
+                  <rdg wit="#wc_0e">
+                     <del>constant</del>
+                     <add rendition="pencil">permanent &amp; universal</add>
+                  </rdg>
+               </app> than that of gold. After all our discoveries and inventions no man will go by
+               a pile of wood. It is as precious to us as it was to our Saxon and Norman ancestors.
+               If they made their bows of it, we make our gun-stocks of it. <app xml:id="walc13-app-0177">
+                  <lem>Michaux,<anchor type="hn" xml:id="hn-13-044"/> more than
+                     thirty years ago, says that the price of wood for fuel in New York and
+                     Philadelphia “nearly equals, and sometimes exceeds, that of the best wood in
+                     Paris, though this immense capital annually requires more than three hundred
+                     thousand cords, and is surrounded to the distance of three hundred miles by
+                     cultivated plains.”</lem>
+                  <rdg wit="#wc_0e">
+                     <add>
+                        <del>F. A.</del> Michaux writing more than 30 yrs ago says that the price of
+                        wood for fuel in N. York &amp; Philadelphia “nearly equals &amp; sometimes
+                        exceeds that of the best wood in Paris, though this immense capital annually
+                        requires more than 300,000 cords, and is surrounded to the distance of 300
+                        miles by cultivated plains.” <del>The Parisian, like his ancestor the savage
+                           Celt, still prizes a bundle of faggots, though he must go further for
+                           them.</del>
+                     </add>
+                  </rdg>
+               </app> In this town the price of<app xml:id="walc13-app-0178">
+                  <lem>wood</lem>
+                  <rdg wit="#wc_0e">a cord of wood</rdg>
+               </app> rises almost steadily, and the only question is, how much higher it is to be
+               this year than it was the last. Mechanics and tradesmen who come<app xml:id="walc13-app-0179">
+                  <lem>in person</lem>
+                  <rdg wit="#wc_0e">
+                     <del>themselves</del>
+                     <add rendition="pencil">in person</add>
+                  </rdg>
+               </app> to the forest on no other errand, are sure to attend the wood auction, and
+               even pay a high price for the privilege of gleaning after the<app xml:id="walc13-app-0180">
+                  <lem>wood-chopper.</lem>
+                  <rdg wit="#wc_0e">wood-cutter</rdg>
+               </app> It is now many years that men have resorted to the forest for fuel<app xml:id="walc13-app-0181">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0e">
+                     <del>as well as for</del>
+                     <add rendition="pencil">and</add>
+                  </rdg>
+               </app> the materials of the arts; the New Englander<app xml:id="walc13-app-0182">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0e">as well as</rdg>
+               </app> the New Hollander, <app xml:id="walc13-app-0183">
+                  <lem>the Parisian and the Celt,</lem>
+                  <rdg wit="#wc_0e">
+                     <add>the Parisian and the Celt</add>,</rdg>
+               </app> the farmer and Robinhood, Goody Blake and Harry Gill,<anchor type="hn" xml:id="hn-13-045"/> in most parts of the world the
+               prince and the peasant, the scholar and the savage, equally require still a few
+               sticks from the forest to warm them and cook their food. Neither could I <app xml:id="walc13-app-0184">
+                  <lem>do without</lem>
+                  <rdg wit="#wc_0e">
+                     <del>dispense with</del>
+                     <add rendition="pencil">do without</add>
+                  </rdg>
+               </app> them. </p>
+
+            <p n="15" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 15 written E; rewritten E, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">15</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">E, G</seg>
+                  </ab>
+                  <ab change="#wc_0e #wc_0g">A fair copy was made of only <quote>village blacksmith
+                        to “jump” … at least hung true</quote>.</ab>
+               </note> Every man looks at his wood-pile with a kind of affection. I loved to have
+               mine before my window, and the more chips the better to remind me of my<app xml:id="walc13-app-0185">
+                  <lem>pleasing</lem>
+                  <rdg wit="#wc_e1">
+                     <add rendition="pencil">pleasing</add>
+                  </rdg>
+               </app> work. I had an old axe which nobody claimed, with which by spells in winter
+               days, on the sunny side of the house, I played about the stumps which I had got out
+               of my bean-field. As my driver prophesied when I was ploughing, they warmed me twice,
+               once while I was splitting them, and again when they were on the fire, so that no
+               fuel could give out more<app xml:id="walc13-app-0186">
+                  <lem>heat.</lem>
+                  <rdg wit="#wc_e1">heat <del>and better serve a rich poor man like myself</del>
+                  </rdg>
+               </app> As for the axe, I was advised to get the village blacksmith to “jump”<anchor type="hn" xml:id="hn-13-046"/> it; but I jumped him, and,
+               putting a hickory helve from the woods into it, made it do. <app xml:id="walc13-app-0187">
+                  <lem>If it was dull, it was at least hung true.</lem>
+                  <rdg wit="#wc_e1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <add rendition="pencil">If it was dull, it was at least hung true</add>.</rdg>
+               </app>
+            </p>
+
+            <p n="16" change="#wc_0a">
+               <seg n="16a" change="#wc_0g">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 16a written G; rewritten G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">16a</seg>
+                        <seg type="written">G</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                  </note>A few pieces of fat pine<app xml:id="walc13-app-0188">
+                     <lem>were a great treasure.</lem>
+                     <rdg wit="#wc_g1">I treasured as a Californian his pile of rocks </rdg>
+                     <rdg wit="#wc_g2">
+                        <del>I treasured as a Californian his pile of rocks</del>
+                        <add>were a great treasure</add>
+                     </rdg>
+                  </app> It is interesting to remember how much of this food for fire is still
+                  concealed in the bowels of the earth. <app xml:id="walc13-app-0189">
+                     <lem>In previous years I had often gone “prospecting” over some bare hill-side,
+                        where a pitch-pine wood had formerly stood, and got out the fat pine
+                        roots.</lem>
+                     <rdg wit="#wc_g1">
+                        <del>I have spent many an hour getting out the fat pine roots.</del> I often
+                        went prospecting <del>to</del>
+                        <add>over</add> some hill side where a pitch pine wood had formerly stood
+                           <add>&amp; spent many an hour getting out the fat pine roots</add>
+                     </rdg>
+                     <rdg wit="#wc_g2">
+                        <del>I often went</del>
+                        <add>In previous years I had often gone</add> “prospecting” over some bare
+                        hill-side, where a pitch-pine wood had formerly stood, and <del>spent many
+                           an hour getting</del>
+                        <add>got</add> out the fat pine roots</rdg>
+                  </app> They are almost indestructible. Stumps thirty or forty years old, at least,
+                     <app xml:id="walc13-app-0190">
+                     <lem>will still be</lem>
+                     <rdg wit="#wc_g1">rise above the surface, still </rdg>
+                     <rdg wit="#wc_g2">
+                        <del>rise above the surface, still</del>
+                        <add>will still be</add>
+                     </rdg>
+                  </app> sound at the core, though the sapwood has all become vegetable mould, as
+                     <app xml:id="walc13-app-0191">
+                     <lem>appears by the scales of the thick bark forming a ring level with the
+                        earth four or five inches distant from the heart.</lem>
+                     <rdg wit="#wc_g1">the scales of the thick bark forming <del>rings</del>
+                        <add>a ring</add> level with the earth four or five inches
+                           <add>distant</add> from the heart indicate </rdg>
+                     <rdg wit="#wc_g2">
+                        <add>appears by</add> the scales of the thick bark forming a ring level with
+                        the earth 4 or 5 inches distant from the heart <del>prove</del>
+                     </rdg>
+                  </app> With axe and shovel you explore this mine, and follow the marrowy store,
+                  yellow as beef tallow, or as if you had struck on a vein of gold, deep into the
+                  earth. </seg>
+               <seg n="16b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 16b written: E; rewritten: E, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">16b</seg>
+                        <seg type="written">E</seg>
+                        <seg type="rewritten">E, G</seg>
+                     </ab>
+                     <ab change="#wc_0g">A fair copy was made of only <quote>But commonly I kindled
+                           my fire … Lark without song, and messenger of dawn</quote>.</ab>
+                  </note>
+                  <app xml:id="walc13-app-0192">
+                     <lem>But commonly</lem>
+                     <rdg wit="#wc_e1"><!--[not in ms.]--></rdg>
+                  </app> I kindled my fire with the dry leaves of the forest, which I had stored up
+                  in my shed before the snow came. Green hickory finely split makes the
+                  woodchopper's kindlings, when he has a camp in the woods. <app xml:id="walc13-app-0193">
+                     <lem>Once in a while I got a little of this.</lem>
+                     <rdg wit="#wc_e2">
+                        <add rendition="pencil">Once in a while I got sticks of this. The old Dutch
+                           settlers used to say of this wood that when it was dry it kept fire &amp;
+                           sparkled like matches, and their wives preferred its coals to turf
+                           because they lasted longer &amp; were not buried in ashes</add>
+                     </rdg>
+                     <rdg wit="#wc_0g">Once in a while I got a little of this. <del>The old Dutch
+                           settlers on the Hudson used to say of this wood that when dry it kept
+                           fire and sparkled like matches, &amp; their wives preferred its coals to
+                           turf because they lasted longer and were not buried in ashes</del>
+                     </rdg>
+                  </app> When the villagers were lighting their fires beyond the horizon, I too gave
+                  notice to <app xml:id="walc13-app-0194">
+                     <lem>the various wild inhabitants of Walden vale,</lem>
+                     <rdg wit="#wc_e1">
+                        <del>their other</del>
+                        <add rendition="pencil">the various</add> wild inhabitants of Walden woods </rdg>
+                     <rdg wit="#wc_e2">the various wild inhabitants of Walden woods </rdg>
+                     <rdg wit="#wc_0g">the various wild inhabitants of Walden <del>woods</del>
+                        <add>vale</add>
+                     </rdg>
+                  </app> by a smoky streamer from my chimney, that I was awake.— <lg>
+                     <l>Light-winged Smoke, Icarian bird,<anchor type="hn" xml:id="hn-13-047"/>
+                     </l>
+                     <l>Melting thy pinions in thy upward flight,</l>
+                     <l>Lark without song, and messenger of dawn,</l>
+                     <l>Circling above the hamlets as thy nest;</l>
+                     <l>Or else, departing dream, and shadowy form</l>
+                     <l>Of midnight vision, gathering up thy skirts;</l>
+                     <l>By night star-veiling, and by day</l>
+                     <l>Darkening the light and blotting out the sun;</l>
+                     <l>Go thou my incense upward from this hearth,</l>
+                     <l>And ask the gods to pardon this clear flame.</l>
+                  </lg>
+                  <anchor type="hn" xml:id="hn-13-048"/>
+               </seg>
+            </p>
+
+            <p n="17" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">House-Warming 17 written E; rewritten E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">13</seg>
+                     <seg type="chapterTitle">House-Warming</seg>
+                     <seg type="paragraph">17</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0e">
+                     <quote>and commonly my mo housekeeper proved … had burned a place as big as my
+                        hand</quote> is interlined in the original version.</ab>
+               </note> Hard green wood just cut, <app xml:id="walc13-app-0195">
+                  <lem>though I used but little of that,</lem>
+                  <rdg wit="#wc_e1">
+                     <add>though I used but little of that</add>,</rdg>
+               </app> answered my purpose better than any other. I sometimes left a good fire when I
+               went to take a walk in a winter afternoon; and when I returned, three or four hours
+               afterward, it would be still alive and<app xml:id="walc13-app-0196">
+                  <lem>glowing.</lem>
+                  <rdg wit="#wc_e1">
+                     <del>glowing</del>
+                     <add>blazing</add>
+                  </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>blazing</del>
+                     <add>glowing</add>
+                  </rdg>
+               </app> My house was not empty though I was gone. It was as if I had left a cheerful
+               housekeeper behind. It was I and Fire that lived there; and commonly my housekeeper
+               proved trustworthy. One day, however, as I was<app xml:id="walc13-app-0197">
+                  <lem>splitting wood,</lem>
+                  <rdg wit="#wc_e1">
+                     <del>chopping outside</del>
+                     <add rendition="pencil">splitting wood</add>
+                  </rdg>
+               </app> I thought that I would just look in at the window and see if<app xml:id="walc13-app-0198">
+                  <lem>the house</lem>
+                  <rdg wit="#wc_e1">my house </rdg>
+                  <rdg wit="#wc_e2">
+                     <del>my</del>
+                     <add rendition="pencil">the</add>
+                  </rdg>
+               </app> was not on fire; it was the only time I remember to have been particularly
+               anxious on this <app xml:id="walc13-app-0199">
+                  <lem>score;</lem>
+                  <rdg wit="#wc_e1">
+                     <del>account</del>
+                     <add rendition="pencil">score</add>
+                  </rdg>
+               </app> so I looked and saw that a spark had caught my bed, and I went in and
+               extinguished it when it had burned a place <app xml:id="walc13-app-0200">
+                  <lem>as big as my hand.<anchor type="hn" xml:id="hn-13-049"/>
+                  </lem>
+                  <rdg wit="#wc_e1">
+                     <del>about</del> as big as my hand. It was a mere coincidence </rdg>
+                  <rdg wit="#wc_e2">as big as my hand. <del>It was a mere coincidence</del>
+                  </rdg>
+               </app>
+               <app xml:id="walc13-app-0201">
+                  <lem>But</lem>
+                  <rdg wit="#wc_e1 #wc_e2">However</rdg>
+               </app> my house occupied so<app xml:id="walc13-app-0202">
+                  <lem>sunny</lem>
+                  <rdg wit="#wc_e1">
+                     <del>warm</del>
+                     <add rendition="pencil">sunny</add>
+                  </rdg>
+               </app> and sheltered a position, and its roof was so low, that <app xml:id="walc13-app-0203">
+                  <lem>I could afford to let the fire go out</lem>
+                  <rdg wit="#wc_e1">it was warm enough without a fire </rdg>
+
+                  <rdg wit="#wc_e2">
+                     <del>it was warm enough without a fire</del>
+                     <add>I could afford to let the fire go out</add>
+                  </rdg>
+               </app> in the middle of almost any winter day. </p>
+
+            <p n="18" change="#wc_0f">
+               <seg n="18a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 18a written F; rewritten G, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">18a</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">G, G</seg>
+                     </ab>
+                     <ab change="#wc_0f #wc_0g">House-Warming 18a follows Winter Animals 12. It was
+                        recopied in G following House-Warming 6b and then shifted to its present
+                        position when House-Warming 6b was recopied.</ab>
+                  </note> The moles nested in my cellar, nibbling every third potato,<anchor type="hn" xml:id="hn-13-050"/> and making a snug bed even
+                  there of<app xml:id="walc13-app-0205">
+                     <lem>some</lem>
+                     <rdg wit="#wc_0f">
+                        <add>some</add>
+                     </rdg>
+                  </app> hair left after plastering and of brown paper;<app xml:id="walc13-app-0206">
+                     <lem>for even</lem>
+                     <rdg wit="#wc_0f #wc_g1">Even</rdg>
+                  </app> the wildest animals love comfort and warmth as well as man, and they
+                  survive the winter only because they are so careful to secure them. <app xml:id="walc13-app-0207">
+                     <lem>Some of my friends spoke as if I was coming to the woods on purpose to
+                        freeze myself.</lem>
+                     <rdg wit="#wc_0f #wc_g1">
+                        <add>Some of my friends spoke as if I was coming to the woods on purpose to
+                           freeze myself</add>. Some of my friends thought that I was coming to the
+                        woods on purpose to freeze myself </rdg>
+                     <rdg wit="#wc_g2">Some of my friends <del>thought that</del>
+                        <add>spoke as if</add> I was coming to the woods on purpose to freeze
+                        myself</rdg>
+                  </app>
+               </seg>
+               <seg n="18b" change="#wc_0g">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 18b written G; rewritten G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">18b</seg>
+                        <seg type="written">G</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                     <ab change="#wc_0g">A fair copy was made of only <quote>but man, having
+                           discovered fire … man’s existence on the globe</quote>.</ab>
+                     <ab change="#wc_0g">
+                        <quote>But the most luxuriously housed … man’s existence on the
+                           globe</quote> does not appear in the original version.</ab>
+                  </note> The animal merely<app xml:id="walc13-app-0209">
+                     <lem>makes</lem>
+                     <rdg wit="#wc_g1">makes <del>him</del>
+                     </rdg>
+                  </app> a bed, which he warms with his body in a sheltered<app xml:id="walc13-app-0210">
+                     <lem>place</lem>
+                     <rdg wit="#wc_g1">place. <del>He does not make a house</del>
+                     </rdg>
+                  </app> but man, having discovered fire, boxes up some air in a spacious apartment,
+                  and warms that, instead of robbing himself, <app xml:id="walc13-app-0211">
+                     <lem>makes that his bed, in which he can move about divested of more cumbrous
+                        clothing, maintain a kind of summer in the midst of winter, and by means of
+                        windows even admit the light, and with a lamp lengthen out the day.</lem>
+                     <rdg wit="#wc_g1">
+                        <del>divests himself of cumbersome bedclothes,</del> makes that his bed,
+                           <add>in which he can move about</add>
+                        <add rendition="pencil">divested of more cumbersome clothes</add>
+                        <del>—maintaining a congenial climate,</del>
+                        <add>&amp; maintain</add> a kind of summer in the midst of winter, and by
+                        means of windows even <del>admitting</del>
+                        <add>admit</add> the light <del>
+                           <add>&amp; perhaps with a lamp lengthening out the day</add>
+                        </del>
+                        <add>&amp; with a lamp lengthen out the day</add>
+                     </rdg>
+                     <rdg wit="#wc_g2">makes that his bed, in which he can move about divested of
+                        more <del>cumbersome</del>
+                        <add>cumbrous</add> clothes, <del>and</del> maintain a kind of summer in the
+                        midst of winter, and by means of windows even admit the light, and with a
+                        lamp lengthen out the day</rdg>
+                  </app> Thus he goes a step or two beyond instinct, and<app xml:id="walc13-app-0212">
+                     <lem>saves</lem>
+                     <rdg wit="#wc_g1">
+                        <del>secures</del>
+                        <add rendition="pencil">saves</add>
+                     </rdg>
+                  </app> a little time for the fine arts. <app xml:id="walc13-app-0213">
+                     <lem>Though, when I had been exposed to the rudest blasts a long time,</lem>
+                     <rdg wit="#wc_g1">Though, when <add rendition="pencil">I had been</add> exposed
+                           <add rendition="pencil"> to the blast</add> for a long time <del>to the
+                           searching winter air</del> my hands &amp; feet became numb—my ears and
+                        face stiffened, &amp; </rdg>
+                     <rdg wit="#wc_g2">Sometimes, when I went forth for my afternoon walk after a
+                        fresh fall of dry snow, a cold driving wind from the north would have
+                        followed hard upon it, and the surface of the snow was regularly imbricated
+                           <del>or blown</del> with <del>great wave-like</del>
+                        <add>shallow</add> drifts twenty feet wide, <del>with an abrupt edge on the
+                           south. From the Cliff Hills it</del>
+                        <add>which from the hills</add> appeared like a great scaly white armor
+                        drawn over the earth. Under the waves of this snowy ocean, railroad &amp;
+                        highway, meadow and river and pond, pastures and cultivated fields, and
+                        almost all traces of man’s occupancy of the globe, were concealed, and I
+                        felt as if I were the last man. Though, when I had been exposed to the
+                           <del>blast for</del>
+                        <add>rudest blasts</add> a long time <del>my hands and feet became numb, my
+                           ears &amp; face stiffened, and</del>
+                     </rdg>
+                  </app> my whole body began to grow torpid, when I reached the genial atmosphere of
+                  my house I soon recovered my faculties and prolonged my life. But the most
+                  luxuriously housed has<app xml:id="walc13-app-0214">
+                     <lem>little</lem>
+                     <rdg wit="#wc_g2">
+                        <del>nothing</del>
+                        <add>little</add>
+                     </rdg>
+                  </app> to boast of in this respect, nor need we trouble ourselves to speculate how
+                  the human race may be at last destroyed. It would be easy to cut their
+                     threads<anchor type="hn" xml:id="hn-13-051"/> any time with a
+                  little sharper blast from the north. We go on dating from Cold Fridays<anchor type="hn" xml:id="hn-13-052"/> and Great Snows;<anchor type="hn" xml:id="hn-13-053"/> but a little colder Friday, or
+                  greater snow, would put a period to man's existence on the globe.</seg>
+            </p>
+
+            <p n="19" change="#wc_0e">
+               <seg n="19a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 19a written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">19a</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                  </note>The<app xml:id="walc13-app-0215">
+                     <lem>next</lem>
+                     <rdg wit="#wc_0e">
+                        <del>last</del>
+                        <add>next</add>
+                     </rdg>
+                  </app> winter I used a small cooking-stove for economy, since I did not own the
+                  forest; but it did not keep fire so well as the open fire-place. <app xml:id="walc13-app-0216">
+                     <lem>Cooking was then, for the most part, no longer a poetic, but merely a
+                        chemic process.</lem>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">Cooking was then for the most part no longer a
+                           poetic but a merely chemic process</add>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="19b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">House-Warming 19b written E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">19b</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">House-Warming 19b follows House-Warming 19c.</ab>
+                  </note> It will<app xml:id="walc13-app-0218">
+                     <lem>soon be</lem>
+                     <rdg wit="#wc_0e">be soon</rdg>
+                  </app> forgotten, in these days of stoves, that we used to roast potatoes in the
+                  ashes, after the Indian<app xml:id="walc13-app-0219">
+                     <lem>fashion.</lem>
+                     <rdg wit="#wc_0e">fashion <del>of cooking</del>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="19c" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The House-Warming 19c written E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">13</seg>
+                        <seg type="chapterTitle">House-Warming</seg>
+                        <seg type="paragraph">19c</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">House-Warming 19c follows House-Warming 19a and precedes
+                        House-Warming 19b.</ab>
+                  </note> The stove<app xml:id="walc13-app-0221">
+                     <lem>The stove</lem>
+                     <rdg wit="#wc_0e" resp="#easterly" cert="medium">
+                        <del>It</del>
+                        <add rendition="pencil">The stove</add>
+                     </rdg>
+                  </app> not only took up<app xml:id="walc13-app-0222">
+                     <lem>room</lem>
+                     <rdg wit="#wc_0e">room also</rdg>
+                  </app> and scented the house, but it concealed the fire, and I felt as if I had
+                  lost a companion. You can always see a face in the fire. The laborer, looking
+                     into<app xml:id="walc13-app-0223">
+                     <lem>it</lem>
+                     <rdg wit="#wc_0e">the fire</rdg>
+                  </app> at evening, purifies his thoughts of the dross and earthiness which they
+                  have accumulated during the day. But I could no longer sit and look into the fire,
+                  and the pertinent words of a poet recurred to me with new <note type="general" resp="#clapper" ana="#wc_0e">The first lines of the poem were interlined and
+                     canceled</note>
+                  <app xml:id="walc13-app-0224">
+                     <lem> force.— </lem>
+                     <rdg wit="#wc_0e">force.— <quote>
+                           <lg>
+                              <l>When I am glad or gay, </l>
+                              <l>Let me walk forth into the brilliant sun, </l>
+                              <l>And with congenial rays be shone upon; </l>
+                              <l>When I am sad or though bewitched would be, </l>
+                              <l>Let me glide forth in moonlight’s mystery, </l>
+                              <l>But never while I live this changeful life, </l>
+                              <l>This past and future with all wonders rife</l>
+                           </lg>
+                        </quote>
+                     </rdg>
+                  </app>
+                  <lg>
+                     <l>“Never, bright flame, may be denied to me </l>
+                     <l>Thy dear, life imaging, close sympathy. </l>
+                     <l>What but my hopes shot upward e’er so bright? </l>
+                     <l>What but my fortunes sunk so low in night? </l>
+                  </lg>
+                  <lg>
+                     <l>Why art thou banished from our hearth and hall, </l>
+                     <l>Thou who art welcomed and beloved by all? </l>
+                     <l>Was thy existence then too fanciful </l>
+                     <l>For our life’s common light, who are so dull?</l>
+                  </lg>
+                  <lg>
+                     <l>Did thy bright gleam mysterious converse hold </l>
+                     <l>With our congenial souls? secrets too bold? </l>
+                     <l>Well, we are safe and strong, for now we sit </l>
+                     <l>Beside a hearth where no dim shadows flit, </l>
+                     <l>Where nothing cheers nor saddens, but a fire </l>
+                     <l>Warms feet and hands—nor does to more aspire; </l>
+                     <l>By whose compact utilitarian heap </l>
+                     <l>The present may sit down and go to sleep, </l>
+                     <l>Nor fear the ghosts who from the dim past walked, </l>
+                     <l>And with us by the unequal light of the old wood fire talked.”</l>
+                  </lg>
+                  <anchor type="hn" xml:id="hn-13-054"/>
+                  <app xml:id="walc13-app-0225">
+                     <lem>MRS. HOOPER</lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+                  </app>
+               </seg>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

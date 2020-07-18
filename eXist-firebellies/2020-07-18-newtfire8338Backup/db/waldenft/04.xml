@@ -1,0 +1,1937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Sounds</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</p>
+               </licence>
+            </availability>          
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY Geneseo using Text Encoding
+            Initiative (TEI) P5 XML Schema, using the Parallel Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and includes critical apparatus
+               laid out by Ronald Clapper, and annotations provided by Ronald Clapper, J. Lyndon Shanley, and Walter
+               Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised edition of dissertation
+               originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc04">
+      <body>
+         <div>
+            <head>
+               <app xml:id="walc04-app-0001">
+                  <lem>Sounds</lem>
+                  <rdg wit="#wc_0a"><!--not in manuscript--></rdg>
+                  <rdg wit="#wc_0d">Sounds</rdg>
+               </app>
+            </head>
+            
+            <p n="1" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 1 written: A; rewritten: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">D</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>The rays which stream … walk on into
+                     futurity</quote> is interlined.</ab>
+               </note>
+               
+               <app xml:id="walc04-app-0002">
+                  <lem>BUT while we are confined to books, though the most select and classic, and read only particular
+                     written languages, which are themselves but dialects and provincial, we are in danger of forgetting
+                     the language which all things and events speak without metaphor, which alone is copious and
+                     standard. Much is published, but little printed.</lem>
+                  <rdg wit="#wc_0a">Yet after all, while we are confined to books though the most <add rendition="pencil"> select &amp;</add> classic and study only particular <add rendition="pencil">written</add>
+                     languages <add rendition="pencil">which are themselves but dialects</add> or provincialisms, we are
+                     apt to forget the language<del>, or rather the expression,</del> which all things every where,
+                     morning &amp; evening and all events speak—which only is copious, for the tongue is only an
+                     accidental organ of speech <add rendition="pencil">even of this written language which it has
+                        helped to establish</add> serving equally the palate, <del>and speech itself is partial,
+                        uttering</del>
+                     <add>and still lips were the methods which it had established necessary or sufficient for the
+                        silent expression of truth by instilling us. For both speech and writing are partial,
+                        utters</add> but a small part of the meaning with which the silence is fraught.—I mean <add rendition="pencil"> here</add> the language which things speak originally and without
+                     metaphor—such as the life of a man hears <add rendition="pencil">rather than his ears</add> &amp;
+                     his instincts speak—<add>rather than his tongue</add> and at length through all his actions <add rendition="pencil"> or his life</add> he learns to mutter. <add>With a more copious hearing or
+                        understanding of what is published, the views ever fresh which the breezes <del>of heaven</del>
+                        waft to us, <add rendition="pencil">and all things exhale</add> the present languages and all
+                        that they express or can express will be forgotten</add>
+                  </rdg>
+                  <rdg wit="#wc_0d">But while we are confined to books, though the most select and classic, and read only
+                     particular written languages which are themselves but dialects and provincial, we are in danger of
+                     forgetting the language which all things and events, <del>beast bird and flower, morning and
+                        evening—</del> speak <del>originally and</del> without metaphor, which <del>only</del>
+                     <add rendition="pencil">alone</add> is copious and standard, and an adequate expression of the
+                     meaning with which the universe is fraught; the language which the soul of a man hears rather than
+                     his ears, <add rendition="pencil">or understanding</add> and his <add rendition="pencil">
+                        divine</add> instincts speak rather than his tongue. <del>With a more copious hearing or
+                        understanding of what is published, the views ever fresh which the breezes waft to us, the
+                        present languages and all that they express or can express will be forgotten</del>
+                  </rdg>
+               </app> The rays which<app xml:id="walc04-app-0003">
+                  <lem>stream</lem>
+                  <rdg wit="#wc_0a #wc_0d">streamed</rdg>
+               </app> through the<app xml:id="walc04-app-0004">
+                  <lem>shutter</lem>
+                  <rdg wit="#wc_0a">crevices </rdg>
+                  <rdg wit="#wc_0d">
+                     <del>crevices</del>
+                     <add rendition="pencil">shutter</add>
+                  </rdg>
+               </app> will be no longer remembered when the<app xml:id="walc04-app-0005">
+                  <lem>shutter</lem>
+                  <rdg wit="#wc_0a">shadow </rdg>
+                  <rdg wit="#wc_0d">
+                     <del>shadow</del>
+                     <add rendition="pencil">shutter</add>
+                  </rdg>
+               </app> is wholly removed. No method nor discipline can supersede the necessity of being forever on the
+               alert. What is a course of history, or philosophy,<app xml:id="walc04-app-0006">
+                  <lem>or poetry,</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+               </app> no matter how well selected, or the best society, or the most admirable routine of life, compared
+               with the discipline of<app xml:id="walc04-app-0007">
+                  <lem>looking always at</lem>
+                  <rdg wit="#wc_0a">seeing always</rdg>
+               </app> what is to be seen? Will you be a reader, a student merely, or a seer? Read your fate, see what is
+               before you, and walk on into futurity. </p>
+            
+            <p n="2" change="#wc_0a">
+               <seg n="2a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 2a written: A; rewritten: B, D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">2a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, D</seg>
+                  </ab>
+               </note>
+                  I did not read books the first summer;<app xml:id="walc04-app-0008">
+                     <lem>I hoed</lem>
+                     <rdg wit="#wc_0d">
+                        <del>rather</del> I hoed</rdg>
+                  </app> beans. Nay, I often did better than this. There were times when I could not afford to<app xml:id="walc04-app-0009">
+                     <lem>sacrifice</lem>
+                     <rdg wit="#wc_0d">
+                        <del>sacrifice</del>
+                        <del>
+                           <add>rub off</add>
+                        </del>
+                        <add>sacrifice</add>
+                     </rdg>
+                  </app> the bloom of the present moment<app xml:id="walc04-app-0010">
+                     <lem>to</lem>
+                     <rdg wit="#wc_0d">
+                        <del>to</del>
+                        <del>
+                           <add>with</add>
+                        </del>
+                        <add>to</add>
+                     </rdg>
+                  </app> any work, whether of the head or hands. I<app xml:id="walc04-app-0011">
+                     <lem>love</lem>
+                     <rdg wit="#wc_0d">
+                        <del>loved</del>
+                        <add>love</add>
+                     </rdg>
+                  </app> a broad margin to my life. </seg>
+               
+               <seg n="2b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 2b written: A; rewritten: B, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">2b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B, F</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0b">
+                        <quote>My days were not days of the week
+                        … overhead for the passing day</quote> does not appear in the manuscript.</ab>
+                     <ab change="#wc_0b">A fair copy was made of only <quote>Sometimes, in a
+                        summer morning … I was reminded of the lapse of time</quote> and <quote>some work of mine
+                        … should not have been found wanting</quote>.</ab>
+                  </note>
+                  
+                   Sometimes, in a<app xml:id="walc04-app-0012">
+                     <lem>summer morning, having taken my accustomed bath,</lem>
+                     <rdg wit="#wc_0a">spring morning when the season of work <del>was past or</del> had not yet arrived
+                           <add>or later in the summer when it was already past</add> having performed my accustomed
+                        ablutions </rdg>
+                     <rdg wit="#wc_0b">spring morning when the season of work had not yet arrived, or later in the summer
+                        when it was already passed, having performed my accustomed ablutions </rdg>
+                     <rdg wit="#wc_0f">summer morning, having <del>performed my accustomed ablutions</del>
+                        <add rendition="pencil">taken my accustomed bath</add>
+                     </rdg>
+                  </app> I sat in my sunny doorway from<app xml:id="walc04-app-0013">
+                     <lem>sunrise till noon,</lem>
+                     <rdg wit="#wc_0a">the earliest dawn </rdg>
+                     <rdg wit="#wc_0b">earliest dawn </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>earliest dawn</del>
+                        <add>sunrise till noon</add>
+                     </rdg>
+                  </app> rapt in a revery,<app xml:id="walc04-app-0014">
+                     <lem>amidst</lem>
+                     <rdg wit="#wc_0a #wc_0b">amid</rdg>
+                  </app> the pines and hickories and sumachs, <app xml:id="walc04-app-0015">
+                     <lem>in undisturbed solitude and stillness,</lem>
+                     <rdg wit="#wc_0a #wc_0b"><!--[not in ms.]--></rdg>
+                  </app> while the birds sang around<app xml:id="walc04-app-0016">
+                     <lem>or</lem>
+                     <rdg wit="#wc_0a">and </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>and</del>
+                        <add rendition="pencil">or</add>
+                     </rdg>
+                  </app> flitted noiseless<app xml:id="walc04-app-0017">
+                     <lem>through the house, until by the sun</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">through the house</add> over my head and out at the open
+                        window— <add rendition="pencil">otherwise</add> in undisputed solitude &amp; stillness, except
+                           <add>perchance</add> when a bough fell <del>like a fan</del>
+                        <add rendition="pencil">to the ground</add> broken by its own weight, in my sumach grove, when
+                        the atmosphere was <add rendition="pencil">filled with</add> perfume and incense, and every
+                        sound <add rendition="pencil"> was</add> the key to unheard harmonies, until by the sun’s rays </rdg>
+                     <rdg wit="#wc_0b">through the house, over my head and out the open window, otherwise in undisturbed
+                        solitude and stillness, except perchance when a bough fell to the ground, broken by its own
+                        weight in my sumach grove,—when the atmosphere was filled with perfume and every sound was the
+                        key to unheard harmonies, until by the sun’s rays</rdg>
+                  </app> falling in at my west window, or the noise of some<app xml:id="walc04-app-0018">
+                     <lem>traveller’s wagon</lem>
+                     <rdg wit="#wc_0a">traveller</rdg>
+                  </app> on the distant highway, I was reminded of the lapse of time. I <app xml:id="walc04-app-0019">
+                     <lem>grew in those seasons like corn</lem>
+                     <rdg wit="#wc_0a">am sensible that I waxed and grew in these intervals as corn grows </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>am sensible that I</del> grew in those seasons like corn</rdg>
+                  </app> in the night, and they were far better than any work of the hands<app xml:id="walc04-app-0020">
+                     <lem>would have been.</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+                  </app>
+                  <app xml:id="walc04-app-0021">
+                     <lem>They were not time subtracted from my life, but so much over and above my usual
+                        allowance.</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">They were not <del>so much</del> time subtracted from my life, but so much over
+                        &amp; above <del>the</del>
+                        <add rendition="pencil">my</add> usual allowance <del>—little intervals during which I journeyed
+                           and anticipated other states of existence</del>
+                     </rdg>
+                  </app> I realized what the<app xml:id="walc04-app-0022">
+                     <lem>Orientals mean</lem>
+                     <rdg wit="#wc_0a">
+                        <del>Oriental philosophers</del>
+                        <add rendition="pencil">Orientals</add> meant </rdg>
+                     <rdg wit="#wc_0f"> Orientals meant</rdg>
+                  </app> by contemplation and the forsaking of works. For the most part,<app xml:id="walc04-app-0023">
+                     <lem>I minded</lem>
+                     <rdg wit="#wc_0a">indeed I knew </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>indeed</del>
+                        <add rendition="pencil">in short</add> I minded</rdg>
+                  </app> not how the hours<app xml:id="walc04-app-0024">
+                     <lem>went.</lem>
+                     <rdg wit="#wc_0a">went. I was accustomed to say to myself—certainly I am not living that heroic life
+                        I had dreamed of, and yet all my veins are full of life, and nature whispers no reproach</rdg>
+                  </app> The day advanced as if to light some work of<app xml:id="walc04-app-0025">
+                     <lem>mine;</lem>
+                     <rdg wit="#wc_0a">mine—and I defer to <del>other men </del>
+                        <add>others</add> in my thought, as if there were somewhere busier men </rdg>
+                     <rdg wit="#wc_0b">mine—and I defer to others in my thought, as if there were somewhere busier
+                        men</rdg>
+                  </app> it was morning, and lo, now it is evening, and nothing memorable is<app xml:id="walc04-app-0026">
+                     <lem>accomplished.</lem>
+                     <rdg wit="#wc_0a">accomplished. Yet my nature <del>is</del>
+                        <add rendition="pencil">was</add> almost content with this. What are these pines &amp; these
+                        birds about? What is this pond a-doing? I must know a little more and be forever ready </rdg>
+                     <rdg wit="#wc_0b">accomplished. <del>Yet my nature was almost content with this. What are these
+                           pines &amp; these birds about? What is this pond a-doing? I must know a little more and be
+                           forever ready</del>
+                     </rdg>
+                  </app> Instead of singing like the birds, I<app xml:id="walc04-app-0027">
+                     <lem>silently smiled</lem>
+                     <rdg wit="#wc_0a">sometimes silently smile </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>sometimes silently smile</del>
+                        <add rendition="pencil">silently smiled</add>
+                     </rdg>
+                  </app> at my incessant good fortune. As the<app xml:id="walc04-app-0028">
+                     <lem>sparrow had</lem>
+                     <rdg wit="#wc_0a">field sparrow has </rdg>
+                     <rdg wit="#wc_0b">tree sparrow has</rdg>
+                  </app> its trill, sitting on the hickory before my door, so<app xml:id="walc04-app-0029">
+                     <lem>had</lem>
+                     <rdg wit="#wc_0a #wc_0b">has</rdg>
+                  </app> I my chuckle or suppressed warble which he<app xml:id="walc04-app-0030">
+                     <lem>might</lem>
+                     <rdg wit="#wc_0a">may </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>may</del>
+                        <add>might</add>
+                     </rdg>
+                  </app> hear out of my nest.<app xml:id="walc04-app-0031">
+                     <lem>My</lem>
+                     <rdg wit="#wc_0f">
+                        <del>I lived in more primitive and absolute time than before.</del> My</rdg>
+                  </app> days were not days of the week,<app xml:id="walc04-app-0032">
+                     <lem>bearing the stamp of any heathen deity,</lem>
+                     <rdg wit="#wc_0f"><!--[not in ms.]--></rdg>
+                  </app> nor were they minced into hours and fretted by the ticking of a clock; <app xml:id="walc04-app-0033">
+                     <lem>for I lived like</lem>
+                     <rdg wit="#wc_0f">
+                        <del>My life in this respect was like that of</del>
+                        <add rendition="pencil">for I lived like</add>
+                     </rdg>
+                  </app> the Puri Indians, of whom it is said that “for yesterday, to-day, and to-morrow they have only
+                  one word, and they express the variety of meaning by pointing backward for yesterday, forward for
+                  to-morrow, and overhead for the passing day.” <app xml:id="walc04-app-0034">
+                     <lem>This was sheer idleness to my fellow-townsmen, no doubt; but if the birds and flowers had
+                        tried me by their standard, I should not have been found wanting.</lem>
+                     <rdg wit="#wc_0a">I don’t know that I bear any flowers or fruits. Methinks if the birds &amp;
+                        flowers try me by their standard I shall not be found wanting, but men try one another not so.
+                           <del>Man is still like a plant, and his satisfactions are like those of a vegetable. His
+                           rarest life is least his own.</del>
+                        <add rendition="pencil">At such an hour</add> I am not the worker but the work. The elements are
+                        working their will with me </rdg>
+                     <rdg wit="#wc_0b">I don’t know that I bear any flowers or fruits. Yet methinks if the birds and
+                        flowers try me by their standard I shall not be found wanting, but men try one another not so.
+                        At such an hour, I am not the worker but the work. The elements are working their will with
+                        me</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="2c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 2c written: A; rewritten: B, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">2c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B, F</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0b">Sounds 2c follows Sounds 3</ab>
+                     <ab change="#wc_0a">Sounds 2c is followed by Where I Lived, and What I
+                     Lived For 21b.</ab>
+                  </note>
+                  
+                   A man must find<app xml:id="walc04-app-0035">
+                     <lem>his</lem>
+                     <rdg wit="#wc_0a">his <del>own</del>
+                     </rdg>
+                  </app> occasions in himself,<app xml:id="walc04-app-0036">
+                     <lem>it is true.</lem>
+                     <rdg wit="#wc_0a #wc_0b"><!--[not in ms.]--></rdg>
+                  </app> The natural day is very calm, and will hardly reprove his <app xml:id="walc04-app-0037">
+                     <lem>indolence.</lem>
+                     
+                     <rdg wit="#wc_0a">indolence. <del>If there was</del>
+                        <add>When there is</add> no elevation in <del>our spirits</del>
+                        <add>my spirit</add> the pond <del>would</del>
+                        <add>does</add> not seem elevated like a mountain tarn, but a low pool, a silent muddy water
+                        &amp; place for fishermen</rdg>
+                     <rdg wit="#wc_0b">indolence. Where there <del>is</del>
+                        <add rendition="pencil">was</add> no elevation of my spirit the pond <del>does</del>
+                        <add rendition="pencil">did</add> not seem elevated like a mountain tarn, but a low pool, a
+                        silent muddy water &amp; place for fishermen.</rdg>
+                     <rdg wit="#wc_0f" cert="low" resp="#easterly">indolence. Where there <del>is</del>
+                        <add>was</add> no elevation of my spirit the pond <del>does</del>
+                        <add>did</add> not seem elevated like a mountain tarn, but a low pool, a silent muddy water and
+                        place for fishermen. I am glad to remember as I sit by my door that I too am a remote descendant
+                        at least of a heroic race of men of whom there is tradition, in one sense a fellow wanderer and
+                        survivor of Ulysses, for instance. My life passes amid the pines of New England. The pitch pine
+                        grows before my door unlike any symbol or glyphic I have seen painted. Where are the heroes
+                        whose exploits shall appear to posterity sculptured on monuments amid such natural forms as
+                        these? As we see heroes and demigods amid the lotuses and palms of the east. Where are the new
+                        Americans whose forms shall be sculpted on the Reed Pipe-stone Quarry?</rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="3" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 3 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">3</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0b">Sounds 3 follows Sounds 2b and precedes Sounds
+                  2c.</ab>
+               </note>
+                I<app xml:id="walc04-app-0038">
+                  <lem>had</lem>
+                  <rdg wit="#wc_0a">seemed to have </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>seemed to have</del>
+                     <add>had</add>
+                  </rdg>
+               </app> this advantage, at least, in my mode of life, over those who were obliged to look abroad for
+               amusement, to<app xml:id="walc04-app-0039">
+                  <lem>society and the theatre,</lem>
+                  <rdg wit="#wc_0a">theaters and society </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>theaters and to society</del>
+                     <add rendition="pencil">society and to the theatre</add>
+                  </rdg>
+               </app> that my life itself was<app xml:id="walc04-app-0040">
+                  <lem>become</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">become</add>
+                  </rdg>
+               </app> my amusement and never ceased to be novel. It was a drama of many scenes<app xml:id="walc04-app-0041">
+                  <lem>and without an</lem>
+                  <rdg wit="#wc_0a">
+                     <del>which would never</del>
+                     <add rendition="pencil">and without an</add>
+                  </rdg>
+               </app> end. If we were always indeed getting our living, and regulating our lives according to the last and<app xml:id="walc04-app-0042">
+                  <lem>best</lem>
+                  <rdg wit="#wc_0a">divinest </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>divinest</del>
+                     <add rendition="pencil">best</add>
+                  </rdg>
+               </app> mode we had learned, we should never be<app xml:id="walc04-app-0043">
+                  <lem>troubled with ennui.</lem>
+                  <rdg wit="#wc_0a">
+                     <del>weary of living</del>
+                     <add rendition="pencil">troubled with ennui</add>
+                  </rdg>
+               </app> Follow your genius closely enough, and it will not fail to show you a fresh prospect every hour.
+               Housework was a pleasant pastime. When my floor was dirty, I rose early, and, setting all my furniture
+               out of doors on the grass, <app xml:id="walc04-app-0044">
+                  <lem>bed and bedstead making but one budget,</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">bed and bedstead making but one budget</add>,</rdg>
+               </app> dashed water<app xml:id="walc04-app-0045">
+                  <lem>on</lem>
+                  <rdg wit="#wc_0a">upon</rdg>
+               </app> the floor, and sprinkled white sand from the pond<app xml:id="walc04-app-0046">
+                  <lem>on</lem>
+                  <rdg wit="#wc_0a">
+                     <del>upon</del>
+                     <add rendition="pencil">on</add>
+                  </rdg>
+               </app> it, and then with a broom scrubbed it clean and white; and by the time the villagers had broken
+               their fast the morning sun had dried my house sufficiently to allow me to move in again, and my
+               meditations were almost<app xml:id="walc04-app-0047">
+                  <lem>uninterrupted.</lem>
+                  <rdg wit="#wc_0a">uninterrupted—<add rendition="pencil">If any should choose to see my
+                        manuscripts</add> I trust that <del>none of my hearers</del>
+                     <add rendition="pencil">they</add> will <add rendition="pencil">not</add> be so charitable as to
+                     look into my house now—after <del>hearing</del>
+                     <add rendition="pencil">reading</add> this, at the end of an unusually dirty winter, with critical
+                     housewife’s eyes, for I intend to celebrate the first bright and unquestionable spring morning by
+                     scrubbing my house with sand until it is as white as a lily—<del>or, at any rate, as the
+                        washer-woman said of her clothes, as white as a “wiolet”</del>
+                  </rdg>
+               </app> It was pleasant to see my whole household effects out on the grass, making a little pile like a
+               gypsy’s pack, and my three-legged table, from which I did not remove the books and pen and ink, standing
+               amid the pines and hickories. They seemed glad to get out themselves, and as if unwilling to be brought
+               in. I was sometimes tempted to stretch an awning over them and take my seat there. It was worth the while
+               to see the sun shine on these things, and<app xml:id="walc04-app-0048">
+                  <lem>hear</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">hear</add>
+                  </rdg>
+               </app> the free wind blow<app xml:id="walc04-app-0049">
+                  <lem>on</lem>
+                  <rdg wit="#wc_0a">
+                     <del>upon</del>
+                     <add rendition="pencil">on</add>
+                  </rdg>
+               </app> them; so much more<app xml:id="walc04-app-0050">
+                  <lem>interesting most familiar objects look</lem>
+                  <rdg wit="#wc_0a">beautiful any beautiful thing looks</rdg>
+                  <rdg wit="#wc_0b">
+                     <del>beautiful any beautiful thing looks</del>
+                     <add rendition="pencil">interesting most familiar objects look</add>
+                  </rdg>
+               </app> out of doors than in the house. A bird sits on the next bough, life-everlasting grows under the
+               table, and blackberry vines run round its legs; pine cones, chestnut burs, and strawberry leaves are
+               strewn about. It looked as if this was the way these forms came to be transferred to our furniture, to
+               tables, chairs, and bedsteads,—because they once stood in their midst. </p>
+            
+            <p n="4" change="#wc_0a">
+               <seg n="4a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 4a written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">4a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note>
+                   My house was on the side of a
+                  hill, immediately on the edge of the larger wood, in the midst of a young forest of pitch pines and
+                  hickories, and half a dozen rods from the pond, to which a narrow footpath led down the hill. In my
+                  front yard <app xml:id="walc04-app-0051">
+                     <lem>grew the strawberry, blackberry, and</lem>
+                     <rdg wit="#wc_0a">
+                        <del>grow</del>
+                        <add rendition="pencil">grew</add> the black-berry <del>and</del> strawberry &amp;
+                           <del>the</del>
+                     </rdg>
+                     <rdg wit="#wc_0b">grew the <del>blackberry strawberry</del>
+                        <add rendition="pencil">strawberry blackberry</add> and</rdg>
+                  </app> life-everlasting, johnswort and golden-rod,<app xml:id="walc04-app-0052">
+                     <lem>shrub-oaks</lem>
+                     <rdg wit="#wc_0a">
+                        <del>&amp;</del> shruboak</rdg>
+                  </app> and sand-cherry,<app xml:id="walc04-app-0053">
+                     <lem>blueberry</lem>
+                     <rdg wit="#wc_0a">
+                        <del>&amp;</del> blueberry</rdg>
+                  </app> and ground-nut. </seg>
+               
+               <seg n="4b" change="#wc_0d">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 4b written: D.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">4b</seg>
+                        <seg type="written">D</seg>
+                     </ab>
+                     <ab change="#wc_0d">Sounds 4b was added to the manuscript on a partial
+                     leaf.</ab>
+                  </note>
+                   Near the end of May, the sand-cherry, <app xml:id="walc04-app-0054">
+                     <lem>
+                        <hi rend="style(italics)">Cerasus pumila</hi>,</lem>
+                     <rdg wit="#wc_0d">
+                        <del>
+                           <hi rend="style(underline)">prunus depruna</hi>
+                        </del>
+                        <add>
+                           <hi rend="style(underline)">Cerasus pumila</hi>
+                        </add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc04-app-0055">
+                     <lem>adorned the sides of the path</lem>
+                     <rdg wit="#wc_0d"><!--[not in ms.]--></rdg>
+                  </app> with its delicate flowers arranged in umbels cylindrically about its short stems, which last,
+                  in the fall, weighed down with good sized and handsome cherries, fell over in wreaths like rays on
+                  every side. I tasted them out of compliment to Nature, though they were scarcely palatable. </seg>
+               
+               <seg n="4c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 4c written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">4c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                  </note>The <app xml:id="walc04-app-0056">
+                     <lem>sumach,<hi rend="style(italics)">Rhus glabra</hi>,</lem>
+                     <rdg wit="#wc_0a">sumachs </rdg>
+                     <rdg wit="#wc_0b">sumachs <add rendition="pencil">
+                           <hi rend="style(underline)">Rhus glabra</hi>
+                        </add>
+                     </rdg>
+                  </app> grew luxuriantly about<app xml:id="walc04-app-0057">
+                     <lem>the</lem>
+                     <rdg wit="#wc_0a #wc_0b">my</rdg>
+                  </app> house, pushing up through the embankment<app xml:id="walc04-app-0058">
+                     <lem>which</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">which </add>
+                     </rdg>
+                  </app> I had made, and growing five or six feet the first season. Its broad pinnate tropical leaf was pleasant<app xml:id="walc04-app-0059">
+                     <lem>though strange</lem>
+                     <rdg wit="#wc_0a">
+                        <add> though strange</add>
+                     </rdg>
+                  </app> to look<app xml:id="walc04-app-0060">
+                     <lem>on.</lem>
+                     <rdg wit="#wc_0a">upon.</rdg>
+                     <rdg wit="#wc_0b">
+                        <del>upon</del>
+                        <add rendition="pencil">on.</add>
+                     </rdg>
+                  </app> The large buds, suddenly pushing out<app xml:id="walc04-app-0061">
+                     <lem>late in the spring</lem>
+                     <rdg wit="#wc_0a">
+                        <add>late in the spring</add>
+                     </rdg>
+                  </app> from<app xml:id="walc04-app-0062">
+                     <lem>dry</lem>
+                     <rdg wit="#wc_0a">dry and brittle </rdg>
+                     <rdg wit="#wc_0b">dry <del>and brittle</del>
+                     </rdg>
+                  </app> sticks which had seemed<app xml:id="walc04-app-0063">
+                     <lem>to be</lem>
+                     <rdg wit="#wc_0b">
+                        <del>to be</del>
+                     </rdg>
+                  </app> dead, developed themselves<app xml:id="walc04-app-0064">
+                     <lem>as</lem>
+                     <rdg wit="#wc_0a">as it were </rdg>
+                     <rdg wit="#wc_0b">as <del>it were</del>
+                     </rdg>
+                  </app> by magic into graceful green and tender boughs, an inch in diameter; and sometimes, as I sat at
+                  my window, so heedlessly did they grow and tax their<app xml:id="walc04-app-0065">
+                     <lem>weak joints,</lem>
+                     <rdg wit="#wc_0a #wc_0b">brittle stems,</rdg>
+                  </app> I heard a fresh and<app xml:id="walc04-app-0066">
+                     <lem>tender</lem>
+                     <rdg wit="#wc_0a">
+                        <del>green</del>
+                        <add>tender</add>
+                     </rdg>
+                  </app> bough suddenly fall<app xml:id="walc04-app-0067">
+                     <lem>like a fan</lem>
+                     <rdg wit="#wc_0a">
+                        <add>like a fan</add>
+                     </rdg>
+                  </app> to the ground, when there was not a breath of<app xml:id="walc04-app-0068">
+                     <lem>air stirring, broken off</lem>
+                     <rdg wit="#wc_0a">air, broken off at its foot </rdg>
+                     <rdg wit="#wc_0b">air stirring, broken off <del>at its foot</del>
+                     </rdg>
+                  </app> by its own weight. In<app xml:id="walc04-app-0069">
+                     <lem>August,</lem>
+                     <rdg wit="#wc_0a">the fall </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>the fall</del>
+                        <add rendition="pencil">August</add>
+                     </rdg>
+                  </app> the large masses of<app xml:id="walc04-app-0070">
+                     <lem>berries,</lem>
+                     <rdg wit="#wc_0a">
+                        <del>red</del> berries,</rdg>
+                  </app> which, when in flower, had attracted many wild<app xml:id="walc04-app-0071">
+                     <lem>bees,</lem>
+                     <rdg wit="#wc_0a">bees,<del>to my house</del>
+                     </rdg>
+                  </app> gradually assumed their bright<app xml:id="walc04-app-0072">
+                     <lem>velvety crimson</lem>
+                     <rdg wit="#wc_0a">
+                        <del>scarlet</del> and velvety </rdg>
+                     <rdg wit="#wc_0b">
+                        <add>crimson</add> and velvety</rdg>
+                  </app> hue, and by their weight again bent down and broke the tender limbs. </seg>
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+            
+            <p n="5" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 5 written: A; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>I doubt if there is such a place … its
+                     soothing sound is—Concord</quote> does not appear in the manuscript.</ab>
+                  <ab change="#wc_0e">The title “Railroad” appears in pencil at the top of
+                  the leaf</ab>
+               </note>
+                As I sit at my window this summer<app xml:id="walc04-app-0073">
+                  <lem>afternoon,</lem>
+                  <rdg wit="#wc_0a">afternoon, like a priest of Isis and observe the phenomena of 3000 years ago still
+                     unimpaired. The sacred</rdg>
+               </app> hawks are circling about<app xml:id="walc04-app-0074">
+                  <lem>my clearing;</lem>
+                  <rdg wit="#wc_0a">this temple</rdg>
+               </app> the tantivy of wild<app xml:id="walc04-app-0075">
+                  <lem>pigeons,</lem>
+                  <rdg wit="#wc_0a">pigeons an ancient race of birds </rdg>
+                  <rdg wit="#wc_0e">pigeons, <del>an ancient race of birds</del>
+                  </rdg>
+               </app> flying by two and threes athwart my view, or perching restless on the white-pine boughs behind my
+               house, gives a voice to the air; a fishhawk dimples the glassy surface of the pond and brings up a fish; a<app xml:id="walc04-app-0076">
+                  <lem>mink</lem>
+                  <rdg wit="#wc_0a">muskrat</rdg>
+               </app> steals out of the marsh before my door and seizes a frog<app xml:id="walc04-app-0077">
+                  <lem>by the shore;</lem>
+                  <rdg wit="#wc_0a">in the pond</rdg>
+               </app> the sedge is bending under the weight of the reed-birds flitting<app xml:id="walc04-app-0078">
+                  <lem>hither and thither;</lem>
+                  <rdg wit="#wc_0a">here and there</rdg>
+               </app> and for the last half hour I have heard the rattle of railroad cars, now dying away and then
+               reviving like the beat of a partridge, conveying travellers from Boston to the<app xml:id="walc04-app-0079">
+                  <lem>country.</lem>
+                  <rdg wit="#wc_0a">country<del>—or the faint rattle and tinkle which mark the passage of a carriage or
+                        team along the distant highway—</del>
+                  </rdg>
+               </app> For I did not live<app xml:id="walc04-app-0080">
+                  <lem>so out of the world</lem>
+                  <rdg wit="#wc_0a">in such an outlandish and out of the way place</rdg>
+               </app> as that boy, who, as I hear, was put out to a farmer in the east part of the town, but ere long
+               ran away and came home again, quite down at the heel and homesick. He had never seen such a dull and<app xml:id="walc04-app-0081">
+                  <lem>out-of-the-way</lem>
+                  <rdg wit="#wc_0a">out-of-the-world</rdg>
+               </app> place; the folks were all gone<app xml:id="walc04-app-0082">
+                  <lem>off;</lem>
+                  <rdg wit="#wc_0a">away</rdg>
+               </app> why, you couldn’t even hear the whistle! I doubt if there is such a place in Massachusetts now:— <lg>
+                  <l>“In truth, our village has become a butt </l>
+                  <l>For one of those fleet railroad shafts, and o’er </l>
+                  <l>Our peaceful plain its soothing sound is—Concord.”</l>
+               </lg>
+            </p>
+            
+            <p n="6" change="#wc_0a">
+               <seg n="6a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 6a written: A; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">6a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+               </note>
+                   The Fitchburg<app xml:id="walc04-app-0083">
+                     <lem>Railroad</lem>
+                     <rdg wit="#wc_0e">Railroad <add>then newly constructed</add>
+                     </rdg>
+                  </app> touches the pond <app xml:id="walc04-app-0084">
+                     <lem>about a hundred rods south of where I dwell.</lem>
+                     <rdg wit="#wc_0a">
+                        <del>within</del> about a hundred rods of my house</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="6b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 6b written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">6b</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">Sounds 6b is interlined.</ab>
+                  </note>
+                   I usually<app xml:id="walc04-app-0085">
+                     <lem>go</lem>
+                     <rdg wit="#wc_0e">
+                        <del>went</del>
+                        <add rendition="pencil">go</add>
+                     </rdg>
+                  </app> to the village along its causeway, and<app xml:id="walc04-app-0086">
+                     <lem>am,</lem>
+                     <rdg wit="#wc_0e">
+                        <del>was</del>
+                        <add rendition="pencil">am</add>
+                     </rdg>
+                  </app> as it were, related to society by this link. The men on the freight trains, who go over the
+                  whole length of the road, bow to me as to an old acquaintance, they pass me so often, and apparently
+                  they take me for an employee; and so I am. I too would fain be a track-repairer somewhere in the orbit
+                  of the earth. </seg>
+            </p>
+            
+            <p n="7" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 7 written: A; rewritten: B, E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">7</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, E</seg>
+                  </ab>
+                  <ab change="#wc_0b">A fair copy was made of only <quote>sounding like the
+                     scream … the wit that writes them</quote>.</ab>
+                  <ab change="#wc_0e">A fair copy was made of only <quote>The whistle of the
+                     locomotive … many restless city merchants</quote>.</ab>
+               </note>
+               
+                The whistle of the<app xml:id="walc04-app-0087">
+                  <lem>locomotive</lem>
+                  <rdg wit="#wc_0a #wc_0e">steam engine</rdg>
+               </app> penetrates my woods summer and winter, sounding like the scream of a hawk sailing over some
+               farmer’s yard, informing me that many restless city merchants<app xml:id="walc04-app-0088">
+                  <lem>are</lem>
+                  <rdg wit="#wc_0a">were </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>were</del>
+                     <add rendition="pencil">are</add>
+                  </rdg>
+               </app> arriving within the circle of the town, or adventurous country traders from the other side. As
+               they come under one horizon, they shout their warning to get off the track to the other, heard sometimes
+               through the circles of two towns. Here come your groceries, country; your rations, countrymen! Nor is
+               there any man so independent on his farm<app xml:id="walc04-app-0089">
+                  <lem>that he</lem>
+                  <rdg wit="#wc_0a">as </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>as</del>
+                     <add rendition="pencil">that he</add>
+                  </rdg>
+               </app> can say them nay. And here’s your pay for them! screams the countryman’s whistle; timber like long<app xml:id="walc04-app-0090">
+                  <lem>battering rams</lem>
+                  <rdg wit="#wc_0a">catapults </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>catapults</del>
+                     <add>battering-rams</add>
+                  </rdg>
+               </app> going twenty miles an hour against the<app xml:id="walc04-app-0091">
+                  <lem>city’s</lem>
+                  <rdg wit="#wc_0a">city </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>city</del>
+                     <add rendition="pencil">city’s</add>
+                  </rdg>
+               </app> walls, and chairs enough to seat all the weary and heavy laden that dwell within<app xml:id="walc04-app-0092">
+                  <lem>them.</lem>
+                  <rdg wit="#wc_0a">ye</rdg>
+               </app> With such huge and lumbering civility the country hands a chair to the city. All the Indian
+               huckleberry hills are stripped, all the cranberry meadows are raked into the city. Up comes the cotton,
+               down goes the woven cloth; up comes the silk, down goes the woollen; up come the books, but down goes the
+               wit that writes them. </p>
+            
+            <p n="8" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 8 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">8</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note>When I meet the engine with its train of cars moving off with planetary motion,—or,
+               rather, like a comet, for the beholder knows not if<app xml:id="walc04-app-0093">
+                  <lem>with that</lem>
+                  <rdg wit="#wc_0a">that</rdg>
+               </app> velocity and with that direction it will ever revisit this system,<app xml:id="walc04-app-0094">
+                  <lem>since</lem>
+                  <rdg wit="#wc_0a">for </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>for</del>
+                     <add rendition="pencil">since</add>
+                  </rdg>
+               </app> its orbit does not look like a returning curve,—with its steam cloud like a banner streaming
+               behind in golden and silver wreaths, like many a<app xml:id="walc04-app-0095">
+                  <lem>downy cloud which</lem>
+                  <rdg wit="#wc_0a">fleecy cloud that </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>fleecy</del>
+                     <add rendition="pencil">downy</add> cloud <del>that</del>
+                     <add rendition="pencil">which</add>
+                  </rdg>
+               </app> I have seen, high in the<app xml:id="walc04-app-0096">
+                  <lem>heavens,</lem>
+                  <rdg wit="#wc_0a #wc_0b">heavens in a summer day</rdg>
+               </app> unfolding its masses to the light,—as if this traveling demigod,<app xml:id="walc04-app-0097">
+                  <lem>this cloud-compeller,</lem>
+                  <rdg wit="#wc_0a #wc_0b"><!--[not in ms.]--></rdg>
+               </app> would ere long take the sunset sky for the livery of his train; when I hear the iron horse make
+               the hills echo with his snort like thunder, shaking the earth with his feet, and breathing fire and smoke
+               from his nostrils, (what kind of winged horse or fiery dragon they will put into the new Mythology I
+               don’t know,) it seems as if the earth had got a race now worthy to inhabit it. If all were as it seems,
+               and men made the elements their servants for noble ends! If the cloud that hangs over the engine were the
+               perspiration of heroic deeds, or as<app xml:id="walc04-app-0098">
+                  <lem>beneficent</lem>
+                  <rdg wit="#wc_0a">innocent and beneficent </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>innocent and</del> beneficent</rdg>
+               </app> to men as that which<app xml:id="walc04-app-0099">
+                  <lem>floats</lem>
+                  <rdg wit="#wc_0a">
+                     <del>hovers</del>
+                     <add rendition="pencil">floats</add>
+                  </rdg>
+               </app> over the farmer’s fields, then the elements and Nature herself would cheerfully accompany men on
+               their errands and be their escort. </p>
+            
+            <p n="9" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 9 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0b">
+                     <quote>I watch the passage of the morning cars
+                     … the barb of the spear</quote> does not appear in the manuscript in A or in the original
+                  copying of B but is interlined in pencil in B.</ab>
+               </note>
+                I watch the passage of the morning<app xml:id="walc04-app-0100">
+                  <lem>cars</lem>
+                  <rdg wit="#wc_0b">
+                     <del>train </del>
+                     <add rendition="pencil">cars</add>
+                  </rdg>
+               </app> with the same feeling that I do the rising of the sun, which is<app xml:id="walc04-app-0101">
+                  <lem>hardly</lem>
+                  <rdg wit="#wc_0b">
+                     <del>not</del>
+                     <add rendition="pencil">hardly</add>
+                  </rdg>
+               </app> more regular. Their train of clouds stretching far behind and rising higher and higher, going to
+               heaven while the cars are going to Boston, conceals the sun for <app xml:id="walc04-app-0102">
+                  <lem>a minute</lem>
+                  <rdg wit="#wc_0b">many minutes</rdg>
+               </app> and casts my distant field into the shade, a celestial train beside which the petty train of cars
+               which hugs the earth is but the barb of the spear. The stabler of the iron horse was up early this winter
+               morning by the light of the stars amid the mountains, to fodder and harness his steed. Fire, too, was
+               awakened thus early to put the vital beat in him and get him off. If the enterprise were as innocent as
+               it is early! If the snow lies deep, they strap on his snow-shoes, and with the giant plow, plow a furrow
+               from the mountains to the seaboard, in which the cars, like a following drill-barrow, sprinkle all the
+               restless men and floating merchandise in the country for seed. All day the fire-steed flies over the
+               country, stopping only that his master may rest, and I am awakened by his tramp and defiant snort at
+               midnight, when in some remote glen in the woods he fronts the elements incased in ice and snow; and <app xml:id="walc04-app-0103">
+                  <lem>he will reach his stall only</lem>
+                  <rdg wit="#wc_0a">will only reach his stall </rdg>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">he</add> will <del>only</del> reach his stall
+                     <add>only</add>
+                  </rdg>
+               </app> with the morning star, to start once more on his travels without rest or slumber. Or perchance, at
+               evening, I hear him in his stable blowing off the superfluous energy of the day, that he may calm his
+               nerves and cool his liver and brain for a few hours of iron slumber. If the enterprise were as heroic and
+               commanding as it is protracted and unwearied! </p>
+            
+            <p n="10" change="#wc_0b">
+               <seg n="10a" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 10a written: B; rewritten: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">10a</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">D</seg>
+                  </ab>
+               </note>
+                   Far through<app xml:id="walc04-app-0104">
+                     <lem>unfrequented woods</lem>
+                     <rdg wit="#wc_0b">lonely woods which are</rdg>
+                  </app> on the confines of towns, where once only the hunter penetrated by day, in the darkest night
+                  dart these bright saloons without the knowledge of their inhabitants; <app xml:id="walc04-app-0105">
+                     <lem>this moment stopping</lem>
+                     <rdg wit="#wc_0b">stopping for a time</rdg>
+                  </app> at some brilliant station-house in town or city, where a social crowd is<app xml:id="walc04-app-0106">
+                     <lem>gathered,</lem>
+                     <rdg wit="#wc_0b">gathered this moment in the crowded and lighted depot,</rdg>
+                  </app> the next in the Dismal Swamp, scaring the owl and<app xml:id="walc04-app-0107">
+                     <lem>fox.</lem>
+                     <rdg wit="#wc_0b">fox <del>awaking</del> waking the heroes &amp; <unclear>xxxxxxx</unclear>
+                        boys</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="10b" change="#wc_0d">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 10b written: D.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">10b</seg>
+                        <seg type="written">D</seg>
+                     </ab>
+                  </note>The startings and arrivals of the cars are now the epochs in the village day.
+                  They <app xml:id="walc04-app-0108">
+                     <lem>go and come</lem>
+                     <rdg wit="#wc_0d">
+                        <del>come &amp;</del> go <add>&amp; come</add>
+                     </rdg>
+                  </app> with such regularity and precision, and their whistle can be heard so far, that the farmers set
+                  their clocks by them, and thus one well conducted institution regulates a whole country. Have not men
+                  improved somewhat in punctuality since the railroad was invented? Do they not talk and think faster in
+                  the depot than they did in the stage-office? There is something<app xml:id="walc04-app-0109">
+                     <lem>electrifying</lem>
+                     <rdg wit="#wc_0d">
+                        <del>electric</del>
+                        <add rendition="pencil">electrifying</add>
+                     </rdg>
+                  </app> in the atmosphere of the former place.<app xml:id="walc04-app-0110">
+                     <lem>I have</lem>
+                     <rdg wit="#wc_0d">
+                        <del>Who has not</del>
+                        <add rendition="pencil">I have</add>
+                     </rdg>
+                  </app> been astonished at the miracles it has wrought; that some of<app xml:id="walc04-app-0111">
+                     <lem>my</lem>
+                     <rdg wit="#wc_0d">
+                        <del>his</del>
+                        <add rendition="pencil">my</add>
+                     </rdg>
+                  </app> neighbors, who,<app xml:id="walc04-app-0112">
+                     <lem>I should</lem>
+                     <rdg wit="#wc_0d">
+                        <del>he would</del>
+                        <add rendition="pencil">I should</add>
+                     </rdg>
+                  </app> have prophesied, once for all, would never get to Boston by so prompt a conveyance, were on
+                  hand when the bell rang. To do things “railroad fashion” is now the by-word; and it is worth the while
+                  to be warned so often and so sincerely by any power to get off<app xml:id="walc04-app-0113">
+                     <lem>its</lem>
+                     <rdg wit="#wc_0d">
+                        <del>the</del>
+                        <add rendition="pencil">its</add>
+                     </rdg>
+                  </app> track. There is no stopping to read the riot act, no firing over the heads of the mob,<app xml:id="walc04-app-0114">
+                     <lem>in this case.</lem>
+                     <rdg wit="#wc_0d">
+                        <del>with this earnest traveller. Here comes one whom it is of no use to
+                           expostulate with. Only to meet the car on the other track is like standing to have a tin cup
+                           shot off your head</del>
+                        <add rendition="pencil">in this case</add>
+                     </rdg>
+                  </app>
+               </seg>
+               
+               <seg n="10c" change="#wc_0d">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 10c written: D; rewritten: D.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">10c</seg>
+                        <seg type="written">D</seg>
+                        <seg type="rewritten">D</seg>
+                     </ab>
+                     <ab change="#wc_0d">Sounds 10c was interlined in pencil. A fair copy was
+                     made on a partial leaf.</ab>
+                  </note>
+                   We have constructed a fate, an <hi rend="style(italics)">Atropos</hi>, that never turns aside. (Let that be the name of your engine.)<app xml:id="walc04-app-0115">
+                     <lem>Men</lem>
+                     <rdg wit="#wc_d1">the public</rdg>
+                  </app> are advertised that at a certain hour and<app xml:id="walc04-app-0116">
+                     <lem>minute</lem>
+                     <rdg wit="#wc_d1">
+                        <del>cannon balls will be fired toward almost every point</del>
+                     </rdg>
+                  </app> these bolts will be shot toward particular points of the compass; yet it interferes with no
+                  man’s business, and the<app xml:id="walc04-app-0117">
+                     <lem>children</lem>
+                     <rdg wit="#wc_d2">children <del>
+                           <add rendition="pencil">quietly</add>
+                        </del>
+                     </rdg>
+                  </app> go to school on the other track.<app xml:id="walc04-app-0118">
+                     <lem>We live the steadier for it.</lem>
+                     <rdg wit="#wc_d1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_d2">
+                        <add rendition="pencil">We live the steadier for it.</add>
+                     </rdg>
+                  </app> We are all educated thus to<app xml:id="walc04-app-0119">
+                     <lem>be sons of Tell.</lem>
+                     <rdg wit="#wc_d1">stand and have tin cans shot off our heads. Man avoids the bolts of fate by
+                        minding his own <del>business</del>
+                        <add rendition="pencil">affairs</add>
+                     </rdg>
+                     <rdg wit="#wc_d2">
+                        <del>stand and have tin cans shot off our heads</del>
+                        <add>be sons of Tell</add>. Man avoids the bolts of fate by minding his own affairs</rdg>
+                  </app>
+                  <app xml:id="walc04-app-0120">
+                     <lem>The air is full of invisible bolts.</lem>
+                     <rdg wit="#wc_d1"><!--[not in ms.]--></rdg>
+                  </app>
+                  <app xml:id="walc04-app-0121">
+                     <lem>Every path but your own is the path of fate.</lem>
+                     <rdg wit="#wc_d1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_d2">
+                        <add rendition="pencil">Every path but your own is the path of fate.</add>
+                     </rdg>
+                  </app> Keep on your own track, then. </seg>
+            </p>
+            
+            <p n="11" change="#wc_0a">
+               <seg n="11a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 11a written: A; rewritten: B, D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">11a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, D</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc04-app-0122">
+                     <lem>What recommends commerce to me is</lem>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">After all</add> What recommends commerce to me is
+                           <del>after all</del>
+                     </rdg>
+                     <rdg wit="#wc_0d">
+                        <del>After all</del> what recommends commerce to me is</rdg>
+                  </app> its enterprise and bravery. It does not<app xml:id="walc04-app-0123">
+                     <lem>clasp</lem>
+                     <rdg wit="#wc_0a #wc_0b">fold </rdg>
+                     <rdg wit="#wc_0d">
+                        <del>fold</del>
+                        <add rendition="pencil">clasp</add>
+                     </rdg>
+                  </app> its hands and pray to Jupiter. I see these men every day go about their business with more or
+                  less courage and content, doing more<app xml:id="walc04-app-0124">
+                     <lem>even</lem>
+                     <rdg wit="#wc_0b"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0d">
+                        <add rendition="pencil">even</add>
+                     </rdg>
+                  </app> than they suspect, and perchance better employed than they could have consciously devised. </seg>
+               
+               <seg n="11b" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 11b written: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">11b</seg>
+                        <seg type="written">B</seg>
+                     </ab>
+                  </note>
+                  <app xml:id="walc04-app-0125">
+                     <lem>I</lem>
+                     <rdg wit="#wc_0b">
+                        <del>Yet I confess that</del> I</rdg>
+                  </app> am less affected by their heroism who stood up for half an hour in the front line at Buena
+                  Vista, than by the steady and cheerful valor of the men who inhabit the snow-plough for their winter
+                  quarters; who have not merely the three-o’-clock in the morning courage, which Bonaparte thought was
+                  the rarest, but whose courage does not go to rest so early, who go to sleep only when the storm sleeps
+                  or the sinews of their iron steed are frozen. On this morning of the Great Snow,<app xml:id="walc04-app-0126">
+                     <lem>perchance,</lem>
+                     <rdg wit="#wc_0b"><!--[not in ms.]--></rdg>
+                  </app> which is still raging and chilling men’s blood, I hear the muffled tone of their engine bell
+                  from out the fog bank of their chilled breath, which announces that the cars <hi rend="style(italics)">are coming</hi>, without long delay, notwithstanding the veto of a New England north-east snow
+                  storm, and<app xml:id="walc04-app-0127">
+                     <lem>I</lem>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">I</add>
+                     </rdg>
+                  </app> behold the ploughmen covered with snow and rime, their heads peering, above the mould-board
+                  which is turning down other than daisies and the nests of field-mice, like bowlders of the Sierra
+                  Nevada, that occupy an outside place in the universe. </seg>
+            </p>
+            
+            <p n="12" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 12 written: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">12</seg>
+                     <seg type="written">B</seg>
+                  </ab>
+                  <ab change="#wc_0f">
+                     <quote>I feel more like a citizen of the world …
+                     advertised in the Cuttingsville Times</quote> does not appear in the manuscript.</ab>
+               </note>
+                Commerce is unexpectedly<app xml:id="walc04-app-0128">
+                  <lem>confident and</lem>
+                  <rdg wit="#wc_0b">
+                     <del>brave,</del>
+                     <add rendition="pencil">confident &amp;</add>
+                  </rdg>
+               </app> serene, alert, adventurous, and unwearied. It is very natural<app xml:id="walc04-app-0129">
+                  <lem>in its methods</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">in its methods</add>
+                  </rdg>
+               </app> withal, far more so than many fantastic enterprises and sentimental experiments, and hence its
+               singular success. I am refreshed and expanded when the freight train rattles past<app xml:id="walc04-app-0130">
+                  <lem>me,</lem>
+                  <rdg wit="#wc_0b">me<del>on the railroad</del>
+                  </rdg>
+               </app> and I smell the stores which go dispensing their odors all the way from Long Wharf to<app xml:id="walc04-app-0131">
+                  <lem>Lake Champlain,</lem>
+                  <rdg wit="#wc_0b">
+                     <del>the Ashuelot</del>
+                     <add rendition="pencil">Lake Champlain,</add>
+                  </rdg>
+               </app> reminding me of foreign parts, of coral reefs, and Indian oceans, and tropical climes, and the
+               extent of the globe. I feel more like a citizen of the world at the sight of the palm-leaf which will
+               cover so many flaxen New England heads the next summer, the Manilla hemp and cocoa-nut husks, the old
+               junk, gunny bags, scrap iron, and rusty nails. This car-load of torn sails is more legible and
+               interesting now than if they should be wrought into paper and printed books. Who can write so graphically
+               the history of the storms they have weathered as these rents have done? They are proof-sheets which need
+               no correction. Here goes lumber from the Maine woods, which did not go out to sea in the last freshet,
+               risen four dollars on the thousand because of what did go out or was split up; pine, spruce,
+               cedar,—first, second, third and fourth qualities, so lately all of one quality, to wave over the bear,
+               and moose, and caribou. Next rolls Thomaston lime, a prime lot, which will get far among the hills before
+               it gets slacked. These rags in bales, of all hues and qualities, the lowest condition to which cotton and
+               linen descend, the final result of dress,—of patterns which are now no longer cried up, unless it be in
+               Milwaukie, as those splendid articles, English, French, or American prints, ginghams, muslins, &amp;c.,
+               gathered from all quarters both of fashion and poverty, going to become paper of one color or a few
+               shades only, on which forsooth will be written tales of real life, high and low, and founded on fact!
+               This closed car smells of salt fish, the strong New England and commercial scent, reminding me of the
+               Grand Banks and the fisheries. Who has not seen a salt fish, thoroughly cured for this world, so that
+               nothing can spoil it, and putting the perseverance of the saints to the blush? with which you may sweep
+               or pave the streets, and split your kindlings, and the teamster shelter himself and his lading against
+               sun wind and rain behind it,— and the trader, as a Concord trader once did, hang it up by his door for a
+               sign when he commences business, until at last his oldest customer cannot tell surely whether it be
+               animal, vegetable, or mineral, and yet it shall be as pure as a snowflake, and if it be put into a pot
+               and boiled, will come out an excellent dun fish for a Saturday’s dinner. Next Spanish hides, with the
+               tails still preserving their twist and the angle of elevation they had when the oxen that wore them were
+               careering over the pampas of the Spanish main,—a type of all obstinacy, and evincing how almost hopeless
+               and incurable are all constitutional vices. I confess, that practically speaking, when I have learned a
+               man’s real disposition, I have no hopes of changing it for the better or worse in this state of
+               existence. As the Orientals say, “A cur’s tail may be warmed, and pressed, and bound round with
+               ligatures, and after a twelve years’ labor bestowed upon it, still it will retain its natural form.” The
+               only effectual cure for such inveteracies as these tails exhibit is to make glue of them, which I believe
+               is what is usually done with them, and then they will stay put and stick. Here is a hogshead of molasses
+               or of brandy directed to John Smith, Cuttingsville, Vermont, some trader among the Green Mountains, who
+               imports for the farmers near his clearing, and now perchance stands over his bulk-head and thinks of the
+               last arrivals on the coast, how they may affect the price for him, telling his customers this moment, as
+               he has told them twenty times before this morning, that he expects some by the next train of prime
+               quality. It is advertised in the Cuttingsville Times. </p>
+            
+            <p n="13" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 13 written: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">13</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+                  <ab change="#wc_0f">
+                     <quote>While these things go up … Of some great
+                     ammiral.” And hark!</quote> does not appear in the manuscript.</ab>
+               </note>
+                While these things go up
+               other things come down. Warned by the whizzing sound, I look up from my book and see some tall pine, hewn
+               on far northern hills, which has winged its way over the Green Mountains and the Connecticut, shot like
+               an arrow through the township within ten minutes, and scarce another eye beholds it; going <quote>
+                  <lg>
+                     <l>“to be the mast</l>
+                     <l>Of some great ammiral.” </l>
+                  </lg>
+               </quote>And hark!<app xml:id="walc04-app-0132">
+                  <lem>here comes the cattle-train</lem>
+                  <rdg wit="#wc_0f">here <del>too</del> comes the cattle-train from the other side</rdg>
+               </app> bearing the cattle of a thousand hills, sheepcots, stables, and cow-yards in the air, drovers with
+               their sticks, and shepherd boys in the midst of their flocks, all but the mountain pastures, whirled
+               along like leaves blown from the mountains by the September gales. The air is filled with the bleating of
+               calves and sheep, and the hustling of oxen, as if a pastoral valley were going by. When the old
+               bell-wether at the head rattles his bell, the mountains do indeed skip like rams and the little hills
+               like lambs. A car-load of drovers, too, in the midst, on a level with their droves now, their vocation
+               gone, but still clinging to their useless sticks as their badge of office. But their dogs, where are
+               they? It is a stampede to them; they are quite thrown out; they have lost the scent. Methinks I hear them
+               barking behind the Peterboro’ Hills, or panting up the western slope of the Green Mountains. They will
+               not be in at the death. Their vocation, too, is gone. Their fidelity and sagacity are below par now. They
+               will slink back to their kennels in disgrace, or perchance run wild and strike a league with the wolf and
+               the fox. So is your pastoral life whirled past and away. But the bell rings, and I must get off the track
+               and let the cars go by;— <lg>
+                  <l>What’s the railroad to me? </l>
+                  <l>I never go to see </l>
+                  <l>Where it ends. </l>
+                  <l>It fills a few hollows, </l>
+                  <l>And makes banks for the swallows, </l>
+                  <l>It sets the sand a-blowing, </l>
+                  <l>And the blackberries a-growing, </l>
+               </lg>
+               but I cross it like a cart-path in the woods.<app xml:id="walc04-app-0133">
+                  <lem>I will not have my eyes put out and my ears spoiled by its smoke and steam and hissing.</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">I will not have my eyes put out &amp; my ears spoiled by its
+                        smoke &amp; steam &amp; whistle</add>
+                  </rdg>
+               </app>
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+            
+            <p n="14" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 14 written: B; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">14</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc04-app-0134">
+                  <lem>Now that the cars are gone by, and all the restless world with them, and the fishes in the pond
+                     no longer feel their rumbling, I am more alone than ever.</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">Now that the cars are gone by, and all the restless world
+                        with them, and the fishes in the pond no longer feel their rumbling, I am more alone than
+                        ever.</add> And now that the cars are gone by and all the restless world with them, and even the
+                     fishes in the pond <del>do not</del>
+                     <add rendition="pencil">no longer</add> feel their rumbling, I am more <del>silent &amp;</del>
+                     alone than ever</rdg>
+               </app> For the rest of the long<app xml:id="walc04-app-0135">
+                  <lem>afternoon, perhaps,</lem>
+                  <rdg wit="#wc_0b">
+                     <del>summer</del> afternoon<add rendition="pencil">perchance</add>, <del>for it was
+                        summer when I <add>first</add> heard the whistle</del>
+                  </rdg>
+               </app> my meditations are interrupted only by the<app xml:id="walc04-app-0136">
+                  <lem>faint rattle</lem>
+                  <rdg wit="#wc_0b">
+                     <del>occasional</del> faint rattle <del>and tinkle which mark the passage</del>
+                  </rdg>
+               </app> of a carriage or team along the distant highway. </p>
+            
+            
+            <p n="15" change="#wc_0a">
+               <seg n="15a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 15a written: A; rewritten: E, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">15a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, F</seg>
+                  </ab>
+               </note> 
+                  Sometimes, on Sundays, I heard the bells, the Lincoln, Acton, Bedford, or Concord
+                  bell, when the wind was favorable, a faint, sweet, and, as it were, natural melody, worth importing
+                  into the wilderness.</seg>
+               <seg n="15b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Sounds 15b written: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">4</seg>
+                        <seg type="chapterTitle">Sounds</seg>
+                        <seg type="paragraph">15b</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                  </note>At a<app xml:id="walc04-app-0137">
+                     <lem>sufficient</lem>
+                     <rdg wit="#wc_0f">
+                        <del>great</del>
+                        <add>sufficient</add>
+                     </rdg>
+                  </app> distance over the woods<app xml:id="walc04-app-0138">
+                     <lem>this sound</lem>
+                     <rdg wit="#wc_0f">
+                        <del>the sound of a bell</del>
+                        <add rendition="pencil">this sound</add>
+                     </rdg>
+                  </app> acquires a certain vibratory hum, as if the pine needles in the horizon were the strings of a
+                  harp which it<app xml:id="walc04-app-0139">
+                     <lem>swept.</lem>
+                     <rdg wit="#wc_0f">swept<del>and is far more universal and memorable than its ringing
+                        near</del>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc04-app-0140">
+                     <lem>All sound heard at the greatest possible distance produces one and the same effect, a
+                        vibration of the universal lyre, just as the intervening atmosphere makes a distant ridge of
+                        earth interesting to our eyes by the azure tint it imparts to it.</lem>
+                     <rdg wit="#wc_0f">
+                        <del>Just as the intervening atmosphere makes a distant ridge of earth itself
+                           interesting to our eyes by the azure tint it imparts to it.</del> All sound heard at the
+                        greatest possible distance produces one &amp; the same effect, a vibration of <del>the strings
+                           of</del> the universal lyre. <add rendition="pencil">Just as the intervening atmosphere makes
+                           a distant ridge of earth interesting to our eyes by the azure tint it imparts to
+                        it</add>
+                     </rdg>
+                  </app> There came to me in this case a melody which the air had strained, and which had conversed with
+                  every leaf and needle of the wood, that portion of the sound which the elements had taken up and
+                  modulated and echoed from vale to vale. The echo is, to some extent, an original sound, and therein is
+                  the magic and charm of it. It is not merely a repetition of<app xml:id="walc04-app-0141">
+                     <lem>what was worth repeating in </lem>
+                     <rdg wit="#wc_0f">
+                        <add>what was worth repeating in</add>
+                     </rdg>
+                  </app> the bell, but partly the voice of the wood; the same trivial words and notes sung by a
+                  wood-nymph. </seg>
+            </p>
+            
+            <p n="16" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 16 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">16</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+               </note>At evening, the distant lowing of some cow in the horizon beyond the woods sounded
+               sweet and melodious, and at first I would mistake it for the voices of<app xml:id="walc04-app-0142">
+                  <lem>certain minstrels</lem>
+                  <rdg wit="#wc_0e">
+                     <del>a minstrel</del>
+                     <add rendition="pencil">some minstrels</add>
+                  </rdg>
+               </app> by whom I was sometimes serenaded, who might be straying over hill and dale; but soon I was not
+               unpleasantly disappointed when it was prolonged into the cheap and natural music of the cow. I do not
+               mean to be satirical, but to express my appreciation of<app xml:id="walc04-app-0143">
+                  <lem>those youths’</lem>
+                  <rdg wit="#wc_0e">
+                     <del>that youth’s</del>
+                     <add rendition="pencil">those youths’</add>
+                  </rdg>
+               </app> singing, when I state that I perceived clearly that it was akin to the music of the cow, and they
+               were at length one articulation of Nature. </p>
+            
+            <p n="17" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 17 written: B; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">17</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0b">
+                     <quote>Regularly at half past seven, in one part of the
+                     summer, after</quote> does not appear in the manuscript.</ab>
+               </note>
+                Regularly at half-past seven, in
+               one part of the summer, after the evening train had gone by, the whippoorwills chanted their vespers for
+               half an hour, sitting on a stump by my door, or<app xml:id="walc04-app-0144">
+                  <lem>upon</lem>
+                  <rdg wit="#wc_0b">
+                     <del>on</del>
+                     <add rendition="pencil">upon</add>
+                  </rdg>
+               </app> the ridge pole<app xml:id="walc04-app-0145">
+                  <lem>of the house.</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">of the house.</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc04-app-0146">
+                  <lem>They would begin to sing almost with as much precision as a clock, within five minutes of a
+                     particular time, referred to the setting of the sun, every evening. I had a rare opportunity to
+                     become acquainted with their habits. Sometimes I heard four or five at once in different parts of
+                     the wood, by accident one a bar behind another, and so near me that I distinguished not only the
+                     cluck after each note, but often that singular buzzing sound like a fly in a spider’s web, only
+                     proportionally louder. Sometimes one would circle round and round me in the woods a few feet
+                     distant as if tethered by a string, when probably I was near its eggs.</lem>
+                  <rdg wit="#wc_0b">or sometimes one circled round and round me, a few feet distant, in the woods, as if
+                     tethered by a string. I had a rare opportunity to become acquainted with their habits, for they
+                     were very familiar and were my never-failing visitors in summer evenings. Sometimes I
+                        <del>have</del> heard three or four singing at once in different parts of the wood, one a bar
+                     behind the other, as in a catch <add>&amp;</add>
+                     <add rendition="pencil">
+                        <del>they were</del> so near that</add> I not only heard the cluck after each note distinctly,
+                     but <del>occasionally</del>
+                     <del>
+                        <add rendition="pencil">sometimes</add>
+                     </del>
+                     <add>often</add>
+                     <del>a</del>
+                     <add rendition="pencil">that</add>
+                     <del>loud and</del> singular buzzing sound <del>which I have not seen described, to be compared
+                        with nothing that I can think of, but that made by</del>
+                     <add rendition="pencil">like</add> a fly in a spider’s web, only proportionally louder </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>or sometimes one circled around &amp; round me <add>in the woods</add> a few
+                        feet distant as if tethered by a string</del>
+                     <add>They would begin to sing almost with as much <del>regularity and</del> precision as a clock,
+                        within five minutes of a particular hour referred to the setting of the sun every evening</add>.
+                     I had a rare opportunity to become acquainted with their habits<del>, for they were very familiar
+                        and were my never failing visitors in summer evenings</del>. Sometimes I heard three or four
+                     singing at once in different parts of the wood, <del>
+                        <add>close by</add>
+                     </del> one a bar behind
+                        <del>the other</del>
+                     <add>another</add> and so near <add>me</add> that I <del>not only</del> heard <add>not only</add>
+                     the cluck after each note distinctly, but often that singular buzzing sound like a fly in a
+                     spider’s web, only proportionally louder. <add>Sometimes one circled round and round me a few feet
+                        distant in the woods as if tethered by a string</add>
+                  </rdg>
+               </app> They<app xml:id="walc04-app-0147">
+                  <lem>sang</lem>
+                  <rdg wit="#wc_0b">also sang</rdg>
+               </app> at intervals throughout the night, and were again as musical as ever just before<app xml:id="walc04-app-0148">
+                  <lem>and about</lem>
+                  <rdg wit="#wc_0b">
+                     <add>and about</add>
+                  </rdg>
+               </app> dawn. </p>
+            
+            <p n="18" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 18 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">18</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>-r-r-r-n! sighs one on this side … from
+                     far in the Lincoln woods</quote> does not appear in the manuscript but may have been contained on
+                  the missing leaf (#79) which follows.</ab>
+                  <ab change="#wc_0a #wc_0b">Sounds 21 precedes Sounds 18.</ab>
+               </note>
+               
+                When other
+               birds are still the<app xml:id="walc04-app-0149">
+                  <lem>screech</lem>
+                  <rdg wit="#wc_0a">
+                     <add>screech</add>
+                  </rdg>
+               </app> owls take up the strain, like mourning women their ancient u-lu-lu. Their dismal scream is truly
+               Ben Jonsonian. Wise midnight hags! It is no honest and blunt tu-whit tu-who of the poets, but, without
+               jesting, a most solemn graveyard ditty, the mutual consolations of suicide lovers remembering the pangs
+               and the delights of supernal love in the infernal groves. Yet I love to hear their wailing, their doleful
+               responses, trilled along the wood-side, reminding me sometimes of music and singing birds; as if it were
+               the dark and tearful side of music, the regrets and sighs that would fain be sung. They are the spirits,
+               the low spirits and melancholy forebodings, of fallen souls that once in human shape night-walked the
+               earth and did the deeds of darkness, now expiating<app xml:id="walc04-app-0150">
+                  <lem>their sins with their wailing hymns or threnodies</lem>
+                  <rdg wit="#wc_0a">
+                     <add>their sins</add> with their wailing hymns <del>and</del>
+                     <add>or</add> threnodies <del>their sins</del>
+                  </rdg>
+               </app> in the scenery of their transgressions. They give me a new sense of the <app xml:id="walc04-app-0151">
+                  <lem>variety and capacity</lem>
+                  <rdg wit="#wc_0a">
+                     <del>vastness and the mystery</del>
+                     <add rendition="pencil">variety and capacity</add>
+                  </rdg>
+               </app> of that nature which is our common dwelling. <hi rend="style(italics)">Oh-o-o-o-o that I never had
+                  been bor-r-r-r-n!</hi> sighs one on this side of the pond, and circles with the restlessness of
+               despair to some new perch on the gray oaks. Then—<hi rend="style(italics)">that I never had been
+                  bor-r-r-r-n!</hi> echoes<app xml:id="walc04-app-0152">
+                  <lem>another</lem>
+                  <rdg wit="#wc_0b">
+                     <del>one</del>
+                     <add rendition="pencil">another</add>
+                  </rdg>
+               </app> on the farther side with<app xml:id="walc04-app-0153">
+                  <lem>tremulous</lem>
+                  <rdg wit="#wc_0b">
+                     <del>a</del> tremulous</rdg>
+               </app> sincerity, and—<hi rend="style(italics)">bor-r-r-r-n!</hi> comes faintly from far in the Lincoln
+               woods. </p>
+            
+            <p n="19" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 19 written: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">19</seg>
+                     <seg type="written">D</seg>
+                  </ab>
+                  <ab change="#wc_0d">Sounds 19 and 20 were added on a leaf from B that had
+                  been taken into D.</ab>
+               </note>
+                I was also serenaded by a hooting owl.<app xml:id="walc04-app-0154">
+                  <lem>Near at hand</lem>
+                  <rdg wit="#wc_0d">
+                     <add>Near at hand</add>
+                  </rdg>
+               </app> you could fancy it the most melancholy sound in Nature, as if<app xml:id="walc04-app-0155">
+                  <lem>she</lem>
+                  <rdg wit="#wc_0d">
+                     <del>it</del>
+                     <add>she</add>
+                  </rdg>
+               </app> meant by this to stereotype and make permanent in her choir the dying moans of a human being,—some
+               poor weak relic of mortality who has left hope behind, and howls like an animal, yet with human sobs, on
+               entering the dark valley,<app xml:id="walc04-app-0156">
+                  <lem> made more awful by a certain gurgling melodiousness,—I find myself beginning with the letters gl
+                     when I try to imitate it,—expressive of a mind which has reached the gelatinous, mildewy stage in
+                     the mortification of all healthy and courageous thought. It reminded me of ghouls and idiots and
+                     insane howlings.</lem>
+                  <rdg wit="#wc_0d">
+                     <del>It reminded me of ghouls and idiots and insane howlings</del> made more awful by
+                     a certain gurgling melodiousness,—I find myself beginning with the letters <hi rend="style(underline)">gl</hi> when I try to imitate it,—suggesting a mind which has reached
+                     the gelatinous and mildewy stage in the mortification of all healthy and courageous thought <add rendition="pencil"> It reminded me of ghouls and idiots and insane howlings</add>
+                  </rdg>
+               </app> But now one answers from far woods in a strain made really<app xml:id="walc04-app-0157">
+                  <lem>melodious</lem>
+                  <rdg wit="#wc_0d">
+                     <del>sweet</del>
+                     <add rendition="pencil">melodious</add>
+                  </rdg>
+               </app> by distance,—<app xml:id="walc04-app-0158">
+                  <lem>
+                     <hi rend="style(italics)">Hoo hoo hoo, hoorer hoo</hi>:</lem>
+                  <rdg wit="#wc_0d">
+                     <add rendition="pencil">
+                        <hi rend="style(italics)">Hoo hoo hoo, hooer
+                     hoo</hi>;</add>
+                  </rdg>
+               </app> and indeed for the most part it suggested only pleasing associations, whether heard<app xml:id="walc04-app-0159">
+                  <lem>by day or night,</lem>
+                  <rdg wit="#wc_0d"><!--[not in ms.]--></rdg>
+               </app> summer or winter. </p>
+            
+            <p n="20" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 20 written: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">20</seg>
+                     <seg type="written">D</seg>
+                  </ab>
+               </note>I rejoice that there are owls. Let them do the idiotic and maniacal hooting for men. <app xml:id="walc04-app-0160">
+                  <lem>It is a sound admirably suited to swamps and twilight woods which no day illustrates, suggesting
+                     a vast and undeveloped nature which men have not recognized.</lem>
+                  <rdg wit="#wc_0d">
+                     <del>They suggest a vast and undeveloped nature which men have not recognized.</del>
+                     It is a sound admirably suited to swamps and twilight woods which no day illustrates <add rendition="pencil"> suggesting a vast and undeveloped nature which men have not
+                        recognized.</add>
+                  </rdg>
+               </app> They represent the stark twilight and unsatisfied thoughts which<app xml:id="walc04-app-0161">
+                  <lem>all have.</lem>
+                  <rdg wit="#wc_0d">I have.</rdg>
+               </app> All day the sun has shone on the surface of<app xml:id="walc04-app-0162">
+                  <lem>some</lem>
+                  <rdg wit="#wc_0d">
+                     <del>this</del>
+                     <add>some</add>
+                  </rdg>
+               </app> savage swamp, where the double spruce stands<app xml:id="walc04-app-0163">
+                  <lem>hung</lem>
+                  <rdg wit="#wc_0d">festooned</rdg>
+               </app> with usnea lichens, and<app xml:id="walc04-app-0164">
+                  <lem>small hawks circulate above,</lem>
+                  <rdg wit="#wc_0d">the hawk circulates</rdg>
+               </app> and the chickadee lisps amid the evergreens, and the partridge and rabbit<app xml:id="walc04-app-0165">
+                  <lem>skulk</lem>
+                  <rdg wit="#wc_0d">
+                     <del>skulks</del>
+                     <add rendition="pencil">skulk</add>
+                  </rdg>
+               </app> beneath; but now a more dismal arid fitting day dawns, and a different race of creatures awakes to
+               express the meaning of Nature there. </p>
+            
+            <p n="21" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 21 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">21</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>Late in the evening I heard … saturation
+                     and waterloggedness and distention. The most</quote> does not appear in the manuscript in A but may
+                  have been contained on the missing leaves (#73-75) which precede.</ab>
+                  <ab change="#wc_0a #wc_0b">Sounds 21 follows Bean-Field 7 and precedes
+                  Sounds 18.</ab>
+               </note>
+               
+                Late in the evening I heard the<app xml:id="walc04-app-0166">
+                  <lem>distant</lem>
+                  <rdg wit="#wc_0b">
+                     <del>distant</del>
+                     <del>
+                        <add>far off</add>
+                     </del>
+                     <add>distant</add>
+                  </rdg>
+                  
+               </app> rumbling of wagons over bridges,—a sound heard farther than almost any other at night,—the baying
+               of dogs, and sometimes <app xml:id="walc04-app-0167">
+                  <lem>again the lowing of some disconsolate cow in a distant barn-yard. In the mean while all the shore
+                     rang with the trump of</lem>
+                  <rdg wit="#wc_0b">
+                     <del>
+                        <add>still</add>
+                     </del>
+                     <add rendition="pencil">again</add> the lowing of <del>cattle in distant yards</del>
+                     <add>some disconsolate cow in a distant barnyard</add>. And then the</rdg>
+               </app> bullfrogs, the sturdy spirits of ancient wine-bibbers and wassailers, still unrepentant, trying to
+               sing a catch in their Stygian lake,—<app xml:id="walc04-app-0168">
+                  <lem>if the Walden nymphs will pardon the comparison, for though there are almost no weeds, there are
+                     frogs there,</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">if the Walden nymphs will pardon the comparison for though
+                        there were almost no weeds there were frogs in the pond</add>,</rdg>
+               </app>—who would fain keep up the hilarious rules of their old festal tables, though their voices have
+               waxed hoarse and solemnly grave, mocking at mirth, and the wine has lost its flavor, and become only
+               liquor to distend their paunches, and sweet intoxication never comes to drown the memory of the past, but
+               mere saturation and waterloggedness and distention. The most aldermanic, with his chin upon a<app xml:id="walc04-app-0169">
+                  <lem>heart-leaf,</lem>
+                  <rdg wit="#wc_0a">pad</rdg>
+               </app> which serves for a napkin to his drooling chaps, under this northern shore quaffs a deep draught
+               of the once scorned water, and passes round the cup with the ejaculation <hi rend="style(italics)">tr-r-r-oonk, tr-r-r-oonk, tr-r-r-oonk!</hi> and straightway comes over the water from some distant
+               cove the same password repeated, where the next in seniority and girth has gulped down to his mark; and
+               when this observance has made the circuit of the shores, then ejaculates the master of ceremonies, with
+               satisfaction, <hi rend="style(italics)">tr-r-r-oonk!</hi> and each in his turn repeats the same down to
+               the least distended, leakiest, and flabbiest paunched, that there be no mistake; and then the bowl goes
+               round again and again, until the sun disperses the morning mist, and only the patriarch is not under the
+               pond, but vainly bellowing <hi rend="style(italics)">troonk</hi> from time to time, and pausing for a
+               reply. </p>
+            
+            <p n="22" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Sounds 22 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">4</seg>
+                     <seg type="chapterTitle">Sounds</seg>
+                     <seg type="paragraph">22</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>I am not sure that I ever heard … their
+                     native songsters</quote> does not appear in the manuscript but may have been contained on the
+                  missing leaves (#61-67) which precede.</ab>
+                  <ab change="#wc_0a #wc_0b">Sounds 22 precedes Sounds 15a.</ab>
+               </note>
+               
+               
+               <app xml:id="walc04-app-0170">
+                  <lem>I am not sure that I ever heard the sound of cock-crowing</lem>
+                  <rdg wit="#wc_0b">
+                     <del>The sound of cock crowing</del> I never heard <add rendition="pencil">the sound
+                        of cock crowing</add>
+                  </rdg>
+               </app> from my clearing, and I thought<app xml:id="walc04-app-0171">
+                  <lem>that</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">that</add>
+                  </rdg>
+               </app> it might be worth the while to keep a <app xml:id="walc04-app-0172">
+                  <lem>cockerel</lem>
+                  <rdg wit="#wc_0b">
+                     <del>rooster</del>
+                     <add rendition="pencil">cockerel</add>
+                  </rdg>
+               </app> for his music<app xml:id="walc04-app-0173">
+                  <lem>merely,</lem>
+                  <rdg wit="#wc_0b">merely, <del>and</del>
+                  </rdg>
+               </app> as a singing bird. The note of this once wild Indian pheasant is certainly the most remarkable of
+               any bird’s, and if they could be naturalized without being domesticated, it would soon become the most
+               famous sound in our woods, surpassing the clangor of the goose and the hooting of the owl; and then
+               imagine the cackling of the hens to fill the pauses when their lords’ clarions rested! No wonder that man
+               added this bird to his tame stock,—to say nothing of the eggs and drumsticks. To walk in a winter morning
+               in a wood where these birds abounded, their native woods, and hear the wild cockerels crow on the trees,
+               clear and shrill for miles over the resounding earth, drowning the feebler notes of other birds,—think of
+               it! It would put nations on the alert. Who would not be early to rise, and rise earlier and earlier<app xml:id="walc04-app-0174">
+                  <lem>every</lem>
+                  <rdg wit="#wc_0b">
+                     <del>each</del>
+                     <add rendition="pencil">every</add>
+                  </rdg>
+               </app> successive day of his life, till he became unspeakably healthy, wealthy, and wise? This foreign
+               bird’s note is <app xml:id="walc04-app-0175">
+                  <lem>celebrated by the poets of all countries along with the notes of their native songsters.</lem>
+                  <rdg wit="#wc_0b">
+                     <del>remembered and</del> celebrated by the <del>English</del> poets <add rendition="pencil"> of all countries</add> along with the <del>native sky-lark and the
+                        nightingale</del>
+                     <add rendition="pencil">notes of their native songsters</add>.<del>But this faint clarion did not
+                        penetrate my woods</del>
+                  </rdg>
+               </app>
+               <app xml:id="walc04-app-0176">
+                  <lem>All climates agree with brave Chanticleer. He is more indigenous even than the natives. His
+                     health is ever good, his lungs are sound, his spirits never flag</lem>
+                  <rdg wit="#wc_0a">
+                     <note type="general" resp="#clapper" ana="#wc_0a">The following passage begins on a
+                        leaf in B, which apparently was a fair copy of material in the missing leaves of A; the passage
+                        continues on a leaf in A</note> When I kept hens once in the village before I went to the
+                     woods, there was one white <del>rooster</del>
+                     <del>
+                        <add>cockerel</add>
+                     </del>
+                     <add>rooster</add>
+                     <add rendition="pencil">I remember in one of the broods which I reared</add> that went much by
+                     himself, a pensive stately-paced young cockerel, that still had a good deal of the pheasant in him.
+                     One night he was by chance shut out of the hen-yard, and after long reconnoitering and anxious
+                     <note type="general" subtype="inline" resp="#clapper">end of B leaf and beginning of A leaf</note> going &amp;
+                     coming—with brave thoughts exaling him—and fancies rushing thick upon him—crowing long memoriter
+                     wise of his Indian origin &amp; wild descent—he flew like a bird up into the branches of a tree,
+                     and went to roost there.—And I who had witnessed this passage in his private history immediately
+                     wrote these verses, &amp; inscribed them to him. <quote>
+                        <lg>
+                           <l>Poor bird! destined to lead thy life </l>
+                           <l>Far in the adventurous west, </l>
+                           <l>And here to be debarred to-night </l>
+                           <l>From thy accustomed nest; </l>
+                           <l>Must thou fall back upon old instinct now,— </l>
+                           <l>Well nigh extinct under man’s fickle care? </l>
+                           <l>Did Heaven bestow its quenchless inner light </l>
+                           <l>So long ago, for thy small want to-night? </l>
+                           <l>Why stand’st upon thy toes to crow so late? </l>
+                           <l>The moon is deaf to thy low feathered fate; </l>
+                           <l>Or dost thou think so to possess the night, </l>
+                           <l>And people the drear dark with thy brave sprite? </l>
+                           <l>And now with anxious eye thou look’st about, </l>
+                           <l>While the relentless shade draws on its veil, </l>
+                           <l>For some sure shelter from approaching dews, </l>
+                           <l>And the insidious steps of nightly foes. </l>
+                           <l>I fear imprisonment has dulled thy wit, </l>
+                           <l>Or ingrained servitude extinguished it. </l>
+                           <l>But no,—dim memory of the days of yore, </l>
+                           <l>By Brahmapootra &amp; the Jumna’s shore, </l>
+                           <l>Where thy proud race flew swiftly o’er the heath, </l>
+                           <l>And sought its food the jungle’s shade beneath,— </l>
+                           <l>Has taught thy wings to seek yon friendly trees, </l>
+                           <l>As erst by Indus’ banks &amp; far Ganges.</l>
+                        </lg>
+                     </quote> I am perhaps the only inhabitant of the town or of the state who does not hear the
+                     cock crow </rdg>
+                  <rdg wit="#wc_0b">
+                     <note type="general" resp="#clapper" ana="#wc_0b">The following passage begins on a
+                        leaf in B, which apparently was a fair copy of material in the missing leaves of A; the passage
+                        continues on a leaf in A</note>I <del>am</del>
+                     <add>was</add> perhaps the only inhabitant of <del>the town</del>
+                     <add rendition="pencil">Concord</add> or of the state who <del>does</del>
+                     <add>did</add> not hear the cock crow</rdg>
+               </app> Even the sailor on the Atlantic and Pacific is awakened by<app xml:id="walc04-app-0177">
+                  <lem> his voice; but its shrill sound never roused me from my slumbers. </lem>
+                  <rdg wit="#wc_0a #wc_0b">this familiar sound</rdg>
+               </app> I<app xml:id="walc04-app-0178">
+                  <lem>kept</lem>
+                  <rdg wit="#wc_0a">
+                     <del>keep</del>
+                     <add rendition="pencil">kept</add>
+                  </rdg>
+               </app> neither dog, cat, cow, pig, nor hens,<app xml:id="walc04-app-0179">
+                  <lem>so that you would have said</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">so that you would have said</add>
+                  </rdg>
+               </app> there<app xml:id="walc04-app-0180">
+                  <lem>was</lem>
+                  <rdg wit="#wc_0a">
+                     <del>is</del>
+                     <add rendition="pencil">was</add>
+                  </rdg>
+               </app> a deficiency of domestic sounds; neither the churn, nor the spinning wheel, nor even the singing
+               of the kettle, nor the hissing of the urn, nor children crying, to comfort one. An old-fashioned man
+               would have lost his senses<app xml:id="walc04-app-0181">
+                  <lem>or</lem>
+                  <rdg wit="#wc_0a">and </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>and</del>
+                     <add>or</add>
+                  </rdg>
+               </app> died of ennui<app xml:id="walc04-app-0182">
+                  <lem>before this.</lem>
+                  <rdg wit="#wc_0a">
+                     <add>before this.</add>
+                  </rdg>
+               </app> Not even rats in the wall, for they were starved out,<app xml:id="walc04-app-0183">
+                  <lem>or rather were never baited in,</lem>
+                  <rdg wit="#wc_0a #wc_0b">but</rdg>
+               </app> —only squirrels on the roof and under the floor, a whippoorwill on the ridge pole, a blue-jay screaming<app xml:id="walc04-app-0184">
+                  <lem>beneath the window,</lem>
+                  <rdg wit="#wc_0a">in the yard</rdg>
+               </app> a hare or woodchuck under the house, a screech-owl or a cat-owl behind it, a flock of wild geese
+               or a laughing loon<app xml:id="walc04-app-0185">
+                  <lem>on</lem>
+                  <rdg wit="#wc_0a">in </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>in</del>
+                     <add rendition="pencil">on</add>
+                  </rdg>
+               </app> the pond,<app xml:id="walc04-app-0186">
+                  <lem>and </lem>
+                  <rdg wit="#wc_0a">
+                     <add>and</add>
+                  </rdg>
+               </app> a fox to bark in the night.<app xml:id="walc04-app-0187">
+                  <lem>Not</lem>
+                  <rdg wit="#wc_0a">
+                     <del>But</del> not</rdg>
+               </app> even a lark or an oriole, those mild plantation birds, ever<app xml:id="walc04-app-0188">
+                  <lem>visited</lem>
+                  <rdg wit="#wc_0a">
+                     <del>visit</del>
+                     <add>visited</add>
+                  </rdg>
+               </app> my clearing. No cockerels to crow nor hens to cackle in the yard. No yard! but unfenced Nature
+               reaching up to your very sills. A young forest growing up under your windows, and wild sumachs and
+               blackberry vines breaking through into your cellar; sturdy pitch-pines rubbing and creaking against the
+               shingles for want of room, their roots reaching quite under the house. Instead of a scuttle or a blind
+               blown off in the gale,—a pine tree snapped off or torn up by the roots behind your house for fuel.
+               Instead of no path to the front-yard gate in the Great Snow,—no gate,—no front-yard,—and no path to the
+               civilized world!</p>
+         </div>
+      </body>
+   </text>
+</TEI>

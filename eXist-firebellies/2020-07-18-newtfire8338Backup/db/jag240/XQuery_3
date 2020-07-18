@@ -1,0 +1,17 @@
+xquery version "3.1";
+
+<html>
+    <head><title>Pokemon names</title></head>
+    <body>
+        {
+            (: I was attempting to split  :)
+            let $pokemon := collection('/db/pokemonMap/pokemon')
+
+            for $p in $pokemon
+            let $pokeNames := $p//name/string()
+            let $loc := $p//locations
+            return concat($pokeNames,': ', $loc)
+        }
+        </body>
+        </html>
+        

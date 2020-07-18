@@ -1,0 +1,39 @@
+xquery version "3.0";
+declare default element namespace "http://www.w3.org/2000/svg"; 
+declare namespace tei="http://www.tei-c.org/ns/1.0"; 
+declare namespace htm="http://www.w3.org/1999/xhtml";
+
+declare variable $collection := collection ('/db/hamilton/Updated_Directory');
+declare variable $files := $collection/*;
+declare variable $letDatesWhen := $files//tei:back/tei:listEvent/tei:event/@when/tokenize(string(), '-')[1];
+declare variable $letDatesFrom := $files//tei:back/tei:listEvent/tei:event/@from/tokenize(string(), '-')[1];
+declare variable $letDatesTo := $files//tei:back/tei:listEvent/tei:event/@to/tokenize(string(), '-')[1];
+declare variable $maxYear := xs:integer(1855);
+declare variable $minYear := xs:integer(1755);
+declare variable $yearSpan := xs:integer($maxYear) - xs:integer($minYear);
+declare variable $totalDays := $yearSpan * 365;
+declare variable $label := $files//tei:back/tei:listEvent/tei:event/distinct-values(tei:label);
+declare variable $head := $files//tei:back/tei:listEvent/distinct-values(tei:head);
+declare variable $description := $files//tei:back/tei:listEvent/tei:event/distinct-values(tei:desc);
+
+declare variable $thisFile :=
+
+<htm:html>
+<htm:head>
+<htm:title>Timeline of "Hamilton: An American Musical"</htm:title>
+</htm:head>
+<htm:body>
+<htm:div class="svg">
+    <svg width="3000" height="1000" viewBox="0 0 7000 2000">
+        <g transform="translate(30, 100)">
+           <rect x="0" y="0 rect> 
+        </g>
+    </svg>
+</htm:div>
+</htm:body>
+</htm:html>
+;
+
+let $return := $description
+
+return $return

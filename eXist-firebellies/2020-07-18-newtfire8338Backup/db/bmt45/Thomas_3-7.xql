@@ -1,0 +1,27 @@
+xquery version "3.1";
+<html>
+    <head><title>References in Location Elements</title></head>
+    <body>
+        <h1>Reference in Location Table</h1>
+        <table>
+            <tr><th>location</th><th>Reference</th></tr>
+{
+let $u := collection('/db//bmt45//Ulysses')//ulysses
+let $location := $u/location/@name
+let $name := $location ! upper-case(.) ! normalize-space() => distinct-values()
+for $l in $name
+let $ref := $u//reference/@to  
+let $refMatch := $ref[following-sibling::location/@name ! lower-case(.)[contains(., $l)]]
+let $distRef := $refMatch => distinct-values()
+return 
+
+     <tr>
+     <td>{$l}</td>
+     <td>{string-join($ref, ' ')}</td>
+     </tr>
+}
+</table>
+</body>
+</html>
+
+

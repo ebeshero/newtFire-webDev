@@ -1,0 +1,34 @@
+xquery version "3.1";
+declare default element namespace "??"; 
+declare variable $ThisFileContent := 
+
+  string-join( 
+let $script := doc('/db/drl43/lint_rick_and_morty_networking_script_file.xml')/*
+let $character := $script//speech[@character]
+let $distinctCs := distinct-values(speech[@character])
+for $edc in $distinctCs
+let $peers:= 
+    if ($character[. = $edc]/ancestor::convo) 
+        then distinct-values($character[. = $edc]/ancestor::convo//speech[@character][not(. = $edc)])
+   else if ($character[. = $edc]/ancestor::scene) 
+        then distinct-values($character[. = $edc]/ancestor::scene//speech[@character][not(. = $edc)])
+    else distinct-values($character[. = $edc]/ancestor::script//speech[@character][not(. = $edc)])
+
+let $edgeType:=
+    if ($character[. = $edc]/ancestor::convo) 
+        then "convo"
+    else if ($character[. = $edc]/ancestor::scene) 
+        then "scene"
+    else "script"
+
+
+for $peer in $peers
+return
+   
+ concat($edc, "&#x9;", (: tab character :) $edgeType, "&#x9;", (: $edgeWeight, "&#x9;", :) $peer), " &#10;" (:hard return character :));
+ 
+ let $filename := "rNmOutput.tsv"
+let $doc-db-uri := xmldb:store("/db/drl43/", $filename, $ThisFileContent, "text/plain")
+return $doc-db-uri
+
+

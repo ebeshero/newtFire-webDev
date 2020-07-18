@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+    <index xmlns:tei="http://www.tei-c.org/ns/1.0">
+        <fulltext default="none" attributes="false"/>
+        <!-- Lucene index is configured below -->
+        <!-- Documentation for creating .xconf "https://exist-db.org/exist/apps/doc/lucene" -->
+        <!-- FACETS will allow for refining of search/query "https://exist-db.org/exist/apps/doc/lucene#facets-and-fields" -->
+        <lucene>
+            <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+            <analyzer id="ws" class="org.apache.lucene.analysis.WhitespaceAnalyzer"/>
+            <text qname="tei:body"/>
+            <text qname="tei:div">
+                <inline qname="tei:hi"/>
+                <ignore qname="tei:teiHeader"/>
+                <ignore qname="tei:anchor"/>
+                <ignore qname="tei:lb"/>
+                <ignore qname="tei:space"/>
+                <ignore qname="tei:figure"/>
+                <ignore qname="tei:graphic"/>
+                <ignore qname="tei:desc"/>
+                <ignore qname="tei:w"/>
+                <ignore qname="tei:span"/>
+                <ignore qname="tei:unclear"/>
+            </text>
+            <text qname="tei:p">
+                <inline qname="tei:hi"/>
+                <ignore qname="tei:teiHeader"/>
+                <ignore qname="tei:anchor"/>
+                <ignore qname="tei:lb"/>
+                <ignore qname="tei:space"/>
+                <ignore qname="tei:figure"/>
+                <ignore qname="tei:graphic"/>
+                <ignore qname="tei:desc"/>
+                <ignore qname="tei:w"/>
+                <ignore qname="tei:span"/>
+                <ignore qname="tei:unclear"/>
+            </text>
+            <text qname="tei:l"/>
+            <text qname="tei:add"/>
+            <text qname="tei:quote"/>
+            <text qname="tei:note"/>
+            <text qname="tei:head"/>
+            <text qname="tei:item"/>
+            <text qname="tei:del"/>
+            <text qname="tei:ab"/>
+            <text qname="tei:seg"/>
+            <text qname="tei:lem"/>
+            <text qname="tei:rdg"/>
+            <text qname="tei:hi"/>
+            <text qname="tei:cell"/>
+            <text qname="tei:sic"/>
+            <text qname="tei:byline"/>
+            <text qname="tei:phr"/>
+            <text qname="tei:name"/>
+            <text qname="tei:placeName"/>
+            <inline qname="tei:hi"/>
+            <ignore qname="tei:teiHeader"/>
+            <ignore qname="tei:anchor"/>
+            <ignore qname="tei:lb"/>
+            <ignore qname="tei:space"/>
+            <ignore qname="tei:figure"/>
+            <ignore qname="tei:graphic"/>
+            <ignore qname="tei:desc"/>
+            <ignore qname="tei:w"/>
+            <ignore qname="tei:span"/>
+            <ignore qname="tei:unclear"/>
+        </lucene>
+    </index>
+</collection>

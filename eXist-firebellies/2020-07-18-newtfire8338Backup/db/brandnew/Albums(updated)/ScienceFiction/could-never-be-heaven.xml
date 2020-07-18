@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../Schema/songSchema.rnc" type="application/relax-ng-compact-syntax"?><xml>
+    <info>
+        <title ref="#6-CNBH-4">Could Never Be Heaven</title>
+        <album ref="#6-SF">Science Fiction</album>
+        <track n="4"/>
+        <tempo bpm="92"/>
+        <key>C#m</key> <!--bb: C sharp minor -->
+        <songWriter>
+            <li n="1">Brand New</li>
+        </songWriter>
+        <composer/>
+        <songLength>00:03:16</songLength>
+    </info>
+    <song>
+        <intro bpm="92" bars="4"/>
+        <verse n="1" bpm="68" bars="8">
+            <line n="1">Do you know the words that make the hidden door open?</line>
+            <line n="2">Can you speak my secret name and fix me?</line>
+            <line n="3">I have no heart, I have no brain</line>
+            <line n="4"><refer img="rel">Lord</refer> I have no courage</line>
+            <line n="5">Can you get me home again?</line>
+        </verse>
+
+        <chorus n="1" bpm="92" bars="4">
+            <line n="6"><refer type="songTitle">Could never be <refer img="rel">heaven</refer></refer> without you</line>
+            <line n="7"><refer type="songTitle">&gt;Could never be <refer img="rel">heaven</refer></refer> without you</line>
+            <line n="8">Never be <refer img="rel">heaven</refer> without you</line>
+        </chorus>
+
+        <verse n="2" bpm="92" bars="10">
+            <line n="9">I was <refer img="death"><refer img="death">drowning</refer></refer> in the <refer img="water">lake</refer>, <refer img="rel">damned</refer></line>
+            <line n="10">Over a <refer img="death">dead</refer> mining town</line>
+            <line n="11">The <refer img="car">cars</refer> and the homes lay still in the <refer img="water">water</refer></line>
+            <line n="12">The deeper I sank, the less I <refer img="death">died</refer></line>
+            <line n="13">The <refer img="trees">trees</refer> swayed, slow in the <refer img="water">tide</refer></line>
+            <line n="14">There were people I love below me singing</line>
+        </verse>
+
+        <chorus n="2" bpm="92" bars="4">
+            <line n="15">And all of the songs were about you</line>
+            <line n="16">And all of the songs were about you</line>
+            <line n="17">And all of the songs were about you</line>
+        </chorus>
+
+        <bridge n="3" bpm="92" bars="12">
+            <line n="18">The <refer img="animal">whale</refer> is well-rehearsed</line>
+            <line n="19"><refer img="water">Swimming</refer> circles in the <refer img="rel">church</refer></line>
+            <line n="20">A <refer img="animal">Cardinalfish</refer> says, "<refer img="rel">God</refer> is <refer img="death">dead</refer>"</line>
+            <line n="21">The <refer img="animal">whale</refer> says, "Get out of my head</line>
+            <line n="22">Get out of my head</line>
+            <line n="23">Get out of my head"</line>
+        </bridge>
+        <verse n="4" bpm="92" bars="8">
+            <line n="24">You are not alone</line>
+            <line n="25">We are not separate</line>
+            <line n="26">My daughter's shoulders are my shoulders</line>
+            <line n="27">My son's hands my hands</line>
+            <line n="28">My wife's heart my own heart</line>
+            <line n="29">I've heard the <refer img="rel">outer darkness</refer> is really nice <refer img="time">this time of year</refer></line>
+        </verse>
+
+        <chorus n="4" bpm="92" bars="10">
+            <line n="30"><refer type="songTitle">Could never be <refer img="rel">heaven</refer></refer> without you</line>
+            <line n="31">Never be <refer img="rel">heaven</refer> without you</line>
+            <line n="32">Never be <refer img="rel">heaven</refer> without</line>
+            <line n="33"><refer type="songTitle">Could never be <refer img="rel">heaven</refer></refer> without you</line>
+            <line n="34">Never be <refer img="rel">heaven</refer> without you</line>
+            <line n="35">Never be <refer img="rel">heaven</refer> without you</line>
+        </chorus>
+        
+        <outro bars="9">
+        <!--bb: sampled spoken audio-->
+        <line n="36" voice="sampledAudio">"You've got so many things that you do believe you've been conditioned to
+            believe in..."</line>
+        <line n="37" voice="sampledAudio"> </line>
+        <line n="38" voice="sampledAudio">"Mmhmm."</line>
+        <line n="39" voice="sampledAudio"> </line>
+        <line n="40" voice="sampledAudio">"And then if you try and break away from your conditioning and try and be sort
+            of individual and, in least <refer img="time">in our day and age</refer> right now, you start to think, 'Well, am
+            I really doing this because I really want to be different? Am I doing it because there's
+            such an emphasis placed to...'"</line>
+        <line n="41" voice="sampledAudio">"I miss you."</line>
+        <line n="42" voice="sampledAudio">"You don't know how to break through this contradictory mess... and really find
+            your own... authentic individuality."</line>
+        </outro>
+    </song>
+</xml>

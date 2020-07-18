@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Dear Theodosia"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Dear Theodosia</title>
+            </head>
+            <div type="song">
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Dear <persName ref="#theodosiaDaughter">Theodosia</persName>, what to say to
+                        you?</l>
+                    <l>You have my eyes. <seg type="#fact">You have your mother’s name</seg></l>
+                    <l>When you came into the world, you cried and it broke my heart</l>
+                    <l>I’m dedicating every day to you</l>
+                    <l>Domestic life was never quite my style</l>
+                    <l>When you smile, you knock me out, I fall apart</l>
+                    <l>And I thought I was so smart</l>
+                    <l>You will come of age with our young nation</l>
+                    <l>We’ll bleed and fight for you, we’ll make it right for you</l>
+                    <l>If we lay a strong enough foundation</l>
+                    <l>We’ll pass it on to you, we’ll give the world to you</l>
+                    <l>And you’ll blow us all away…</l>
+                    <l>Someday, someday</l>
+                    <l>Yeah, you’ll blow us all away</l>
+                    <l>Someday, someday</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Oh <persName ref="#philipH">Philip</persName>, when you smile I am undone</l>
+                    <l><seg type="#fact">My son</seg></l>
+                    <l>Look at my son. Pride is not the word I’m looking for</l>
+                    <l>There is so much more inside me now</l>
+                    <l>Oh <persName ref="#philipH">Philip</persName>, you outshine the morning
+                        sun</l>
+                    <l>My son</l>
+                    <l>When you smile, I fall apart</l>
+                    <l>And I thought I was so smart</l>
+                    <l>My father wasn’t around</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>My father wasn’t around</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I swear that</l>
+                </sp>
+
+                <sp who="#hamilton #burr">
+                    <speaker>HAMILTON/BURR</speaker>
+                    <l>I’ll be around for you.</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>I’ll do whatever it takes</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>I’ll make a million mistakes</l>
+                </sp>
+
+                <sp who="#hamilton #burr">
+                    <speaker>BURR/HAMILTON</speaker>
+                    <l>I’ll make the world safe and sound for you…</l>
+                    <l>…will come of age with our young nation</l>
+                    <l>We’ll bleed and fight for you, we’ll make it right for you</l>
+                    <l>If we lay a strong enough foundation</l>
+                    <l>We’ll pass it on to you, we’ll give the world to you</l>
+                    <l>And you’ll blow us all away...</l>
+                    <l>Someday, someday</l>
+                    <l>Yeah, you’ll blow us all away</l>
+                    <l>Someday, someday</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Dear Theodosia</head>
+                <event xml:id="event36" when="1782-01-22"> <label>Birth of Philip</label><desc>Alexander Hamilton's son, Philip, was born.</desc></event>
+                <event xml:id="event37" when="1783-06-21"> <label>Birth of Theodosia</label><desc>Aaron Burr's daughter, Theodosia, was born.</desc></event>
+            </listEvent>
+        </back>
+    </text>
+</TEI>

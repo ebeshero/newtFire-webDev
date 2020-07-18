@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Title Page</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
+                     Unported License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY Geneseo using Text Encoding
+               Initiative (TEI) P5 XML Schema, using the Parallel Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and includes critical apparatus
+            laid out by Ronald Clapper, and annotations provided by Ronald Clapper, J. Lyndon Shanley, and Walter
+            Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised edition of dissertation
+            originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc00">
+      <body>
+         <div>
+            <!--Title Page written: G-->
+            <l>Walden, or Life In the Woods, By Henry D. Thoreau;</l>
+            <l>Author of "A Week on the Concord &amp; Merrimack Rivers"</l>
+            <p change="#wc_0g">
+               <add>I do not propose to write an ode to dejection, but to brag as lustily as chanticleer in the morning,
+                  standing on his roost, if only to wake my neighbors up.</add>
+            </p>
+            <figure>
+               <graphic url="#">
+                  <desc>[sketch of a rooster]</desc>
+               </graphic>
+            </figure>
+            <p change="#wc_0g">
+               <quote>“The clouds, wind, moon, sun, and sky, act in cooperation, that thou mayest get thy daily bread,
+                  and not eat it with indifference; all revolve for they sake, and are obedient to command; it must be
+                  an equitable condition, that thou shalt be obedient also.”</quote> —Sadi</p>
+            <note type="general" resp="#clapper" ana="#wc_0a">
+               <quote>“Where I have been / There was none seen”</quote>
+               is interlined in pencil and <quote>“Walden or Life in the Woods by Henry Thoreau. Addressed to my
+                  Townsmen”</quote> is interlined in ink at the top of the first page of the manuscript.</note>
+            <note type="general" resp="#clapper" ana="#wc_0c">The quotation from Sadi (above) is written in the margin
+               and “Walden, or Life in the Woods. Addressed to my Townsmen. By Henry D. Thoreau” is written at the top
+               of the first leaf in the manuscript.</note>
+         </div>
+         <div>
+            <!--Contents & Note written: G-->
+            <head>Contents</head>
+            <list>
+               <item>Economy</item>
+               <item>Where I Lived, and What I Lived for</item>
+               <item>Reading</item>
+               <item>Sounds</item>
+               <item>Solitude</item>
+               <item>
+                  <del>Preface</del>
+                  <add rendition="pencil">Note</add>
+               </item>
+               <item>Visitors</item>
+               <item>
+                  <del>Nearly all of this volume was written eight or nine years ago in the scenery &amp; under the
+                     circumstances which it describes, and a considerable part was <add rendition="pencil">then</add>
+                     read at that time <del>as … lectures</del> before the Concord Lyceum. In what is now added
+                     the object has been chiefly to make it a completer &amp; truer account of <del>that portion
+                        of</del> the author’s life.</del>
+               </item>
+               <item>
+                  <del>Beans</del>
+                  <add rendition="pencil">The Bean-Field</add>
+               </item>
+               <item>The Village</item>
+               <item>The Ponds</item>
+               <item>Baker Farm</item>
+               <item>
+                  <del>Animal Food</del>
+                  <add rendition="pencil">Higher Laws</add>
+               </item>
+               <item>
+                  <del>Animals</del>
+                  <add rendition="pencil">Brute Neighbors</add>
+               </item>
+               <item>House-warming </item>
+               <item>Winter Animals <add type="transposition" rendition="pencil">Former Inhabitants, &amp; Winter
+                     Visitors</add>
+               </item>
+               <item>Former Inhabitants, &amp; Winter Visitors</item>
+               <item>The Pond in Winter</item>
+               <item>Spring</item>
+               <item>Conclusion</item>
+            </list>
+         </div>
+      </body>
+   </text>
+</TEI>

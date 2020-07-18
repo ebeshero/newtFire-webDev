@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><pokemon>
+    
+    <info>
+        <dexNum num="025">025</dexNum>
+        <name>Pikachu</name>
+        <typing type="Electric"> electric</typing>
+    </info>
+    
+    <locations>
+        <landmark n="Viridian Forest">Viridian Forest<lvl min="3" max="5"> level 3-5</lvl><rate perc="5"> encounter rate: 5%</rate></landmark>
+        <landmark n="Power Plant">Power Plant<lvl min="20" max="24"> level 20-24</lvl><rate perc="25"> encounter rate: 25%</rate></landmark>
+    </locations>
+    
+</pokemon>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../Schema/songSchema.rnc" type="application/relax-ng-compact-syntax"?><xml>
+    <info>
+        <title ref="#6-LMU-1">Lit Me Up</title>
+        <album ref="#6-SF">Science Fiction</album>
+        <track n="1"/>
+        <tempo bpm="55"/>
+        <key>Abm</key> <!--bb: A flat minor -->
+        <songWriter>
+            <li n="1">Brand New</li>
+        </songWriter>
+        <composer/>
+        <songLength>00:06:17</songLength>
+    </info>
+    <song>
+    <intro bars="48">
+        <line n="1" voice="sampledAudio">This tape recounts a dream which occurred close to the termination of
+            approximately 400 hours of intensive, individual therapy. Now, the patient recounts her
+            dream:</line>
+        <line n="2" voice="sampledAudio">I had this dream earlier this morning and I wrote it down. The dream is that I'm
+            in some sort of a... and I'm in a hotel I'm at... I'm like at a convention or something.
+            And I feel sort of almost like there's too much going on. There are all different kinds
+            of meetings going on. Stuff on experimental psych and therapy, chemical aspects. All of
+            it</line>
+        <line n="3" voice="sampledAudio">But, I'm... while I don't mind having all this going on inside of me. It's sort
+            of... I think I'm going to be relieved when it's over. When I can sort of settle back
+            down</line>
+    </intro>
+    <instrumental n="1" bpm="55" bars="16"/>
+        <!--bb: Instrumental -->
+        
+    <verse n="1" bpm="55" bars="16">       
+        <line n="4">It's where you live, but you don't know how it's built</line>
+        <line n="5"><refer img="rel">If we're just dust</refer>, then it doesn't matter who you <refer img="death">kill</refer></line>
+        <line n="6">Don't cut me up and tell me that it's ok</line>
+        <line n="7">Just turn it off 'cause I don't care anyway</line></verse>
+        
+    <preChorus n="1" bpm="55" bars="10">
+        <line n="8">It <refer type="songTitle">lit me up</refer></line>
+        <line n="9">It <refer type="songTitle">lit me up</refer></line>
+        <line n="10">It <refer type="songTitle">lit me up</refer></line>
+        <line n="11">It <refer type="songTitle">lit me up</refer></line>
+    </preChorus>
+    <verse n="2" bpm="55" bars="16">
+        <line n="12">Something's stirring in a deep <refer img="water">Atlantic</refer> trench</line>
+        <line n="13">Doesn't forget the <refer img="time">thousand years</refer> before it <refer img="bed">slept</refer></line>
+        <line n="14">It's <refer img="rel">the beast</refer>, it's my heart, it's open</line>
+        <line n="15">Dive down into its unit in its head</line>
+    </verse>
+    <preChorus n="2" bpm="55" bars="10">
+        <line n="16">It <refer type="songTitle">lit me up</refer></line>
+        <line n="17">It <refer type="songTitle">lit me up</refer></line>
+        <line n="18">It <refer type="songTitle">lit me up</refer></line>
+        <line n="19">It <refer type="songTitle">lit me up</refer></line>
+    </preChorus>
+    <chorus n="1" bpm="55" bars="16">
+        <line n="20">It <refer type="songTitle">lit me up</refer> like a <refer img="fire">torch</refer> on a <refer type="idiom">pitch black</refer> <refer img="time">night</refer></line>
+        <line n="21">Like an <refer img="fire">ember</refer> in the <refer img="trees">needles of a dried out pine</refer></line>
+        <line n="22">Lit me up and I <refer img="fire">burn</refer> from the inside out</line>
+        <line n="23">Yeah, I <refer img="fire">burn</refer> like a <refer type="socRefer">witch in a <refer img="rel">Puritan</refer> town</refer></line>
+        <line n="24">It lit me</line>
+        <line n="25">It lit me</line>
+    </chorus>
+        <verse n="4" bpm="55" bars="18">
+        <line n="26">When I grow up I want to be a <refer img="rel">heretic</refer></line>
+        <line n="27">I want to climb over the wall 'cause I'm not on <refer img="rel">the list</refer></line>
+        <line n="28">I want to put my hands to work till the work's done</line>
+        <line n="29">I want to open up my heart like the <refer img="water">ocean</refer></line>
+    </verse>
+    <preChorus n="3" bpm="55" bars="10">
+        <line n="30">It <refer type="songTitle">lit me up</refer></line>
+        <line n="31">It <refer type="songTitle">lit me up</refer></line>
+        <line n="32">It <refer type="songTitle">lit me up</refer></line>
+        <line n="33">It <refer type="songTitle">lit me up</refer></line>
+    </preChorus>
+    <chorus n="2" bpm="55" bars="16">
+        <line n="34">It <refer type="songTitle"><refer img="fire">lit me up</refer> like a rag soaked in gasoline</refer></line>
+        <line n="35">In the neck of the bottle breaking right at my feet</line>
+        <line n="36">It <refer type="songTitle">lit me up</refer> and I burned from the inside out</line>
+        <line n="37">Yeah, <refer type="socRefer"><refer type="simlie">I burned like a witch</refer> in a <refer img="rel">Puritan</refer> town</refer></line>
+        <line n="38">It lit me</line>
+        <line n="39">It was a good dream</line>
+    </chorus>
+    <outro bpm="55" bars="12">
+        <line n="40" voice="reverse">If so...you will be <refer img="death">dead</refer> <refer img="time">tonight</refer></line>
+    </outro>
+    </song>
+</xml>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><pokemon>
+    
+    <info>
+        <dexNum num="016">016</dexNum>
+        <name>Pidgey</name>
+        <typing type="Normal Flying">Normal Flying</typing>
+    </info>
+    
+    <locations>
+        <route num="1">Route 1<lvl min="2" max="5"> level 2-5</lvl><rate perc="55"> encounter rate: 55%</rate></route>
+        <route num="2">Route 2<lvl min="3" max="7"> level 3-7</lvl><rate perc="40"> encounter rate: 40%</rate></route>
+        <route num="3">Route 3<lvl min="6" max="8"> level 6-8</lvl><rate perc="50"> encounter rate: 50%</rate></route>
+        <route num="5">Route 5<lvl min="13" max="16"> level 13-16</lvl><rate perc="35"> encounter rate: 35%</rate></route>
+        <route num="6">Route 6<lvl min="13" max="16"> level 13-16</lvl><rate perc="40"> encounter rate: 40%</rate></route>
+        <route num="7">Route 7<lvl min="19" max="22"> level 19-22</lvl><rate perc="35"> encounter rate: 35%</rate></route>
+        <route num="8">Route 8<lvl min="18" max="22"> level 18-22</lvl><rate perc="35"> encounter rate: 35%</rate></route>
+        <route num="12">Route 12<lvl min="23" max="27"> level 23-27</lvl><rate perc="35"> encounter rate: 35%</rate></route>
+        <route num="13">Route 13<lvl min="25" max="27"> level 25-27</lvl><rate perc="30"> encounter rate: 30%</rate></route>
+        <route num="14">Route 14<lvl min="26" max="30"> level 26-30</lvl><rate perc="15"> encounter rate: 15%</rate></route>
+        <route num="15">Route 15<lvl min="23" max="23"> level 23</lvl><rate perc="15"> encounter rate: 15%</rate></route>
+        <route num="21">Route 21<lvl min="21" max="23"> level 21-23</lvl><rate perc="25"> encounter rate: 25%</rate></route>
+        <route num="24">Route 24<lvl min="12" max="17"> level 12-17</lvl><rate perc="29"> encounter rate: 29%</rate></route>
+        <route num="25">Route 25<lvl min="13" max="17"> level 13-17</lvl><rate perc="29"> encounter rate: 29%</rate></route>
+
+    </locations>
+    
+</pokemon>

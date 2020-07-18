@@ -1,0 +1,2335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Where I Lived, and What I Lived For</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</p>
+               </licence>
+            </availability>          
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY Geneseo using Text Encoding
+            Initiative (TEI) P5 XML Schema, using the Parallel Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and includes critical apparatus
+               laid out by Ronald Clapper, and annotations provided by Ronald Clapper, J. Lyndon Shanley, and Walter
+               Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised edition of dissertation
+               originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc02">
+      <body>
+         <div>
+            <head>Where I Lived, and What I Lived For</head>
+            
+            <p n="1" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 1 written: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">D</seg>
+                  </ab>
+                  <ab>No chapter title appears in the manuscript apart
+                  from the table of contents.</ab>
+                  <ab change="#wc_0a">The leaves that follow “Economy” are numbered from 1 to
+                  235 in the upper right hand corner of the recto of each odd-numbered leaf.</ab>
+                  <ab change="#wc_0b #wc_0c">The combined leaves of B and C that follow
+                  “Economy” are numbered from 1 to 129 in the upper right hand corner of the recto of each odd-numbered
+                  leaf. Several unnumbered leaves were deleted before the pages were numbered. A few leaves from A were
+                  not recopied but inserted among the leaves of B-C and renumbered to fit the new sequence. A few leaves
+                  from the early stages of D were also numbered to fit this sequence.</ab>
+               </note>
+               
+               
+               AT <app xml:id="walc02-app-0001">
+                  <lem>a certain season</lem>
+                  <rdg wit="#wc_0d">
+                     <del>some seasons</del>
+                     <add>a certain season</add>
+                  </rdg>
+               </app> of our life we are accustomed to consider every spot as the possible site of a house.<anchor type="hn" xml:id="hn-02-001"/> I have thus
+               surveyed the country on every side within a dozen miles of where I live. <app xml:id="walc02-app-0002">
+                  <lem>In imagination</lem>
+                  <rdg wit="#wc_0d">
+                     <add>In imagination</add>
+                  </rdg>
+               </app> I have bought all the farms in succession, for all were to be bought, and I knew their price. I walked<app xml:id="walc02-app-0003">
+                  <lem>over</lem>
+                  <rdg wit="#wc_0d">
+                     <del>round</del>
+                     <add rendition="pencil">over</add>
+                  </rdg>
+               </app> each farmer’s premises,<anchor type="hn" xml:id="hn-02-002"/> tasted his wild apples, discoursed on husbandry<app xml:id="walc02-app-0004">
+                  <lem>with him,</lem>
+                  <rdg wit="#wc_0d">
+                     <add>with him</add>,</rdg>
+               </app> took his farm at his price, at any price, mortgaging it to him in my mind; even put a higher price
+               on it,—took every thing but a deed of it,—took his word for his deed, for I dearly love to
+               talk,—cultivated it, and him too<app xml:id="walc02-app-0005">
+                  <lem>to some extent,</lem>
+                  <rdg wit="#wc_0d">
+                     <del>in some measure</del>
+                     <add>to some extent</add>,</rdg>
+               </app> I trust, and withdrew when I had enjoyed it long enough,<app xml:id="walc02-app-0006">
+                  <lem>leaving</lem>
+                  <rdg wit="#wc_0d">leaving <del>it to</del>
+                  </rdg>
+               </app> him to carry it on. This experience entitled me to be regarded as a sort of real-estate broker<app xml:id="walc02-app-0007">
+                  <lem>by</lem>
+                  <rdg wit="#wc_0d">
+                     <del>among</del>
+                     <add>by</add>
+                  </rdg>
+               </app> my friends. Wherever I sat, there I might live, <app xml:id="walc02-app-0008">
+                  <lem>and the landscape radiated from me accordingly. What is a house but a <hi rend="style(italics)">sedes</hi>, a seat?—better if a country seat.</lem>
+                  <rdg wit="#wc_0d">
+                     <add>and the landscape radiated from me accordingly</add>—what is a house but a <hi rend="style(underline)">sedes</hi>, a seat?—better if a country seat.<del>—and the landscape
+                        radiated from me accordingly</del>
+                  </rdg>
+               </app> I discovered many a site for a house<app xml:id="walc02-app-0009">
+                  <lem>not likely to be soon improved,</lem>
+                  <rdg wit="#wc_0d">
+                     <add>not likely to be soon improved,</add> not likely <del>soon</del> to be
+                        <add>soon</add> improved</rdg>
+               </app> which some might have thought too far from the village, but to my eyes the village<app xml:id="walc02-app-0010">
+                  <lem>was</lem>
+                  <rdg wit="#wc_0d">
+                     <del>seemed</del>
+                     <del>
+                        <add>appeared</add>
+                     </del>
+                     <add>was</add>
+                  </rdg>
+               </app> too far from it. Well, there I might live, I said; and there I did live, for an hour, a summer and
+               a winter life;<app xml:id="walc02-app-0011">
+                  <lem>saw</lem>
+                  <rdg wit="#wc_0d">
+                     <del>&amp; I</del> saw</rdg>
+               </app> how I could let the years run off, buffet the winter through, and see the spring come in. The
+               future inhabitants of<app xml:id="walc02-app-0012">
+                  <lem>this region,</lem>
+                  <rdg wit="#wc_0d">
+                     <del>these regions,</del>
+                     <add rendition="pencil">this region</add>
+                  </rdg>
+               </app> wherever they may place their houses, may be sure that they have been anticipated. An afternoon
+               sufficed to lay out the land<app xml:id="walc02-app-0013">
+                  <lem>into</lem>
+                  <rdg wit="#wc_0d">
+                     <del>in</del>
+                     <add rendition="pencil">into</add>
+                  </rdg>
+               </app> orchard woodlot and pasture, and to decide what fine oaks or pines should be left to stand before
+               the door, and whence each<app xml:id="walc02-app-0014">
+                  <lem>blasted</lem>
+                  <rdg wit="#wc_0d">
+                     <del>rotten</del>
+                     <add>blasted</add>
+                  </rdg>
+               </app> tree<anchor type="hn" xml:id="hn-02-003"/> could be seen to the best advantage;
+               and then I let it lie, fallow perchance, for a man is rich in proportion to the number of things which he
+               can afford to let alone.<anchor type="hn" xml:id="hn-02-004"/>
+            </p>
+            
+            <p n="2" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 2 written: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">2</seg>
+                     <seg type="written">D</seg>
+                  </ab>
+               </note>My imagination carried me so far that I even had the refusal of several farms,—the
+               refusal was all I wanted,—but I never got my fingers burned by actual possession. The nearest that I came
+               to actual possession was when I bought the Hollowell <app xml:id="walc02-app-0015">
+                  <lem>Place,<anchor type="hn" xml:id="hn-02-005"/>
+                  </lem>
+                  <rdg wit="#wc_0d">
+                     <del>farm</del>
+                     <add rendition="pencil">Place</add>,</rdg>
+               </app> and had begun to sort my seeds, and collected materials with which to make a wheelbarrow to carry
+               it on or off with; but before the owner gave me a deed of it, his wife—every man has such a wife—changed
+               her mind and wished to keep it, and he offered me ten dollars to release him. Now, to<app xml:id="walc02-app-0016">
+                  <lem>speak</lem>
+                  <rdg wit="#wc_0d">
+                     <del>tell</del>
+                     <add>speak</add>
+                  </rdg>
+               </app> the truth, I had<app xml:id="walc02-app-0017">
+                  <lem>but</lem>
+                  <rdg wit="#wc_0d">
+                     <del>not</del>
+                     <add>but</add>
+                  </rdg>
+               </app> ten cents in the world, and it surpassed my arithmetic to tell, if I was that man who had ten
+               cents, or<app xml:id="walc02-app-0018">
+                  <lem>who had a farm, or</lem>
+                  <rdg wit="#wc_0d">
+                     <add>who had</add> a farm, or <del>who had</del>
+                  </rdg>
+               </app> ten dollars, or all together. However, I let him keep the ten dollars and the farm too, <app xml:id="walc02-app-0019">
+                  <lem>for I had carried it far enough;</lem>
+                  <rdg wit="#wc_0d">
+                     <add>for I had carried it far enough</add>;</rdg>
+               </app> or rather, to be generous, I sold him the farm for just what I gave for it, and, <app xml:id="walc02-app-0020">
+                  <lem>not a rich man,</lem>
+                  <rdg wit="#wc_0d">a poor man,</rdg>
+               </app> made him a present of ten dollars, and still had my ten cents, and seeds, and materials for a
+               wheelbarrow left. I found thus that I had been a rich man without any damage to my poverty. But I
+               retained the landscape, and I have since annually<app xml:id="walc02-app-0021">
+                  <lem>carried off what it yielded</lem>
+                  <rdg wit="#wc_0d">carried it off,—what it yielded,—</rdg>
+               </app> without a wheelbarrow. With respect to<app xml:id="walc02-app-0022">
+                  <lem>landscapes,</lem>
+                  <rdg wit="#wc_0d">landscapes <del>I may say that</del>
+                  </rdg>
+               </app> —
+            <quote>
+                  <lg>
+                     <l>“I am monarch of all I <hi rend="style(italics)">survey</hi>,<anchor type="hn" xml:id="hn-02-006"/>
+                     </l>
+                     <l> My right there is none to dispute.”</l>
+                  </lg>
+               </quote>
+               <anchor type="hn" xml:id="hn-02-007"/>
+            </p>
+            <p n="3" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 3 written D; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">3</seg>
+                     <seg type="written">D</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0e">A fair copy was made of only <quote>he had got a few
+                     wild apples … left the farmer only the skimmed milk</quote>.</ab>
+               </note>
+                I have frequently seen a
+                  poet<anchor type="hn" xml:id="hn-02-008"/> withdraw, having enjoyed the
+               most valuable part of a farm, while the crusty farmer supposed that he had got a few wild apples only.
+               Why, the owner does not know it for many years when a poet has put his farm in rhyme, <app xml:id="walc02-app-0023">
+                  <lem>the most admirable kind of invisible fence, has fairly impounded it, milked it,</lem>
+                  <rdg wit="#wc_0d">
+                     <add>the most admirable kind of invisible fence</add> has fairly <add>impounded it
+                        milked it</add>,</rdg>
+               </app> skimmed it, and got all the cream, and left the farmer only the skimmed milk. </p>
+            
+            <p n="4" change="#wc_0g">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 4 written: G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">G</seg>
+                  </ab>
+               </note>The real attractions of the Hollowell farm, to me,<app xml:id="walc02-app-0024">
+                  <lem>were;</lem>
+                  <rdg wit="#wc_0g">were;<add>1st</add>
+                  </rdg>
+               </app> its complete retirement, being about two miles from the village, half a mile from the nearest
+               neighbor, and separated from the highway by a broad field;<app xml:id="walc02-app-0025">
+                  <lem>its</lem>
+                  <rdg wit="#wc_0g">2ndly its</rdg>
+               </app> bounding on the river, <app xml:id="walc02-app-0026">
+                  <lem>which the owner said protected it by its fogs from frosts in the spring,</lem>
+                  <rdg wit="#wc_0g">
+                     <add>which the owner said protected it by its fogs from frosts in the
+                     spring,</add>which the owner said <del>by its fogs</del> protected it <add>by its fogs</add> from
+                     frosts in the spring</rdg>
+               </app>
+               <app xml:id="walc02-app-0027">
+                  <lem>though that was nothing to me;</lem>
+                  <rdg wit="#wc_0g">
+                     <del>
+                        <add>but his words suggested <del>more than was meant</del>
+                        </add>
+                        <add rendition="pencil">other values than he suspected</add>
+                     </del>
+                     <add rendition="pencil">though
+                        that was nothing to me</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc02-app-0028">
+                  <lem>the</lem>
+                  <rdg wit="#wc_0g">3rdly the</rdg>
+               </app> gray color and<app xml:id="walc02-app-0029">
+                  <lem>ruinous state</lem>
+                  <rdg wit="#wc_0g">
+                     <del>pleasing ruin</del>
+                     <add rendition="pencil">ruinous state</add>
+                  </rdg>
+               </app> of the house and barn,<app xml:id="walc02-app-0030">
+                  <lem>and the dilapidated fences, which put</lem>
+                  <rdg wit="#wc_0g">
+                     <del>putting</del>
+                     <add rendition="pencil">&amp; the dilapidated <del>&amp; picturesque</del> fences which
+                        put</add>
+                  </rdg>
+               </app> such an interval between me and the last occupant;<app xml:id="walc02-app-0031">
+                  <lem>the</lem>
+                  <rdg wit="#wc_0g">4thly the</rdg>
+               </app> hollow and lichen-covered apple trees, gnawed by rabbits,<app xml:id="walc02-app-0032">
+                  <lem>showing what kind of neighbors I should have;</lem>
+                  <rdg wit="#wc_0g">
+                     <del>proving that there were rabbits there to gnaw them</del>
+                     <add>
+                        <del>suggesting</del>
+                        <add rendition="pencil">showing</add> what neighbors I should have</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc02-app-0033">
+                  <lem>but</lem>
+                  <rdg wit="#wc_0g">but 5thly &amp;</rdg>
+               </app> above all, the recollection I had of it from my earliest voyages up the river, when the house was
+               concealed behind a dense grove of red maples,<app xml:id="walc02-app-0034">
+                  <lem>through which I heard the house-dog bark.</lem>
+                  <rdg wit="#wc_0g">
+                     <del>which stood between it &amp; the river</del>
+                     <del>
+                        <add>which stood between it and the water</add>
+                     </del> through which I heard the house-dog
+                     bark. <del>Though it afforded me no western prospect</del>
+                  </rdg>
+               </app> I was in haste to buy it, before the proprietor finished getting out<app xml:id="walc02-app-0035">
+                  <lem>some</lem>
+                  <rdg wit="#wc_0g">
+                     <del>the</del>
+                     <add rendition="pencil">some</add>
+                  </rdg>
+               </app> rocks, cutting down the hollow apple trees, and grubbing up some young birches which had sprung up
+               in the pasture, or, in short, had made any more of his improvements. To enjoy these advantages I was
+               ready to carry it on; <app xml:id="walc02-app-0036">
+                  <lem>like Atlas,<anchor type="hn" xml:id="hn-02-009"/> to take the world on my shoulders,—I never heard what
+                     compensation he received for that,</lem>
+                  <rdg wit="#wc_0g">
+                     <add rendition="pencil">like Atlas to take the world on my shoulders (though by the
+                        way I never heard what compensation he received for it)</add>,</rdg>
+               </app>—and do all those things<app xml:id="walc02-app-0037">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0g">which <del>I now see</del>
+                  </rdg>
+               </app> had no other motive or excuse but that I might pay for it and be unmolested in my possession of it;<app xml:id="walc02-app-0038">
+                  <lem>for</lem>
+                  <rdg wit="#wc_0g">
+                     <del>though</del>
+                     <add>for</add>
+                  </rdg>
+               </app> I knew all the while that it would yield the most abundant crop of the kind I wanted if I could
+               only afford to let it alone. But it turned out as I have said. </p>
+            
+            <p n="5" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 5 written: D; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">D</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+               </note>All that I<app xml:id="walc02-app-0039">
+                  <lem>could</lem>
+                  <rdg wit="#wc_0d">
+                     <del>can</del>
+                     <add>could</add>
+                  </rdg>
+               </app> say, then, with respect to farming on a large scale,<app xml:id="walc02-app-0040">
+                  <lem>(I have always cultivated a garden,)<anchor type="hn" xml:id="hn-02-010"/>
+                  </lem>
+                  <rdg wit="#wc_0d"><!--not in ms. --></rdg>
+                  <rdg wit="#wc_0e">
+                     <add>(I have always cultivated a garden,)</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc02-app-0041">
+                  <lem>was,</lem>
+                  <rdg wit="#wc_0d">
+                     <del>is</del>
+                     <add>was</add>
+                  </rdg>
+               </app> that I <app xml:id="walc02-app-0042">
+                  <lem>had had</lem>
+                  <rdg wit="#wc_0d">
+                     <del>have had</del>
+                     <add rendition="pencil">had had</add>
+                  </rdg>
+               </app> my seeds ready. Many think that seeds improve with age. I have no doubt that time discriminates
+               between the good and the bad; and when at last I shall plant, I shall be less likely to be disappointed.
+               But I would say<app xml:id="walc02-app-0043">
+                  <lem>to my fellows,</lem>
+                  <rdg wit="#wc_0d">
+                     <add>to my fellows</add>,</rdg>
+               </app> once for all, As long as possible live free and uncommitted. It makes but little difference
+               whether you are committed to a farm or the county jail. </p>
+            
+            <p n="6" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 6 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">6</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+               </note>Old Cato, <app xml:id="walc02-app-0044">
+                  <lem>whose “De Re Rusticâ” is my “Cultivator,”<anchor type="hn" xml:id="hn-02-011"/>
+                  </lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">whose “De Re Rusticâ” is my “Cultivator,”</add>
+                  </rdg>
+               </app> says,<app xml:id="walc02-app-0045">
+                  <lem>and the only translation I have seen makes sheer nonsense of the passage,</lem>
+                  <rdg wit="#wc_0e">Praedium quom parare cogitabis, sic in animo habeto, uti ne cupide emas, neve opera
+                     tua parcas visere, et ne satis habeas semel circumire. Quoties ibis, toties magis placebit, quod
+                     bonum erit. <del>This, of which the learned Oxford translator makes sheer nonsense, I take to
+                        mean</del>
+                     <add rendition="pencil">&amp; <del>by the way</del> the only translation I have seen makes
+                        sheer nonsense of the <del>sentence</del> passage</add>,</rdg>
+               </app> “When you think of getting a farm, turn it thus in your mind, not to<app xml:id="walc02-app-0046">
+                  <lem>buy</lem>
+                  <rdg wit="#wc_0e">buy <del>it</del>
+                  </rdg>
+               </app> greedily; nor spare your pains to look at it, and do not think it enough to go round it once. The
+               oftener you go there the more it will please you, if it is good.”<anchor type="hn" xml:id="hn-02-012"/> I think I shall
+               not buy greedily, but go round and round it as long as I live, and be buried in it first, that it may
+               please me the more at last. 
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+            
+            <p n="7" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 7 written: D; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">7</seg>
+                     <seg type="written">D</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0d #wc_0f">
+                     <quote>As I have said … to wake my
+                     neighbors up</quote> does not appear in the manuscript in D or in the original copying of F but is
+                  interlined in pencil in F.</ab>
+               </note>
+               <app xml:id="walc02-app-0047">
+                  <lem>The present was my next experiment of this kind,</lem>
+                  <rdg wit="#wc_0d">
+                     <add rendition="pencil">The present was my next experiment</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">The present was my next experiment <del>in this direction</del>
+                     <add rendition="pencil">of this kind</add>,</rdg>
+               </app>
+               <app xml:id="walc02-app-0048">
+                  <lem>which I propose to describe more at length, for convenience putting the experience of two
+                        years<anchor type="hn" xml:id="hn-02-013"/> into one.</lem>
+                  <rdg wit="#wc_0d">
+                     <add rendition="pencil">which I propose to describe more at length <del>to which,
+                           however, I can only slightly refer this evening.</del>
+                     </add>
+                  </rdg>
+               </app> As I have said,<anchor type="hn" xml:id="hn-02-014"/> I do not propose to write an ode to dejection, but to<app xml:id="walc02-app-0049">
+                  <lem>brag</lem>
+                  <rdg wit="#wc_0f">
+                     <del>crow</del>
+                     <add rendition="pencil">brag</add>
+                  </rdg>
+               </app> as lustily as chanticleer<anchor type="hn" xml:id="hn-02-015"/> in the morning, standing on his roost, if only to wake my neighbors up. </p>
+            
+            <p n="8" change="#wc_0a">
+               <seg n="8a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 8a written: A; rewritten: D, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">8a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">D, F</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc02-app-0050">
+                     <lem>When first I</lem>
+                     <rdg wit="#wc_0a">When I first </rdg>
+                     <rdg wit="#wc_0d">It was on the morning of the 4<hi rend="style(superscript)">th</hi> of July 1845
+                        that I put a few articles of furniture some of which I had made myself into a hayrigging which I
+                        had hired, drove down to the woods, put my things in their places, &amp; commenced house
+                        keeping. When I first </rdg>
+                     <rdg wit="#wc_0f">When I first</rdg>
+                  </app>
+                  <app xml:id="walc02-app-0051">
+                     <lem>took up my abode in the woods,</lem>
+                     <rdg wit="#wc_0a">went to the pond to live,</rdg>
+                  </app>
+                  <app xml:id="walc02-app-0052">
+                     <lem>that is,</lem>
+                     <rdg wit="#wc_0a #wc_0e"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>or</del>
+                        <add rendition="pencil">that is</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc02-app-0053">
+                     <lem>began to spend my nights as well as days there, which, by accident, was on Independence Day,
+                        or the fourth of July, 1845,</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0d">which was by chance the 4<hi rend="style(superscript)">th</hi> of July 1845, the
+                        anniversary of the declaration of our national independence</rdg>
+                  </app> my house<app xml:id="walc02-app-0054">
+                     <lem>was not finished for the winter, but was</lem>
+                     <rdg wit="#wc_0a">
+                        <del>being unfinished</del>
+                        <add>not being finished</add> for winter <del>and</del>
+                        <add>but</add>
+                     </rdg>
+                  </app> merely a defence against the rain, without plastering or chimney, <app xml:id="walc02-app-0055">
+                     <lem>the walls being of rough, weather-stained boards, with wide chinks, which made it cool at
+                        night.</lem>
+                     <rdg wit="#wc_0a">
+                        <del>uncluttered</del>
+                        <del>
+                           <add>not cluttered</add> with furniture, and</del>
+                        <add>or much furniture,</add> with walls of rough weather stained boards, and wide chinks which
+                        made it cool at night, was itself an inspiring object, and reacted on me the builder. </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>with walls</del>
+                        <add rendition="pencil">the walls being</add> of rough weather-stained boards <del>and</del>
+                        <add rendition="pencil">with</add> wide chinks which made it cool at night.</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="8b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 8b written: A; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">8b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                  </note>The upright white hewn studs and freshly planed door and window<app xml:id="walc02-app-0056">
+                     <lem>casings</lem>
+                     <rdg wit="#wc_0a">frames</rdg>
+                  </app> gave<app xml:id="walc02-app-0057">
+                     <lem>it</lem>
+                     <rdg wit="#wc_0a">
+                        <del>the house</del>
+                        <add>it</add>
+                     </rdg>
+                  </app> a clean and airy look, especially in the morning, when its timbers<app xml:id="walc02-app-0058">
+                     <lem>were saturated with dew, so that I fancied that</lem>
+                     <rdg wit="#wc_0a">seemed saturated with the morning air, <del>and as if</del>
+                        <add>so that I imagined</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">were saturated with <del>the dewy air, and I even</del>
+                        <add>dew, so that I</add> fancied that</rdg>
+                  </app> by noon some sweet gum would exude from<app xml:id="walc02-app-0059">
+                     <lem>them.</lem>
+                     <rdg wit="#wc_0a">them, and incense go up from the roof</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="8c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 8c written: A; rewritten: D, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">8c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">D, F</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0d #wc_0f">
+                        <quote>The morning wind forever blows
+                        … outside of the earth every where</quote> does not appear in the manuscript.</ab>
+                     <ab change="#wc_0a">Where I Lived, and What I Lived For 8c appears as
+                     follows.] With its frame so slightly clad it seemed like a picture in outlines, a rudimental, airy
+                     and primitive hall, a crystallization around me, and reminded <add rendition="pencil">me</add> of
+                     some mountain houses I had seen, which had this fresh auroral atmosphere <del>about them</del>
+                        <add rendition="pencil">smile not ye that have seen my abode</add>. I had lodged in the house of a
+                     sawmiller on the Kanterskill mountains the previous summer, high up as the Pine Orchard, in the
+                     blue-berry and raspberry region, which had this <add rendition="pencil">auroral &amp;</add>
+                     ambrosial character. He was the miller of the Kanterskill Falls, &amp; his family were clean
+                     &amp; wholesome people like the house. The latter was not plastered but only lathed, and the
+                     inner doors were not hung. It was high-placed, airy, &amp; perfumed; so high that only the
+                     winds that swept over the ridge of the Kanterskills <add rendition="pencil">bearing only the broken
+                        strains and warps and accompaniments of celestial parts of terrestrial music</add> passed
+                     through it. <del>—The very light &amp; atmosphere in which the most enduring works of art are
+                        composed.—On the tops of mountains, as everywhere to hopeful souls, it is always
+                     morning.</del>—A <del>clean and</del> pure <add>temple of a</add> house which one would enter as
+                     naturally and gratefully as he would go under <del>a shade, which might fitly</del>
+                        <add>the shade of a tree, fit to</add> adorn a mountain’s brow—and entertain a travelling god, and
+                     where a goddess might trail her garment.—Such it seemed to me all our houses should be.</ab>
+                     <ab change="#wc_0d">Where I Lived, and What I Lived For 8c appears as
+                     follows. It had altogether an auroral and ambrosial character in my eyes, as if the winds that
+                     passed through it were such only as sweep over the ridges of mountains—bearing the broken strains
+                     and warps or celestial parts <add rendition="pencil">only</add> of terrestrial music—fit to
+                     entertain a travelling god, and where a goddess might trail her garment.</ab>
+                  </note>
+                  
+                  
+                  
+                  <app xml:id="walc02-app-0060">
+                     <lem>To my imagination</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">To my imagination</add>
+                     </rdg>
+                  </app> it retained throughout the day more or less of this<app xml:id="walc02-app-0061">
+                     <lem>auroral</lem>
+                     <rdg wit="#wc_0f">auroral <del>and ambrosial</del>
+                     </rdg>
+                  </app> character, <app xml:id="walc02-app-0062">
+                     <lem>reminding me of a certain house<anchor type="hn" xml:id="hn-02-016"/> on a mountain
+                        which I had visited a year before. This was an airy and unplastered cabin,</lem>
+                     <rdg wit="#wc_0f">
+                        <del>to my eyes, and effected me as something purer as it was simpler than an
+                           ordinary house</del>
+                        <add rendition="pencil">reminding me of a certain house on a mountain which I had visited a year
+                           before</add>
+                     </rdg>
+                  </app> fit to entertain a travelling god, and where a goddess might trail her garments.<anchor type="hn" xml:id="hn-02-017"/> The winds<app xml:id="walc02-app-0063">
+                     <lem>which</lem>
+                     <rdg wit="#wc_0f">that</rdg>
+                  </app> passed over my dwelling were such as sweep over the ridges of mountains, bearing the broken
+                  strains, or celestial parts only, of terrestrial music. The morning wind forever blows, the poem of
+                  creation is uninterrupted; but few are the ears that hear it. Olympus<anchor type="hn" xml:id="hn-02-018"/> is
+                  but the outside of the earth every where. </seg>
+            </p>
+            
+            <p n="9" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 9 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0f">
+                     <quote>The only house I had been … progress
+                     toward settling in the world</quote> does not appear in the manuscript.</ab>
+                  <ab change="#wc_0a">Where I Lived, and What I Lived For 9, which follows
+                  8a, appears as follows. From our village houses to this lodge on the shore of <del>a beautiful
+                     lake</del>
+                     <add>so fair a lake</add> in the midst of <del>a green</del>
+                     <add>the extensive</add> forest, where hardly any traces of man were visible, was a transition <add rendition="pencil"> at least</add> as from a <del>dungeon</del>
+                     <add>close prison</add> to an open cage <del>at least</del>
+                     <add>swung</add> in a pleasant grove, where I could glimpse the light &amp; the flowers through
+                  the bars, and odoriferous gales coursed through and through. <del>It</del>
+                     <del>
+                        <add>But my house</add>
+                     </del>
+                     <add rendition="pencil">It</add> was so open and pervious to nature that it did not seem within doors
+                  where I sat, in <del>unwholesome penetralia</del>
+                     <del>
+                        <add>a close and unhealthful apartment</add>
+                     </del>
+                     <add>a close apartment</add>, but at most only behind a door in the rainiest weather. The fresh
+                  &amp; pure air penetrated through a myriad chinks, and bathed myself in all things within as
+                  freely as it wandered amid the boughs and needles of the pines around, and I imbibed the influences of
+                  nature with as little alloy as a bird in its nest amid foliage. <del>It was invigorating only to sit
+                     there and drink and be bathed in this uncontaminated current.</del> The atmosphere of our houses
+                  has usually lost some of its life giving principle and it is necessary to our health and spirits
+                  frequently to go out, as we say, to take the air.</ab>
+               </note>
+               
+                The only house I had been the owner of
+               before, if I except a boat,<anchor type="hn" xml:id="hn-02-019"/> was a tent, which I used occasionally
+               when making excursions in the summer, and this is still rolled up in my garret; but the boat, after
+               passing from hand to hand, has gone down the stream of time. With this more substantial shelter about me,
+               I had made some progress toward settling in the world. <app xml:id="walc02-app-0064">
+                  <lem>This frame, so slightly clad, was a sort of crystallization around me, and reacted on the
+                     builder. It was suggestive somewhat as a picture in outlines.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>With</del> its frame so slightly clad <del>it</del> was suggestive as a picture
+                     in outlines, <del>the rudiments of something at least other than a carpenter’s hill—</del> a sort
+                     of crystallization around me. <del>From <add rendition="pencil">my</add> village house to this was
+                        a transition as from a close prison to an open cage swung in a grove. Nay, I imbibed the
+                        influences of nature with as little alloy as a bird in its nest amid the foliage.</del>
+                  </rdg>
+               </app> I did not need to go outdoors to take the<app xml:id="walc02-app-0065">
+                  <lem>air,</lem>
+                  <rdg wit="#wc_0f">air, <del>for the benefit of my spirits,</del>
+                  </rdg>
+               </app> for the atmosphere within had lost none of its<app xml:id="walc02-app-0066">
+                  <lem>freshness.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>life-giving principle</del>
+                     <add rendition="pencil">freshness.</add>
+                  </rdg>
+               </app> It was not so much within doors as behind a door where I sat, even in the rainiest weather. The
+               Harivansa says, “An abode without birds is like a meat without seasoning.”<anchor type="hn" xml:id="hn-02-020"/> Such was not my abode, for I found myself<anchor type="hn" xml:id="hn-02-021"/> suddenly <app xml:id="walc02-app-0067">
+                  <lem>neighbor</lem>
+                  <rdg wit="#wc_0f">neighbors</rdg>
+               </app> to the birds; not by having imprisoned<app xml:id="walc02-app-0068">
+                  <lem>one,</lem>
+                  <rdg wit="#wc_0f">one <del>in my house,</del>
+                  </rdg>
+               </app> but having caged myself near them. I was not only nearer to<app xml:id="walc02-app-0069">
+                  <lem>some</lem>
+                  <rdg wit="#wc_0f">
+                     <del>the few</del>
+                     <add rendition="pencil">some</add>
+                  </rdg>
+               </app> of those which commonly frequent the garden and the orchard, but to those wilder and more
+               thrilling songsters of the forest which never,<app xml:id="walc02-app-0070">
+                  <lem>or rarely,</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">or rarely,</add>
+                  </rdg>
+               </app> serenade a villager,—<app xml:id="walc02-app-0071">
+                  <lem>the wood-thrush, the veery, the scarlet tanager, the field-sparrow,<anchor type="hn" xml:id="hn-02-022"/> the whippoorwill, and many
+                     others.</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">the wood-thrush, the veery, the scarlet tanager, the
+                        field-sparrow, the whippoorwill, and many others.</add>
+                  </rdg>
+               </app>
+            </p>
+            
+            <p n="10" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 10 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">10</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>I was seated by the shore … my most
+                     distant horizon</quote> does not appear in the manuscript.</ab>
+               </note>
+                I was seated by the shore of a<app xml:id="walc02-app-0072">
+                  <lem>small pond, about a mile and a half<anchor type="hn" xml:id="hn-02-023"/> south of the village of Concord and somewhat higher than it,</lem>
+                  <rdg wit="#wc_0f">beautiful pond somewhat higher than the village of Concord</rdg>
+               </app> in the midst of an extensive wood between that town and Lincoln, and about two miles south of that
+               our only field known to fame, Concord Battle Ground;<anchor type="hn" xml:id="hn-02-024"/> but I was so low in
+               the woods that the opposite<app xml:id="walc02-app-0073">
+                  <lem>shore, half a mile off, like the rest</lem>
+                  <rdg wit="#wc_0f">shore <del>of the pond</del>, half a mile distant, which like the rest was</rdg>
+               </app> covered with wood, was my most distant horizon. <app xml:id="walc02-app-0074">
+                  <lem>For the first week, whenever</lem>
+                  <rdg wit="#wc_0a">When </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>During the first week my thoughts were so leavened with expectation that the
+                        whole region where I lived seemed more elevated than it actually was, and</del>
+                     <add rendition="pencil">For the first week</add> whenever</rdg>
+               </app> I looked out on<app xml:id="walc02-app-0075">
+                  <lem>the pond</lem>
+                  <rdg wit="#wc_0a">the face of the pond</rdg>
+               </app> it <app xml:id="walc02-app-0076">
+                  <lem>impressed me like a tarn</lem>
+                  <rdg wit="#wc_0a">reminded me of a tarn <add>which I had seen</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">impressed me <del>as if it were</del>
+                     <add rendition="pencil">like a</add> tarn</rdg>
+               </app> high up on the side of a mountain,<app xml:id="walc02-app-0077">
+                  <lem>its bottom far above the surface of other lakes, and,</lem>
+                  <rdg wit="#wc_0a">
+                     <del>and the whole region where I lived seemed more elevated than it actually was.
+                        The pond was like a mountain lake I had seen</del> in the grey of the morning draped with mist
+                        <add>which was</add> suspended in low weather from the dead willows and bare firs that stood
+                     here and there in the water</rdg>
+               </app> as the sun arose, I saw it throwing off its nightly clothing of mist, and here and there, by
+               degrees, its soft ripples or its smooth reflecting surface was revealed, <app xml:id="walc02-app-0078">
+                  <lem>while</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">while</add>
+                  </rdg>
+               </app> the mists, like ghosts, were stealthily withdrawing in every direction into the woods, as<app xml:id="walc02-app-0079">
+                  <lem>at</lem>
+                  <rdg wit="#wc_0a">
+                     <del>if from</del>
+                     <del>
+                        <add rendition="pencil">if it were</add>
+                     </del>
+                     <add>at</add>
+                  </rdg>
+               </app> the breaking up of some nocturnal conventicle.<anchor type="hn" xml:id="hn-02-025"/>
+               <app xml:id="walc02-app-0080">
+                  <lem>The very dew seemed to hang upon the trees later into the day than usual, as on the sides of
+                     mountains.</lem>
+                  <rdg wit="#wc_0a">
+                     <add>In fact the whole region where I lived seemed more elevated than it actually
+                        was</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>Also</del> the <add rendition="pencil">very</add> dew seemed to hang upon the
+                     trees later into the day than usual, as on the sides of mountains.</rdg>
+               </app>
+            </p>
+            
+            <p n="11" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 11 written: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">11</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note>This small <app xml:id="walc02-app-0081">
+                  <lem>lake<anchor type="hn" xml:id="hn-02-026"/> was of most
+                     value</lem>
+                  <rdg wit="#wc_0f">lake in the woods was <del>perhaps most appreciated</del>
+                     <add rendition="pencil">of most value</add>
+                  </rdg>
+               </app> as a neighbor in the intervals of a gentle rain storm<app xml:id="walc02-app-0082">
+                  <lem>in</lem>
+                  <rdg wit="#wc_0f">
+                     <del>such as occurs</del> in</rdg>
+               </app> August, when, both air and water being perfectly still, but the sky overcast, mid-afternoon had
+               all the serenity of evening, and the wood-thrush sang<app xml:id="walc02-app-0083">
+                  <lem>around,</lem>
+                  <rdg wit="#wc_0f">around the pond,</rdg>
+               </app> and was heard from<app xml:id="walc02-app-0084">
+                  <lem>shore to shore.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>over the water</del>
+                     <add rendition="pencil">shore to shore</add>
+                  </rdg>
+               </app> A lake<app xml:id="walc02-app-0085">
+                  <lem>like this</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">like this</add>
+                  </rdg>
+               </app> is never smoother than at such a time; and the clear portion of the air above it being<app xml:id="walc02-app-0086">
+                  <lem>shallow</lem>
+                  <rdg wit="#wc_0f">
+                     <del>so</del> shallow</rdg>
+               </app> and darkened by clouds, the water,<app xml:id="walc02-app-0087">
+                  <lem>full</lem>
+                  <rdg wit="#wc_0f">
+                     <del>which is</del> full</rdg>
+               </app> of light and reflections, becomes a lower heaven itself so much the more important. From a hill
+                  top<anchor type="hn" xml:id="hn-02-027"/> near by,<app xml:id="walc02-app-0088">
+                  <lem>where</lem>
+                  <rdg wit="#wc_0f">
+                     <del>on my side</del> where</rdg>
+               </app> the wood had been recently cut off, there was a pleasing vista southward across the pond,<app xml:id="walc02-app-0089">
+                  <lem>through</lem>
+                  <rdg wit="#wc_0f">through <del>and over</del>
+                  </rdg>
+               </app> a wide indentation in the hills which form the shore there, where their opposite sides sloping
+               toward each other suggested a stream flowing out in that direction through a wooded valley, but stream
+               there was<app xml:id="walc02-app-0090">
+                  <lem>none.</lem>
+                  <rdg wit="#wc_0f">none<del>but in imagination</del>
+                     <add rendition="pencil">except in my imagination.</add>
+                  </rdg>
+               </app> That way I looked between and over the near green hills to some distant and <app xml:id="walc02-app-0091">
+                  <lem>higher ones</lem>
+                  <rdg wit="#wc_0f">
+                     <del>larger</del>
+                     <add rendition="pencil">higher</add> hills</rdg>
+               </app> in the horizon, tinged with<app xml:id="walc02-app-0092">
+                  <lem>blue.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>blue.</del> that was the kind of coin <del>seen through this crack in my
+                        treasure-box</del>
+                     <add rendition="pencil">which I saw over the rim of my world</add>
+                  </rdg>
+               </app> Indeed, by standing on tiptoe I could catch a glimpse of some of the peaks of the still bluer and
+               more distant mountain ranges<anchor type="hn" xml:id="hn-02-028"/> in the north-west,<app xml:id="walc02-app-0093">
+                  <lem>those true-blue coins from heaven’s own mint,</lem>
+                  <rdg wit="#wc_0f"><!-- [not in ms.]--></rdg>
+               </app> and also of some portion of the village. But in<app xml:id="walc02-app-0094">
+                  <lem>other</lem>
+                  <rdg wit="#wc_0f">
+                     <del>the</del> other</rdg>
+               </app> directions,<app xml:id="walc02-app-0095">
+                  <lem>even from this point,</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">even from this point</add>,</rdg>
+               </app> I could not see over or beyond the woods which surrounded me. It is<app xml:id="walc02-app-0096">
+                  <lem>well</lem>
+                  <rdg wit="#wc_0f">
+                     <del>important</del>
+                     <add rendition="pencil">well</add>
+                  </rdg>
+               </app> to have some water in your neighborhood, to give buoyancy to and float<app xml:id="walc02-app-0097">
+                  <lem>the</lem>
+                  <rdg wit="#wc_0f">
+                     <del>the</del>
+                     <add rendition="pencil">your</add>
+                  </rdg>
+               </app> earth. One value even of the smallest well is, that<app xml:id="walc02-app-0098">
+                  <lem>when you look into it you see that</lem>
+                  <rdg wit="#wc_0f">
+                     <del>looking</del>
+                     <add rendition="pencil">when you look</add> into it you <del>are reminded</del>
+                     <add rendition="pencil">see that</add>
+                  </rdg>
+               </app> earth is not continent but insular. This is as important as that it keeps butter cool.<anchor type="hn" xml:id="hn-02-029"/> When I looked across the pond from
+               this peak toward the Sudbury meadows, which in time of flood<anchor type="hn" xml:id="hn-02-030"/> I<app xml:id="walc02-app-0099">
+                  <lem>distinguished</lem>
+                  <rdg wit="#wc_0f">
+                     <del>distinguish</del>
+                     <add rendition="pencil">distinguished</add>
+                  </rdg>
+               </app> elevated perhaps by a mirage in<app xml:id="walc02-app-0100">
+                  <lem>their seething</lem>
+                  <rdg wit="#wc_0f">
+                     <del>their</del>
+                     <add rendition="pencil">a</add> seething <del>hazy</del>
+                  </rdg>
+               </app> valley, like a coin in a basin, all the earth beyond the pond appeared like a thin crust insulated
+               and floated even by this small sheet of intervening water, and I was reminded that this on which I dwelt
+               was but <hi rend="style(italics)">dry land</hi>. </p>
+            
+            <p n="12" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 12 written: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">12</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc02-app-0101">
+                  <lem>Though</lem>
+                  <rdg wit="#wc_0f">
+                     <del>But</del> though</rdg>
+               </app> the view from my door was<app xml:id="walc02-app-0102">
+                  <lem>still more</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">still more</add>
+                  </rdg>
+               </app> contracted, <app xml:id="walc02-app-0103">
+                  <lem>I did not feel crowded or confined in the least. There was pasture enough for my
+                     imagination.</lem>
+                  <rdg wit="#wc_0f">
+                     <del>nevertheless I imagined that</del>
+                     <add rendition="pencil">I did not feel crowded or confined in the least. There was pasture enough
+                        for my fancy &amp; imagination.</add>
+                  </rdg>
+               </app> The low shrub-oak<anchor type="hn" xml:id="hn-02-031"/> plateau to which the opposite shore arose, stretched away <app xml:id="walc02-app-0104">
+                  <lem>toward the prairies of the West and the steppes</lem>
+                  <rdg wit="#wc_0f">
+                     <del>boundless as the prairies, pampas, and plains</del>
+                     <add rendition="pencil">toward the prairies of the west &amp; the steppes</add>
+                  </rdg>
+               </app> of Tartary,<anchor type="hn" xml:id="hn-02-032"/>
+               affording ample room for all the roving families of men. “There are none happy in the world but beings
+               who enjoy freely a vast horizon,”<anchor type="hn" xml:id="hn-02-033"/> —<app xml:id="walc02-app-0105">
+                  <lem>said</lem>
+                  <rdg wit="#wc_0f">
+                     <del>So</del> said</rdg>
+               </app> Damodara, when his herds required new and larger pastures. </p>
+            
+            <p n="13" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 13 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">13</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>Both place and time<app xml:id="walc02-app-0106">
+                  <lem>were changed, and I dwelt nearer to those parts of the universe and to those eras in history
+                     which had most attracted me.</lem>
+                  <rdg wit="#wc_0a">had undergone a revolution and I <del>dwelt</del>
+                     <add>seemed to dwell</add> nearer <add>to those parts of the globe &amp;</add> to those eras in
+                     history which had attracted me, and as I had no clock nor watch, but the sun &amp; moon, I also
+                     lived in <add>a more</add> primitive <add>and absolute</add> time. Over the south shore of the
+                     pond, which was a low hill <del>covered</del>
+                     <add>fringed</add> with shrub oaks and scattered pines which seemed to rise to an illimitable
+                     tableland—I seemed to look toward the country of <del>the</del>
+                     <del>
+                        <add>some new race of</add>
+                     </del>
+                     <add rendition="pencil">some ideal race of</add> Tartars, where tribes of men dwelt in tents</rdg>
+               </app> Where I lived was as far off as many a region viewed nightly by astronomers. We are<app xml:id="walc02-app-0107">
+                  <lem>wont</lem>
+                  <rdg wit="#wc_0a">apt</rdg>
+               </app> to imagine rare and delectable<app xml:id="walc02-app-0108">
+                  <lem>places</lem>
+                  <rdg wit="#wc_0a">places afar off wither astronomers look</rdg>
+               </app> in some remote and more celestial corner of the system, behind the constellation of Cassiopeia’s
+               Chair, far from noise and disturbance. I<app xml:id="walc02-app-0109">
+                  <lem>discovered that my house actually had its site</lem>
+                  <rdg wit="#wc_0a">imagined that my house <add>actually</add> had its site <del>actually</del>
+                  </rdg>
+               </app> in such a withdrawn, but forever new and unprofaned, part of the universe. If it were worth the
+               while to settle in those<app xml:id="walc02-app-0110">
+                  <lem>parts</lem>
+                  <rdg wit="#wc_0a">parts of the system</rdg>
+               </app> near to the Pleiades or the Hyades,<app xml:id="walc02-app-0111">
+                  <lem>to Aldebaran or Altair,<anchor type="hn" xml:id="hn-02-034"/>
+                  </lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">to Aldebaran or Altair</add>,</rdg>
+               </app> then I was really there, or at an equal remoteness from the life which I had left<app xml:id="walc02-app-0112">
+                  <lem>behind,</lem>
+                  <rdg wit="#wc_0a">behind—<del>as near to the immortal city</del>
+                  </rdg>
+               </app> dwindled and twinkling with as fine a ray to my nearest neighbor, and<app xml:id="walc02-app-0113">
+                  <lem>to be seen only</lem>
+                  <rdg wit="#wc_0a #wc_0f">only to be seen</rdg>
+               </app> in moonless nights by him. Such was that part of creation where I had squatted; <app xml:id="walc02-app-0114">
+                  <lem>
+                     <quote>
+                        <lg>
+                           <l>“There was a shepherd that did live,</l>
+                           <l>And held his thoughts as high </l>
+                           <l>As were the mounts whereon his flocks</l>
+                           <l>Did hourly feed him by.” </l>
+                        </lg>
+                     </quote>
+                     <anchor type="hn" xml:id="hn-02-035"/> What should we think of the shepherd’s life if his
+                     flocks always wandered to higher pastures than his thoughts? </lem>
+                  <rdg wit="#wc_0a"><!-- [ not in ms.]--></rdg>
+               </app>
+            </p>
+            
+            <p n="14" change="#wc_0a">
+               <seg n="14a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 14a written: A; rewritten: B, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">14a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, F</seg>
+                  </ab>
+               </note> Every morning was a cheerful
+                  invitation to make my life of equal simplicity, and <app xml:id="walc02-app-0115">
+                     <lem>I may say innocence, with Nature herself.</lem>
+                     <rdg wit="#wc_0a">purity with <del>itself</del>
+                        <add>Nature herself.</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc02-app-0116">
+                     <lem>I have been as sincere a worshipper of Aurora<anchor type="hn" xml:id="hn-02-036"/> as the Greeks.</lem>
+                     <rdg wit="#wc_0a">
+                        <del>The morning is to every one the season of his ideal life. Then, if ever, we
+                           can realize the life of the Greeks—and we are all at some time good heathens enough to
+                           acknowledge and worship their Aurora. Morning brings back the heroic ages.</del>
+                        <add>I have been as sincere a worshipper of Aurora as the Greeks</add>
+                     </rdg>
+                  </app> I got up early and bathed in the pond; that was a religious exercise, and one of the best things<app xml:id="walc02-app-0117">
+                     <lem>which</lem>
+                     <rdg wit="#wc_0a"><!-- [ not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">which</add>
+                     </rdg>
+                  </app> I did. <app xml:id="walc02-app-0118">
+                     <lem>They say</lem>
+                     <rdg wit="#wc_0b">I have since read</rdg>
+                  </app> that characters were engraven on the bathing tub<app xml:id="walc02-app-0119">
+                     <lem>of</lem>
+                     <rdg wit="#wc_0b">of the</rdg>
+                  </app> king Tching-thang to this effect: “Renew thyself completely each day; do it <app xml:id="walc02-app-0120">
+                     <lem>again, and again, and forever again."<anchor type="hn" xml:id="hn-02-037"/>
+                     </lem>
+                     <rdg wit="#wc_0b #wc_0f">anew, and anew, and forever anew</rdg>
+                  </app> I can understand that. Morning brings back the heroic ages. <app xml:id="walc02-app-0121">
+                     <lem>I was as much affected by the faint hum of a mosquito making its invisible and unimaginable
+                        tour through my apartment at earliest dawn, when I was sitting with door and windows open, as I
+                        could be by any trumpet that ever sang of fame.<anchor type="hn" xml:id="hn-02-038"/> It was
+                        Homer’s requiem;<anchor type="hn" xml:id="hn-02-039"/> itself an Iliad and Odyssey in
+                        the air, singing its own wrath and wanderings.<anchor type="hn" xml:id="hn-02-040"/> There was something cosmical about it; a standing advertisement, till
+                        forbidden, of the everlasting vigor and fertility of the world.</lem>
+                     <rdg wit="#wc_0a">
+                        <del>So far the day was well spent—</del> In some unrecorded hours of solitude,
+                        sitting with door and windows open at very early dawn when the stillness was audible, and the
+                        atmosphere contained the auroral perfume <add>which</add> I have mentioned, the faint hum of a
+                        mosquito making its invisible and unimaginable tour through <del>the loaded and drowsy air
+                           toward elysian realms,</del>
+                        <add>my apartment</add> was a trumpet that recalled what I had read of most ancient history and
+                        heroic ages. There was somewhat of that <add>which</add> I fancy the Greeks meant by ambrosial
+                           <del>about</del>
+                        <add>in</add> it—more than Sybilline or Delphic. It expressed the infinite and everlasting
+                        fertility of the <choice>
+                           <orig xml:lang="gr" resp="#clapper">қόбмоѕ</orig>
+                           <corr xml:lang="gr" resp="#easterly">κόσμος</corr>
+                           <reg xml:lang="en" resp="#easterly">cosmos</reg>
+                        </choice> or world. It was <choice>
+                           <orig xml:lang="gr">Өετον</orig>
+                           <reg xml:lang="en" resp="#easterly">thetan</reg>
+                        </choice> or divine. Only Homer could have named it </rdg>
+                     <rdg wit="#wc_0b">In some unrecorded hours of solitude, sitting with door and windows open, at very
+                        early dawn, when the stillness was audible, and the atmosphere contained the auroral perfume
+                        which I have mentioned, the faint hum of a mosquito making its invisible and unimaginable tour
+                        through my apartment was a trumpet that recalled <del>what</del>
+                        <add rendition="pencil">all that</add> I had <add rendition="pencil">ever</add> read <del>of
+                           most ancient history and heroic ages</del>
+                        <add rendition="pencil">or dreamed of heroism and the worthies of antiquity</add>. There was
+                           <del>somewhat of that</del>
+                        <add rendition="pencil">to my ears something of what</add> which I fancy the Greeks meant by
+                        ambrosial in it<del>, more than Sybilline or Delphic</del>. <add rendition="pencil">It was the
+                           song of the spheres that anthem the overflowing joy of the universe</add> It expressed the
+                        infinite and everlasting fertility of the <del> қόбмоѕ or</del> world. It was Өετον or divine.
+                        Only Homer could have named it </rdg>
+                     <rdg wit="#wc_0f">I was as much affected <del>sometimes</del> by the faint hum of a mosquito making
+                        its invisible and unimaginable tour through my apartment at <del>very early</del>
+                        <add rendition="pencil">earliest</add> dawn <add rendition="pencil">an Iliad &amp; Odyssey
+                           in the air—singing its own wrath &amp; wanderings</add>, when I was sitting with door and
+                        windows open <del>as usual</del>, as I could be by any trumpet that ever sang of fame. There was
+                        something infinite &amp; cosmical about it. <del>It was</del> a standing advertisement, till
+                           forbidden,<anchor type="hn" xml:id="hn-02-041"/> of the everlasting vigor &amp;
+                        fertility of the <del>universe—&amp; deserved to have Homer to sing of it</del>
+                        <add rendition="pencil">world</add>
+                     </rdg>
+                  </app> The morning, which is the most memorable season of the day, is the awakening hour. Then there
+                  is least somnolence in us; and for an hour, at least, some part of us<app xml:id="walc02-app-0122">
+                     <lem>awakes</lem>
+                     <rdg wit="#wc_0a">seems to awake </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>seems</del>
+                        <add>appears</add> to awake</rdg>
+                  </app> which slumbers all the rest of the day and night. </seg>
+               
+               <seg n="14b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 14b written: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">14b</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                  </note>Little is to be expected of that day, if it can be called a day, to which we are
+                  not awakened by our Genius, but by the mechanical nudgings of some<app xml:id="walc02-app-0123">
+                     <lem>servitor,</lem>
+                     <rdg wit="#wc_0f">servitor,<del>or the peal of alarm bells</del>
+                     </rdg>
+                  </app> are not awakened by our own<app xml:id="walc02-app-0124">
+                     <lem>newly-acquired force and</lem>
+                     <rdg wit="#wc_0f">
+                        <add>newly-acquired force and</add>
+                     </rdg>
+                  </app> aspirations from within, accompanied by the undulations of celestial music, <app xml:id="walc02-app-0125">
+                     <lem>instead of factory bells,</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">instead of factory bells</add>,</rdg>
+                  </app> and a fragrance filling the air—to a higher life than we fell asleep from; and thus the
+                  darkness bear its fruit, and prove itself to be good, no less than the light. That man who does not
+                  believe that each day contains an earlier, more sacred, and auroral hour than he has yet profaned, has
+                  despaired of life, and is pursuing a descending and darkening way. </seg>
+               
+               <seg n="14c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 14c written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">14c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                  </note>After a partial<app xml:id="walc02-app-0126">
+                     <lem>cessation</lem>
+                     <rdg wit="#wc_0a">
+                        <del>sensation</del>
+                        <add>cessation</add>
+                     </rdg>
+                  </app> of his<app xml:id="walc02-app-0127">
+                     <lem>sensuous</lem>
+                     <rdg wit="#wc_0a">
+                        <del>sensual</del>
+                        <add>sensuous</add>
+                     </rdg>
+                  </app> life, the soul of man, or its organs<app xml:id="walc02-app-0128">
+                     <lem>rather,</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">rather</add>,</rdg>
+                  </app> are reinvigorated each day, and<app xml:id="walc02-app-0129">
+                     <lem>his</lem>
+                     <rdg wit="#wc_0a">
+                        <del>the</del>
+                        <add>his</add>
+                     </rdg>
+                  </app> Genius tries again what noble life it can make. All memorable events,<app xml:id="walc02-app-0130">
+                     <lem>I should say,</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">I should say</add>,</rdg>
+                  </app> transpire in morning time and in a morning atmosphere. <app xml:id="walc02-app-0131">
+                     <lem>The Vedas say, “All intelligences awake with the morning.”<anchor type="hn" xml:id="hn-02-042"/>
+                     </lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add>The Vedas say, “All intelligences awake with the morning.”</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc02-app-0132">
+                     <lem>Poetry</lem>
+                     <rdg wit="#wc_0a">Greek poetry</rdg>
+                  </app> and art, and the fairest and most memorable of the actions of men, date from <app xml:id="walc02-app-0133">
+                     <lem>such an hour. All</lem>
+                     <rdg wit="#wc_0a">
+                        <del>that</del>
+                        <add>such an</add> hour—<del>for</del> all</rdg>
+                  </app> poets and heroes, like Memnon, are the children of Aurora, and emit their music<app xml:id="walc02-app-0134">
+                     <lem>at sunrise.</lem>
+                     <rdg wit="#wc_0a">in the morning. <del>If we are wakeful enough the evening and the morning are but
+                           one. The birds sing at morning and at evening, and their notes do not suggest on which side
+                           the sun is rising. There is no vaunt and no weariness in them. And</del>
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>in the morning</del>
+                        <add rendition="pencil">at sunrise.</add>
+                     </rdg>
+                  </app> To him<app xml:id="walc02-app-0135">
+                     <lem>whose elastic and vigorous thought keeps</lem>
+                     <rdg wit="#wc_0a">
+                        <del>who has kept</del>
+                        <add>whose elastic &amp; vigorous thought keeps</add>
+                     </rdg>
+                  </app> pace with the sun,<app xml:id="walc02-app-0136">
+                     <lem>the day</lem>
+                     <rdg wit="#wc_0a">
+                        <del>it</del>
+                        <add>the day</add>
+                     </rdg>
+                  </app> is a perpetual morning. It matters not what the clocks say or the attitudes and labors of men.
+                  Morning is when I am awake and there is a dawn in me. Moral reform<app xml:id="walc02-app-0137">
+                     <lem>is</lem>
+                     <rdg wit="#wc_0a #wc_0b">and improvement are</rdg>
+                  </app> the effort to throw off sleep.<app xml:id="walc02-app-0138">
+                     <lem>sleep. Why</lem>
+                     <rdg wit="#wc_0a">sleep <del>&amp; somnolency.</del> How </rdg>
+                     <rdg wit="#wc_0b">sleep. <del>How</del>
+                        <add>Why</add>
+                     </rdg>
+                  </app> is it that men give so poor an account of their day if they have not been slumbering? They are
+                  not such poor calculators. If they had not been overcome with drowsiness they would have performed
+                  something. The millions are awake enough for physical labor; but only one in a million is awake enough
+                  for effective intellectual exertion, only one in a hundred millions to a<app xml:id="walc02-app-0139">
+                     <lem>poetic</lem>
+                     <rdg wit="#wc_0a">spiritual </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>spiritual</del>
+                        <add rendition="pencil">poetic</add>
+                     </rdg>
+                  </app> or divine life. To be awake is to be alive. <app xml:id="walc02-app-0140">
+                     <lem>I have never yet met a man who was quite awake. How could I have looked him in the face?</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">I have never yet met a man who was quite awake. How could
+                           I have looked him in the face?</add>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="15" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 15 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">15</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc02-app-0141">
+                  <lem>We must learn to reawaken and keep ourselves awake, not by mechanical aids, but by an infinite
+                     expectation of the dawn, which does not forsake us in our soundest sleep.</lem>
+                  <rdg wit="#wc_0a">My thoughts, which <add rendition="pencil">in one sense</add> are either the memory
+                     or the expectation of my actions are the causes which determine life and death </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>My thoughts, which in one sense, are either the memory or the expectation of my
+                        actions are <add>connected with</add> the causes which determine life and death</del>
+                     <add rendition="pencil">We must learn to reawaken and hold ourselves awake not by mechanical aids
+                        but by an infinite expectation of the dawn which does not forsake us in our soundest
+                     sleep</add>
+                  </rdg>
+               </app> I know of no more encouraging fact than the unquestionable ability of man to elevate his life by a
+               conscious endeavor. It is something to be able to paint a particular picture, or to carve a statue, and
+               so to make a few objects beautiful; but it is far more<app xml:id="walc02-app-0142">
+                  <lem>glorious</lem>
+                  <rdg wit="#wc_0a #wc_0b">sublime</rdg>
+               </app> to carve and paint the very atmosphere and medium through which we look, which morally we can do.
+               To affect the quality of the day, that is the highest of arts. Every man is tasked to make his life, even
+               in its details, worthy of the contemplation of his most elevated and critical hour. If we refused,<app xml:id="walc02-app-0143">
+                  <lem>or rather used up,</lem>
+                  <rdg wit="#wc_0a #wc_0b"><!-- [not in ms.]--></rdg>
+               </app> such paltry information as we get, the oracles would distinctly inform us how this might be done. </p>
+            
+            <p n="16" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 16 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">16</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a">Where I Lived, and What I Lived For 23 originally
+                  followed Where I Lived, and What I Lived For 16. Before he numbered the leaves, Thoreau canceled the
+                  first half of Where I Lived, and What I Lived For 23 (<quote>Time is but the stream … My
+                     instinct tells</quote>), which appeared on the verso of the leaf containing Where I Lived, and What
+                  I Lived For 16, added Where I Lived, and What I Lived For 17 on two new leaves (the first, #11), and
+                  recopied the first half of Where I Lived, and What I Lived For 23 on the verso of the second new
+                  leaf.</ab>
+               </note>
+                I went<app xml:id="walc02-app-0144">
+                  <lem>to the woods<anchor type="hn" xml:id="hn-02-043"/>
+                  </lem>
+                  <rdg wit="#wc_0a">down to the pond </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>down to the pond</del>
+                     <add>to the woods</add>
+                  </rdg>
+               </app> because I wished to live deliberately, to front only the essential facts of life, and see if I
+               could not learn what it had to teach, and not, when I came to die, discover that I had not lived. I did not<app xml:id="walc02-app-0145">
+                  <lem>wish</lem>
+                  <rdg wit="#wc_0a">want</rdg>
+                  <rdg wit="#wc_0b">
+                     <del>want</del>
+                     <add>wish</add>
+                  </rdg>
+               </app> to live what was not life, living is so dear; nor did I wish to practise resignation, unless it
+               was quite necessary. I wanted to live deep and suck out all the marrow of life, to live so sturdily and
+               Spartan-like as to put to rout all that was not life, to cut a broad swath and shave close, to drive life
+               into a corner,<app xml:id="walc02-app-0146">
+                  <lem>and reduce it to its lowest terms,</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">and reduce it to its lowest terms</add>,</rdg>
+               </app> and, if it proved to be mean, why then to get the whole and genuine meanness of it, and publish
+               its meanness to the<app xml:id="walc02-app-0147">
+                  <lem>world;</lem>
+                  <rdg wit="#wc_0a">world<del>, and throw it in the teeth of the gods</del>
+                     <del>
+                        <add>and throw it in the teeth of Him that made it</add>
+                     </del>
+                  </rdg>
+               </app> or if it were sublime, to know it by experience, and be able to give a true account of it in my
+               next excursion.<anchor type="hn" xml:id="hn-02-044"/> For<app xml:id="walc02-app-0148">
+                  <lem>most men, it appears</lem>
+                  <rdg wit="#wc_0a">all men it seems </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>all</del>
+                     <add>most</add> men it <del>seems</del>
+                     <add>appears</add>
+                  </rdg>
+               </app> to me, are in a strange uncertainty about it, whether it is of the devil or of God, and have <hi rend="style(italics)">somewhat hastily</hi>
+               <app xml:id="walc02-app-0149">
+                  <lem>concluded</lem>
+                  <rdg wit="#wc_0b">concluded however true it may be</rdg>
+               </app> that it is the chief end of man here to “glorify God and<app xml:id="walc02-app-0150">
+                  <lem>enjoy him forever."</lem>
+                  <rdg wit="#wc_0a">when there may be no enjoyment in it </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>when there may be no enjoyment in it</del>
+                     <add>
+                        <del>when if the truth were known they enjoy the devil a good deal more.</del> I am not
+                        satisfied with such a lumping up and glossing over the objects of life</add>
+                  </rdg>
+               </app>
+            </p>
+            
+            <p n="17" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 17 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">17</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>Still we live meanly, like ants; though the fable<anchor type="hn" xml:id="hn-02-045"/> tells us that we were long ago changed into men; like pygmies we fight with
+                  cranes;<anchor type="hn" xml:id="hn-02-046"/> it is error upon error, and clout upon clout,<anchor type="hn" xml:id="hn-02-047"/> and our best
+               virtue has for its occasion a superfluous and evitable wretchedness. Our life is frittered away by<app xml:id="walc02-app-0151">
+                  <lem>detail.</lem>
+                  <rdg wit="#wc_0a">detail. Its dish consists almost entirely of fixings and very little of the chicken’s
+                     meat</rdg>
+               </app> An honest man has hardly need to count more than his ten fingers, or in extreme cases he may add
+               his ten toes, and lump the rest. Simplicity, simplicity, simplicity!<anchor type="hn" xml:id="hn-02-048"/> I say, <app xml:id="walc02-app-0152">
+                  <lem>let your affairs be as two or three, and not a hundred or a thousand; instead of a million count
+                     half a dozen, and keep your accounts on your thumb nail.</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">let your affairs be as two or three, and not a hundred or a
+                        thousand</add> instead of a million count half a dozen, and keep your accounts on your
+                     thumbnail. <del>Let our affairs be as 2 or 3, and not a hundred or a thousand</del>
+                  </rdg>
+               </app> In the midst of this<app xml:id="walc02-app-0153">
+                  <lem>chopping sea of civilized life,</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">chopping sea which we call</add> civilization</rdg>
+               </app> such are the clouds and storms and quicksands and thousand-and-one items to be allowed for,<app xml:id="walc02-app-0154">
+                  <lem>that</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">that</add>
+                  </rdg>
+               </app> a man has to live, if he would not founder and go to the bottom and not make his port at all, by
+               dead reckoning,<anchor type="hn" xml:id="hn-02-049"/> and he must be a great calculator indeed who succeeds.
+               Simplify, simplify. Instead of three meals a day, if it be necessary eat but one; instead of a hundred
+               dishes, five; and reduce other things in proportion. Our life is like a German Confederacy,<anchor type="hn" xml:id="hn-02-050"/> made up of petty states,<app xml:id="walc02-app-0155">
+                  <lem>with its boundary forever fluctuating, so that</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">whose government is</add> forever fluctuating and</rdg>
+               </app> even a German cannot tell you how it is bounded at any moment. The nation itself, with all its so
+               called internal improvements, which, by the way, are all external and superficial, is just such an
+               unwieldy and overgrown establishment,<app xml:id="walc02-app-0156">
+                  <lem>cluttered</lem>
+                  <rdg wit="#wc_0a">
+                     <del>cluttered</del>
+                     <add rendition="pencil">encumbered</add>
+                  </rdg>
+               </app> with furniture and tripped up by its own traps, ruined by luxury and heedless expense, by want of calculation<app xml:id="walc02-app-0157">
+                  <lem>and a worthy aim,</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">and a worthy aim</add>,</rdg>
+               </app> as the million households in the land; and the only cure for it as for them is in a rigid economy,
+               a stern and more than Spartan simplicity of life and<app xml:id="walc02-app-0158">
+                  <lem>elevation</lem>
+                  <rdg wit="#wc_0a">
+                     <del>grandeur</del>
+                     <add rendition="pencil">elevation</add>
+                  </rdg>
+               </app> of purpose. It lives too fast. Men think that it is essential that the <hi rend="style(italics)">Nation</hi>
+               <app xml:id="walc02-app-0159">
+                  <lem>have commerce,</lem>
+                  <rdg wit="#wc_0a">
+                     <del>make lard oil</del>
+                     <add rendition="pencil">have commerce</add>
+                  </rdg>
+               </app> and export ice,<anchor type="hn" xml:id="hn-02-051"/> and talk through a telegraph,<anchor type="hn" xml:id="hn-02-052"/>
+               and ride thirty miles an hour,<anchor type="hn" xml:id="hn-02-053"/> without a doubt,<app xml:id="walc02-app-0160">
+                  <lem> whether <hi rend="style(italics)">they</hi> do or not;</lem>
+                  <rdg wit="#wc_0a">they<quote> do or not</quote>
+                     <add rendition="pencil">whether <hi rend="style(italics)">they</hi> do or not;</add>
+                  </rdg>
+               </app> but whether we should live like<app xml:id="walc02-app-0161">
+                  <lem>baboons</lem>
+                  <rdg wit="#wc_0a">chimpanzees or baboons</rdg>
+               </app> or like men, is a little uncertain. If we do not get out sleepers,<anchor type="hn" xml:id="hn-02-054"/> and forge rails, and devote days and nights to the work, but go to tinkering upon our
+                  <hi rend="style(italics)">lives</hi> to improve <hi rend="style(italics)">them</hi>, who will build
+               railroads? And if railroads are not built, how shall we get to heaven<anchor type="hn" xml:id="hn-02-055"/>
+               in season? But if we stay at home and mind our
+               business, who will want railroads?<app xml:id="walc02-app-0162">
+                  <lem>We do not ride on the railroad; it rides upon us.</lem>
+                  <rdg wit="#wc_0a">
+                     <add> We do not ride on the railroad; it rides upon us.</add>
+                  </rdg>
+               </app> Did you ever think what<app xml:id="walc02-app-0163">
+                  <lem>those</lem>
+                  <rdg wit="#wc_0a">these</rdg>
+               </app> sleepers are that underlie the railroad? Each one is a man, an Irish-man, or a Yankee man. The
+               rails are laid on them, and they are covered with sand, and the cars run smoothly over them. They are
+               sound sleepers,<anchor type="hn" xml:id="hn-02-056"/> I assure you. And every few years a new lot is laid down and run
+               over; so that, if<app xml:id="walc02-app-0164">
+                  <lem>some</lem>
+                  <rdg wit="#wc_0a">
+                     <del>a few</del>
+                     <add rendition="pencil">some</add>
+                  </rdg>
+               </app> have the pleasure of riding on a rail,<anchor type="hn" xml:id="hn-02-057"/>
+               <app xml:id="walc02-app-0165">
+                  <lem>others</lem>
+                  <rdg wit="#wc_0a">
+                     <del>the rest</del>
+                     <add rendition="pencil">others</add>
+                  </rdg>
+               </app> have the misfortune to be ridden upon. And when they run over a man that is walking in his sleep,
+               a supernumerary sleeper in the wrong position,<app xml:id="walc02-app-0166">
+                  <lem>and wake him up,</lem>
+                  <rdg wit="#wc_0a">
+                     <add> and wake him up</add>,</rdg>
+               </app> they suddenly stop the cars, and make a hue and cry about it, as if this were an exception. I am
+               glad to know that it takes a gang of men for every five miles to keep the sleepers down and level in
+               their beds as it is, for this is a sign that they may sometime get up again. </p>
+            
+            <p n="18" change="#wc_0a">
+               <seg n="18a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 18a written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">18a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a">Where I Lived, and What I Lived For 18-22 follows Sounds 2c in the
+                     following order: 21b, 21a, 21c, 18a, 22a, 18b, 19a, 19c, 19b, and 22b.</ab>
+               </note>Why should we live with such hurry and waste of life? We are determined to<app xml:id="walc02-app-0168">
+                     <lem>be starved</lem>
+                     <rdg wit="#wc_0a">
+                        <del>starve</del>
+                        <add rendition="pencil">be starved</add>
+                     </rdg>
+                  </app> before we are hungry. Men say that a stitch in time saves nine,<anchor type="hn" xml:id="hn-02-058"/> and so they take a thousand stitches today to save nine tomorrow. </seg>
+               
+               <seg n="18b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 18b written: A; rewritten: B, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">18b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B, E</seg>
+                     </ab>
+                     <ab change="#wc_0e">A fair copy was made of only <quote>on his farm in
+                        the outskirts of Concord … rudiment of an eye himself</quote>.</ab>
+                  </note>
+                   As for <hi rend="style(italics)">work</hi>, we haven’t any of any consequence.<app xml:id="walc02-app-0169">
+                     <lem>We</lem>
+                     <rdg wit="#wc_0a">Men </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>Men</del>
+                        <add>We</add>
+                     </rdg>
+                  </app> have the Saint Vitus’ dance,<anchor type="hn" xml:id="hn-02-059"/> and cannot possibly keep<app xml:id="walc02-app-0170">
+                     <lem>our heads still. If</lem>
+                     <rdg wit="#wc_0a">their heads <add>or limbs</add> still. Why, if </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>their</del>
+                        <add>our</add> heads still. <del>Why,</del> if</rdg>
+                  </app> I should only give a few pulls at the<app xml:id="walc02-app-0171">
+                     <lem>parish</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">parish</add>
+                     </rdg>
+                  </app> bell-rope,<app xml:id="walc02-app-0172">
+                     <lem>as for a fire,</lem>
+                     <rdg wit="#wc_0a">yonder, fiery-like </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>yonder. fiery-like</del>
+                        <add rendition="pencil">as for fire</add>
+                     </rdg>
+                  </app> that is, without setting the bell,<anchor type="hn" xml:id="hn-02-060"/> there is<app xml:id="walc02-app-0173">
+                     <lem>hardly</lem>
+                     <rdg wit="#wc_0a">
+                        <del>not</del>
+                        <add>hardly</add>
+                     </rdg>
+                  </app> a man on his farm in the outskirts of<app xml:id="walc02-app-0174">
+                     <lem>Concord,</lem>
+                     <rdg wit="#wc_0a">this town </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>this town</del>
+                        <add rendition="pencil">Concord</add>
+                     </rdg>
+                  </app> notwithstanding that press of engagements which was his excuse so many times this morning, nor
+                  a boy, nor a woman, I might almost say, but<app xml:id="walc02-app-0175">
+                     <lem>would</lem>
+                     <rdg wit="#wc_0a">will</rdg>
+                  </app> forsake all and follow that sound,<app xml:id="walc02-app-0176">
+                     <lem>not mainly to save property from the flames. but, if we will confess the truth, much
+                        more</lem>
+                     <rdg wit="#wc_0a">and not as we must all confess, if we are honest—to do a deed of charity or
+                        neighborliness, &amp; save property from the flames—but </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>and not, as we must all confess if we are honest, to do a deed of charity
+                           or</del>
+                        <del>
+                           <add rendition="pencil">not for the sake of</add>
+                        </del>
+                        <add rendition="pencil">not mainly from</add> neighborliness <del>and</del>
+                        <add rendition="pencil">or to</add> save property from the flames, but <add rendition="pencil">
+                           much more if we are honest and confess the truth</add>
+                     </rdg>
+                  </app> to see it burn, since burn it must, and we, be it known, did not set it on fire,<anchor type="hn" xml:id="hn-02-061"/> —or to see it put out, and have a hand in it, if
+                  that is done as handsomely; yes, even if it were the<app xml:id="walc02-app-0177">
+                     <lem>parish church itself</lem>
+                     <rdg wit="#wc_0a">very meeting house over our heads </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>very</del> meeting house <del>over our heads</del>
+                        <add>itself</add>
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>meeting house</del>
+                        <add rendition="pencil">parish church</add> itself</rdg>
+                  </app>. Hardly a man takes a half hour’s nap after dinner, but when he wakes he holds up his head and
+                  asks, “What’s the news?”<app xml:id="walc02-app-0178">
+                     <lem>as if the rest of mankind had stood his sentinels.</lem>
+                     <rdg wit="#wc_0a #wc_0b"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">as if the rest of mankind had stood his sentinels.</add>
+                        as if the rest of mankind had <del>been</del>
+                        <add>stood</add> his sentinels</rdg>
+                  </app> Some give directions to be waked every half hour, doubtless for no other purpose; and then, to
+                  pay for it, they tell what they have dreamed.<app xml:id="walc02-app-0179">
+                     <lem>After a night’s sleep the news is as indispensable as the breakfast.</lem>
+                     <rdg wit="#wc_0a #wc_0b"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">After a night’s sleep the news is as indispensable as the
+                           breakfast.</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc02-app-0180">
+                     <lem>“Pray tell me any thing new that has happened to a man any where on this globe”,—and he reads
+                        it over his coffee and rolls, that a man has had his eyes gouged out this morning on the Wachito
+                           River<anchor type="hn" xml:id="hn-02-062"/>
+                     </lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">Pray tell us anything new that has happened to any man in
+                           this world &amp; he reads it over hot coffee &amp; rolls, the latest news by
+                           telegraph that a man has had his eyes gouged out this morning on the Wachito
+                        river</add>
+                     </rdg>
+                     <rdg wit="#wc_0b">Pray tell me anything new that has happened to <del>any man in this world</del>
+                        <add>a man anywhere on this globe</add>—And he reads it over <del>hot</del>
+                        <add>his</add> coffee and rolls, the latest intelligence by telegraph, that a man has had his
+                        eyes gouged out this morning on the Wachito river</rdg>
+                  </app>; <app xml:id="walc02-app-0181">
+                     <lem>never dreaming the while that he lives in the dark unfathomed mammoth cave<anchor type="hn" xml:id="hn-02-063"/> of this world, and has but the rudiment of an eye himself.</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add>never dreaming the while that he lives in the dark unfathomed mammoth cave of
+                           this world, and has but the rudiment of an eye himself.</add>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="19" change="#wc_0a">
+               <seg n="19a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 19a written: A; rewritten: B, B, E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">19a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, B, E</seg>
+                  </ab>
+               </note>
+                  
+                   A fair copy was made of
+                  only <quote>For my part, I could … or one vessel wrecked, or one steam-</quote>. <app xml:id="walc02-app-0182">
+                     <lem>For my part, I could easily do without the post-office. I think that there are very few
+                        important communications made through it. To speak critically, I never received more than one or
+                        two letters in my life—I wrote this some years ago—that were worth the postage.<anchor type="hn" xml:id="hn-02-064"/> The penny-post<anchor type="hn" xml:id="hn-02-065"/> is, commonly, an institution through
+                        which you seriously offer a man that penny for his thoughts<anchor type="hn" xml:id="hn-02-066"/> which is so often safely offered in jest.</lem>
+                     <rdg wit="#wc_0a">I think that there are very few communications made through the Post Office </rdg>
+                     <rdg wit="#wc_b1">
+                        <add>For my part</add> I could <del>even</del> dispense with the Post Office if
+                        it were necessary. I think that there are very few important communications made through it.
+                           <add>To speak deliberately &amp; critically</add> I never received but one of two letters
+                        in my life that were worth the postage—much less the reading </rdg>
+                     <rdg wit="#wc_b2">For my part, I could dispense with the Post Office, if it were necessary. I think
+                        that there are very few important communications made through it. To speak deliberately and
+                        critically, I never received but one or two letters in my life that were worth the postage, much
+                        less the reading </rdg>
+                     <rdg wit="#wc_0e">For my part, I could easily do without the Post Office. I think that there are
+                        very few important communications made through it. To speak critically I never received but one
+                        or two letters in my life <add rendition="pencil">I wrote this some years ago</add> that were
+                        worth <del>much more than</del> the postage. <add rendition="pencil">The penny post is an
+                           institution through which you seriously offer a man that penny for his thoughts which is
+                           often safely offered in jest</add>
+                     </rdg>
+                  </app> And<app xml:id="walc02-app-0183">
+                     <lem>I am sure that</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_b1">
+                        <add>&amp; I may say without being extravagant that</add>
+                     </rdg>
+                  </app> I never read any memorable news in a<app xml:id="walc02-app-0184">
+                     <lem>newspaper.</lem>
+                     <rdg wit="#wc_0a">newspaper in my life. </rdg>
+                     <rdg wit="#wc_b1">newspaper <add>though I confess that in spirit in both of these cases like the
+                           rest of mankind I am but too ready to say that the smallest favors will be gratefully
+                           received.</add>
+                     </rdg>
+                     <rdg wit="#wc_b2">newspaper—<del>Though I confess that in spirit I am but too often ready to admit,
+                           like the rest of mankind that the smallest favors, in either of these forms, will be
+                           gratefully received.</del>
+                     </rdg>
+                  </app> If we <app xml:id="walc02-app-0185">
+                     <lem>read of one man</lem>
+                     <rdg wit="#wc_b1">have read <del>that</del>
+                        <add>of</add> one man <del>was</del>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc02-app-0186">
+                     <lem>robbed,</lem>
+                     <rdg wit="#wc_b2">
+                        <del>being</del> robbed</rdg>
+                  </app> or murdered, or killed by accident, or one house burned, or one vessel wrecked, or one
+                  steamboat blown up, or one cow run over on the Western Railroad,<anchor type="hn" xml:id="hn-02-067"/> or one mad dog killed, or one lot of grasshoppers in the winter,—we<app xml:id="walc02-app-0187">
+                     <lem>never need</lem>
+                     <rdg wit="#wc_b1 #wc_b2">need never</rdg>
+                  </app> read of another. One is enough. If you are acquainted with the principle, what do you care for
+                  a myriad instances and applications? To a philosopher all <hi rend="style(italics)">news</hi>,<app xml:id="walc02-app-0188">
+                     <lem>as it is called,</lem>
+                     <rdg wit="#wc_b1"><!-- [not in ms.]--></rdg>
+                  </app> is gossip, and<app xml:id="walc02-app-0189">
+                     <lem>they</lem>
+                     <rdg wit="#wc_b1 b2">those</rdg>
+                  </app> who edit and read it are old women over their<app xml:id="walc02-app-0190">
+                     <lem>tea</lem>
+                     <rdg wit="#wc_b1">tea. Uncle Sam is a man who presumes to tell you each day how many times he has
+                        stubbed his toes. No doubt such accidents do happen to a man, but let him wait at least till he
+                        stubs his nose before he <del>disturbs</del>
+                        <add>bores</add> his neighbors with the news</rdg>
+                     <rdg wit="#wc_b2">tea. <del>Uncle Sam is a man who presumes to tell you each day how many times he
+                           has stubbed his toes. No doubt such accidents do happen to a man, but let him wait at least
+                           till he stubbs his nose before he troubles his neighbors with his affairs</del>
+                     </rdg>
+                  </app>. Yet<app xml:id="walc02-app-0191">
+                     <lem>not a few</lem>
+                     <rdg wit="#wc_b1">
+                        <del>many</del>
+                        <add>not a few</add>
+                     </rdg>
+                  </app> are greedy<app xml:id="walc02-app-0192">
+                     <lem>after this gossip.</lem>
+                     <rdg wit="#wc_b1 #wc_b2">of such gossip as this.</rdg>
+                  </app> There was such a rush,<app xml:id="walc02-app-0193">
+                     <lem>as I</lem>
+                     <rdg wit="#wc_0a">I</rdg>
+                  </app> hear, the other day at one of the offices to learn the foreign news by the last arrival, <app xml:id="walc02-app-0194">
+                     <lem>that several large squares of plate glass belonging to the establishment were broken by the
+                        pressure,</lem>
+                     <rdg wit="#wc_0a">as broke several large squares of plate glass belonging to the establishment </rdg>
+                     <rdg wit="#wc_b2">
+                        <del>as broke</del>
+                        <add rendition="pencil">that</add> several large squares of plate glass belonging to the
+                        establishment <add rendition="pencil">were broken</add>
+                     </rdg>
+                  </app>—news which I seriously think a ready wit might write a twelvemonth or twelve years beforehand
+                  with sufficient accuracy. </seg>
+               
+               <seg n="19b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 19b written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">19b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab change="#wc_0a">Where I Lived, and What I Lived For 19b follows 19c
+                     and precedes 22b.</ab>
+                  </note>
+                   As for Spain, for instance, if you know how to throw in Don Carlos and the
+                  Infanta, and Don Pedro and Seville and Granada,<anchor type="hn" xml:id="hn-02-068"/> from time to time in the right proportions,—<app xml:id="walc02-app-0195">
+                     <lem>they may have changed the names a little since I saw the papers,</lem>
+                     <rdg wit="#wc_0a #wc_0b"><!-- [not in ms.]--></rdg>
+                  </app>—and serve up a bull-fight when other entertainments fail, it will be true to the letter, and
+                  give us as good an idea of the exact state or ruin of things in Spain as the most succinct and lucid
+                  reports under this head in the newspapers: <app xml:id="walc02-app-0196">
+                     <lem>and as for England, almost the last significant scrap of news from that quarter was the
+                        revolution of 1649;<anchor type="hn" xml:id="hn-02-069"/> and if you have learned the history of her crops for
+                        an average year, you never need attend to that thing again, unless your speculations are of a
+                        merely pecuniary character.</lem>
+                     <rdg wit="#wc_0a #wc_0b"><!-- [not in ms.]--></rdg>
+                  </app>
+               </seg>
+               
+               <seg n="19c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 19c written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">19c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab change="#wc_0a">Where I Lived, and What I Lived For 19c precedes
+                     19b.</ab>
+                  </note>
+                   If one may judge who rarely looks into the newspapers,<app xml:id="walc02-app-0197">
+                     <lem>nothing</lem>
+                     <rdg wit="#wc_0a">I should say that nothing </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>I should say that</del> nothing</rdg>
+                  </app> new does ever happen in foreign parts,<app xml:id="walc02-app-0198">
+                     <lem>a French revolution not excepted.</lem>
+                     <rdg wit="#wc_0a">
+                        <add> a French revolution not excepted.</add> This was written before the last
+                        French Revolution broke out—but a Revolution in France might be expected any day—and may even
+                        almost as well be described before as after the events. <add rendition="pencil">&amp; it
+                           would be no easier to tell <del>how</del> where it would end <del>at one time than
+                              another</del> after it was 5 years old than before it was born</add>
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>This was written before the last French Revolution broke out, but a
+                           revolution in France might be expected any day, and it would be as easy to tell where it
+                           would end before it <del>was born</del>
+                           <add rendition="pencil">began</add> as after it was five years old</del>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="20" change="#wc_0a">
+               <seg n="20a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 20a written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">20a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note>
+                  
+                   What news! how much more important to know what that is which was never
+                  old! “Kieou-pe-yu<anchor type="hn" xml:id="hn-02-070"/> (great dignitary
+                  of the state of Wei) sent a man to Khoung-tseu to know his news. Khoung-tseu caused the messenger to
+                  be seated near him, and questioned him in these terms: What is your master doing? The messenger
+                  answered with respect: My master desires to diminish the number of his faults, but he cannot<app xml:id="walc02-app-0199">
+                     <lem>accomplish it.<anchor type="hn" xml:id="hn-02-071"/>
+                     </lem>
+                     <rdg wit="#wc_0b">come to the end of them. <phr xml:lang="fr">[venir à bout]</phr>
+                        <note type="general" subtype="inline" resp="#clapper">The brackets in this passage are Thoreau’s.</note>
+                     </rdg>
+                  </app> The messenger being gone, the philosopher<app xml:id="walc02-app-0200">
+                     <lem>remarked:</lem>
+                     <rdg wit="#wc_0b">said</rdg>
+                  </app> What a worthy messenger! What a worthy messenger!”<anchor type="hn" xml:id="hn-02-072"/>
+               </seg>
+               
+               <seg n="20b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 20b written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">20b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab change="#wc_0a">Where I Lived, and What I Lived For 20b was inserted
+                     after Where I Lived, and What I Lived For 16.</ab>
+                  </note>
+                   The preacher, instead of vexing the ears of
+                  drowsy farmers on their day of rest at the end of the week,—for Sunday<anchor type="hn" xml:id="hn-02-073"/>
+                  <app xml:id="walc02-app-0201">
+                     <lem>is the</lem>
+                     <rdg wit="#wc_0a">always seemed to me like a</rdg>
+                     <rdg wit="#wc_0b"> always seemed to me like <del>a</del>
+                        <add rendition="pencil">the</add>
+                     </rdg>
+                  </app> fit conclusion of an ill-spent week, and not the fresh and brave beginning of a new one,—with
+                  this one other<app xml:id="walc02-app-0202">
+                     <lem>draggle-tail</lem>
+                     <rdg wit="#wc_0a">draggle tail and postponed affair </rdg>
+                     <rdg wit="#wc_0b">draggle-tail <del>and postponed affair</del>
+                     </rdg>
+                  </app> of a sermon, should<app xml:id="walc02-app-0203">
+                     <lem>shout with</lem>
+                     <rdg wit="#wc_0a">teach them with a </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>teach them with a</del>
+                        <add rendition="pencil">shout with</add>
+                     </rdg>
+                  </app> thundering voice,—“Pause! Avast!<anchor type="hn" xml:id="hn-02-074"/> Why so
+                  seeming fast,<app xml:id="walc02-app-0204">
+                     <lem>but</lem>
+                     <rdg wit="#wc_0b">
+                        <del>
+                           <add>Why so</add>
+                        </del>
+                        <add>but</add>
+                     </rdg>
+                  </app> deadly slow?”</seg>
+            </p>
+            
+            <p n="21" change="#wc_0a">
+               <seg n="21a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 21a written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">21a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note>
+                  
+                  <anchor type="hn" xml:id="hn-02-075"/> Shams and delusions are esteemed for soundest truths, while reality is<app xml:id="walc02-app-0205">
+                     <lem>fabulous.</lem>
+                     <rdg wit="#wc_0a">fabulous. We are not prepared for the truth</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="21b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 21b written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">21b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab change="#wc_0a">Where I Lived, and What I Lived For 21b follows
+                     Sounds 2c and precedes Where I Lived, and What I Lived For 21a.</ab>
+                  </note>
+                   If men would steadily
+                  observe realities only, and not allow themselves to be deluded, life, <app xml:id="walc02-app-0206">
+                     <lem>to compare it with such things as we know,</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add>to compare it with such things as we know</add>,</rdg>
+                  </app> would be like a fairy tale and the Arabian Nights' Entertainments. If we respected only what<app xml:id="walc02-app-0207">
+                     <lem>is</lem>
+                     <rdg wit="#wc_0a">
+                        <del>was</del>
+                        <add>is</add>
+                     </rdg>
+                  </app> inevitable and<app xml:id="walc02-app-0208">
+                     <lem>has</lem>
+                     <rdg wit="#wc_0a">
+                        <del>had</del>
+                        <add>has</add>
+                     </rdg>
+                  </app> a right to be, music and poetry would resound along the streets. When we are <app xml:id="walc02-app-0209">
+                     <lem>unhurried and wise,</lem>
+                     <rdg wit="#wc_0a">calm &amp; wise &amp; unhurried </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>calm and</del> wise and unhurried,</rdg>
+                  </app> we perceive that only great and worthy things have any permanent and absolute existence,—that
+                  petty fears and petty pleasures are but the shadow of the reality. <app xml:id="walc02-app-0210">
+                     <lem>This is always exhilarating and sublime.</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">This is always sublime and exhilarating</rdg>
+                  </app> By closing the eyes and slumbering, and consenting to be deceived by shows, men establish and
+                  confirm their daily life of routine and habit every where, which still is built on purely<app xml:id="walc02-app-0211">
+                     <lem> illusory foundations.</lem>
+                     <rdg wit="#wc_0a">imaginary foundations. <del>A more intimate a truer experience, a more practical
+                           wisdom teaches men that the trivial and commonplace are not real but apparent and superficial
+                           merely. The reality is sublime and exhilarating—if men would discriminate always and never be
+                           deluded by appearances, life would never be mean nor unworthy</del>
+                     </rdg>
+                     <rdg wit="#wc_0b">imaginary foundations.</rdg>
+                  </app>
+               </seg>
+               
+               <seg n="21c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 21c written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">21c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab change="#wc_0a">Where I Lived, and What I Lived For 21c follows 21a
+                     and precedes 18a. A leaf (#47) apparently was removed which contained <quote>present moment, and
+                        will never be more divine … at least could accomplish it.</quote> This part of Where I
+                     Lived, and What I Lived For 21c was copied on the verso of the leaf containing Where I Lived, and
+                     What I Lived For 19.</ab>
+                     <ab change="#wc_0a #wc_0b">
+                        <quote>I have read in a Hindoo book … it knows itself to be </quote>Brahme does not appear in
+                     the manuscript in A or in the original copying of B but is interlined in B.</ab>
+                  </note>
+                  
+                   Children,<anchor type="hn" xml:id="hn-02-076"/> who play life, discern its true law and relations more clearly than men, who
+                  fail to live it worthily, but who think<app xml:id="walc02-app-0212">
+                     <lem>that</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add>that</add>
+                     </rdg>
+                  </app> they are wiser by<app xml:id="walc02-app-0213">
+                     <lem>experience,</lem>
+                     <rdg wit="#wc_0a">experience. <del>All the gold all the silver we want is reality—This is sublime
+                           &amp; inspiring. Appearance whether fair or foul is equally shallow and
+                        dangerous</del>
+                     </rdg>
+                  </app> that is, by failure. I have read in,<app xml:id="walc02-app-0214">
+                     <lem>a Hindoo book,<anchor type="hn" xml:id="hn-02-077"/>
+                     </lem>
+                     <rdg wit="#wc_0b">
+                        <del>an old book</del>
+                        <add>a Hindoo book</add>,</rdg>
+                  </app> that “there was a king’s son, who, being expelled in infancy from his native city, was brought
+                  up by a forester, and, growing up to maturity in that state, imagined himself to belong to the
+                  barbarous race with which he lived. One of his father’s ministers having discovered him, revealed to
+                  him what he was, and the misconception of his character was removed, and he knew himself to be a
+                  prince. So soul,” <app xml:id="walc02-app-0215">
+                     <lem>continues the Hindoo philosopher,</lem>
+                     <rdg wit="#wc_0b"><!-- [not in ms.]--></rdg>
+                  </app> “from the circumstances in which it is placed, mistakes its own character, until the truth is
+                  revealed to it by some holy teacher, and then it knows itself to be <hi rend="style(italics)">Brahme</hi>.” I perceive that we inhabitants of<app xml:id="walc02-app-0216">
+                     <lem>New England</lem>
+                     <rdg wit="#wc_0a">Concord </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>Concord</del>
+                        <add>New England</add>
+                     </rdg>
+                  </app> live this mean life that we do because our vision does not penetrate the surface of things. We
+                  think that that <hi rend="style(italics)">is</hi> which <hi rend="style(italics)">appears</hi> to be. If
+                  a man should walk through<app xml:id="walc02-app-0217">
+                     <lem>this town</lem>
+                     <rdg wit="#wc_0a">the village </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>the village</del>
+                        <add rendition="pencil">this city</add>
+                     </rdg>
+                  </app> and see only the reality, where, think you, would<app xml:id="walc02-app-0218">
+                     <lem> the “Mill-dam”<anchor type="hn" xml:id="hn-02-078"/>
+                     </lem>
+                     <rdg wit="#wc_0b">
+                        <del>the "Mill-dam"</del>
+                        <add rendition="pencil">your state street</add>
+                     </rdg>
+                  </app> go to? If he should give us an account of the realities he beheld there, we should not
+                  recognize the place<app xml:id="walc02-app-0219">
+                     <lem>in</lem>
+                     <rdg wit="#wc_0a #wc_0b">by</rdg>
+                  </app> his description. Look at a<app xml:id="walc02-app-0220">
+                     <lem>meeting-house,</lem>
+                     <rdg wit="#wc_0b">
+                        <del>meeting house</del>
+                        <add rendition="pencil">church</add>
+                     </rdg>
+                  </app> or a court-house, or a jail, or a shop, or a dwelling-house, and say what<app xml:id="walc02-app-0221">
+                     <lem>that</lem>
+                     <rdg wit="#wc_0a">this </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>this</del>
+                        <add rendition="pencil">that</add>
+                     </rdg>
+                  </app> thing really is before a true gaze, and they would all go to pieces in your account of them.
+                  Men esteem truth remote, in the outskirts of the system, behind the farthest star, before Adam and
+                  after the last man. In eternity there is indeed something true and sublime. But all these times and
+                  places and occasions are now and here. God himself culminates in the present moment, and will never be
+                  more divine in the lapse of all the ages. And we are enabled to apprehend at all what is sublime and
+                  noble only by the perpetual instilling and drenching of the reality which surrounds us. The universe
+                  constantly and obediently answers to our conceptions; whether we travel fast or slow, the track is
+                  laid for<app xml:id="walc02-app-0222">
+                     <lem>us.</lem>
+                     <rdg wit="#wc_0a">us. <del>I think that the universe really needs no patching from us—and its Maker
+                           no condolence. Let us remember that God is well.</del>
+                     </rdg>
+                  </app> Let us spend our lives in conceiving<app xml:id="walc02-app-0223">
+                     <lem>then.</lem>
+                     <rdg wit="#wc_0b">then. The work will always answer to our conception</rdg>
+                  </app> The poet or the artist never yet had so fair and noble a design but some of his posterity at
+                  least could accomplish it. </seg>
+            </p>
+            
+            <p n="22" change="#wc_0a">
+               <seg n="22a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 22a written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">22a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note>
+                   Let us spend one<app xml:id="walc02-app-0224">
+                     <lem>day</lem>
+                     <rdg wit="#wc_0a">day <add rendition="pencil">at last</add>
+                     </rdg>
+                  </app> as deliberately as Nature, and not be thrown off the track<anchor type="hn" xml:id="hn-02-079"/> by every
+                  nutshell and mosquito’s wing that falls on the rails. Let us rise early and fast, or break fast,
+                  gently and without<app xml:id="walc02-app-0225">
+                     <lem>perturbation;</lem>
+                     <rdg wit="#wc_0b">perturbation. <del>What if the milkman does not come in season to whitewash our
+                           coffee—let us murmur an inward prayer that we may be sustained under this trial, and forget
+                           him</del>
+                     </rdg>
+                  </app> let company come and let company go, let the bells ring and the children cry,—determined to
+                  make a day of it. Why should we knock under and go with the stream? Let us not be upset and
+                  overwhelmed in that terrible rapid and whirlpool<anchor type="hn" xml:id="hn-02-080"/> called a dinner,
+                  situated in the meridian<anchor type="hn" xml:id="hn-02-081"/> shallows.
+                  Weather this danger and you are safe, for the rest of the way is down hill. With unrelaxed nerves,
+                  with morning vigor, sail by it, looking another way, tied to the mast like Ulysses.<anchor type="hn" xml:id="hn-02-082"/> If the engine whistles, let it whistle till it is hoarse for its
+                  pains. If the bell rings, why should we run? We will consider what kind of music<app xml:id="walc02-app-0226">
+                     <lem>they are</lem>
+                     <rdg wit="#wc_0a">
+                        <del>it is</del>
+                        <add rendition="pencil">they are</add>
+                     </rdg>
+                  </app> like. Let us settle ourselves, and work and wedge our feet downward through the mud and slush
+                  of opinion, and prejudice, and tradition, and delusion, and appearance, that alluvion which covers the
+                  globe, through<app xml:id="walc02-app-0227">
+                     <lem>Paris and London,</lem>
+                     <rdg wit="#wc_0b">London and Paris,</rdg>
+                  </app> through New York and Boston and<app xml:id="walc02-app-0228">
+                     <lem>Concord,</lem>
+                     <rdg wit="#wc_0b">
+                        <del>Concord</del>
+                        <add rendition="pencil">Worcester</add>
+                     </rdg>
+                  </app> through church and state, through poetry and philosophy and religion, till we come to a hard
+                  bottom and rocks in place, which we can call <hi rend="style(italics)">reality</hi>, and say, This is,
+                  and no mistake; and then begin, having a <hi rend="style(italics)">point d'appui</hi>,<anchor type="hn" xml:id="hn-02-083"/> below freshet and frost and fire, a
+                  place where you might found a wall or a state, or set a lamp-post safely, or perhaps a gauge, not a
+                     Nilometer,<anchor type="hn" xml:id="hn-02-084"/> but a Realometer, that future ages might know how deep a freshet of shams and
+                  appearances had gathered from time to time. </seg>
+               
+               <seg n="22b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Where I Lived, and What I Lived For 22b written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">2</seg>
+                        <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                        <seg type="paragraph">22b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab>Where I Lived, and What I Lived For 22b follows Where I Lived,
+                     and What I Lived For 19b and precedes Sounds 4.</ab>
+                  </note>
+                   If you stand right fronting and face to face
+                  to a fact, you will see the sun glimmer on both its surfaces, as if it were a cimeter,<anchor type="hn" xml:id="hn-02-085"/> and feel its sweet
+                  edge dividing you through the heart and marrow, and so you will happily conclude your mortal career.
+                  Be it life or death, we crave only reality. If we are really dying, let us hear the rattle in our
+                  throats and feel cold in the extremities; if we are alive, let us go about our<app xml:id="walc02-app-0229">
+                     <lem>business.</lem>
+                     <rdg wit="#wc_0a">business. I am glad to remember as I sit by my door that I too am a remote
+                        descendant of a heroic race of men of whom there is tradition—in one sense a fellow wanderer and
+                        survivor of Ulysses, for instance. My life passes amid the pines of New England. The pitch pine
+                        grows before my door unlike any <del>glyph</del>
+                        <del>
+                           <add>glyphic</add>
+                        </del>
+                        <add>symbol</add> I have seen sculpted or painted. Where are the heroes whose exploits shall
+                        appear to posterity sculptured on monuments amid such natural forms as these—as <add>we
+                           see</add> heroes and demigods amid the lotuses and palms of the east. What new marks shall we
+                           <del>add to</del>
+                        <add>make at</add> the Red Pipestone Quarry?</rdg>
+                  </app>
+                  <note type="general" resp="#clapper" ana="#wc_0b">B: this passage appears in Sounds 2c.</note>
+               </seg>
+            </p>
+            
+            <p n="23" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Where I Lived, and What I Lived For 23 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">2</seg>
+                     <seg type="chapterTitle">Where I Lived, and What I Lived For</seg>
+                     <seg type="paragraph">23</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a">Where I Lived, and What I Lived For 23 originally
+                  followed Where I Lived, and What I Lived For 16. Before Thoreau numbered the leaves, he canceled
+                     <quote>Time is but the stream … My instinct tells</quote>, which appeared on the verso of the
+                  leaf containing Where I Lived, and What I Lived For 16, added 17 on two new leaves (the first, #11),
+                  and recopied <quote>Time is but the stream … My instinct tells</quote> on the verso of the
+                  second new leaf.</ab>
+               </note>
+                Time is but the stream I go a-fishing in. I drink at it; but while I drink I
+               see the sandy bottom and detect how shallow it is. Its thin current<app xml:id="walc02-app-0230">
+                  <lem>slides</lem>
+                  <rdg wit="#wc_0a">glides</rdg>
+               </app> away, but eternity remains. I would drink deeper; fish in the sky, whose bottom is pebbly with
+               stars. <app xml:id="walc02-app-0231">
+                  <lem>I cannot count one. I know not the first letter of the alphabet. I have always been regretting
+                     that I was not as wise as the day I was born.<anchor type="hn" xml:id="hn-02-086"/> The intellect is a cleaver;
+                     it discerns and rifts its way into the secret of things. I do not wish to be any more busy with my
+                     hands than is necessary. My head is hands and feet. I feel all my best faculties concentrated in
+                     it. My instinct tells me that my head is an organ for burrowing, as some creatures use their snout
+                     and fore-paws, and with it I would mine and burrow my way through these hills.</lem>
+                  <rdg wit="#wc_a1">The Intellect is a cleaver; it discerns and splits &amp; rifts its way into the
+                     secret of things. I do not want to be more busy with my hands than is necessary—My head is my hands
+                     &amp; my feet—I feel all my faculties concentrated in it. My instinct tells me obscurely that
+                     my head is an organ for burrowing, as some creatures use their snout &amp; fore paws—and with
+                     it I would mine &amp; burrow my way through those hills. <del>I cannot count one—I know not the
+                        first letter of the alphabet. I have always been regretting that I was not as wise as the day I
+                        was born</del>
+                  </rdg>
+                  <rdg wit="#wc_a2">
+                     <add rendition="pencil">I cannot count one. I know not the first letter of the
+                        alphabet. I have always been regretting that I was not as wise as the day I was born</add> The
+                     Intellect is a cleaver; it discerns &amp; splits, and rifts its way into the secret of things.
+                     I do not wish to be any more busy with my hands than is necessary—My head is <add>my</add> hands
+                     &amp; <add>my</add> feet. I feel all my faculties concentrated in it. My instinct tells </rdg>
+                  <rdg wit="#wc_0b">I cannot count one. I know not the first letter of the alphabet. I have always been
+                     regretting that I was not as wise as the day I was born. The intellect is a cleaver; it discerns
+                     and splits and rifts its way into the secret of things. I do not wish to be any more busy with my
+                     hands than is necessary. My head is hands and feet. I feel all my <add rendition="pencil">best</add> faculties concentrated in it. My instinct tells me that my head is an organ for
+                     burrowing, as some creatures use their snout and fore paws, and with it I would mine and burrow my
+                     way through these hills.</rdg>
+               </app> I think<app xml:id="walc02-app-0232">
+                  <lem>that</lem>
+                  <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     <add/>I cannot count one. I know not the first letter of the alphabet. I have always been
+                     regretting that I was not as wise as the day I was born. The intellect is a cleaver; it discerns
+                     and rifts its way into the secret of things. I do not wish to be any more busy with my hands than
+                     is necessary. My head is hands and feet. I feel all my best faculties concentrated in it. My
+                     instinct tells me that my head is an organ for burrowing, as some creatures use their snout and
+                     fore-paws, and with it I would mine and burrow my way through these hills.</rdg>
+               </app> the richest vein is somewhere hereabouts; so by the divining rod<anchor type="hn" xml:id="hn-02-087"/> and thin
+               rising vapors I judge; and here I will begin to<app xml:id="walc02-app-0233">
+                  <lem>mine.</lem>
+                  <rdg wit="#wc_0a">mine. When I was fairly established in my house I sang this song, <quote>
+                        <lg>
+                           <l>I seek the Present Time,</l>
+                           <l>No other clime,</l>
+                           <l>Life is to-day,</l>
+                           <l>Not to sail another way,</l>
+                           <l>To Paris or to Rome,</l>
+                           <l>Or farther still from home.</l>
+                           <l>That man, whoe’er he is,</l>
+                           <l>Lives but a moral death,</l>
+                           <l>Whose life is not coeval</l>
+                           <l>With his breath.</l>
+                           <l>My feet forever stand</l>
+                           <l>On Concord fields,</l>
+                           <l>And I must live the life</l>
+                           <l>Which their soil yields.</l>
+                           <l>What are deeds done</l>
+                           <l>Away from home?</l>
+                           <l>What the best essay</l>
+                           <l>On the Ruins of Rome?</l>
+                           <l>The love of the new,</l>
+                           <l>The unfathomed blue,</l>
+                           <l>The wind in the wood,</l>
+                           <l>All fortune good,</l>
+                           <l>The sun-lit tree,</l>
+                           <l>The small chickadee,</l>
+                           <l>The dusty highways,</l>
+                           <l>What Scripture says,</l>
+                           <l>This pleasant weather</l>
+                           <l>And all signs together—</l>
+                           <l>The river’s meander,</l>
+                           <l>All things, in short,</l>
+                           <l>Forbid me to wander</l>
+                           <l>In deed or in thought,</l>
+                           <l>In cold or in drouth,</l>
+                           <l>Not seek the sunny South,</l>
+                           <l>But make the whole tour</l>
+                           <l>Of the sunny Present Hour.</l>
+                           <l>For here if thou fail,</l>
+                           <l>Where canst thou prevail,</l>
+                           <l>If you love not</l>
+                           <l>Your own land most,</l>
+                           <l>You’ll find nothing lovely</l>
+                           <l>Upon a distant coast.</l>
+                           <l>If you love not</l>
+                           <l>The latest sun-set,</l>
+                           <l>What is there in pictures</l>
+                           <l>Or old gems set?</l>
+                           <l>If no man should travel</l>
+                           <l>Till he had the means,</l>
+                           <l>There’d be little travelling</l>
+                           <l>For Kings or for Queens.</l>
+                           <l>The means! What are they?</l>
+                           <l>They are the wherewithal</l>
+                           <l>Great expenses to pay;—</l>
+                           <l>Life got, and some to spare,</l>
+                           <l>Great works on hand,</l>
+                           <l>And freedom from care.</l>
+                           <l>Plenty of time well spent,</l>
+                           <l>To use,—</l>
+                           <l>Clothes paid for, and no rent</l>
+                           <l>In your shoes;—</l>
+                           <l>Something to eat,</l>
+                           <l>And something to burn,</l>
+                           <l>And, above all, no need to return;—</l>
+                           <l>For they who come back,</l>
+                           <l>Say have they not failed,</l>
+                           <l>Wherever they’ve ridden</l>
+                           <l>Or steamed it, or sailed?</l>
+                           <l> All your grass hayed,—</l>
+                           <l> All your debts paid,— </l>
+                           <l> All your wills made?</l>
+                           <l>Then you might as well have stayed,</l>
+                           <l>For are you not dead,</l>
+                           <l>Only not buried?</l>
+                           <l>The way unto “Today,”</l>
+                           <l>The railroad to “Here,”</l>
+                           <l>They never’ll grade that way,</l>
+                           <l>Nor shorten it, I fear,</l>
+                           <l>There are plenty of depots</l>
+                           <l>All the world o’er,</l>
+                           <l>But not a single station</l>
+                           <l>At a man’s door;</l>
+                           <l>If we would get near</l>
+                           <l>To the secret of things,</l>
+                           <l>We shall not have to hear</l>
+                           <l>When the engine bell rings.</l>
+                        </lg>
+                     </quote>
+                  </rdg>
+               </app>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Reading</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of
+               New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
+                     Unported License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Students of <hi rend="style(italics)">ENG 390:
+                  Literature in the Digital Age</hi> at SUNY Geneseo using Text Encoding Initiative
+               (TEI) P5 XML Schema, using the Parallel Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and
+               includes critical apparatus laid out by Ronald Clapper, and annotations provided by
+               Ronald Clapper, J. Lyndon Shanley, and Walter Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised
+               edition of dissertation originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc03">
+      <body>
+         <div>
+            <head>Reading <note type="general" resp="#clapper" ana="#wc_0a">There is no chapter
+                  title.</note>
+               <note type="general" resp="#clapper" ana="#wc_0b #wc_0c">A fair copy was apparently
+                  made of the material from Reading 1-11 on leaves (#31-55) now missing.</note>
+            </head>
+
+            <p n="1" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 1 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>
+               <anchor type="hn" xml:id="hn-03-001"/>
+               <app xml:id="walc03-app-0001">
+                  <lem> With a little more deliberation in the choice of their pursuits, all men
+                     would perhaps become essentially students and observers, for certainly their
+                     nature and destiny are interesting to all alike. In accumulating property for
+                     ourselves or our posterity, in founding a family or a state, or acquiring fame
+                     even, we are mortal; but in dealing with truth we are immortal, and need fear
+                     no change nor accident. The oldest Egyptian or Hindoo philosopher raised a
+                     corner of the veil from the statue of the divinity;<anchor type="hn" xml:id="hn-03-002"/> and still the trembling robe remains raised, and I gaze
+                     upon as fresh a glory as he did, since it was I in him that was then so bold,
+                     and it is he in me that now reviews the vision. No dust has settled on that
+                     robe; no time has elapsed since that divinity was revealed. That time which we
+                     really improve, or which is improvable, is neither past, present, nor future. </lem>
+                  <rdg wit="#wc_0b #wc_0c"> With a little more deliberation in the choice of their
+                     pursuits, all men would perhaps become essentially students and observers, for
+                     certainly their nature and destiny are interesting to all alike. In
+                     accumulating property for ourselves or our posterity, in founding a family or a
+                     state, or acquiring fame even, we are mortal; but in dealing with truth we are
+                     immortal, and need fear no change nor accident. The oldest Egyptian or Hindoo
+                     philosopher raised a corner of the veil from the statue of the divinity;<anchor type="hn" xml:id="hn-03-003"/> and still the trembling robe remains raised,
+                     and I gaze upon as fresh a glory as he did, since it was I in him that was then
+                     so bold, and it is he in me that now reviews the vision. No dust has settled on
+                     that robe; no time has elapsed since that divinity was revealed. That time
+                     which we really improve, or which is improvable, is neither past, present, nor
+                     future. </rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">It seems as if with a little more reflection all
+                     men would be essentially students &amp; observers—For certainly his nature
+                     &amp; destiny are equally interesting to every man. <del>It is hard to tell if
+                        that time which we really improve is past present or future. I might say
+                        that the student always studies antiques. In our studies we do not look
+                        forward but backward into antiquity with redoubled pauses. Where is that
+                        lost first page of history? We have never found the literature that dated
+                        from antiquity sufficiently remote. The most adventurous student seeks the
+                        remotest antiquity—the history of a time, as it were, prior to time,—Or, if
+                        we prefer, such is the Protean character of things, we may say that he
+                        always interprets prophecies and oracles, and is interested solely in the
+                        future.—</del> In accumulating property for ourselves, or our posterity, in
+                     founding a family, or a state, or acquiring fame, we are mortal, but in dealing
+                     with truth we are immortal, and need fear no change nor accident.—The oldest
+                     Egyptian or Hindoo philosopher raised a corner of the veil from the statue of
+                        divinity,<anchor type="hn" xml:id="hn-03-004"/> and still the trembling robe
+                     remains raised, and I gaze upon as fresh a glory as he did, since it was I in
+                     him that was then so bold, and <add rendition="pencil">it is</add> he in me
+                     that now reviews the vision. No dust has settled upon that robe—no time has
+                     elapsed since that divinity was revealed. </rdg>
+               </app>
+            </p>
+
+
+            <p n="2" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 2 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">2</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc03-app-0002">
+                  <lem>My residence was more favorable, not only to thought, but to serious reading,
+                     than a university; and though I was beyond the range of the ordinary
+                     circulating library,<anchor type="hn" xml:id="hn-03-005"/> I had more than ever
+                     come within the influence of those books which circulate round the world, whose
+                     sentences were first written on bark, and are now merely copied from time to
+                     time on to linen paper. Says the poet Mîr Camar Uddîn Mast,<anchor type="hn" xml:id="hn-03-006"/> “Being seated to run through the region of the
+                     spiritual world; I have had this advantage in books. To be intoxicated by a
+                     single glass of wine; I have experienced this pleasure when I have drunk the
+                     liquor of the esoteric doctrines.”</lem>
+                  <rdg wit="#wc_0b #wc_0c">My residence was more favorable, not only to thought, but
+                     to serious reading, than a university; and though I was beyond the range of the
+                     ordinary circulating library,<anchor type="hn" xml:id="hn-03-007"/> I had more
+                     than ever come within the influence of those books which circulate round the
+                     world, whose sentences were first written on bark, and are now merely copied
+                     from time to time on to linen paper. Says the poet Mîr Camar Uddîn Mast,<anchor type="hn" xml:id="hn-03-008"/> “Being seated to run through the region of
+                     the spiritual world; I have had this advantage in books. To be intoxicated by a
+                     single glass of wine; I have experienced this pleasure when I have drunk the
+                     liquor of the esoteric doctrines.”</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> I kept <app xml:id="walc03-app-0003">
+                  <lem>Homer’s Iliad</lem>
+                  <rdg wit="#wc_0b #wc_0c">Homer’s Iliad</rdg>
+                  <rdg wit="#wc_0a">
+                     <del>a Homer</del>
+                     <add rendition="pencil">Homer's Iliad</add>
+                  </rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-03-009"/> on my table through the summer, though I <app xml:id="walc03-app-0004">
+                  <lem>looked</lem>
+                  <rdg wit="#wc_0b #wc_0c">looked</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">glanced</rdg>
+               </app> at his page <app xml:id="walc03-app-0005">
+                  <lem>only</lem>
+                  <rdg wit="#wc_0b #wc_0c">only</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> now and then. Incessant labor with my hands, <app xml:id="walc03-app-0006">
+                  <lem>at first, for I had my house to finish and my beans to hoe at the same
+                     time,</lem>
+                  <rdg wit="#wc_0b #wc_0c">at first, for I had my house to finish and my beans to
+                     hoe at the same time,</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>for I did work hard <del>while my beans were growing</del> having my house
+                        to finish and my beans to hoe at the same time</add>,</rdg>
+               </app> made more study impossible. Yet I sustained myself by the prospect of such
+               reading in <app xml:id="walc03-app-0007">
+                  <lem>future.</lem>
+                  <rdg wit="#wc_0b #wc_0c">future.</rdg>
+                  <rdg wit="#wc_0a">future. Here of course I could read the Iliad, if I would have
+                     books, as well as in Ionia, and not wish myself in Boston or New York—or London
+                     or Rome; in such a place as this rather Homer lived and sung. <add>Here I know
+                        that I am in good company—here is the world. Its centre and metropolis and
+                        all the poems of Asia and the laurels of Greece and the firs of the Arctic
+                        zones incline hither</add>
+                  </rdg>
+               </app> I read one or two shallow books of travel<anchor type="hn" xml:id="hn-03-010"/> in the intervals of my work, till that employment made me ashamed of myself, and I
+                  <app xml:id="walc03-app-0008">
+                  <lem>asked</lem>
+                  <rdg wit="#wc_0b #wc_0c">asked</rdg>
+                  <rdg wit="#wc_0a">asked myself</rdg>
+               </app> where it was then that <hi rend="style(italics)">I</hi> lived.</p>
+
+            <p n="3" change="#wc_0a">
+               <seg n="3a" change="#wc_0a"><note type="header" resp="#clapper">
+                     <ab type="string">Reading 3a written: A.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">3</seg>
+                        <seg type="chapterTitle">Reading</seg>
+                        <seg type="paragraph">3a</seg>
+                        <seg type="written">A</seg>
+                     </ab>
+                  </note> The student may read Homer or Æschylus<anchor type="hn" xml:id="hn-03-011"/> in the <app xml:id="walc03-app-0009">
+                     <lem>Greek</lem>
+                     <rdg wit="#wc_0b #wc_0c">Greek</rdg>
+                     <rdg wit="#wc_0a">original Greek</rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-03-012"/> without danger of dissipation or
+                  luxuriousness, for <app xml:id="walc03-app-0010">
+                     <lem>it implies that he</lem>
+                     <rdg wit="#wc_0b #wc_0c">it implies that he</rdg>
+                     <rdg wit="#wc_0a">to do so implies that he should</rdg>
+                  </app> in some measure emulate their heroes, and consecrate morning hours to their
+                  pages. The heroic books, <app xml:id="walc03-app-0011">
+                     <lem>even if</lem>
+                     <rdg wit="#wc_0b #wc_0c">even if</rdg>
+                     <rdg wit="#wc_0a">though</rdg>
+                  </app> printed in the character of our mother tongue, will always be in a language
+                  dead to degenerate times; and we must laboriously seek the meaning of each word
+                  and line, conjecturing a larger sense than common use permits out of what wisdom
+                  and valor and generosity we have. The modern cheap and fertile press, <app xml:id="walc03-app-0012">
+                     <lem>with all its translations,</lem>
+                     <rdg wit="#wc_0b #wc_0c">with all its translations,</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">
+                        <add>
+                           <del>even</del> with all its translations</add>,</rdg>
+                  </app> has done little to bring us nearer to the heroic writers of antiquity. They
+                  seem as solitary, and the letter in which they are printed as rare and curious, as
+                  ever. It is <app xml:id="walc03-app-0013">
+                     <lem>worth</lem>
+                     <rdg wit="#wc_0b #wc_0c">worth</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">even worth</rdg>
+                  </app> the expense of youthful days and costly hours, if you learn only some words
+                  of an ancient language, which are raised out of the trivialness of the street, to
+                  be perpetual suggestions and provocations. <app xml:id="walc03-app-0014">
+                     <lem>It is not in vain that the farmer remembers and repeats the few Latin
+                        words which he has heard.</lem>
+                     <rdg wit="#wc_0b #wc_0c">It is not in vain that the farmer remembers and
+                        repeats the few Latin words which he has heard.</rdg>
+                     <rdg wit="#wc_0a">
+                        <add>Every farmer loves to repeat the few Latin words he has learned.</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc03-app-0015">
+                     <lem>Men</lem>
+                     <rdg wit="#wc_0b #wc_0c">Men</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">We</rdg>
+                  </app> sometimes speak as if the study of the classics would at length make way
+                  for more modern and practical studies; but the <app xml:id="walc03-app-0016">
+                     <lem>adventurous</lem>
+                     <rdg wit="#wc_0b #wc_0c">adventurous</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">brave and adventurous</rdg>
+                  </app> student will always study classics, in whatever language they may be
+                  written and however ancient they may <app xml:id="walc03-app-0017">
+                     <lem>be.</lem>
+                     <rdg wit="#wc_0b #wc_0c">be.</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">be.—For they have to be studied in the same
+                        spirit that we study nature. They are <add>to a great extent</add> only
+                        valuable commentaries on her works,— <add>or in one sense her own finest
+                           fruits</add> never ancient, and never modern.</rdg>
+                  </app>
+                  <app xml:id="walc03-app-0018">
+                     <lem>For what</lem>
+                     <rdg wit="#wc_0b #wc_0c">For what</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">What</rdg>
+                  </app> are the classics but the noblest recorded <app xml:id="walc03-app-0019">
+                     <lem>thoughts</lem>
+                     <rdg wit="#wc_0b #wc_0c">thoughts</rdg>
+                     <rdg wit="#wc_0a">thought</rdg>
+                  </app> of man? They are the only oracles which <app xml:id="walc03-app-0020">
+                     <lem>are not decayed, and there</lem>
+                     <rdg wit="#wc_0b #wc_0c">are not decayed, and there</rdg>
+                     <rdg wit="#wc_0a">have not decayed. There</rdg>
+                  </app> are such answers to the most modern inquiry in them as Delphi and
+                     Dodona<anchor type="hn" xml:id="hn-03-013"/>
+                  <app xml:id="walc03-app-0021">
+                     <lem>never gave.</lem>
+                     <rdg wit="#wc_0a">
+                        <del>never gave</del>
+                        <add>could never have given.</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc03-app-0022">
+                     <lem>We might as well omit to study Nature because she is old.</lem>
+                     <rdg wit="#wc_0a"><!--not in manuscript--></rdg>
+                  </app> To read well, that is, to read true books in a true spirit, is a noble
+                  exercise, and one that will task the reader more than any exercise <app xml:id="walc03-app-0023">
+                     <lem>which</lem>
+                     <rdg wit="#wc_0a">
+                        <add>which</add>
+                     </rdg>
+                  </app> the customs of the day esteem. It requires a training such as the athletes
+                  underwent, the steady intention <app xml:id="walc03-app-0024">
+                     <lem>almost</lem>
+                     <rdg wit="#wc_0a">
+                        <add>almost</add>
+                     </rdg>
+                  </app>of the whole life to this object. </seg>
+               <seg n="3b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Reading 3b written: A.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">3</seg>
+                        <seg type="chapterTitle">Reading</seg>
+                        <seg type="paragraph">3b</seg>
+                        <seg type="written">A</seg>
+                     </ab>
+                  </note>Books must be read as deliberately and reservedly as they were written. </seg>
+               <seg n="3c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Reading 3c written: A.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">3</seg>
+                        <seg type="chapterTitle">Reading</seg>
+                        <seg type="paragraph">3c</seg>
+                        <seg type="written">A</seg>
+                     </ab>
+                  </note>It is not enough even to be able to speak the language <app xml:id="walc03-app-0025">
+                     <lem>of that nation by</lem>
+                     <rdg wit="#wc_0a">in</rdg>
+                  </app>which they are written, for there is a memorable interval between the <app xml:id="walc03-app-0026">
+                     <lem>spoken and the written</lem>
+                     <rdg wit="#wc_0b #wc_0c">spoken and the written</rdg>
+                     <rdg wit="#wc_0a">written and the spoken</rdg>
+                  </app> language, the <app xml:id="walc03-app-0027">
+                     <lem>language heard and the language read.</lem>
+                     <rdg wit="#wc_0b #wc_0c">language heard and the language read.</rdg>
+                     <rdg wit="#wc_0a">read and the language heard.</rdg>
+                  </app> The one is commonly <app xml:id="walc03-app-0028">
+                     <lem>transitory,</lem>
+                     <rdg wit="#wc_0b #wc_0c">transitory,</rdg>
+                     <rdg wit="#wc_0a">transient,</rdg>
+                  </app> a sound, a tongue, a dialect merely, almost brutish, and we learn it
+                  unconsciously, like the brutes, of our mothers. The other is the maturity and
+                  experience of <app xml:id="walc03-app-0029">
+                     <lem>that;</lem>
+                     <rdg wit="#wc_0b #wc_0c">that;</rdg>
+                     <rdg wit="#wc_0a">this;</rdg>
+                  </app> if that is our mother tongue, that this is <app xml:id="walc03-app-0030">
+                     <lem>our father tongue,</lem>
+                     <rdg wit="#wc_0b #wc_0c">our father tongue,</rdg>
+                     <rdg wit="#wc_0a">
+                        <del>our father tongue,</del>
+                        <del>
+                           <add>the language of the father of men in respect to which all men but
+                              lisp and are infants</add>
+                        </del>
+                        <add rendition="pencil">our intellectual father tongue</add>
+                     </rdg>
+                  </app> a reserved and select expression, <app xml:id="walc03-app-0031">
+                     <lem>too</lem>
+                     <rdg wit="#wc_0b #wc_0c">too</rdg>
+                     <rdg wit="#wc_0a">which is too</rdg>
+                  </app> significant to be heard by the ear, <app xml:id="walc03-app-0032">
+                     <lem>which we must be born again in order to speak.<anchor type="hn" xml:id="hn-03-014"/>
+                     </lem>
+                     <rdg wit="#wc_0b #wc_0c">which we must be born again in order to speak.<anchor type="hn" xml:id="hn-03-015"/>
+                     </rdg>
+                     <rdg wit="#wc_0a">
+                        <del>It does not wait to be heard, but is content with its own truth. The
+                           one is natural and convenient, the other is divine and instinctive</del>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="3d" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Reading 3d written: A.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">3</seg>
+                        <seg type="chapterTitle">Reading</seg>
+                        <seg type="paragraph">3d</seg>
+                        <seg type="written">A</seg>
+                     </ab>
+                  </note>The <app xml:id="walc03-app-0033">
+                     <lem>crowds</lem>
+                     <rdg wit="#wc_0b #wc_0c">crowds</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">
+                        <del>herd</del>
+                        <del>
+                           <add>mass</add>
+                        </del>
+                        <add>crowds</add>
+                     </rdg>
+                  </app> of men who merely <hi rend="style(italics)">spoke</hi> the Greek and Latin
+                  tongues in the middle ages were not entitled by the accident of <app xml:id="walc03-app-0034">
+                     <lem>birth</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">
+                        <del>birth</del>
+                        <add>their birth and age</add>
+                     </rdg>
+                  </app> to <hi rend="style(italics)">read</hi> the works of genius written in those
+                  languages; for these were not written in that Greek or Latin <app xml:id="walc03-app-0035">
+                     <lem resp="#clapper">which they knew,</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">peculiarly,</rdg>
+                  </app>
+                  <app xml:id="walc03-app-0036">
+                     <lem>but in the select language of literature.</lem>
+                     <rdg wit="#wc_0b #wc_0c">but in the select language of literature.</rdg>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">but in the select language of literature.</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc03-app-0037">
+                     <lem>They had not learned the nobler dialects of Greece and Rome,</lem>
+                     <rdg wit="#wc_0b #wc_0c">They had not learned the nobler dialects of Greece and
+                        Rome,</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">The men who <add>then</add> glibly spoke the
+                        language of the Roman and the Greek, for their mother-tongue, did not learn
+                        their nobler dialects,</rdg>
+                  </app> but the very materials on which they were written were waste paper to them,
+                     <app xml:id="walc03-app-0038">
+                     <lem>and</lem>
+                     <rdg wit="#wc_0b #wc_0c">and</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">while</rdg>
+                  </app> they prized instead a cheap contemporary <app xml:id="walc03-app-0039">
+                     <lem>literature.</lem>
+                     <rdg wit="#wc_0b #wc_0c">literature.</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">
+                        <del>learning</del>
+                        <add rendition="pencil">literature</add>. The classics were virtually
+                        forgotten and lost. <del>So distinct are the spoken &amp; the written
+                           language</del>.</rdg>
+                  </app> But when the several nations of <app xml:id="walc03-app-0040">
+                     <lem>Europe</lem>
+                     <rdg wit="#wc_0b #wc_0c">Europe</rdg>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">modern</add> Europe</rdg>
+                  </app> had acquired <app xml:id="walc03-app-0041">
+                     <lem>distinct though rude written languages of their own, sufficient for the
+                        purposes of their rising literatures, then first learning revived, and
+                        scholars were enabled to discern from that remoteness the treasures of
+                        antiquity.</lem>
+                     <rdg wit="#wc_0b #wc_0c">distinct though rude written languages of their own,
+                        sufficient for the purposes of their rising literatures, then first learning
+                        revived, and scholars were enabled to discern from that remoteness the
+                        treasures of antiquity.</rdg>
+                     <rdg wit="#wc_0a">
+                        <del>rude original languages sufficient for conversation and the daily
+                           intercourse of life</del>
+                        <add rendition="pencil">distinct though ill-compounded and rude languages of
+                           their own sufficient for conversation and an infant literature of their
+                           own</add> then first learning revived, and scholars <del>who were seers
+                           in their kind arose, who could</del>
+                        <add rendition="pencil">were enabled to</add> discern from <del>this remote
+                           standpoint</del>
+                        <add rendition="pencil">that remoteness</add> the treasures of antiquity;
+                           <del>and works of genius first began to be read, and perhaps found their
+                           truest <add>&amp; fittest</add> audience when their language could no
+                           longer be spoken anywhere</del>.</rdg>
+                  </app>
+                  <app xml:id="walc03-app-0042">
+                     <lem>What the Roman and Grecian</lem>
+                     <rdg wit="#wc_0b #wc_0c">What the Roman and Grecian</rdg>
+                     <rdg wit="#wc_0a">What <add rendition="pencil">even</add> the <add rendition="pencil">Roman and Grecian</add>
+                     </rdg>
+                  </app> multitude could not <hi rend="style(italics)">hear</hi>, after the lapse of
+                  ages a few scholars <hi rend="style(italics)">read</hi>,<anchor type="hn" xml:id="hn-03-016"/> and a few scholars only are still reading <app xml:id="walc03-app-0043">
+                     <lem>it.</lem>
+                     <rdg wit="#wc_0b #wc_0c">it.</rdg>
+                     <rdg wit="#wc_0a">them.</rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="4" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 4 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc03-app-0044">
+                  <lem>However much we may admire the orator’s occasional bursts of eloquence,</lem>
+                  <rdg wit="#wc_0b #wc_0c">However much we may admire the orator’s occasional bursts
+                     of eloquence,</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">Admire as we will the occasional sudden burst of
+                        eloquence in the orator—<add>it seems to me that</add>
+                     </add>,</rdg>
+               </app> the noblest written words are <app xml:id="walc03-app-0045">
+                  <lem>commonly</lem>
+                  <rdg wit="#wc_0b #wc_0c">commonly</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>commonly</add>
+                  </rdg>
+               </app> as far behind or <app xml:id="walc03-app-0046">
+                  <lem>above</lem>
+                  <rdg wit="#wc_0b #wc_0c">above</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">beyond</rdg>
+               </app> the fleeting spoken language as the firmament with its stars is behind the
+               clouds. <hi rend="style(italics)">There</hi> are the stars, and they who can may read
+               them. The astronomers forever comment on and observe them. They are not exhalations
+               like our daily colloquies and vaporous breath. <app xml:id="walc03-app-0047">
+                  <lem>What is called eloquence in the forum is commonly found to be rhetoric in the
+                     study.</lem>
+                  <rdg wit="#wc_0b #wc_0c">What is called eloquence in the forum is commonly found
+                     to be rhetoric in the study.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>When I ask myself whether any unpremeditated speech or conversation of
+                        equal length, even by the wisest of mankind and the writers of books, would
+                        abide the myriad and impartial tests of time, which some rare and wonderful
+                        books have so triumphantly withstood, I cannot doubt the justice of this
+                        distinction</del>
+                     <add rendition="pencil">What is called eloquence in the forum is commonly found
+                        to be rhetoric in the study</add>.</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-03-017"/>
+               <app xml:id="walc03-app-0048">
+                  <lem>The orator yields to the inspiration of a transient occasion, and speaks to
+                     the mob before him, to those who can <hi rend="style(italics)">hear</hi> him;
+                     but the writer, whose more equable life is his occasion, and who would be
+                     distracted by the event and the crowd which inspire the orator, speaks to the
+                     intellect and health of mankind, to all in any age who can <hi rend="style(italics)">understand</hi> him.</lem>
+                  <rdg wit="#wc_0b #wc_0c">The orator yields to the inspiration of a transient
+                     occasion, and speaks to the mob before him, to those who can <hi rend="style(italics)">hear</hi> him; but the writer, whose more equable life
+                     is his occasion, and who would be distracted by the event and the crowd which
+                     inspire the orator, speaks to the intellect and health of mankind, to all in
+                     any age who can <hi rend="style(italics)">understand</hi> him.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">The eloquence of the <del>speaker</del>
+                        <add rendition="pencil">orator</add> who yields to the inspiration of a
+                        transient occasion can <del>hardly</del>
+                        <add rendition="pencil">rarely</add> be compared for deep and permanent
+                        effects with that of the writer whose life is his occasion and whose
+                        audience is the intellect and heart of mankind. So much finer and purer as
+                        well as more durable and salutary is commonly the influence of the
+                        latter—thus that event and thing inward which are the source of inspiration
+                        to the orator are oftenest the cause of distraction and confusion to the
+                        writer.</add>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="5" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 5 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc03-app-0049">
+                  <lem> No wonder that Alexander carried the Iliad with him<anchor type="hn" xml:id="hn-03-018"/> on his expeditions in a precious casket. A written word
+                     is the choicest of relics. It is something at once more intimate with us and
+                     more universal than any other work of art. It is the work of art nearest to
+                     life itself. It may be translated into every language, and not only be read but
+                     actually breathed from all human lips;—not be represented on canvas or in
+                     marble only, but be carved out of the breath of life itself. The symbol of an
+                     ancient man’s thought becomes a modern man’s speech. Two thousand summers have
+                     imparted to the monuments of Grecian literature, as to her marbles, only a
+                     maturer golden and autumnal tint, for they have carried their own serene and
+                     celestial atmosphere into all lands to protect them against the corrosion of
+                     time. Books are the treasured wealth of the world and the fit inheritance of
+                     generations and nations. Books, the oldest and the best, stand naturally and
+                     rightfully on the shelves of every cottage. They have no cause of their own to
+                     plead, but while they enlighten and sustain the reader his common sense will
+                     not refuse them. Their authors are a natural and irresistible aristocracy in
+                     every society, and, more than kings or emperors, exert an influence on mankind.
+                     When the illiterate and perhaps scornful trader has earned by enterprise and
+                     industry his coveted leisure and independence, and is admitted to the circles
+                     of wealth and fashion, he turns inevitably at last to those still higher but
+                     yet inaccessible circles of intellect and genius, and is sensible only of the
+                     imperfection of his culture and the vanity and insufficiency of all his riches,
+                     and further proves his good sense by the pains which be takes to secure for his
+                     children that intellectual culture whose want he so keenly feels; and thus it
+                     is that he becomes the founder of a family. </lem>
+                  <rdg wit="#wc_0a"> A <add>written</add> word <del>fitly written</del> is the
+                        <del>most</del> choice<add>st</add>
+                     <del>and select of things</del><add>of relics</add>. No wonder that Alexander
+                     carried the Iliad with him<anchor type="hn" xml:id="hn-03-020"/> on his
+                     expeditions in a precious casket. It <del>has</del>
+                     <add>is</add>something at once more intimate with us and more universal than
+                     any other work of art. <add rendition="pencil">It is the work of art nearest to
+                        life itself.</add> It may be translated into every language, and <add>not
+                        only be read, but, though it is <del>different from</del> not speech<del>it
+                           may</del> be</add> breathed from every human mouth, and become anew
+                        <add>to some extent</add> the product <del>as it were of our physical
+                        organs, as its sense is recognized by our intellectual ones</del>
+                     <add>of humbler organs</add>
+                     <del>It is the work of art nearest to life itself. Such are the traces of
+                        Zoroaster &amp; Confucius &amp; Moses, indelible on the sands of the
+                        remotest times</del> There are no monuments of antiquity comparable to the
+                     Classics <add>and the Scriptures</add> for interest and importance. <del>It is
+                        not necessary that the scholar should be an antiquarian to study them, for
+                        these works of art have such an immortality as the works of nature, and are
+                        modern at the same time that they are ancient, like the sun and stars,</del>
+                     and <add>they</add> occupy <del>by right</del>
+                     <add>rightfully</add> no small share of the present hour. <del>As we are told,
+                        for instance, that “the serene sky and the brilliant sun of Greece merely
+                        communicate to the marble of Paros and Pentelicus a golden tint, resembling
+                        that of ripe corn, or the autumnal foliage,” while in other climates “stone
+                        of the purest white soon turns black, or of a greenish hue,” so time
+                        lends</del>
+                     <add rendition="pencil">so time has lent</add>
+                     <add>2000 summers have imparted</add> to the <del>pure</del>monuments of
+                     Grecian literature <add rendition="pencil">as to her marbles</add> only a
+                        <del>golden and mature</del>
+                     <del>
+                        <add>maturer golden</add>
+                     </del>
+                     <add>maturer golden and</add>
+                     <add rendition="pencil">autumnal tint.</add>
+                     <del>The poetry of the Greeks wears even now after the lapse of more than 2000
+                        summers only a cereal and autumnal hue. Enveloped still, as it were, in the
+                        inspiration which first breathed it, it carries its</del>
+                     <add>for they have carried their</add> own serene &amp; celestial atmosphere
+                     into all lands to protect them against the corrosions of time. Books are the
+                     treasured wealth of the world, and the fit inheritance of generations &amp; of
+                     nations. Books are the oldest &amp; the best stand naturally and rightfully on
+                     the shelves of every cottage. They do not have to plead their cause—but while
+                     they enlighten the reader the common sense of men will not refuse them. -
+                        <del>The authors of great books, dead or alive, are an invisible upper class
+                        and aristocracy in every civilized society, who</del>
+                     <add>Their authors are a natural and irresistible aristocracy in every society
+                        and more than kings or emperors</add> exert the last and greatest influence
+                        <add rendition="pencil">on mankind</add>
+                     <add>When the illiterate and scornful rustic <add rendition="pencil">who
+                           is</add> destined to be the founder of a family has earned <add>by his
+                           industry &amp; enterprise</add> his imagined leisure and independence
+                           <del>by his industry &amp; enterprise</del> and is admitted to the
+                        circles of wealth &amp; fashion, he turns inevitably at last to those still
+                        higher and yet inaccessible circles of intellect &amp; Genius &amp; is
+                        sensible only of the imperfection of his culture &amp; the vanity and
+                        insufficiency of all his riches, and further proves his good sense by the
+                        pains which he takes to secure for his children that intellectual culture
+                        whose want he so keenly feels. And who shall say that the foundations of
+                        genius are not thus laid because the poet is born a poet does not prove that
+                        his ancestors have not contributed to make him such.</add>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="6" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 6 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">6</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+                  <ab change="#wc_0a">"They only talk of forgetting them…hope to scale heaven at
+                     last" does not appear in the manuscript.</ab>
+               </note> Those who have not learned to read the ancient classics in the language in
+               which they were written must have a very imperfect knowledge of the history of the
+               human race; <app xml:id="walc03-app-0050">
+                  <lem>for</lem>
+                  <rdg wit="#wc_0b #wc_0c">for</rdg>
+                  <rdg wit="#wc_0a">for of these after all</rdg>
+               </app> it is remarkable that no transcript of them has ever been made into any <app xml:id="walc03-app-0051">
+                  <lem>modern</lem>
+                  <rdg wit="#wc_0b #wc_0c">modern</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> tongue, unless our civilization itself <app xml:id="walc03-app-0052">
+                  <lem>may be regarded as such a transcript. Homer has never yet been printed in
+                        English,<anchor type="hn" xml:id="hn-03-021"/> nor Æschylus, nor Virgil
+                     even,</lem>
+                  <rdg wit="#wc_0b #wc_0c">may be regarded as such a transcript. Homer has never yet
+                     been printed in English,<anchor type="hn" xml:id="hn-03-022"/> nor Æschylus,
+                     nor Virgil even,</rdg>
+                  <rdg wit="#wc_0a">be <add>regarded as to some extent</add> a transcript. Homer
+                        <del>was never to my knowledge</del>
+                     <add>has never yet been</add> printed in English,<anchor type="hn" xml:id="hn-03-023"/> nor <del>Socrates</del>
+                     <add>Æschylus</add>—nor <del>Horace</del>
+                     <add>Virgil</add> even. <del>These great Geniuses and wits who have rendered
+                        memorable a remote period of the world's history</del> — <del>now almost in
+                        its early age</del>
+                  </rdg>
+               </app> —works as refined, as solidly done, and as beautiful <app xml:id="walc03-app-0053">
+                  <lem>almost</lem>
+                  <rdg wit="#wc_0b #wc_0c">almost</rdg>
+                  <rdg wit="#wc_0a">
+                     <add>almost</add>
+                  </rdg>
+               </app> as the morning itself; <app xml:id="walc03-app-0054">
+                  <lem>for</lem>
+                  <rdg wit="#wc_0b #wc_0c">for</rdg>
+                  <rdg wit="#wc_0a">I think that</rdg>
+               </app> later writers, say what we will of their genius, have <app xml:id="walc03-app-0055">
+                  <lem>rarely, if ever</lem>
+                  <rdg wit="#wc_0b #wc_0c">rarely, if ever</rdg>
+                  <rdg wit="#wc_0a">
+                     <del>never</del>
+                     <add>rarely if ever</add>
+                  </rdg>
+               </app> equalled the elaborate <app xml:id="walc03-app-0056">
+                  <lem>beauty and finish and the lifelong and heroic literary labors of the
+                     ancients</lem>
+                  <rdg wit="#wc_0b #wc_0c">beauty and finish and the lifelong and heroic literary
+                     labors of the ancients</rdg>
+                  <rdg wit="#wc_0a">
+                     <del>
+                        <add>finish &amp;</add>
+                     </del> beauty <add rendition="pencil">&amp; finish</add>
+                     <del>and wonderful</del>
+                     <add rendition="pencil">the confidence and</add> skill in the steady and
+                     equable excercise of their art, <add rendition="pencil">&amp;</add> the
+                     life-long, <add rendition="pencil">&amp;</add> heroic <del>
+                        <add rendition="pencil">literary</add>
+                     </del> labors <del>&amp; literary architecture</del> of the ancients</rdg>
+               </app>. They only talk of forgetting them who never knew them. It will be soon enough
+               to forget them when we have the learning and the genius which will enable us to
+               attend to and appreciate them. That age will be rich indeed when those relics which
+               we call Classics, and the still older and more than classic but even less known
+               Scriptures of the nations, shall have still further accumulated, when the
+                  Vaticans<anchor type="hn" xml:id="hn-03-024"/> shall be filled with Vedas and
+               Zendavestas and Bibles,<anchor type="hn" xml:id="hn-03-025"/> with Homers and Dantes
+               and Shakspeares, and all the centuries to come shall have successively deposited
+               their trophies in the forum of the world. By such a pile we may hope to scale heaven
+               at last.<anchor type="hn" xml:id="hn-03-026"/>
+            </p>
+
+            <p n="7" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 7 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">7</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+                  <ab change="#wc_0a">Reading 7 follows Reading 11.</ab>
+               </note>
+               <app xml:id="walc03-app-0057">
+                  <lem>The works of the great poets have never yet been read by mankind, for only
+                     great poets can read them. They have only been read as the multitude read the
+                     stars, at most astrologically, not astronomically.</lem>
+                  <rdg wit="#wc_0b #wc_0c">The works of the great poets have never yet been read by
+                     mankind, for only great poets can read them. They have only been read as the
+                     multitude read the stars, at most astrologically, not astronomically.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> Most men have learned to read to serve a paltry convenience, as they have
+               learned to cipher in order to keep accounts and not be cheated in trade; but of
+               reading as a noble intellectual exercise they know little or nothing; yet this only
+               is reading, <app xml:id="walc03-app-0058">
+                  <lem>in a high sense,</lem>
+                  <rdg wit="#wc_0b #wc_0c">in a high sense,</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">properly speaking,</rdg>
+               </app> not that which lulls <app xml:id="walc03-app-0059">
+                  <lem>us</lem>
+                  <rdg wit="#wc_0b #wc_0c">us</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">&amp; soothes</rdg>
+               </app> as a luxury and suffers the nobler faculties to sleep the while, but what we
+               have to stand on tiptoe to read and devote our most alert and wakeful hours <app xml:id="walc03-app-0060">
+                  <lem>to.</lem>
+                  <rdg wit="#wc_0b #wc_0c">to.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">to—have to gird up our robes and train ourselves
+                     for—as the wrestler is trained for the combat.</rdg>
+               </app>
+            </p>
+
+            <p n="8" change="#wc_base">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 8 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">8</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>
+               <app xml:id="walc03-app-0061">
+                  <lem>I think that having learned our letters we should read the best that is in
+                     literature, and not be forever repeating our a b abs,<anchor type="hn" xml:id="hn-03-027"/> and words of one syllable, in the fourth or fifth
+                     classes, sitting on the lowest and foremost form<anchor type="hn" xml:id="hn-03-028"/> all our lives. Most men are satisfied if they read or
+                     hear read, and perchance have been convicted by the wisdom of one good book,
+                     the Bible, and for the rest of their lives vegetate and dissipate their
+                     faculties in what is called easy reading. There is a work in several volumes in
+                     our Circulating Library entitled Little Reading,<anchor type="hn" xml:id="hn-03-029"/> which I thought referred to a town of that name<anchor type="hn" xml:id="hn-03-030"/> which I had not been to. There are those who,
+                     like cormorants and ostriches,<anchor type="hn" xml:id="hn-03-031"/> can digest
+                     all sorts of this, even after the fullest dinner of meats and vegetables, for
+                     they suffer nothing to be wasted. If others are the machines to provide this
+                     provender, they are the machines to read it. They read the nine thousandth tale
+                     about Zebulon and Sophronia,<anchor type="hn" xml:id="hn-03-032"/> and how they
+                     loved as none had ever loved before, and neither did the course of their true
+                     love run smooth,<anchor type="hn" xml:id="hn-03-033"/>—at any rate, how it did
+                     run and stumble, and get up again and go on! how some poor unfortunate got up
+                     onto a steeple,<anchor type="hn" xml:id="hn-03-034"/> who had better never have
+                     gone up as far as the belfry; and then, having needlessly got him up there, the
+                     happy novelist rings the bell for all the world to come together and hear, O
+                     dear! how he did get down again! For my part, I think that they had better
+                     metamorphose all such aspiring heroes of universal noveldom into man
+                     weathercocks, as they used to put heroes among the constellations, and let them
+                     swing round there till they are rusty, and not come down at all to bother
+                     honest men with their pranks. The next time the novelist rings the bell I will
+                     not stir though the meeting-house burn down. “The Skip of the Tip-Toe-Hop, a
+                     Romance of the Middle Ages,<anchor type="hn" xml:id="hn-03-035"/> by the
+                     celebrated author of ‘Tittle-Tol-Tan,’<anchor type="hn" xml:id="hn-03-036"/> to
+                     appear in monthly parts; a great rush; don't all come together.”<anchor type="hn" xml:id="hn-03-037"/> All this they read with saucer eyes, and
+                     erect and primitive curiosity, and with unwearied gizzard, whose corrugations
+                     even yet need no sharpening, just as some little four-year-old bencher<anchor type="hn" xml:id="hn-03-038"/> his two-cent gilt-covered edition of
+                     Cinderella,—without any improvement, that I can see, in the pronunciation, or
+                     accent, or emphasis, or any more skill in extracting or inserting the moral.
+                     The result is dulness of sight, a stagnation of the vital circulations, and a
+                     general deliquium and sloughing off of all the intellectual faculties. This
+                     sort of gingerbread is baked daily and more sedulously than pure wheat or
+                     rye-and-Indian in almost every oven,<anchor type="hn" xml:id="hn-03-039"/> and
+                     finds a surer market.</lem>
+                  <rdg wit="#wc_0a #wc_0b #wc_0c" resp="#clapper"><!--not in manuscript--></rdg>
+               </app>
+               <app>
+                  <lem>
+                     <lb/> <!--Paragraph break in Princeton edition was inferred, being 'over' the turn of a page Matt.-->
+                  </lem>
+               </app>
+            </p>
+
+            <p n="9" change="#wc_0a">
+               <seg n="9a" change="#wc_base">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Reading 9a [not in manuscript].</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">3</seg>
+                        <seg type="chapterTitle">Reading</seg>
+                        <seg type="paragraph">9a</seg>
+                        <anchor type="not-in-MS"/>
+                     </ab>
+                  </note>
+                  <app xml:id="walc03-app-0062">
+                     <lem>The best books are not read even by those who are called good readers.
+                        What does our Concord culture amount to? There is in this town, with a very
+                        few exceptions, no taste for the best or for very good books even in English
+                        literature, whose words all can read and spell. Even the college-bred and so
+                        called liberally educated men here and elsewhere have really little or no
+                        acquaintance with the English classics; and as for the recorded wisdom of
+                        mankind, the ancient classics and Bibles, which are accessible to all who
+                        will know of them, there are the feeblest efforts any where made to become
+                        acquainted with them. I know a woodchopper, of middle age,<anchor type="hn" xml:id="hn-03-053"/> who takes a French paper, not for news as he says,
+                        for he is above that, but to “keep himself in practice,” he being a Canadian
+                        by birth; and when I ask him what he considers the best thing he can do in
+                        this world, he says, beside this, to keep up and add to his English. This is
+                        about as much as the college bred generally do or aspire to do, and they
+                        take an English paper for the purpose. One who has just come from reading
+                        perhaps one of the best English books will find how many with whom he can
+                        converse about it? Or suppose he comes from reading a Greek or Latin classic
+                        in the original, whose praises are familiar even to the so called
+                        illiterate; he will find nobody at all to speak to, but must keep silence
+                        about it. Indeed, there is hardly the professor in our colleges, who, if he
+                        has mastered the difficulties of the language, has proportionally mastered
+                        the difficulties of the wit and poetry of a Greek poet, and has any sympathy
+                        to impart to the alert and heroic reader; and as for the sacred Scriptures,
+                        or Bibles of mankind, who in this town can tell me even their titles? Most
+                        men do not know that any nation but the Hebrews have had a scripture. A man,
+                        any man, will go considerably out of his way to pick up a silver dollar; but
+                        here are golden words, which the wisest men of antiquity have uttered, and
+                        whose worth the wise of every succeeding age have assured us of;—and yet we
+                        learn to read</lem>
+
+                     <rdg wit="#wc_0a #wc_0b #wc_0c" resp="#clapper">
+                        <!--not in ms-->
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="9b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Reading 9b written: A.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">3</seg>
+                        <seg type="chapterTitle">Reading</seg>
+                        <seg type="paragraph">9b</seg>
+                        <seg type="written">A</seg>
+                     </ab>
+                     <ab change="#wc_0a">Reading 9b follows three missing leaves (#29-33).</ab>
+                  </note> only as far as Easy Reading,<anchor type="hn" xml:id="hn-03-056"/> the
+                  primers and class-books,<anchor type="hn" xml:id="hn-03-057"/> and when we leave
+                  school, the “Little Reading,” and story books, which are for boys and beginners;
+                  and our reading, our conversation and thinking, are all on a very <app xml:id="walc03-app-0063">
+                     <lem>low level,</lem>
+                     <rdg wit="#wc_0b #wc_0c">low level,</rdg>
+                     <rdg wit="#wc_0a" resp="#clapper">low <del>and inferior</del> level <del>—low
+                           statured &amp; feeble and</del>
+                     </rdg>
+                  </app> worthy only of pygmies and manikins.</seg>
+            </p>
+
+            <p n="10" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 10 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">10</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>I aspire to be acquainted with wiser men than this our Concord soil has
+               produced, whose names are hardly known here. Or shall I hear the name of Plato and
+               never read his book? As if Plato were my townsman and I never saw him,—my next
+               neighbor and I never heard him speak or attended to the wisdom of his words. But how
+               actually is it? His Dialogues, which contain what was immortal in him, lie on the
+               next shelf, and yet I never read <app xml:id="walc03-app-0064">
+                  <lem>them.</lem>
+                  <rdg wit="#wc_0b #wc_0c">them.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">them <add>I describe my own case
+                     here</add>.</rdg>
+               </app> We are underbred and low-lived and illiterate; and in this respect I confess I
+               do not make any very broad distinction between the illiterateness of <app xml:id="walc03-app-0065">
+                  <lem>my townsman</lem>
+                  <rdg wit="#wc_0b #wc_0c">my townsman</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>my townsman</del>
+                     <add rendition="pencil">him</add>
+                  </rdg>
+               </app> who cannot read at all, and the illiterateness of him who has learned to read
+               only what is for children and feeble intellects. We should be as good as the worthies
+               of antiquity, but partly by first knowing how good they were. We are a race of
+                  tit-men,<anchor type="hn" xml:id="hn-03-058"/> and soar but little higher in our
+               intellectual flights than the columns of the daily paper. </p>
+
+            <p n="11" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 11 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">11</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc03-app-0066">
+                  <lem>It is not all books that are as dull as their readers.</lem>
+                  <rdg wit="#wc_0b #wc_0c">It is not all books that are as dull as their
+                     readers.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> There are <app xml:id="walc03-app-0067">
+                  <lem>probably</lem>
+                  <rdg wit="#wc_0b #wc_0c">probably</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> words addressed to our condition <app xml:id="walc03-app-0068">
+                  <lem>exactly,</lem>
+                  <rdg wit="#wc_0b #wc_0c">exactly,</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>exactly,</add>
+                  </rdg>
+               </app> which, if we could <app xml:id="walc03-app-0069">
+                  <lem>really</lem>
+                  <rdg wit="#wc_0b #wc_0c">really</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>really</add>
+                  </rdg>
+               </app> bear and understand, would be <app xml:id="walc03-app-0070">
+                  <lem>more salutary than</lem>
+                  <rdg wit="#wc_0b #wc_0c">more salutary than</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">as salutary as</rdg>
+               </app> the morning or the spring to our lives, and possibly put a new aspect on the
+               face of things <app xml:id="walc03-app-0071">
+                  <lem>for us.</lem>
+                  <rdg wit="#wc_0b #wc_0c">for us.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>for us.</add>
+                  </rdg>
+               </app> How many a man has dated a new era in his <app xml:id="walc03-app-0072">
+                  <lem>life</lem>
+                  <rdg wit="#wc_0b #wc_0c">life</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">life, <del>or a second birth as it were</del>
+                  </rdg>
+               </app> from the reading of a book.<anchor type="hn" xml:id="hn-03-059"/> The book
+               exists for us <app xml:id="walc03-app-0073">
+                  <lem>perchance</lem>
+                  <rdg wit="#wc_0b #wc_0c">perchance</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">perchance</add>
+                  </rdg>
+               </app> which will explain our miracles and reveal new ones. The at present
+               unutterable things we <app xml:id="walc03-app-0074">
+                  <lem>may</lem>
+                  <rdg wit="#wc_0b #wc_0c">may</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>shall</del>
+                     <add>may</add>
+                  </rdg>
+               </app> find somewhere uttered. <app xml:id="walc03-app-0075">
+                  <lem>These same questions that disturb and puzzle and confound us have in their
+                     turn occurred to all the wise men; not one has been omitted; and each has
+                     answered them, according to his ability, by his words and his life. Moreover,
+                     with wisdom we shall learn liberality.</lem>
+                  <rdg wit="#wc_0b #wc_0c">These same questions that disturb and puzzle and confound
+                     us have in their turn occurred to all the wise men; not one has been omitted;
+                     and each has answered them, according to his ability, by his words and his
+                     life. Moreover, with wisdom we shall learn liberality.</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>Moreover with wisdom we shall learn liberality.</del> These same questions
+                     that disturb &amp; puzzle &amp; confound us—have in their turn occurred to all
+                     the wise men—not one has been omitted, and each has answered them, according to
+                     his ability in his words &amp; his life. <del>They have had the same problems
+                        to solve.</del>— <add>Moreover with wisdom we shall learn
+                     liberality</add>.</rdg>
+               </app> The solitary hired man on a farm in the outskirts of Concord, who has had his
+               second birth<anchor type="hn" xml:id="hn-03-060"/> and peculiar religious experience,
+               and is driven as he <app xml:id="walc03-app-0076">
+                  <lem>believes</lem>
+                  <rdg wit="#wc_0b #wc_0c">believes</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">thinks</rdg>
+
+               </app> into the silent gravity and exclusiveness by his faith, may think it is not
+               true; but Zoroaster,<anchor type="hn" xml:id="hn-03-061"/> thousands of years ago,
+               travelled the same road and had the same experience; but he, being wise, knew it to
+               be universal, and treated <app xml:id="walc03-app-0077">
+                  <lem>his neighbors</lem>
+                  <rdg wit="#wc_0b #wc_0c">his neighbors</rdg>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>men</del>
+                     <add rendition="pencil">his neighbors</add>
+                  </rdg>
+               </app> accordingly, and is even said to have invented and established worship among
+               men. Let him humbly commune with Zoroaster then, and, through the liberalizing
+               influence of all the worthies, with Jesus Christ himself, and let “our church” go by
+               the board.<anchor type="hn" xml:id="hn-03-062"/>
+            </p>
+
+            <p n="12" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Reading 12 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">3</seg>
+                     <seg type="chapterTitle">Reading</seg>
+                     <seg type="paragraph">12</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>We boast that we belong to the nineteenth century and are making the most
+               rapid strides of any nation. But consider how little this village does for its own
+               culture. I do not wish to flatter my townsmen, nor to be flattered by them, for that
+               will not advance either of us. We need to be provoked,—goaded like oxen, as we are,
+               into a trot. We have a comparatively decent system of common schools, schools for
+               infants only; but excepting the half-starved Lyceum in the winter,<anchor type="hn" xml:id="hn-03-063"/> and latterly the puny beginning of a library suggested by the
+                  state,<anchor type="hn" xml:id="hn-03-064"/> no school for ourselves. We spend
+               more on almost any article of bodily aliment or ailment than on our mental aliment.
+               It is time that we had uncommon schools,<anchor type="hn" xml:id="hn-03-065"/> that
+               we did not leave off our education when we begin to be men and women. It is time that
+               villages were universities, and their elder inhabitants the fellows of universities,
+               with leisure—if they are, indeed, so well off—to pursue liberal studies the rest of
+               their lives. Shall the world be confined to one Paris or one Oxford forever? Cannot
+               students be boarded here and get a liberal education under the skies of Concord? Can
+               we not hire some Abelard<anchor type="hn" xml:id="hn-03-066"/> to lecture to us?
+               Alas! what with foddering the cattle and tending the store, we are kept from school
+               too long, and our education is sadly neglected. In this country, the village should
+               in some respects take the place of the nobleman of Europe. It should be the patron of
+               the fine arts. It is rich enough. It wants only the magnanimity and refinement. It
+               can spend money enough on such things as farmers and traders value, but it is thought
+               Utopian to propose spending money for things which more intelligent men know to be of
+               far more worth. This town has spent seventeen thousand dollars on a town-house, thank
+               fortune or politics,<anchor type="hn" xml:id="hn-03-067"/> but probably it will not
+               spend so much on living wit, the true meat to put into that shell, in a hundred
+               years. The one hundred and twenty-five dollars<anchor type="hn" xml:id="hn-03-068"/>
+               annually subscribed for a Lyceum in the winter is better spent than any other equal
+               sum raised in the town. If we live in the nineteenth century, why should we not enjoy
+               the advantages which the nineteenth century offers? Why should our life be in any
+               respect provincial? If we will read newspapers, why not skip the gossip of Boston and
+               take the best newspaper in the world at once?—not be sucking the pap of “neutral
+               family” papers,<anchor type="hn" xml:id="hn-03-069"/> or browsing “Olive-Branches”
+               here in New England.<anchor type="hn" xml:id="hn-03-070"/> Let the reports of all the
+               learned societies come to us, and we will see if they know any thing. Why should we
+               leave it to Harper &amp; Brothers and Redding &amp; Co.<anchor type="hn" xml:id="hn-03-071"/> to select our reading?<anchor type="hn" xml:id="hn-03-072"/>
+               As the nobleman of cultivated taste surrounds himself with whatever conduces to his
+               culture,—genius—learning—wit—books—paintings—statuary—music—philosophical
+               instruments, and the like; so let the village do,—not stop short at a pedagogue, a
+               parson, a sexton, a parish library, and three selectmen,<anchor type="hn" xml:id="hn-03-073"/> because our pilgrim forefathers<anchor type="hn" xml:id="hn-03-074"/> got through a cold winter once on a bleak rock with these. To
+               act collectively is according to the spirit of our institutions; and I am confident
+               that, as our circumstances are more flourishing, our means are greater than the
+               nobleman’s. New England can hire all the wise men in the world to come and teach her,
+               and board them round the while,<anchor type="hn" xml:id="hn-03-075"/> and not be
+               provincial at all. That is the <hi rend="style(italics)">uncommon</hi> school we
+               want. Instead of noblemen, let us have noble villages of men. If it is necessary,
+               omit one bridge over the river, go round a little there, and throw one arch at least
+               over the darker gulf of ignorance which surrounds us. </p>
+         </div>
+      </body>
+   </text>
+</TEI>

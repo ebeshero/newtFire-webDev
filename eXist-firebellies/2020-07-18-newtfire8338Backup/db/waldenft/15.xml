@@ -1,0 +1,1455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Winter Animals</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</p>
+               </licence>
+            </availability>          
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY Geneseo using Text Encoding
+            Initiative (TEI) P5 XML Schema, using the Parallel Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and includes critical apparatus
+               laid out by Ronald Clapper, and annotations provided by Ronald Clapper, J. Lyndon Shanley, and Walter
+               Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised edition of dissertation
+               originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc15">
+      <body>
+         <div>
+            <head>Winter Animals</head>
+            
+            <p n="1" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 1 written: F; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0f">Winter Animals” follows “House-Warming” and precedes
+                  “Former Inhabitants; and Winter Visitors.” The title “Animals” is inserted at the top of the original
+                  leaf containing Winter Animals 1. The title “Winter Animals” appears at the top of the leaf containing
+                  the fair copy of Winter Animals 1.</ab>
+               </note>
+               <anchor type="hn" xml:id="hn-15-001"/>
+                WHEN the ponds were firmly frozen, they afforded not only <app xml:id="walc15-app-0001">
+                  <lem>new and shorter routes</lem>
+                  <rdg wit="#wc_f1">
+                     <del>a</del> new and shorter <del>route</del>
+                     <add>routes</add>
+                  </rdg>
+               </app> to many points, but new views from their <app xml:id="walc15-app-0002">
+                  <lem>surfaces</lem>
+                  <rdg wit="#wc_f1">midst </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>midst</del>
+                     <add>surfaces</add>
+                  </rdg>
+               </app> of the familiar landscape around them. <app xml:id="walc15-app-0003">
+                  <lem>When</lem>
+                  <rdg wit="#wc_f1">
+                     <add>Sometimes</add> When </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>Sometimes</del> when</rdg>
+               </app> I crossed Flint’s Pond, <app xml:id="walc15-app-0004">
+                  <lem>after it was</lem>
+                  <rdg wit="#wc_f1">
+                     <del>the first time this winter, it being</del>
+                     <add>after it was</add>
+                  </rdg>
+               </app> covered with snow, though I had often paddled about and skated over it, it<app xml:id="walc15-app-0005">
+                  <lem>was</lem>
+                  <rdg wit="#wc_f1">
+                     <del>was</del>
+                     <add>appeared</add>
+                  </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>appeared</del>
+                     <add>was</add>
+                  </rdg>
+               </app> so unexpectedly wide and so strange that I could think of nothing but Baffin’s Bay.<anchor type="hn" xml:id="hn-15-002"/> The Lincoln hills rose up around me at the extremity of a snowy plain, in which I did not
+               remember to have stood before; and <app xml:id="walc15-app-0006">
+                  <lem>the fishermen,</lem>
+                  <rdg wit="#wc_f1">
+                     <add>in misty weather</add> the fishermen</rdg>
+                  <rdg wit="#wc_f2">
+                     <del>in misty weather</del> the fishermen</rdg>
+               </app> at an indeterminable distance <app xml:id="walc15-app-0007">
+                  <lem>over the ice,</lem>
+                  <rdg wit="#wc_f2">
+                     <del>over the ice</del>
+                  </rdg>
+               </app> moving slowly<app xml:id="walc15-app-0008">
+                  <lem>about</lem>
+                  <rdg wit="#wc_f1">about <del>like sealers</del>
+                  </rdg>
+               </app> with their wolfish dogs, <app xml:id="walc15-app-0009">
+                  <lem>passed for sealers or Esquimaux,<anchor type="hn" xml:id="hn-15-003"/> or in misty weather loomed like fabulous creatures,</lem>
+                  <rdg wit="#wc_f1">loomed <del>up</del> like <del>something</del> fabulous <del>and incredible</del>
+                     <add rendition="pencil">creatures <del>of northern mythology</del>
+                     </add>
+                  </rdg>
+                  <rdg wit="#wc_f2">
+                     <add rendition="pencil">passed for sealers or Esquimaux, or in misty weather</add>
+                     loomed like fabulous creatures</rdg>
+               </app> and I did not know whether they<app xml:id="walc15-app-0010">
+                  <lem>were</lem>
+                  <rdg wit="#wc_f1">
+                     <del>would prove</del>
+                     <add>were</add>
+                  </rdg>
+               </app> giants or pygmies. I took this course when I went to lecture<anchor type="hn" xml:id="hn-15-004"/> in Lincoln in the evening,
+               travelling in no road and passing no house between my own hut<anchor type="hn" xml:id="hn-15-005"/> and the
+               lecture <app xml:id="walc15-app-0011">
+                  <lem>room.</lem>
+                  <rdg wit="#wc_f1">room <add rendition="pencil">2 or 3 miles distant<del>, for there was no house
+                           between</del>
+                     </add>
+                  </rdg>
+                  <rdg wit="#wc_f2">room <del>2 or 3 miles distant</del>
+                  </rdg>
+               </app> In Goose Pond,<anchor type="hn" xml:id="hn-15-006"/> which lay in my <app xml:id="walc15-app-0012">
+                  <lem>way,</lem>
+                  <rdg wit="#wc_f1 #wc_f2">way to Flint’s</rdg>
+               </app> a colony of muskrats dwelt, and raised their cabins high above the ice, though none could be seen
+               abroad when I crossed it. Walden, being like the rest usually bare of snow, <app xml:id="walc15-app-0013">
+                  <lem>or with only shallow and interrupted drifts on it,</lem>
+                  <rdg wit="#wc_f1">
+                     <add rendition="pencil">or with only shallow &amp; interrupted drift flakes on
+                        it</add>
+                  </rdg>
+                  <rdg wit="#wc_f2">or with only shallow &amp; interrupted <del>drift flakes</del>
+                     <add>drifts</add> on it</rdg>
+               </app> was my yard,<anchor type="hn" xml:id="hn-15-007"/> where I
+               could walk freely when the snow was <app xml:id="walc15-app-0014">
+                  <lem>nearly</lem>
+                  <rdg wit="#wc_f1"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_f2">
+                     <add>nearly</add>
+                  </rdg>
+               </app> two feet deep on a level <app xml:id="walc15-app-0015">
+                  <lem>elsewhere</lem>
+                  <rdg wit="#wc_f1">in the woods and fields </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>in the woods and fields</del>
+                     <add>elsewhere</add>
+                  </rdg>
+               </app> and the villagers were confined to their streets. There, far from the village street, and except
+               at very long intervals, from the jingle of sleigh-bells, I slid and skated, as in a vast moose-yard well
+               trodden, overhung by oak woods and solemn pines bent down with snow or bristling with icicles. </p>
+            
+            <p n="2" change="#wc_0a">
+               <seg n="2a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 2a written: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">2a</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note>For sounds in winter nights, <app xml:id="walc15-app-0016">
+                     <lem>and often in winter days,</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">and often in winter days</add>,</rdg>
+                  </app> I heard the forlorn but melodious note of <app xml:id="walc15-app-0017">
+                     <lem>a hooting owl</lem>
+                     <rdg wit="#wc_0f">the <add rendition="pencil">hooting</add> owl <del>of which I have
+                        spoken</del>
+                     </rdg>
+                  </app> indefinitely far; such a <app xml:id="walc15-app-0018">
+                     <lem>sound</lem>
+                     <rdg wit="#wc_0f">sound <del>
+                           <add rendition="pencil">seemingly</add>
+                        </del>
+                     </rdg>
+                  </app> as the frozen earth would yield if struck with a suitable plectrum, the very <hi rend="style(italics)">lingua vernacula</hi>
+                  <anchor type="hn" xml:id="hn-15-008"/> of Walden Wood, and quite familiar to me at last, though I never saw the bird
+                  while it was <app xml:id="walc15-app-0019">
+                     <lem>making it.</lem>
+                     <rdg wit="#wc_0f">making it<del>, and I am not <add rendition="pencil">quite</add> sure whether it
+                           was a cat or a horned owl. It is usually called the hooting owl</del>
+                     </rdg>
+                  </app> I seldom opened my door in a<app xml:id="walc15-app-0020">
+                     <lem>winter</lem>
+                     <rdg wit="#wc_0f">winter <del>or even a summer</del>
+                     </rdg>
+                  </app> evening without hearing it; <hi rend="style(italics)">Hoo hoo hoo, hoorer hoo</hi>, sounded
+                  sonorously, and the first three syllables accented somewhat like <hi rend="style(italics)">how der
+                     do</hi>; or sometimes <hi rend="style(italics)">hoo hoo</hi> only. One night in the beginning of
+                  winter, before the pond froze over, about nine o’clock, I was startled by the loud honking of a goose,
+                  and, stepping to the door, heard the sound of their wings like a tempest in the woods as they flew low
+                  over my house. <app xml:id="walc15-app-0021">
+                     <lem>They</lem>
+                     <rdg wit="#wc_0f">
+                        <del>and</del> as they</rdg>
+                  </app> passed over the pond toward Fair Haven, seemingly deterred from settling by my light, their
+                  commodore honking all the while with a regular beat. Suddenly an unmistakable cat-owl<anchor type="hn" xml:id="hn-15-009"/> from very near me,</seg>
+               
+               <seg n="2b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Winter Animals 2b written: A; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">15</seg>
+                        <seg type="chapterTitle">Winter Animals</seg>
+                        <seg type="paragraph">2b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0a">Five leaves (#163-171) are missing between Brute
+                     Neighbors 16a and Winter Animals 2b.</ab>
+                  </note>
+                   with the most harsh and tremendous voice I ever heard
+                  from any inhabitant of the <app xml:id="walc15-app-0022">
+                     <lem>woods,</lem>
+                     <rdg wit="#wc_0a">wood</rdg>
+                  </app> responded at regular intervals to the goose, as if determined to <app xml:id="walc15-app-0023">
+                     <lem>expose and disgrace</lem>
+                     <rdg wit="#wc_0a">
+                        <del>disgrace and</del> expose <add rendition="pencil">and disgrace</add>
+                     </rdg>
+                  </app> this intruder from Hudson’s Bay by exhibiting a greater compass and volume of voice in a
+                  native, and <hi rend="style(italics)">boo-hoo</hi> him out of Concord <app xml:id="walc15-app-0024">
+                     <lem>horizon.</lem>
+                     <rdg wit="#wc_0a">horizon. <del>It was the most thrilling concert I ever heard—</del>
+                        <add>Concord, did I say?</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">horizon.— (<hi rend="underline">Concord</hi>, did I say?)</rdg>
+                  </app> What do you mean by alarming the citadel<anchor type="hn" xml:id="hn-15-010"/> at this time of night consecrated to me? Do you think I am
+                  ever caught napping at such an <app xml:id="walc15-app-0025">
+                     <lem>hour,</lem>
+                     <rdg wit="#wc_0a #wc_0f">hour as this</rdg>
+                  </app> and that I have not got lungs and a larynx as well as yourself? <hi rend="style(italics)">Boo-hoo, boo-hoo, boo-hoo</hi>! <app xml:id="walc15-app-0026">
+                     <lem>It was one of the most thrilling discords I ever heard. And yet, if you had a discriminating
+                        ear, there were in it the elements of a concord such as these plains never saw nor heard.</lem>
+                     <rdg wit="#wc_0a">I hardly ever opened my door in a winter or even in a summer evening without
+                        hearing <del>the</del>
+                        <add>its</add> note <del>of this owl—though never so near at hand and loud before</del>
+                     </rdg>
+                     <rdg wit="#wc_0f">It was the most thrilling discord I ever heard. <del>Yet</del>
+                        <add rendition="pencil">And still</add> if you had a discriminating ear, there were in it the
+                        elements of a Concord such as these plains never saw or heard, which<quote>
+                           <lg>
+                              <l>“Would ruffle up your spirits, and put a tongue</l>
+                              <l>In every <hi rend="underline">goose’s feather</hi>, that should move</l>
+                              <l>The stones of Walden shore to rise &amp; mutiny.”</l>
+                           </lg>
+                        </quote>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="3" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 3 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">3</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     Winter Animals 3 appears as follows.
+                        <add rendition="pencil">I also heard</add> The <del>booming</del>
+                        <add>whooping</add>
+                         of the ice in the pond—my great bed-fellow in that part of
+                     Concord—as if it were restless in its bed, and would fain turn over—<del>it was</del>
+                        <add rendition="pencil">were</add>hypsy, and <del>nervous</del>
+                        <add>troubled with flatulency</add> and did not sleep well—<del>and</del>
+                        <add>or I was waked by</add> the cracking of the ground by the frost <del>—these were other
+                        memorable sounds in a winter night</del>
+                        <add rendition="pencil">which sounded as if some one had driven a team against my <del>house</del>
+                           <add rendition="pencil">door</add> &amp; in the morning <del>I would find</del>
+                           <add rendition="pencil">found</add> a crack in the earth ¼ of a mile long</add>
+                     
+                  </ab>
+               </note>
+                I
+               also heard the whooping <anchor type="hn" xml:id="hn-15-011"/> of the ice in the pond, my great bed-fellow in that part of Concord, as if it
+               were restless in its bed and would fain turn over, <app xml:id="walc15-app-0027">
+                  <lem>were</lem>
+                  <rdg wit="#wc_0f">were <del>hypsy and</del>
+                  </rdg>
+               </app> troubled with flatulency and <app xml:id="walc15-app-0028">
+                  <lem>bad dreams;</lem>
+                  <rdg wit="#wc_0f">
+                     <del>did not sleep well</del>
+                     <add>bad dreams</add>
+                  </rdg>
+               </app> or I was waked by the cracking of the ground by the frost, as if some one had driven a team
+               against my door, and in the morning <app xml:id="walc15-app-0029">
+                  <lem>would find</lem>
+                  <rdg wit="#wc_0f">
+                     <del>found</del>
+                     <add>would find</add>
+                  </rdg>
+               </app> a crack in the earth a quarter of a mile long and <app xml:id="walc15-app-0030">
+                  <lem>a third of</lem>
+                  <rdg wit="#wc_0f">
+                     <del>half</del>
+                     <add>a third of</add>
+                  </rdg>
+               </app> an inch wide.<anchor type="hn" xml:id="hn-15-012"/>
+            </p>
+            
+            <p n="4" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 4 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc15-app-0031">
+                  <lem>Sometimes I heard the foxes as they ranged over the snow crust, in moonlight nights,</lem>
+                  <rdg wit="#wc_0a">Sometimes in clear nights I heard the foxes, as they ranged over the snow crust </rdg>
+                  <rdg wit="#wc_0f">Sometimes <del>in clear nights</del> I heard the foxes as they ranged over the snow
+                     crust <add>in moonlight nights</add>
+                  </rdg>
+               </app> in search of a partridge or other game, barking raggedly and demoniacally like forest dogs, as<app xml:id="walc15-app-0032">
+                  <lem>if </lem>
+                  <rdg wit="#wc_0a">
+                     <add>if</add>
+                  </rdg>
+               </app> laboring with some anxiety, <app xml:id="walc15-app-0033">
+                  <lem>or seeking expression,</lem>
+                  <rdg wit="#wc_0a">
+                     <add>or else seeking expression</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">or <del>else</del> seeking expression</rdg>
+               </app> struggling <app xml:id="walc15-app-0034">
+                  <lem>for light and</lem>
+                  <rdg wit="#wc_0a">
+                     <add>for light and</add>
+                  </rdg>
+               </app> to be dogs outright and run freely in the streets; <app xml:id="walc15-app-0035">
+                  <lem>for if we take the ages into our account, may there not be a civilization going on among brutes
+                     as well as men?</lem>
+                  <rdg wit="#wc_0a">
+                     <add>for if we take the ages into our account, may there not be a civilization going
+                        on among brutes as well as men</add>?<add rendition="pencil">for</add> if we take the ages into
+                     our account may there not be a civilization going on among brutes as well as men?</rdg>
+               </app> They <app xml:id="walc15-app-0036">
+                  <lem>seemed to me to be rudimental,</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">even</add> like imperfect &amp; rudimental men </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>even</del> seemed <del>like imperfect &amp; rudimental</del>
+                     <add>to be rudimental</add>
+                  </rdg>
+               </app> burrowing men, still standing on their defence, awaiting their transformation. Sometimes one came
+               near to my window, <app xml:id="walc15-app-0037">
+                  <lem>attracted by my light,</lem>
+                  <rdg wit="#wc_0a">
+                     <del>at</del>
+                     <add rendition="pencil">in the</add> night—attracted by <del>the</del>
+                     <add rendition="pencil">my</add> light, and </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>in the night,</del> attracted by my light, <del>and</del>
+                  </rdg>
+               </app> barked a vulpine curse at me, and then retreated. </p>
+            
+            <p n="5" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 5 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0a">In the passage <quote>he would be in the top of a young
+                     pitch-pine … and skillfully balancing it he</quote>, “he,” “him,” and “himself” were
+                  originally “it,” “it,” and “itself.” The neuter pronouns were canceled and the masculine pronouns
+                  interlined in pencil.</ab>
+               </note>
+                Usually the red squirrel <app xml:id="walc15-app-0038">
+                   <lem>(<hi rend="style(italics)">Sciurus Hudsonius</hi>)</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add>
+                        <add>Sciurus Hudsonius</add>
+                     </add>
+                  </rdg>
+               </app> waked me in the dawn, coursing over the roof and up and down the sides of <app xml:id="walc15-app-0039">
+                  <lem>the house,</lem>
+                  <rdg wit="#wc_0a">my house, by fits &amp; starts </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>my</del>
+                     <add>the</add> house, <del>by fits and starts,</del>
+                  </rdg>
+               </app> as if sent out of the woods <app xml:id="walc15-app-0040">
+                  <lem>for this purpose.</lem>
+                  <rdg wit="#wc_0a">on purpose to arouse me </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>on</del>
+                     <add>for this</add> purpose <del>to arouse me</del>
+                  </rdg>
+               </app>
+               <app xml:id="walc15-app-0041">
+                  <lem>In the course of</lem>
+                  <rdg wit="#wc_0a">
+                     <del>During</del>
+                     <add rendition="pencil">In the course of</add>
+                  </rdg>
+               </app> of the winter I threw out <app xml:id="walc15-app-0042">
+                  <lem>half a bushel of ears of</lem>
+                  <rdg wit="#wc_0a">
+                     <del>some</del>
+                     <add rendition="pencil">half a bushel of ears of</add>
+                  </rdg>
+               </app> sweet-corn, which had <app xml:id="walc15-app-0043">
+                  <lem>not</lem>
+                  <rdg wit="#wc_0a">
+                     <del>never</del>
+                     <add>not</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>not</del>
+                     <del>
+                        <add>never</add>
+                     </del>
+                     <add>not</add>
+                  </rdg>
+               </app> got ripe, <app xml:id="walc15-app-0044">
+                  <lem>on to</lem>
+                  <rdg wit="#wc_0a">
+                     <del>upon</del>
+                     <add rendition="pencil">on to</add>
+                  </rdg>
+               </app> the snow crust by my door, and was amused by watching the motions of the various animals<app xml:id="walc15-app-0045">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0a #wc_0f">that</rdg>
+               </app> were baited by it. In the twilight and the night the rabbits came regularly and made a hearty meal.<app xml:id="walc15-app-0046">
+                  <lem>All</lem>
+                  <rdg wit="#wc_0a">By day-light &amp; in fact all </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>By day-light, and in fact</del> all</rdg>
+               </app> day long the red squirrels came and went, and afforded me much entertainment by their manœuvres.
+               One would approach at first warily through the shrub- oaks, running over the snow crust by fits and
+               starts like a leaf blown by the wind, now a few paces this way, with wonderful speed and waste of energy,
+               making inconceivable haste with his “trotters,”<anchor type="hn" xml:id="hn-15-013"/> as
+               if it were for a wager, <app xml:id="walc15-app-0047">
+                  <lem>and now as many paces that way, but</lem>
+                  <rdg wit="#wc_0a">
+                     <add>and now as many paces that way, but</add> and now as many paces that way <add rendition="pencil"> but</add>
+                  </rdg>
+               </app> never getting on more than half a rod at a time; and then suddenly pausing with a ludicrous
+               expression and a gratuitous somerset,<anchor type="hn" xml:id="hn-15-014"/> as if all the eyes in the universe were fixed <app xml:id="walc15-app-0048">
+                  <lem>on</lem>
+                  <rdg wit="#wc_0a">
+                     <del>upon</del>
+                     <add>on</add>
+                  </rdg>
+               </app> him,—<app xml:id="walc15-app-0049">
+                  <lem>for all the motions of a squirrel, even in the most solitary recesses of the forest, imply
+                     spectators as much as those of a dancing girl,<anchor type="hn" xml:id="hn-15-015"/>
+                  </lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">for all the motions of a squirrel, even in the most solitary
+                        recesses of the forest, imply spectators as much as those of a dancing girl</add>,<add>for</add>
+                     all the motions of a squirrel in the most silent &amp; darkest recesses of the forest imply
+                     spectators as much as the motions of a dancing girl. <add>In short</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">for all the motions of a squirrel, even in the most <del>silent and darkest</del>
+                     <add>solitary</add> recesses of the forest, imply spectators as much as those of a dancing
+                        girl,—<del>in short</del>
+                  </rdg>
+               </app>—wasting more time in delay and circumspection than would have sufficed to walk the whole
+               distance,— I never saw one walk,—and then suddenly, before you could say Jack Robinson,<anchor type="hn" xml:id="hn-15-016"/> he would be in the <app xml:id="walc15-app-0050">
+                  <lem>top</lem>
+                  <rdg wit="#wc_0a">
+                     <del>tip</del> top</rdg>
+               </app> of a young pitch-pine, <app xml:id="walc15-app-0051">
+                  <lem>winding</lem>
+                  <rdg wit="#wc_0a">screwing </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>screwing</del>
+                     <add>winding</add>
+                  </rdg>
+               </app> up his clock<anchor type="hn" xml:id="hn-15-017"/> and chiding all imaginary spectators, <app xml:id="walc15-app-0052">
+                  <lem>soliloquizing and talking to all the universe at the same time,</lem>
+                  <rdg wit="#wc_0a">
+                     <del>and</del> soliloquizing &amp; talking to <add rendition="pencil">all</add> the
+                     universe <del>and itself</del>
+                     <add rendition="pencil">at the same time</add>
+                  </rdg>
+               </app>—for no reason that I could ever detect, or he himself was aware of, I suspect. At length he <app xml:id="walc15-app-0053">
+                  <lem>would reach</lem>
+                  <rdg wit="#wc_0a">reached </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>reached</del>
+                     <add>would reach</add>
+                  </rdg>
+               </app> the corn, and selecting a suitable ear, <app xml:id="walc15-app-0054">
+                  <lem>frisk<anchor type="hn" xml:id="hn-15-018"/>
+                  </lem>
+                  <rdg wit="#wc_0a">would frisk </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>would</del> frisk</rdg>
+               </app> about in the same uncertain trigonometrical way to the top-most stick of my wood-pile, before my
+               window, <app xml:id="walc15-app-0055">
+                  <lem>where he looked</lem>
+                  <rdg wit="#wc_0a">
+                     <del>looking</del>
+                     <add rendition="pencil">where he looked</add>
+                  </rdg>
+               </app> me in the face, and there sit for hours, <app xml:id="walc15-app-0056">
+                  <lem>supplying himself with a new ear from time to time,</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add>supplying himself with a new ear from time to time</add>,</rdg>
+               </app> nibbling at first<app xml:id="walc15-app-0057">
+                  <lem>voraciously</lem>
+                  <rdg wit="#wc_0a">voraciously ear after ear </rdg>
+                  <rdg wit="#wc_0f">voraciously <del>ear after ear</del>
+                  </rdg>
+               </app> and throwing the half-naked cobs <app xml:id="walc15-app-0058">
+                  <lem>about;</lem>
+                  <rdg wit="#wc_0a">about wastefully </rdg>
+                  <rdg wit="#wc_0f">about <del>wastefully</del>
+                  </rdg>
+               </app> till at length he grew <app xml:id="walc15-app-0059">
+                  <lem>more dainty still</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">more</add> dainty <add rendition="pencil">still</add>
+                  </rdg>
+               </app> and played with his food, tasting only the inside of the kernel, and the ear, which was held
+               balanced over the stick by one paw, slipped from his careless grasp and fell to the ground, when he would
+               look over at it <app xml:id="walc15-app-0060">
+                  <lem>with a ludicrous expression of uncertainty,</lem>
+                  <rdg wit="#wc_0a">
+                     <del>uncertain</del>
+                     <add rendition="pencil">with ludicrous uncertainty</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">with <add>a</add> ludicrous <add>expression of</add> uncertainty</rdg>
+               </app> as if suspecting that it had life, with a mind not made up whether to get it again, or a new one,
+               or be off; <app xml:id="walc15-app-0061">
+                  <lem>now thinking of corn, then listening to hear what was in the wind.</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">now thinking of corn, then listening to hear what was in the
+                        wind</add>.</rdg>
+               </app>
+               <app xml:id="walc15-app-0062">
+                  <lem>So</lem>
+                  <rdg wit="#wc_0a #wc_0f">And so</rdg>
+               </app> the little impudent fellow would waste many an ear in a forenoon; till at last, seizing some
+               longer and plumper one, considerably bigger than himself, and skilfully balancing it, he would set out
+               with it to the woods, like a tiger with a buffalo, by the same zig-zag course and frequent pauses, <app xml:id="walc15-app-0063">
+                  <lem>scratching</lem>
+                  <rdg wit="#wc_0a">
+                     <del>He scratched</del>
+                     <add rendition="pencil">scratching</add>
+                  </rdg>
+               </app> along with it as if it were too heavy for him and falling all the while, making its fall a
+               diagonal between a perpendicular and horizontal, being determined to put it through at any rate;— a
+               singularly frivolous and whimsical fellow;— and so he would get off with it to where he lived,<app xml:id="walc15-app-0064">
+                  <lem>perhaps</lem>
+                  <rdg wit="#wc_0a">and </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>and</del>
+                     <add rendition="pencil">perhaps</add>
+                  </rdg>
+               </app> carry it to the top of a pine tree forty or fifty rods distant, and I <app xml:id="walc15-app-0065">
+                  <lem>would afterwards find</lem>
+                  <rdg wit="#wc_0a">
+                     <del>afterwards noticed</del>
+                     <del>
+                        <add rendition="pencil">would afterwards notice</add>
+                     </del>
+                     <add>would afterwards find</add>
+                  </rdg>
+               </app> the cobs strewn about the woods in various directions. </p>
+            
+            <p n="6" change="#wc_0a">
+               <seg n="6a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 6a written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">6a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>
+                   At <app xml:id="walc15-app-0066">
+                     <lem>length</lem>
+                     <rdg wit="#wc_0a">length <del>also</del>
+                     </rdg>
+                  </app> the jays arrive, whose discordant screams <app xml:id="walc15-app-0067">
+                     <lem>were heard</lem>
+                     <rdg wit="#wc_0a">
+                        <del>had been</del>
+                        <add rendition="pencil">were heard</add>
+                     </rdg>
+                  </app> long before, as they were warily making their approach <app xml:id="walc15-app-0068">
+                     <lem>an eighth</lem>
+                     <rdg wit="#wc_0a">
+                        <del>a quarter</del>
+                        <add>an eighth</add>
+                     </rdg>
+                  </app> of a mile off, and in a stealthy <app xml:id="walc15-app-0069">
+                     <lem>and sneaking</lem>
+                     <rdg wit="#wc_0a #wc_0f">sneaking and cowardly</rdg>
+                  </app> manner they <app xml:id="walc15-app-0070">
+                     <lem>flit from tree to tree, nearer and nearer, and pick</lem>
+                     <rdg wit="#wc_0a">
+                        <del>drew</del>
+                        <add rendition="pencil">draw</add> near flitting from tree to tree—and <del>picked</del>
+                        <add rendition="pencil">pick</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">draw near flitting from tree to tree and pick</rdg>
+                  </app> up the kernels which the squirrels have dropped. Then, sitting on a pitch-pine bough, they
+                  attempt to swallow in their haste a kernel which </seg>
+               
+               <seg n="6b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Winter Animals 6b written: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">15</seg>
+                        <seg type="chapterTitle">Winter Animals</seg>
+                        <seg type="paragraph">6b</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                  </note>is too big for their throats and chokes them; and after great labor they disgorge
+                  it, and spend an hour in the endeavor to crack it by repeated blows with their bills. They were
+                  manifestly thieves, and I had not much respect for them; but the squirrels, though at first shy, went
+                  to work as if they were taking what was their own. </seg>
+            </p>
+            
+            <p n="7" change="#wc_0a">
+               
+               <seg n="7a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 7a written: F; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">7a</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>
+                   Meanwhile also came the chickadees in flocks, <app xml:id="walc15-app-0071">
+                     <lem>which</lem>
+                     <rdg wit="#wc_f1">and</rdg>
+                  </app> picking up the crumbs the squirrels had dropped,<app xml:id="walc15-app-0072">
+                     <lem>flew</lem>
+                     <rdg wit="#wc_f1">
+                        <del>they</del> flew</rdg>
+                  </app> to the nearest twig, and placing them under their claws, hammered away at them with their
+                  little <app xml:id="walc15-app-0073">
+                     <lem>bills,</lem>
+                     <rdg wit="#wc_f1">bills, <del>in order to reduce them still further,</del>
+                     </rdg>
+                  </app> as if it were an insect in the bark, till they were sufficiently reduced for their slender
+                  throats. A little flock of these tit-mice came daily to pick a dinner out of my wood-pile, or the
+                  crumbs at my door, with faint flitting lisping <app xml:id="walc15-app-0074">
+                     <lem>notes,</lem>
+                     <rdg wit="#wc_f1">song </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>song</del>
+                        <add>notes</add>
+                     </rdg>
+                  </app> like the tinkling of icicles in the grass,<app xml:id="walc15-app-0075">
+                     <lem>or else</lem>
+                     <rdg wit="#wc_f1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_f2">
+                        <add>or else</add>
+                     </rdg>
+                  </app> with sprightly <hi rend="style(italics)">day day day</hi> or <app xml:id="walc15-app-0076">
+                     <lem>more rarely, in spring-like days, a</lem>
+                     <rdg wit="#wc_f1">
+                        <add rendition="pencil">sometimes a</add>
+                     </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>sometimes</del>
+                        <add>more rarely in spring-like days</add> a</rdg>
+                  </app> wiry summery <hi rend="style(italics)">phe</hi>-<hi rend="style(italics)">be</hi> from the
+                  wood-side. They were so familiar that at length one alighted on an armful of wood which I was carrying
+                  in, and pecked at the sticks without fear. I <app xml:id="walc15-app-0077">
+                     <lem>once had </lem>
+                     <rdg wit="#wc_f1">
+                        <add rendition="pencil">had</add> once had </rdg>
+                     <rdg wit="#wc_f2">had once had</rdg>
+                  </app> a sparrow alight upon my shoulder for a moment while I was hoeing in a village garden, <app xml:id="walc15-app-0078">
+                     <lem>and I felt that I was more distinguished by that circumstance than I should have been</lem>
+                     <rdg wit="#wc_f1">in the summer, and I felt myself more distinguished by this circumstance than </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>in the summer,</del> and I felt <del>myself</del>
+                        <add>that I was</add> more distinguished by <del>this</del>
+                        <add>that</add>circumstance than <add>I should have been</add>
+                     </rdg>
+                  </app> by any epaulet I could have worn. </seg>
+               
+               <seg n="7b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Winter Animals 7b written: A; rewritten: F, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">15</seg>
+                        <seg type="chapterTitle">Winter Animals</seg>
+                        <seg type="paragraph">7b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">F, F</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0f">Winter Animals 7b follows Winter Animals 5 and
+                     precedes Spring 12 in A and in the original copying of F; it was recopied in its present position
+                     on a new leaf in F.</ab>
+                  </note>
+                  
+                  <app xml:id="walc15-app-0079">
+                     <lem>The squirrels</lem>
+                     <rdg wit="#wc_0a">
+                        <del>All the emotions and the life of the squirrel imply spectators—They</del>
+                        <add>The squirrels</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc15-app-0080">
+                     <lem>also</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_f1">
+                        <add>also</add>
+                     </rdg>
+                  </app> grew at last to be quite familiar, and <app xml:id="walc15-app-0081">
+                     <lem>occasionally</lem>
+                     <rdg wit="#wc_0a">
+                        <del>sometimes</del>
+                        <add rendition="pencil">occasionally</add>
+                     </rdg>
+                  </app> stepped upon my shoe, when that was the nearest way. </seg>
+            </p>
+            
+            <p n="8" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 8 written: E; rewritten: F, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">8</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F, F</seg>
+                  </ab>
+                  <ab change="#wc_0e #wc_0f">[Winter Animals 8 followed Winter Animals 7a in E
+                  and in the original copying of F; when Winter Animals 7b was inserted in its present position, a fair
+                  copy was made of only <quote>When the ground was not yet … I used to start them in the
+                     open</quote>.</ab>
+               </note>
+               
+               <app xml:id="walc15-app-0082">
+                  <lem>When the ground was not yet quite covered, and again near the end of winter, when the snow was
+                     melted on my south hill-side and about my wood-pile, the partridges came out of the woods morning
+                     and evening to feed there.</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+               </app> Whichever <app xml:id="walc15-app-0083">
+                  <lem>side you walk in the woods the partridge bursts away on whirring wings, jarring the snow from the
+                     dry leaves and twigs on high, which comes sifting down in the sunbeams like golden dust;</lem>
+                  <rdg wit="#wc_0e">
+                     <del>way</del>
+                     <add rendition="pencil">side</add> you walk in the woods the partridge bursts away on whirring
+                     wings, jarring the <del>snowy dust</del>
+                     <add rendition="pencil">snow</add> from the dry leaves and twigs <add rendition="pencil">on
+                        high—which comes sifting down in the sunbeams</add> like <del>a golden mist</del>
+                     <add rendition="pencil">golden dust</add>
+                  </rdg>
+                  <rdg wit="#wc_f1">side you <del>walk</del>
+                     <add>walked</add> in the woods the partridge <del>bursts</del>
+                     <add>burst</add> away on whirring wings, jarring the snow from the dry leaves and twigs on high
+                     which <del>comes</del>
+                     <add>came</add> sifting down in the sunbeams like golden dust </rdg>
+                  <rdg wit="#wc_f2">side you <del>walked</del>
+                     <add>walk</add> in the woods the partridge <del>burst</del>
+                     <add>bursts</add> away on whirring wings, jarring the snow from the dry leaves and twigs on high,
+                     which <del>came</del>
+                     <add>comes</add> sifting down in the sunbeams like golden dust</rdg>
+               </app> for this brave bird is not to be scared by winter. <app xml:id="walc15-app-0084">
+                  <lem>It is frequently covered up by drifts, and, it is said,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>Audubon</del>
+                     <add rendition="pencil">One observer</add> says that it “is often snowed up and covered over; or </rdg>
+                  <rdg wit="#wc_f1">One observer says that it “is often snowed up and covered over; or </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>One observer says that it “is often snowed up and covered over; or</del>
+                     <add>It is frequently covered up by drifts, and, it is said</add>
+                  </rdg>
+               </app> “sometimes plunges from on wing into the soft snow, where it remains concealed for a day or
+                  two.”<anchor type="hn" xml:id="hn-15-019"/> I used to
+               start them in the open land <app xml:id="walc15-app-0085">
+                  <lem>also, where </lem>
+                  <rdg wit="#wc_0e">when </rdg>
+                  <rdg wit="#wc_f1">
+                     <del>when</del>
+                     <add>also where</add>
+                  </rdg>
+               </app> they had come out of the woods at sunset to “bud”<anchor type="hn" xml:id="hn-15-020"/> the wild apple- trees. They will come regularly every evening to particular
+               trees, where the cunning sportsman lies in wait for them, <app xml:id="walc15-app-0086">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_f1">
+                     <add>and</add>
+                  </rdg>
+               </app> the distant orchards next the woods suffer thus not a <app xml:id="walc15-app-0087">
+                  <lem>little.</lem>
+                  <rdg wit="#wc_0e">little. If you ask the farmer why he gets no more fruit, he will tell you it is
+                     because his trees are so severely budded by the partridges </rdg>
+                  <rdg wit="#wc_f1">little. <del>If you ask the farmer why he gets no more fruit, he will tell you it is
+                        because his trees are so severely budded by the partridges. <add>But</add>
+                     </del>
+                  </rdg>
+               </app> I am glad that the partridge gets fed, at any rate. It is Nature’s own bird <app xml:id="walc15-app-0088">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0e">that </rdg>
+                  <rdg wit="#wc_f1">
+                     <del>that</del>
+                     <add>which</add>
+                  </rdg>
+               </app> lives on buds and diet-drink.<anchor type="hn" xml:id="hn-15-021"/>
+            </p>
+            
+            <p n="9" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 9 written: E; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0f">A fair copy was made of only <quote>in dark winter
+                     mornings … a fox pursued by hounds burst out on to</quote>.</ab>
+               </note>
+                In dark winter mornings,<app xml:id="walc15-app-0089">
+                  <lem>or</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+               </app> in short winter afternoons, I sometimes heard a pack of hounds threading all the woods with
+               hounding cry and yelp, unable to resist the instinct of the chase, and the note of the hunting horn at
+               intervals, <app xml:id="walc15-app-0090">
+                  <lem>proving that man was</lem>
+                  <rdg wit="#wc_0e">showing that man too is </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>showing</del>
+                     <add rendition="pencil">roving</add> that man <del>too is</del>
+                     <add>was</add>
+                  </rdg>
+               </app> in the rear. The woods <app xml:id="walc15-app-0091">
+                  <lem>ring again, and yet no fox bursts</lem>
+                  <rdg wit="#wc_0f">
+                     <del>
+                        <add>would</add>
+                     </del> ring again and yet no fox <del>bursts</del>
+                     <del>
+                        <add>burst</add>
+                     </del>
+                     <add>bursts</add>
+                  </rdg>
+               </app> forth on to the open level of the pond, nor following pack pursuing their Actæon.<anchor type="hn" xml:id="hn-15-022"/> And <app xml:id="walc15-app-0092">
+                  <lem>perhaps at evening I see</lem>
+                  <rdg wit="#wc_0e">perchance at evening I see </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>perchance</del>
+                     <add rendition="pencil">perhaps</add> at evening I <del>see</del>
+                     <del>
+                        <add>saw</add>
+                     </del>
+                     <add>see</add>
+                  </rdg>
+               </app> the hunters returning with a single brush<anchor type="hn" xml:id="hn-15-023"/> trailing from their sleigh for a trophy, seeking their inn. <app xml:id="walc15-app-0093">
+                  <lem>They tell me that if the fox would remain in the bosom of the frozen earth he would be
+                     safe,</lem>
+                  <rdg wit="#wc_0e">
+                     <add>The hunters tell me</add> If the fox would remain in the bosom of the frozen
+                     earth, <del>the hunters tell me,</del> he would be safe enough </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>The hunters</del>
+                     <add>They</add> tell me that if the fox would remain in the bosom of the frozen earth, he would be
+                     safe <del>enough</del>
+                  </rdg>
+               </app> or if he would run in a straight line away no fox-hound could overtake him; but, having left his
+               pursuers far behind, he stops to rest and listen till they come up, <app xml:id="walc15-app-0094">
+                  <lem>and when he runs he</lem>
+                  <rdg wit="#wc_0e">again, and <del>meanwhile</del>
+                     <add rendition="pencil">when he runs he</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>again</del>, and when he runs he </rdg>
+               </app> circles round to his old haunts, where the hunters await him. <app xml:id="walc15-app-0095">
+                  <lem>Sometimes, however, he will</lem>
+                  <rdg wit="#wc_0e">Nevertheless he <del>practices</del>
+                     <add rendition="pencil">shows</add> considerable cunning, <add rendition="pencil">for he</add> will
+                     sometimes </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>Nevertheless he shows considerable cunning, for he will sometimes</del>
+                     <add>Sometimes, however, he will</add>
+                  </rdg>
+               </app> run upon a wall many rods, and then leap off far to one side, and he appears to know that water will<app xml:id="walc15-app-0096">
+                  <lem>not retain</lem>
+                  <rdg wit="#wc_0e">
+                     <del>obliterate</del>
+                     <add>not retain</add>
+                  </rdg>
+               </app> his scent. <app xml:id="walc15-app-0097">
+                  <lem>A hunter told</lem>
+                  <rdg wit="#wc_0e">
+                     <del>One hunter tells</del>
+                     <add rendition="pencil">A hunter<anchor type="hn" xml:id="hn-15-024"/> told</add>
+                  </rdg>
+               </app> me that he once saw a fox pursued by hounds burst out on to Walden when the ice was covered with
+               shallow puddles, <app xml:id="walc15-app-0098">
+                  <lem>run part way across, and then return</lem>
+                  <rdg wit="#wc_0e">
+                     <del>run</del>
+                     <add>he ran</add> part way across &amp; then <del>return</del>
+                     <add>returned</add>
+                  </rdg>
+               </app> to the same shore. Ere long the hounds arrived, but here they lost the scent. Sometimes a<app xml:id="walc15-app-0099">
+                  <lem>pack</lem>
+                  <rdg wit="#wc_0e">pack of hounds</rdg>
+               </app> hunting by themselves would pass my door, and circle round my house, and yelp and hound without
+               regarding me, as if afflicted by a species of madness, so that nothing could divert them from the
+               pursuit. Thus they circle until they fall<app xml:id="walc15-app-0100">
+                  <lem>upon</lem>
+                  <rdg wit="#wc_0e">
+                     <del>on</del>
+                     <add rendition="pencil">upon</add>
+                  </rdg>
+               </app> the recent trail of a fox,<app xml:id="walc15-app-0101">
+                  <lem>for</lem>
+                  <rdg wit="#wc_0e">
+                     <add>for</add>
+                  </rdg>
+               </app> a wise hound will forsake every thing else for this. <app xml:id="walc15-app-0102">
+                  <lem>One day a man came to my hut from Lexington </lem>
+                  <rdg wit="#wc_0e">
+                     <add>One day a man came to my hut from Lexington</add> Sometimes a <del>hunter</del>
+                     <add rendition="pencil">man</add> would come to my hut <add rendition="pencil">from a neighboring
+                        town</add>
+                  </rdg>
+               </app> to inquire after his hound that made a large track, and had been hunting for a week <app xml:id="walc15-app-0103">
+                  <lem>by himself. But I fear that he was not the wiser for all I told him, for every time I attempted
+                     to answer his questions he interrupted me by asking, “What do you do here?” He had lost a dog, but
+                     found a man.</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+               </app>
+            </p>
+            
+            <p n="10" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 10 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">10</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+               </note>One old hunter<anchor type="hn" xml:id="hn-15-025"/> who has a dry tongue, who <app xml:id="walc15-app-0104">
+                  <lem>used to come to <anchor type="hn" xml:id="hn-15-026"/> in Walden once every year when
+                     the water was warmest, and at such times</lem>
+                  <rdg wit="#wc_0e">sometimes</rdg>
+               </app> looked in upon me, told me, that many years ago he took his gun one afternoon and went out for a
+               cruise in Walden Wood; and as he walked the Wayland<anchor type="hn" xml:id="hn-15-027"/> road he heard the cry of hounds approaching, and <app xml:id="walc15-app-0105">
+                  <lem>ere long</lem>
+                  <rdg wit="#wc_0e">presently</rdg>
+               </app> a fox leaped the wall into the road, and as quick as <app xml:id="walc15-app-0106">
+                  <lem>thought</lem>
+                  <rdg wit="#wc_0e">
+                     <del>thoughts</del>
+                     <add rendition="pencil">thought</add>
+                  </rdg>
+               </app> leaped the other wall out of the road, and his swift bullet had not touched him. <app xml:id="walc15-app-0107">
+                  <lem>Some</lem>
+                  <rdg wit="#wc_0e">then following some</rdg>
+               </app> way behind came an old hound and her three pups in full pursuit, hunting on their own account, and
+               disappeared again in the woods. Late in the afternoon, as he was resting in the thick woods <app xml:id="walc15-app-0108">
+                  <lem>south of</lem>
+                  <rdg wit="#wc_0e">
+                     <del>beyond</del>
+                     <add rendition="pencil">south of</add>
+                  </rdg>
+               </app> Walden, he heard the voice of the hounds far over toward Fair Haven still pursuing the fox; and on
+               they came, their hounding cry which made all the woods ring sounding nearer and nearer, now from
+                  Well-Meadow,<anchor type="hn" xml:id="hn-15-028"/> now from the Baker Farm. For a long time he stood
+               still and listened to their music, so sweet to a hunter’s ear, when suddenly the fox appeared, <app xml:id="walc15-app-0109">
+                  <lem>threading the solemn aisles with an easy coursing pace, whose sound was concealed by</lem>
+                  <rdg wit="#wc_0e">
+                     <del>with coursing pace, and</del>
+                     <add rendition="pencil">threading the solemn aisles with an easy coursing pace, whose sound was
+                        concealed by</add>
+                  </rdg>
+               </app> a sympathetic rustle of the leaves, swift and still, keeping the ground, leaving his pursuers far
+               behind; and, leaping upon a rock amid the woods, he sat erect <app xml:id="walc15-app-0110">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">and</add>
+                  </rdg>
+               </app> listening, with his back to the hunter. For a moment compassion restrained the latter’s arm; but
+               that was a short-lived mood, and as quick as thought can follow thought his piece was levelled, and <hi rend="style(italics)">whang!</hi>—the fox rolling over the rock lay dead on the ground. The hunter still kept
+               his place and listened to the hounds. Still on they came, and now the near woods resounded through all
+               their aisles with their demoniac cry. At length the old hound burst into view with muzzle to the ground,
+               and snapping the air as if possessed, and ran directly to the rock; but spying the <app xml:id="walc15-app-0111">
+                  <lem>dead fox</lem>
+                  <rdg wit="#wc_0e">fox dead on the ground</rdg>
+               </app> she suddenly ceased her hounding, as if struck dumb with amazement, and walked round and round him
+               in silence; and one by one her pups arrived, and, like their mother, were sobered into silence by the
+               mystery. Then the hunter came forward and stood in <app xml:id="walc15-app-0112">
+                  <lem>their midst,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>the midst of the dogs</del>
+                     <add rendition="pencil">their midst</add>
+                  </rdg>
+               </app> and the mystery was solved. They waited in silence while he skinned the fox, then followed the
+               brush a while, and at length turned off into the woods again. That evening a <anchor type="hn" xml:id="hn-15-029"/> Squire came to the Concord
+               hunter’s cottage to inquire for his hounds, and told how for a week they had been hunting on their own
+               account from Weston woods. The Concord hunter told him what he knew and offered him the skin; but the
+               other declined it and departed. He did not find his hounds that night, but the next day <app xml:id="walc15-app-0113">
+                  <lem>learned</lem>
+                  <rdg wit="#wc_0e">he learned</rdg>
+               </app> that they had crossed the river and put up at a farm-house for <app xml:id="walc15-app-0114">
+                  <lem>the night, whence, having been well fed, they took their departure early in the morning.</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">the night, whence, having been well fed, they took their
+                        departure early in the morning</add>.</rdg>
+               </app>
+            </p>
+            
+            <p n="11" change="#wc_0f">
+               <seg n="11a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 11a written: F; rewritten: F, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">11a</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F, G</seg>
+                  </ab>
+               </note>
+                   The hunter who told me this could remember one Sam Nutting,<anchor type="hn" xml:id="hn-15-030"/> who used to hunt bears on Fair Haven Ledges,<anchor type="hn" xml:id="hn-15-031"/> and
+                  exchange their skins for rum in Concord village; <app xml:id="walc15-app-0115">
+                     <lem>who told him,</lem>
+                     <rdg wit="#wc_f1">Nay, he <del>said</del>
+                        <add rendition="pencil">told him</add>
+                     </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>Nay, he</del>
+                        <add rendition="pencil">who</add> told him</rdg>
+                  </app> even, that he had seen a moose<anchor type="hn" xml:id="hn-15-032"/> there. Nutting had a famous fox-hound named Burgoyne,—he pronounced it
+                  Bugine,—which my informant used to borrow. </seg>
+               
+               <seg n="11b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Winter Animals 11b written: F; rewritten: G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">15</seg>
+                        <seg type="chapterTitle">Winter Animals</seg>
+                        <seg type="paragraph">11b</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                     <ab change="#wc_0f">Winter Animals 11b is interlined.</ab>
+                     <ab change="#wc_0f #wc_0g">
+                        <quote>in his ledger, Feb. 7th, 1743, Hezekiah
+                        Stratton has credit “by ½ a Catt skin 0—1—4½:” of course, a wild-cat </quote>does not appear in
+                     the manuscript in F or in the original copying of G but is interlined in G; f<quote>or Stratton was
+                        a sergeant in the old French war, and would not have got credit for hunting less noble
+                        game</quote> does not appear in the manuscript in F or in the original copying of G but is
+                     interlined in pencil in G.</ab>
+                  </note>
+                  
+                  
+                  <app xml:id="walc15-app-0116">
+                     <lem>In the “Wast Book”<anchor type="hn" xml:id="hn-15-033"/> of an old trader of this town, who
+                        was also a captain, town-clerk, and representative,</lem>
+                     <rdg wit="#wc_0f">In “Mr Ephraim Jones His Wast Book Anno Domini 1742” </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>In “Mr Ephraim Jones His Wast Book Anno Domini 1742”</del>
+                        <add>In the “Wast Book” of an old trader of this town who was also a Captain, Town Clerk &amp;
+                           Representative</add>
+                     </rdg>
+                  </app> I find the following <app xml:id="walc15-app-0117">
+                     <lem>entry.</lem>
+                     <rdg wit="#wc_0f #wc_0g">entries</rdg>
+                  </app> Jan. 18th, 1742-3, “John Melven Cr. by 1 Grey Fox 0-2-3;” <app xml:id="walc15-app-0118">
+                     <lem>they are not now found here;</lem>
+                     <rdg wit="#wc_0f">Feb. 14 1743 Aaron Parker is cr by 100 squirell skins 0—6—3 </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>Feb. 14 1743 Aaron Parker is cr by 100 squirell skins 0—6—3</del>
+                     </rdg>
+                  </app> and in his ledger, Feb. 7th, 1743, Hezekiah Stratton has credit “by ½ a Catt<anchor type="hn" xml:id="hn-15-034"/> skin 0-1-4 ½;” of course, a wild-cat,
+                  for Stratton was a sergeant in the old French war,<anchor type="hn" xml:id="hn-15-035"/> and would not have got credit for hunting less noble game. <app xml:id="walc15-app-0119">
+                     <lem>Credit is given for deer skins also, and they were daily sold.</lem>
+                     <rdg wit="#wc_0f">Deer skins were daily sold probably to make breeches and mittens of </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>Deer skins were daily sold probably to make breeches and mittens of</del>
+                        <add>Or was given for deer skins &amp; they were daily sold</add>
+                     </rdg>
+                  </app>
+               </seg>
+               
+               <seg n="11c" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Winter Animals 11c written: F; rewritten: F, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">15</seg>
+                        <seg type="chapterTitle">Winter Animals</seg>
+                        <seg type="paragraph">11c</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">F, G</seg>
+                     </ab>
+                  </note>One man still preserves the horns of the last deer<anchor type="hn" xml:id="hn-15-036"/> that was killed in this vicinity, <app xml:id="walc15-app-0120">
+                     <lem>and another has told me the particulars of the hunt in which his uncle was engaged.</lem>
+                     <rdg wit="#wc_f1">
+                        <add rendition="pencil">and another has told me the particulars of the hunt in
+                           which his uncle was engaged</add> These are pleasant memorials of the past </rdg>
+                     <rdg wit="#wc_f2">and another has told me the particulars of the hunt in which his uncle was
+                        engaged. <del>These are pleasant memorials of the past.</del>
+                     </rdg>
+                  </app> The hunters were formerly a <app xml:id="walc15-app-0121">
+                     <lem>numerous and merry</lem>
+                     <rdg wit="#wc_f1">merry and a numerous</rdg>
+                  </app> crew here. I remember<app xml:id="walc15-app-0122">
+                     <lem>well</lem>
+                     <rdg wit="#wc_f1 #wc_f2"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0g">
+                        <add>well</add>
+                     </rdg>
+                  </app> one gaunt Nimrod<anchor type="hn" xml:id="hn-15-037"/>
+                  <app xml:id="walc15-app-0123">
+                     <lem>who would catch up a leaf by the road-side</lem>
+                     <rdg wit="#wc_f1">
+                        <del>
+                           <add rendition="pencil">in my boyhood</add>
+                        </del> who would catch up a leaf
+                        by the roadside, <del>when I was a boy,</del>
+                     </rdg>
+                  </app> and play a strain on it wilder and more melodious, if my memory serves me, than any hunting
+                  horn. </seg>
+            </p>
+            
+            <p n="12" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 12 written: F; rewritten: F, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">12</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F, G</seg>
+                  </ab>
+                  <ab change="#wc_f1">Winter Animals 12 is followed by Brute Neighbors 15
+                  and House-Warming 18a.</ab>
+                  <ab change="#wc_f2 #wc_0g">Winter Animals 12 is followed by House-Warming
+                  18a.</ab>
+               </note>
+               
+                At midnight, when there was a moon, I <app xml:id="walc15-app-0124">
+                  <lem>sometimes met</lem>
+                  <rdg wit="#wc_f1 #wc_f2">used sometimes to meet </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>used sometimes to meet</del>
+                     <add>sometimes met</add>
+                  </rdg>
+               </app> with hounds in my path prowling about the woods, which would skulk out of my way, as if afraid,
+               and stand silent amid the bushes till I had passed. </p>
+            
+            <p n="13" change="#wc_0a">
+               <seg n="13a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 13a written: A; rewritten: E, F, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">13a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, F, G</seg>
+                  </ab>
+               </note>                  
+                  
+                  <app xml:id="walc15-app-0125">
+                     <lem>Squirrels and wild mice disputed for my store of nuts.</lem>
+                     <rdg wit="#wc_0a #wc_0e #wc_0f"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0g">Squirrels &amp; wild mice <del>also</del> disputed for my store of nuts</rdg>
+                  </app> There were scores of pitch-pines <app xml:id="walc15-app-0126">
+                     <lem>around my house,</lem>
+                     <rdg wit="#wc_0a">in my field</rdg>
+                  </app> from one to<app xml:id="walc15-app-0127">
+                     <lem>four</lem>
+                     <rdg wit="#wc_0a #wc_0e #wc_0f">three</rdg>
+                  </app> inches in diameter, which had been gnawed by <app xml:id="walc15-app-0128">
+                     <lem>mice</lem>
+                     <rdg wit="#wc_0a">the mice </rdg>
+                     <rdg wit="#wc_0e">mice <add rendition="pencil">or moles</add>
+                     </rdg>
+                     <rdg wit="#wc_0f #wc_0g">mice or moles</rdg>
+                  </app> the previous <app xml:id="walc15-app-0129">
+                     <lem>winter,</lem>
+                     <rdg wit="#wc_0a">winter it was</rdg>
+                  </app>—a Norwegian winter for them, for the snow lay long and deep, and they <app xml:id="walc15-app-0130">
+                     <lem>were obliged</lem>
+                     <rdg wit="#wc_0a">had</rdg>
+                  </app> to mix a large proportion of pine<app xml:id="walc15-app-0131">
+                     <lem>bark</lem>
+                     <rdg wit="#wc_0a">
+                        <del>meal</del>
+                        <add rendition="pencil">bark</add>
+                     </rdg>
+                  </app> with their other diet. These trees were alive and apparently flourishing at midsummer, and <app xml:id="walc15-app-0132">
+                     <lem>many of them had</lem>
+                     <rdg wit="#wc_0a">had many of them</rdg>
+                  </app> grown a foot, though completely girdled; <app xml:id="walc15-app-0133">
+                     <lem>but after another winter such were without exception dead.</lem>
+                     <rdg wit="#wc_0a">and sometimes laid bare for the space of a foot—but now after the lapse of another
+                        winter I perceive that such are already without exception dead. For this <note type="general" subtype="inline" resp="#clapper">a missing leaf follows</note>
+                     </rdg>
+                     <rdg wit="#wc_0e">but after another winter such were without exception dead. <del>I think it is
+                           Herodotus who remarks that pines do not spring up again from the root when cut down; but I
+                           have observed that <add>sometimes</add> when a young white pine is broken off <add>though
+                              very</add> near the ground its branches come upward, and often one of them takes the place
+                           of the leading stem which is gone.</del>
+                     </rdg>
+                  </app>
+               </seg>
+               
+               <seg n="13b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Winter Animals 13b written: E; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">15</seg>
+                        <seg type="chapterTitle">Winter Animals</seg>
+                        <seg type="paragraph">13b</seg>
+                        <seg type="written">E</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0e">Winter Animals 13a and 13b follow Brute Neighbors
+                     9b; Winter Animals 13b is interlined in pencil.</ab>
+                     <ab change="#wc_0f">Winter Animals 13a and 13b are interlined in their
+                     present order.</ab>
+                  </note>
+                  
+                   It is remarkable that a single mouse should thus be allowed a whole pine tree
+                  for its dinner, <app xml:id="walc15-app-0134">
+                     <lem>gnawing round instead of up and down it;</lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.] --></rdg>
+                  </app> but perhaps it is necessary in order to thin these trees, which are wont to <app xml:id="walc15-app-0135">
+                     <lem>grow</lem>
+                     <rdg wit="#wc_0e">spring</rdg>
+                  </app> up densely. </seg>
+            </p>
+            
+            <p n="14" change="#wc_0a">
+               <seg n="14a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 14a written: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">14a</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note>The hares (<hi rend="style(italics)">Lepus Americanus</hi>)
+                  were very <app xml:id="walc15-app-0136">
+                     <lem>familiar.</lem>
+                     <rdg wit="#wc_0f">familiar <del>and when I came home late at night one would commonly go off with a
+                           squeak and a bounce from my door</del>
+                     </rdg>
+                  </app> One had her form<anchor type="hn" xml:id="hn-15-038"/>
+                  under my house all winter, separated from me only by the flooring, and she <app xml:id="walc15-app-0137">
+                     <lem>startled</lem>
+                     <rdg wit="#wc_0f">
+                        <del>aroused</del>
+                        <add>startled</add>
+                     </rdg>
+                  </app> me each morning by her hasty departure when I began to stir,— thump, thump, thump, striking her
+                  head against the <app xml:id="walc15-app-0138">
+                     <lem>floor</lem>
+                     <rdg wit="#wc_0f">
+                        <add>floor</add>
+                     </rdg>
+                  </app> timbers in her hurry. They used to come round my door at dusk to nibble the potato parings
+                  which I had thrown out, and were so nearly the color of the ground that they could hardly be
+                  distinguished when still. Sometimes in the twilight I alternately lost and recovered sight of one
+                  sitting motionless under my window. When </seg>
+               
+               <seg n="14b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Winter Animals 14b written: A; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">15</seg>
+                        <seg type="chapterTitle">Winter Animals</seg>
+                        <seg type="paragraph">14b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0a">Winter Animals 14b follows a missing leaf (#179). In
+                     the passage <quote>its vigor and the dignity … Such then was its</quote>, “its” was
+                     originally “his,” “His” was canceled and “its” was interlined in pencil]</ab>
+                     <ab change="#wc_0f">A fair copy was made of only <quote>I opened my door
+                        in the evening … almost dropsical. I took a</quote>.</ab>
+                  </note>
+                  
+                   I opened my door in the
+                  evening, off they would go with a squeak and a bounce. <app xml:id="walc15-app-0139">
+                     <lem>Near at hand they only excited my pity.</lem>
+                     <rdg wit="#wc_0a">They only excited my pity near at hand</rdg>
+                  </app> One evening one sat by my door<app xml:id="walc15-app-0140">
+                     <lem>two</lem>
+                     <rdg wit="#wc_0a">three</rdg>
+                  </app> paces from me, at first trembling with fear, yet unwilling to move; a poor wee thing, lean and
+                  bony, with ragged ears and sharp nose, scant tail and slender paws. It looked as if Nature no longer
+                  contained the breed of nobler bloods,<anchor type="hn" xml:id="hn-15-039"/> but <app xml:id="walc15-app-0141">
+                     <lem>stood on her last toes.</lem>
+                     <rdg wit="#wc_0a">
+                        <del>the earth stood on its last legs</del>
+                        <add rendition="pencil">stood or her last <del>legs</del>
+                           <add>toes</add>
+                        </add>
+                     </rdg>
+                  </app> Its large eyes<app xml:id="walc15-app-0142">
+                     <lem>appeared</lem>
+                     <rdg wit="#wc_0a">looked </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>looked</del>
+                        <add>appeared</add>
+                     </rdg>
+                  </app> young and unhealthy, almost dropsical. I took <app xml:id="walc15-app-0143">
+                     <lem>a step, and lo, away it scud</lem>
+                     <rdg wit="#wc_0a">two steps—and lo! <del>he scud</del> away <add rendition="pencil">it
+                        scud</add>
+                     </rdg>
+                  </app> with an elastic spring over the snow crust, straightening its body and its limbs into graceful
+                  length, and soon put the forest between me and itself,— the wild free venison, asserting its vigor and the<app xml:id="walc15-app-0144">
+                     <lem>dignity</lem>
+                     <rdg wit="#wc_0a">
+                        <del>dignity</del>
+                        <del>
+                           <add>integrity</add>
+                        </del>
+                        <add>dignity</add>
+                     </rdg>
+                  </app> of Nature. Not without reason was its slenderness. Such then was its nature.
+                  <app xml:id="walc15-app-0145">
+                     <lem>(<hi rend="style(italics)">Lepus, levipes</hi>, light-foot, some think.)<anchor type="hn" xml:id="hn-15-040"/>
+                     </lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+                  </app>
+               </seg>
+            </p>
+            
+            <p n="15" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Winter Animals 15 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">15</seg>
+                     <seg type="chapterTitle">Winter Animals</seg>
+                     <seg type="paragraph">15</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>The partridge and the rabbit … a poor
+                     country indeed that does not support a hare</quote> is interlined; <quote>Our woods teem with them
+                     both … which some cow-boy tends</quote> is interlined in pencil. Winter Animals 15 is
+                  followed by Pond in Winter 16, three missing leaves (#183-187), and Former Inhabitants 10b.</ab>
+               </note>
+               
+               What is a country without rabbits and partridges? They are <app xml:id="walc15-app-0146">
+                  <lem>among the most simple and indigenous</lem>
+                  <rdg wit="#wc_0a">
+                     <add>among</add> the most natural and simple <add rendition="pencil">of</add>
+                  </rdg>
+               </app> animal products; ancient and venerable families known to antiquity as to modern times; of the very
+               hue and substance of Nature, nearest allied to leaves and to the ground,—<app xml:id="walc15-app-0147">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0a">and <del>especially</del>
+                     <add>moreover</add>
+                  </rdg>
+               </app> to one another; it is either winged or it is legged. It is hardly as if you had seen a wild
+               creature when a rabbit or a partridge <app xml:id="walc15-app-0148">
+                  <lem>bursts away,</lem>
+                  <rdg wit="#wc_0a">burst away—<del>but</del>
+                  </rdg>
+               </app> only a natural one, as much to be expected as rustling leaves. The partridge and the rabbit are
+               still sure to thrive, like true natives of the soil, whatever revolutions occur. If the forest is cut
+               off, the sprouts and bushes which spring up afford them concealment, and they become more numerous than
+               ever. That must be a poor country indeed that does not support a hare. Our woods teem with them both, and
+               around every swamp may be seen the partridge or rabbit walk, beset with twiggy fences<anchor type="hn" xml:id="hn-15-041"/>
+               <app xml:id="walc15-app-0149">
+                  <lem>and horse-hair</lem>
+                  <rdg wit="#wc_0a">with <add>their horse-hair</add>
+                  </rdg>
+               </app> snares, which some cow-boy<anchor type="hn" xml:id="hn-15-042"/> tends. </p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,54 @@
+xquery version "3.1";
+
+(: This took basically all day. :'D :)
+declare variable $fileContent := string-join(
+
+(: Step 1 - Declare collection. The XML directory has our most updated XML in it and is updated along with the commit tree. :)
+let $discog := collection('/db/brandnew/XML/Albums')
+
+(: Step 2 -  :)
+let $albumRef := $discog//album/@ref/string() ! normalize-space()
+let $albumDist := $albumRef => distinct-values()
+
+for $albumIndex in $albumDist
+
+let $titleRef := $discog//title[following-sibling::album/@ref = $albumIndex]/@ref/string() ! normalize-space()
+let $titleDist := $titleRef => distinct-values()
+
+(:let $titleString := $discog//title[following-sibling::album/@ref = $albumIndex]/string() ! normalize-space()
+let $titleDistString := $titleString => distinct-values()
+
+let $albumString := $discog//album[@ref = $albumIndex]/string() ! normalize-space()
+let $albumDistString := $albumString => distinct-values():)
+
+order by $albumIndex
+
+for $titleIndex in $titleDist
+let $partRef := $discog//song[preceding::album/@ref = $albumIndex][preceding::title/@ref = $titleIndex]/(child::intro | prelude | interlude| postlude | verse | chorus | bridge | outro | preChorus | instrumental) ! name()
+let $partDist := $partRef => distinct-values()
+let $partCount := $partRef=> count()
+
+let $titleString := $discog//title[@ref = $titleIndex][following-sibling::album/@ref = $albumIndex]/string() ! normalize-space()
+let $titleDistString := $titleString => distinct-values()
+
+let $albumString := $discog//album[@ref = $albumIndex][preceding-sibling::title/@ref = $titleIndex]/string() ! normalize-space()
+let $albumDistString := $albumString => distinct-values()
+
+let $trackNo := $discog//track[preceding-sibling::album/@ref = $albumIndex][preceding-sibling::title/@ref = $titleIndex]/@n/string() ! normalize-space()
+
+for $trackIndex in $trackNo
+order by $trackIndex
+
+for $titleOutput in $titleString
+for $albumOutput in $albumString
+
+for $partIndex in $partCount
+
+return string-join(($titleOutput, "in album:", $albumOutput, "has", $partIndex, "unique parts"), "&#x9;"), "&#10;");
+
+let $fileName := "brandNewUniquePartsTSV.tsv"
+let $doc-db-uri := xmldb:store("/db/brandnew/TSV/", $fileName, $fileContent, "text/plain")
+return $doc-db-uri 
+(: Output below:) 
+
+(: http://newtfire.org:8338/exist/rest/db/brandnew/TSV/brandNewUniquePartsTSV.tsv :) 

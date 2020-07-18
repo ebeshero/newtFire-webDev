@@ -1,0 +1,1381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: The Bean-Field</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
+                     Unported License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY
+               Geneseo using Text Encoding Initiative (TEI) P5 XML Schema, using the Parallel
+               Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and
+               includes critical apparatus laid out by Ronald Clapper, and annotations provided by
+               Ronald Clapper, J. Lyndon Shanley, and Walter Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised
+               edition of dissertation originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc07">
+      <body>
+         <div>
+            <head>The Bean-Field <note ana="#wc_0f">The title “Beans" appears in pencil at the top
+                  of the leaf containing Bean-Field 1.</note>
+               <anchor type="hn" xml:id="hn-07-001"/>
+            </head>
+
+            <p n="1" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 1 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>MEANWHILE my beans, <anchor type="hn" xml:id="hn-07-002"/>
+               <app xml:id="walc07-app-0002">
+                  <lem>the length of whose rows, added together,</lem>
+                  <rdg wit="#wc_0a">whose continuous length of rows </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>whose continuous length of rows</del>
+                     <add>the length of whose rows added together</add>
+                  </rdg>
+               </app> was seven miles already planted, <anchor type="hn" xml:id="hn-07-003"/> were impatient to be hoed, <app xml:id="walc07-app-0003">
+                  <lem>for the earliest had grown considerably before the latest were in the ground;
+                     indeed they were not easily to be put off.</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">indeed not easy to be put off</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">for the earliest had grown considerably before the latest were
+                     in the ground; indeed they were not easy to be put off</rdg>
+               </app> What was the meaning of this so steady and self-respecting,<app xml:id="walc07-app-0004">
+                  <lem>this small Herculean</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">this small Herculean</add>
+                  </rdg>
+               </app> labor, <anchor type="hn" xml:id="hn-07-004"/> I knew not. I
+               came to love my rows, my beans,<app xml:id="walc07-app-0005">
+                  <lem>though</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">though</add>
+                  </rdg>
+               </app> so many more than I<app xml:id="walc07-app-0006">
+                  <lem>wanted.</lem>
+                  <rdg wit="#wc_0a">
+                     <del>want</del>
+                     <add rendition="pencil">wanted</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc07-app-0007">
+                  <lem> They attached me to the earth, and so I got strength like Antæus. <anchor type="hn" xml:id="hn-07-005"/> But </lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">They attached me to the earth &amp; so I got
+                           <del>health &amp;</del> strength like Antaeus. But</add>
+                  </rdg>
+               </app> why should I raise them? <app xml:id="walc07-app-0008">
+                  <lem>Only Heaven knows. This was my curious labor all summer,</lem>
+                  <rdg wit="#wc_0a">This had been my curious labor all summer—why—only heaven knows </rdg>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">Only Heaven knows</add> This was my curious labor all
+                     summer, <del>why, only Heaven knows</del>
+                  </rdg>
+               </app>—to make this portion of the earth’s surface, which had yielded only <app xml:id="walc07-app-0009">
+                  <lem>cinquefoil, blackberries, johnswort, and the like,</lem>
+                  <rdg wit="#wc_0a">blackberries and johnswort and cinqfoil</rdg>
+               </app>
+               <app xml:id="walc07-app-0010">
+                  <lem>before,</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add>before</add>,</rdg>
+               </app> sweet wild fruits and pleasant flowers, produce instead this pulse. <anchor type="hn" xml:id="hn-07-006"/> What shall I learn of beans or
+               beans of me? I cherish them, I hoe them, early and late I have an eye to them; and
+               this is my day’s work. It is a fine broad leaf to look<app xml:id="walc07-app-0011">
+                  <lem>on</lem>
+                  <rdg wit="#wc_0a">upon</rdg>
+               </app>. My auxiliaries are the dews and rains<app xml:id="walc07-app-0012">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0a">to</rdg>
+               </app> water this dry soil, and what fertility is in the soil itself, which for the
+               most part is lean and effete. My enemies are worms, cool days, and most of all
+               woodchucks. <anchor type="hn" xml:id="hn-07-007"/>
+               <app xml:id="walc07-app-0013">
+                  <lem>The last</lem>
+                  <rdg wit="#wc_0a">They</rdg>
+               </app> have nibbled for me a quarter of an acre clean. But what right had I to oust
+               johnswort and the rest, and break up their ancient herb garden? <app xml:id="walc07-app-0014">
+                  <lem>Soon, however</lem>
+                  <rdg wit="#wc_0a">But soon</rdg>
+               </app>, the remaining beans will be too tough for them, and go<app xml:id="walc07-app-0015">
+                  <lem>forward</lem>
+                  <rdg wit="#wc_0a">
+                     <del>on</del>
+                     <add rendition="pencil">forward</add>
+                  </rdg>
+               </app> to meet new foes. </p>
+
+            <p n="2" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 2 written: A; rewritten: B, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">2</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, F</seg>
+                  </ab>
+                  <ab change="#wc_0b">A fair copy was made of only <quote>And now to-night my flute
+                        … corn blades, and potato vines</quote>.</ab>
+                  <ab change="#wc_0f">A fair copy was made of only <quote>When I was four years old
+                        … oldest scenes stamped on my memory</quote>.</ab>
+               </note>
+               <app xml:id="walc07-app-0016">
+                  <lem>When I was four years old, <anchor type="hn" xml:id="hn-07-008"/> as I well remember, I was brought from Boston to this
+                     my native town, <anchor type="hn" xml:id="hn-07-009"/>
+                     through these very woods and this field, to the pond.</lem>
+                  <rdg wit="#wc_0a">
+                     <del>24 years ago</del>
+                     <add rendition="pencil">When I was 4 years old</add> I was brought from
+                        <del>the city</del>
+                     <add rendition="pencil">Boston</add> to this <del>very</del> pond—<add rendition="pencil">away in that country which was then but another name for
+                        the extended universe to me</add> through this very field—so much further
+                     into the world I had but recently entered</rdg>
+               </app> It is one of the<app xml:id="walc07-app-0017">
+                  <lem>oldest</lem>
+                  <rdg wit="#wc_0a">most ancient</rdg>
+               </app> scenes stamped on my memory.<app xml:id="walc07-app-0018">
+                  <lem>And</lem>
+                  <rdg wit="#wc_0a">That woodland vision for a long time occupied my dreams.
+                        <del>The country then was the world—the city only a gate to it</del>
+                     <add rendition="pencil">I gave the preference to this recess among the pines,
+                        where almost sunshine and shadow were the only inhabitants that varied the
+                        scene, over the tumultuous and varied city, as if here were my proper
+                        nursery</add>. And </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>to this recess among the pines, where sunshine and shadow were almost the
+                        only inhabitants that varied the scene, over the tumultuous and varied city,
+                        as if here were my proper nursery.</del> And</rdg>
+               </app> now to-night my flute <anchor type="hn" xml:id="hn-07-010"/>
+               has waked the echoes over<app xml:id="walc07-app-0019">
+                  <lem>that</lem>
+                  <rdg wit="#wc_0a">
+                     <del>the</del>
+                     <add rendition="pencil">that</add>
+                  </rdg>
+               </app> very water. <app xml:id="walc07-app-0020">
+                  <lem>The pines still stand here older than I; or, if some have fallen, </lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">Hardly</add> One generation of pines has fallen and </rdg>
+                  <rdg wit="#wc_0b">Hardly one generation of pines has fallen, and</rdg>
+               </app> I have cooked my supper with their stumps, and a new growth<app xml:id="walc07-app-0021">
+                  <lem>is rising all around, preparing another aspect for new infant eyes.</lem>
+                  <rdg wit="#wc_0a">of oaks and pines is rising all around the <add rendition="pencil">brim of the</add> pond <del>to greet other infants’
+                        eyes</del>
+                     <add rendition="pencil">preparing a wilder aspect for new infant eyes</add>
+                  </rdg>
+                  <rdg wit="#wc_0b">of oaks and pines is rising all around <del>the rim of the
+                        pond</del> preparing <del>a wilder</del>
+                     <add rendition="pencil">another</add> aspect for new infant eyes</rdg>
+               </app> Almost the same johnswort springs from the same perennial root in this
+                  pasture,<app xml:id="walc07-app-0022">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">and</add>
+                  </rdg>
+               </app> even I have at length helped to clothe that fabulous landscape of my<app xml:id="walc07-app-0023">
+                  <lem>infant</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms]-->
+                  </rdg>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">infant</add>
+                     <del>youthful</del>
+                     <add rendition="pencil">infant</add>
+                  </rdg>
+               </app> dreams, and<app xml:id="walc07-app-0024">
+                  <lem>one of the results</lem>
+                  <rdg wit="#wc_0a">
+                     <del>the</del>
+                     <add rendition="pencil">one</add> result</rdg>
+               </app> of my presence and influence is seen in these bean leaves, corn blades, and
+               potato vines.</p>
+
+            <p n="3" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 3 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">3</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note>I planted about two acres and a half of upland; and as it was only about
+               fifteen years since the land was cleared, and I myself had got out two or three cords
+               of stumps, I did not give it any manure; but in the course of the summer it appeared
+               by the arrowheads <anchor type="hn" xml:id="hn-07-011"/> which I
+               turned up in hoeing, that an extinct nation had anciently dwelt here and planted corn
+               and beans ere white men came to<app xml:id="walc07-app-0025">
+                  <lem>clear</lem>
+                  <rdg wit="#wc_0a #wc_0b">cut and clear</rdg>
+               </app> the land, and so, to some extent, had exhausted the soil for this very<app xml:id="walc07-app-0026">
+                  <lem>crop.</lem>
+                  <rdg wit="#wc_0a">crop. However, as it had lain fallow so long I got a good crop </rdg>
+                  <rdg wit="#wc_0b"> crop. <del>However, as it had lain fallow so long I got a good
+                        crop</del>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="4" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 4 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0b">A fair copy was made of only <quote>Before yet any woodchuck
+                        or squirrel … making the yellow soil</quote>.</ab>
+               </note>
+               <anchor type="hn" xml:id="hn-07-012"/>Before yet any woodchuck or
+               squirrel had run across the road, or the sun had got above the shrub-oaks, while all
+               the dew was on, though the farmers<app xml:id="walc07-app-0027">
+                  <lem> warned me against it, <anchor type="hn" xml:id="hn-07-013"/>—I would advise you to do all your work if possible while the dew is on, </lem>
+                  <rdg wit="#wc_0a">said that would never do </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>said that would never do</del>
+                     <add rendition="pencil">warned me against it <del>&amp; by the way</del> but I
+                        would advise you to do all your work if possible while the dew is on</add>
+                  </rdg>
+               </app>—I began to level the ranks of haughty weeds in my bean-field and throw dust
+               upon their heads. <anchor type="hn" xml:id="hn-07-014"/> Early in
+               the morning I worked barefooted, dabbling like a plastic artist in the dewy and
+               crumbling sand, but later in the day the sun blistered my feet. There the sun lighted
+               me to hoe beans, pacing slowly backward and forward over that yellow gravelly upland,
+               between the long green rows, fifteen rods, the one end terminating in a shrub oak
+               copse where I could rest in the shade, the other in a blackberry field where the
+               green berries deepened their tints by the time I had made another bout. Removing the
+               weeds, putting fresh soil about the bean stems, and encouraging this weed<app xml:id="walc07-app-0028">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">which</add>
+                  </rdg>
+               </app> I had sown, making the yellow soil express its summer thought in bean leaves
+               and blossoms rather than in wormwood and piper and millet grass, <app xml:id="walc07-app-0029">
+                  <lem>making the earth say beans instead of grass,</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+               </app>—this was my<app xml:id="walc07-app-0030">
+                  <lem>daily</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">daily</add>
+                  </rdg>
+               </app> work. As I had little aid from horses or cattle, or hired men or boys, or
+               improved implements<app xml:id="walc07-app-0031">
+                  <lem>of</lem>
+                  <rdg wit="#wc_0a">
+                     <del>in</del>
+                     <add rendition="pencil">of</add>
+                  </rdg>
+               </app> husbandry, I was much slower, and became much more intimate with my beans than
+                  <app xml:id="walc07-app-0032">
+                  <lem>usual.</lem>
+                  <rdg wit="#wc_0a">
+                     <del>is</del> usual</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-07-015"/> But labor of the hands, even
+               when pursued to the verge of drudgery, is<app xml:id="walc07-app-0033">
+                  <lem>perhaps</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">perhaps</add>
+                  </rdg>
+               </app> never the worst form of idleness. It has a constant and imperishable <app xml:id="walc07-app-0034">
+                  <lem>moral, and</lem>
+                  <rdg wit="#wc_0a">moral—<add rendition="pencil">&amp;</add>
+                  </rdg>
+               </app> to the scholar it yields a classic <app xml:id="walc07-app-0035">
+                  <lem>result.</lem>
+                  <rdg wit="#wc_0a">
+                     <del>result</del> to the literary it is literary <add rendition="pencil">&amp;</add> it is <del>oftenest</del>
+                     <add rendition="pencil">very often</add> honest &amp; honorable</rdg>
+               </app> A very <hi rend="style(italics)">agricola laboriosus</hi>
+               <anchor type="hn" xml:id="hn-07-016"/>was I to travellers bound
+               westward through Lincoln and Wayland <anchor type="hn" xml:id="hn-07-017"/> to nobody knows where; they sitting at their ease in gigs,
+                  <anchor type="hn" xml:id="hn-07-018"/> with elbows on knees, and
+               reins loosely hanging in festoons; I the home-staying, laborious native of the
+                  soil.<app xml:id="walc07-app-0036">
+                  <lem>But</lem>
+                  <rdg wit="#wc_0a">
+                     <del>And</del>
+                     <add rendition="pencil">But</add>
+                  </rdg>
+               </app> soon my homestead was out of their sight and thought. It was the only open and
+               cultivated field for<app xml:id="walc07-app-0037">
+                  <lem>a great</lem>
+                  <rdg wit="#wc_0a">some</rdg>
+               </app> distance on either side<app xml:id="walc07-app-0038">
+                  <lem>of the road;</lem>
+                  <rdg wit="#wc_0a">
+                     <add>of the road</add>;</rdg>
+               </app> so they made the most of it; and sometimes the man in the field heard more
+                  <app xml:id="walc07-app-0039">
+                  <lem>of travellers' gossip and comment than was meant for his ear: </lem>
+                  <rdg wit="#wc_0a">than was meant for his ear of travellers’ gossip and
+                     comment</rdg>
+               </app> “Beans so late! peas so late!"—for I continued to plant when others had begun
+               to hoe,—the ministerial husbandman <anchor type="hn" xml:id="hn-07-019"/> had not suspected it. “Corn, my boy, for fodder; corn for
+                  <app xml:id="walc07-app-0040">
+                  <lem>fodder."</lem>
+                  <rdg wit="#wc_0a">fodder."<add>By the way, I have heard it said that the clergymen
+                        are as a class the best gardeners, in N. E., better gardeners than shepherds
+                        possibly</add>
+                  </rdg>
+               </app> “Does he <hi rend="style(italic)">live</hi> there?" asks the black bonnet of
+               the gray coat; and the hard-featured farmer reins up his grateful dobbin <anchor type="hn" xml:id="hn-07-020"/> to <app xml:id="walc07-app-0041">
+                  <lem>inquire what you are</lem>
+                  <rdg wit="#wc_0a">know what he is</rdg>
+               </app> doing where he sees no manure in the furrow, and recommends a little chip
+               dirt, <anchor type="hn" xml:id="hn-07-021"/> or any little waste
+               stuff, <app xml:id="walc07-app-0042">
+                  <lem>or it may be</lem>
+                  <rdg wit="#wc_0a">
+                     <add>or it may be</add>
+                  </rdg>
+               </app> ashes or plaster. But here were two acres and a half of furrows, and only a
+               hoe for cart and two hands to draw it,— <app xml:id="walc07-app-0043">
+                  <lem>there being an aversion to other carts and horses,</lem>
+                  <rdg wit="#wc_0a">
+                     <add>there being an antipathy to other carts and horses</add>
+                  </rdg>
+               </app>—and chip dirt far away. Fellow-travellers as they rattled by compared it aloud
+               with the fields<app xml:id="walc07-app-0044">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">which</add>
+                  </rdg>
+               </app> they had passed, so that I came to know how I stood in the agricultural world.
+               This was one field not in Mr. Colman’s report. And, by the way, who estimates the
+               value of the crop which Nature yields in the <app xml:id="walc07-app-0045">
+                  <lem>still wilder</lem>
+                  <rdg wit="#wc_0a">
+                     <add>still wilder</add>
+                  </rdg>
+               </app> fields unimproved by man? The crop of <hi rend="style(italics)">English</hi>
+               hay <anchor type="hn" xml:id="hn-07-022"/> is carefully weighed,
+               the moisture calculated, the silicates and the potash; but in all dells and pond
+               holes in the woods and pastures and swamps grows a rich and various crop only<app xml:id="walc07-app-0046">
+                  <lem>unreaped</lem>
+                  <rdg wit="#wc_0a">
+                     <del>ungathered and unimproved</del>
+                     <add>unreaped</add>
+                  </rdg>
+               </app> by man. Mine was, as it were, the connecting link between wild and cultivated
+               fields; as some states are civilized, and others half-civilized, and others savage or
+               barbarous, so <app xml:id="walc07-app-0047">
+                  <lem>my field</lem>
+                  <rdg wit="#wc_0a">
+                     <del>mine</del>
+                     <add>my field</add>
+                  </rdg>
+               </app>was, though not in a bad sense, a half-cultivated field. They were beans
+               cheerfully returning to their wild and primitive state that I cultivated, <app xml:id="walc07-app-0048">
+                  <lem>and</lem>
+                  <rdg wit="#wc_0a">
+                     <del>while</del>
+                     <add>and</add>
+                  </rdg>
+               </app> my hoe played the <hi rend="style(italics)">Ranz des Vaches <anchor type="hn" xml:id="hn-07-023"/>
+               </hi> for them.</p>
+
+            <p n="5" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 5 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>Near at hand, upon the topmost spray of a birch, sings the brown-thrasher—or
+               red mavis, as some love to call<app xml:id="walc07-app-0049">
+                  <lem>him</lem>
+                  <rdg wit="#wc_0a">
+                     <del>it</del>
+                     <add>him</add>
+                  </rdg>
+               </app>—all the morning, glad of your society, that would find out another farmer’s
+               field if <app xml:id="walc07-app-0050">
+                  <lem>yours were not here.</lem>
+                  <rdg wit="#wc_0a">you were not<del>there.</del>
+                     <add rendition="pencil">here</add>
+                  </rdg>
+               </app> While you are planting the seed, he cries,—“Drop it, drop it,—cover it up,
+               cover it up,—pull it up, pull it up, pull it up." But this was not corn, and so it
+               was safe from such enemies as he. You may wonder what his rigmarole, his amateur
+               Paganini <anchor type="hn" xml:id="hn-07-024"/> performances on one
+               string or on twenty, have to do with your planting, and yet prefer it to leached
+               ashes or plaster. 
+                  <app xml:id="walc07-app-0051">
+                  <lem>It was a cheap sort of top dressing in which I had entire faith.</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">It was a cheap sort of top dressing in which I had entire
+                        faith.</add> And I am not sure that the beans didn’t grow the better for it.
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="6" change="#wc_0a">
+               <seg n="6a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 6a written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">6a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab change="#wc_0b">A fair copy was made of only <quote>When my hoe tinkled
+                           against the stones … pinions of the sea</quote>.</ab>
+                  </note>As I drew a still fresher soil about<app xml:id="walc07-app-0053">
+                     <lem>the</lem>
+                     <rdg wit="#wc_0a">
+                        <del>my</del>
+                        <add rendition="pencil">the</add>
+                     </rdg>
+                  </app> rows with my hoe, I disturbed<app xml:id="walc07-app-0054">
+                     <lem>the ashes of unchronicled</lem>
+                     <rdg wit="#wc_0a">
+                        <add>as I have said</add> the ashes of <del>unrecorded</del>
+                        <add rendition="pencil">unchronicled</add>
+                     </rdg>
+                  </app> nations who in primeval years lived under these heavens, and their small
+                  implements of war and hunting were brought to the light of this modern day. They
+                  lay mingled with other natural stones, some of which bore the marks of having been
+                  burned by <app xml:id="walc07-app-0055">
+                     <lem>Indian fires, and some by the sun, and also</lem>
+                     <rdg wit="#wc_0a">
+                        <del>the</del> Indian fires, and some <del>had only been burned</del> by the
+                        sun <del>and also with</del>
+                        <del>
+                           <add>in company with</add>
+                        </del>
+                        <del>
+                           <add>alone</add>
+                        </del>
+                        <add>and also</add>
+                     </rdg>
+                  </app> bits of pottery and glass brought<app xml:id="walc07-app-0056">
+                     <lem>hither</lem>
+                     <rdg wit="#wc_0a">
+                        <add>hither</add>
+                     </rdg>
+                  </app> by the recent cultivators of the soil. When my hoe tinkled against the<app xml:id="walc07-app-0057">
+                     <lem>stones,</lem>
+                     <rdg wit="#wc_0a">stones in my bean-field </rdg>
+                     <rdg wit="#wc_0b">stones <del>in my bean-field</del>
+                     </rdg>
+                  </app> that music <app xml:id="walc07-app-0058">
+                     <lem>echoed to the woods and the sky, and</lem>
+                     <rdg wit="#wc_0a">
+                        <add>echoed to the woods and the sky, and</add>
+                     </rdg>
+                  </app> was an accompaniment to my labor which yielded an instant and immeasurable
+                  crop. <app xml:id="walc07-app-0059">
+                     <lem>It was no longer beans that I hoed, nor I that hoed beans; </lem>
+                     <rdg wit="#wc_0a">
+                        <add>It was no longer beans that I hoed, nor I that hoed beans;</add>
+                     </rdg>
+                  </app> and I remembered with <app xml:id="walc07-app-0060">
+                     <lem>as much pity as pride, if I remembered at all,</lem>
+                     <rdg wit="#wc_0a">pity </rdg>
+                     <rdg wit="#wc_0b">pity, if I remembered at all</rdg>
+                  </app> my acquaintances who had gone to the city to attend the oratorios. The
+                  night-hawk <anchor type="hn" xml:id="hn-07-025"/> circled
+                  overhead in the sunny afternoons—<app xml:id="walc07-app-0061">
+                     <lem>for I sometimes made a day of it</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">for I sometimes made a day of it </add>
+                     </rdg>
+                  </app>—like a mote in the eye, <anchor type="hn" xml:id="hn-07-026"/> or in heaven’s eye, falling from time to time with a swoop
+                  and a sound as if the heavens were rent, torn at last to very rags and tatters,
+                  and yet a seamless cope <app xml:id="walc07-app-0062">
+                     <lem>remained;</lem>
+                     <rdg wit="#wc_0a #wc_0b">remains</rdg>
+                  </app> small imps that fill the air and lay their eggs on the ground on bare <app xml:id="walc07-app-0063">
+                     <lem>sand or</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">sand or</add>
+                     </rdg>
+                  </app> rocks on the tops of <app xml:id="walc07-app-0064">
+                     <lem>hills,</lem>
+                     <rdg wit="#wc_0a #wc_0b">bare hills</rdg>
+                  </app> where few have found them; graceful and slender like ripples caught up from
+                  the pond, as leaves are raised by the wind to float in the heavens; such
+                  kindredship is in Nature. The hawk is aerial brother of the wave which he sails
+                  over and surveys, those his perfect air-inflated wings answering to the elemental
+                  unfledged pinions of the sea. </seg>
+               <seg n="6b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 6b written: A; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">6b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0b">The material after Bean-Field 6a appears in the
+                        following order—Bean-Field 6d, 6c and 6b.</ab>
+                  </note> Or <app xml:id="walc07-app-0066">
+                     <lem>sometimes</lem>
+                     <rdg wit="#wc_0a">when I rested in the shrub-oaks</rdg>
+                  </app> I watched a pair of hen-hawks <anchor type="hn" xml:id="hn-07-027"/> circling high in the sky, alternately soaring and
+                  descending, approaching, and leaving one another, as if they were the imbodiment
+                  of my own <app xml:id="walc07-app-0067">
+                     <lem>thoughts.</lem>
+                     <rdg wit="#wc_0a">thoughts <del>which soar as high &amp; circle as majestically
+                           there</del>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="6c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 6c written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">6c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                  </note>
+                  <app xml:id="walc07-app-0068">
+                     <lem>Or</lem>
+                     <rdg wit="#wc_0a">Sometimes </rdg>
+                     <rdg wit="#wc_0b">
+                        <del>Sometimes</del>
+                        <add rendition="pencil">Or</add>
+                     </rdg>
+                  </app> I was attracted by the passage of wild pigeons from this wood to that, with
+                     <app xml:id="walc07-app-0069">
+                     <lem>a slight quivering winnowing sound</lem>
+                     <rdg wit="#wc_0a">
+                        <del>their slight tantivy</del>
+                        <add rendition="pencil">a slight quivering sound</add>
+                     </rdg>
+                     <rdg wit="#wc_0b">a slight quivering <add rendition="pencil">winnowing</add>
+                        sound</rdg>
+                  </app> and carrier haste; or from under a rotten stump my hoe turned up a sluggish
+                  portentous and outlandish spotted salamander, <anchor type="hn" xml:id="hn-07-028"/> a trace of Egypt and the Nile, yet our contemporary.</seg>
+               <seg n="6d" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 6d written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">6d</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                  </note>When I paused to lean on my hoe, these <app xml:id="walc07-app-0070">
+                     <lem>sounds and sights I heard and saw</lem>
+                     <rdg wit="#wc_0a">
+                        <del>sights &amp; sounds I saw and heard</del>
+                        <add rendition="pencil">sounds &amp; sights I heard and saw</add>
+                     </rdg>
+                  </app> any where in the row, <app xml:id="walc07-app-0071">
+                     <lem>a part of</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">a part of</add>
+                     </rdg>
+                  </app> the inexhaustible entertainment which the country offers. </seg>
+            </p>
+
+            <p n="7" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 7 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">7</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+                  <ab change="#wc_0a">Bean-Field 7 follows Sounds 15a and precedes Sounds 21.</ab>
+               </note> On gala days the town fires its great guns, which echo like popguns to these
+               woods, and <app xml:id="walc07-app-0072">
+                  <lem>some waifs</lem>
+                  <rdg wit="#wc_0a">the waifs and loose strains</rdg>
+               </app> of martial music occasionally penetrate thus far. To me, away there in my
+               bean-field at the other end of the town, the big guns sounded as if a puff ball
+                  <anchor type="hn" xml:id="hn-07-029"/> had burst; and when there
+               was a military turnout of which I was ignorant, I have sometimes had a vague sense
+               all the day of some sort of itching and disease in the horizon, as if some eruption
+               would break out there soon, either scarlatina <anchor type="hn" xml:id="hn-07-030"/> or canker-rash, <anchor type="hn" xml:id="hn-07-031"/> until at length some more favorable puff of wind, making
+               haste over the fields and up the Wayland road, brought me information of the
+               “trainers." <anchor type="hn" xml:id="hn-07-032"/>
+               <app xml:id="walc07-app-0073">
+                  <lem>It seemed by the distant hum as if somebody’s bees had swarmed, <anchor type="hn" xml:id="hn-07-033"/> and that the neighbors,
+                     according to Virgil’s advice, by a faint <hi rend="style(italics)">tintinnabulum
+                           <anchor type="hn" xml:id="hn-07-034"/>
+                     </hi> upon the most sonorous of their domestic utensils, were endeavoring to
+                     call them down into the hive again. <anchor type="hn" xml:id="hn-07-035"/> And when the sound died quite away, and the hum had
+                     ceased, and the most favorable breezes told no tale, I knew that they had got
+                     the last drone of them all safely into the Middlesex <anchor type="hn" xml:id="hn-07-036"/> hive, and that now their
+                     minds were bent on the honey with which it was smeared. </lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+               </app>
+            </p>
+
+            <p n="8" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 8 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">8</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>I felt proud to know that the liberties of Massachusetts and of our fatherland
+               were in such safe keeping; and as I turned to my hoeing again I was filled with an
+               inexpressible confidence, and pursued my labor cheerfully with a calm trust in the
+               future.</p>
+
+            <p n="9" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 9 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">9</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>When there were several bands of musicians, it sounded as if all the village
+               was a vast bellows, and all the buildings expanded and collapsed alternately with a
+               din. But sometimes it was a really noble and inspiring strain that reached these
+               woods, and the trumpet that sings of fame, <anchor type="hn" xml:id="hn-07-037"/> and I felt as if I could spit a Mexican with a good relish,
+                  <anchor type="hn" xml:id="hn-07-038"/>—for why should we always
+               stand for trifles?—and looked round for a woodchuck or a skunk to exercise my
+               chivalry upon. These martial strains seemed as far away as Palestine, and reminded me
+               of a march of crusaders in the horizon, with a slight tantivy and tremulous motion of
+               the elm-tree <anchor type="hn" xml:id="hn-07-039"/> tops which
+               overhang the village. This was one of the <hi rend="style(italics)">great</hi> days;
+               though the sky had from my clearing only the same everlastingly great look that it
+               wears daily, and I saw no difference in it.</p>
+
+            <p n="10" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 10 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">10</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>It was a singular experience that long acquaintance<app xml:id="walc07-app-0074">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+               </app> I cultivated with beans, <app xml:id="walc07-app-0075">
+                  <lem>what with planting, and hoeing, and harvesting, and threshing, and picking
+                     over, and selling them,—the last was the hardest of all,—I might add eating,
+                     for I did taste.</lem>
+                  <rdg wit="#wc_0a">
+                     <add>what with planting &amp; hoeing &amp; harvesting and threshing and picking
+                        over and selling them. The last was the hardest of all. I might add eating
+                        too, for I did taste</add>
+                  </rdg>
+               </app> I was determined to know beans. <anchor type="hn" xml:id="hn-07-040"/> When they were growing, I used to hoe from five o’clock <app xml:id="walc07-app-0076">
+                  <lem>in the morning till noon, and commonly</lem>
+                  <rdg wit="#wc_0a">till 12—and <add>commonly</add>
+                  </rdg>
+               </app> spent the rest of the day about other affairs. Consider the intimate and
+               curious acquaintance one makes with various kinds of weeds,— <app xml:id="walc07-app-0077">
+                  <lem>it will bear some iteration in the account, for there was no little iteration
+                     in the labor,</lem>
+                  <rdg wit="#wc_0a">
+                     <add>it will bear some iteration in the account, for there was no little
+                        iteration in the labor</add>,</rdg>
+               </app>—disturbing their delicate organizations so ruthlessly, and making such
+               invidious distinctions with his hoe, levelling whole ranks of one species, and
+               sedulously cultivating another. That’s Roman wormwood,—that’s pigweed,—that’s
+               sorrel,—that’s piper-grass,—have at him, chop him up, turn his roots upward to the
+               sun, don’t let him have a fibre in the shade, if you do he’ll turn himself t’other
+               side up and be as green as a leek in two days. A long war, not with cranes, <anchor type="hn" xml:id="hn-07-041"/> but with weeds, those Trojans
+                  <anchor type="hn" xml:id="hn-07-042"/> who had sun and rain and
+               dews on their side. Daily the beans saw me come to their rescue armed with a hoe, and
+               thin the ranks of their enemies, filling up the trenches with weedy dead. Many a
+               lusty crest-waving Hector, <anchor type="hn" xml:id="hn-07-043"/>
+               that towered a whole foot above his crowding comrades, fell before my weapon and
+               rolled in the dust.</p>
+
+            <p n="11" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 11 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">11</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>Though I gave them no manure … twelve bushels of beans</quote> does not
+                     appear in the manuscript.</ab>
+                  <ab change="#wc_0f">A fair copy was made of only <quote>other farmers of New
+                        England … twelve bushels of beans</quote>.</ab>
+               </note> Those summer days which some of my contemporaries devoted to the fine arts in
+               Boston or Rome, and others to contemplation in India, and others to trade in London
+               or New York, I <app xml:id="walc07-app-0078">
+                  <lem>thus,</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">thus</add>,</rdg>
+               </app> with the other farmers of New England, devoted to husbandry. Not that I wanted
+               beans to eat, for I am by nature a Pythagorean, <anchor type="hn" xml:id="hn-07-044"/>
+               <app xml:id="walc07-app-0079">
+                  <lem>so far as beans are concerned, whether they mean porridge or voting, <anchor type="hn" xml:id="hn-07-045"/> and exchanged them for
+                     rice; </lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">so far as beans are concerned <add>whether they mean porridge or
+                        voting</add> and exchanged them for rice <del>and the like</del>
+                  </rdg>
+               </app> but, perchance, as some must work in fields if only for the sake of tropes and
+               expression, to serve a parable-maker one day. <app xml:id="walc07-app-0080">
+                  <lem>It</lem>
+                  <rdg wit="#wc_0a">
+                     <del>However</del> it</rdg>
+               </app> was on the whole a<app xml:id="walc07-app-0081">
+                  <lem>rare</lem>
+                  <rdg wit="#wc_0a">
+                     <del>noble</del>
+                     <add rendition="pencil">rare</add>
+                  </rdg>
+               </app> amusement, <app xml:id="walc07-app-0082">
+                  <lem>which, continued too long, might have become a dissipation.</lem>
+                  <rdg wit="#wc_0a">though my labor there had not much to do with the crop that was
+                     to be harvested in the fall </rdg>
+                  <rdg wit="#wc_0f">which continued too long might have got to be a
+                     dissipation</rdg>
+               </app> Though I gave them no manure, and did not hoe them all once, I hoed them
+               unusually well as far as I went, and was paid for it in the end, “there being in
+               truth," as Evelyn <anchor type="hn" xml:id="hn-07-046"/> says, “no
+               compost or lætation <anchor type="hn" xml:id="hn-07-047"/>
+               whatsoever comparable to this continual motion, repastination, <anchor type="hn" xml:id="hn-07-048"/> and turning of the mould with the
+               spade." <app xml:id="walc07-app-0083">
+                  <lem>“The earth," he adds elsewhere,</lem>
+                  <rdg wit="#wc_0f">“<del>For</del> the earth," he adds in
+                        another<unclear>xxxxxxxx</unclear>
+                     <add>elsewhere</add>
+                  </rdg>
+               </app> “especially if fresh, has a certain magnetism in it, by which it attracts the
+               salt, power, or virtue (call it either) which gives it life, and is the logic of all
+               the labor and stir we keep about it, to sustain us; all dungings and other sordid
+               temperings being but the vicars succedaneous <anchor type="hn" xml:id="hn-07-049"/> to this improvement." Moreover, this<app xml:id="walc07-app-0084">
+                  <lem>being</lem>
+                  <rdg wit="#wc_0f">
+                     <del>having been</del>
+                     <add>being</add>
+                  </rdg>
+               </app> one of those “worn-out and exhausted lay fields which enjoy their sabbath,"
+               had perchance, as Sir Kenelm Digby <anchor type="hn" xml:id="hn-07-050"/> thinks likely, attracted “vital spirits" from the air. <app xml:id="walc07-app-0085">
+                  <lem>I harvested</lem>
+                  <rdg wit="#wc_0f">At any rate I <del>got</del>
+                     <add rendition="pencil">harvested</add>
+                  </rdg>
+               </app> twelve bushels of beans. <anchor type="hn" xml:id="hn-07-051"/>
+            </p>
+
+            <p n="12" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 12 written: A; rewritten: C.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">12</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">C</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0c">Bean-Field 12 follows Economy 76a.</ab>
+                  <ab change="#wc_0c">A fair copy was made of Bean-Field 12 on a leaf from B that
+                     had been taken into C.</ab>
+                  <ab change="#wc_0a">The hoe appears sixth in the list of outgoes, after turnip
+                     seed and before white line for crow fence.</ab>
+               </note>
+               <app xml:id="walc07-app-0086">
+                  <lem>But to be more particular; for it is complained that Mr. Colman has reported
+                     chiefly the expensive experiments of gentlemen farmers;</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0c">
+                     <add>But to be more particular; for it is complained that Mr. Colman has
+                        reported chiefly the expensive experiments of gentlemen farmers;</add>
+                     <del>for I would give a complete account of myself</del>
+                     <add>As I wish to give a complete account of myself</add> I must add the
+                     details of my farming &amp; there is the more excuse for this since it is
+                     complained that Mr Colman has reported <del>only</del>
+                     <add rendition="pencil">chiefly</add> the expensive experiments of gentlemen
+                     farmers</rdg>
+               </app> my <app xml:id="walc07-app-0087">
+                  <lem>outgoes</lem>
+                  <rdg wit="#wc_0a">farm outgoes </rdg>
+                  <rdg wit="#wc_0c">farm out-goes for the first season were—</rdg>
+               </app> were,— <list>
+                  <item>For a hoe, <space dim="horizontal" extent="auto" rendition="dotted"/>
+                     $0.54</item>
+                  <item>Plowing, harrowing, and furrowing, <space dim="horizontal" extent="auto" rendition="dotted"/> 7 50, <app xml:id="walc07-app-0088">
+                        <lem>Too much.</lem>
+                        <rdg wit="#wc_0a">that was too much</rdg>
+                     </app>
+                     <anchor type="hn" xml:id="hn-07-052"/>
+                  </item>
+                  <item>Beans for seed, <space dim="horizontal" extent="auto" rendition="dotted"/> 3
+                     12½</item>
+                  <item>Potatoes “ <space dim="horizontal" extent="auto" rendition="dotted"/> 1 33 </item>
+                  <item>Peas “ <space dim="horizontal" extent="auto" rendition="dotted"/> 0 40 </item>
+                  <item>Turnip seed, <space dim="horizontal" extent="auto" rendition="dotted"/> 0 06 </item>
+                  <item>White line for crow fence, <space dim="horizontal" extent="auto" rendition="dotted"/> 0 02 <anchor type="hn" xml:id="hn-07-053"/>
+                  </item>
+                  <item> Horse cultivator and boy three hours, <space dim="horizontal" extent="auto" rendition="dotted"/> 1 00 </item>
+                  <item rendition="underline"> Horse and cart to get crop, <space dim="horizontal" extent="auto" rendition="dotted"/> 0 75 </item>
+                  <item> In all, <space dim="horizontal" extent="auto" rendition="dotted"/> $14
+                     72½</item>
+               </list>
+            </p>
+
+            <p n="13" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 13 written: A; rewritten: C.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">13</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">C</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0c">Bean-Field 13 follows Economy 76c.</ab>
+               </note>
+               <app xml:id="walc07-app-0089">
+                  <lem>My income was (<quote xml:lang="la">patrem familias vendacem, non emacem esse
+                        oportet</quote>,) <anchor type="hn" xml:id="hn-07-054"/>
+                     from </lem>
+                  <rdg wit="#wc_0a #wc_0c">From</rdg>
+               </app>
+               <list>
+                  <item>Nine bushels and twelve quarts <app xml:id="walc07-app-0090">
+                        <lem>and twelve quarts</lem>
+                        <rdg wit="#wc_0a">
+                           <add>and twelve quarts</add>
+                        </rdg>
+                     </app> of beans sold, <space dim="horizontal" extent="auto" rendition="dotted"/> $ 16 94 </item>
+                  <item>Five “ <app xml:id="walc07-app-0091">
+                        <lem>large </lem>
+                        <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+                     </app> potatoes, <space dim="horizontal" extent="auto" rendition="dotted"/> 2
+                     50 </item>
+                  <item>Nine “ small potatoes, <space dim="horizontal" extent="auto" rendition="dotted"/> 2 25 </item>
+                  <item>Grass, <space dim="horizontal" extent="auto" rendition="dotted"/> 1 00 </item>
+                  <item rendition="underline">Stalks, <space dim="horizontal" extent="auto" rendition="dotted"/> 0 75 </item>
+                  <item>In all, <space dim="horizontal" extent="auto" rendition="dotted"/> $23
+                     44</item>
+               </list>
+               <app xml:id="walc07-app-0092">
+                  <lem> Leaving a pecuniary profit, as I have elsewhere <anchor type="hn" xml:id="hn-07-055"/> said, of $ 8 71½.</lem>
+                  <rdg wit="#wc_0a #wc_0c"><!--[not in ms.]--></rdg>
+               </app>
+            </p>
+
+            <p n="14" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 14 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">14</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0f">A fair copy was made of only <quote>This is the result …
+                        sitting erect like</quote>.</ab>
+               </note> This is the result of my experience in raising <app xml:id="walc07-app-0093">
+                  <lem>beans.</lem>
+                  <rdg wit="#wc_0a">beans <add rendition="pencil">I got 12 bushels, by the way</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">beans,—<del>I have already stated the pecuniary profit—</del>
+                  </rdg>
+               </app> Plant the common<app xml:id="walc07-app-0094">
+                  <lem>small</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+               </app> white bush bean about the first of June, in rows three feet by eighteen inches
+               apart, being careful to select fresh round and unmixed seed. <anchor type="hn" xml:id="hn-07-056"/> First look out for worms, and
+               supply vacancies by planting<app xml:id="walc07-app-0095">
+                  <lem>anew.</lem>
+                  <rdg wit="#wc_0a #wc_0f">afresh</rdg>
+               </app> Then look out for woodchucks, if it is an exposed place, for they will nibble
+               off the earliest tender leaves almost clean as they go; and again, when the young
+               tendrils make their appearance, they have notice of it, and will shear them off with
+               both buds and young pods, sitting erect like a squirrel. But above all harvest as
+               early as possible, if you would escape frosts and have a fair and saleable crop; you
+               may save much loss by this means. </p>
+
+            <p n="15" change="#wc_0a">
+               <seg n="15a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 15a written: A.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">15a</seg>
+                        <seg type="written">A</seg>
+                     </ab>
+                     <ab change="#wc_0a">
+                        <quote>Alas! I said this to myself … and so did not come up</quote> and
+                           <quote>This generation is very sure … for himself to lie down in!</quote>
+                        are interlined.</ab>
+                  </note> This further experience also I gained. I said to myself, I will not plant
+                  beans and corn with so much industry another summer, but such seeds, if the seed
+                  is not lost, as sincerity, truth, simplicity, faith, innocence, <app xml:id="walc07-app-0097">
+                     <lem>and the like,</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">and the like</add>,</rdg>
+                  </app> and see if they will not grow in this soil, even with less toil and
+                  manurance, and sustain me, <app xml:id="walc07-app-0098">
+                     <lem>for surely it has not been exhausted for these crops.</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+                  </app> Alas! I said this to myself; but now another summer is gone, and another,
+                  and another, and<app xml:id="walc07-app-0099">
+                     <lem>I am obliged to say to you, Reader,</lem>
+                     <rdg wit="#wc_0a">it turns out</rdg>
+                  </app> that the seeds which I planted, if indeed they <hi rend="style(italic)">were</hi> the seeds of those virtues, were wormeaten or had lost their
+                  vitality, and so did not come up. Commonly men will only be brave as their fathers
+                  were brave, <app xml:id="walc07-app-0100">
+                     <lem>or timid.</lem>
+                     <rdg wit="#wc_0a">
+                        <add>or timid, it may be</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc07-app-0101">
+                     <lem>This</lem>
+                     <rdg wit="#wc_0a">
+                        <del>I perceive that</del> this</rdg>
+                  </app> generation is very sure <app xml:id="walc07-app-0102">
+                     <lem>to plant</lem>
+                     <rdg wit="#wc_0a">each new year to raise</rdg>
+                  </app> corn and beans each new year precisely as the Indians did centuries ago and
+                  taught the first settlers to do, as if there were a fate in it. I saw an old man
+                  the other day, <app xml:id="walc07-app-0103">
+                     <lem>to my astonishment,</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+                  </app> making the holes with<app xml:id="walc07-app-0104">
+                     <lem>a</lem>
+                     <rdg wit="#wc_0a">his</rdg>
+                  </app> hoe for the seventieth time at least, and not for himself to lie down in!
+                  But why should not the New Englander try new adventures, and not lay so much
+                  stress on his grain, his potato and grass crop, and his orchards?—raise other
+                  crops than these? <app xml:id="walc07-app-0105">
+                     <lem>Why concern ourselves so much about our beans for seed, and not be
+                        concerned at all about a new generation of men?</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+                  </app> We should <app xml:id="walc07-app-0106">
+                     <lem>really be fed and cheered</lem>
+                     <rdg wit="#wc_0a">
+                        <del>in some degree be cheered and fed</del>
+                        <add>really be fed and cheered</add>
+                     </rdg>
+                  </app> if when we met a man we were sure to see that some of <app xml:id="walc07-app-0107">
+                     <lem>the qualities which I have named, which we all prize more than those other
+                        productions,</lem>
+                     <rdg wit="#wc_0a">
+                        <del>these qualities we so much prize</del>
+                        <add>the qualities which I have named which we all prize more than the
+                           latter productions</add>
+                     </rdg>
+                  </app> but which are for the most part broadcast and floating in the air, had
+                  taken root and grown in him. Here comes such a subtile and ineffable quality, for
+                  instance, as truth or justice, though the slightest amount or new variety of it,
+                  along the road.</seg>
+               <seg n="15b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 15b written: A; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">15b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                  </note>
+                  <app xml:id="walc07-app-0108">
+                     <lem>Our ambassadors should be instructed to send home such seeds as these, and
+                        Congress help to distribute them over all the land.</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add>Our ambassadors should be instructed to send home such seeds as these,
+                           and Congress help to distribute them over all the land</add>.</rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-07-057"/> We should never stand
+                  upon ceremony with sincerity. We should never cheat and insult and banish one
+                  another by our meanness, if there were present the kernel of worth and
+                  friendliness. We should not meet thus in haste. Most men I do not meet at all, for
+                  they seem not to have time; they are busy about their beans.</seg>
+               <seg n="15c" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 15c written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">15c</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                  </note>We would not<app xml:id="walc07-app-0109">
+                     <lem>deal with</lem>
+                     <rdg wit="#wc_0e">meet</rdg>
+                  </app> a man thus plodding ever, leaning on a hoe or a spade as a staff <app xml:id="walc07-app-0110">
+                     <lem>between his work,</lem>
+                     <rdg wit="#wc_0e">
+                        <add>between his work</add>,</rdg>
+                  </app> not<app xml:id="walc07-app-0111">
+                     <lem>as</lem>
+                     <rdg wit="#wc_0e">like</rdg>
+                  </app> a mushroom, but partially risen out of the earth, <anchor type="hn" xml:id="hn-07-058"/> something more than erect,
+                  like swallows alighted and walking on the ground.— <quote>
+                     <lg>
+                        <l>“And as he spake, his wings would now and then </l>
+                        <l>Spread, as he meant to fly, then close again,"</l>
+                     </lg>
+                  </quote>
+                  <anchor type="hn" xml:id="hn-07-059"/> so that we should suspect
+                  that we might be conversing with an angel. Bread may not always nourish us; but it
+                  always does us good, it even takes stiffness out of our joints, and makes us
+                  supple and buoyant, when we knew not what ailed us, to recognize any <app xml:id="walc07-app-0112">
+                     <lem>generosity</lem>
+                     <rdg wit="#wc_0e">
+                        <del>largeness</del>
+                        <add>generosity</add>
+                     </rdg>
+                  </app> in man or Nature, to share any unmixed and heroic joy.</seg>
+            </p>
+
+            <p n="16" change="#wc_0a">
+               <seg n="16a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 16a written: A; rewritten: E, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">16a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E, F</seg>
+                     </ab>
+                  </note>
+                  <app xml:id="walc07-app-0113">
+                     <lem>Ancient poetry and mythology suggest, at least, that husbandry was
+                        once</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">All history &amp; mythology at least suggest
+                           that</add> Husbandry was anciently </rdg>
+                     <rdg wit="#wc_0e">All <del>history</del>
+                        <add rendition="pencil">poetry</add> &amp; mythology <del>whose truth
+                           indeed, is chiefly prophetic not historic,</del> suggest <add rendition="pencil">at least</add> that husbandry was anciently </rdg>
+                     <rdg wit="#wc_0f">Ancient poetry &amp; mythology <del>at least</del> suggest
+                           <add>at least</add> that husbandry was <del>anciently</del>
+                        <add>once</add>
+                     </rdg>
+                  </app> a sacred art; <anchor type="hn" xml:id="hn-07-060"/> but
+                  it is pursued with <app xml:id="walc07-app-0114">
+                     <lem>irreverent haste and heedlessness</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">irreverent</add> heedlessness and haste </rdg>
+                     <rdg wit="#wc_0e">irreverent <del>heedlessness and</del> haste <add rendition="pencil">and heedlessness</add>
+                     </rdg>
+                  </app> by us, our object<app xml:id="walc07-app-0115">
+                     <lem>being</lem>
+                     <rdg wit="#wc_0a #wc_0e">
+                        <del>is</del>
+                        <add rendition="pencil">being</add>
+                     </rdg>
+                  </app> to have large farms and large crops <app xml:id="walc07-app-0116">
+                     <lem>merely.</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">merely</add>. Our thoughts on this subject should be
+                        as slow as the pace of oxen. The difference between the ancients and us may
+                        be seen in their different treatment of their fellow laborer the ox. We are
+                        accustomed to say that the ox is more profitable than the horse, because it
+                        not only costs less to keep it, but when it is past labor we can slaughter
+                        it, and it will furnish food for our families—we treat it as a slave rather
+                        than as a servant. If other nations, as the Egyptians, have been idolators
+                        in this respect, and made animals objects of adoration, we have gone to the
+                        other and an equally fatal extreme—for every animal should be approached
+                        with a feeling of reverence.—“According to the early laws of Greece, the
+                        ploughing ox was held sacred, and was entitled when past service, to range
+                        the pastures in freedom and repose. It was forbidden, by decrees of
+                        Triptolemus, to put to death this faithful ally of the labors of the
+                        husbandman, who shared the toils of ploughing &amp; threshing. Whenever
+                        therefore an ox was slaughtered, he must first be consecrated or devoted as
+                        a sacrifice (<w xml:lang="gr">ίερειου</w>), by the sprinkling of the
+                        sacrificial barley; this was a precaution against the barbarous practice of
+                        eating raw flesh (<w xml:lang="gr">Вονφαγία</w>). A peculiar sacrifice (<w xml:lang="gr">Δμπόλια</w>) at Athens, at which a slayer of the ox fled,
+                        and the guilty axe was thrown into the sea, on the sentence of the Prytanes,
+                        yearly placed before the people a visible type of the first beginnings of
+                        their social institutions." Ancient writers on agriculture speak of such
+                        things as the “dignity of the herd." Varro suggests that the object of the
+                        Argonautic expedition was a ram’s fleece—The golden apples of the Hesperides
+                        were by the ambiguity of language goats and sheep which Hercules imported.
+                        The stars and constellations bear their names. The Aegean sea has its name
+                        from the goat—and famous mountains &amp; straits—as the Bosphorus or
+                        ox-passage. Ovid makes Italy to be from <hi rend="style(underline)">vitulas</hi>. The fine or tax (mulcta a mulgendo) anciently paid in kind
+                        refers to this. The oldest coins bore the figures of cattle—Our word
+                        pecuniary is from the Latin pecunia which is from <hi rend="style(underline)">pecus</hi> or herd—which was the oldest currency
+                        or medium of exchange. Celebrated Roman families have derived their names
+                        from the same source. As Porcius
+                        Ovinius—Capritius—Equitius—Taurus—Capra—Vitulus &amp;c </rdg>
+                     <rdg wit="#wc_0e">merely. The difference between the ancients or the man of our
+                        imaginations, and ourselves may be seen in their different treatment of
+                        their fellow laborer the ox. <add rendition="pencil"> I read
+                        that</add>.“According to the early laws of Greece," <del>says a modern
+                           writer,</del> “the plowing ox was held sacred, and was entitled when past
+                        service, to range the pastures in freedom and repose. It was forbidden, by
+                        the decrees of Triptolemus, to put to death this faithful ally of the
+                        husbandman, who shared the toils of plowing and threshing. Whenever
+                        therefore an ox was slaughtered, he must first be consecrated or devoted as
+                        a sacrifice (<w xml:lang="gr">ίερειου</w>), by the sprinkling of the
+                        sacrificial barley; this was a precaution against the barbarous practice of
+                        eating raw flesh (<w xml:lang="gr">Вονφαγία</w>). A peculiar sacrifice (<w xml:lang="gr">Δμπόλια</w>) </rdg>
+                     <rdg wit="#wc_0f">merely. We read that “According to the early laws of Greece, the
+                        plowing ox was held sacred, <del>and was entitled when past service, to
+                           range the pastures in freedom &amp; repose;"</del> &amp; <add>also</add>
+                        that <add>there was</add> “a peculiar sacrifice <del>
+                           <add>(<w xml:lang="gr">Δμπόλια</w>)</add>
+                        </del> at Athens, at which the slayer of the ox fled and the guilty axe was
+                        thrown into the sea"—But we slaughter the companion of our labors, when he
+                        is worn out in our service, without a tear or token of gratitude. I learn
+                        from one who frequents the market at Brighton, that cattle are frequently
+                        starved 4 or 5 days before they are slaughtered, since it is found not to
+                        cause any serious diminution in the weight of their solid parts. It was not
+                        in such an age as this <del>methinks</del> that honorable surnames were
+                        derived from humble trades &amp; brute fellow laborers with man. Not to
+                        enumerate our English Farmers, Gardiners, Thatchers, Coopers &amp;c.
+                           <del>like the names of</del>
+                        <add>consider the</add> Celebrated Roman Families—Porcius Ovinius,
+                        Capritius, Equitius, Taurus, Capra, Vitulus <add>&amp; others whom Varro
+                           enumerates</add>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="16b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 16b written: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">16b</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                  </note>We have no festival, nor procession, nor ceremony, not excepting our
+                  Cattle-shows <anchor type="hn" xml:id="hn-07-061"/> and so
+                  called Thanksgivings, by which the farmer expresses a sense of the sacredness of
+                  his calling, <app xml:id="walc07-app-0117">
+                     <lem>or is reminded of its sacred origin. </lem>
+                     <rdg wit="#wc_0f">
+                        <add>or is reminded of its sacred origin</add>.</rdg>
+                  </app> It is the premium and the feast which tempt him. He sacrifices not to Ceres
+                     <anchor type="hn" xml:id="hn-07-062"/> and the Terrestrial
+                  Jove, <anchor type="hn" xml:id="hn-07-063"/> but to the infernal
+                  Plutus <anchor type="hn" xml:id="hn-07-064"/> rather. </seg>
+               <seg n="16c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Bean-Field 16c written: A; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">7</seg>
+                        <seg type="chapterTitle">Bean-Field</seg>
+                        <seg type="paragraph">16c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0f">
+                        <quote>Cato says that the profits . . . left of the race of King
+                           Saturn</quote> does not appear in the manuscript in A or in the original
+                        copying of F but is interlined in F.</ab>
+                  </note> By avarice and selfishness, and a grovelling habit, <app xml:id="walc07-app-0119">
+                     <lem>from which none of us is free,</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">from which none of us are free</add>
+                     </rdg>
+                  </app> of regarding the soil as property, or the means of acquiring property <app xml:id="walc07-app-0120">
+                     <lem>chiefly,</lem>
+                     <rdg wit="#wc_0a #wc_0f">solely,</rdg>
+                  </app>
+                  <app xml:id="walc07-app-0121">
+                     <lem>the landscape is deformed,</lem>
+                     <rdg wit="#wc_0a #wc_0f"><!--[not in ms.]--></rdg>
+                  </app> husbandry is degraded with us, and the farmer leads the meanest of lives.
+                  He <app xml:id="walc07-app-0122">
+                     <lem>knows</lem>
+                     <rdg wit="#wc_0a">knows not</rdg>
+                  </app> Nature but as a robber. Cato <app xml:id="walc07-app-0123">
+                     <lem>says that the profits of agriculture are</lem>
+                     <rdg wit="#wc_0f">calls the profits of agriculture</rdg>
+                  </app> particularly pious or just, (<hi rend="style(italics)">maximeque pius
+                     quæstus</hi>,) <anchor type="hn" xml:id="hn-07-065"/> and
+                  according to Varro <app xml:id="walc07-app-0124">
+                     <lem>the old Romans</lem>
+                     <rdg wit="#wc_0f">says that the old Romans</rdg>
+                  </app> “called the same earth Mother and Ceres, <anchor type="hn" xml:id="hn-07-066"/> and thought that they who
+                  cultivated it led a pious and useful life, and that they alone were left of the
+                  race of King Saturn."</seg>
+            </p>
+
+            <p n="17" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Bean-Field 17 written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">7</seg>
+                     <seg type="chapterTitle">Bean-Field</seg>
+                     <seg type="paragraph">17</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>We are<app xml:id="walc07-app-0125">
+                  <lem>wont</lem>
+                  <rdg wit="#wc_0a">
+                     <del>apt</del>
+                     <add rendition="pencil">wont</add>
+                  </rdg>
+               </app> to forget that the sun looks on our cultivated fields and on the prairies and
+               forests without distinction. <anchor type="hn" xml:id="hn-07-067"/>
+               They <app xml:id="walc07-app-0126">
+                  <lem>all</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.] --></rdg>
+               </app> reflect and absorb his rays alike, <app xml:id="walc07-app-0127">
+                  <lem>and the former make but a small part of the glorious picture which he beholds
+                     in his daily course.</lem>
+                  <rdg wit="#wc_0a">
+                     <add>and the former make but part of the glorious picture which he beholds in
+                        his daily course</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc07-app-0128">
+                  <lem>In his view</lem>
+                  <rdg wit="#wc_0a">In the light of the sun </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>
+                        <add>For</add>
+                     </del> In his view</rdg>
+               </app> the earth is all equally cultivated like a garden. <app xml:id="walc07-app-0129">
+                  <lem>Therefore we should receive the benefit of his light and beat with a
+                     corresponding trust and magnanimity.</lem>
+                  <rdg wit="#wc_0a">and yields every where to an irresistible civilization</rdg>
+               </app> What though I value the seed of these beans, and harvest that in the fall of
+               the year? This broad field which I have looked at so long looks not to me as the <app xml:id="walc07-app-0130">
+                  <lem>principal cultivator,</lem>
+                  <rdg wit="#wc_0a">farmer <add>or principal cultivator</add>
+                  </rdg>
+               </app> but away from me to influences more genial to it, <app xml:id="walc07-app-0131">
+                  <lem>which water and make it green. These beans have results which are not
+                     harvested by me.</lem>
+                  <rdg wit="#wc_0a">
+                     <add>who waters it and makes it green. These beans have results which are not
+                        harvested by me</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc07-app-0132">
+                  <lem>Do they not grow for woodchucks partly? The ear of wheat, (in Latin <hi rend="style(italics)">spica</hi>, obsoletely <hi rend="style(italics)">speca</hi>, from <hi rend="style(italics)">spe</hi>, hope,) should not be
+                     the only hope of the husbandman; <anchor type="hn" xml:id="hn-07-068"/> its kernel or grain (<hi rend="style(italics)">granum</hi> from <hi rend="style(italics)">gerendo</hi>, bearing) is not all
+                     that it bears. How, then, can our harvest fail? Shall I not rejoice also at the
+                     abundance of the weeds whose seeds are the granary of the birds?</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">Do they not grow for woodchucks partly? The ear of wheat, (in Latin <hi rend="style(underline)">spica</hi>, obsoletely <hi rend="style(underline)">speca</hi> from <hi rend="style(underline)">spe</hi>, hope) should not be
+                        the only hope of the husbandman</add> <anchor type="hn" xml:id="hn-07-069"/> Shall I not rejoice also
+                        at the abundance of the weeds whose seeds are the granary of the
+                        birds?
+                     </rdg>
+               </app> It matters little comparatively whether the fields fill the farmer’s barns.
+               The true husbandman will cease from anxiety, <app xml:id="walc07-app-0133">
+                  <lem>as the squirrels manifest no concern whether the woods will</lem>
+                  <rdg wit="#wc_0a">As the chestnut woods are not concerned whether they </rdg>
+                  <rdg wit="#wc_0f">as the squirrels manifest no concern whether the
+                        <del>chestnut</del> woods will</rdg>
+               </app> bear chestnuts this year or not, and finish his labor with every day,
+               relinquishing all claim to the produce of his fields, <app xml:id="walc07-app-0134">
+                  <lem>and sacrificing in his mind not only his first but his last fruits <anchor type="hn" xml:id="hn-07-070"/> also.</lem>
+                  <rdg wit="#wc_0a">The landscape is deformed when there is an attempt to
+                     appropriate what <add rendition="pencil"> indeed</add> cannot be appropriated </rdg>
+                  <rdg wit="#wc_0f">
+                     <add>sacrificing in his mind not only his first but his last fruits also</add>
+                     The landscape is deformed when there is an attempt to appropriate what
+                        <del>indeed</del> cannot be appropriated</rdg>
+               </app>
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>

@@ -1,0 +1,29 @@
+xquery version "3.1";
+
+declare variable $fileContent := string-join(
+
+let $pokemon := collection('/db/2020_ClassExamples/pokemonQGIS')
+let $types := $pokemon//typing/@type
+
+let $distTypes := $types ! upper-case(.) ! tokenize(., ',')[1] ! normalize-space() ! tokenize(., " ") => distinct-values()
+
+for $indexType in $distTypes
+let $locations := $pokemon//landmark
+let $matchLocs := $locations[preceding::typing/@type ! upper-case(.)[contains(., $indexType)]]/@n/string()
+let $distLocs := $matchLocs => distinct-values()
+
+for $indexLocs in $distLocs
+let $lon := $locations[@n[contains(., $indexLocs)]]/@lon/string()
+let $distLon := $lon => distinct-values()
+let $lat := $locations[@n[contains(., $indexLocs)]]/@lat/string()
+let $distLat := $lat => distinct-values()
+
+for $indexLat in $distLat
+for $indexLon in $distLon
+
+return string-join(($indexType, $indexLocs, $indexLat, $indexLon), "&#x9;"), "&#10;");
+
+let $fileName := "pokemonLocationTSV.tsv"
+let $doc-db-uri := xmldb:store("/db/bab184/", $fileName, $fileContent, "text/plain")
+return $doc-db-uri 
+(: Output at http://newtfire.org:8338/exist/rest/db/bab184/pokemonLocationTSV.tsv" :) 

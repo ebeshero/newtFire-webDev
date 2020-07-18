@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title>
+                    "Helpless"
+                </title>
+            </titleStmt>
+            <publicationStmt>
+                <p>
+                    by Lin-Manuel Miranda
+                </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head>
+                <title>Helpless</title>
+            </head>
+            <div type="song">
+
+                <spGrp type="simultaneous">
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l>Hey hey hey hey</l>
+                        <l>Hey hey hey hey</l>
+                        <l>Hey hey hey hey</l>
+                        <l>Hey hey hey</l>
+                    </sp>
+
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>Ohh, I do I do I do I</l>
+                        <l>Dooo! Hey!</l>
+                        <l>Ohh, I do I do I do I</l>
+                        <l>Dooo! Boy you got me </l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#eliza #women">
+                    <speaker>ELIZA/WOMEN</speaker>
+                    <l><phr type="#helpless">Helpless!</phr></l>
+                    <l>Look into your eyes, and the sky’s the limit I’m <phr type="#helpless">helpless!</phr></l>
+                    <l>Down for the count, and I’m drownin’ in ‘em</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I have never been the type to try and grab the spotlight</l>
+                    <l><seg type="#fiction">We were at a revel with some rebels on a hot night</seg></l>
+                    <l><seg type="#fiction">Laughin’ at my sister as she’s dazzling the room</seg></l>
+                    <l>Then you walked in and my heart went “Boom!”</l>
+                    <l>Tryin’ to catch your eye from the side of the ballroom</l>
+                    <l>Everybody’s dancin’ and the band’s top volume</l>
+                </sp>
+
+                <sp who="#eliza #women">
+                    <speaker>ELIZA/WOMEN</speaker>
+                    <l>Grind to the rhythm as we wine and dine</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Grab my sister, and</l>
+                    <l>Whisper, “Yo, this</l>
+                    <l>One’s mine.”</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>My sister made her way across the room to you</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>And I got nervous, thinking “What’s she gonna do?”</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>She grabbed you by the arm, I’m thinkin’ “I’m through”</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>Then you look back at me and suddenly I’m</l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Oh, look at those eyes</l>
+                        <l>Oh!</l>
+                        <l>Yeah, I’m</l>
+                        <l><phr type="#helpless">Helpless</phr>, I know</l>
+                        <l>I’m so into you</l>
+                        <l>I am so into you</l>
+                        <l>I know I’m down for the count</l>
+                        <l>And I’m drownin’ in ‘em.</l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Look into your eyes</l>
+                        <l>And the sky’s the limit</l>
+                        <l>I’m</l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Down for the count</l>
+                        <l>And I’m drownin’ in ‘em</l>
+                        <l>I’m <phr type="#helpless">helpless!</phr></l>
+                        <l>Look into your eyes</l>
+                        <l>And the sky’s the limit I’m <phr type="#helpless">helpless!</phr></l>
+                        <l>Down for the count</l>
+                        <l>And I’m drownin’ in ‘em.</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Where are you taking me?</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l><seg type="#fiction">I’m about to change your life</seg></l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Then by all means, lead the way</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><persName ref="#eliza">Elizabeth Schuyler</persName>. It’s a pleasure to meet
+                        you</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>Schuyler?</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>My sister</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Thank you for all your service</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l>If it takes fighting a war for us to meet, it will have been worth it</l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’ll leave you to it</l>
+                </sp>
+
+                <sp who="#eliza #women">
+                    <speaker>ELIZA/WOMEN</speaker>
+                    <l>One week later</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fact">I’m writin’ a letter nightly</seg></l>
+                    <l>Now my life gets better, every letter that you write me</l>
+                    <l><seg type="#fact">Laughin’ at my sister, cuz she wants to form a harem</seg></l>
+                </sp>
+
+                <sp who="#angelica">
+                    <speaker>ANGELICA</speaker>
+                    <l>I’m just sayin’, if you really loved me, you would share him</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>Ha!</l>
+                    <l>Two weeks later</l>
+                    <l>In the living room stressin’</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Stressin’</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>My father’s stone-faced</l>
+                    <l><seg type="#fact">While you’re asking for his blessin’</seg></l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Blessin’</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I’m dying inside, as</l>
+                    <l>You wine</l>
+                    <l>And dine</l>
+                    <l>And I’m tryin’ not to cry</l>
+                    <l>‘cause there’s nothing that your mind can’t do</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>My father makes his way across the room</l>
+                    <l>To you</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>I panic for a second, thinking</l>
+                    <l>“We’re through”</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l>But then he shakes your hand and says</l>
+                    <l>“Be true”</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>Oooh</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>And you turn back to me, smiling, and I’m</l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Hoo!</l>
+                        <l>That boy is mine</l>
+                        <l>That boy is mine!</l>
+                        <l><phr type="#helpless">Helpless!</phr> <phr type="#helpless">Helpless!</phr></l>
+                        <l>Down for the count</l>
+                        <l>And I’m drownin’ in em</l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Look into your eyes</l>
+                        <l>And the sky’s the</l>
+                        <l>Limit I’m</l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Down for the count</l>
+                        <l>And I’m drownin’ in</l>
+                        <l>‘em I’m</l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Look into your eyes</l>
+                        <l>And the sky’s the</l>
+                        <l>Limit I’m</l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Down for the count</l>
+                        <l>And I’m drownin’ in em</l>
+                    </sp>
+                </spGrp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><seg type="#fact"><persName ref="#eliza">Eliza</persName>, I don’t have a dollar to my name</seg></l>
+                    <l>An acre of land, a troop to command, a dollop of fame</l>
+                    <l>All I have’s my honor, a tolerance for pain</l>
+                    <l>A couple of college credits and my top-notch brain</l>
+                    <l>Insane, your family brings out a different side of me</l>
+                    <l><seg type="#fact"><persName ref="#peggy">Peggy</persName> confides in me,</seg> <persName ref="#angelica">Angelica</persName> tried to take a bite of me</l>
+                    <l>No stress, my love for you is never in doubt</l>
+                    <l><seg type="#ambiguous">We’ll get a little place in <placeName>Harlem</placeName></seg> and we’ll figure it
+                        out</l>
+                    <l>I’ve been livin’ without a family since I was a child</l>
+                    <l>My father left, my mother died, I grew up buckwild</l>
+                    <l>But I’ll never forget my mother’s face, that was real</l>
+                    <l>And long as I’m alive, <persName ref="#eliza">Eliza</persName>, swear to
+                        God</l>
+                    <l>You’ll never feel so…</l>
+                </sp>
+
+                <spGrp type="simultaneous">
+                    <sp who="#eliza">
+                        <speaker>ELIZA</speaker>
+                        <l>I do I do I do I do!</l>
+                        <l>I do I do I do I do!</l>
+                        <l>Hey, yeah, yeah!</l>
+                        <l>I’m down for the count</l>
+                        <l>I’m—</l>
+                        <l>I look into your eyes, and the sky’s the limit</l>
+                        <l>I’m</l>
+                        <l>…drownin’ in ‘em.</l>
+                    </sp>
+
+                    <sp who="#women">
+                        <speaker>WOMEN</speaker>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Down for the count</l>
+                        <l>And I’m drownin’ in ‘em</l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l><phr type="#helpless">Helpless!</phr></l>
+                        <l>Down for the count</l>
+                        <l>And I’m drownin’ in ‘em.</l>
+                    </sp>
+
+                    <sp who="#hamilton">
+                        <speaker>HAMILTON</speaker>
+                        <l><persName ref="#eliza">Eliza</persName>…</l>
+                        <l>I’ve never felt so—</l>
+                        <l>My life is gon’ be fine cuz Eliza’s in it.</l>
+                    </sp>
+                </spGrp>
+
+                <stage type="business">Wedding march plays</stage>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>In <placeName>New York</placeName>, you can be a new man…</l>
+                    <l>In <placeName>New York</placeName>, you can be a new man…</l>
+                    <l>In <placeName>New York</placeName>, you can be a new man…</l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><phr type="#helpless">Helpless</phr></l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Helpless</head><event xml:id="event23" when="1780-12-14"> <label>Eliza and Hamilton Get Married</label><desc>Eliza Schuyler gets married to Alexander Hamilton on December, 14 1780.</desc></event></listEvent>
+        </back>
+    </text>
+</TEI>

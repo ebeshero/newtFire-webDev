@@ -1,0 +1,773 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema_v2.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../tv-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><root>
+    
+    <head>
+        <episode>TERRA</episode>
+        <writer>Amy Wolfram</writer>
+        <director>Ciro Nieli</director>
+        <storyboard>Eric Canete, Ben Jones, Kalvin Lee, Alan Wan, Matt Youngberg</storyboard>
+        <animation>Dongwoo Animation Co. Ltd.</animation>
+        <source>https://teentitans.fandom.com/wiki/Terra_(Transcript)</source>
+    </head>
+    <characterList>
+        <charList type="recurring" subtype="titan" id="Starfire">Starfire</charList>
+        <charList type="recurring" subtype="titan" id="Cyborg">Cyborg</charList>
+        <charList type="recurring" subtype="titan" id="BeastBoy">Beast Boy</charList>
+        <charList type="recurring" subtype="titan" id="Raven">Raven</charList>
+        <charList type="recurring" subtype="titan" id="Robin">Robin</charList>
+        <charList type="recurring" subtype="both" id="Terra">Terra</charList>
+        <charList type="recurring" subtype="villain" id="Slade">Slade</charList>
+        <charList type="nonrecurring" id="Miner1">Miner 1</charList>
+        <charList type="nonrecurring" id="Miner2">Miner 2</charList>
+    </characterList>
+    <locationList>
+        <locList id="tower" lat="37.8002" lon="-122.5004">Titans Tower</locList>
+        <locList id="canyon" lat="37.735883" lon="-122.439740">Canyon</locList>
+        <locList id="bay" lat="37.7274" lon="-122.3711">Jump City Bay</locList>
+        <locList id="mine" lat="37.726730" lon="-122.441710">Underground Mine</locList>
+    </locationList>
+    <body>
+    <act n="0">
+<title>Prologue</title>
+
+<sd><setNote shot="yes">Opening shot: the sun gradually brightening against a black screen.</setNote> When the view is fully illuminated, we see a rocky landscape, with outcroppings on either side of a broad canyon. It is not long after sunrise. Tilt down slightly to an overhead view of a large scorpion racing toward the first bend, then cut to a close-up of a young girl who runs as if trying to beat the devil in the hundred-yard dash. Seen from the shoulders down, <charDesc ref="Terra">she is very thin, with spindly arms and legs, and roughly the same age as the Titans. Her clothing consists of denim shorts, a light gray long-sleeved shirt, and a dark gray crop top with black sleeves over this. Her hair is long, blond, and straight, and she wears thick brown leather gloves and hiking boots. This is Terra</charDesc></sd>
+
+<sd>The camera shifts to frame all of her from behind; this shot reveals that she is heading toward the shore of <location>Jump City Bay</location> and <location>Titans Tower</location>. A butterfly-shaped hair clip can now be seen over her right ear. She turns to look over her shoulder as the pursuer's shadow falls over her, revealing large, light blue eyes that broadcast her fear quite clearly. The scorpion has nearly closed the gap and works its mandibles in anticipation of a meal. As <char ref="Terra">Terra</char> charges ahead, the giant tail is lifted for a strike; it comes down inches from her and throws her off balance. She skids across the ground and rubs her head, finding that her hair clip has been knocked loose to fall nearby. As she reaches for it, that enormous stinger punches into the dirt and again just misses her; she is off and running in an instant, with the creature giving chase.</sd>
+
+        <sd>Now she swerves to avoid an outcropping, which is destroyed by a sweep of the scorpion's claws, and vaults over a lower formation to keep ahead. She runs flat out, and the camera cuts to an overhead view and pans quickly ahead to her, then farther ahead to show a dead end not too distant. Cut to it; she stops at the wall of rock and turns to find the beast's shadow falling over her. She cowers against the sheer face as the scorpion prepares to lunge. However, it looks up instead, and the camera tilts up quickly to the ledge on one side of the canyon.<action mrkr="Robin" with="all" move="1" timestamp="2004-01-10T00:01:55" place="canyon"/><char ref="Robin">Robin</char>leaps down onto it from above. A quick flash of the sun as the camera pulls back, and the other four Titans have joined him there;<char ref="BeastBoy">Beast Boy</char>has become a wolf.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Titans! Go!</sp>
+
+<sd>Before any of them can move, though, a tremor shakes the ground. Cut to<char ref="Terra">Terra</char> whose eyes are now glowing yellow and whose mouth has assumed a cruel smile; her hair blows all around her. The rock beneath the Titans' feet begins to crack and shift, and one end of a natural bridge across the canyon breaks loose and is lifted into the air. Pan to the other side to show that end pulling free as well. Pull back to ground level; she raises her hands and groans with the effort as the slab goes higher and higher. Now her hands are glowing as well: this is her own particular superpower at work. Finally, she brings them down, and the rock drops squarely on top of the scorpion to crush it flat. One final tail spasm and scream of pain, and the thing falls silent.</sd>
+
+<sd><char ref="Terra">Terra</char> placidly pushes the hair back from the right side of her face, where it has fallen forward due to the lost clip.<char ref="Starfire">Starfire</char>looks down from her midair viewpoint confusedly.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> She was not in trouble</sp>
+
+<sd>Pull back to frame<char ref="Cyborg">Cyborg</char>and<char ref="Raven">Raven</char></sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> She was leading it into a trap</sp>
+
+<sd>Pan to<char ref="Robin">Robin</char></sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Question is..</sp>
+
+<sd><char ref="BeastBoy">Beast Boy</char> takes human form.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>awestruck</sd> ...Who is she?</sp>
+
+<sd>Long overhead shot of<char ref="Cyborg">Cyborg</char>and<char ref="BeastBoy">Beast Boy</char> tilt up to a dark fissure in the side of the rock face behind them.<char ref="Slade">Slade's</char>teps out of this and looks down on the scene. He has replaced the mask and armor that were damaged at the end of "Apprentice."</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>to himself</sd> Don't get too attached, my young friend.</sp>
+
+<sd>His perspective of<char ref="Terra">Terra</char>on the end of this, then cut to a close-up of her.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> I saw her first.</sp>
+
+<sd>Fade to black.</sd>
+
+
+<cue>OPENING THEME</cue>
+</act><act n="1">
+<title>Act One</title>
+
+<sd><setNote shot="yes">Opening shot: a long view of<char ref="Terra">Terra</char> brushing the dust from her gloved hands.</setNote> A quick gesture, and the patch of rock she stands on has broken loose and begun to carry her up to the ledge. She does a triumphant little spin before reaching the Titans, then jumps over to them. The rock falls away.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>cockily</sd> What? Haven't you guys ever seen a superhero before?</sp>
+
+<sd>For a few seconds, all five are at a loss for words. Finally<char ref="Robin">Robin's</char>teps forward.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> I'm <char ref="Robin">Robin</char></sp>
+
+<sd>holds out his hand to shake</sd> We're the--
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>tapping her fists against it</sd> --Teen Titans! Rock on! It's cool to meet you guys. I'm<char ref="Terra">Terra</char> and you're...</sp>
+
+    <sd><action mrkr="Cyborg" with="all" move="1" timestamp="2004-01-10T00:01:55" place="canyon"/> <action mrkr="Raven" with="all" move="1" timestamp="2004-01-10T00:01:55" place="canyon"/><action mrkr="Starfire" with="all" move="1" timestamp="2004-01-10T00:01:55" place="canyon"/> Her perspective of the group; she points from one to the next, the camera panning to follow.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> ...<char ref="Cyborg">Cyborg</char>,<char ref="Raven">Raven</char><char ref="Starfire">Starfire</char>.</sp>
+  
+    <sd>She curtsies <action mrkr="BeastBoy" with="all" move="1" timestamp="2004-01-10T00:01:55" place="canyon"/>; pan to<char ref="BeastBoy">Beast Boy</char></sd> ...and...
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>completely freaking out</sd> Boy Beast!...uh, I mean, Bass Boot!...No</sp>
+
+<sd>Back to<char ref="Terra">Terra</char></sd>
+
+<sp><spkr ref="Terra">Terra</spkr><char ref="BeastBoy">Beast Boy</char></sp>
+
+<sd>He screams and turns into a turtle, tucking head and legs into the shell and spinning in midair.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>laughing</sd> Dude! He's hilarious</sp>
+
+<sd>He stops spinning.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Hilarious</sp>
+
+<sd>He pokes out his own head.</sd> Me? Really?
+
+<sd>She tips him a wink. In no time flat, he is back in human form and absolutely thunderstruck. Hearts float up from him as he staggers giddily about with more of the same in his eyes and passes out.<char ref="Starfire">Starfire</char>flies over to her.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Curiosity abounds. Please</sp>
+
+<sd>rapid fire, she leans into her face</sd> Where do you come from; how did you get here; what is your favorite color; do you wish to be my friend?
+
+<sp><spkr ref="Terra">Terra</spkr> Um...Earth, walked, red, and...sure.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>gasps and bear-hugs <char ref="Terra">Terra</char></sd> Hello, new friend</sp>
+
+<sd>Bones grind against one another.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>strangled</sd> How's it going?</sp>
+
+<sd><char ref="Starfire">Starfire</char> releases her crushing grip, and the new arrival drops back to the ledge, but her arms are a bit out of joint now. As she straightens them,<char ref="BeastBoy">Beast Boy</char>pokes his head into and out of the frame from various angles in order to get a better look. Finally, he pops up next to her.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>blushes</sd> So, what brings such a cool little chickie to our big, groovy city, huh?</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> I go where the wind takes me, you know? I get to see new places, meet new people, stomp a few bad guys here and there.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>sighing</sd> Cool</sp>
+
+<sd>He laughs; pan to the other Titans.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Fascinating!</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Well, all right!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> You mean, you don't have a home?</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> The Earth is my home. I've been crashing in a cave on the other side of the hill</sp>
+
+<sd><char ref="Starfire">Starfire</char> zips up.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Unacceptable! I cannot permit my new friend to slumber in a lonely cave of darkness.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> I have a flashlight</sp>
+
+<sd><char ref="Starfire">Starfire</char> grabs her arm and hauls her past the others.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> You will stay with us.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Really, I-I'm...</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Come on, we got plenty of room.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Yeah! And I can make you laugh some more</sp>
+
+<sd>Groucho Marx joke glasses appear on his face.</sd> I'm hilarious, remember
+
+<sd>They disappear.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>laughing</sd> Well, I guess I could stay one night.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Oh, glorious!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Yes!</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Boo-yah!</sp>
+
+    <sd>The previous three lines are spoken at the same time.<action mrkr="BeastBoy" with="C S" move="2" timestamp="2004-01-10T00:02:05" place="tower"/><char ref="BeastBoy">Beast Boy</char>leads her toward the shore and the <location>Tower</location>,<action mrkr="Cyborg" with="S" move="2" timestamp="2004-01-10T00:02:10" place="tower"/><char ref="Cyborg">Cyborg</char>brings up the rear, and<action mrkr="Starfire" with="BB" move="2" timestamp="2004-01-10T00:02:10" place="tower"/><char ref="Starfire">Starfire</char>flies happily above. Pull back from them to put the ledge in view. <char ref="Raven">Raven</char> looks after the departing foursome, while<char ref="Robin">Robin</char>kneels for a closer look at the o.c. battle site. She turns to him.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Everything okay</sp>
+
+<sd>He picks up some dirt and lets it fall.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Not sure.</sp>
+
+<sd>Cut to<char ref="Slade">Slade</char> still at the mouth of that elevated fissure. He retreats slowly into the darkness. Back to<char ref="Robin">Robin</char>and<char ref="Raven">Raven</char></sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Something just doesn't feel right.</sp>
+
+    <sd>He stands up, his cape waving across the screen. Behind its trailing edge, the view changes to a long shot of the ledge as the two<action mrkr="Raven" with="RB" move="2" timestamp="2004-01-10T00:02:10" place="tower"/> head for home. <action mrkr="Robin" with="R" move="2" timestamp="2004-01-10T00:02:10" place="tower"/>After they have gone, the area where they were standing crumbles away in a great cloud of dust.</sd>
+
+<sd>Dissolve to the exterior of the <location>Tower</location>, later in the day, and cut to the operations center.<char ref="Terra">Terra</char>looks around, clearly impressed by what she sees, while the others are elsewhere in the place.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Whoa! Nice digs</sp>
+
+<sd>jumps to the windows</sd> And check out the view!
+
+<sd>She flops onto the couch and puts her feet up on the coffee table.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I can't believe you guys actually live here</sp>
+
+<sd><char ref="BeastBoy">Beast Boy</char> pokes his head up and vaults onto the couch.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Su casa es mi casa. So do you want the grand tour, or...</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>suddenly crazed, eyes bugging out</sd> Got any food?</sp>
+
+<sd>Close-up of a huge mound of dirty dishes. The sound of gobbling is heard, and the camera tilts up slightly to show<char ref="Terra">Terra</char>at the end of the kitchen counter, stuffing her face at warp speed. How one person could put away enough food in one sitting to empty all those pans and plates is a mystery best left unexplained. All the Titans, save<char ref="Starfire">Starfire</char> watch the display of sheer gluttony with stunned shock.</sd>
+
+<sd><char ref="Terra">Terra</char> wolfs down some more food from the bowl in front of her, then tips the rest of the contents into her mouth. She throws the empty container aside and proceeds to gulp down an entire meatloaf in one instant. Sight gag: her head expands until it is big enough to allow the whole thing to fit in her mouth. It then returns to normal size as she swallows the last of her meal and lets off a thundering belch. Now<char ref="Starfire">Starfire</char>descends into view next to her, carrying a plate of what could be some alien Jell-O mold.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Might you now wish to partake of my homemade glorg?</sp>
+
+<sd>She holds up the food on the end of this line; embedded in the gelatinous mass are several gray, wriggling, worm-like things.</sd>
+
+<sp><spkr ref="Robin BeastBoy Cyborg Raven">Robin, Beast Boy, Cyborg and Raven</spkr> NO!!</sp>
+
+<sd>Too late;<char ref="Terra">Terra</char>has already seized the plate and put the entire contents behind her teeth. A quick swallow puts the food out of sight.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Tastes like sushi mixed with ice cream.</sp>
+
+<sd>Each item appears above her head when it is named, separated by a plus sign. The two combine to form a dish of glorg as she licks the plate and pushes it to<char ref="Starfire">Starfire</char></sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Got any more</sp>
+
+<sd>The image disappears.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> I shall go cultivate the fungus!</sp>
+
+<sd>She flies off, plate in hand, and<char ref="Terra">Terra</char>turns her attention to the other Titans.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> So, where's the tub?</sp>
+
+<sd>Cut to inside an open doorway.<char ref="Cyborg">Cyborg</char>and<char ref="BeastBoy">Beast Boy</char>peek in around the frame and are absolutely floored by whatever is inside.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Whoa.</sp>
+
+<sd>Their perspective, looking into the bathroom. Shower curtain, bathtub, walls, floor, towels; all are liberally splattered with dirt and marked with the prints of grubby hands and feet.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Mud bath.</sp>
+
+<sd>Tilt down slightly toward the floor, then cut to the hallway.<char ref="Terra">Terra</char>has finished her bath and changed into a white robe and slippers. A towel is wrapped around her hair.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Sorry. Guess I was due for a rinse.</sp>
+
+<sd><char ref="Robin">Robin</char> and<char ref="Raven">Raven</char>pop into frame; their faces are comically distorted by disgust for both the filthy bathroom and her bad joke.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Mind if I use your sink?</sp>
+
+<sd>Cut to the kitchen. She has unwrapped her hair and put on headphones for a Walkman that is going full tilt. The sink is filled with soapy water; she pulls out her crop top, freshly hand-washed, and hangs it on a nearby clothesline. The rest of her outfit is already drip-drying. When she steps aside to pin the garment up, the Titans can be seen looking in from the doorway.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Well, she seems comfortable.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Wonder how long it's been since she had a decent place to crash for the night.</sp>
+
+<sd>She goes over to the couch and eases out of her slippers. Setting the Walkman on the cushions, she stretches expansively, yawns, and curls up. A moment later, she is snoring loudly and sprawled out to her full length, with one foot hanging over the edge. The Titans watch her with concern from across the room. Cut to them.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> She needs more than a place to crash.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> She needs a home</sp>
+
+<sd><char ref="BeastBoy">Beast Boy</char> thinks for a moment.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Why not our home</sp>
+
+<sd>The Walkman gradually fades out.</sd> She could stay here with us.
+
+<sp><spkr ref="Starfire">Starfire</spkr> Yes</sp>
+
+<sd>Cut to<char ref="Raven">Raven</char>and<char ref="Cyborg">Cyborg</char></sd>
+
+<sp><spkr ref="Raven">Raven</spkr> I don't know.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> She would make a good addition to the team.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> Maybe</sp>
+
+<sd>Pan to him.</sd> Let's ask her to train with us tomorrow.
+
+<sd>Back to<char ref="Terra">Terra</char> One eye pops open suddenly.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> We need to see what she can do.</sp>
+
+<sd>Zoom in on her. Now the other eye opens as well, and her expression betrays the worry that has started to take hold of her. Dissolve to the exterior of the <location>Tower</location>; it is now nighttime. Inside the darkened operations center, the door opens at the far end and a figure is silhouetted in the light from the other side. Close-up: it is<char ref="BeastBoy">Beast Boy</char> carrying a small bundle as he enters. He keeps his voice down on the next two lines.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Hey, Terra</sp>
+
+<sd>Just behind the couch; he approaches.</sd> I...I thought you might want a blanket.
+
+<sd>The other side of the couch; she is nowhere in sight, and her Walkman lies there abandoned.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr><char ref="Terra">Terra</char></sp>
+
+    <sd>Dissolve to the exterior, then tilt down to the surface of <location>the bay</location>. A stone flies into view and skips along; close-up of the shore, where several others are lying near a backpack. One of these floats up, and the camera follows it to reveal a very dejected house guest sitting here; the backpack is hers. She has changed back into her usual outfit. A flash of her eyes sends the stone bouncing over the water. As she levitates another one,<action mrkr="BeastBoy" with="none" move="3" timestamp="2004-01-10T00:02:10" place="bay"/><char ref="BeastBoy">Beast Boy's</char> voice interrupts; pull back on the next line to show him taking a seat next to her.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> So I'm guessing the couch was too lumpy?</sp>
+
+<sd>She skips the stone. Surprised at what she has been able to do, he grabs one of his own and lets fly. It merely splashes in; she laughs and causes another to drop into his hand. This time he gets it right, and he laughs and flexes his muscles jokingly. She blows out a relieved little breath visibly; he responds with a loud raspberry. Now she sticks out her tongue and pulls down on her face to distort it out of shape; he changes his head into that of a gorilla and snarls loudly. She promptly stretches her face as if it were a rubber mask; startling<char ref="BeastBoy">Beast Boy</char>back into human form, and both laugh heartily for a moment. They cut themselves off sharply and stare into each other's eyes for a second before turning away nervously and blushing.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I can't stay.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Why not?</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Places to go, people to see.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Come on. You know you want to stay. We've got free cable, indoor plumbing, and all the tofu you can eat.</sp>
+
+<sd>He counts these three items off on his fingers as he names them. When he finishes, he has the entire hand outstretched; one thumb and only three fingers, not four. He brings the missing one back with a little shake and smiles at the inadvertent joke he has made. She laughs.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Tofu? You sure know how to charm a girl. I-I guess I could hang out for one more day.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>jumping for joy</sd> Awesome! We're gonna have so much fun</sp>
+
+<sd>Cut to her; he continues o.c.</sd> And I can't wait to see what your powers do when you really cut 'em loose.
+
+<sd>His last words ignite that same worry we saw while she was sleeping. Suddenly her eyes blaze and her hair is blown straight up as light shines over her.<char ref="BeastBoy">Beast Boy</char>is lifted into the air on the rock he was using for a seat, then gets dumped back to the shore when it pulls itself out from under him. It hits the water with a huge splash, leaving him soaked and spitting out mouthfuls of water.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>flustered</sd> Sorry! I'm sorry, I'm so stupid! Don't tell! Please don't tell!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr><char ref="Terra">Terra</char> it's okay. You can't totally control your powers. So what?</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Promise you won't tell anybody, ever!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Sure.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Swear it!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Okay! Okay! I promise. But really, it's no big deal. If my friends knew, they'd still like you.</sp>
+
+<sd>She turns away from him on the end of this. Long shot of the shore; they cannot be seen at this distance.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>heard from the shore</sd> You just don't understand.</sp>
+
+<sd>Tilt up to the upper stories of the Tower and fade to black.</sd>
+</act><act n="2">
+<title>Act Two</title>
+
+<sd>Opening shot: a close-up of<char ref="Cyborg">Cyborg</char>running at top speed. It is now the next day. Pull back; he is crossing a broad plain outside the <location>Tower</location>. Steel columns, each topped with a large fist, shoot up from the ground; he dodges one after another and jumps clear. Close-up of an outdoor control panel, the one seen in "Every Dog Has His Day", as<char ref="Robin">Robin</char>reaches into view to press a few buttons. In response, several laser cannons lock on target and begin to fire.<char ref="Cyborg">Cyborg</char>dashes, swerves, and jumps to avoid being hit; now<char ref="Robin">Robin</char>activates other controls on the panel. On a screen, an image comes up of a gateway with a large panel mounted in its top half. This descends like the blade of a guillotine.</sd>
+
+<sd>Out on the plain, three such structures rise from the ground.<char ref="Cyborg">Cyborg</char>gets under the first two gates, but has to stop and catch the third before it can crush him. Straining mightily, he pushes it up on its track and is able to get clear before it crashes back down. Launchers rise from the tops of two rocks and fire a stream of disc-shaped projectiles; pan from them to a third such device, also firing away.<char ref="Cyborg">Cyborg</char>has his sonic cannon ready and shoots down several while dodging the rest.</sd>
+
+<sd>From here, cut to a long shot of the control panel, which has a timer display mounted in its front face.<char ref="Robin">Robin</char>and<char ref="Raven">Raven</char>are behind it, while<char ref="BeastBoy">Beast Boy</char><char ref="Starfire">Starfire</char> and<char ref="Terra">Terra</char>cheer<char ref="Cyborg">Cyborg</char>on.<char ref="Terra">Terra</char>has a pair of goggles hanging around her neck. He runs up, stops, and looks at the panel on his forearm; it shows a time of 2:17. He has been running an obstacle course.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Boo-yah! New course record</sp>
+
+<sd>He laughs.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Well, yeah. You're the first one to do the course</sp>
+
+<sd>Now<char ref="Cyborg">Cyborg's</char>teams a bit.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Okay,<char ref="Terra">Terra</char> Ready to show us what you can do?</sp>
+
+<sd>She nods and steps out into the open.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>to herself, uncertainly</sd> I just hope you're ready to see it</sp>
+
+<sd><char ref="BeastBoy">Beast Boy</char> walks over.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> You can do it. 'Sides, it's jut practice; it doesn't matter if you mess up. Not that you're gonna mess up, but I'm just saying that even if you really blow it, you...</sp>
+
+<sd>On the end of this, she moves slightly away, giving him the back of her head, and puts on the goggles. A quizzical look out of the corner of her eye brings him up short.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Shutting up now.</sp>
+
+<sd>The timer on the front of the control panel starts to count down from 11.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Countdown initiated! Good luck, <char ref="Terra">Terra</char></sp>
+
+<sd>She takes a few steps away and adjusts her gloves.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Come on,<char ref="Terra">Terra</char></sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> You go, girl!</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Onward to victory</sp>
+
+<sd>All three cheer some more.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>to herself, limbering up</sd> Don't lose control. Don't lose control. Don't.</sp>
+
+<sd>The timer reaches zero. She clenches her fists, which glow yellow, and braces for action. Laser cannons spring out of the rocks and open up on her; she raises the spot she is standing on as a large column of stone, and the blasts strike it repeatedly. It is finally blasted apart, but she rides down on a large fragment. An even bigger one crashes down on the cannons and breaks them to scrap while throwing up a wall of dust. She rides into this; close-up of her as the view clears. She coughs a bit and then panics, yelling and waving her arms frantically, and the camera pulls back to show the steel fists punching up from the ground directly in her path.</sd>
+
+<sd>A glancing blow almost knocks her from her flying perch, but she digs in her fingers and keeps aloft. Another cry of terror as she flips onto one side to avoid the next fist, but it is no use; this one smashes the rock into gravel and sends her tumbling. Thinking quickly, she levitates several boulders and grabs hold of one big enough to carry her. A relieved little sigh gives way to more panic as she realizes she is heading for a crash landing; only a mighty effort to pull up the leading edge keeps her in the air. However, she grazes a rock formation in the process.</sd>
+
+<sd><char ref="Robin">Robin</char> and<char ref="Raven">Raven</char>observe from their seats behind the control panel, and<char ref="Robin">Robin</char>presses a button to trigger the next challenge. The other Titans watch with admiration.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Whoo-hoo!</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Glorious!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Yeah! You da man,<char ref="Terra">Terra</char>...um, I mean, you're the...way to go!</sp>
+
+<sd>"Da man" in question is spinning along, barely in control of that boulder, and headed straight for the guillotine-like gates. At the last possible second, she brings up a snake of stone and causes it to punch through the upper panel of each gate. She jumps on to ride it across; it smashes the boulder to splinters.</sd>
+
+[Aniimation goof: When the gates first emerge, there are four rather than three.]
+
+<sp><spkr ref="Raven">Raven</spkr> We're gonna need a new obstacle course.</sp>
+
+<sd><char ref="Robin">Robin</char> moves over to her end and works a few controls. Now<char ref="Terra">Terra</char> flung free from the stone snake, drops screaming toward a large pit that is opening in the earth. She brings one rock toward herself, cannot get hold of it, and has better luck with a second, but only temporarily. Sliding to the edge, she scrabbles for a fingerhold and is unable to get one before gravity drags her off. A couple of fist-sized stones fall after her; she and they drop o.c., after which she rises back into view, holding one in each hand. She drops them after clearing the pit and jumps onto a larger rock to sail onward.</sd>
+
+<sd>As<char ref="Robin">Robin</char>works the controls and<char ref="Raven">Raven</char>watches, the other Titans cheer and the disc launchers pop out from the rocks.<char ref="Terra">Terra</char> caught by surprise, pulls up the leading edge of her stone to shield herself. A quick sweep of her hand sends rock fragments of all sizes hurtling toward the projectiles and launchers; all are quickly put out of commission, and she comes in for a landing. The stone breaks when it hits the ground, throwing her ahead to skid to a very unsteady stop on her feet. As the dust clears, we see<char ref="Cyborg">Cyborg</char><char ref="BeastBoy">Beast Boy</char> and<char ref="Starfire">Starfire's</char>taring wide-eyed at her, and she straightens up into the sort of pose every gymnast tries to nail while landing after a routine.</sd>
+
+<sd>The three Titans break into wild cheering and<char ref="Terra">Terra</char>lowers her goggles.<char ref="BeastBoy">Beast Boy</char>and<char ref="Starfire">Starfire</char>zip over to her in time with their next lines.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> You rock!</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Magnificent success!</sp>
+
+<sd><char ref="Cyborg">Cyborg</char>'s timer shows 1:56;<char ref="Terra">Terra</char>has beaten him by over twenty seconds on her first try.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Looks like we have a new course record</sp>
+
+<sd><char ref="Cyborg">Cyborg</char> is caught off guard, then shrugs.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> I musta softened it up for her.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>to <char ref="Terra">Terra</char></sd> You were incredible</sp>
+
+<sd>Laughing, she sweeps him into a monster hug.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I did it! You said I could do it, and you were right.</sp>
+
+<sd>Hearts spew forth from the little green joker. After she lets go, he staggers woozily backward before toppling to the ground.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> A little rough around the edges, but you've got some real talent there</sp>
+
+<sd>She smiles.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You think?</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> With a little more training, you could--</sp>
+
+<sd>Before he can finish the thought, his communicator chimes in. He pulls it out and flips it open; cut to a slightly nonplussed<char ref="Terra">Terra</char> who looks back at her three-person cheering section as the camera pans to them. The emergency signal in<char ref="Starfire">Starfire</char>neck piece begins to flash, as does the one on<char ref="BeastBoy">Beast Boy's</char> belt; he is back on his feet.<char ref="Cyborg">Cyborg</char>looks at his forearm panel as<char ref="Raven">Raven</char>floats down to join the group. The signal in her cloak's brooch is also flashing.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>annoyed; lock of hair falls over right eye</sd> Okay. Why is everybody blinking?</sp>
+
+<sd>Dissolve to a close-up of<char ref="Slade">Slade</char>against a white background.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd><char ref="Slade">Slade</char></sp>
+
+<sd>Cut to the six teens, now back in the operations center.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> He's back.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>to <char ref="BeastBoy">Beast Boy</char></sd><char ref="Slade">Slade?</char></sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Bad guy. Way bad.</sp>
+
+<sd>A bit of typing causes the picture of<char ref="Slade">Slade</char> now seen to be filling the window/screen, to shrink to a small box against a map of Jump City. An arrow points from it to a particular spot, which begins to flash.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Got a fix on his location. Titans! Move out!</sp>
+
+<sd>As<char ref="Terra">Terra</char>watches, hopelessly puzzled, they vacate the premises, but<char ref="BeastBoy">Beast Boy</char>stops short before he gets to the door. He looks back; cut to the team's house guest, quite down in the mouth at the prospect of being left out.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>from o.c.</sd> Hey</sp>
+
+<sd>Back to him.</sd> You coming or what?
+
+<sd>She smiles broadly and runs out with him, arm in arm. The door closes behind them. From here, dissolve to an <location>underground mining excavation</location>, with assorted earth-moving equipment parked among the cart tracks. Several men are at work, but a series of laser blasts from o.c. throws them into chaos.</sd>
+
+<sp><spkr ref="Miner1">Miner 1</spkr> Protect the diamonds!</sp>
+
+<sd>More blasts fling them across the space as two of<char ref="Slade">Slade's</char> commando robots jump into the area, and many more arrive and open fire while the other miners scatter.</sd>
+
+<sp><spkr ref="Miner2">Miner 2</spkr> Forget the rocks, they're taking over the entire mine!</sp>
+
+    <sd>One of<action mrkr="Robin" with="all" move="3" timestamp="2004-01-10T00:02:20" place="mine"/><char ref="Robin">Robin</char>discs is flung into view, knocking the weapons from their hands; cut to the Titans at the mine's entrance and zoom in.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Tell your boss we'd like a word with him</sp>
+
+<sd>The troops jump straight up.</sd> Titans! Go!
+
+<sd>All five charge;<char ref="Terra">Terra</char>comes up behind them, puts on her goggles, and takes to the air on a boulder.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You boys ready to rock?</sp>
+
+<sd>Two robots jump on and grapple with her. At ground level,<char ref="Robin">Robin</char>engages one at close quarters and drives it back with a kick to the gut before jumping up toward the midair melee. The attackers are kicked to the ground, one at a time, and he jumps down after them. However, the sound of a weapon being primed stops him short, and he finds himself facing an entire squadron of reinforcements. Out comes his fighting staff, which he extends it to full length and begins to twirl. As they charge, he knocks them away one after another. Now he is lost at the bottom of a dogpile; one mighty effort throws all the robots clear and leaves him standing alone. One levels its weapon and is promptly plowed away by a boulder from<char ref="Terra">Terra</char> Two others come up from behind; one is torn in half on a stone spike she raises while running off.</sd>
+
+    <sd>One robot has gained a high vantage point and is taking careful aim at<char ref="Robin">Robin</char><action mrkr="Starfire" with="all" move="3" timestamp="2004-01-10T00:02:20" place="mine"/><char ref="Starfire">Starfire</char>flies past a load of steel girders held aloft by a crane; the shooter is perched among these. A second robot moves up to stop her, but she blows it away with a starbolt. The resulting explosion obscures the view but does not stop the shooter from pulling the trigger.<char ref="Robin">Robin</char>continues his fight with several others and is thrown clear when the shot hits them.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr><char ref="Robin">Robin</char></sp>
+
+    <sd>She doubles back toward the load of steel girders, where two other robots have joined the shooter, and squeezes off more starbolts that send all three tumbling. They grab hold of her in midair and bear her struggling to the ground. Two more move in to lend a hand, but<action mrkr="Cyborg" with="all" move="3" timestamp="2004-01-10T00:02:20" place="mine"/><char ref="Cyborg">Cyborg's</char>eizes them and knocks their heads together. Breaking out his cannon, he runs into the fray.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Hang on, Star!</sp>
+
+<sd>Now two other robots drop to ground level and charge in. A large drilling vehicle sits nearby; in short order, another has climbed into the driver's seat ad fired it up. It starts toward<char ref="Cyborg">Cyborg</char> who gets his cannon going at full throttle; he dispatches several aggressors, including enough of the ones holding<char ref="Starfire">Starfire</char>to allow her to free herself and fly up. A laser blast strikes the cannon and forces<char ref="Cyborg">Cyborg</char>to cease fire. As other shots flash past, he looks over at the shooters, then up at the overhead load of girders. A well-placed shot breaks the platform holding them up and dumps a few tons of steel on the opposition.</sd>
+
+<sd>Close-up of<char ref="Cyborg">Cyborg</char> whose expression quickly changes to shock when he looks off to one side, toward the sound of the drill's engine. A cry of surprise escapes his lips; cut to his perspective-an extreme close-up of the whirling bit as it approaches.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> No!</sp>
+
+    <sd>Back to him. The tip starts to grind against the side of his head; he is slowly pushed back toward the wall of the excavation by the machine's momentum.<action mrkr="Raven" with="all" move="3" timestamp="2004-01-10T00:02:20" place="mine"/><char ref="Raven">Raven</char>descends into view.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Azarath Metrion Zinthos!</sp>
+
+    <sd>She levitates a cart and sends it flying toward the driver robot, which catches it upside the head. From here, cut to<action mrkr="BeastBoy" with="all" move="4" timestamp="2004-01-10T00:02:20" place="mine"/><char ref="BeastBoy">Beast Boy</char>as he runs over.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr><char ref="Raven">Raven</char> look out!</sp>
+
+<sd>Several robots have gathered around her. One fires, but she shields herself from the shot and lifts off as several other blasts lance toward her. She dodges the fusillade, after which<char ref="BeastBoy">Beast Boy</char>leaps into the free-fire zone, a transformation already in progress. Overhead view of the shooters, who suddenly find themselves in a large growing shadow, and<char ref="BeastBoy">Beast Boy</char> as a stegosaurus, lands among them to send the lot scattering. They concentrate their fire and begin to drive him back toward the entrance of a mine tunnel, where<char ref="Terra">Terra</char>is dropping a piece of the ceiling on a robot. She stops several falling rocks in midair and launches them at the robots to end their laser fire. However, the effort is a genuine strain on her, judging from her groans and the flash of her eyes behind the goggles before she squeezes them shut. As in the scene on the shore, light has flared up around her, but now it is blinding white.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Can't control it!</sp>
+
+<sd>The goggles' lenses shatter and there is a great flash. When the view clears, more of the ceiling begins to fall in.<char ref="BeastBoy">Beast Boy</char>whips his tail around to repel the opposition, then returns to human form. Rocks crash down all around him due to<char ref="Terra">Terra</char>overload. Cut to an overhead view; he looks up, his face goes slack, and he lets off a scared little whimper as the shadow of a descending slab grows over him. His perspective of the falling debris, which gives way to a black screen when it lands on him.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>voice over</sd> BEAST BOY!!</sp>
+
+<sd>Snap to a close-up of<char ref="Robin">Robin</char>as she says this. His attention is drawn by her yell, as is that of<char ref="Raven">Raven</char><char ref="Cyborg">Cyborg</char> and<char ref="Starfire">Starfire</char> the last gasps in sheer terror. Cut to just behind<char ref="Terra">Terra</char>and zoom in slowly on the smashed robots lying among the rocks in front of her. One of them starts to crawl out, its bottom half is gone, and others get to their feet and advance as well. Her ruined goggles now hanging around her neck, she gathers herself for a mighty effort; once again her eyes and fists glow yellow, white light surrounds her, and columns of stone descend from the ceiling to crush every robot. The last spasm of movement is from a sparking hand. When it stops, she runs off into the tunnel.</sd>
+
+<sd><char ref="Robin">Robin</char> dashes to the cave-in site and starts to clear away the rock.<char ref="Starfire">Starfire</char>joins in the effort as<char ref="Cyborg">Cyborg</char>fires his cannon across the area to ward off the enemy.<char ref="Raven">Raven</char>arrives a moment before the pile rumbles and the largest slab is lifted away by<char ref="BeastBoy">Beast Boy</char> now in the form of a colossal Sasquatch. He throws it aside and rubs his head.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> You okay</sp>
+
+<sd><char ref="BeastBoy">Beast Boy</char> nods and takes human form.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Where's<char ref="Terra">Terra</char></sp>
+
+<sd>A cut to farther down that tunnel gives the answer. Winded and exhausted, she stumbles over to a wall and leans against it for support. After a moment to catch her breath, she slides down to the ground and looks at her hands.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Why can't I do this?</sp>
+
+<sd>Extreme close-up; her eyes are squeezed shut. Echoing, running footsteps from o.c. draw her attention. Long shot of a junction with another tunnel, where a figure dashes past.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>softly</sd><char ref="Slade">Slade</char></sp>
+
+<sd>In a closer shot, we see that she has correctly identified the runner. She goes after him as fast as her legs will carry her. After a few hundred yards, she skids to a stop and raises one hand to cave in the ceiling just ahead of him. Now she walks up, both hands glowing.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Looks like I've got you.</sp>
+
+<sd>A huge leap gets him airborne and deposits him just behind her, and with a swift low kick he dumps her to the ground. Straightening up, he produces a sphere with his insignia on it.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Actually,<char ref="Terra">Terra</char>..</sp>
+
+<sd>He throws it upward; it sticks to the ceiling and starts to beep as a red light flashes. She gets to her feet.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> ...I've got you.</sp>
+
+<sd>The device explodes in a mighty blast that wipes out the entire view. When it clears, more rocks are falling from the ceiling behind him and<char ref="Terra">Terra</char>has been floored again by the shock wave. Clouds of dust wash over the screen as the view fades to black.</sd>
+
+<sd>Fade in to a shot of<char ref="Slade">Slade</char>walking implacably away from this second cave-in. Emergency lights switch on at the bases of the tunnel walls, bathing the enclosed space in eerie yellow-green light. His approaching silhouette puts fresh fear into<char ref="Terra">Terra</char> who scuttles backward a little bit and finds herself staring directly into that black-and-red-orange masked face. Fade to black.</sd>
+</act><act n="3">
+<title>Act Three</title>
+
+<sd>Opening shot: an overhead view of<char ref="Terra">Terra</char>and<char ref="Slade">Slade</char> facing off as more emergency lights flick on around them.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Now,<char ref="Terra">Terra</char>.</sp>
+
+<sd>Cut to her, backing up; he continues o.c.</sd> ...you walked right into a trap
+
+<sd>steps into view with his staff</sd> Another mistake.
+
+<sd>Back to her; pull back to put him in frame as he leans over her.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> You of all people should know better</sp>
+
+<sd>He blocks her in with the staff.</sd> But at least you and I are finally getting a chance to talk.
+
+<sd>He tries a jab, but she dodges easily and counters by launching a stone at him from the wall. It zips past him, a near miss.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Hmm. I see we have much to talk about.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Mind if I talk with my hands?</sp>
+
+<sd>Fragments fly as she causes two large stone snakes to emerge, one from each wall. They hurtle toward<char ref="Slade">Slade's</char> position, but he dives to avoid being crushed between them. He ends up in a kneeling crouch at her feet.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Good,<char ref="Terra">Terra</char> but not good enough.</sp>
+
+<sd>He swings the staff and follows up with a jab; she sidesteps both attacks and somersaults away. An overhead swing also misses its mark when she rolls out of range. Before she can move again, he brings the staff down to cut off her anticipated movement. Hands to head, she huddles on the ground under his next descending blow, and a chunk of rock surges up from the ground to send him staggering backward across the tunnel.</sd>
+
+<sd><char ref="Terra">Terra</char>, still behind this makeshift shield, peers cautiously around the edge and sees<char ref="Slade">Slade</char>approaching. She steps out and heaves the mass toward him; planting the end of his staff in the ground, he swings himself up along its length. The rock hits the staff and breaks it, but leaves him untouched. As it crashes into the wall, he regains his footing.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Impressive, unless, of course, you were aiming for me.</sp>
+
+<sd>He drops the piece of the staff he is still holding and advances slowly toward her. She backs up a bit and launches several medium-size stones from the tunnel wall at him. A mighty punch shatters the biggest of them, and as she sends out another volley, he moves in and knocks several out of the air. Now she slings a colossal boulder at him, but one blow smashes it and drives her back against the wall in the bargain. She collapses to the ground.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Back off</sp>
+
+<sd>She stands up.</sd> I'm with the Titans! They'll be coming to--
+
+<sp><spkr ref="Slade">Slade</spkr> You don't belong with the Titans</sp>
+
+<sd>Head-on view of her; his hand is in frame.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You don't know anything about me!</sp>
+
+<sd>He produces her missing hair clip in that hand-evidently he palmed it after the prologue, and her face goes slack when she sees it.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> On the contrary, Terra</sp>
+
+<sd>Close-up; he holds it up.</sd> I know everything about you
+
+<sd>Back to<char ref="Terra">Terra</char> zooming in; he continues o.c.</sd> I've been watching you for some time. I know why you're always running away.
+
+<sd>Pull back to frame both.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> I know your secret, little girl.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> No!</sp>
+
+<sd>She rushes at him, but he seizes her wrist and forces her back to the wall. Extreme close-up of his eye.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Earthquakes. Avalanches. Mudslides</sp>
+
+<sd>Extreme close-up of<char ref="Terra">Terra</char> he continues o.c.</sd> Everywhere you go, you try to do good
+
+<sd>Pull back a bit; he releases his hold.</sd> And everywhere you fail
+
+<sd>leans to her</sd> So everyone turns against you.
+
+<sd>Back to her. She has turned her face away, and without the clip, her hair has once again fallen forward to obscure its right half.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> You lack control, <char ref="Terra">Terra</char></sp>
+
+<sd>reaches into frame to replace hair clip</sd> And when you lose control, you are more dangerous than anything I've ever seen.
+
+<sd>She looks up at him wonderingly; he turns away.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> But it doesn't have to be this way. I can help you, child.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>puzzled</sd> You can?</sp>
+
+<sd>He bends over; close-up of a small stone as he picks it up.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> Right now, you are...rough around the edges.</sp>
+
+<sd>On the end of this, cut to her. He holds the stone into view, and the camera shifts back to him.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> You need more than obstacle courses to overcome your problem.</sp>
+
+<sd>Pan to his hand; he squeezes the stone viciously, and it starts to crumble.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> You need a teacher. A mentor.
+
+    <sd>She looks on.</sd> Come with me,<char ref="Terra">Terra</char> and I can teach you to shine.</sp>
+
+<sd>He opens his fist on the end of this line, revealing a diamond in his palm: it had been hidden at the center of the rock. She looks on, completely befuddled, then up at him, and finally backs away.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> But...my friends told me you're...</sp>
+
+<sp><spkr ref="Slade">Slade</spkr> You don't really believe they're your friends, do you,<char ref="Terra">Terra</char></sp>
+
+<sp><spkr ref="Terra">Terra</spkr> They took me in. Gave me a home.</sp>
+
+<sp><spkr ref="Slade">Slade</spkr> And when they find out what's wrong with you, they'll reject you, like everyone else</sp>
+
+<sd>In front of the two, tilting down slowly.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <char ref="BeastBoy">Beast Boy</char>-</sp>
+
+<sd>Waist level.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> --Can't keep his mouth shut forever. He'll tell them.</sp>
+
+<sd>This hits a nerve; she balls her fists angrily and warms them up.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> He promised</sp>
+
+<sd>The tunnel starts to shake.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> He lied.</sp>
+
+<sd>Torrents of dirt and stones go flying as she vents her rage.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Shut up! Just shut up and leave me alone!</sp>
+
+<sd>Close-up. Her eyes are tightly closed at this point; when she opens them, we see that they are glowing at full intensity. She gasps in shock and drops to her knees, hands on head.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Don't lose control...don't lose control!</sp>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> Now,<char ref="Terra">Terra</char>.</sp>
+
+<sd>Cut to him and pan to her.</sd> ...how can you lose something you never had?
+
+<sd>Overhead view of her, pulling back. The debris is flying in circles around her as she voices a tormented scream and the camera pulls back. Elsewhere in the tunnel, pieces of rock are shaken loose by the force of her outburst; in the main excavation, one last robot is knocked backward to smash against the side of a crane, accompanied by a yell from the o.c.<char ref="Robin">Robin</char> Pan to him. He looks up as the place trembles and stones fall from above.<char ref="Raven">Raven</char>flies over.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> We need to get out of here</sp>
+
+<sd><char ref="Cyborg">Cyborg</char> joins them.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr><char ref="Slade">Slade's</char> trying to bring down the whole mine!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> I'm not sure he's the one doing this</sp>
+
+<sd>Pan away, then back as<char ref="Starfire">Starfire's</char>woops down.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> I cannot locate<char ref="Terra">Terra</char>or<char ref="BeastBoy">Beast Boy</char></sp>
+
+<sd><char ref="Robin">Robin</char> mulls this over for a second. A wall of collapsed rock parts to reveal<char ref="Slade">Slade</char>looking at the funnel cloud that has developed from<char ref="Terra">Terra</char>breakdown. Cut to the hopelessly huddled little girl, floating at its center.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> No one else understands you,<char ref="Terra">Terra</char> No one else can help you</sp>
+
+<sd>Cut to him.</sd> I'll be waiting.
+
+<sd>He leaves.<char ref="BeastBoy">Beast Boy</char> as a gopher, pops up from the ground at a distance and catches sight of the maelstrom. Diving back underground, he burrows toward it and under the edge of the funnel cloud. Inside, he emerges and returns to human form.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr><char ref="Terra">Terra</char><char ref="Terra">Terra</char></sp>
+
+<sd>He jumps toward her and is nearly swept away by the Force Ten gales. Only a one-handed grip on<char ref="Terra">Terra's</char>shoulder keeps him from saying hello to the ceiling at two hundred miles an hour. The grab shakes her out of the fit, and she fully realizes how much danger he is in. His free hand and one of hers inch slowly toward each other and take hold for dear life.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> It's okay,<char ref="Terra">Terra</char> I'm here</sp>
+
+<sd>She falls sobbing into his arms.</sd> I'm here.
+
+<sd>The whirlwind dissipates, leaving them to descend slowly to the ground. Dissolve to a close-up of the two.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You won't--</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> I'm not gonna tell anybody. I promise.</sp>
+
+<sd>Close-up of her weary, tear-streaked face as he reaches tenderly over to cradle her head. Dissolve to the exterior of the <location>Tower</location> that evening. On the next line, cut to<char ref="Terra">Terra</char>inside at the door to the operations center. She is slinging up her backpack.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Well, guys, uh, it's been real</sp>
+
+    <sd>Pull back; <action mrkr="Raven" with="all" move="4" timestamp="2004-01-10T00:02:30" place="tower"/>all the Titans are there, save<char ref="Cyborg">Cyborg</char></sd> Seriously, thanks for everything, but I should--
+
+    <sd>She turns to leave on the end of this, but the door opens to reveal<action mrkr="Cyborg" with="all" move="4" timestamp="2004-01-10T00:02:30" place="tower"/><char ref="Cyborg">Cyborg</char>blocking her exit.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>smiling</sd> Don't even think about it</sp>
+
+<sd>She turns back.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Okay. What's going on?</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Well...</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> ...We talked it over, and..</sp>
+
+    <sd>Close-up of<action mrkr="Starfire" with="all" move="4" timestamp="2004-01-10T00:02:30" place="tower"/><char ref="Starfire">Starfire</char></sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> ...We wish for you to stay here, with us</sp>
+
+    <sd>She giggles; pan to<action mrkr="Robin" with="all" move="4" timestamp="2004-01-10T00:02:25" place="tower"/><char ref="Robin">Robin</char></sd>
+
+<sp><spkr ref="Robin">Robin</spkr> We think you'd make a great addition to our team.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> So...want to be a Titan</sp>
+
+<sd><char ref="Robin">Robin</char> gives her a communicator.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Me</sp>
+
+<sd>Close-up; she stares at it.</sd> Really?
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> Of course, you'll need more training</sp>
+
+<sd>Pull back to frame him.</sd> I know you have trouble controlling your powers, and we can help.
+
+    <sd>Cut to his and<action mrkr="BeastBoy" with="all" move="5" timestamp="2004-01-10T00:02:25" place="tower"/><char ref="BeastBoy">Beast Boy's</char> feet on the end of this; the communicator drops between them and bounces away. When the camera cuts back to head level,<char ref="Terra">Terra</char>expression shows the battle between disappointment and fury raging in her head. The fury gradually wins during the next three lines.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You told him?</sp>
+
+<sd>Pull back; she is addressing<char ref="BeastBoy">Beast Boy</char></sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>ears drooping</sd> I didn't!</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> You promised! You lied to me! You lied!</sp>
+
+<sd>She runs off. Letterbox, top third of the screen: all six teens are visible only as small silhouettes against a blue background.<char ref="Terra">Terra</char>continues her headlong dash away from the Titans; after she is gone, the view shifts back to them in fullscreen.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>running after her</sd><char ref="Terra">Terra</char> no! Wait!</sp>
+
+    <sd>Dissolve to a pan along the shore and stop at her hair clip lying on a rock, having fallen loose in her hasty departure.<action mrkr="BeastBoy" with="none" move="6" timestamp="2004-01-10T00:02:30" place="bay"/><char ref="BeastBoy">Beast Boy</char>reaches into view and picks it up; pull back to frame him. He looks dejectedly at it and sits down.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr><char ref="Terra">Terra</char>.</sp>
+
+    <sd><action mrkr="Robin" with="BB" move="5" timestamp="2004-01-10T00:02:30" place="bay"/><char ref="Robin">Robin </char>walks up behind him.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> I just figured it out. I didn't know it was a secret.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> She didn't even say goodbye.</sp>
+
+<sd>He picks up a stone and throws, skipping it farther over the water than any of his or<char ref="Terra">Terra</char>previous attempts. After it has finally submerged, the screen fills with static, which resolves to a view of<char ref="Terra">Terra</char>running as she did at the start of this episode. She has ditched her backpack. The camera tilts down from her image to a black area beneath it, showing that this is a monitor on which<char ref="Slade">Slade</char>is observing her. Since destroying his own lair at the end of "Apprentice", he has established a <location>new base of operations</location>.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Run all you like, because no matter where you go..</sp>
+
+<sd>Close-up of him.</sd> ...every step brings you closer to me.
+
+<sd>Snap to black.</sd> 
+</act>
+</body>
+</root>

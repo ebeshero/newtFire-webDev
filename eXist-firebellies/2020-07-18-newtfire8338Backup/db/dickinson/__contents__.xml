@@ -1,0 +1,8 @@
+<collection xmlns="http://exist.sourceforge.net/NS/exist" name="/db/dickinson" version="1" owner="lottig" group="dickinson" mode="775" created="2018-02-10T05:28:06.223Z">
+    <acl entries="2" version="1">
+        <ace index="0" target="GROUP" who="dba" access_type="ALLOWED" mode="7"/>
+        <ace index="1" target="GROUP" who="dh-group" access_type="ALLOWED" mode="5"/>
+    </acl>
+    <subcollection name="f6" filename="f6"/>
+    <subcollection name="f16" filename="f16"/>
+</collection>

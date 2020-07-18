@@ -1,0 +1,41 @@
+xquery version "3.1";
+
+(:The goal of this XPath is to count XML elements from multiple directories and output the average value from each directory:)
+
+let $discog := collection('/db/brandnew/XML/Albums')
+let $albumRef := $discog//album/@ref/string() ! normalize-space()
+let $albumDist := $albumRef => distinct-values()
+
+(: Target title @ref from album @ref :)
+for $albumIndex in $albumDist
+
+let $titleRef := $discog//title[following-sibling::album/@ref = $albumIndex]/@ref/string() ! normalize-space()
+let $titleDist := $titleRef => distinct-values()
+
+(: Put this all in the right order :)
+order by $albumIndex
+
+(: Initialize variable for a cumulative sum of count in the next structure:)
+let $partAddend := number('0')
+
+let $albumCounts := 
+(: Target count from title and album @refs :)
+    for $titleIndex in $titleDist
+
+     let $partRef := $discog//song[preceding::album/@ref = $albumIndex][preceding::title/@ref = $titleIndex]/(child::intro | prelude | interlude| postlude | verse | chorus | bridge | outro | preChorus | instrumental) ! name()
+    let $partCount := $partRef=> count()
+    
+    let $titleString := $discog//title[@ref = $titleIndex][following-sibling::album/@ref = $albumIndex]/string() ! normalize-space()
+    let $titleDistString := $titleString => distinct-values()
+    let $songObj := concat(($titleDistString, $partCount),"&#x9;")
+
+    return $songObj
+
+let $partMax := max($albumCounts)
+    
+let $partMaxString := 
+    
+let $partMin := min($albumCounts)
+let $partAvg := avg($albumCounts)
+    
+return concat($albumIndex, ': ', 'Average complexity: ', $partAvg, '; Most Complex Song: ', $partMaxString, '; Least Complex Song: ', $partMin)

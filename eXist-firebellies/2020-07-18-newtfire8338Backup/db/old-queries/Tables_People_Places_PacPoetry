@@ -1,0 +1,63 @@
+xquery version "3.0";
+
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html><head><title>Two Tables: of Persons and of Place Names in the Pacific Poetry Collection</title></head><body><table>{
+let $coll := collection('/db/pacific/literary')
+let $TEI := $coll/TEI
+let $text := $coll//text
+let $persNames := $text//persName | $text//rs[@type="person"]/@ana
+let $Distpeople := distinct-values($persNames)
+for $Distperson in $Distpeople
+return 
+    <tr>
+        <td>{normalize-space($Distperson)}</td>
+        {for $txt in $text
+        let $line := $txt//l[$Distperson=.//$persNames]/@n
+        let $title := $txt//l[$Distperson=.//$persNames]/ancestor::TEI//titleStmt/title/text()
+        let $para := $txt//p[$Distperson=.//$persNames]/position()
+        let $type := $txt//rs[not(@type='person')][$Distperson=.//$persNames]/@type
+        let $subtype := $txt//rs[not(@type='person')][$Distperson=.//$persNames]/@subtype
+        where count($title) gt 0
+        return
+        <td>
+            <tr>
+            <td>{$title}: Lines:{string-join(($line), ", ")}</td>
+            <td>Paragraphs (if any): {string-join(($para), ", ")}</td>
+            <td>rs @type values (if any): {string-join((distinct-values($type)), ", ")} </td>
+           <td>rs @type values (if any): {string-join((distinct-values($subtype)), ", ")} </td>
+            </tr>
+        </td>
+        }</tr>
+}</table>
+    <table>
+{        
+     let $coll := collection('/db/pacific/literary')
+let $TEI := $coll/TEI
+let $text := $coll//text
+let $placeNames := $text//placeName
+let $Distplaces := distinct-values($placeNames)
+for $Distplace in $Distplaces
+return 
+    <tr>
+        <td>{normalize-space($Distplace)}</td>
+        {for $txt in $text
+        let $line := $txt//l[$Distplace=.//$placeNames]/@n
+        let $title := $txt//l[$Distplace=.//$placeNames]/ancestor::TEI//titleStmt/title/text()
+        let $para := $txt//p[$Distplace=.//$placeNames]/position()
+        let $type := $txt//rs[$Distplace=.//$placeNames]/@type
+        let $subtype := $txt//rs[$Distplace=.//$placeNames]/@subtype
+        where count($title) gt 0
+        return
+        <td>
+            <tr>
+            <td>{$title}: Lines:{string-join(($line), ", ")}</td>
+            <td>Paragraphs (if any): {string-join(($para), ", ")}</td>
+            <td>rs @type values (if any): {string-join((distinct-values($type)), ", ")} </td>
+           <td>rs @type values (if any): {string-join((distinct-values($subtype)), ", ")} </td>
+            </tr>
+        </td>
+        }</tr>
+}   
+    
+    </table>
+</body></html>

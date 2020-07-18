@@ -1,0 +1,52 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<svg>
+(:Here's a more complex, and cooler, version of what I showed you in class. This version does two things: It ignores chapters that don't have any geo elements (so we don't waste space), and it sorts bars in order from biggest to smallest. The coding is tricky--something you've not seen before. I'll explain below as we get into the nested FLWORs. Feel free to adapt this if you like the results. The coding is tricky but if you can follow what I've done, you can adapt it to the homework exercise.:)    
+{
+let $CookVoy2:= doc('/db/pacific/voyages/cookVoy2Pnum.xml')
+let $chapters:= $CookVoy2//div[@type="chapter"][.//geo]
+let $countchap := count($chapters)
+let $barsize:=20
+let $spacing:=5
+
+return
+   <g transform="translate(10, 2000)">
+                <text x="50" y="-1900" style="font-family:sans-serif;font-size:25px" fill="black"
+                    font-stretch="expanded">How do the Chapters in Cook's Second Voyage Compare in their Counts of Latitude and Longitude Measurements?</text>
+                <line x1="148" y1="0" x2="1400" y2="0" stroke="black" stroke-width="2"/>
+                <!--x-axis: Look for your largest width value in your results to help figure out about where to set x2.-->
+                <line x1="148" y1="0" x2="148" y2="{-((($barsize) + $spacing*6)* $countchap)}"
+                    stroke="black" stroke-width="2"/>
+                <!--y-axis-->
+ { 
+     let $temp :=   (:Note: I've added a special kind of nesting here: I'm actually defining a variable AS a little FLWOR statement, the result of which equals $temp. This permits me to organize our bars according to the geo counts, something that's especially tricky in XQuery. XQuery wants to order results by the position of chapters BEFORE the order by statement. My nested FLWOR here is a workaround. What follows will organize our bar stacks in order from widest at the top of the screen to narrower and narrower as we scroll down. Read the code and think about how this works. :)
+     for $chapter in $chapters   
+    let $countAllGeo := count($chapter//geo)*10    
+    order by $countAllGeo ascending
+   
+   return $chapter
+   for $item at $pos in $temp
+   let $chapter := $item
+   let $chapterHead := $item/head/l[1]/text()
+   let $countAllGeo := count($chapter//geo)*10
+    let $countlat:=count($chapter//geo[@select="lat"])*10
+    let $countlon:=count($chapter//geo[@select="lon"])*10
+    where $countAllGeo gt 0
+return 
+ 
+<g>
+    
+    <text x="0" y="{-((($barsize + $spacing*6) * $pos) -15) }" style="font-family:sans-serif;font-size:10px" >{$chapter/parent::div[@type="book"]/head/l[2]/text()}: {$chapterHead}</text>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countAllGeo}" height="{$barsize}" fill="green"/>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countlat + $countlon}" height="{$barsize}" fill="yellow"/>
+     <rect x="150" y="{-($barsize + $spacing*6) * $pos}" width="{$countlon}" height="{$barsize}" fill="blue"/>
+    
+    
+   
+ </g>
+ }
+ 
+ </g>
+}
+ </svg>
+    

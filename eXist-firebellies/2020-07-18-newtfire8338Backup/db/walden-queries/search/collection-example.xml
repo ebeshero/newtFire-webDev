@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collection xmlns="http://exist-db.org/collection-config/1.0">
+    <index xmlns:tei="http://www.tei-c.org/ns/1.0">
+        <fulltext default="none" attributes="false"/>
+        <!-- Lucene index is configured below -->
+        <!-- Documentation for creating .xconf "https://exist-db.org/exist/apps/doc/lucene" -->
+        <!-- FACETS will allow for refining of search/query "https://exist-db.org/exist/apps/doc/lucene#facets-and-fields" -->
+        <lucene>
+            <analyzer class="org.apache.lucene.analysis.standard.StandardAnalyzer"/>
+            <analyzer id="ws" class="org.apache.lucene.analysis.WhitespaceAnalyzer"/>
+            <text qname="tei:title"/>
+            <text qname="tei:body"/>
+            <text qname="tei:l"/>
+            <text qname="tei:lem"/>
+            <text qname="tei:rdg"/>
+            <text qname="tei:cell"/>
+            <text qname="tei:div">
+            <!-- What is passed to Lucene is the string value of <title>, which also includes the text of all its DESCENDANT text nodes (except those filtered out by an optional <ignore>) -->
+                <inline qname="tei:lem"/>
+                <inline qname="tei:rdg"/>
+                <inline qname="tei:l"/>
+                <inline qname="tei:cell"/>
+                <ignore qname="tei:figure"/>
+                <ignore qname="tei:graphic"/>
+                <ignore qname="tei:desc"/>
+                <ignore qname="tei:note"/>
+                <ignore qname="tei:item"/>
+                <ignore qname="tei:list"/>
+                <ignore qname="tei:anchor"/>
+                <ignore qname="tei:ab"/>
+                <ignore qname="tei:app"/>
+                <ignore qname="tei:lg"/>
+                <ignore qname="tei:lb"/>
+                <ignore qname="tei:table"/>
+                <ignore qname="tei:row"/>
+                <ignore qname="tei:sic"/>
+                <ignore qname="tei:choice"/>
+                <ignore qname="tei:orig"/>
+                <ignore qname="tei:corr"/>
+                <ignore qname="tei:space"/>
+                <ignore qname="tei:w"/>
+                <ignore qname="tei:span"/>
+            </text>
+            <text qname="tei:p">
+                <inline qname="tei:ab"/>
+                <inline qname="tei:seg"/>
+                <inline qname="tei:app"/>
+                <inline qname="tei:lem"/>
+                <inline qname="tei:rdg"/>
+                <inline qname="tei:del"/>
+                <inline qname="tei:add"/>
+                <inline qname="tei:hi"/>
+                <inline qname="tei:quote"/>
+                <inline qname="tei:l"/>
+                <inline qname="tei:cell"/>
+                <ignore qname="tei:table"/>
+                <ignore qname="tei:row"/>
+                <ignore qname="tei:lg"/>
+                <ignore qname="tei:unclear"/>
+                <ignore qname="tei:note"/>
+                <ignore qname="tei:lb"/>
+            </text>
+            <ignore qname="tei:teiHeader"/>
+            <!-- Everything searchable is located within the document, we do not need the header portion -->
+            <ignore qname="tei:figure"/>
+            <ignore qname="tei:graphic"/>
+            <ignore qname="tei:note"/>
+            <ignore qname="tei:list"/>
+            <ignore qname="tei:anchor"/>
+            <ignore qname="tei:ab"/>
+            <ignore qname="tei:app"/>
+            <ignore qname="tei:lg"/>
+            <ignore qname="tei:lb"/>
+            <ignore qname="tei:table"/>
+            <ignore qname="tei:row"/>
+            <ignore qname="tei:sic"/>
+            <ignore qname="tei:choice"/>
+            <ignore qname="tei:orig"/>
+            <ignore qname="tei:corr"/>
+            <ignore qname="tei:space"/>
+            <ignore qname="tei:w"/>
+            <ignore qname="tei:span"/>
+        </lucene>
+    </index>
+</collection>

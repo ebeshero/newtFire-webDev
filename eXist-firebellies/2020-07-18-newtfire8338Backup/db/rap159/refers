@@ -1,0 +1,6 @@
+xquery version "3.1";
+let $bn := collection('/db/brandnew/Albums/')
+let $refer := $bn//song//refer ! tokenize(., '-')
+  for $x in $refer let $water := $bn//song//refer[@img="water"] ! tokenize(., '-')
+  (:for $y in $refer let $fire := $bn//song//refer[@img="fire"] ! tokenize(., '-') :)
+return $water

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Baker Farm</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.</p>
+               </licence>
+            </availability>          
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY Geneseo using Text Encoding
+            Initiative (TEI) P5 XML Schema, using the Parallel Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and includes critical apparatus
+               laid out by Ronald Clapper, and annotations provided by Ronald Clapper, J. Lyndon Shanley, and Walter
+               Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised edition of dissertation
+               originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+  <text xml:id="walc10">
+      <body>
+         <div>
+            <head>Baker Farm</head>
+            
+            <p n="1" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 1 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+                  <ab change="#wc_0e">The title “Baker Farm” is inserted between Ponds 34
+            and Baker Farm 1.</ab>
+               </note>
+               <app xml:id="walc10-app-0001">
+                  <lem>Sometimes</lem>
+                  <rdg wit="#wc_0e">
+                     <del>I also visited many a nameless little rill in the woods, as interesting to me for the
+                time as the Amazon or Mississippi, now running under ground with subdued murmurings, now sparkling
+                &amp; tinkling along the surface, and anon spreading into a swamp.</del> Sometimes</rdg>
+               </app> I rambled to pine groves, standing like temples, or like fleets at sea, full-rigged, with wavy boughs,
+          and rippling with light, so soft and green and shady that the Druids would have forsaken their oaks to worship
+          in them; or to the cedar <app xml:id="walc10-app-0002">
+                  <lem>wood</lem>
+                  <rdg wit="#wc_0e">woods</rdg>
+               </app> beyond Flint’s Pond, where the trees, covered with hoary blue berries, spiring higher and higher, <app xml:id="walc10-app-0003">
+                  <lem>are</lem>
+                  <rdg wit="#wc_0e">
+                     <del>seemed</del>
+                     <add rendition="pencil">are</add>
+                  </rdg>
+               </app> fit to stand before Valhalla, and the creeping juniper<app xml:id="walc10-app-0004">
+                  <lem>covers</lem>
+                  <rdg wit="#wc_0e">
+                     <del>covered</del>
+                     <add rendition="pencil">covers</add>
+                  </rdg>
+               </app> the ground with wreaths full of fruit; or to swamps where the usnea<app xml:id="walc10-app-0005">
+                  <lem>lichen</lem>
+                  <rdg wit="#wc_0e">
+                     <del>lichens</del>
+                     <add>lichen</add>
+                  </rdg>
+               </app> hangs in festoons from the<app xml:id="walc10-app-0006">
+                  <lem>black-spruce</lem>
+                  <rdg wit="#wc_0e">spruce</rdg>
+               </app> trees, and <app xml:id="walc10-app-0007">
+                  <lem>toad-stools, round tables of the swamp gods, cover the ground, and more beautiful fungi adorn the
+              stumps, like butterflies or shells, vegetable winkles; where the swamp-pink and dogwood grow, the red
+              alder-berry glows like eyes of imps, the waxwork grooves and crushes the hardest woods in its folds, and
+              the wild-holly berries make the beholder forget his home with their beauty,</lem>
+                  <rdg wit="#wc_0e">
+                     <add>toadstools, round-tables of the swamp gods cover all the ground, and more beautiful
+                fungi adorn the stumps, like butterflies or shells, vegetable winkles, covering the dead wood like
+                barnacles,</add>
+                     <del>and</del>
+                     <add>where</add> the swamp-pink and dog-wood grow and the red alder-berry glows like eyes of imps, and the
+              waxwork grooves and crushes the hardest woods in its folds, and the wild-holly berries make the beholder
+              forget his home with their beauty; <del>where the owl hides her young and nods at noon-day, and the
+                raccoon has his perch, and mushrooms, round-tables of the swamp gods cover all the ground, and beautiful
+                fungi adorn the stumps, like butterflies or shells, vegetable winkles, covering the dead wood like
+                barnacles</del>
+                  </rdg>
+               </app> and<app xml:id="walc10-app-0008">
+                  <lem>he is</lem>
+                  <rdg wit="#wc_0e">you are</rdg>
+               </app> dazzled and tempted by nameless<app xml:id="walc10-app-0009">
+                  <lem>other</lem>
+                  <rdg wit="#wc_0e">
+                     <add>other</add>
+                  </rdg>
+               </app> wild forbidden fruits, too fair for mortal taste. Instead of calling on some scholar, I paid many a
+          visit to particular trees, of kinds which are rare in this neighborhood, standing far away in the middle of
+          some pasture, or in the<app xml:id="walc10-app-0010">
+                  <lem>depths</lem>
+                  <rdg wit="#wc_0e">
+                     <del>depth</del>
+                     <add rendition="pencil">depths</add>
+                  </rdg>
+               </app> of a wood or swamp, or on a hill-top; such as the black- birch, of which we have some handsome
+          specimens two feet in diameter; its cousin, the yellow-birch, with its loose golden vest, <app xml:id="walc10-app-0011">
+                  <lem>perfumed like the first;</lem>
+                  <rdg wit="#wc_0e">
+                     <add>perfumed like the first</add>;</rdg>
+               </app> the beech, which has so neat a bole and beautifully lichen-painted, perfect in all its details, of
+          which, excepting scattered specimens, I<app xml:id="walc10-app-0012">
+                  <lem>know</lem>
+                  <rdg wit="#wc_0e">know of</rdg>
+               </app> but one small grove of sizable trees left in<app xml:id="walc10-app-0013">
+                  <lem>the township,</lem>
+                  <rdg wit="#wc_0e">Concord</rdg>
+               </app> supposed by some to have been planted by the pigeons that <app xml:id="walc10-app-0014">
+                  <lem>were once baited with beechnuts near by;</lem>
+                  <rdg wit="#wc_0e">
+                     <del>once came to the beds near by, for they bear no fruit here</del>
+                     <add rendition="pencil">were once baited with beechnuts near by</add>
+                  </rdg>
+               </app> it is worth the while to<app xml:id="walc10-app-0015">
+                  <lem>see the silver grain sparkle</lem>
+                  <rdg wit="#wc_0e">see <del>how</del> the silver grain <del>sparkles</del>
+                     <add rendition="pencil">sparkle</add>
+                  </rdg>
+               </app> when you split this wood; the bass; the hornbeam; the <hi rend="style(italics)">Celtis
+          occidentalis</hi>, or false elm, of which we have but one<app xml:id="walc10-app-0016">
+                  <lem>well-grown;</lem>
+                  <rdg wit="#wc_0e">
+                     <del>full-grown</del>
+                     <add rendition="pencil">well-grown</add>
+                  </rdg>
+               </app> some taller mast of a pine, a shingle tree, or a more perfect hemlock than usual, standing like a
+          pagoda in the<app xml:id="walc10-app-0017">
+                  <lem>midst of the</lem>
+                  <rdg wit="#wc_0e">
+                     <add>midst of the</add>
+                  </rdg>
+               </app> woods; and many others I could mention. These were the shrines I visited both summer and winter. 
+            </p>
+            
+            <p n="2" change="#wc_0d">
+               <seg n="2a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Baker Farm 2a written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">10</seg>
+                        <seg type="chapterTitle">Baker Farm</seg>
+                        <seg type="paragraph">2a</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">Baker Farm 2a is added in pencil on a partial leaf.</ab>
+                  </note> 
+                  <app xml:id="walc10-app-0018">
+                     <lem>Once it chanced that I stood</lem>
+                     <rdg wit="#wc_0e">Once I <del>found myself <unclear>xxxxx</unclear> by a rainbow—</del> stood</rdg>
+                  </app> in the very abutment of<app xml:id="walc10-app-0019">
+                     <lem>a rainbow’s</lem>
+                     <rdg wit="#wc_0e">
+                        <del>its</del>
+                        <add rendition="pencil">a rainbow’s</add>
+                     </rdg>
+                  </app> arch, which filled the lower stratum of the atmosphere, tinging the grass and leaves around, and dazzling<app xml:id="walc10-app-0020">
+                     <lem>me as if I looked</lem>
+                     <rdg wit="#wc_0e">
+                        <del>my eyes</del>
+                        <add rendition="pencil">me</add> as if I <del>saw</del>
+                        <add rendition="pencil">looked</add>
+                     </rdg>
+                  </app> through colored<app xml:id="walc10-app-0021">
+                     <lem>crystal.</lem>
+                     <rdg wit="#wc_0e">stones. In which <add rendition="pencil">like a dolphin for a short while</add> I lived
+                &amp; moved &amp; had my being</rdg>
+                  </app> It was a lake of rainbow light, in which, for a short while, I lived like a dolphin. If it had lasted
+            longer it might have tinged my employments and life.</seg>
+               
+               <seg n="2b" change="#wc_0d">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Baker Farm 2b written: D; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">10</seg>
+                        <seg type="chapterTitle">Baker Farm</seg>
+                        <seg type="paragraph">2b</seg>
+                        <seg type="written">D</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab>A fair copy was made of only <quote>As I walked
+                on the railroad causeway . . . in the castle of St. Angelo, a resplendent</quote>.</ab>
+                  </note>
+                  As I walked on
+            the railroad causeway, I used to wonder at the halo of light around my shadow, and <app xml:id="walc10-app-0022">
+                     <lem>would fain fancy</lem>
+                     <rdg wit="#wc_0d">fancied </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>fancied</del>
+                        <add rendition="pencil">would fain fancy</add>
+                     </rdg>
+                  </app> myself one of the elect.<app xml:id="walc10-app-0023">
+                     <lem>One who visited me declared</lem>
+                     <rdg wit="#wc_0d">until I heard of another who had observed the same phenomenon <add rendition="pencil">
+                  which is indeed a constant one</add> affecting himself—but even he thought </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>until I heard of another who had observed the same phenomenon, which indeed is a
+                  constant one, affecting himself— but even he thought</del>
+                        <add rendition="pencil">One who visited me declared</add>
+                     </rdg>
+                  </app> that the shadows of some Irishmen before him had no halo<app xml:id="walc10-app-0024">
+                     <lem>about</lem>
+                     <rdg wit="#wc_0d">
+                        <del>before</del>
+                        <add>about</add>
+                     </rdg>
+                  </app> them, that it was only natives that were so distinguished. <name>Benvenuto Cellini</name>
+                  <app xml:id="walc10-app-0025">
+                     <lem>tells us</lem>
+                     <rdg wit="#wc_0d #wc_0e">relates</rdg>
+                  </app> in his memoirs, that, <app xml:id="walc10-app-0026">
+                     <lem>after a certain terrible dream or vision which he had</lem>
+                     <rdg wit="#wc_0d #wc_0e"><!-- [not in ms.]--></rdg>
+                  </app> during his confinement in the <placeName>castle of St. Angelo</placeName>,<app xml:id="walc10-app-0027">
+                     <lem>a resplendent light appeared over the shadow of his head at morning and evening, whether he was in
+                  <placeName>Italy</placeName> or <placeName>France</placeName>, and it was particularly conspicuous
+                when the grass was moist with dew. </lem>
+                     <rdg wit="#wc_0d">in <placeName>Rome</placeName> he had a terrible dream or vision in which certain events
+                were communicated to him which afterward came to pass. “From the very moment that I beheld the
+                phenomenon,” says he, “there appeared, (strange to relate!) a resplendent light over my head, which has
+                displayed itself conspicuously to all that I have thought proper to show it to, but those were very few.
+                This shining light is to be seen in the morning over my shadow till two o’clock in the afternoon, and it
+                appears to the greatest advantage when the grass is moist with dew; it is likewise visible in the
+                evening at sunset. This phenomenon I took notice of when I was at <placeName>Paris</placeName>, because
+                the air is exceedingly clear in that climate, so that I could distinguish it there much plainer than in
+                  <placeName>Italy</placeName>, where mists are much more frequent; but I can still see it even here,
+                and show it to others, though not to the same advantage as in <placeName>France</placeName>.” </rdg>
+                     <rdg wit="#wc_0e">In <placeName>Rome</placeName> he had a terrible dream or vision in which certain events
+                were communicated to him which afterward came to pass. “From the very moment that I beheld the
+                phenomenon,” says he, “there appeared, (strange to relate!) a resplendent</rdg>
+                  </app> This was<app xml:id="walc10-app-0028">
+                     <lem>probably</lem>
+                     <rdg wit="#wc_0d">
+                        <del>no doubt</del>
+                        <del>
+                           <add rendition="pencil">perhaps</add>
+                        </del>
+                        <add rendition="pencil">probably</add>
+                     </rdg>
+                  </app> the same phenomenon <app xml:id="walc10-app-0029">
+                     <lem>to which I have referred,</lem>
+                     <rdg wit="#wc_0d">which I have described,</rdg>
+                  </app> which is especially observed in the morning, <app xml:id="walc10-app-0030">
+                     <lem>but also at other times, and even</lem>
+                     <rdg wit="#wc_0d">
+                        <del>and even</del>
+                        <add>though also</add>
+                     </rdg>
+                  </app> by moonlight. <app xml:id="walc10-app-0031">
+                     <lem>Though a constant one, it is not</lem>
+                     <rdg wit="#wc_0d">
+                        <del>It is quite common though it may not be</del>
+                        <add>Though a constant one it is not</add>
+                     </rdg>
+                  </app> commonly noticed, and, in the case of an excitable imagination like Cellini’s, it would be basis
+            enough for <app xml:id="walc10-app-0032">
+                     <lem>superstition. Beside</lem>
+                     <rdg wit="#wc_0d">his superstition—especially as</rdg>
+                  </app> he tells us that he showed it to very few.<app xml:id="walc10-app-0033">
+                     <lem>But are they not indeed distinguished who are conscious that they are regarded at all?</lem>
+                     <rdg wit="#wc_0d"><!-- [not in ms.]--></rdg>
+                  </app>
+               </seg>
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+            
+            <p n="3" change="#wc_base">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 3 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">3</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>I set out one afternoon to go a-fishing to Fair-Haven, through the woods, to eke out my
+          scanty fare of vegetables. My way led through Pleasant Meadow, an adjunct of the Baker Farm, that retreat of
+          which a poet has since sung, beginning, — <lg>
+                  <l>“Thy entry is a pleasant field,</l>
+                  <l>Which some mossy fruit trees yield</l>
+                  <l>Partly to a ruddy brook,</l>
+                  <l>By gliding musquash undertook,</l>
+                  <l>And mercurial trout,</l>
+                  <l>Darting about.”</l>
+               </lg> I thought of living there before I went to Walden. I “hooked” the apples, leaped the brook, and scared
+          the musquash and the trout. It was one of those afternoons which seem indefinitely long before one, in which
+          many events may happen, a large portion of our natural life, though it was already half spent when I started.
+          By the way there came up a shower, which compelled me to stand half an hour under a pine, piling boughs over
+          my head, and wearing my handkerchief for a shed; and when at length I had made one cast over the
+          pickerel-weed, standing up to my middle in water, I found myself suddenly in the shadow of a cloud, and the
+          thunder began to rumble with such emphasis that I could do no more than listen to it. The gods must be proud,
+          thought I, with such forked flashes to rout a poor unarmed fisherman. So I made haste for shelter to the
+          nearest hut, which stood half a mile from any road, but so much the nearer to the pond, and had long been
+          uninhabited:— <lg>
+                  <l>“And here a poet builded,</l>
+                  <l>In the completed years,</l>
+                  <l>For behold a trivial cabin</l>
+                  <l>That to destruction steers.”</l>
+               </lg> So the Muse fables. But therein, as I found, dwelt now John Field, an Irishman, and his wife, and
+          several children, from the broad-faced boy who assisted his father at his work, and now came running by his
+          side from the bog to escape the rain, to the wrinkled, sibyl-like, cone-headed infant that sat upon its
+          father’s knee as in the palaces of nobles, and looked out from its home in the midst of wet and hunger
+          inquisitively upon the stranger, with the privilege of infancy, not knowing but it was the last of a noble
+          line, and the hope and cynosure of the world, instead of John Field’s poor starveling brat. There we sat
+          together under that part of the roof which leaked the least, while it showered and thundered without. I had
+          sat there many times of old before the ship was built that floated his family to America. An honest,
+          hard-working, but shiftless man plainly was John Field; and his wife, she too was brave to cook so many
+          successive dinners in the recesses of that lofty stove; with round greasy face and bare breast, still thinking
+          to improve her condition one day; with the never absent mop in one hand, and yet no effects of it visible any
+          where. The chickens, which had also taken shelter here from the rain, stalked about the room like members of
+          the family, too humanized methought to roast well. They stood and looked in my eye or pecked at my shoe
+          significantly. Meanwhile my host told me his story, how hard he worked “bogging” for a neighboring farmer,
+          turning up a meadow with a spade or bog hoe at the rate of ten dollars an acre and the use of the land with
+          manure for one year, and his little broad-faced son worked cheerfully at his father’s side the while, not
+          knowing how poor a bargain the latter had made. I tried to help him with my experience, telling him that he
+          was one of my nearest neighbors, and that I too, who came a-fishing here, and looked like a loafer, was
+          getting my living like himself; that I lived in a tight, light, and clean house, which hardly cost more than
+          the annual rent of such a ruin as his commonly amounts to; and how, if he chose, he might in a month or two
+          build himself a palace of his own; that I did not use tea, nor coffee, nor butter, nor milk, nor fresh meat,
+          and so did not have to work to get them; again, as I did not work hard, I did not have to eat hard, and it
+          cost me but a trifle for my food; but as he began with tea, and coffee, and butter, and milk, and beef, he had
+          to work hard to pay for them, and when he had worked hard he had to eat hard again to repair the waste of his
+          system, — and so it was as broad as it was long, indeed it was broader than it was long, for he was
+          discontented and wasted his life into the bargain; and yet he had rated it as a gain in coming to America,
+          that here you could get tea, and coffee, and meat every day. But the only true America is that country where
+          you are at liberty to pursue such a mode of life as may enable you to do without these, and where the state
+          does not endeavor to compel you to sustain the slavery and war and other superfluous expenses which directly
+          or indirectly result from the use of such things. For I purposely talked to him as if he were a philosopher,
+          or desired to be one. I should be glad if all the meadows on the earth were left in a wild state, if that were
+          the consequence of men’s beginning to redeem themselves. A man will not need to study history to find out what
+          is best for his own culture. But alas! the culture of an Irishman is an enterprise to be undertaken with a
+          sort of moral bog hoe. I told him, that as he worked so hard at bogging, he required thick boots and stout
+          clothing, which yet were soon soiled and worn out, but I wore light shoes and thin clothing, which cost not
+          half so much, though he might think that I was dressed like a gentleman (which, however, was not the case,)
+          and in an hour or two, without labor, but as a recreation, I could, if I wished, catch as many fish as I
+          should want for two days, or earn enough money to support me a week. If he and his family would live simply,
+          they might all go a-huckleberrying in the summer for their amusement. John heaved a sigh at this, and his wife
+          stared with arms a-kimbo, and both appeared to be wondering if they had capital enough to begin such a course
+          with, or arithmetic enough to carry it through. It was sailing by dead reckoning to them, and they saw not
+          clearly how to make their port so; therefore I suppose they still take life bravely, after their fashion, face
+          to face, giving it tooth and nail, not having skill to split its massive columns with any fine entering wedge,
+          and rout it in detail;—thinking to deal with it roughly, as one should handle a thistle. But they fight at an
+          overwhelming disadvantage,—living, John Field, alas! without arithmetic, and failing so. </p>
+            
+            <p n="4" change="#wc_base">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 4 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">4</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>“Do you ever fish?” I asked. “Oh yes, I catch a mess now and then when I am lying by;
+          good perch I catch.” “What’s your bait?” “I catch shiners with fishworms, and bait the perch with them.”
+          “You’d better go now, John,” said his wife with glistening and hopeful face; but John demurred. </p>
+            
+            <p n="5" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 5 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+                  <ab>Baker Farm 5 follows three missing leaves (#141-145).
+              <quote>The shower was now over … I asked for a drink</quote> does not appear in the
+            manuscript.</ab>
+               </note>
+               The shower was now over, and a rainbow above the eastern woods promised a fair evening; so
+          I took my departure. When I had got without I asked for a drink, hoping to get a sight of the well bottom, to
+          complete my survey of the premises; but there, alas! are <app xml:id="walc10-app-0034">
+                  <lem>shallows and</lem>
+                  <rdg wit="#wc_0a">shallow</rdg>
+               </app> quicksands, and rope broken <app xml:id="walc10-app-0035">
+                  <lem>withal,</lem>
+                  <rdg wit="#wc_0a"><!-- [not in ms.]--></rdg>
+               </app> and bucket irrecoverable. Meanwhile the right culinary vessel was selected, water was seemingly
+          distilled, <app xml:id="walc10-app-0036">
+                  <lem>and after</lem>
+                  <rdg wit="#wc_0a">and at length, after</rdg>
+               </app> consultation and long delay passed out to the thirsty one,—not yet suffered to cool, not yet to settle.
+          Such gruel sustains life here, I thought; so, shutting my eyes, and excluding the motes by a<app xml:id="walc10-app-0037">
+                  <lem>skillfully directed</lem>
+                  <rdg wit="#wc_0a">skillful</rdg>
+               </app> under-current, I drank to genuine hospitality the heartiest draught I could. I am not squeamish in such
+          cases when manners are concerned. 
+            </p>
+            
+            <p n="6" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 6 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">6</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>  
+               <app xml:id="walc10-app-0038">
+                  <lem wit="#wc_base">As I was leaving the Irishman’s roof after the rain, bending my steps again to the pond,
+              my haste to catch pickerel, wading in retired meadows, in sloughs and bog-holes, in forlorn and savage
+              places, appeared for an instant trivial to me who had been sent to school and college; but as I ran down
+              the hill toward the reddening west, with the rainbow over my shoulder, and some faint tinkling sounds
+              borne to my ear through the cleansed air, from I know not what quarter, my Good Genius seemed to say,—Go
+              fish and hunt far and wide day by day,—farther and wider,—and rest thee by many brooks and hearth-sides
+              without misgiving. Remember thy Creator in the days of thy youth. Rise free from care before the dawn, and
+              seek adventures. Let the noon find thee by other lakes, and the night overtake thee every where at home.
+              There are no larger fields than these, no worthier games than may here be played. Grow wild according to
+              thy nature, like these sedges and brakes, which will never become English hay. Let the thunder rumble;
+              what if it threaten ruin to farmers’ crops? that is not its errand to thee. Take shelter under the cloud,
+              while they flee to carts and sheds. Let not to get a living be thy trade, but thy sport. Enjoy the land,
+              but own it not. Through want of enterprise and faith men are where they are, buying and selling, and
+              spending their lives like serfs.</lem>
+                  <rdg wit="#wc_0a">
+                     <note type="general" resp="#clapper">A: Baker Farm 6 appears as follows.</note>
+                     <add>My haste
+                to catch pickerel wading in retired meadows in slughs and bog holes, in forlorn &amp; savage places
+                seemed for an instant trivial to me who had been sent to school &amp; college but</add> as I ran
+              down the hill to the pond—with the rain-bow over my shoulder—and some slight tinkling sounds borne to my
+              ear through the cleansed air—from I know not what quarter <add>my Genius said—grow wild according to thy
+                nature like these ferns &amp; brakes which endeavor not to become English hay. Let the thunder
+                rumble in thy own tongue—what if it brings ruin to farmers’ crops in season that is not its errand to
+                thee. Take shelter under the cloud while they flee to carts &amp; sheds</add> &amp; I said to
+              myself—Why not live always a rude and frontier life—full of adventures and hard work—learn much—travel
+              much—though it be only through these woods &amp; fields! There is no other country than this—here is
+              the field and the man.—The daily boundaries of life are expanded &amp; dispersed and I see in what
+              field I stand. Roam far and wide—grasp at life and conquer it. Learn much and live. You are really
+              free—stay till late in the night—be unwise and daring. See many men far &amp; near in their fields
+              &amp; cottages before the sun sets—though as if many more were to be seen—Rest not every night in
+              villages nor in the same place. The noblest life is continuous and unintermitting without pauses or
+              waste.</rdg>
+               </app>
+            </p>
+            
+            <p n="7" change="#wc_base">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 7 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">7</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>
+               <lg>
+                  <l>O Baker Farm! </l>
+                  <l>“Landscape where the richest element </l>
+                  <l>Is a little sunshine innocent.” * * </l>
+                  <l>“No one runs to revel </l>
+                  <l>On thy rail-fenced lea.” * * </l>
+                  <l>“Debate with no man hast thou, </l>
+                  <l> With questions art never perplexed, </l>
+                  <l>As tame at the first sight as now, </l>
+                  <l> In thy plain russet gabardine dressed.” </l>
+                  <l>“Come ye who love, </l>
+                  <l> And ye who hate, </l>
+                  <l>Children of the Holy Dove, </l>
+                  <l> And Guy Faux of the state, </l>
+                  <l>And hang conspiracies </l>
+                  <l>From the tough rafters of the trees!”</l>
+               </lg>
+            </p>
+            
+            <p n="8" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 8 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">8</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+                  <ab>Baker Farm 8 is followed by a missing leaf (#149).</ab>
+               </note>
+                Men come<app xml:id="walc10-app-0039">
+                  <lem>tamely</lem>
+                  <rdg wit="#wc_0a">meanly</rdg>
+               </app> home at night only from the next field or street, where their household echoes haunt, and their life
+          pines because it breathes its own breath over again; <app xml:id="walc10-app-0040">
+                  <lem>their shadows morning and evening reach farther than their daily steps. We should</lem>
+                  <rdg wit="#wc_0a">
+                     <del>But we should go beyond our shadow at sunrise, and</del>
+                     <add rendition="pencil">their shadows morning and evening reach farther than their daily steps. We
+                should</add>
+                  </rdg>
+               </app> come home from far, from adventures, and <app xml:id="walc10-app-0041">
+                  <lem>perils,</lem>
+                  <rdg wit="#wc_0a">perils—from enterprises</rdg>
+               </app> and discoveries every day, <app xml:id="walc10-app-0042">
+                  <lem>with new experience and character.</lem>
+                  <rdg wit="#wc_0a"><!-- [not in ms.]--></rdg>
+               </app>
+            </p>
+            
+            <p n="9" change="#wc_base">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Baker Farm 9 [not in manuscript].</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">10</seg>
+                     <seg type="chapterTitle">Baker Farm</seg>
+                     <seg type="paragraph">9</seg>
+                     <anchor type="not-in-MS"/>
+                  </ab>
+               </note>Before I had reached the pond some fresh impulse had brought out John Field, with
+          altered mind, letting go “bogging” ere this sunset. But he, poor man, disturbed only a couple of fins while I
+          was catching a fair string, and he said it was his luck; but when we changed seats in the boat luck changed
+          seats too. Poor John Field!— I trust he does not read this, unless he will improve by it,—thinking to live by
+          some derivative old-country mode in this primitive new country,—to catch perch with shiners. It is good bait
+          sometimes, I allow. With his horizon all his own, yet he a poor man, born to be poor, with his inherited Irish
+          poverty or poor life, his Adam’s grandmother and boggy ways, not to rise in this world, he nor his posterity,
+          till their wading webbed bog-trotting feet get <hi rend="style(italics)">talaria</hi> to their heels.</p>
+         </div>
+      </body>
+  </text>
+</TEI>

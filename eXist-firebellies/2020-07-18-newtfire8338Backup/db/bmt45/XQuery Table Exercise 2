@@ -1,0 +1,22 @@
+xquery version "3.1";
+<html>
+    <head><title>Pokemon Types to Location </title> </head>
+    <body>
+        <table>
+            {
+let $Poke := collection('/db/pokemonMap/pokemon')/pokemon
+let $name := $Poke//typing[@type] ! string() ! tokenize(.,'\s+') [1] => distinct-values()
+for $type in $name
+let $location := $Poke//locations//landmark ! string() ! tokenize (., '\s+') [1] => distinct-values()
+for $landmark in $location
+return 
+
+            <tr>
+                <td>{$type}</td>
+                <td>{$landmark}</td>
+            </tr>
+            }
+            
+</table>
+</body>
+</html>

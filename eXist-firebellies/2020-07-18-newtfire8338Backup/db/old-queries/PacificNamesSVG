@@ -1,0 +1,30 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+(:Coordinate spaced for this SVG is fubared! We need to repair it so it makes a readable graph to compare the number of mentions of places in two files. We also want to put the titles of the poems on the graph in a readable way. We could experiment with axes, directions of the bars, positioning of text titles. :)
+
+let $coll := collection ('/db/pacific/literary') 
+let $TEI := $coll/TEI
+let $barsize:=20
+let $spacing:=5
+let $texts := $coll//text
+
+return
+<g transform="translate(10, 1400)">
+                
+                <line x1="0" y1="0" x2="1000" y2="0" stroke="black" stroke-width="2"/>
+                <!--x-axis-->
+                <line x1="0" y1="0" x2="0" y2="{-($barsize + $spacing)*(50)}"
+                    stroke="black" stroke-width="2"/>
+                <!--y-axis-->
+
+{
+    for $text at $pos in $texts
+    let $countName := count($text//placeName)
+    let $title:= $text/ancestor::TEI/teiHeader//titleStmt/title
+    return
+ 
+ 
+   <rect x="0" y="{-($barsize + $spacing) * $pos}" width="{$countName}" height="{$barsize}" fill="red"/>
+}
+</g>
+    

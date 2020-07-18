@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema_v2.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../tv-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><root>
+    <head>
+        <episode>FEAR ITSELF</episode>
+        <writer>Dwayne McDuffie</writer>
+        <director>Michael Chang</director>
+        <storyboard>Joaquim Dos Santos, Michael Goguen, Steve Jones, Shaunt Nigoghossian</storyboard>
+        <animation>Lotto Animation</animation>
+        <source>https://teentitans.fandom.com/wiki/Fear_Itself_(Transcript)</source>
+    </head>
+    <characterList>
+        <charList type="recurring" subtype="villain" id="ControlFreak">Control Freak</charList>
+        <charList type="recurring" subtype="titan" id="BeastBoy">Beast Boy</charList>
+        <charList type="nonrecurring" id="Clerk">Clerk</charList>
+        <charList type="recurring" subtype="titan" id="Raven">Raven</charList>
+        <charList type="recurring" subtype="titan" id="Cyborg">Cyborg</charList>
+        <charList type="recurring" subtype="titan" id="Robin">Robin</charList>
+        <charList type="nonrecurring" id="Variouscandies">Various candies</charList>
+        <charList type="recurring" subtype="titan" id="Starfire">Starfire</charList>
+        <charList type="nonrecurring" id="Voice">Voice</charList>
+        <charList type="nonrecurring" id="Toymonkey">Toy monkey</charList>
+    </characterList>
+    <locationList>
+        <locList id="tower" lat="37.8002" lon="-122.5004">Titans' Tower</locList>
+        <locList id="video" lat="37.7587" lon="-122.4192">A Video Game Store in Jump City</locList>
+        <locList id="evidroom" lat="37.8002" lon="-122.5004">TT - The Evidence Room</locList>
+        <locList id="rroom" lat="37.8002" lon="-122.5004">TT - Raven's Room</locList>
+        <locList id="rbroom" lat="37.8002" lon="-122.5004">TT - Robin's Room</locList>
+        <locList id="croom" lat="37.8002" lon="-122.5004">TT - Cyborg's Room</locList>
+        <locList id="sroom" lat="37.8002" lon="-122.5004">TT - Starfire's Room</locList>
+        <locList id="bbroom" lat="37.8002" lon="-122.5004">TT - Beast Boy's Room</locList>
+        <locList id="hall" lat="37.8002" lon="-122.5004">TT - Hall</locList>
+        <locList id="basement" lat="37.8002" lon="-122.5004">TT - Basement</locList>
+        <locList id="elevator" lat="37.8002" lon="-122.5004">TT - Elevator</locList>
+    </locationList>
+    <body>
+        <act n="0">
+            <title>PROLOGUE</title>
+
+<sd><setNote shot="yes">Opening shot: the night sky, filled with dark storm clouds and flashes of lightning. Tilt down to the exterior of <location>a video store</location> in Jump City; a crowd of panicking customers bursts out and breaks for cover.</setNote> Inside, a clerk screams and backs across the floor. Some large thing with many long, sparking appendages rears up before her, causing her to stumble down, and the camera cuts to behind her to show these as coaxial cables. Tilt up to reveal the main body, a large television set whose static-filled screen frames an evilly grinning face with narrowed red eyes.</sd>
+
+<sd>It brings two of the cable ends together, striking an arc, and leans toward the imperiled young woman; she cries out and shields her face. Now we see a close-up of a remote control, its front end fashioned into a menacing creature's head, held in someone's hand. The press of a button stops the big screen in its tracks, wipes out the static, and leaves just a blank expression on the face. Pan to the remote's user, standing atop the shelves near a wall of video screens, and cut to a close-up. <charDesc ref="ControlFreak">Fat, long straggly hair, dressed after the fashion of Obi-Wan Kenobi in Star Wars, a dark gray overcoat topping off the ensemble: this is <char ref="ControlFreak">Control Freak</char>.</charDesc></sd>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> Okay. Either you admit that Warp Trek Five, which reunited the entire original cast of the classic TV series, deserved to be on your "Favorite Rentals" list, or...</sp>
+
+<sd>When he says the movie name, he points the remote at the screens and brings up an image of a green-skinned starship crewman to make his point. After he finishes the line, he aims the device toward the o.c. television monster; it comes back to life. The clerk scuttles back toward the candy counter.</sd>
+
+<sp><spkr ref="Clerk">Clerk</spkr> Please! I-I don't even know what Warp Trek is!</sp>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> And that, my little tribble, is why you must be destroyed!</sp>
+
+            <sd>Another button pressed; the screen roars, strikes sparks from two cables, and reaches toward her. She screams and dives over the counter to get out of striking range. Close-up of her, behind the display and looking up fearfully; tilt up to show the thing floating steadily toward her hiding place. Before it can get to her, though, a sonic cannon blast drives it off to one side. <char ref="ControlFreak">Control Freak</char> covers his face as dust flies back from the area of its collision with the far wall. He looks up with a gasp; cut to inside the entrance, where the Titans have arrived on the scene and <action mrkr="Cyborg" with="all" move="1" place="video" timestamp="2004-01-10T00:03:30"/><char ref="Cyborg">Cyborg</char> has his weapon at the ready. Pan slowly across the group as he disarms.</sd>
+
+[Animation goof: The cannon is on his left arm in this shot.]
+
+<sd>The overweight movie nut hops nimbly from one shelf to the next, approaching them.</sd>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> Well, well, well. If it isn't my old arch-nemesis...ses...the Teen Titans!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Um, yeah <sd>to <char ref="Cyborg">Cyborg</char>; question mark by head</sd> Who is this guy?</sp>
+
+<sd><char ref="Cyborg">Cyborg</char> shrugs, equally puzzled, and both get their answer when the screens all come up showing an image of <char ref="ControlFreak">Control Freak</char> at the click of his remote. Close-up of one.</sd>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> <sd>on all screens</sd> I am the master of monsters <sd>Pull back to frame more of the wall.</sd> I am your darkest nightmares come to life <sd>Pull back again.</sd> I am...<char ref="ControlFreak">Control Freak</char>!</sp>
+
+<sd>The genuine article stands up into view on the end of this and produces applause and clapping with the right button.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>unimpressed</sd> A couch potato with a souped-up remote. I'm petrified.</sp>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> You will be <sd>approaches the camera</sd> You will be.</sp>
+
+            <sd>Pull back. He laughs and fires up the controller; near <action mrkr="Raven" with="all" move="1" place="video" timestamp="2004-01-10T00:03:30"/><char ref="Raven">Raven</char>, a video drop box grows considerably and turns its deposit slot into a toothy mouth. She gasps and backs up from its expanding shadow as it growls in a very rusty manner. Close-up of her wide-eyed, startled face, zooming in slowly, and fade to black.</sd>
+
+<sd>Fade to black.</sd>
+
+
+<cue>OPENING THEME</cue>
+
+        </act>
+        <act n="1">
+            <title>ACT ONE</title>
+
+<sd>Opening shot: a close-up of <char ref="Raven">Raven</char>, looking just as she did before the theme. Pull back to the sound of the drop box's growling, then cut to it as it stomps toward her. <char ref="Cyborg">Cyborg</char> leaps in and hits the thing broadside with a flying shoulder to knock it away, but it soon recovers and locks up with him.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Don't worry, <char ref="Raven">Raven</char> <sd>picks it up</sd> I can drop the drop box!</sp>
+
+<sd>He tosses it across the store; it fetches up against several sets of shelves, and he leaps in with a yell to do a little old-school clobbering.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> Get his remote</sp>
+
+            <sd>He dashes across, followed by <action mrkr="Starfire" with="all" move="1" place="video" timestamp="2004-01-10T00:03:30"/><char ref="Starfire">Starfire</char> and <action mrkr="BeastBoy" with="all" move="1" place="video" timestamp="2004-01-10T00:03:30"/><char ref="BeastBoy">Beast Boy</char>.</sd>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> Show's not over, Titans. And if you thought Part One was scary, just wait for the sequels!</sp>
+
+<sd>He aims his remote at the two cash registers; as the cowering clerk cries out in fear, evil faces appear on the price displays and the handheld scanners float up of their own accord. The Titans, save <char ref="Cyborg">Cyborg</char>, look from here to <char ref="ControlFreak">Control Freak</char>, who has dropped to the floor and now brings a set of shelves to life. The video boxes on the top level are red while those below are white, and most of them fall away to leave the unit with two eyes and a snarling mouth. It moves in.</sd>
+
+<sd>Now the four look elsewhere and see the portly enemy twirling around the floor. Another click, this one with the remote aimed under his upraised leg, and the camera shifts to a large cardboard cutout of an alien in samurai armor. Its eyes glow red as it brings the blade back for a swing, to the sound of the geek's laughter; cut to the four bewildered Titans, then to <char ref="ControlFreak">Control Freak</char>, who waves derisively at them.</sd>
+
+            <sd>Pull back. The two-dimensional warrior and <action mrkr="Robin" with="all" move="1" place="video" timestamp="2004-01-10T00:03:30"/><char ref="Robin">Robin</char> face off, and as the former charges, the latter brings his fighting staff out, extends it, and leaps away. He comes down behind it and sends it flying with a well-placed swing; in an instant, though, it stretches its body and strikes at him like a snake. <char ref="Robin">Robin</char> is sent flying across the room.</sd>
+
+<sd>A stream of coins lances through the area like a machine-gun fusillade. Here comes <char ref="Starfire">Starfire</char>, swooping through with the two cash registers in hot pursuit and spitting their change at her. The chase swings low down one aisle as <char ref="BeastBoy">Beast Boy</char> backs into view at its far end. The mutated set of shelves is bearing down on him here. In no time flat, he has transformed into a roaring tyrannosaurus rex; the unit screams shrilly, all its "teeth" and "eyes" falling out, and he tears into it.</sd>
+
+<sd>Snap to black, which immediately resolves into <char ref="Raven">Raven</char>'s outfit as she skids backward away from the camera. <char ref="ControlFreak">Control Freak</char> approaches at a leisurely pace.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> You like bad movies, right?</sp>
+
+<sd>She levitates several scattered videos and propels them toward him. His first response is to work the remote, bringing them to a stop in midair.</sd>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> Yeah, but they like you!</sp>
+
+<sd>He sends them right back at her; they line up into an unbroken string, like a group of dominoes laid end to end, and wrap her up from shoulders to waist. <char ref="Cyborg">Cyborg</char>, meanwhile, has hoisted up the shelving unit <char ref="BeastBoy">Beast Boy</char> fought, its "face" is back together, and slams it to the floor. He wipes his hands smugly, but his mood quickly changes to one of surprise.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Huh?</sp>
+
+<sd><char ref="ControlFreak">Control Freak</char>, once again spinning across the floor, hits a button. Behind <char ref="Cyborg">Cyborg</char>, the candy counter is affected; all the goodies leap off the shelves and come snarling after him.</sd>
+
+<sp><spkr ref="Variouscandies">Various candies</spkr> Eat him!...Who's delicious now, big man?</sp>
+
+<sd>The sugary horde leaps at him and attaches itself all over his body; he cries out and tries to back away.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Bad candy, bad candy! Get off! Hey, hey! Stop that! Stop! That's not yours!</sp>
+
+<sd>The cash registers rocket across, spilling bills here and there, with <char ref="Starfire">Starfire</char> now chasing them and firing starbolts. She shoots one down with ease, but the other takes evasive action and slows down to fall in behind her. It then starts to fire off coins; she is thrown briefly off balance, but gets herself under control and bounces off a wall straight back at the thing. One point-blank shot puts the crazed piece of retail hardware out of action for good.</sd>
+
+<sd>Cut to floor level. Her boots touch down amid the clinking change and fluttering currency; tilt up to frame the rest of her as she picks up a coin and looks at it with a curious smile. An instant later, one of the big-screen monster's cables whips into view, wraps her up, and gives her a shock that forces a loud squeal out of her. She is quickly hauled toward the face as <char ref="Robin">Robin</char> backs into view, trading hits with the cardboard samurai-now back to original humanoid form. It goes into a new charge, and he gets a birdarang ready. Snap to black, with a brilliant white streak slashing across the screen: the weapon finding its mark, then to him coming down from a leap. Behind him, the figure has stopped in its tracks. He runs o.c.; after a moment, it falls apart, having been split down the middle by his throw.</sd>
+
+<sd>That set of deranged shelves slides backward into view. Its "face" shows how scared it is, and for good reason, as we see when <char ref="BeastBoy">Beast Boy</char> charges in as a bull and gores it. The thing skids farther and crashes into other shelves, throwing up a curtain of dust. Out comes the green Titan, back in human form and badly dazed from the collision. He staggers a bit, the camera panning to follow, and stops when another cardboard cutout is partially in view. This snaps his brain back into its groove; he stares silently for a second and them flails his arms with a high-pitched scream.</sd>
+
+<sd>Cut to his perspective of the display's base, which shows a movie title in red letters that look as if painted in blood: Wicked Scary. Above this are several tentacles issuing from under the hem of a long, tattered robe. Tilt up to show the rest of the figure; very tall, hood up, no facial features visible within except for one glowing red pinpoint of an eye.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Dude <sd>Back to him.</sd> Wicked Scary is out on video?</sp>
+
+<sd>Stars appear in his eyes; pull back a bit as <char ref="ControlFreak">Control Freak</char> comes up next to him, his eyes doing likewise.</sd>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> I know <sd>as hearts float up around him</sd> Director's cut, digitally remastered, alternate ending, it's great.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Cool!</sp>
+
+<sd>The happy moment ends when he realizes that this man is actually an enemy.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Not cool.</sp>
+
+<sd><char ref="ControlFreak">Control Freak</char> grins nastily and fires up his remote. Cut to the base of the display again, tilting up as it comes to life. Those tentacles flash toward <char ref="BeastBoy">Beast Boy</char>, who lets off a terrified scream. <char ref="Raven">Raven</char> is still bound by the videos she tried to sling at the foe. Her legs are free, and she backs up as a swarm of cassettes floats toward her; each has long loops of tape hanging down, and the reels have become red eyes. Those loops snap out and bind <char ref="Raven">Raven</char> from head to toe. She starts to topple backward, then gathers herself and breaks free with a mighty burst of her powers.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> You don't scare me.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>running across</sd> Look out, he'll eat your brains!</sp>
+
+<sd>The Wicked Scary cutout goes after him; a moment later, more tape strands from the flying cassettes lash toward her and she dives away. Tilt down to floor level, where <char ref="Cyborg">Cyborg</char> crawls along the carpet as the mad candies chew on him.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Ow, ow, ow, ow, OW <sd>He stands up.</sd> ALL RIGHT! <sd>tears several candies loose</sd> If y'all are biting <char ref="Cyborg">Cyborg</char>, <char ref="Cyborg">Cyborg</char>'s biting back!</sp>
+
+<sd>He shovels the handfuls into his mouth, chews happily, and swallows.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Mmm-mmm! Never knew evil tasted so good.</sp>
+
+<sd>The others scream in fear, detach themselves from his body, and beat a hasty retreat. As he stands there grinning, a loud rumble makes itself heard from within: what he just ate has disagreed with him violently. His face goes slack, then green and sweaty.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Oh, boy.</sp>
+
+<sd><setNote shot="yes">The exterior of <location>the video store</location>, seen in a long shot.</setNote> He rushes out and vomits into the first trash can he finds. Inside, <char ref="Starfire">Starfire</char> is still held fast in one of the big-screen monster's snaking cables, but <char ref="Robin">Robin</char>'s birdarang flashes across and cuts her loose before sticking in the ceiling. He rushes up, staff ready to swing, and lands a thundering blow that would shatter the screen of any normal television set. This one just gets knocked backward, hard, and crashes into the wall. <char ref="Robin">Robin</char> leaps and catches the still-bound <char ref="Starfire">Starfire</char>, whose cables fall off when they both touch down.</sd>
+
+<sd>He looks across the store and sees <char ref="Raven">Raven</char> and <char ref="BeastBoy">Beast Boy</char> backing toward each other from their respective threats. Behind <char ref="Robin">Robin</char>, <char ref="ControlFreak">Control Freak</char>'s laughter makes itself heard; he moves aside and the camera zooms in a bit to show the villain standing in the aisle. A button pressed, and the insane television moves back into the free-for-all. A swinging cable forces <char ref="Robin">Robin</char> and <char ref="Starfire">Starfire</char> to dive in opposite directions; when he lands, he looks up at the ceiling. Close-up of one of the fire sprinkler heads, then an extreme close-up. The big screen closes in, and <char ref="Robin">Robin</char> makes up his mind and brings out two birdarangs. Making a huge leap that takes him higher than any regular pair of legs can carry a person, he lets them fly; they weave all over the place and slice through all the sprinklers.</sd>
+
+<sd>Water gushes down from the broken pipes. The attacking cassettes yield under the deluge and tumble to the floor; the cardboard display softens and crumples. <char ref="BeastBoy">Beast Boy</char> laughs, <char ref="Raven">Raven</char> smiles, and the clerk peeks up over the counter. Last to go is the television; a big drop of sweat slides down the edge of the screen, the static winks out, and the face becomes very uneasy. Sparks crackle from the shorting circuits as it topples backward and crashes to the floor at <char ref="ControlFreak">Control Freak</char>'s feet. He voices a strangled cry.</sd>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> My remote <sd>Waist level; he punches buttons uselessly.</sd> I can't live without my remote</sp>
+
+<sd><char ref="Robin">Robin</char> takes it away and grabs a fistful of shirt.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Ever think maybe you watch too much TV?</sp>
+
+<sp><spkr ref="ControlFreak">Control Freak</spkr> This isn't over! You hear me? This isn't over</sp>
+
+<sd><char ref="Cyborg">Cyborg</char> has returned now.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Looks pretty over to me.</sp>
+
+<sd><char ref="BeastBoy">Beast Boy</char> waves his arms excitedly as <char ref="Cyborg">Cyborg</char> staggers a bit, moaning and clutching his gut.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Guys!</sp>
+
+<sd>He ducks o.c.; video boxes fly up into view, he is rummaging on the floor, and <char ref="Cyborg">Cyborg</char>'s stomach rumbles anew. The Titan who overindulged claps a hand to his mouth and runs back out to vomit again. <char ref="BeastBoy">Beast Boy</char> stands up, holding a copy of Wicked Scary. The hooded creature is on the cover, as are a couple of terrified people.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Check it out<sd>holds it toward the camera</sd> Movie night!</sp>
+
+<sd>Cut to the counter, where the clerk ha not yet gotten to her feet. He sets the video down and starts to fish around in the pouches of his belt. <char ref="Raven">Raven</char> stands behind him, her posture and face showing just how little she thinks of the whole run-in, and <char ref="Robin">Robin</char> and <char ref="Starfire">Starfire</char> drag <char ref="ControlFreak">Control Freak</char> away.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Um, I-I know I've got my rental card somewhere.</sp>
+
+<sd>He removes one boot and shakes it to see if the card is stuck in there. Close-up of him; the video is thrust into view toward him.</sd>
+
+<sp><spkr ref="Clerk">Clerk</spkr> <sd>from o.c.</sd> Just take it!</sp>
+
+            <sd>He blinks bemusedly down at the offering. Dissolve to a pan across a room whose walls displays a wealth of objects connected with the Titans' previous adventures, and stop on <action mrkr="Robin" with="none" move="2" place="evidroom" timestamp="2004-01-10T00:03:35"/><char ref="Robin">Robin</char> at the far end. We now see glass cases in the center of the floor, holding more items. This is <location>the evidence room</location> of <location>Titans Tower</location>. Close-up of a small pedestal; his shadow falls over it, and he reaches into view to set <char ref="ControlFreak">Control Freak</char>'s remote atop it. A burst of feedback is heard over an intercom speaker, shaking him out of his brief reverie.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>over the intercom</sd> <char ref="Robin">Robin</char>! Emergency! Get up here, now!</sp>
+
+<sd>He runs for the door. Cut to inside <location>the operations center</location> door, which opens to admit him. Rain is heard outside.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Report!</sp>
+
+            <sd>Cut to behind him. <action mrkr="BeastBoy" with="all" move="2" place="tower" timestamp="2004-01-10T00:03:40"/><char ref="BeastBoy">Beast Boy</char> stands on the far side of the coffee table, while the other three Titans are on the couch.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> What's the problem?</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>holds up the video</sd> The problem is, it's showtime, and you're not in your seat.</sp>
+
+            <sd><action mrkr="Robin" with="all" move="3" place="tower" timestamp="2004-01-10T00:03:40"/><char ref="Robin">Robin</char> steams at having been called up for something as trivial as this, and a vein throbs in his forehead. As <action mrkr="Raven" with="all" move="2" place="tower" timestamp="2004-01-10T00:03:40"/><char ref="Raven">Raven</char> reads a book, <action mrkr="Starfire" with="all" move="2" place="tower" timestamp="2004-01-10T00:03:40"/><char ref="Starfire">Starfire</char> holds a large bowl of candy.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <char ref="Cyborg">Cyborg</char> <sd>offers it to him</sd> You are certain you do not desire unhealthy sugar candies</sp>
+
+<sd>He recoils and moans weakly.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Make it go away..</sp>
+
+<sd><char ref="Robin">Robin</char> vaults onto the couch.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Ladies and gentlemen, get ready for the scariest night of your lives <sd>pops up here and there around the others</sd> Maybe <char ref="ControlFreak">Control Freak</char>'s monsters didn't scare you, but this movie is going to freak you out.</sp>
+
+<sd>The last word puts him right next to <char ref="Raven">Raven</char>, who has not looked up from her reading.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Whatever.</sp>
+
+<sd>Sight gag: his mouth falls half off, as if it were a suspended sign with one end loose, and then drops away entirely to shatter on the floor. Cut to <char ref="Robin">Robin</char> and <char ref="Starfire">Starfire</char>.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Can't be any creepier than the documentary on hot dogs <char ref="Starfire">Starfire</char> made us watch</sp>
+
+            <sd>Pan to <action mrkr="Cyborg" with="all" move="2" place="tower" timestamp="2004-01-10T00:03:40"/><char ref="Cyborg">Cyborg</char>.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> It was fascinating! I had no idea that <location>Earth</location> people ate so many pigs, and insects.</sp>
+
+<sd>Her words set off a new wave of indigestion in <char ref="Cyborg">Cyborg</char>'s gut; his face goes green, and he hangs over the back of the couch to vomit once more.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Yeah, yeah, bugs and hot dogs, big deal <sd>picks up the video again</sd> This movie is supposed to be cursed <sd>He lets go; it spins in midair.</sd> When people watch it, strange things happen <sd>leans toward the camera; his face goes red and creepy</sd> evil things.</sp>
+
+<sd>His complexion returns to normal as he backs off and laughs maniacally. Lightning cracks out through the windows behind him. Not a bit of this has changed <char ref="Raven">Raven</char>'s demeanor or made her close the book.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Just start the movie.</sp>
+
+<sd><char ref="BeastBoy">Beast Boy</char>'s face falls and a vein throbs in his temple as he pulls out the television remote. Pan from him to the window/screen, which fills with static and blacks out. The movie's title fades in, appearing as it did on the box; this view dissolves to a shot of <char ref="Raven">Raven</char> and <char ref="Robin">Robin</char>, staring wide-eyed with mouths agape straight ahead toward the screen. The lights have been shut off, so that the only illumination is from the screen and the night sky outside. Pan from them to <char ref="Starfire">Starfire</char> and <char ref="Cyborg">Cyborg</char>, in that same stunned silence, to the sound of low, unearthly chuckling from the speakers. <char ref="Starfire">Starfire</char> has grabbed the end of <char ref="Robin">Robin</char>'s cape and is huddled behind it.</sd>
+
+<sd><setNote shot="no">Dissolve to <location>the exterior of the Tower</location>, standing dark and ominous under the raging thunderstorm, then cut to a close-up of the screen and zoom in slowly.</setNote> A woman backs up in the approaching shadow of the tentacled creature seen on the box and screams in pure terror. Snap to black, against which the word "END" fades into view in big red letters, then cut to <char ref="Cyborg">Cyborg</char>, <char ref="Starfire">Starfire</char>, and <char ref="Robin">Robin</char>. They are still frozen from the sheer horror of what they have just witnessed; <char ref="Starfire">Starfire</char>'s eyes are now shut tight. <char ref="BeastBoy">Beast Boy</char> carefully peeks up from behind the couch, he has been hiding here the entire time.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Is it over?</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> I dare not open my eyes to find out.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Now I'm really sick to my stomach.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> I've fought psychotic villains, robot commandos, and giant oozing monsters--</sp>
+
+<sd>Close-up of <char ref="Raven">Raven</char>. Her hood is down, but she quickly composes herself, puts it up, and turns away as <char ref="Robin">Robin</char> continues.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> --but THAT is the scariest thing I have ever seen.</sp>
+
+<sd>Back to the other four. They trade wide-eyed stares for a long, tense moment, and then break out in exuberant laughter and chatter.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Did I tell you or did I tell you?</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Thrilling, <char ref="BeastBoy">Beast Boy</char>! It was wonderfully horrible</sp>
+
+<sd>Close-up of the back of <char ref="Raven">Raven</char>'s head.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> Yeah, when she went into the basement-</sp>
+
+<sd>She turns partway back on the next line.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> --and it was right behind her and she turned and-</sp>
+
+<sd>Back to the four.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> I was freaking out <sd>grinning</sd> I wanted to turn it off.</sp>
+
+<sd><char ref="Raven">Raven</char> turns the rest of the way back and puts her hood down as <char ref="BeastBoy">Beast Boy</char> leans over to her.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> So...come on, <char ref="Raven">Raven</char>, admit it. You were totally scared</sp>
+
+<sd>Zoom in on her.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> I don't do fear.</sp>
+
+            <sd><setNote shot="no">Dissolve to <location>the exterior of the still-dark Tower</location>, seen from ground level as more rain and thunder stream down</setNote>, then cut to inside <location>the hall</location>. Sheets of water pour over the windows. From here, cut to <location>the empty stairway</location>, then to a closed door. Zoom in and dissolve to an overhead view of <action mrkr="Raven" with="none" move="3" place="rroom" timestamp="2004-01-10T00:03:50"/><char ref="Raven">Raven</char>, asleep in bed: the entrance we just saw was to <location><char ref="Raven">Raven</char>'s room</location>. The camera zooms again and rotates slightly before a flash of lightning shows a profile view of her, sitting up with a sharp gasp. She has taken off her cloak to sleep.</sd>
+
+<sd>She looks out the window, then across the room. Cut to her perspective, panning slowly from one corner to the other, then to her four-eyed drama masks seen in "Nevermore," and finally to a bookend statue that looks like an enlarged copy of the small black birds in that same episode. After this last item, we see her in a long shot, panning slowly.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Maybe I should consider redecorating.</sp>
+
+<sd>Close-up: she looks out uneasily for a moment more and then settles back down to sleep. All is quiet until a piercing scream rips through the air and snaps her bolt upright again; it sounds just like the one in the final scene of Wicked Scary. Cut to <location>the operations center</location>'s side door, where she emerges with her cloak back on.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Who screamed?</sp>
+
+            <sd><action mrkr="Robin" with="none" move="4" place="rbroom" timestamp="2004-01-10T00:03:50"/><action mrkr="Cyborg" with="none" move="3" place="croom" timestamp="2004-01-10T00:03:50"/><action mrkr="Starfire" with="none" move="3" place="sroom" timestamp="2004-01-10T00:03:50"/><action mrkr="BeastBoy" with="none" move="3" place="bbroom" timestamp="2004-01-10T00:03:50"/>The other four Titans have gathered there and switched the lights back on.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Sounded like something from the movie. Did we leave the TV on?</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> We did not <sd>picks up the video</sd> And the movie is right here</sp>
+
+<sd>Out go the lights.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Okay. That's creepy.</sp>
+
+            <sd>He extends a small flashlight from his shoulder and turns it on. Swiveling slowly in place, he lets the beam play over <location>the kitchen</location>, from counter to tables. <action mrkr="Robin" with="all" move="5" place="tower" timestamp="2004-01-10T00:04:00"/><char ref="Robin">Robin</char> steps into the circle of light.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> The storm. Probably just tripped a circuit breaker.</sp>
+
+            <sd>A tentacle reaches into view to touch his shoulder. Giving it only a raised eyebrow, he says nothing else as <action mrkr="Starfire" with="all" move="4" place="tower" timestamp="2004-01-10T00:04:00"/><char ref="Starfire">Starfire</char>, <action mrkr="Cyborg" with="all" move="4" place="tower" timestamp="2004-01-10T00:04:00"/><char ref="Cyborg">Cyborg</char>, and <action mrkr="Raven" with="all" move="4" place="tower" timestamp="2004-01-10T00:04:00"/><char ref="Raven">Raven</char> cry out; now he smiles.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Okay, <char ref="BeastBoy">Beast Boy</char>, you got us <sd>pushes the tentacle off</sd> Good one.</sp>
+
+            <sd>The three onlookers remain stock-still as <action mrkr="BeastBoy" with="all" move="4" place="tower" timestamp="2004-01-10T00:04:00"/><char ref="BeastBoy">Beast Boy</char> leans into view next to them.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Uh...dude?</sp>
+
+<sd>Now both of <char ref="Robin">the Boy Wonder</char>'s eyebrows are all the way up as he turns his attention back toward the source of that touch. <char ref="Cyborg">Cyborg</char>'s flash moves that way, the camera following, and rests on the robed one-eyed terror now standing in <location>the operations center</location>. It rips away the garments to show all of itself: blue-gray skin, mouths all over its body, long tangled hair, two normal arms in addition to the tentacles, and a large red eye to either side of the one seen under its hood. It backs up and lets off a primal roar; the Titans stare, their feet nailed to the floor with terror, as the camera pulls back slowly. Fade to black.</sd>
+        </act>
+        <act n="2">
+            <title>ACT TWO</title>
+
+<sd>Opening shot: the petrified Titans in "Super Deformed" style. Zoom in slowly and cut to behind them, drawn normally and looking up at the movie monster. The couch is grabbed in one long tentacle and tossed aside with ease; now many others lash out and force the five to scatter. <char ref="Robin">Robin</char> tries to deliver a kick, but gets knocked backward before he can drive it home. He tumbles past <char ref="BeastBoy">Beast Boy</char>, who becomes a T-rex and roars in the creature's face. Its answering yell scares him so badly that he changes into a cat and runs off with a startled, little yowl.</sd>
+
+<sd>Now the thing smiles broadly from all its mouths, but its mood goes sour when a starbolt blasts into its back. It turns and finds <char ref="Starfire">Starfire</char> floating in midair; she throws several more shots, which it deflects with one arm before snaking a tentacle up and seizing her. She is reeled in with a scream, at which point <char ref="Cyborg">Cyborg</char> jumps up to wrestle with the monster. As both Titans struggle against it, <char ref="Raven">Raven</char> steps up.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Azarath Metrion Zinth--</sp>
+
+<sd>Lightning cracks out as she cuts herself off sharply. Her hands, which should be black with her powers by this point in the incantation, are still completely normal in appearance. She regards them with considerable surprise.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> My powers!</sp>
+
+<sd><char ref="Robin">Robin</char> rushes in to give <char ref="Starfire">Starfire</char> and <char ref="Cyborg">Cyborg</char> some backup and is seized; <char ref="BeastBoy">Beast Boy</char>, as a falcon, swoops along next and dodges a swipe. He turns into an octopus just before reaching the three-eyed face and wraps all eight of his own tentacles around it. <char ref="Robin">Robin</char> and <char ref="Cyborg">Cyborg</char> redouble their assaults on the limbs that hold them, and <char ref="Raven">Raven</char> begins a charge. It is cut short when a tentacle slams into her, driving her back next to <location>the stairs</location> that lead up to the side door. The monster disappears without any warning and leaves the other four Titans tumbling to the floor in a heap. Cut to normal eye level, putting the group off the bottom edge of the screen; a cry is heard from <char ref="Starfire">Starfire</char>.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>from o.c.</sd> Someone's claws are on my grebnaks!</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>from o.c.</sd> Heh...my bad.</sp>
+
+<sd>He stands up in human form, whatever form he had taken, some part of it touched her in the wrong place, and the other three Titans in the pile straighten up as well during the next two lines. They are thoroughly bewildered by this turn of events. <char ref="Cyborg">Cyborg</char>'s shoulder flashlight has retracted.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> There was a monster here, right?</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> But where did it go?</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> And from where did it come?</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>freaking out a bit</sd> Hel-lo <sd>holds up the video</sd> Isn't it obvious? The movie's curse! Watching it opened a portal to another dimension. The monster came through the portal, now it's gong to hunt us down and eat us! And I'm probably delicious!</sp>
+
+<sd>As he describes the situation, the following things happen. One, a word balloon appears by his head, showing the creature reaching out from a television set toward two panicked viewers. Two, the entire background goes black and a doorway opens, showing a wall of flame beyond, to admit the thing. Three, it moves toward the camera until its image fills the screen, then turns off to one side. Four, <char ref="BeastBoy">Beast Boy</char> stands up against the black field and the red eyes flare up behind him, followed by the advancing head with main mouth open wide. Five, he pulls at his own face to distort it a bit.</sd>
+
+<sd>After he finishes, cut to <char ref="Cyborg">Cyborg</char>, <char ref="Starfire">Starfire</char>, and <char ref="Robin">Robin</char>. They are having big trouble swallowing even one word of this theory.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Or...</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> <char ref="ControlFreak">Control Freak</char> must have escaped and come to <location>the Tower</location> to get his remote, and take his revenge</sp>
+
+<sd><char ref="Starfire">Starfire</char> cries out and steps aside; <char ref="Raven">Raven</char> is behind her.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> But that doesn't explain why my powers aren't working.</sp>
+
+<sd>Letterbox, top half of the screen: silhouettes of the five Titans stand in <location>the operations center</location>.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> If that remote can turn candy evil, who knows what else it can do</sp>
+
+<sd>Fullscreen.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Whatever's going on, we need to get to the bottom of it. Split up and search <location>the Tower</location>!</sp>
+
+<sd>All but <char ref="BeastBoy">Beast Boy</char> scatter. He turns into an octopus again and yanks them back, then resumes human form.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Split up? Split up? <sd>leans to each Titan and pulls <char ref="Raven">Raven</char>'s hood down</sd> Did you not see the movie? When you split up, the monster hunts you down one at a time, starting with the good-looking comic relief guy <sd>grabs <char ref="Robin">Robin</char>'s tunic</sd> Me!</sp>
+
+<sd>He shudders and curls himself around the shoulders of the leader, who struggles to pull him off during the next line.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Get a grip, <char ref="BeastBoy">Beast Boy</char>! The monster's not going to eat anybody.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> He's right. There's nothing to be afraid of.</sp>
+
+<sd>A violent lightning strike throws its glare over her and makes everyone face the windows for the next bolt. Dissolve to <location>the hall</location>; <char ref="Cyborg">Cyborg</char>'s flashlight beam marks his approach from around a corner, and he leads the Titans along the passage. <char ref="BeastBoy">Beast Boy</char> brings up the rear and keeps looking back the way they came. As they pass the stairs, a small voice floats up to them.</sd>
+
+<sp><spkr ref="Voice">Voice</spkr> <sd>drawn-out</sd> Help! Help me!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> This way!</sp>
+
+<sd>He moves off. Snap to black, which resolves into the interior of <location><char ref="BeastBoy">Beast Boy</char>'s room</location> as the door slides open and the group peers in. The flash roves across the pigsty that is the green goofball's living space and stops on a closed door.</sd>
+
+<sp><spkr ref="Voice">Voice</spkr> Help me!</sp>
+
+            <sd><action mrkr="Robin" with="all" move="6" place="bbroom" timestamp="2004-01-10T00:04:10"/><char ref="Robin">Robin</char> steps into the room, moves toward the door, and wraps his fingers around its handle. He braces himself as <action mrkr="Cyborg" with="all" move="5" place="bbroom" timestamp="2004-01-10T00:04:10"/><action mrkr="Starfire" with="all" move="5" place="bbroom" timestamp="2004-01-10T00:04:10"/>the other Titans hunker down behind him as best they can. A sudden heave slides the portal open on its track; behind it, something very large starts to move. As all five scream, panic-stricken, the mass tumbles over them, dirty laundry and lots of it. <char ref="Robin">Robin</char> has just opened <location><char ref="BeastBoy">Beast Boy</char>'s closet</location>. When the pile has settled, we see on top of it a small toy monkey banging a pair of cymbals together. Overhead view: the unwashed clothes have entirely covered the Titans. The plaything speaks with the voice just heard.</sd>
+
+<sp><spkr ref="Toymonkey">Toy monkey</spkr> Help me, help me, help me count <sd>Close-up of it on the end of this; it is grinning.</sd> One...two...three...four...five...six...seven...eight...</sp>
+
+            <sd>As it counts, <action mrkr="BeastBoy" with="all" move="5" place="bbroom" timestamp="2004-01-10T00:04:10"/><char ref="BeastBoy">Beast Boy</char> and then <action mrkr="Raven" with="all" move="5" place="bbroom" timestamp="2004-01-10T00:04:10"/><char ref="Raven">Raven</char> put their heads up from the pile. The former grins sheepishly as a big drop of sweat rolls down his temple; the latter is just annoyed.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>chuckling</sd> Um...I really oughta get rid of that thing.</sp>
+
+            <sd>Out in <location>the hall</location>. <action mrkr="Cyborg" with="all" move="6" place="hall" timestamp="2004-01-10T00:04:20"/><char ref="Cyborg">Cyborg</char> leads the team out of the room and makes exaggerated horror-movie moans, poking fun at the encounter.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>similar tone</sd> Look out, y'all, big scary monkey</sp>
+
+<sd>He laughs.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>laughing</sd> Yeah, <char ref="Raven">Raven</char>. You shoulda seen the look on your face.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> You mean this look?!?</sp>
+
+<sd>On the last two words, her face goes bright red and she thrusts it toward him. Her normal color resumes as he speaks.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> No, that's more angry than scared.</sp>
+
+<sd>Flames kindle in her eyes; her face reddens again with the next words and the camera zooms in a bit.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> I already told you, I don't get scared.</sp>
+
+<sd>Normal color again. There is a loud growling from <location>the unlit area of the hall</location> past these two. Zoom into it between them as the source comes forth; the creature that disappeared from <location>the operations center</location>, all its teeth bared to strike.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Titans! Move!</sp>
+
+            <sd>All five make tracks. Now <action mrkr="Raven" with="all" move="6" place="hall" timestamp="2004-01-10T00:04:20"/><char ref="Raven">Raven</char> is at the rear of the group, and the look on her face when she glances back toward the pursuer give the lie to her repeated denial of fear. The apparition races after them, scraping sparks from both walls with its clawed fingers, and they turn into <location>another hall</location> to give it the slip. Snap to black, which resolves into an opening doorway with five teenage heroes charging through it from <location>the hall</location>. Each drops screaming into <location>the empty space</location> as soon as his/her feet cross the threshold; <action mrkr="BeastBoy" with="all" move="6" place="hall" timestamp="2004-01-10T00:05:10"/><char ref="BeastBoy">Beast Boy</char> becomes a falcon to stay aloft. <action mrkr="Starfire" with="all" move="6" place="hall" timestamp="2004-01-10T00:04:20"/><char ref="Starfire">Starfire</char> catches <char ref="Cyborg">Cyborg</char> by the shoulders and brings him up, while <action mrkr="Robin" with="all" move="7" place="hall" timestamp="2004-01-10T00:04:20"/><char ref="Robin">Robin</char> fires a grappling hook that embeds itself in the ceiling of this place. The line pulls taut under his weight and <char ref="Raven">Raven</char>'s; he has caught her around the waist to stop her fall.</sd>
+
+<sd>Cut to the hall. <char ref="Starfire">Starfire</char> peers gingerly out from the doorway. Nothing there.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> The creature is gone <sd>leads them out; <char ref="BeastBoy">Beast Boy</char> turns back into human form</sd> We are safe, for the moment.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>to <char ref="Raven">Raven</char></sd> Okay. Don't even try to tell me that didn't scare y--</sp>
+
+<sd>Those tentacles have sneaked up behind him on this line, and they take a firm hold and begin to drag him away, causing him to trail off into a scream. <char ref="Starfire">Starfire</char>'s voice gets stuck on one horrified, quivering note as she stares.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <char ref="BeastBoy">Beast Boy</char></sp>
+
+<sd>He charges; a patch of writhing tentacles.</sd>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> <sd>from o.c.</sd> What did I tell you <sd>gets dragged into view and away</sd> Funny guy goes fiiiiirrrrrsssssttttt!</sp>
+
+            <sd>He disappears through an open door and into the shadows. It slams shut just before <char ref="Robin">Robin</char> runs up; he struggles to force it open. Cut to inside <location>the evidence room</location>, whose door slowly gives way under his efforts from the other side. Except for him and the other three Titans, no living thing is in sight here. <action mrkr="Starfire" with="RB C R" move="7" place="evidroom" timestamp="2004-01-10T00:04:30"/><char ref="Starfire">Starfire</char> gasps.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <char ref="BeastBoy">Beast Boy</char>! He is--</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> --Gone.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Give me some light.</sp>
+
+<sd><char ref="Cyborg">Cyborg</char>'s onboard flashlight puts out a high-intensity beam; cut to the group's perspective, panning slowly across the display cases and walls.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <location>The evidence room</location>. What are we looking for?</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Something that shouldn't be here.</sp>
+
+<sd>Back to the group. He leads them in, straight down a center aisle, and stops at the far wall to pick up...</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <char ref="ControlFreak">Control Freak</char>'s remote.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Right where I left it.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> But how could he conjure these monsters without his technology?</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Maybe he had an extra remote. I mean, we got, like, nine.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> I'm starting to think <char ref="ControlFreak">Control Freak</char> doesn't have anything to do with what's been happening.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Well, whoever is doing it, they're not gonna scare us</sp>
+
+<sd><char ref="Robin">Robin</char> thinks hard for a moment.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Fear! That's it <sd>He turns to face them.</sd> The movie, the monsters, <char ref="Raven">Raven</char>'s powers, the answer's right in front of us! If <char ref="ControlFreak">Control Freak</char> isn't behind this, it has to be--</sp>
+
+            <sd>Red eyes appear behind him as he says this, followed by a couple of tentacles. Before he can finish the sentence, his head is securely wrapped up and he is yanked toward the wall. The tentacles have passed through it from the other side. His body slams up against it, stuck for a moment, and <action mrkr="Raven" with="RB C S" move="7" place="evidroom" timestamp="2004-01-10T00:04:30"/><char ref="Raven">Raven</char> and <char ref="Starfire">Starfire</char> attempt to pull him free; they are stopped when more tentacles emerge and swat them away. Now he starts to disappear into the wall, but <action mrkr="Cyborg" with="RB S R" move="7" place="evidroom" timestamp="2004-01-10T00:04:30"/><char ref="Cyborg">Cyborg</char> moves in and grabs his free hand to begin a tug-of-war with the Titans' leader as the rope and the prize. Close-up of the green-gloved forearm in both bionic hands, then of the straining, groaning <char ref="Cyborg">Cyborg</char>, then of the forearm again. In this last shot, the beast's grip proves too strong and <action mrkr="Robin" with="C S R" move="8" place="evidroom" timestamp="2004-01-10T00:05:10"/><char ref="Robin">Robin</char> is torn away. <char ref="Cyborg">Cyborg</char> tumbles to the floor on his back, but stays there for only a moment; as the wall seals itself again, he dashes to the spot.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <char ref="Robin">ROBIN</char>!!</sp>
+
+<sd>He lets off a frustrated groan, then cocks one fist back and punches out the wall. Dust and debris fly everywhere; when the view clears, we see a very new hole in the architecture and no one on the other side of it. He turns to face the girls.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> I don't suppose either of you know what he was about to say.</sp>
+
+<sd>Both shake their heads. Cut to a close-up of his very worried face, zooming in slowly, and fade to black.</sd>
+        </act>
+        <act n="3">
+            <title>ACT THREE</title>
+
+            <sd><setNote shot="yes">Opening shot: the exterior of the Tower, seen from ground level.</setNote> The storm continues at full force. Inside <location>the operations center</location>, <action mrkr="Starfire" with="C R" move="8" place="tower" timestamp="2004-01-10T00:04:40"/><char ref="Starfire">Starfire</char> leans over the kitchen counter and checks behind it, using a spot of light from her hand to help the view, while <action mrkr="Cyborg" with="S R" move="8" place="tower" timestamp="2004-01-10T00:04:40"/><char ref="Cyborg">Cyborg</char> inspects a couch cushion.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <char ref="Robin">Robin</char>? <char ref="BeastBoy">Beast Boy</char></sp>
+
+            <sd><action mrkr="Raven" with="C S" move="8" place="tower" timestamp="2004-01-10T00:04:40"/><char ref="Raven">Raven</char> comes in.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> They aren't here. We've already looked here.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> We've already looked everywhere</sp>
+
+<sd>Close-up of her, zooming in.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Almost everywhere.</sp>
+
+            <sd><char ref="Starfire">Starfire</char> gives a shuddering moan and her eyes pop as the cushion drops from <char ref="Cyborg">Cyborg</char>'s hands. Snap to black, which resolves into an opening door and a long staircase leading down from it. The three remaining Titans are here, and <action mrkr="Cyborg" with="S R" move="9" place="basement" timestamp="2004-01-10T00:04:50"/><char ref="Cyborg">Cyborg</char> turns on his flashlight. <action mrkr="Raven" with="C S" move="9" place="basement" timestamp="2004-01-10T00:04:50"/><char ref="Raven">Raven</char> leads them down <location>the stairs</location>; dissolve to them reaching the bottom. An electric generator sits nearby. Huddled behind <char ref="Cyborg">Cyborg</char>, <action mrkr="Starfire" with="C R" move="9" place="basement" timestamp="2004-01-10T00:05:10"/><char ref="Starfire">Starfire</char> peeks out, looks around, and gasps sharply.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>hastily, smiling</sd> Oh, well <sd>She backs up the stairs.</sd> Our friends are not present. Let us quickly go back up and see if they--</sp>
+
+<sd>He plants one oversized hand and yanks her bodily off the flight; she voices a terrified little squeal.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Not yet. We have to get to the bottom of this.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> This unpleasant room is not the bottom?</sp>
+
+<sd>We are in <location>the Tower's basement</location>, then.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Come on.</sp>
+
+<sd>She leads them on, her steps illuminated by both the flashlight and <char ref="Starfire">Starfire</char>'s glowing hand. A dark shape, resembling a giant rat with glowing red eyes, runs across near the camera; the high-strung Tamaranean shrieks and throws a starbolt toward it. No hit, but a lot of smoke.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> What is it?</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> The floor! I saw something!</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> I didn't.</sp>
+
+<sd><char ref="Cyborg">Cyborg</char> adjusts his eye implant a bit. Cut to his perspective-tinted green, panning across <location>the basement</location>.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Night vision scanners aren't picking up anything either <sd>Back to him.</sd> Let's keep moving.</sp>
+
+<sd>He and <char ref="Raven">Raven</char> continue across the area, leaving <char ref="Starfire">Starfire</char> too scared to pick up her feet; after a moment, she gathers her nerve and goes to catch up. More small critters zip across behind her, and she cries out and fires one off after them. This blast causes <char ref="Cyborg">Cyborg</char> and <char ref="Raven">Raven</char> to flinch.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Please stop doing that. There's nothing to be afraid of, all right? It's probably just a few rats.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>points upward</sd> Those are not rats!</sp>
+
+<sd>Cut to the other two, who pivot to look where she has indicated, and tilt up to the overhead girders. Many pairs of small red eyes open in the blackness here. <char ref="Cyborg">Cyborg</char>'s beam moves across the creatures, which number in the thousands.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> Run!</sp>
+
+<sd>Cut to just behind the horde, the camera pointing down at the trio. Now they can be clearly seen: rat bodies, with heads matching those of the four-eyed birds that attacked <char ref="BeastBoy">Beast Boy</char> and <char ref="Cyborg">Cyborg</char> in "Nevermore."</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Run!</sp>
+
+<sd>As they do so, the mass of bizarre vermin surges forward from both the girders and the floor. <char ref="Raven">Raven</char> and <char ref="Cyborg">Cyborg</char> pass <char ref="Starfire">Starfire</char>, who has again frozen in place due to sheer terror; as he fires a cannon shot back toward the creatures, she gets her feet and starbolts in gear. The "fearless" Titan is first to reach the stairs, <char ref="Cyborg">Cyborg</char> is not far behind her, but <char ref="Starfire">Starfire</char> stops and floats up from the floor to unload on the rodents. Tilt up from her to the girders, where yet more of them scuttle into view and leap toward her. She looks up with a startled cry and is buffeted back and forth by the dropping bodies.</sd>
+
+<sd>Just before she drops o.c., cut to the base of <location>the stairs</location>. <char ref="Raven">Raven</char> starts to climb and <char ref="Cyborg">Cyborg</char> catches up to her.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Hurry! We're almost- <sd>A scream stops them cold.</sd> <char ref="Starfire">Starfire</char>!</sp>
+
+<sd>The creatures have swarmed up to her waist. She fires a few point-blank shots into them before being sucked into the pile with a final scream that would have been audible ten miles away. <char ref="Cyborg">Cyborg</char> hurls himself toward her, but an instant too late; the horde evaporates, leaving him to crash down on the empty patch of floor where <char ref="Starfire">Starfire</char> had stood. Close-up of his hand, which he rubs across the area.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> <char ref="Starfire">Star</char></sp>
+
+<sd>Pull back; <char ref="Raven">Raven</char> comes up behind him and he sighs.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> No!</sp>
+
+<sd><setNote shot="yes">Overhead view of the closed basement door, seen from outside.</setNote> It opens to admit the two remaining Titans, who stop near a flight of stairs leading up from here.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> We should go back! Maybe there's still a way to save her!</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> We won't save anybody if whatever this is gets us, too. We have to get outta here and come back with help.</sp>
+
+            <sd>He breaks out his cannon and trains both it and his flashlight on <location>the stairs</location>, and up they go. Cut to <location>the hall</location> at the top of the flight. <action mrkr="Cyborg" with="R" move="10" place="hall" timestamp="2004-01-10T00:05:10"/><char ref="Cyborg">Cyborg</char> stops to sweep the light across the dark expanse as <action mrkr="Raven" with="C" move="10" place="hall" timestamp="2004-01-10T00:05:00"/><char ref="Raven">Raven</char> gets up to the last step.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> We'll get through this, all right? Don't be scared.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>spark by her temple</sd> For the last time, I am not afraid.</sp>
+
+<sd>She steps into the hall and ahead. Close-up of his suddenly frozen, wide-eyed expression, sight gag: his left eye appears normal in this shot, then of <char ref="Raven">Raven</char>'s back. The light playing across her goes out.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <char ref="Cyborg">Cyborg</char>, I could use a little more light.</sp>
+
+<sd>She stops and turns toward the camera; surprise writes itself all over her face in bold type.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <char ref="Cyborg">Cyborg</char>?</sp>
+
+<sd>The camera shifts to point back the way they came, showing him nowhere in sight now. Pull back slowly as she wheels around to the sound of a horrendous screeching from ahead o.c., then cut to ground level by her feet. An enormous winged creature flaps around the corner toward her: black, four red eyes, long tail, and she backs up and sets off at a dead run. The thing chases her around corner after corner before she comes up on the closed elevator door and punches furiously at the call button. Still screeching, it flaps inexorably along; cut to behind her and zoom in as the door opens and she ducks into <location>the elevator</location>.</sd>
+
+            <sd>She lunges toward the controls and gets the door shut just as the monster snaps its head out to strike. Cut to inside the car; the impact of its beak puts a major-league dent in the panels and throws her against the back wall. Outside overhead view in <location>the shaft</location>: <location>the elevator</location> starts to move, rising toward the camera. Inside, <action mrkr="Raven" with="none" move="11" place="elevator" timestamp="2004-01-10T00:05:10"/><char ref="Raven">Raven</char> gets to her feet and braces for more action. Close-up of her face; she lets off a visible sigh of relief at having eluded capture, but the mood changes to one of panic as the sound of something boiling is heard.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> No!</sp>
+
+<sd>We now see that the floor has turned into some thick, glutinous liquid, which begins to rise with alarming speed within the car. In almost no time, the level has passed her head and blacked out the entire screen. Snap to outside <location>the elevator</location>, on <location>another floor of the Tower</location>. The bell rings and the UP arrow lights to signal its arrival, and the doors open to spill both the foul tide and the screaming girl across the floor.</sd>
+
+<sd>Pull back to an overhead view; she has reached <location>the operations center</location>, where she washes up not far from the couch. She stands up and shakes off some of this muck. A loud thump from behind the closed elevator door catches her by surprise, as does the bulging of the barrier due to the monster its other side. Backing up toward one side door, she is again brought up short by growling from its shadows and the appearance of two red eyes. Sure enough, here comes the tentacled beast that first attacked the Titans.</sd>
+
+            <sd>It advances out of the passageway and stands up to its formidable full height. <action mrkr="Raven" with="none" move="12" place="tower" timestamp="2004-01-10T00:05:20"/><char ref="Raven">Raven</char> backs up fearfully toward the couch as lightning rages outside, then whirls into a run for the other side door. While the huge creature comes up fast behind, she stops with a gasp; there, in the gloom, hundreds of doubled pairs of eyes wink up and the rat-like critters from the basement swarm out. One reaches her feet, then another and another, and she retreats onto the coffee table; her temporary refuge ends when the giant roars and pounds both hands against the piece of furniture. She is thrown to the ground.</sd>
+
+<sd>As the black rodents move in a body toward her, she gets to her feet and jumps onto the ledge that runs in front of the windows. With them closing in from the sides and in front, and the glass at her back, she is now completely hemmed in. Behind the mass, the huge terror looms over her, and the windows turn black while two pairs of red eyes appear on them. She turns toward this.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Stay back!</sp>
+
+<sd>She steps back. From the flat black expanse, a colossal animal shape begins to emerge and reach for her.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> You don't scare me!</sp>
+
+<sd>The new apparition comes out far enough to show itself as a wolf-like thing with a bird's head. She turns her face away and closes her eyes.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> I'm not afraid...I'm not afraid.. <sd>It roars; she drops to her knees, puts her hands to her head.</sd> ...I'm not afraid!!</sp>
+
+<sd>Behind the huge black creature, the windows have now returned to normal. Close-up of her screwed-up face, eyes shut tight and teeth clenched so hard they might break at any moment. After a long second, she relaxes and opens her eyes wide. Her next words have the tone of someone who has finally accepted an inevitable and immutable truth.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> I...I am afraid. I'm afraid.</sp>
+
+<sd>Her eyes turn pure black, with no sign of irises or whites, and she stands up.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> But that doesn't mean I can't fight back!</sp>
+
+<sd>Ground level. The rat-things back up uncertainly; tilt up to the growling leviathan behind them, then cut to <char ref="Raven">Raven</char>, rising from the floor.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Azarath Metrion Zinthos!!!!</sp>
+
+<sd>A huge wave of black energy radiates out from her-the powers that fizzled out in Act Two have returned-to instantly evaporate the hordes of vermin. The tentacled giant is engulfed, then the wolf-thing that came from the window. Overhead view of <char ref="Raven">Raven</char>, descending toward the floor. The remains of the unearthly onslaught swirl around her in a large circle, from which the head and wings of a four-eyed bird emerge and approach the camera.</sd>
+
+<sd><setNote shot="yes">Cut to <location>the exterior of the Tower</location>, a long shot, as this apparition emerges from the roof-fully formed, with a wingspan at least ten times the width of the structure.</setNote> It lets off one long, tortured screech as lightning rips the heavens, then disintegrates into random pieces that are sucked back in through the roof. Inside <location>the operations center</location>, <char ref="Raven">Raven</char> drops to the floor and collapses insensate. Fade to black.</sd>
+
+<sd>The view opens up into a shot of the other four Titans, as of an eye being opened; her perspective, coming around from the fainting spell. None are any the worse for wear.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <char ref="Raven">Raven</char></sp>
+
+<sd>Cut to <char ref="Raven">Raven</char>; she looks around, puzzled. Her eyes are normal again.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> You're all okay</sp>
+
+<sd><char ref="Cyborg">Cyborg</char> helps her up.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> We were never in any danger.</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Say what?</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> Did you not see the monsters?</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> We saw them, but they were never really there. <char ref="Raven">Raven</char> was afraid <sd>Cut to her; he continues o.c.</sd> but when she wouldn't talk about it <sd>The truth hits home; zoom in.</sd> the fear found another way out</sp>
+
+            <sd>Cut to him and <action mrkr="Starfire" with="all" move="10" place="tower" timestamp="2004-01-10T00:05:20"/><char ref="Starfire">Starfire</char>; she gasps.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Her powers!</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>to <char ref="Raven">Raven</char></sd> Once you accepted your fear, you regained control over it.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> You mean <char ref="Raven">Raven</char> made all those creepy-crawlies by accident</sp>
+
+<sd>Cut to her.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>blushes and smiles nervously</sd> Uh...sorry?</sp>
+
+            <sd>Pull back slowly from her as <action mrkr="Robin" with="all" move="9" place="tower" timestamp="2004-01-10T00:05:20"/><char ref="Robin">Robin</char> and <action mrkr="BeastBoy" with="all" move="7" place="tower" timestamp="2004-01-10T00:05:20"/><char ref="BeastBoy">Beast Boy</char> step into view on either side. Light steals over the room from o.c.; cut to behind the group. The Titans look toward the source, the sun coming up over the shore of <location>Jump City Bay</location>. <char ref="Robin">Robin</char> and <char ref="Starfire">Starfire</char> head for the side door while <action mrkr="Cyborg" with="all" move="11" place="tower" timestamp="2004-01-10T00:05:20"/><char ref="Cyborg">Cyborg</char> yawns and stretches expansively. The storm is over.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Sunrise.</sp>
+
+<sd>He too turns to leave. Cut to <char ref="BeastBoy">Beast Boy</char> and <char ref="Raven">Raven</char>, who have stayed put. She aims a slightly worried look out the window.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> Time for bed.</sp>
+
+<sp><spkr ref="BeastBoy">Beast Boy</spkr> You know, your haunted house was way creepier than that stupid movie. Any chance you'd want to do all this again for Halloween?</sp>
+
+<sd>He beams at having come up with this idea, but she does not alter her expression in the slightest. <setNote shot="no">Dissolve to <location>the exterior of the Tower</location>.</setNote></sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>from inside</sd> I'm afraid not.</sp>
+
+<sd>Fade to black.</sd>
+        </act>
+    </body>
+</root>

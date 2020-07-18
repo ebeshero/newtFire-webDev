@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../schemas/LocationSchema.rnc" type="application/relax-ng-compact-syntax"?><location type="city/town">
+    <name n="Pallet Town">Pallet Town</name>
+    <des>A fairly new and quiet town. It's a small and pretty place.</des>
+    <PoI>
+
+        <place>
+            <placeName>Professor Oak's Lab</placeName>
+            <des>In the southeast corner of town is Professor Oak's Lab. Here, Pokémon Trainers just
+                beginning their quest are given the choice to receive either a <pokemon dexNum="001">Bulbasaur</pokemon>, <pokemon dexNum="004">Charmander</pokemon>, or <pokemon dexNum="007">Squirtle</pokemon> from <pers>Professor Oak</pers>. On the occasion that
+                <pers>Professor Oak</pers> is out of the previously listed Pokémon, he has been seen to hand out
+                    <pokemon dexNum="025">Pikachu</pokemon> and <pokemon dexNum="133">Eevee</pokemon>. This is also the location of <pers>Red's</pers> first battle,
+                which was against his rival, <pers>Blue</pers>.</des>
+        </place>
+
+        <place>
+            <placeName>Player's house</placeName>
+            <des>This house is where the <pers>player</pers> lives before beginning their journey.
+                The <pers>player's Mom</pers> lives here, and after the <pers>player</pers> has left
+                town for the first time, going home and talking to her will fully rest/restore all
+                of the player's Pokémon, just like a <pref>Pokémon Center</pref>.</des>
+        </place>
+
+        <place>
+            <placeName>Rival's house</placeName>
+            <des>After the <item>Pokédex</item> has been given to the player by <pers>Professor
+                    Oak</pers>, the <pers>rival's sister</pers> will give the <pers>player</pers> a
+                    <item>Town Map</item>.</des>
+        </place>
+
+    </PoI>
+</location>

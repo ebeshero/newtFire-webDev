@@ -1,0 +1,974 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+let $mitfordColl:=collection('/db/mitford/')
+let $si:=doc('/db/mitfordSI/si.xml')/*
+let $currEditors:=$si//div[@type='Mitford_Team']/listPerson/person
+let $pastEditors:=$si//div[@type='Past_Editors']/listPerson/person
+let $archives:=$si//listOrg[@type="archives"]/org
+let $histPersons:=$si//div[@type='historical_people']/listPerson/person
+let $histOrgs:=$si//div[@type='historical_people']/listOrg/org
+let $histPlaces:=$si//div[@type='places']/listPlace[@type='hist']/place
+let $fictChars:=$si//div[@type='fictional_and_archetypal']/listPerson[@type='fict']/person
+let $fictOrgs:=$si//div[@type='fictional_and_archetypal']/listOrg[@type='fict']/org
+let $archeTypes:=$si//div[@type='fictional_and_archetypal']/listPerson[@type='arch']/person
+let $fictPlaces:=$si//div[@type='places']/listPlace[@type='fict']/place
+let $artWorks:=$si//list[@type='art']/figure
+let $refWorks:=$si//listBibl[@type='ref_19thc']/bibl
+let $periodicals:=$si//listBibl[@type='per_19thc']/bibl
+let $litWorks:=$si//listBibl[@type='literary']/bibl
+let $currSchols:=$si//listBibl[@type='currSchol']/bibl
+let $events:=$si//div[@type='events']/listEvent/event
+let $plants:=$si//div[@type='plant']/list[@type='plants']/item
+return
+<html>
+     <head> <meta charset="UTF-8"/>
+        
+        <title>Digital Mitford: Site Index</title>
+        <meta name="Description"
+            content="Supported by the University of Pittsburgh at Greensburg and the Mary Russell Mitford Society."/>
+        <meta name="keywords"
+            content="Mitford, Mary Russell Mitford, Digital Mitford, Digital Mary Russell Mitford, Digital Mary Russell Mitford Archive, Mitford Archive, TEI, Text Encoding Initiative, digital edition, electronic edition, electronic text, Romanticism, Romantic literature, Victorianism, Victorian literature, humanities computing, electronic editing, Beshero-Bondar"/>
+                
+            </head>
+            <body>
+<div id="title">
+                    <h1>Digital Mitford: Site Index</h1>
+                    <hr/>
+                </div>
+                <div id="menubar">
+                    <h2><a href="index.html">Welcome</a> | <a href="about.html">About</a> | <a
+                        href="search.html">Search</a> | <a href="literature.html">Literary
+                            Works</a> | <a href="letters.html">Letters</a> | <a href="visual.html"
+                                >People, Places, and Networks</a> | <a href="maps.html">Maps</a> | <a
+                                    href="contact.html">Contact</a> | <a href="workshop.html">Workshop
+                                        Materials</a></h2>       
+</div>
+<div id="container">
+<div id="lists">
+<h2><span class="hist_persons">Historical People</span></h2>
+<h2><span class="hist_orgs">Historical Groups and Organizations</span></h2>
+<h2><span class="places_hist">Historical Places</span></h2>
+<h2><span class="events">Historical Events</span></h2>
+<h2><span class="plant">Botanical References</span></h2>
+<hr/>
+<h2><span class="fict_chars">Fictional Characters</span></h2>
+<h2><span class="fict_orgs">Fictional Groups and Organizations</span></h2>
+<h2><span class="archetypes">Archetypal Entities</span></h2>
+<h2><span class="places_fict">Fictional or Mythical Places</span></h2>
+<hr/>
+
+<h2><span class="art">Works of Art</span></h2>
+<h2><span class="ref_19thc">Encyclopedias and Reference Works from Mitford's Time</span></h2>
+<h2><span class="per_19thc">Periodical Publications from Mitford's Time</span></h2>
+<h2><span class="literary">Literary Works</span></h2>
+<h2><span class="currSchol">Current Scholarship</span></h2>
+<h2><span class="archives">Archives Holding Mitford's Papers</span></h2>
+
+<hr/>
+<h2><span class="Past_Editors">Past Editors of Mitford's Works and Letters</span></h2>
+<h2><span class="Mitford_Team">Digital Mitford Team</span></h2>
+</div>
+
+<div id="names">
+<section id="hist_persons">
+<ul>
+{for $histPerson in $histPersons
+let $forename:=$histPerson//forename
+let $surname:=$histPerson//surname
+let $roleName:=$surname/following-sibling::roleName
+
+return
+  
+        <li>
+
+        <a href="#{$histPerson/@xml:id}"><span class="persName">{$histPerson/persName[1]/string()}</span></a>
+        
+        </li>
+  
+}
+
+</ul>
+</section>
+<section id="histOrgs">
+<ul>
+{for $histOrg in $histOrgs
+
+return
+  
+        <li><a href="#{$histOrg/@xml:id}"><span class="orgName">{$histOrg/orgName/text() | $histOrg//surname/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+<section id="histPlaces">
+<ul>
+{for $histPlace in $histPlaces
+
+return
+  
+        <li><a href="#{$histPlace/@xml:id}"><span class="placeName">{$histPlace/placeName[1]/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+<section id="events">
+<ul>
+{for $event in $events
+
+return
+  
+        <li><a href="#{$event/@xml:id}"><span class="event">{$event/label/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+
+<section id="plants">
+<ul>
+{for $plant in $plants
+
+return
+  
+        <li><a href="#{$plant/@xml:id}"><span class="plant">{$plant/form/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+
+
+    <section id="fict_chars">
+    <ul>
+{for $fictChar in $fictChars
+let $forename:=$fictChar//forename
+let $surname:=$fictChar//surname
+let $roleName:=$surname/following-sibling::roleName
+return
+  
+        <li>
+
+         
+        <a href="#{$fictChar/@xml:id}"><span class="persName">{$fictChar/persName[1]/string()}
+        </span>
+        </a>
+        
+        </li>
+  
+}
+
+</ul>
+    
+    </section>
+    <section id="fictOrgs">
+<ul>
+{for $fictOrg in $fictOrgs
+
+return
+  
+        <li><a href="#{$fictOrg/@xml:id}"><span class="orgName">{$fictOrg/orgName/text() | $fictOrg//surname/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+     <section id="archetypes">
+    <ul>
+{for $archeType in $archeTypes
+let $forename:=$archeType//forename
+let $surname:=$archeType//surname
+let $roleName:=$surname/following-sibling::roleName
+return
+  
+        <li>
+
+           <a href="#{$archeType/@xml:id}"><span class="fore_surname">{string-join((string-join((string-join($forename, ' '), string-join($surname, ' ')), ' '), string-join(($roleName), ' ')), ' ')}</span>
+        <span class="persName">{$archeType/persName[not(forename)][not(surname)][1]/text()}</span></a>
+        
+        </li>
+  
+}
+
+</ul>
+    
+    </section>
+    <section id="fictPlaces">
+<ul>
+{for $fictPlace in $fictPlaces
+
+return
+  
+        <li><a href="#{$fictPlace/@xml:id}"><span class="placeName">{$fictPlace/placeName[1]/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+
+
+
+ <section id="artWorks">
+<ul>
+{for $artWork in $artWorks
+
+return
+  
+        <li><a href="#{$artWork/@xml:id}"><span class="art">{$artWork//title[1]/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+ <section id="refWorks">
+<ul>
+{for $refWork in $refWorks
+
+return
+  
+        <li><a href="#{$refWork/@xml:id}"><span class="refWork">{$refWork//title/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+<section id="periodical">
+<ul>
+{for $periodical in $periodicals
+
+return
+  
+        <li><a href="#{$periodical/@xml:id}"><span class="periodical">{$periodical//title[1]/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+<section id="litWorks">
+<ul>
+{for $litWork in $litWorks
+
+return
+  
+        <li><a href="#{$litWork/@xml:id}"><span class="litWork">{$litWork//title[1]/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+<section id="currSchol">
+<ul>
+{for $currSchol in $currSchols
+
+return
+  
+        <li><a href="#{$currSchol/@xml:id}"><span class="currSchol">{$currSchol//title[1]/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+
+<section id="archives">
+<ul>
+{for $archive in $archives
+
+return
+  
+        <li><a href="#{$archive/@xml:id}"><span class="orgName">{$archive/orgName/text()}</span></a></li>
+  
+}
+
+</ul>
+</section>
+    
+     <section id="pastEditors">
+    <ul>
+{for $pastEditor in $pastEditors
+let $forename:=$pastEditor//forename
+let $surname:=$pastEditor//surname
+let $roleName:=$surname/following-sibling::roleName
+order by $surname
+return
+  
+        <li>
+
+           <a href="#{$pastEditor/@xml:id}"><span class="fore_surname">{string-join((string-join((string-join($forename, ' '), string-join($surname, ' ')), ' '), string-join(($roleName), ' ')), ' ')}</span>
+        <span class="persName">{$pastEditor/persName[not(forename)][not(surname)][1]/text()}</span></a>
+        
+        </li>
+  
+}
+
+</ul>
+    
+    </section>
+    <section id="Mitford_Team">
+    <ul>
+{for $currEditor in $currEditors
+let $forename:=$currEditor//forename
+let $surname:=$currEditor//surname
+let $roleName:=$surname/following-sibling::roleName
+order by $surname
+return
+  
+        <li>
+
+           <a href="#{$currEditor/@xml:id}"><span class="fore_surname">{string-join((string-join((string-join($forename, ' '), string-join($surname, ' ')), ' '), string-join(($roleName), ' ')), ' ')}</span></a>
+        
+        </li>
+  
+}
+
+</ul>
+    
+    </section>
+    
+</div>
+                
+      <div id="entries">
+      <section id="hist_persons_entries">
+    
+
+{for $histPerson in $histPersons
+let $forename:=$histPerson//forename
+let $surname:=$histPerson//surname
+let $roleName:=$surname/following-sibling::roleName
+let $birthWhen:=$histPerson//birth/@when/string() 
+let $deathWhen:=$histPerson/death/@when/string()
+
+return
+  <div id="{$histPerson/@xml:id}_div">
+        <ul>
+            <li><a id="{$histPerson/@xml:id}"/><span class="fore_surname">{string-join((string-join((string-join($forename, ' '), string-join($surname, ' ')), ' '), string-join(($roleName), ' ')), ' ')}</span></li>
+        <li><span class="persName">{string-join($histPerson/persName[not(forename)][not(surname)]/text(), ', ')}</span>
+        </li>
+        <li>Born: {$birthWhen}: {$histPerson//birth/*/text()}</li>
+        <li>Died: {$deathWhen}: {$histPerson//death/*/text()}</li>
+        <li>{string-join(($histPerson/occupation), ' ')}</li>
+        </ul>
+    
+        <ul>
+            {let $toLinks:=$histPerson//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+        
+    
+       
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$histPerson/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+
+
+        <p>{$histPerson//note/normalize-space()}</p>
+        
+  </div>
+}
+
+
+      
+   </section>
+   <section id="histOrg_entries">
+{for $histOrg in $histOrgs
+return
+     <div id="{$histOrg/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$histOrg/@xml:id}"><span class="orgName">{$histOrg/orgName/string()}</span></a></li>
+</ul>
+<ul>
+            {let $toLinks:=$histOrg//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$histOrg/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$histOrg//note/normalize-space()}</p>
+
+
+</div>
+}
+   
+   </section>
+   <section id="histPlaces_entries">
+{for $histPlace in $histPlaces
+return
+     <div id="{$histPlace/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$histPlace/@xml:id}"><span class="placeName">{$histPlace/placeName/string()}</span></a></li>
+</ul>
+<ul>
+            {let $toLinks:=$histPlace//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$histPlace/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$histPlace//note/normalize-space()}</p>
+
+
+</div>
+}
+      
+   </section>
+   <section id="events_entries">
+   {for $event in $events
+return
+     <div id="{$event/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$event/@xml:id}"><span class="event">{$event/label[1]/string()}</span></a></li>
+        <li><span class="event">{$event/label[2]/string()}</span></li>
+</ul>
+<ul>
+            {let $toLinks:=$event//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$event/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$event//note/normalize-space()}</p>
+
+
+</div>
+}
+      
+   </section>
+  <section id="plants_entries">
+   {for $plant in $plants
+return
+     <div id="{$plant/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$plant/@xml:id}"><span class="event">{$plant/name[1]/string()}</span></a></li>
+       
+</ul>
+<ul>
+            {let $toLinks:=$plant//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$plant/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$plant//note/normalize-space()}</p>
+
+
+</div>
+}
+        
+  </section>
+  <section id="fictChars_entries">
+  {for $fictChar in $fictChars
+
+return
+  <div id="{$fictChar/@xml:id}_div">
+        <ul>
+            <li><a id="{$fictChar/@xml:id}"/>
+        <span class="persName">{$fictChar/persName[1]/string()}</span>
+        </li>
+        <li>id: <span class="persName">{$fictChar/@xml:id/string()}</span></li>
+        
+        <li>{string-join(($fictChar/occupation), ' ')}</li>
+        </ul>
+    
+        <ul>
+            {let $toLinks:=$fictChar//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+        
+    
+       
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$fictChar/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+        <p>{$fictChar//note/normalize-space()}</p>
+        
+  </div>
+}
+  
+  </section>
+  <section id="fictOrgs_entries">
+  {for $fictOrg in $fictOrgs
+return
+     <div id="{$fictOrg/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$fictOrg/@xml:id}"><span class="orgName">{$fictOrg/orgName/string()}</span></a></li>
+</ul>
+<ul>
+            {let $toLinks:=$fictOrg//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$fictOrg/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+        <p>{$fictOrg//note/normalize-space()}</p>
+</div>
+}
+  
+  </section>
+  <section id="archeTypes_entries">
+    {for $archeType in $archeTypes
+
+return
+  <div id="{$archeType/@xml:id}_div">
+        <ul>
+            <li><a id="{$archeType/@xml:id}"/>
+        <span class="persName">{$archeType/persName[1]/string()}</span>
+        </li>
+        <li>id: <span class="persName">{$archeType/@xml:id/string()}</span></li>
+        
+        <li>{string-join(($archeType/occupation), ' ')}</li>
+        </ul>
+    
+        <ul>
+            {let $toLinks:=$archeType//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+        
+    
+       
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$archeType/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+        <p>{$archeType//note/normalize-space()}</p>
+        
+  </div>
+}
+  
+  </section>
+  <section id="fictPlaces_entries">
+  {for $fictPlace in $fictPlaces
+return
+     <div id="{$fictPlace/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$fictPlace/@xml:id}"><span class="placeName">{$fictPlace/placeName/string()}</span></a></li>
+</ul>
+<ul>
+            {let $toLinks:=$fictPlace//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$fictPlace/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$fictPlace//note/normalize-space()}</p>
+
+</div>
+}
+      
+  </section>
+  <section id="artWorks_entries">
+  {for $artWork in $artWorks
+return
+     <div id="{$artWork/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$artWork/@xml:id}"><span class="title">{$artWork/title[1]/string()}</span></a></li>
+        <li><span class="title">Alternate title(s), if any: {string-join(($artWork/title[position > 1]/string()), ', ')}</span></li>
+        <li>Artist: {$artWork/author | $artWork/author/@ref/string()}</li>
+        <li><span class="date">{string-join(($artWork//date/@*/string()), '-')}</span></li>
+        
+</ul>
+<ul>
+            {let $toLinks:=$artWork//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$artWork/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$artWork//note/normalize-space()}</p>
+
+</div>
+}
+      
+  
+  </section>
+  <section id="ref_19thc_entries">
+   {for $refWork in $refWorks
+return
+     <div id="{$refWork/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$refWork/@xml:id}"><span class="title">{$refWork/title[1]/string()}</span></a></li>
+        <li><span class="title">Alternate title(s), if any: {string-join(($refWork/title[position() > 1]/string()), ', ')}</span></li>
+        <li>Author(s): {string-join(($refWork/author/@ref/string()), ', ')} |  {string-join(($refWork/author), ', ')}</li>
+        
+        <li><span class="date">{string-join(($refWork//date/@*/string()), '-')}</span></li>
+        
+</ul>
+<ul>
+            {let $toLinks:=$refWork//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$refWork/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$refWork//note/normalize-space()}</p>
+
+</div>
+}
+  
+  </section>
+  <section id="periodicals_entries">
+   {for $periodical in $periodicals
+return
+     <div id="{$periodical/@xml:id}_div">
+     
+    
+     <p><span class="analytic">{$periodical/title[@level="a"]/string()}</span><span class="main">{$periodical/title[@level="s"]/string()}</span>
+     <span class="scope">{string-join($periodical/biblScope/string(), ', ')}</span><span class="date">{$periodical/date/string()}</span> 
+         
+         
+     </p>
+        <ul>
+     
+        <li><a id="{$periodical/@xml:id}"><span class="title">{$periodical/title[1]/string()}</span></a></li>
+        <li><span class="title">Alternate title(s), if any: {string-join(($periodical/title[position() > 1]/string()), ', ')}</span></li>
+        <li>Editor(s): {string-join(($periodical/author/@ref/string()), ', ')} |  {string-join(($periodical/author/string()), ', ')} | {string-join($periodical/editor/string(), ', ')}</li>
+        
+        <li><span class="date">{string-join(($periodical//date/@*/string()), '-')}</span></li>
+        
+</ul>
+<ul>
+            {let $toLinks:=$periodical//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$periodical/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+
+        <p>{$periodical//note/normalize-space()}</p>
+
+</div>
+}
+      </section>
+      <section id="litWorks_entries">
+       {for $litWork in $litWorks
+return
+     <div id="{$litWork/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$litWork/@xml:id}"><span class="title">{$litWork/title[1]/string()}</span></a></li>
+        <li><span class="title">Alternate title, or published in (if any): {string-join(($litWork/title[position() > 1]/string()), ', ')}</span></li>
+        <li>Author(s): {string-join(($litWork/author/@ref/string()), ', ')} |  {string-join(($litWork/author), ', ')}</li>
+        <li>{$litWork/publisher} {$litWork/placeName}</li>
+        <li><span class="date">{string-join(($litWork//date/@*/string()), '-')}</span></li>
+        
+</ul>
+<ul>
+            {let $toLinks:=$litWork//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$litWork/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+        <p>{$litWork//note/normalize-space()}</p>
+
+</div>
+}
+      </section>
+      <section id="currSchol_entries">
+       {for $currSchol in $currSchols
+return
+     <div id="{$currSchol/@xml:id}_div">
+     <p><span class="analytic">{$currSchol/title[@level="a"]/string()}</span><span class="main">{$currSchol/title[@level="s"]/string()}</span>
+     <span class="scope">{string-join($currSchol/biblScope/string(), ', ')}</span><span class="date">{$currSchol/date/string()}</span> 
+         
+         
+     </p>
+        <ul>
+  
+        <li><a id="{$currSchol/@xml:id}"><span class="title">{$currSchol/title[1]/string()}</span></a></li>
+        <li>Author(s): {string-join(($currSchol/author/string()), ', ')}</li>
+        <li><span class="title">Alternate title, or published in (if any): {string-join(($currSchol/title[position() > 1]/string()), ', ')}</span></li>
+        <li>Editor(s) (if any): {string-join(($currSchol/editor/string()), ', ')}</li>
+        <li>{$currSchol/pubPlace/string()} | {$currSchol/placeName/string()}</li>
+        <li>{$currSchol/publisher/string()}</li>
+        <li><span class="date">{string-join(($currSchol//date/@*/string()), '-')}</span></li>
+        
+</ul>
+<ul>
+            {let $toLinks:=$currSchol//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$currSchol/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+        <p>{$currSchol//note/normalize-space()}</p>
+
+</div>
+}     
+      
+      </section>
+      <section id="archives_entries">
+          {for $archive in $archives
+return
+     <div id="{$archive/@xml:id}_div">
+        <ul>
+  
+        <li><a id="{$archive/@xml:id}"><span class="orgName">{$archive/orgName/string()}</span></a></li>
+</ul>
+<ul>
+            {let $toLinks:=$archive//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+            
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$archive/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+        <p>{$archive//note/normalize-space()}</p>
+</div>
+}
+      </section>
+      <section id="PastEditors_entries">
+      {for $pastEditor in $pastEditors
+  let $forename:=$pastEditor//forename
+let $surname:=$pastEditor//surname
+let $roleName:=$surname/following-sibling::roleName
+
+return
+  <div id="{$pastEditor/@xml:id}_div">
+        <ul>
+            <li><a id="{$pastEditor/@xml:id}"/><span class="fore_surname">{string-join((string-join((string-join($forename, ' '), string-join($surname, ' ')), ' '), string-join(($roleName), ' ')), ' ')}</span></li>
+        
+        
+        </ul>
+    
+        <ul>
+            {let $toLinks:=$pastEditor//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+               
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$pastEditor/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+        <p>{$pastEditor//note/normalize-space()}</p>
+        
+  </div>
+}
+
+      
+          </section>
+      <section id="Mitford_Team_entries">
+      {for $currEditor in $currEditors
+ let $forename:=$currEditor//forename
+let $surname:=$currEditor//surname
+let $roleName:=$surname/following-sibling::roleName
+
+return
+  <div id="{$currEditor/@xml:id}_div">
+        <ul>
+            <li><a id="{$currEditor/@xml:id}"/><span class="fore_surname">{string-join((string-join((string-join($forename, ' '), string-join($surname, ' ')), ' '), string-join(($roleName), ' ')), ' ')}</span></li>
+        <li><span class="occupation">{$currEditor/occupation/string()}</span></li>
+        
+        </ul>
+    
+        <ul>
+            {let $toLinks:=$currEditor//*[@ref]
+            for $toLink in $toLinks
+             let $Link:=$toLink/@ref/string()
+            return
+            <li><a href="{$Link}">{$toLink/text()}</a></li>
+            }
+               
+     {
+            let $match:=$mitfordColl//@*[substring-after(., '#')=$currEditor/@xml:id]
+        let $uri_match:= distinct-values($match/tokenize(base-uri(.),'/')[last()])
+            return   
+               <li>Appears in the following files: {string-join($uri_match, ', ')}</li>
+                
+     }          
+         
+            </ul>
+
+        <p>{$currEditor//note/normalize-space()}</p>
+        
+  </div>
+}
+      
+      </section>
+        
+    </div>
+</div>
+    </body>
+</html>

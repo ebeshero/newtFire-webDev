@@ -1,0 +1,9 @@
+xquery version "3.1";
+let $albums := collection('/db/brandnew/XML/Albums/YourFavoriteWeapon')
+let $refer := $albums//song//refer[@img="bed"] => count()
+
+
+
+
+return  $refer
+

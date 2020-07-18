@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../Schema/songSchema.rnc" type="application/relax-ng-compact-syntax"?><xml>
+    <info>
+      <title ref="#1-TSS-1">The Shower Scene</title>
+      <album ref="#1-YFW">Your Favorite Weapon</album>
+      <track n="1"/>
+      <tempo bpm="94"/>
+      <key>C#</key> <!--bb: C sharp-->
+      <songWriter>
+            <li n="1">Jesse Lacey</li>
+            <li n="2">Vincent Accardi</li>
+            <li n="3">Garrett Tierney</li>
+            <li n="4">Brian Lane</li>
+        </songWriter>
+      <composer>Jesse Lacey</composer>
+      <songLength>00:02:25</songLength>
+   </info>
+    
+    <song>
+        
+        <instrumental n="1" bpm="93" bars="6"/>
+        
+        <verse n="1" bpm="94" bars="10">
+            <line n="1">It's funny how your worst enemies always seem to</line>
+            <line n="2">turn out to be all of your</line>
+            <line n="3">best friend's best friends</line>
+            <line n="4">But I folded and I told</line>
+            <line n="5">These aren't things I saved to sink you</line>
+            <line n="6">but I folded, I told</line>
+            <line n="7">So draw or throw and I will explode</line>
+        </verse>
+
+        <chorus n="1" bpm="76" bars="6">
+            <line n="8">It's time for you to choose</line>
+            <line n="9">the bullet or the chapstick</line>
+            <line n="10">And you are far too cute or whatever he said</line>
+        </chorus>
+
+        <verse n="2" bpm="94" bars="10">
+            <line n="11"><refer img="time">Every time</refer> I hear it I am wishing I was great</line>
+            <line n="12">I wish her... past tense my best friend</line>
+            <line n="13">But I folded and I told</line>
+            <line n="14">These aren't things I say to save me</line>
+            <line n="15">But I folded, I told</line>
+            <line n="16">I hope she's caught in the explosion</line>
+        </verse>
+
+        <chorus n="2" bpm="76" bars="6">
+            <line n="17">It's <refer img="time">time</refer> for you to choose</line>
+            <line n="18">the bullet or the chapstick</line>
+            <line n="19">And you are far too cute or whatever he said</line>
+        </chorus>
+
+        <bridge n="1" bpm="94" bars="8">
+            <line n="20">It's <refer img="time">time</refer> for you to choose</line>
+            <line n="21">It's <refer img="time">time</refer> for you to choose</line>
+            <line n="22">the bullet or the chapstick</line>
+            <line n="23">This is me in his <refer img="house">room</refer></line>
+            <line n="24">This is me in his <refer img="house">room</refer></line>
+            <line n="25">This is me in his <refer img="house">room</refer></line>
+        </bridge>
+        
+        <instrumental n="2" bpm="76" bars="10"/>
+        
+        <verse n="3" bpm="94" bars="10">
+            <line n="26" voice="background">Red, gold, I told</line>
+            <line n="27" voice="background">We don't <refer type="idiom">play fair</refer></line>
+            <line n="28" voice="background">Red, gold, I told</line>
+            <line n="29" voice="background">We never stand too close</line></verse>
+            <line n="30">So I update this almost <refer img="time">every single day</refer> for
+                you</line>
+            <line n="31">I begin to hate you for your face and not just the things you do</line>
+            <line n="32">Go tell him how my wrist is sore</line>
+            <line n="33">from pulling at your insides <refer img="time">all night</refer></line>
+            <line n="34">Nothing that you do is new to anything or anyone but you </line>
+        
+        <outro bars="4"/>
+        
+    </song>
+</xml>

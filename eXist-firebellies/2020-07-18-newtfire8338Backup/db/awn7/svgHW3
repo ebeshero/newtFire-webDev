@@ -1,0 +1,52 @@
+xquery version "3.1";
+declare variable $banksyColl := collection('/db/Assignments/banksyForSVG/');
+declare variable $sourceDesc := $banksyColl//sourceDesc;
+declare variable $titles := $sourceDesc//title;
+declare variable $medium := $sourceDesc//medium/@type/string();
+declare variable $location := $sourceDesc//date/@when/string();
+declare variable $minlocation := $location => min();
+declare variable $maxlocation := $location => max();
+declare variable $years := $location ! tokenize(., ',')[1];
+declare variable $minlocations := $locations ! City() => min();
+(: 2019-04-08 ebb: I think you want the count() function in line 10, right? instead of City() which is not an XPath function? Same with the line below.  :)
+declare variable $maxlocations := $locations ! City() => max();
+declare variable $timelineSpacer := 50;
+declare variable $ThisFileContent := 
+<svg width="3000" height="4000">
+   <g transform="translate(40, 30)">
+          <line x1="0" y1="0" x2="0" y2="{($maxLocation - $minLocation) * $timelineSpacer}" style="stroke:black;stroke-width:2;"/>  
+        {
+         for $l in (0 to $difference)
+         let $location := $minlocation1 + $l
+         let $thislocationTitle := $title[following-sibling::location/@when ! tokenize(., ',')[1] = string($location)]/text() 
+         let $countLocationTitle := $thisLocationTitle => count()
+         let $thisCityMediums := $thisCityTitle/following::medium/@type
+         let $distinctMediums := $thisCityMediums => distinct-values() => sort()
+         let $location := $thisCityMediums[. = "spray_paint"]
+         let $countSprayPaint := $SprayPaint => count()
+          let $CSPlabel := if ($countSprayPaint = 0) 
+                              then ""
+                        else $countSprayPaint
+         let $Canvas := $thisYearMediums[. = "canvas"]
+         let $countCanvas := $Canvas => count()
+         let $CClabel := if ($countCity = 0) 
+                              then ""
+                        else $countCity
+         return
+        <g>     
+            <circle cx="0" cy="{$i * $timelineSpacer}" r="{$countlocationTitle}" stroke="Blue" stroke-width="3" fill="violet" />
+            <text x="20" y="{$i * $timelineSpacer}" style="fill:black; stroke-width: 2; text-anchor:start">{$location}</text>
+             
+            <text x="60" y="{$i * $timelineSpacer}" style="fill:red; stroke-width: 2; text-anchor:start">{string-join($thislocationTitles,                     ', ')}</text>
+        <rect x="100" y="{$i * $timelineSpacer + 20}" height="20" width="{$countCity * 5}"
+        style="fill: orange"/>
+        <text x="120" y="{$i * $timelineSpacer + 35}" style="fill:navy; stroke-width: 2; text-anchor:start"> {$CSlocation}</text>  
+        <rect x="{75 + $countSpraylocation * 10}" y="{$i * $timelineSpacer + 20}" height="20" width="{$countCity * 10}"
+        style="fill: pink"/>
+        <text x="{78 + $countlocation * 10}" y="{$i * $timelineSpacer + 35}" style="fill:navy; stroke-width: 2; text-anchor:start"> {$CClabel}</text>  
+         </g>
+         }       
+
+   </g> 
+</svg>;
+$ThisFileContent

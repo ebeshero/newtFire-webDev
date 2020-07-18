@@ -1,0 +1,2397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: The Pond in Winter</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
+                     Unported License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY
+               Geneseo using Text Encoding Initiative (TEI) P5 XML Schema, using the Parallel
+               Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and
+               includes critical apparatus laid out by Ronald Clapper, and annotations provided by
+               Ronald Clapper, J. Lyndon Shanley, and Walter Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised
+               edition of dissertation originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc16">
+      <body>
+         <div>
+            <head>The Pond in Winter</head>
+
+            <p n="1" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 1 written: F; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab>No chapter title appears in the manuscript apart from the table of
+                     contents.</ab>
+                  <ab change="#wc_0f">A fair copy was made of only <quote>but day comes to reveal …
+                        even into the plains of the ether</quote>.</ab>
+               </note>
+               <anchor type="hn" xml:id="hn-16-001"/>
+               <app xml:id="walc16-app-0001">
+                  <lem>After a still winter night I awoke</lem>
+                  <rdg wit="#wc_f1">
+                     <del>I have awaked in the morning</del>
+                     <add>Once</add>, after a still winter night, <add>I awoke in the morning</add>
+                  </rdg>
+               </app> with the impression that some question had been put to me, <app xml:id="walc16-app-0002">
+                  <lem>which I had been endeavoring in vain to answer</lem>
+                  <rdg wit="#wc_f1">
+                     <del>and</del>
+                     <add>which</add> I had been endeavoring <add rendition="pencil">in vain</add>
+                     to answer <del>it</del>
+                  </rdg>
+               </app> in my sleep, as what—how—when—where? But there was dawning Nature, in whom all
+               creatures live, looking in at my broad windows with serene and satisfied face, and no
+               question on <hi rend="style(italics)">her</hi> lips. I awoke to an answered question,
+               to Nature and daylight. The snow lying deep on the earth dotted with young pines, and
+               the very slope of the hill on which my house is placed, <app xml:id="walc16-app-0003">
+                  <lem>seemed</lem>
+                  <rdg wit="#wc_f1">
+                     <del>seeming</del>
+                     <add rendition="pencil">seemed</add>
+                  </rdg>
+               </app> to say, Forward! Nature puts no question and answers none <app xml:id="walc16-app-0004">
+                  <lem>which we mortals ask.</lem>
+                  <rdg wit="#wc_f1">
+                     <add>which we mortals ask</add>.</rdg>
+               </app> She has long ago taken her resolution. "O Prince, our eyes contemplate with
+               admiration and transmit to the soul the wonderful and varied spectacle of this
+               universe. The night veils without doubt a part of this glorious creation; but day
+               comes to reveal to us this great work, which extends from earth even into the plains
+               of the ether."<anchor type="hn" xml:id="hn-16-002"/>
+            </p>
+
+            <p n="2" change="#wc_0f">
+               <seg n="2a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 2a written: F; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">2a</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note> Then to my morning work. First I take an axe and <app xml:id="walc16-app-0005">
+                     <lem>pail</lem>
+                     <rdg wit="#wc_f1">bucket </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>bucket</del>
+                        <add rendition="pencil">ail</add>
+                     </rdg>
+                  </app> and go in search of water, if that be not a dream. After a cold and snowy
+                  night it needed a divining rod to find it.</seg>
+               <seg n="2b" change="#wc_0g">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 2b written: G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">2b</seg>
+                        <seg type="written">G</seg>
+                     </ab>
+                     <ab change="#wc_0g">The Pond in Winter 2b is added on a partial leaf.</ab>
+                  </note> Every winter the liquid and trembling surface of the pond, which was so
+                  sensitive to every<app xml:id="walc16-app-0007">
+                     <lem>breath,</lem>
+                     <rdg wit="#wc_0g">breath <del>that was breathed in it</del>
+                     </rdg>
+                  </app> and reflected every light and shadow, becomes solid to the depth of a foot
+                     <app xml:id="walc16-app-0008">
+                     <lem>or a foot and a half,</lem>
+                     <rdg wit="#wc_0g"><!--[not in ms.]--></rdg>
+                  </app>
+                  <app xml:id="walc16-app-0009">
+                     <lem>that it will</lem>
+                     <rdg wit="#wc_0g">
+                        <del>that it would</del>
+                        <del>
+                           <add>as to</add>
+                        </del>
+                        <add rendition="pencil">that it will</add>
+                     </rdg>
+                  </app> support the heaviest teams, and perchance the snow covers it to an equal
+                  depth, and it is not to be distinguished from any level field. <app xml:id="walc16-app-0010">
+                     <lem>Like the marmots in the surrounding hills, it<anchor type="hn" xml:id="hn-16-003"/> closes its eye-lids and becomes
+                        dormant for three months or more.</lem>
+                     <rdg wit="#wc_0g">
+                        <del>Thus</del> like the marmots in the surrounding hills, it <del>too</del>
+                        closes its eyelids &amp; becomes partially dormant <add rendition="pencil">for 3 months </add>
+                        <del>and</del>
+                        <add rendition="pencil">or</add> more</rdg>
+                  </app>
+               </seg>
+               <seg n="2c" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 2c written: F; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">2c</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">n the original version of the passage <quote>I cut my way …
+                           kneeling to drink, I</quote>, "I" and "my" were originally "you" and
+                        "your." The second-person pronouns were canceled, and the first-person
+                        pronouns were interlined in pencil.</ab>
+                  </note> Standing on the snow-covered plain, as if in a pasture amid the hills, I
+                  cut my way first through a foot of snow, and then a foot of ice, and open a window
+                  under my feet, where, kneeling to drink, I look down into the quiet parlor of the
+                  fishes, pervaded by a softened light as through a window of ground glass, with its
+                  bright sanded floor the same as in summer; there a perennial waveless serenity
+                  reigns as in the amber twilight sky, corresponding to the cool and even
+                  temperament of<app xml:id="walc16-app-0012">
+                     <lem>the</lem>
+                     <rdg wit="#wc_f2">
+                        <del>the</del>
+                        <add>its</add>
+                     </rdg>
+                  </app> inhabitants. Heaven is under our feet as well as over our heads. </seg>
+            </p>
+
+            <p n="3" change="#wc_0a">
+               <seg n="3a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 3a written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">3a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0a">The Pond in Winter 3a is followed by four missing leaves
+                     (#193-199), Spring 1c, The Ponds 13, and The Pond in Winter 6a.</ab>
+               </note> Early in the morning, while all things are crisp with
+                  frost, <app xml:id="walc16-app-0014">
+                     <lem>men come</lem>
+                     <rdg wit="#wc_0a">come men </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>come</del> men <add rendition="pencil">come</add>
+                     </rdg>
+                  </app> with fishing reels and slender <app xml:id="walc16-app-0015">
+                     <lem>lunch,</lem>
+                     <rdg wit="#wc_0a">lunch—men of unquestionable faith </rdg>
+                     <rdg wit="#wc_0f">lunch, <del>men of unquestionable faith</del>
+                     </rdg>
+                  </app> and let down their fine lines through the snowy field to take pickerel and
+                  perch; <app xml:id="walc16-app-0016">
+                     <lem>wild men, who instinctively follow other fashions and trust other
+                        authorities than their townsmen, and by their goings and comings stitch
+                        towns together in parts where else they would be ripped. They</lem>
+                     <rdg wit="#wc_0a">Who pursue their trade with as much self-respect as any
+                        mechanic or farmer does his—wisely taught by their instinct to follow other
+                        fashions and trust other authorities than their townsmen. Wild men who
+                        frequent the river meadows and solitary ponds in the horizon—connecting
+                        links between towns—who in the goings &amp; comings stitch towns together in
+                        parts where they would be ripped and with the hunter race prevent wild
+                        animals from multiplying.—Who </rdg>
+                     <rdg wit="#wc_0f">wisely taught by their instinct <add rendition="pencil">some
+                           of them</add> to follow other fashions, and trust other authorities than
+                        their townsmen,—<del>I do not speak of the fishermen of a day,—</del> wild
+                        men who by their goings &amp; comings stitch towns together in parts where
+                           <add rendition="pencil">else</add> they would <del>else</del> be
+                           ripped<del>, and with the hunter race prevent wild animals from
+                           multiplying. Who</del>
+                        <add rendition="pencil">They</add>
+                     </rdg>
+                  </app> sit and eat their luncheon in stout fear-naughts<anchor type="hn" xml:id="hn-16-004"/> on the dry oak leaves on the <app xml:id="walc16-app-0017">
+                     <lem>shore,</lem>
+                     <rdg wit="#wc_0a">shore of the pond </rdg>
+                     <rdg wit="#wc_0f">shore <del>of the pond</del>
+                     </rdg>
+                  </app> as wise in natural lore as the citizen is in <app xml:id="walc16-app-0018">
+                     <lem>artificial.</lem>
+                     <rdg wit="#wc_0f">artificial. <del>Their unconscious yet intimate knowledge of
+                           natural history would make a professed naturalist envious.</del>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="3b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 3b written: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">3b</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                  </note> They never consulted with books, and know and can tell much less than they
+                  have done. The things which<app xml:id="walc16-app-0019">
+                     <lem>they</lem>
+                     <rdg wit="#wc_0f">
+                        <del>these men</del>
+                        <add rendition="pencil">they</add>
+                     </rdg>
+                  </app> practise are said not yet to be known. Here is one fishing for pickerel
+                  with grown perch for bait. You look into his pail with wonder as into a summer
+                  pond, as if he kept summer locked up at home, or knew where she had retreated.
+                  How, pray, did he get these in mid-winter? O, he got worms out of rotten logs
+                  since the ground froze, and so he caught them. His life itself passes deeper in
+                  Nature than the studies of the naturalist penetrate; himself a subject for the
+                  naturalist. The latter raises the moss and bark gently with his knife in search of
+                  insects; the former lays open logs to their core with his axe, and moss and bark
+                  fly far and wide. He gets his living by barking trees. Such a man has <app xml:id="walc16-app-0020">
+                     <lem>some</lem>
+                     <rdg wit="#wc_0f">
+                        <del>a</del>
+                        <add rendition="pencil">some</add>
+                     </rdg>
+                  </app> right to fish, and I love to see Nature carried out in him. The<app xml:id="walc16-app-0021">
+                     <lem>perch</lem>
+                     <rdg wit="#wc_0f">
+                        <del>pickerel</del>
+                        <add rendition="pencil">perch</add>
+                     </rdg>
+                  </app> swallows the grub-worm, the pickerel swallows the perch, and the fisherman
+                  swallows the pickerel; and so all the<app xml:id="walc16-app-0022">
+                     <lem>chinks</lem>
+                     <rdg wit="#wc_0f">chinks and crannies</rdg>
+                  </app> in the scale of being are filled.<anchor type="hn" xml:id="hn-16-005"/>
+               </seg>
+            </p>
+
+            <p n="4" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 4 written: F; rewritten: F, F, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F, F, G</seg>
+                  </ab>
+                  <ab change="#wc_0f">The Pond in Winter 4 follows The Pond in Winter 5. A fair copy of
+                     The Pond in Winter 4 was made in its present order.</ab>
+                  <ab change="#wc_0f #wc_0g">A fair copy was made of only <quote>primitive mode which
+                        some ruder fisherman … half way round the pond</quote>.</ab>
+               </note>
+               <app xml:id="walc16-app-0023">
+                  <lem>When I strolled around the pond in misty weather I was sometimes amused by
+                     the</lem>
+                  <rdg wit="#wc_f1">Sometimes in <del>my</del>
+                     <add>a</add> stroll round the pond I <del>was</del>
+                     <add rendition="pencil">am</add> amused to observe the very </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>Sometimes in a stroll</del>
+                     <add rendition="pencil">Frequently when in such weather I strolled</add> round
+                     the pond I <del>am</del>
+                     <add rendition="pencil">was</add> amused to observe the very</rdg>
+               </app> primitive mode which <app xml:id="walc16-app-0024">
+                  <lem>some</lem>
+                  <rdg wit="#wc_f2">some <add rendition="pencil">yet</add>
+                  </rdg>
+               </app> ruder fisherman<app xml:id="walc16-app-0025">
+                  <lem>had</lem>
+                  <rdg wit="#wc_f1">
+                     <del>had</del>
+                     <add>has</add>
+                  </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>has</del>
+                     <add>had</add>
+                  </rdg>
+               </app> adopted. <app xml:id="walc16-app-0026">
+                  <lem>He would perhaps have placed alder branches over the narrow holes in the ice,
+                     which were four or five rods apart and an equal distance from the shore,</lem>
+                  <rdg wit="#wc_f1">Over his holes cut 4 or 5 rods apart &amp; an equal distance
+                        <del>apart half way round the pond</del>
+                     <add>from the shore</add> he places an alder branch </rdg>
+                  <rdg wit="#wc_f2">: Over <del>his</del>
+                     <add rendition="pencil">the narrow</add> holes, <del>cut</del>
+                     <add rendition="pencil">in the ice</add> four or five rods apart, and an equal
+                     distance from the shore, he <del>places</del>
+                     <add rendition="pencil">would have placed perhaps</add> an alder branch </rdg>
+                  <rdg wit="#wc_f3">Over the narrow holes in the ice, four or five rods apart, and
+                     an equal distance from the shore he would perhaps have placed an alder branch </rdg>
+                  <rdg wit="#wc_0g">
+                     <add>He would perhaps have placed an alder branch</add> Over the narrow holes
+                     in the ice, <del>
+                        <add>which are</add>
+                     </del>
+                     <add rendition="pencil">which were</add> four or 5 rods apart, and an equal
+                     distance from the shore<del>, he would perhaps have placed an alder
+                        branch</del>
+                  </rdg>
+               </app> and having <app xml:id="walc16-app-0027">
+                  <lem>fastened</lem>
+                  <rdg wit="#wc_f1">
+                     <del>passed</del>
+                     <add>fastened</add>
+                  </rdg>
+               </app> the end of the line to a<app xml:id="walc16-app-0028">
+                  <lem>stick</lem>
+                  <rdg wit="#wc_f1">stick about two feet long </rdg>
+                  <rdg wit="#wc_f2">stick <del>about</del> two feet long </rdg>
+                  <rdg wit="#wc_f3 #wc_0g">stick two feet long</rdg>
+               </app> to prevent its being pulled through,<app xml:id="walc16-app-0029">
+                  <lem>have passed</lem>
+                  <rdg wit="#wc_f1">he passes </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>he passes</del>
+                     <add>have passed</add>
+                  </rdg>
+               </app> the slack line over a twig of the alder, a foot or more above the ice, and
+                  <app xml:id="walc16-app-0030">
+                  <lem>tied</lem>
+                  <rdg wit="#wc_f1">ties </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>ties</del>
+                     <add rendition="pencil">tied</add>
+                  </rdg>
+               </app> a dry oak leaf to it, which, being pulled down,<app xml:id="walc16-app-0031">
+                  <lem>would</lem>
+                  <rdg wit="#wc_f1">will </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>will</del>
+                     <add rendition="pencil">would</add>
+                  </rdg>
+               </app> show when he <app xml:id="walc16-app-0032">
+                  <lem>had</lem>
+                  <rdg wit="#wc_f1">has </rdg>
+                  <rdg wit="#wc_f2">
+                     <del>has</del>
+                     <add>had</add>
+                  </rdg>
+               </app> a bite. These <app xml:id="walc16-app-0033">
+                  <lem>alders loomed through the mist at regular intervals as you walked</lem>
+                  <rdg wit="#wc_f1">alder twigs sometimes dot the surface </rdg>
+                  <rdg wit="#wc_f2">alder twigs <del>sometimes dot the surface</del>
+                     <add rendition="pencil">
+                        <del>would</del> loom through the mist at regular intervals</add>
+                     <add>as I walked</add>
+                  </rdg>
+                  <rdg wit="#wc_f3">alder twigs loomed through the mist at regular intervals as I
+                     walked </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>alder twigs</del>
+                     <add rendition="pencil">alders</add> loomed through the mist at regular
+                     intervals as <del>1</del>
+                     <add>you</add> walked</rdg>
+               </app> half way round the pond. </p>
+
+            <p n="5" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 5 written: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">F</seg>
+                  </ab>
+               </note> Ah, the pickerel of Walden!<anchor type="hn" xml:id="hn-16-006"/>
+               <anchor type="hn" xml:id="hn-16-007"/> when I see them lying on the ice, or in the well which the
+               fisherman cuts in the ice, making a little hole to admit the <app xml:id="walc16-app-0034">
+                  <lem>water,</lem>
+                  <rdg wit="#wc_0f">water <add>golden and emerald</add>
+                  </rdg>
+               </app> I am always surprised by their rare beauty, as if they were fabulous <app xml:id="walc16-app-0035">
+                  <lem>fishes,</lem>
+                  <rdg wit="#wc_0f">fishes—<del>fresh water dolphins dauphins eldest sons of
+                        Walden</del>
+                  </rdg>
+               </app> they are so foreign to the streets, even to the woods, foreign as Arabia to
+               our Concord life. They possess a <app xml:id="walc16-app-0036">
+                  <lem>quite</lem>
+                  <rdg wit="#wc_0f"><!--[not in ms.]--></rdg>
+               </app> dazzling and transcendent beauty which separates them <app xml:id="walc16-app-0037">
+                  <lem>by a wide interval</lem>
+                  <rdg wit="#wc_0f">
+                     <del>far</del>
+                     <add>by a wide interval</add>
+                  </rdg>
+               </app> from the cadaverous cod and <app xml:id="walc16-app-0038">
+                  <lem>haddock</lem>
+                  <rdg wit="#wc_0f">haddock <del>at least two days old</del>
+                  </rdg>
+               </app> whose fame is trumpeted in our streets.<anchor type="hn" xml:id="hn-16-008"/>
+               <app xml:id="walc16-app-0039">
+                  <lem>They</lem>
+                  <rdg wit="#wc_0f">
+                     <del>handsome artlovers &amp; gems</del> —they</rdg>
+               </app> are not green like the pines, nor gray like the stones, nor blue like<app xml:id="walc16-app-0040">
+                  <lem>the sky;</lem>
+                  <rdg wit="#wc_0f">
+                     <add rendition="pencil">the</add> sky</rdg>
+               </app> but they have, to my <app xml:id="walc16-app-0041">
+                  <lem>eyes,</lem>
+                  <rdg wit="#wc_0f">eye</rdg>
+               </app> if possible, yet rarer colors, like <app xml:id="walc16-app-0042">
+                  <lem>flowers and</lem>
+                  <rdg wit="#wc_0f">
+                     <add>flowers and</add>
+                  </rdg>
+               </app> precious stones, as if they were the pearls, <app xml:id="walc16-app-0043">
+                  <lem>the animalized</lem>
+                  <rdg wit="#wc_0f">of this great shell—<del>some</del> solid opied &amp;
+                     animalized</rdg>
+               </app>
+               <hi rend="style(italics)">nuclei</hi> or crystals of the Walden water. They, of
+               course, are <app xml:id="walc16-app-0044">
+                  <lem>Walden all over and all through;</lem>
+                  <rdg wit="#wc_0f">
+                     <del>composed of Walden wholly</del>
+                     <add>Walden all over &amp; all through</add>
+                  </rdg>
+               </app> are <app xml:id="walc16-app-0045">
+                  <lem>themselves small</lem>
+                  <rdg wit="#wc_0f">
+                     <add>themselves small</add>
+                  </rdg>
+               </app> Waldens in the animal kingdom, <app xml:id="walc16-app-0046">
+                  <lem>Waldenses.</lem>
+                  <rdg wit="#wc_0f">
+                     <add>Waldenses perhaps dolphins</add>—dauphins eldest sons of Walden, for whose
+                     behalf this whole world is but a dauphin edition to study</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-16-009"/> It is surprising that <app xml:id="walc16-app-0047">
+                  <lem>they</lem>
+                  <rdg wit="#wc_0f">
+                     <del>these fishes</del>
+                     <add>fish</add>
+                  </rdg>
+               </app> are caught here,—that in this deep and capacious spring, far beneath the
+               rattling teams and chaises and tinkling sleighs that travel the Walden road, this
+               great gold and emerald fish swims. I never chanced to see its kind in any market; it
+               would be the cynosure of all eyes there. <app xml:id="walc16-app-0048">
+                  <lem>Easily,</lem>
+                  <rdg wit="#wc_0f">
+                     <add>Easily</add>,</rdg>
+               </app> with a few convulsive quirks, they give up their <app xml:id="walc16-app-0049">
+                  <lem>watery</lem>
+                  <rdg wit="#wc_0f">
+                     <del>diluted</del>
+                     <add>watery</add>
+                  </rdg>
+               </app> ghosts, like a mortal translated before his time to the<app xml:id="walc16-app-0050">
+                  <lem>thin</lem>
+                  <rdg wit="#wc_0f">
+                     <del>subtile</del>
+                     <add>thin</add>
+                  </rdg>
+               </app> air of heaven. 
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+
+            <p n="6" change="#wc_0a">
+               <seg n="6a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 6a written: A; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">6a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>
+                  <anchor type="hn" xml:id="hn-16-010"/>As I was desirous <app xml:id="walc16-app-0051">
+                     <lem>to recover</lem>
+                     <rdg wit="#wc_0a">of recovering</rdg>
+                  </app> the long lost bottom of Walden Pond,<anchor type="hn" xml:id="hn-16-011"/>
+                  <app xml:id="walc16-app-0052">
+                     <lem>I surveyed it carefully, before the ice broke up,</lem>
+                     <rdg wit="#wc_0a">
+                        <del>Before the ice broke up,</del> I surveyed it carefully, <add rendition="pencil">before the ice broke up</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc16-app-0053">
+                     <lem>early in ’46,</lem>
+                     <rdg wit="#wc_0a">
+                        <del>last winter</del>
+                        <add>early in 1846</add>
+                     </rdg>
+                  </app> with compass and chain and sounding <app xml:id="walc16-app-0054">
+                     <lem>line.</lem>
+                     <rdg wit="#wc_0a">line, and found it to contain a little over 51½ acres, and to
+                        be 102 feet deep in the middle </rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-16-012"/>
+               </seg>
+               <seg n="6b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 6b written: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">6b</seg>
+                        <seg type="written">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">The Pond in Winter 6b is apparently a fair copy of material on
+                        a missing leaf; <quote>-ably tight bottom at a not unreasonable,
+                           though</quote> was added in pencil at the bottom of the leaf.</ab>
+                  </note> There have been many stories told about the bottom, or rather no bottom,
+                  of this pond, which certainly had no foundation for themselves. It is remarkable
+                  how long men will believe in the bottomlessness of a pond without taking the
+                  trouble to sound <app xml:id="walc16-app-0056">
+                     <lem>it.</lem>
+                     <rdg wit="#wc_0f">it. <del>So is it with many imposing theories in whose dark
+                           waters concealing the <add>muddy</add> bottom, we see our own faces
+                           reflected—whose shallowness could easily be proved with the sounding line
+                           of reason</del>
+                     </rdg>
+                  </app> I have visited two such Bottomless Ponds<anchor type="hn" xml:id="hn-16-013"/> in one walk in <app xml:id="walc16-app-0057">
+                     <lem>this neighborhood.</lem>
+                     <rdg wit="#wc_0f">
+                        <del>Sudbury—Not to speak of the theories which I heard advanced</del>
+                        <add rendition="pencil">this neighborhood</add>
+                     </rdg>
+                  </app> Many have believed that Walden reached quite through to the other side of
+                  the globe.<anchor type="hn" xml:id="hn-16-014"/> Some who have lain flat on the ice
+                  for a long time, looking down through the illusive medium, perchance with watery
+                  eyes into the bargain, <app xml:id="walc16-app-0058">
+                     <lem>and</lem>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">and</add>
+                     </rdg>
+                  </app> driven to hasty conclusions by the fear of catching cold in their breasts,
+                  have seen vast holes "into which a load of hay might be driven," if there were
+                  anybody to drive <app xml:id="walc16-app-0059">
+                     <lem>it,</lem>
+                     <rdg wit="#wc_0f">
+                        <add>it</add>,</rdg>
+                  </app> the undoubted source of the Styx<anchor type="hn" xml:id="hn-16-015"/> and
+                  entrance to the Infernal Regions from these<app xml:id="walc16-app-0060">
+                     <lem>parts.</lem>
+                     <rdg wit="#wc_0f">
+                        <del> parts.</del> Most men do not see much more in a pond than a certain
+                        "natural" who <del>lived</del>
+                        <add rendition="pencil">lives</add> in the skirts of the village, who
+                        accosted one of my visitors with—"You have been down to the pond. It looked
+                        pooty watery didn’t it?"</rdg>
+                  </app> Others have gone down from the village with a "fifty-six"<anchor type="hn" xml:id="hn-16-016"/> and a wagon
+                  load of inch rope, but yet have failed to find any bottom; for while the
+                  "fifty-six" was resting by the way, they were paying out the rope in the vain
+                  attempt to fathom their truly <app xml:id="walc16-app-0061">
+                     <lem>immeasurable capacity for marvellousness. But</lem>
+                     <rdg wit="#wc_0f">
+                        <del>measureless</del>
+                        <add>measurable</add> capacity of marvellousness. <add rendition="pencil">But</add>
+                     </rdg>
+                  </app> I can assure my readers that Walden<anchor type="hn" xml:id="hn-16-017"/> has a reasonably tight bottom at a not
+                  unreasonable, though<app xml:id="walc16-app-0062">
+                     <lem>at an </lem>
+                     <rdg wit="#wc_0f"><!--[not in ms.]--></rdg>
+                  </app>
+               </seg>
+               <seg n="6c" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 6c written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">6c</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                  </note> unusual, <app xml:id="walc16-app-0063">
+                     <lem>depth.</lem>
+                     <rdg wit="#wc_0e">depth, notwithstanding a little bilge water in the hold, and
+                        probably a good deal of that has spattered in, or run in over the edge</rdg>
+                  </app> I fathomed it easily with a cod-line and a stone weighing<app xml:id="walc16-app-0064">
+                     <lem>about</lem>
+                     <rdg wit="#wc_0e">
+                        <add> about</add>
+                     </rdg>
+                  </app> a pound and a half, and could tell <app xml:id="walc16-app-0065">
+                     <lem>accurately</lem>
+                     <rdg wit="#wc_0e">exactly</rdg>
+                  </app> when the stone left the bottom, by having to pull so much harder before the
+                  water got underneath to<app xml:id="walc16-app-0066">
+                     <lem>help</lem>
+                     <rdg wit="#wc_0e">
+                        <del>assist</del>
+                        <add rendition="pencil">help</add>
+                     </rdg>
+                  </app> me. The greatest depth was exactly one hundred and two feet;<anchor type="hn" xml:id="hn-16-018"/> to which may be added the five feet
+                  which it has risen since, making one hundred and seven. This is a remarkable depth
+                  for so small an area; yet not an inch of it can be spared by the imagination. What
+                  if all ponds were shallow? Would it not react on the minds of men? I am thankful
+                  that this pond was made deep and pure for a symbol. While men believe in the
+                  infinite some ponds will be thought<app xml:id="walc16-app-0067">
+                     <lem>to be</lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+                  </app> bottomless. </seg>
+            </p>
+
+            <p n="7" change="#wc_0a">
+               <seg n="7a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 7a written: A; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">7a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+               </note> A factory owner,<anchor type="hn" xml:id="hn-16-019"/> hearing what depth I had found, thought
+                  that it could not be true, for, <app xml:id="walc16-app-0068">
+                     <lem>judging from his acquaintance</lem>
+                     <rdg wit="#wc_0e">as he was acquainted</rdg>
+                  </app> with dams, sand would not lie at so steep an angle. But the deepest ponds
+                  are not so deep in proportion to their <app xml:id="walc16-app-0069">
+                     <lem>area as most</lem>
+                     <rdg wit="#wc_0a"> length &amp; breadth as men</rdg>
+                  </app> suppose, and, if <app xml:id="walc16-app-0070">
+                     <lem>drained,</lem>
+                     <rdg wit="#wc_0a">drained off </rdg>
+                     <rdg wit="#wc_0e">drained <del>off</del>
+                     </rdg>
+                  </app> would not leave very remarkable valleys. They are not <app xml:id="walc16-app-0071">
+                     <lem>like cups between the hills; for this one,</lem>
+                     <rdg wit="#wc_0a">shaped like a cup. This</rdg>
+                  </app> which is so<app xml:id="walc16-app-0072">
+                     <lem>unusually</lem>
+                     <rdg wit="#wc_0a">remarkably </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>remarkably</del>
+                        <add rendition="pencil">unusually</add>
+                     </rdg>
+                  </app> deep for its area, appears in a <app xml:id="walc16-app-0073">
+                     <lem>vertical section through its centre</lem>
+                     <rdg wit="#wc_0a">profile section of its bottom which I made </rdg>
+                     <rdg wit="#wc_0e">vertical section through its center, <del>showing a profile
+                           of the bottom &amp; surface,</del>
+                     </rdg>
+                  </app> not deeper than a shallow plate.</seg>
+               <seg n="7b" change="#wc_0d">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 7b written: D; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">7b</seg>
+                        <seg type="written">D</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">A fair copy was made of only <quote>–serves, "If we could have
+                           seen it … compared with its breadth</quote>.</ab>
+                  </note> Most ponds, <app xml:id="walc16-app-0074">
+                     <lem>emptied,</lem>
+                     <rdg wit="#wc_0d">being emptied</rdg>
+                  </app> would leave a meadow no more hollow than we frequently see. <app xml:id="walc16-app-0075">
+                     <lem>William</lem>
+                     <rdg wit="#wc_0d"><!--[not in ms.]--></rdg>
+                  </app> Gilpin, who is so admirable <app xml:id="walc16-app-0076">
+                     <lem>in all that relates to</lem>
+                     <rdg wit="#wc_0d">
+                        <del>a describer of</del>
+                        <add rendition="pencil">in all that relates to</add>
+                     </rdg>
+                  </app> landscapes, and usually so correct, standing at the head of Loch Fyne, in
+                  Scotland, which he describes as "a bay of salt water, sixty or seventy fathoms
+                  deep, four miles in breadth," and about fifty miles long, surrounded by mountains,
+                  observes, "If we could have seen it immediately after the diluvian crash, or
+                  whatever convulsion of Nature occasioned it, before the waters gushed in, what a
+                  horrid chasm must it have appeared!<anchor type="hn" xml:id="hn-16-020"/>
+                  <quote>
+                     <lg>
+                        <l>So high as heaved the tumid hills, so low </l>
+                        <l>Down sunk a hollow bottom, broad, and deep, </l>
+                        <l>Capacious bed of waters—."</l>
+                     </lg>
+                  </quote>
+                  <anchor type="hn" xml:id="hn-16-021"/> But if, <app xml:id="walc16-app-0077">
+                     <lem>using the shortest diameter of Loch Fyne,</lem>
+                     <rdg wit="#wc_0d">
+                        <add>using the shortest diameter of Loch Fyne</add>,</rdg>
+                  </app> we apply these proportions to Walden, which, as we have seen, appears
+                  already in a<app xml:id="walc16-app-0078">
+                     <lem>vertical</lem>
+                     <rdg wit="#wc_0d">
+                        <del>transverse</del>
+                        <add rendition="pencil">vertical</add>
+                     </rdg>
+                  </app> section only like a shallow plate, it will appear four times as shallow. So
+                  much for the <hi rend="italic">increased</hi> horrors of the chasm of Loch Fyne
+                  when emptied. No doubt many a smiling valley with its<app xml:id="walc16-app-0079">
+                     <lem>stretching</lem>
+                     <rdg wit="#wc_0d">
+                        <del>extended</del>
+                        <add rendition="pencil">stretching</add>
+                     </rdg>
+                  </app> cornfields occupies exactly such a "horrid chasm," from which the waters
+                  have receded, though it requires the insight <app xml:id="walc16-app-0080">
+                     <lem>and the far sight</lem>
+                     <rdg wit="#wc_0d">
+                        <add rendition="pencil">and the far sight</add>
+                     </rdg>
+                  </app> of the geologist to convince the unsuspecting inhabitants of <app xml:id="walc16-app-0081">
+                     <lem>this fact. Often</lem>
+                     <rdg wit="#wc_0d">the fact. I presume that I have seen many a village situated
+                        in the midst of a plain levelled by water where </rdg>
+                     <rdg wit="#wc_0f">this fact. <del>I presume that </del>
+                        <del>I have seen</del>
+                        <add>there is</add> many a village situated in the midst of a plain levelled
+                        by water where <add>Often </add>
+                     </rdg>
+                  </app> an inquisitive eye<app xml:id="walc16-app-0082">
+                     <lem>may</lem>
+                     <rdg wit="#wc_0d">might still </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>might still</del>
+                        <add>may</add>
+                     </rdg>
+                  </app> detect the shores of a primitive lake in the low horizon hills, and no
+                  subsequent elevation of the plain <app xml:id="walc16-app-0083">
+                     <lem>has been</lem>
+                     <rdg wit="#wc_0d">was </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>was</del>
+                        <add>
+                           <del>on which he stands</del> have been</add>
+                     </rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-16-022"/>
+                  necessary to conceal their <app xml:id="walc16-app-0084">
+                     <lem>history.</lem>
+                     <rdg wit="#wc_0d">
+                        <del>history</del>
+                        <del>
+                           <add>ancient use</add>
+                        </del>
+                        <add>history</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc16-app-0085">
+                     <lem>But it is easiest, as they who work on the highways know,</lem>
+                     <rdg wit="#wc_0d">
+                        <del>But they who work on the highway know that it is easiest</del>
+                        <add rendition="pencil">But</add>
+                        <add>it is easiest as they who work on the highways know</add>
+                     </rdg>
+                  </app> to find the hollows by the puddles after a shower. The <app xml:id="walc16-app-0086">
+                     <lem>amount of it</lem>
+                     <rdg wit="#wc_0d">
+                        <del>fact</del>
+                        <add rendition="pencil">truth</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>truth</del>
+                        <add>amount of it</add>
+                     </rdg>
+                  </app> is, the imagination, give it the least license, dives deeper and soars
+                  higher than Nature goes. <app xml:id="walc16-app-0087">
+                     <lem>So, probably, the depth of the ocean will be found to be very
+                        inconsiderable compared with its breadth.</lem>
+                     <rdg wit="#wc_0d"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add>So, probably, the depth of the ocean will be found to be very
+                           inconsiderable compared with its breadth</add>. So, probably, the depth
+                        of the ocean will be found to be very inconsiderable <del>in
+                           comparison</del>
+                        <add>compared</add> with its breadth <del>or the diameter of the globe</del>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="8" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 8 written: A; rewritten: E, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">8</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, F</seg>
+                  </ab>
+                  <ab change="#wc_0a">The Pond in Winter 8 ends at <quote>… serving the opposite shore,
+                        Cape</quote>. Three missing leaves (#203-207) follow.</ab>
+               </note> As I sounded through the ice I could determine the shape of the bottom with
+               greater accuracy than is possible in <app xml:id="walc16-app-0088">
+                  <lem>surveying</lem>
+                  <rdg wit="#wc_0a"><!--[not in ms.]--></rdg>
+               </app> harbors which do not freeze over, and I was <app xml:id="walc16-app-0089">
+                  <lem>surprised</lem>
+                  <rdg wit="#wc_0a">astonished </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>astonished</del>
+                     <add>surprised</add>
+                  </rdg>
+               </app> at its general regularity. In the <app xml:id="walc16-app-0090">
+                  <lem>deepest part there are several acres more level than almost</lem>
+                  <rdg wit="#wc_0a">
+                     <del>middle</del>
+                     <add>deepest part</add> it was more level than </rdg>
+                  <rdg wit="#wc_0e">deepest part it is more level than </rdg>
+                  <rdg wit="#wc_0f">deepest part <del>it is</del>
+                     <add>there are several acres</add> more level than <add>almost</add>
+                  </rdg>
+               </app> any field which is exposed to the sun <app xml:id="walc16-app-0091">
+                  <lem>wind and</lem>
+                  <rdg wit="#wc_0a">and wind and the</rdg>
+               </app> plough. In one instance, on a line arbitrarily chosen, <app xml:id="walc16-app-0092">
+                  <lem>the depth</lem>
+                  <rdg wit="#wc_0a #wc_0e #wc_0f">it</rdg>
+               </app> did not vary more than one foot in thirty rods; and generally, near the
+               middle, I could calculate the variation for each one hundred feet in any direction
+               beforehand within <app xml:id="walc16-app-0093">
+                  <lem>three or four</lem>
+                  <rdg wit="#wc_0a #wc_0e">a few</rdg>
+               </app> inches. Some are accustomed to speak of deep and dangerous holes <app xml:id="walc16-app-0094">
+                  <lem>even in quiet sandy ponds like this, but the effect of water under these
+                     circumstances is to level all inequalities.</lem>
+                  <rdg wit="#wc_0a">in running streams and ponds—but these are contrary to the law
+                     of nature, the tendency of water to level all inequalities unless there are
+                     rocks in the way. Indeed </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>in running streams</del> even in quiet <add>sandy</add> ponds <add>like
+                        this</add>, but these would generally speaking be contrary to the laws of
+                     nature, the effect of water under those circumstances being to level all
+                     inequalities. Indeed </rdg>
+                  <rdg wit="#wc_0f">even in quiet sandy ponds like this, but <del>these would,
+                        generally speaking, be contrary to the laws of nature,</del> the effect of
+                     water under these circumstances <del>being</del>
+                     <add>is</add> to level all inequalities. <del>Indeed</del>
+                  </rdg>
+               </app> The regularity of the bottom and its conformity to the shores and the range of
+               the neighboring hills<app xml:id="walc16-app-0095">
+                  <lem>were</lem>
+                  <rdg wit="#wc_0a #wc_0e #wc_0f">was</rdg>
+               </app> so perfect that a distant promontory betrayed itself<app xml:id="walc16-app-0096">
+                  <lem>in</lem>
+                  <rdg wit="#wc_0a">by</rdg>
+               </app> the soundings <app xml:id="walc16-app-0097">
+                  <lem>quite across the pond,</lem>
+                  <rdg wit="#wc_0a">even in the middle </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>even in the middle</del>
+                     <add rendition="pencil">quite across the pond</add>
+                  </rdg>
+               </app> and its direction<app xml:id="walc16-app-0098">
+                  <lem>could be</lem>
+                  <rdg wit="#wc_0a">was</rdg>
+               </app> determined by observing the opposite shore. Cape becomes bar, and plain shoal,
+               and valley and gorge deep water and channel. </p>
+
+            <p n="9" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 9 written: E; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note> When I had mapped the pond by the scale of ten rods to an inch, and put down
+               the soundings, more than a hundred in all, <app xml:id="walc16-app-0099">
+                  <lem>I observed this remarkable coincidence.</lem>
+                  <rdg wit="#wc_0e">
+                     <add>I observed this singular coincidence pointing to a general law</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">I observed this <del>singular</del>
+                     <add>remarkable</add> coincidence <del>pointing to a general law</del>
+                  </rdg>
+               </app> Having noticed that the number indicating the greatest depth was <app xml:id="walc16-app-0100">
+                  <lem>apparently in</lem>
+                  <rdg wit="#wc_0e">
+                     <del>near</del>
+                     <add rendition="pencil">apparently in</add>
+                  </rdg>
+               </app> the centre of the map, I laid a <app xml:id="walc16-app-0101">
+                  <lem>rule</lem>
+                  <rdg wit="#wc_0e">
+                     <del>ruler</del>
+                     <add rendition="pencil">rule</add>
+                  </rdg>
+               </app> on the map lengthwise, and then breadthwise, and found, to my surprise, that
+               the line of greatest length intersected the line of greatest breadth <hi rend="style(italics)">exactly</hi> at the point of greatest depth, <app xml:id="walc16-app-0102">
+                  <lem>notwithstanding that the middle is so nearly level, the outline of the pond
+                     far from regular,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>with mathematical accuracy for aught I could see</del>
+                     <add>notwithstanding that the middle was so nearly level &amp;</add> though the
+                     outline of the pond <del>quite irregular</del>
+                     <add>far from regular</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">notwithstanding that the middle <del>was</del>
+                     <add>is</add> so nearly level, <del>and though</del> the outline of the pond
+                     far from regular</rdg>
+               </app> and the extreme length and breadth were got by measuring into the coves; and I
+               said to myself, Who knows but this hint would conduct to the deepest part of the
+               ocean as well as of a <app xml:id="walc16-app-0103">
+                  <lem>pond or</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add>pond or</add>
+                  </rdg>
+               </app> puddle? <app xml:id="walc16-app-0104">
+                  <lem>Is not this the rule also for the height of mountains, regarded as the
+                     opposite of valleys?</lem>
+                  <rdg wit="#wc_0e">This too should be the law for mountains, allowing, perhaps, for
+                     the greater prevalence of disturbing forces, for we may regard a pond as in
+                     many respects a hill reversed, and </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>This too should be the law for mountains, allowing, perhaps, for the
+                        greater prevalence of disturbing forces, for we may so regard a pond as, in
+                        many respects a hill reversed, &amp;</del>
+                     <add>Is not this the rule <add>also</add> for the height of mountains </add>
+                     <del>also</del>, regarded as the opposite of valleys?</rdg>
+               </app> We know that a hill is not highest at its narrowest <app xml:id="walc16-app-0105">
+                  <lem>part.</lem>
+                  <rdg wit="#wc_0e">
+                     <del>point</del>
+                     <add rendition="pencil">art</add>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="10" change="#wc_0e">
+               <seg n="10a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 10a written: E; rewritten: F, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">10a</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F, F</seg>
+                  </ab>
+               </note> Of five coves,<anchor type="hn" xml:id="hn-16-023"/> three, or all which had
+                  been sounded, were observed to have a bar quite across their mouths and deeper
+                  water within, so that the bay <app xml:id="walc16-app-0106">
+                     <lem>tended to be an expansion of water within the land not only horizontally
+                        but vertically, and to form a basin or independent pond,</lem>
+                     <rdg wit="#wc_0e">not only tended to be an expansion of water within the land
+                           <del>superficially but also a basin</del>
+                        <add rendition="pencil">horizontally but also vertically &amp; to form a
+                           basin or independent pond</add>
+                     </rdg>
+                     <rdg wit="#wc_f1">not only tended to be an expansion of water within the land
+                        horizontally, but also vertically &amp; to form a basin or independent pond </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>not only</del> tended to be an expansion of water within the land
+                           <add>not only</add> horizontally, but <del>also</del> vertically, &amp;
+                        to form a basin or independent pond</rdg>
+                  </app> the direction of the two capes showing the course of the <app xml:id="walc16-app-0107">
+                     <lem>bar.</lem>
+                     <rdg wit="#wc_0e">bar. This rule too is universal. I believe that </rdg>
+                     <rdg wit="#wc_f1">bar. <del>This rule too is universal. I believe that</del>
+                     </rdg>
+                  </app> Every harbor </seg>
+               <seg n="10b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 10b written: F; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">10b</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                  </note>
+                  <app xml:id="walc16-app-0108">
+                     <lem>on the sea-coast, also,</lem>
+                     <rdg wit="#wc_f1">
+                        <add rendition="pencil">on the seacoast</add>
+                        <add>also</add>
+                     </rdg>
+                  </app> has its bar at its entrance. In proportion as the mouth of the cove was
+                  wider compared with its length, the water over the bar was deeper compared with
+                  that in the basin. Given, then, the length and breadth of the cove, and the<app xml:id="walc16-app-0109">
+                     <lem>character</lem>
+                     <rdg wit="#wc_f1">
+                        <add rendition="pencil">height and</add> character <del>and height</del>
+                     </rdg>
+                     <rdg wit="#wc_f2">height and character</rdg>
+                  </app> of the surrounding shore, and <app xml:id="walc16-app-0110">
+                     <lem>you have</lem>
+                     <rdg wit="#wc_f1">
+                        <del>we have</del>
+                        <add>I have found that I had</add>
+                     </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>I found that I had</del>
+                        <add rendition="pencil">you have</add>
+                     </rdg>
+                  </app> almost elements enough to make out a formula for all cases. </seg>
+            </p>
+
+            <p n="11" change="#wc_0a">
+               <seg n="11a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 11a written: F; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">11a</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc16-app-0111">
+                     <lem>In order</lem>
+                     <rdg wit="#wc_f1">Wishing </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>Wishing</del>
+                        <add>In order</add>
+                     </rdg>
+                  </app> to see how nearly I could guess, with this experience, at the deepest point
+                  in a</seg>
+               <seg n="11b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 11b written: E; rewritten: F, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">11b</seg>
+                        <seg type="written">E</seg>
+                        <seg type="rewritten">F, F</seg>
+                     </ab>
+                  </note> pond, by observing the outlines of its surface and the character of its
+                  shores alone, I made a plan of White Pond, which contains about <app xml:id="walc16-app-0112">
+                     <lem>forty-one</lem>
+                     <rdg wit="#wc_0e #wc_f1">forty </rdg>
+                     <rdg wit="#wc_f2">
+                        <del>forty</del>
+                        <add>forty-one</add>
+                     </rdg>
+                  </app> acres, and, like this, has no island in it, nor any visible inlet or
+                  outlet; and as the line of greatest breadth fell very near the line of least
+                     breadth,<app xml:id="walc16-app-0113">
+                     <lem> where two opposite capes approached each other and two opposite bays
+                        receded, I ventured to mark a point a short distance</lem>
+                     <rdg wit="#wc_0e">
+                        <del>I marked a point still further</del>
+                        <add>where two opposite capes approached each other</add>
+                        <add rendition="pencil">&amp; 2 opposite bays receded I ventured to mark a
+                           point a short distance</add>
+                     </rdg>
+                  </app> from the latter <app xml:id="walc16-app-0114">
+                     <lem>line,</lem>
+                     <rdg wit="#wc_0e #wc_f1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_f2">
+                        <add>line</add>,</rdg>
+                  </app> but still on the line of greatest length, as the deepest. <app xml:id="walc16-app-0115">
+                     <lem>The deepest part</lem>
+                     <rdg wit="#wc_0e">
+                        <del>
+                           <add>On sounding</add>
+                        </del> the deepest point </rdg>
+                     <rdg wit="#wc_f1">The deepest point </rdg>
+                     <rdg wit="#wc_f2">The deepest <del>point</del>
+                        <add rendition="pencil">art</add>
+                     </rdg>
+                  </app> was found to be within one hundred feet of <app xml:id="walc16-app-0116">
+                     <lem>this, still farther in the direction to which I had inclined, and was only
+                        one foot deeper, namely, sixty feet.</lem>
+                     <rdg wit="#wc_0e">
+                        <del>this</del>
+                        <del>
+                           <add>the one indicated yet proves that I had made the right kind of
+                              correction</add>
+                        </del>
+                        <add>this</add>
+                        <add rendition="pencil">but still farther in the direction which I had
+                           chosen</add> and <add>
+                           <del>there the depth</del> was only</add> one foot <del>greater</del>
+                        <add rendition="pencil">deeper than the former</add>, namely 60 feet. <del>
+                           <add>Even from the deepest parts of Walden I drew up on my sounding stone
+                              a bright green weed which was very agreeable to behold in
+                              midwinter</add>
+                        </del>
+                     </rdg>
+                     <rdg wit="#wc_f1">this, <del>but</del> still further in the direction which I
+                        had chosen, and <del>it was</del>
+                        <add rendition="pencil">was only</add> one foot deeper <del>than the
+                           former</del>, namely 60 feet </rdg>
+                     <rdg wit="#wc_f2">this, still farther in the direction <add>to</add> which I
+                        had <del>chosen</del>
+                        <add>inclined,</add> &amp; was only one foot deeper, namely, 60 feet</rdg>
+                  </app>
+                  <app xml:id="walc16-app-0117">
+                     <lem>Of course, a stream running through, or an island in the pond, would make
+                        the problem much more complicated.</lem>
+                     <rdg wit="#wc_0e #wc_f1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_f2">
+                        <add>Of course, a stream running through, or an island in the pond, would
+                           make the problem much more complicated</add>.</rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="12" change="#wc_0f">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 12 written: F; rewritten: F, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">12</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">F, F</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc16-app-0118">
+                  <lem>If</lem>
+                  <rdg wit="#wc_f1">
+                     <del>Of course</del> if</rdg>
+               </app> we knew all the laws of Nature, we should need only one fact, or the
+               description of one actual phenomenon, to infer all the particular results at that
+               point. <app xml:id="walc16-app-0119">
+                  <lem>Now we know only a few laws,</lem>
+                  <rdg wit="#wc_f1 #wc_f2">As it is we know only a few laws, though important ones </rdg>
+                  <rdg wit="#wc_f3">
+                     <del>As it is</del>
+                     <add>Now</add> we know only a few laws, <del>though important ones,</del>
+                  </rdg>
+               </app> and our result is vitiated, not, <app xml:id="walc16-app-0120">
+                  <lem>of course,</lem>
+                  <rdg wit="#wc_f1"><!--[not in ms.]--></rdg>
+               </app> by any confusion or irregularity in Nature, but by our ignorance of essential
+               elements in the calculation. <app xml:id="walc16-app-0121">
+                  <lem>Our notions of law and harmony are commonly confined to those instances
+                     which</lem>
+                  <rdg wit="#wc_f1 #wc_f2">We are wont to confine our notions of law and harmony to
+                     those instances only which </rdg>
+                  <rdg wit="#wc_f3">
+                     <del>We are wont to confine</del> our notions of law and harmony <add>are
+                        commonly confined</add> to those instances <del>only</del> which</rdg>
+               </app> we detect; but the harmony which results from a<app xml:id="walc16-app-0122">
+                  <lem>far</lem>
+                  <rdg wit="#wc_f1 #wc_f2">still </rdg>
+                  <rdg wit="#wc_f3">
+                     <del>still</del>
+                     <add>far</add>
+                  </rdg>
+               </app> greater number of seemingly conflicting, but really <app xml:id="walc16-app-0123">
+                  <lem>concurring,</lem>
+                  <rdg wit="#wc_f1 #wc_f2">harmonious </rdg>
+                  <rdg wit="#wc_f3">
+                     <del>harmonious</del>
+                     <add>concurring</add>
+                  </rdg>
+               </app> laws, which we have not detected, is still more wonderful. The particular laws
+               are as our points of view, as, to the traveller, a mountain outline varies with every
+               step, and it has an infinite number of profiles, though absolutely but one form. Even
+                  <app xml:id="walc16-app-0124">
+                  <lem>when cleft or bored through it is not</lem>
+                  <rdg wit="#wc_f1 #wc_f2">though cleft in twain or bored through, it cannot be </rdg>
+                  <rdg wit="#wc_f3">
+                     <del>though</del>
+                     <add>when</add> cleft <del>in twain</del> or bored through, it <del>cannot
+                        be</del>
+                     <add>is not</add>
+                  </rdg>
+               </app> comprehended in its entireness. </p>
+
+            <p n="13" change="#wc_0e">
+               <seg n="13a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 13a written: E; rewritten: F, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">13a</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F, G</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc16-app-0125">
+                     <lem>What I have observed of the pond is no less true in ethics. It is the law
+                        of average. Such a rule of the two diameters not only guides us toward the
+                        sun in the system and the heart in man,</lem>
+                     <rdg wit="#wc_0e">But as there is no exclusively physical nor exclusively moral
+                        law— <del>so</del> this is as true in ethics as in physics—that is it is the
+                        rule though not the exception. <del>It not only guides</del>
+                        <add rendition="pencil">Such a rule would not only guide</add> us
+                           <del>to</del>
+                        <add rendition="pencil">toward</add> the <del>heart in man &amp;</del> sun
+                        in the system <add rendition="pencil">&amp; the heart in man</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <add rendition="pencil">But what I have observed of the pond is no less true
+                           in morals.</add> Such a rule <del>would</del>
+                        <add>of the two diameters</add> not only <del>guide</del>
+                        <add rendition="pencil">guides</add> us toward the sun in the system, &amp;
+                        toward the heart in man </rdg>
+                     <rdg wit="#wc_0g">What I have observed of the pond is no less true in
+                           <del>morals</del>
+                        <add>ethics</add>. Such a rule of the two diameters not only guides us
+                        toward the sun in the system and the heart in man</rdg>
+                  </app> but draw lines through the length and breadth of the aggregate of a man’s
+                  particular daily behaviors and waves of life into his coves and inlets, and where
+                  they intersect will be the height or depth of his character.</seg>
+               <seg n="13b" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 13b written: F; rewritten: G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">13b</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                     <ab change="#wc_0f"> The Pond in Winter 13b follows The Pond in Winter 13d. </ab>
+                  </note>
+                  <app xml:id="walc16-app-0127">
+                     <lem>Perhaps we need only</lem>
+                     <rdg wit="#wc_0f">and perhaps we only need </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>
+                           <add>and</add> Perhaps</del> we only need</rdg>
+                  </app> to know how <app xml:id="walc16-app-0128">
+                     <lem>his shores</lem>
+                     <rdg wit="#wc_0f">a man’s shores</rdg>
+                  </app> trend and his adjacent country or circumstances, to <app xml:id="walc16-app-0129">
+                     <lem>infer</lem>
+                     <rdg wit="#wc_0g">infer <del>thus</del>
+                     </rdg>
+                  </app> his depth and concealed <app xml:id="walc16-app-0130">
+                     <lem>bottom.</lem>
+                     <rdg wit="#wc_0f">bottom. All this experience our daily intercourse supplies,
+                        and our instinct is continually applying the rule </rdg>
+                     <rdg wit="#wc_0g">bottom. <del>This experience our daily intercourse supplies,
+                           and our instinct is continually applying the rule</del>
+                     </rdg>
+                  </app>
+               </seg>
+               <seg n="13c" change="#wc_0g">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 13c written: G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">13c</seg>
+                        <seg type="written">G</seg>
+                     </ab>
+                     <ab change="#wc_0g">The Pond in Winter 13c follows The Pond in Winter 13d and
+                        precedes The Pond in Winter 13e.</ab>
+                  </note>
+                  <app xml:id="walc16-app-0131">
+                     <lem>If he is</lem>
+                     <rdg wit="#wc_0g">
+                        <del>Are we</del>
+                        <add rendition="pencil">Is he</add>
+                     </rdg>
+                  </app> surrounded by mountainous circumstances, an Achillean shore,<anchor type="hn" xml:id="hn-16-024"/>
+                  <app xml:id="walc16-app-0132">
+                     <lem>whose peaks overshadow and are reflected in his bosom,</lem>
+                     <rdg wit="#wc_0g">
+                        <del>to whose peaks we look up,</del>
+                        <add>whose peaks over-shadow</add> and <del>which</del> are reflected in
+                           <del>our bosoms</del>
+                        <add rendition="pencil">his bosom</add>
+                     </rdg>
+                  </app> they suggest a corresponding depth in<app xml:id="walc16-app-0133">
+                     <lem>him.</lem>
+                     <rdg wit="#wc_0g">
+                        <del>him</del>
+                        <add rendition="pencil">us</add>
+                     </rdg>
+                  </app> But a low and smooth shore proves<app xml:id="walc16-app-0134">
+                     <lem>him</lem>
+                     <rdg wit="#wc_0g">
+                        <del>him</del>
+                        <add rendition="pencil">us</add>
+                     </rdg>
+                  </app> shallow on that side. <app xml:id="walc16-app-0135">
+                     <lem>In our bodies,</lem>
+                     <rdg wit="#wc_0g">
+                        <del>So</del>
+                        <add>In our bodies</add>
+                     </rdg>
+                  </app> a bold projecting brow falls off to and indicates a corresponding depth of
+                     thought.<anchor type="hn" xml:id="hn-16-025"/>
+               </seg>
+               <seg n="13d" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 13d written: F; rewritten: G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">13d</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                     <ab change="#wc_0f">
+                        <quote>These inclinations are not whimsical … the ancient axes of
+                           elevation</quote> does not appear in the manuscript.</ab>
+                     <ab change="#wc_0g">The Pond in Winter 13d follows The Pond in Winter 13b and
+                        precedes The Pond in Winter 13c.</ab>
+                  </note>
+                  <app xml:id="walc16-app-0136">
+                     <lem>Also</lem>
+                     <rdg wit="#wc_0f">So <add rendition="pencil">too</add>
+                     </rdg>
+                  </app> there is a bar across the entrance of our every cove, or particular
+                  inclination; each is our harbor for a season, in which we are detained and
+                  partially land-locked. These inclinations are not whimsical <app xml:id="walc16-app-0137">
+                     <lem>usually,</lem>
+                     <rdg wit="#wc_0g">
+                        <del>
+                           <add>commonly</add>
+                        </del>
+                        <add rendition="pencil">usually</add>
+                     </rdg>
+                  </app> but their form, <app xml:id="walc16-app-0138">
+                     <lem>size,</lem>
+                     <rdg wit="#wc_0g">
+                        <del>and</del> size</rdg>
+                  </app> and direction are determined by the promontories of the shore, the ancient
+                  axes of elevation. </seg>
+               <seg n="13e" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 13e written: F; rewritten: G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">13e</seg>
+                        <seg type="written">F</seg>
+                        <seg type="rewritten">G</seg>
+                     </ab>
+                  </note> When this bar is gradually increased by storms, <app xml:id="walc16-app-0139">
+                     <lem>tides, or currents, or there is a subsidence of the waters, so that it
+                        reaches to the surface,</lem>
+                     <rdg wit="#wc_0f">or tides, or by sediment deposited by currents, so that it
+                        rises to the surface </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>or tides, or by sediment deposited by currents, so that it rises to the
+                           surface, or the same result is produced by the subsidence of the
+                           waters</del>
+                        <add>tides, or currents, or there is a subsidence of the waters, so that it
+                           reaches to the surface</add>
+                     </rdg>
+                  </app> that which was at first but an inclination in the shore in which a thought
+                  was harbored becomes an individual lake, cut off from the <app xml:id="walc16-app-0140">
+                     <lem>ocean,</lem>
+                     <rdg wit="#wc_0f">
+                        <del>dividual</del> ocean,—as from the entral polypus</rdg>
+                  </app> wherein the thought secures its own conditions, changes, <app xml:id="walc16-app-0141">
+                     <lem>perhaps,</lem>
+                     <rdg wit="#wc_0f">perchance </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>perchance</del>
+                        <add rendition="pencil">perhaps</add>
+                     </rdg>
+                  </app> from salt to fresh, becomes a sweet sea, dead sea, or a marsh. At the
+                  advent of each individual into this life, may we not <app xml:id="walc16-app-0142">
+                     <lem>suppose</lem>
+                     <rdg wit="#wc_0f">presume </rdg>
+                     <rdg wit="#wc_0g">
+                        <del>presume</del>
+                        <add>suppose</add>
+                     </rdg>
+                  </app> that such a bar has risen to the surface<app xml:id="walc16-app-0143">
+                     <lem>somewhere?</lem>
+                     <rdg wit="#wc_0f">somewhere, and the dry land appeared </rdg>
+                     <rdg wit="#wc_0g">somewhere<del>, and the dry land appeared</del>
+                     </rdg>
+                  </app> It is true, we are such <app xml:id="walc16-app-0144">
+                     <lem>poor</lem>
+                     <rdg wit="#wc_0f">poor &amp; timid</rdg>
+                  </app> navigators that our thoughts, for the most part, stand off and on upon a
+                  harborless coast, are conversant only with the bights of the bays of poesy, or
+                  steer for the public ports of entry, and go into the dry docks of science, where
+                  they merely refit for this world, and no natural currents concur to individualize
+                     them.<anchor type="hn" xml:id="hn-16-026"/>
+               </seg>
+            </p>
+
+            <p n="14" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 14 written: E; rewritten: F, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">14</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F, G</seg>
+                  </ab>
+                  <ab change="#wc_0e">
+                     <quote>One has suggested … carried through by the current</quote> is
+                     interlined.</ab>
+                  <ab change="#wc_0f">A fair copy was made of only <quote>As for the inlet or outlet …
+                        need soldering till they find</quote>.</ab>
+                  <ab change="#wc_0g">A fair copy was made of only <quote>As for the inlet or outlet …
+                        "leach hole" should be found</quote>.</ab>
+               </note> As for the inlet or outlet of <app xml:id="walc16-app-0145">
+                  <lem>Walden,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>the pond</del>
+                     <add>Walden</add>
+                  </rdg>
+               </app> I have not discovered any but rain and snow and evaporation, though <app xml:id="walc16-app-0146">
+                  <lem>perhaps,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>I have no doubt that</del>
+                     <add rendition="pencil">perhaps</add>
+                  </rdg>
+               </app> with a thermometer and <app xml:id="walc16-app-0147">
+                  <lem>a line,</lem>
+                  <rdg wit="#wc_0e #wc_0f">sounding line </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>sounding</del>
+                     <add>a</add> line</rdg>
+               </app>
+               <app xml:id="walc16-app-0148">
+                  <lem>such places may be found, for where</lem>
+                  <rdg wit="#wc_0e">
+                     <del>this can be done</del>
+                     <add>such places may be found</add>. Where</rdg>
+               </app> the water flows into the pond it will probably be coldest in summer and
+               warmest in<app xml:id="walc16-app-0149">
+                  <lem>winter.</lem>
+                  <rdg wit="#wc_0e">winter <del>, and it can easily be obtained from different parts
+                        of the bottom</del>
+                  </rdg>
+               </app> When the ice-men were at work here in ’46-7,<anchor type="hn" xml:id="hn-16-027"/>
+               <app xml:id="walc16-app-0150">
+                  <lem>the cakes sent to the shore were one day rejected by those who were stacking
+                     them up there, not being thick enough to lie side by side with the rest;
+                     and</lem>
+                  <rdg wit="#wc_0e #wc_0f"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0g">
+                     <add>the cakes sent to the shore were one day rejected by those who were
+                        stacking them up there, not being thick enough to lie side by side with the
+                        rest; and</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc16-app-0151">
+                  <lem>the cutters thus</lem>
+                  <rdg wit="#wc_0e #wc_0f">they </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>they</del>
+                     <add>the cutters thus</add>
+                  </rdg>
+               </app> discovered that the ice over a small space was two or three inches thinner
+               than elsewhere, which made them think that there was an inlet there. They also showed
+               me <app xml:id="walc16-app-0152">
+                  <lem>in another place</lem>
+                  <rdg wit="#wc_0e">
+                     <add>in another place</add>
+                  </rdg>
+               </app> what they thought was a "leach-hole," through which the pond leaked out under
+               a hill into a neighboring meadow, pushing me out on a cake of ice to see it. It was a
+               small <app xml:id="walc16-app-0153">
+                  <lem>cavity</lem>
+                  <rdg wit="#wc_0e">hole or cavity at the bottom </rdg>
+                  <rdg wit="#wc_0f">hole or cavity <del>at the bottom</del>
+                  </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>hole or</del> cavity</rdg>
+               </app> under ten feet of water; but I think <app xml:id="walc16-app-0154">
+                  <lem>that</lem>
+                  <rdg wit="#wc_0e #wc_0f"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0g">
+                     <add>that</add>
+                  </rdg>
+               </app> I can warrant the pond not to need soldering till they <app xml:id="walc16-app-0155">
+                  <lem>find</lem>
+                  <rdg wit="#wc_0e #wc_0f">can find </rdg>
+                  <rdg wit="#wc_0g">
+                     <del>can</del> find</rdg>
+               </app> a worse leak than that. <app xml:id="walc16-app-0156">
+                  <lem>One has suggested, that if such a "leach hole" should be found,</lem>
+                  <rdg wit="#wc_0e">If such a leach hole should be found there one has suggested
+                     that</rdg>
+               </app> its connection with the meadow, if any existed, might be proved by conveying
+               some colored powder or sawdust to the <app xml:id="walc16-app-0157">
+                  <lem>mouth of the hole,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>bottom of the pond</del>
+                     <add>mouth of the hole</add>
+                  </rdg>
+               </app> and then putting a strainer over the spring in the meadow, which would catch
+               some of the <app xml:id="walc16-app-0158">
+                  <lem>particles</lem>
+                  <rdg wit="#wc_0e">
+                     <del>powder</del>
+                     <add rendition="pencil">articles</add>
+                  </rdg>
+               </app> carried through by the current. </p>
+
+            <p n="15" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 15 written: E; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">15</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+                  <ab change="#wc_0e">The Pond in Winter 15 is followed by The Pond in Winter 19a.</ab>
+                  <ab change="#wc_0f">A fair copy was made of only -w<quote>hat like cutting a hole in
+                        the bottom … on the trees or hill-side</quote>. </ab>
+               </note>
+               <app xml:id="walc16-app-0159">
+                  <lem>While I was surveying,</lem>
+                  <rdg wit="#wc_0e">While surveying I observed that</rdg>
+               </app> the ice, which was <app xml:id="walc16-app-0160">
+                  <lem>sixteen inches</lem>
+                  <rdg wit="#wc_0e">more than a foot</rdg>
+               </app> thick, undulated under a slight wind like <app xml:id="walc16-app-0161">
+                  <lem>water.</lem>
+                  <rdg wit="#wc_0e">waves</rdg>
+               </app> It is well known that a level cannot be used on ice. At one rod from the shore
+               its greatest fluctuation, when observed by means of a level on land directed toward a
+               graduated staff on the ice, was three quarters of an inch, though the ice appeared
+               firmly attached to the shore. It was probably greater in the middle. t<app xml:id="walc16-app-0162">
+                  <lem>Who knows but if our instruments were delicate enough we might</lem>
+                  <rdg wit="#wc_0e">
+                     <del>Nicer instruments might perhaps</del>
+                     <add rendition="pencil">Who knows but if our instruments were nice enough we
+                        might</add>
+                  </rdg>
+               </app> detect an undulation in the crust of the earth?<anchor type="hn" xml:id="hn-16-028"/> When two legs of <app xml:id="walc16-app-0163">
+                  <lem>my level were</lem>
+                  <rdg wit="#wc_0e">the instrument <del>rested</del>
+                     <add>were</add>
+                  </rdg>
+               </app> on the shore and the third on the ice, and the sights were directed over the
+               latter, a rise or fall of the ice of an <app xml:id="walc16-app-0164">
+                  <lem>almost</lem>
+                  <rdg wit="#wc_0e">
+                     <add>almost</add>
+                  </rdg>
+               </app> infinitesimal amount made a difference of several feet on a tree across the
+                  <app xml:id="walc16-app-0165">
+                  <lem>pond.</lem>
+                  <rdg wit="#wc_0e">pond, and <del>this</del> suggested how I could easily calculate
+                     the slightest <del>conceivable</del> motion there and what would be absolute
+                     rest to most tests</rdg>
+               </app> When I began to cut holes for sounding, there were three or four inches of
+               water on the ice under a deep snow which had sunk it thus<app xml:id="walc16-app-0166">
+                  <lem>far;</lem>
+                  <rdg wit="#wc_0e">far though <del>the ice</del>
+                     <add>it</add> was 15 inches thick</rdg>
+               </app> but the water began immediately to run into these holes, and continued to run
+               for two days in deep streams, which wore away the ice on every side, and contributed
+               essentially, <app xml:id="walc16-app-0167">
+                  <lem>if not mainly,</lem>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">if not mainly</add>,</rdg>
+               </app> to dry the surface of the pond; for, as the water ran in, it raised and
+               floated the ice. This was <app xml:id="walc16-app-0168">
+                  <lem>somewhat</lem>
+                  <rdg wit="#wc_0e">
+                     <del>a little</del>
+                     <add>somewhat</add>
+                  </rdg>
+               </app> like cutting a hole in the bottom of <app xml:id="walc16-app-0169">
+                  <lem>a ship</lem>
+                  <rdg wit="#wc_0e">your ship </rdg>
+                  <rdg wit="#wc_0f">
+                     <del>your</del>
+                     <add>a</add> ship</rdg>
+               </app> to let the water out. When such holes <app xml:id="walc16-app-0170">
+                  <lem>freeze,</lem>
+                  <rdg wit="#wc_0e">freeze over</rdg>
+               </app> and a rain succeeds, and finally a new freezing forms a fresh smooth <app xml:id="walc16-app-0171">
+                  <lem>ice</lem>
+                  <rdg wit="#wc_0e">
+                     <del>surface</del>
+                     <add>ice</add>
+                  </rdg>
+               </app> over all, it is beautifully mottled internally by dark figures, shaped
+               somewhat like a spider's web,<app xml:id="walc16-app-0172">
+                  <lem>what you may call ice rosettes, produced by</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add> what you may call ice rosettes, produced by</add>
+                  </rdg>
+               </app> the channels worn by the water flowing from all sides to a <app xml:id="walc16-app-0173">
+                  <lem>centre.</lem>
+                  <rdg wit="#wc_0e">center. <add rendition="pencil">This is a very common phenomenon
+                        which one of my neighbors calls "rosettes"</add>
+                  </rdg>
+                  <rdg wit="#wc_0f">center. <del>This is a very common phenomenon which one of my
+                        neighbors calls "rosettes"</del>
+                  </rdg>
+               </app> Sometimes, <app xml:id="walc16-app-0174">
+                  <lem>also,</lem>
+                  <rdg wit="#wc_0e"><!--[not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0f">
+                     <add>also</add>,</rdg>
+               </app> when the ice was covered with shallow puddles, I saw a double shadow of
+               myself, one standing on the head of the other, one on the ice, the other on the <app xml:id="walc16-app-0175">
+                  <lem>trees or hill-side.</lem>
+                  <rdg wit="#wc_0e">
+                     <del>bank</del>
+                     <add>trees or hill side</add>
+                  </rdg>
+               </app>
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+
+            <p n="16" change="#wc_0a">
+               <seg n="16a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 16a written: A; rewritten: A, E, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">16a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">A, E, F</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc16-app-0176">
+                     <lem>While</lem>
+                     <rdg wit="#wc_a1">Here too in winter days—while</rdg>
+                  </app> yet it is cold January, and snow and ice are thick <app xml:id="walc16-app-0177">
+                     <lem>and solid,</lem>
+                     <rdg wit="#wc_a1"><!--[not in ms.]--></rdg>
+                  </app>
+                  <app xml:id="walc16-app-0178">
+                     <lem>the prudent landlord comes</lem>
+                     <rdg wit="#wc_a1 #wc_0e">comes the prudent landlord </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>comes</del> the prudent landlord <add>comes</add>
+                     </rdg>
+                  </app> from the village to get ice to cool his summer drink; impressively, even
+                  pathetically wise, to foresee the<app xml:id="walc16-app-0179">
+                     <lem>heat and thirst</lem>
+                     <rdg wit="#wc_a1">thirst and heat </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>thirst and</del> heat <add>and thirst</add>
+                     </rdg>
+                  </app> of July <app xml:id="walc16-app-0180">
+                     <lem>now</lem>
+                     <rdg wit="#wc_a1"><!--[not in ms.]--></rdg>
+                  </app> in January,—<app xml:id="walc16-app-0181">
+                     <lem>wearing a thick coat and mittens!</lem>
+                     <rdg wit="#wc_a1"><!--[not in ms.]--></rdg>
+                  </app> when so many things are not provided for. <app xml:id="walc16-app-0182">
+                     <lem>It may be that</lem>
+                     <rdg wit="#wc_a1"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0e">Perchance </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>Perchance</del>
+                        <add>It may be that</add>
+                     </rdg>
+                  </app> he lays up no treasures in this world which will cool his summer drink in
+                  the next.<anchor type="hn" xml:id="hn-16-029"/> He cuts and saws the solid pond,
+                  unroofs the house of fishes, and carts off their very element and air, held fast
+                     <app xml:id="walc16-app-0183">
+                     <lem>by </lem>
+                     <rdg wit="#wc_a2">with </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>with</del>
+                        <add>by</add>
+                     </rdg>
+                  </app> chains and stakes like corded wood,<app xml:id="walc16-app-0184">
+                     <lem>through</lem>
+                     <rdg wit="#wc_a1 #wc_a2">all through </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>all</del> through</rdg>
+                  </app> the favoring winter air, to wintry cellars, to underlie the summer there. </seg>
+               <seg n="16b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 16b written: A; rewritten: A, F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">16b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">A, F</seg>
+                     </ab>
+                     <ab change="#wc_0a">All but <quote>It looks like solidified azure, as, far
+                           off</quote> of the original version is contained on three missing leaves
+                        (#183-187) that follow.</ab>
+                     <ab change="#wc_0f">A fair copy was made of only <quote>It looks like
+                           solidi-</quote>.</ab>
+                  </note> It looks<app xml:id="walc16-app-0185">
+                     <lem>like</lem>
+                     <rdg wit="#wc_a1">blue as amethyst or </rdg>
+                     <rdg wit="#wc_a2">
+                        <del>blue as amethyst or</del>
+                        <add rendition="pencil">like</add>
+                     </rdg>
+                  </app> solidified azure, <app xml:id="walc16-app-0186">
+                     <lem>as, far off,</lem>
+                     <rdg wit="#wc_a1 #wc_a2">afar off as</rdg>
+                  </app> it is drawn through the streets. <app xml:id="walc16-app-0187">
+                     <lem>These ice-cutters are a merry race,</lem>
+                     <rdg wit="#wc_a1">
+                        <del>They are a merry race,</del> these ice cutters <add>are a merry
+                           race</add>
+                     </rdg>
+                  </app> full of jest and sport, and when I went among them they were wont to invite
+                  me to saw pit-fashion with them, I standing underneath.</seg>
+            </p>
+
+            <p n="17" change="#wc_0a">
+               <seg n="17a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 17a written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">17a</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc16-app-0188">
+                     <lem>In the winter of ’46-7</lem>
+                     <rdg wit="#wc_0a">
+                        <del>This winter, as you all know,</del>
+                        <add>In the winter of 46 &amp; 7</add>
+                     </rdg>
+                  </app> there came a hundred men of Hyperborean extraction<anchor type="hn" xml:id="hn-16-030"/> swoop down on to our pond one morning,<app xml:id="walc16-app-0189">
+                     <lem>with</lem>
+                     <rdg wit="#wc_0a">with a shriek from the engine—with</rdg>
+                  </app> many car-loads of ungainly-looking farming tools, sleds, ploughs,
+                  drill-barrows, turf-knives, spades, saws, rakes, and each <app xml:id="walc16-app-0190">
+                     <lem>man</lem>
+                     <rdg wit="#wc_0a">
+                        <add>man</add>
+                     </rdg>
+                  </app> was armed with a double-pointed pike-staff, such as <app xml:id="walc16-app-0191">
+                     <lem>is</lem>
+                     <rdg wit="#wc_0a">
+                        <del>is</del>
+                        <add>are</add>
+                     </rdg>
+                  </app> not described in the New-England Farmer or the Cultivator. <app xml:id="walc16-app-0192">
+                     <lem>I</lem>
+                     <rdg wit="#wc_0a">
+                        <del>At first</del> I</rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-16-031"/> did not know whether they had come to sow a crop of winter rye,
+                  or some other kind of grain recently introduced from Iceland. As I saw no manure,
+                  I judged that they meant to skim the land,<app xml:id="walc16-app-0193">
+                     <lem>as I had done, thinking the soil was deep and had lain fallow long
+                        enough,</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">as I had done—</add> thinking the soil was deep and
+                        had lain fallow long enough <del>—as I had done with my field the year
+                           before</del>
+                     </rdg>
+                  </app> They said that a <app xml:id="walc16-app-0194">
+                     <lem>gentleman farmer,</lem>
+                     <rdg wit="#wc_0a">gentleman farmer <del>
+                           <add rendition="pencil">a Mr Tudor</add>
+                        </del>
+                     </rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-16-032"/> who was behind the scenes, wanted to double
+                  his money, which, as I understood, amounted to half a million already; but in
+                  order to cover each one of his dollars with another, he took off the only coat,
+                     <app xml:id="walc16-app-0195">
+                     <lem>ay,</lem>
+                     <rdg wit="#wc_0a">
+                        <del>and</del>
+                        <add rendition="pencil">ay</add>
+                     </rdg>
+                  </app> the skin itself, of Walden Pond in the midst of a hard winter. They went to
+                  work at once, ploughing, harrowing, rolling, furrowing, in admirable order, as if
+                  they were bent on making this a model farm; but when I was looking sharp to see
+                  what kind of seed they dropped into the furrow, a gang of fellows by my side
+                  suddenly began to book up the virgin mould itself, with a peculiar jerk, clean
+                  down to the sand, or rather </seg>
+               <seg n="17b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 17b written: E; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">17b</seg>
+                        <seg type="written">E</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">A fair copy was made of only <quote>So they came and went
+                           every day … had to be cut out</quote>.</ab>
+                  </note> the water,—for it was a very springy soil,—indeed all the <hi rend="style(italics)">terra firma</hi> there was, and haul it away on sleds, and
+                  then I guessed that they must be cutting peat in a bog. So they<app xml:id="walc16-app-0196">
+                     <lem>came and went</lem>
+                     <rdg wit="#wc_0e">
+                        <del>went &amp;</del> came <add>&amp; went</add>
+                     </rdg>
+                  </app> every day, with a peculiar shriek <app xml:id="walc16-app-0197">
+                     <lem>from the locomotive, from and to some point of the</lem>
+                     <rdg wit="#wc_0e">of the whistle to and from some part of the northern </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>of the whistle</del>
+                        <add>from the locomotive</add> from &amp; to some part of the
+                           <del>northern</del>
+                     </rdg>
+                  </app> polar regions, as it seemed to me, like a flock of arctic snow-birds. But
+                  sometimes Squaw Walden had her revenge, and a hired man, walking behind his team,
+                  slipped through a crack in the ground down toward Tartarus,<anchor type="hn" xml:id="hn-16-033"/>
+                  and he who was so brave before suddenly became but the ninth part of a man,<anchor type="hn" xml:id="hn-16-034"/>
+                  <app xml:id="walc16-app-0198">
+                     <lem>almost</lem>
+                     <rdg wit="#wc_0e">and almost </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>and</del> almost</rdg>
+                  </app> gave up his animal heat, and was glad to take refuge in my house, and <app xml:id="walc16-app-0199">
+                     <lem>acknowledged</lem>
+                     <rdg wit="#wc_0e">acknowledge</rdg>
+                  </app> that there was some virtue in a stove; or sometimes the frozen soil took a
+                  piece of steel out of a ploughshare, or a plough got set in the furrow and had to
+                  be cut <app xml:id="walc16-app-0200">
+                     <lem>out.</lem>
+                     <rdg wit="#wc_0e">out again </rdg>
+                     <rdg wit="#wc_0f">out <del>again</del>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="18" change="#wc_0a">
+               
+               <seg n="18a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 18a written: A; rewritten: E, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">18a</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, F</seg>
+                  </ab>
+               </note> 
+                  <note type="general" resp="#clapper" ana="#wc_0a">The Pond in Winter 18a follows a missing leaf (#211).</note>
+                  <note type="general" resp="#clapper" ana="#wc_0a">The Pond in Winter 18a appears as follows: in the almanac—his shanty. <add rendition="pencil">They
+                     told me that</add> in a good day <del>they told me</del> they could get out a
+                     thousand tons which was the yield of about one acre <add>&amp; contained 10000
+                        tons</add>
+                     <add rendition="pencil">finally</add></note>
+                  <note type="general" resp="#clapper" ana="#wc_0e">The Pond in Winter 18a is
+                     followed by Economy 106b.</note>
+                  <app xml:id="walc16-app-0201">
+                     <lem>To speak literally,</lem>
+                     <rdg wit="#wc_0e">But to speak <del>without jesting</del>
+                        <add rendition="pencil">literally</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>But</del> to speak literally</rdg>
+                  </app> a hundred Irishmen, with Yankee overseers, came from Cambridge<anchor type="hn" xml:id="hn-16-035"/> every day to get out <app xml:id="walc16-app-0202">
+                     <lem>the ice. They divided it into cakes by methods too well known to require
+                        description, and these, being sledded to the shore,</lem>
+                     <rdg wit="#wc_0e">Walden ice and stack it up on the shore in the open air. When
+                        it was covered with snow a dozen men were incessantly engaged scraping this
+                        off over an area of several acres with various kinds of scrapers drawn by
+                        horses. Two followed with a horse &amp; a slight cutter, one carefully
+                        leading the horse while the other guided the cutter within a few inches of a
+                        rope drawn straight across the ice for 10 or a dozen rods. Such a groove was
+                        made on two sides of a parallelogram. Then with various kinds of gage
+                        cutters, that is cutters connected by a frame with parallel smooth or
+                        toothless plates <add>at a proper distance</add> on one or both sides,
+                        running in the last made groove the whole area was finally grooved in
+                        squares 22 inches on a side, yet not so weakened but that horses could work
+                        on it. I was told that the best ice cutters or plows cost over a hundred
+                        dollars, and cut 4 inches at a bout but it was hard work for a horse. Other
+                        men were employed with whipsaws cutting this area into long strips the width
+                        of a cake; half a dozen poling the strips along a narrow canal to the
+                        loading place—near which one stood with a spade-like chisel to cut off the
+                        "cakes," which consisted of two squares &amp; therefore measured 22 by 44
+                        inches. These cakes were to be finally divided by the shallow groove at the
+                        loading aboard ship, so that one man might handle them. At the end of the
+                        canal were a dozen or 15 men half on each side incessantly hauling the cakes
+                        up a narrow iron framework or railway, sunk at one end on wood and resting
+                        on a sled at the other, with pike staffs which had a double point, one bent
+                        for hauling, the other straight for pushing. Each sled held 14 or 15 cakes
+                        which weighed about 2 tons and were drawn by one horse over the ice to the
+                        shore, where <del>they</del>
+                        <add rendition="pencil">&amp; these being sledded to the shore</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>Walden</del>
+                        <add>the</add> ice. They <del>stack</del>
+                        <add>divided</add> it into cakes by methods too well known to require
+                        description, <add rendition="pencil">&amp;</add> these being sledded to the
+                        shore</rdg>
+                  </app> were rapidly hauled off on to an ice platform, and raised by grappling
+                  irons and block and tackle, worked by horses, on to <app xml:id="walc16-app-0203">
+                     <lem>a</lem>
+                     <rdg wit="#wc_0e">
+                        <del>the</del>
+                        <add rendition="pencil">a</add>
+                     </rdg>
+                  </app> stack, as surely as so many barrels of flour, and there placed evenly side
+                  by side, <app xml:id="walc16-app-0204">
+                     <lem>and row upon row,</lem>
+                     <rdg wit="#wc_0e">
+                        <del>&amp;</del>
+                        <add>or</add> upon one another </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>
+                           <del>&amp;</del>
+                           <add>or</add> upon one another</del>
+                        <add>&amp; row upon row</add>
+                     </rdg>
+                  </app> as if they formed the solid base of an obelisk designed to pierce the <app xml:id="walc16-app-0205">
+                     <lem>clouds.</lem>
+                     <rdg wit="#wc_0e">clouds. <del>There were 60 men employed at the stack, about
+                           30 above &amp; 30 below—about 20 in loading &amp; sledding, &amp; 10 in
+                           scraping, grooving, sawing &amp; poling</del>
+                     </rdg>
+                  </app> They told me that in a good day they could get out a thousand tons, which
+                  was the yield of about one acre.</seg>
+               <seg n="18b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 18b written: E; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">18b</seg>
+                        <seg type="written">E</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0f">The Pond in Winter 18b is followed by Economy 106b.</ab>
+                  </note> Deep ruts and "cradle-holes"<anchor type="hn" xml:id="hn-16-036"/> were worn in the ice,
+                     <app xml:id="walc16-app-0206">
+                     <lem>as on <hi rend="style(italics)">terra firma</hi>, by the passage of the
+                        sleds over the same track, and</lem>
+                     <rdg wit="#wc_0e">by the passage of the sleds over the same track, as on terra
+                        firma </rdg>
+                     <rdg wit="#wc_0f">
+                        <add>as on terra firma</add> by the passage of the sleds over the same
+                        track, &amp;</rdg>
+                  </app> the horses invariably ate their oats out of cakes of ice hollowed out like
+                  buckets.</seg>
+               <seg n="18c" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 18c written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">18c</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">Conclusion 8b follows The Pond in Winter 18c.</ab>
+                  </note> They stacked up the cakes <app xml:id="walc16-app-0207">
+                     <lem>thus in the open air</lem>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">thus in the open air</add>
+                     </rdg>
+                  </app> in a pile thirty-five feet high on one side and six or seven rods square,
+                  putting <app xml:id="walc16-app-0208">
+                     <lem>hay</lem>
+                     <rdg wit="#wc_0e">
+                        <del>meadow</del> hay</rdg>
+                  </app> between the outside layers to <app xml:id="walc16-app-0209">
+                     <lem>exclude</lem>
+                     <rdg wit="#wc_0e">keep out</rdg>
+                  </app> the air; for when the wind, ,<app xml:id="walc16-app-0210">
+                     <lem>though never so cold, finds a passage through,</lem>
+                     <rdg wit="#wc_0e">
+                        <del>finds a passage through it</del> though never so cold <add>finds a
+                           passage through</add>
+                     </rdg>
+                  </app> it will wear large cavities, leaving slight supports or studs only here and
+                  there, and finally topple it down. At first it looked like a vast blue fort or
+                     Valhalla;<anchor type="hn" xml:id="hn-16-037"/> but when they began to tuck the coarse meadow hay
+                  into the crevices, <app xml:id="walc16-app-0211">
+                     <lem>and this became covered with rime and icicles,</lem>
+                     <rdg wit="#wc_0e">
+                        <del>which soon</del>
+                        <add>&amp; this</add> became covered with <del>icicles &amp;</del> rime
+                           <add>&amp; icicles</add>
+                     </rdg>
+                  </app> it looked like a venerable moss-grown and hoary ruin, built of azure-tinted
+                  marble, the abode of Winter, that old man we see in the almanac,—<anchor type="hn" xml:id="hn-16-038"/> his shanty, <app xml:id="walc16-app-0212">
+                     <lem>as if he had a design to estivate with us</lem>
+                     <rdg wit="#wc_0e">
+                        <add>as if he had a design to estivate with us</add>
+                     </rdg>
+                  </app>. They calculated that not twenty-five per cent. of this would reach its
+                  destination, and that two or three per cent would be wasted in the l<app xml:id="walc16-app-0213">
+                     <lem>cars. However, a still</lem>
+                     <rdg wit="#wc_0e">cars<del>, but they use all the pieces in packing aboard
+                           ship</del>. However, <del>the</del>
+                        <add rendition="pencil">a still</add>
+                     </rdg>
+                  </app> greater part of this heap had a different destiny from what was intended;
+                  for, either <app xml:id="walc16-app-0214">
+                     <lem>because</lem>
+                     <rdg wit="#wc_0e">
+                        <add>because</add>
+                     </rdg>
+                  </app> the ice was found not to keep so well as was expected, containing more air
+                  than usual, or <app xml:id="walc16-app-0215">
+                     <lem>for some other reason,</lem>
+                     <rdg wit="#wc_0e">
+                        <del>else the freitage charged by the RR company was too high so that</del>
+                        <add rendition="pencil">for some other reason</add>
+                     </rdg>
+                  </app> it never got to market.<anchor type="hn" xml:id="hn-16-039"/>
+               </seg>
+               <seg n="18d" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 18d written: A; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">18d</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                  </note>
+                  <app xml:id="walc16-app-0216">
+                     <lem>This heap,</lem>
+                     <rdg wit="#wc_0a">This heap which was </rdg>
+                     <rdg wit="#wc_0e">The objection that it did not keep so well <add rendition="pencil">moreover that the freitage charged by the RR company
+                           was too high</add> would have been more reasonable. This heap <del>which
+                           was</del>
+                        <add>thus</add>
+                     </rdg>
+                  </app> made in the winter of ’46-7 <app xml:id="walc16-app-0217">
+                     <lem>and estimated to contain ten thousand tons, was finally</lem>
+                     <rdg wit="#wc_0a">was</rdg>
+                  </app> covered with hay and boards; and though it was unroofed the following July,
+                  and <app xml:id="walc16-app-0218">
+                     <lem>a part of it carried off, the rest remaining exposed to the sun,</lem>
+                     <rdg wit="#wc_0a">remained exposed to the sun, and a great part of it was
+                        carried off</rdg>
+                  </app> it stood over that summer and the next winter, and was not quite melted
+                  till September 1848. <app xml:id="walc16-app-0219">
+                     <lem>Thus the pond recovered the greater part.</lem>
+                     <rdg wit="#wc_0a">The ice was put to many novel uses—The horses ate their oats
+                        out of cakes of ice hollowed out like a bucket. <add>The workmen did not
+                           touch the ice at all but managed it with spike poles. Those who peddle it
+                           in the summer use an instrument to grapple it with since fatal effects
+                           are found to follow the long continued habit of handling it</add>
+                     </rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="19" change="#wc_0a">
+               <seg n="19a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 19a written: E; rewritten: F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">19a</seg>
+                     <seg type="written">E</seg>
+                     <seg type="rewritten">F</seg>
+                  </ab>
+               </note>
+                  <app xml:id="walc16-app-0220">
+                     <lem>Like the water, the Walden ice, seen near at hand, has a green tint, but
+                        at a distance</lem>
+                     <rdg wit="#wc_0e">Though the Walden water is green <del>near at hand</del> the
+                        ice is </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>Though the Walden water is green the ice is</del>
+                        <add>Like the water the Walden ice seen near at hand has a green tint but at
+                           a distance</add>
+                     </rdg>
+                  </app> is beautifully blue, and you can easily tell it from the white ice of the
+                  river, <app xml:id="walc16-app-0221">
+                     <lem>or the merely greenish ice of some ponds,</lem>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">or the greenish ice of some other ponds</add>
+                     </rdg>
+                     <rdg wit="#wc_0f">or the <add>merely</add> greenish ice of some
+                           <del>other</del> ponds</rdg>
+                  </app> a quarter of a mile off.<anchor type="hn" xml:id="hn-16-040"/>
+               </seg>
+               <seg n="19b" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 19b written: E; rewritten: F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">19b</seg>
+                        <seg type="written">E</seg>
+                        <seg type="rewritten">F</seg>
+                     </ab>
+                     <ab change="#wc_0e #wc_0f">The Pond in Winter 19b, which is interlined in E,
+                        follows The Pond in Winter 19c.</ab>
+                     <ab change="#wc_0e">
+                        <del>Moreover</del>
+                        <add>Also</add> the Walden water, unless seen from a distance is green or
+                        the color of the earth; but frozen it is blue or the color of the
+                        heavens.</ab>
+                     <ab change="#wc_0f">
+                        <del>Also the Walden water, unless seen from a distance, is green or the
+                           color of the earth, but frozen it is blue, or the color of the
+                           heavens</del>
+                        <add>I have noticed that that </add>
+                        <add rendition="pencil">portion of Walden</add> which in the state of water
+                        was green will often when frozen appear from the same point of view blue.
+                           <add rendition="pencil">So the hollows about this pond will often in the
+                           winter be filled with a greenish water like its own, but by the next day
+                           will have frozen blue.</add>
+                     </ab>
+                  </note> Sometimes one of those great cakes slips from the ice-man's sled into the
+                  village street, and lies there for a week like a great emerald, an object of
+                  interest to all passers. I have noticed that a portion of Walden which in the
+                  state of water was green will often, when frozen, appear from the same point of
+                  view blue. So the hollows about this pond will, sometimes, in the winter, be
+                  filled with a greenish water somewhat like its own, but the next day will have
+                  frozen blue. Perhaps the blue color of water and ice is due to the light and air
+                  they contain, and the most transparent is the bluest.</seg>
+               <seg n="19c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">The Pond in Winter 19c written: A; rewritten: E,F.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">16</seg>
+                        <seg type="chapterTitle">The Pond in Winter</seg>
+                        <seg type="paragraph">19c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E,F</seg>
+                     </ab>
+                     <ab change="#wc_0a">Spring 1 follows The Pond In Winter 19c and precedes The Pond
+                        in Winter 20.</ab>
+                  </note> Ice is <app xml:id="walc16-app-0223">
+                     <lem>an interesting</lem>
+                     <rdg wit="#wc_0a #wc_0e">a curious </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>a curious</del>
+                        <add>an interesting</add>
+                     </rdg>
+                  </app> subject for<app xml:id="walc16-app-0224">
+                     <lem>contemplation.</lem>
+                     <rdg wit="#wc_0a">our contemplation</rdg>
+                  </app>
+                  <app xml:id="walc16-app-0225">
+                     <lem>They told me that they had some in the ice-houses at Fresh Pond</lem>
+                     <rdg wit="#wc_0a">They have some in the houses at Fresh Pond <add rendition="pencil">in Cambridge</add>
+                     </rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-16-041"/> five years old <app xml:id="walc16-app-0226">
+                     <lem>which was as good as ever.</lem>
+                     <rdg wit="#wc_0a #wc_0e"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>and</del>
+                        <add>which was</add> as good as ever</rdg>
+                  </app> Why is it that a bucket of water soon becomes <app xml:id="walc16-app-0227">
+                     <lem>putrid,</lem>
+                     <rdg wit="#wc_0a #wc_0e #wc_0f">putrified</rdg>
+                  </app> but frozen <app xml:id="walc16-app-0228">
+                     <lem>remains</lem>
+                     <rdg wit="#wc_0a">it remains </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>it</del> remains</rdg>
+                  </app> sweet forever? <app xml:id="walc16-app-0229">
+                     <lem>It is commonly said that this is</lem>
+                     <rdg wit="#wc_0a">One suggests that this is </rdg>
+                     <rdg wit="#wc_0e">Is this </rdg>
+                     <rdg wit="#wc_0f">
+                        <del>Is this</del>
+                        <add>It is commonly said that this is</add>
+                     </rdg>
+                  </app> the difference between the affections and the intellect.</seg>
+            </p>
+
+            <p n="20" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 20 written: A; rewritten: E, F.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">20</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E, F</seg>
+                  </ab>
+                  <ab change="#wc_0e #wc_0f">A fair copy was made of only <quote>Thus for sixteen days
+                        … its evaporations in solitude, and no</quote>.</ab>
+               </note>
+               <app xml:id="walc16-app-0230">
+                  <lem>Thus for sixteen days I saw from my window</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">Thus from my window</add> For sixteen days I saw
+                        <del>from my window</del>
+                  </rdg>
+               </app> a hundred men at work like busy husbandmen, with teams and horses and
+               apparently all the implements of farming, such a picture as we see on the first page
+               of the almanac;<anchor type="hn" xml:id="hn-16-042"/> and<app xml:id="walc16-app-0231">
+                  <lem>as often as I looked out I was reminded</lem>
+                  <rdg wit="#wc_0a">
+                     <del>when</del>
+                     <add rendition="pencil">as often as</add> I looked out I <del>thought</del>
+                     <add rendition="pencil">was reminded</add>
+                  </rdg>
+               </app> of the fable of the lark and the reapers,<anchor type="hn" xml:id="hn-16-043"/> or the parable of the sower,<anchor type="hn" xml:id="hn-16-044"/> and <app xml:id="walc16-app-0232">
+                  <lem>the like;</lem>
+                  <rdg wit="#wc_0a">such like things </rdg>
+                  <rdg wit="#wc_0e">
+                     <del>such like things</del>
+                     <add>the like</add>
+                  </rdg>
+               </app> and now they are all gone, and in <app xml:id="walc16-app-0233">
+                  <lem>thirty</lem>
+                  <rdg wit="#wc_0a">
+                     <del>16</del>
+                     <add>30</add>
+                  </rdg>
+               </app> days more, <app xml:id="walc16-app-0234">
+                  <lem>probably,</lem>
+                  <rdg wit="#wc_0a #wc_0e #wc_0f">perchance</rdg>
+               </app> I shall look from the same window on the pure <app xml:id="walc16-app-0235">
+                  <lem>sea-green</lem>
+                  <rdg wit="#wc_0a">sky-blue</rdg>
+               </app> Walden water there, reflecting the clouds and the trees, and sending up its
+               evaporations in solitude, and no traces will appear that a man has ever stood there.
+                  <app xml:id="walc16-app-0236">
+                  <lem>Perhaps I shall hear a solitary loon laugh as he dives and plumes himself, or
+                     shall see a lonely fisher in his boat, like a floating leaf, beholding his form
+                     reflected in the waves, where lately a hundred men securely labored.</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">Or I shall hear a solitary loon laugh as he dives and
+                        plumes himself there.—Perchance</add>
+                     <del>Or</del> I shall see <del>perchance</del> a <del>solitary</del>
+                     <add rendition="pencil">lonely</add> fisher in his boat—like a floating
+                     leaf—pursuing the contemplative man’s recreation, and beholding his form
+                     reflected in the waves <add rendition="pencil">there</add> where lately a
+                     hundred men securely labored <del>—or I shall hear a solitary loon laugh as he
+                        dives and plumes himself there</del>.</rdg>
+               </app>
+            </p>
+
+            <p n="21" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">The Pond in Winter 21 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">16</seg>
+                     <seg type="chapterTitle">The Pond in Winter</seg>
+                     <seg type="paragraph">21</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note>
+               <anchor type="hn" xml:id="hn-16-045"/>Thus it appears that the sweltering inhabitants of Charleston and<app xml:id="walc16-app-0237">
+                  <lem>New Orleans,</lem>
+                  <rdg wit="#wc_0a">New Orleans &amp; <del>Havanna</del>
+                     <add>Jamaica</add>
+                  </rdg>
+               </app> of Madras and Bombay and Calcutta, drink at my well.<anchor type="hn" xml:id="hn-16-046"/> In the
+               morning I bathe my intellect in the stupendous and cosmogonal philosophy of the
+               Bhagvat Geeta,<anchor type="hn" xml:id="hn-16-047"/> since whose composition years
+               of the gods have elapsed,<anchor type="hn" xml:id="hn-16-048"/> and in comparison with which<app xml:id="walc16-app-0238">
+                  <lem>our</lem>
+                  <rdg wit="#wc_0a">
+                     <del>this</del>
+                     <add rendition="pencil">our</add>
+                  </rdg>
+               </app> modern world and its literature seem puny and trivial; and I doubt if<app xml:id="walc16-app-0239">
+                  <lem>that philosophy is not to be referred to a previous state of existence, so
+                     remote is its sublimity from our</lem>
+                  <rdg wit="#wc_0a">
+                     <del>these things are</del>
+                     <add rendition="pencil">that philosophy is</add> not to be referred to
+                        <del>another</del>
+                     <add rendition="pencil">a previous</add> state of existence <del>than this of
+                        ours</del> —so remote <del>are that religion &amp;</del>
+                     <add rendition="pencil">is its</add> sublimity from our <add>age &amp;</add>
+                  </rdg>
+               </app> conceptions. I lay down the book and go to my well for water, and lo! there I
+               meet the servant of the Brahmin, priest of Brahma and Vishnu and Indra, who still
+                  <app xml:id="walc16-app-0240">
+                  <lem>sits</lem>
+                  <rdg wit="#wc_0a">
+                     <del>sit</del>
+                     <add rendition="pencil">sits</add>
+                  </rdg>
+               </app> in his temple on the Ganges reading the Vedas,<anchor type="hn" xml:id="hn-16-049"/>
+               <app xml:id="walc16-app-0241">
+                  <lem>or dwells at the root of a tree</lem>
+                  <rdg wit="#wc_0a">
+                     <del>the descendant of the religious devotee who once dwelt at the roots of
+                        trees</del>
+                     <add rendition="pencil">or dwells at the root of a tree</add>
+                  </rdg>
+               </app> with his crust and water jug. I meet his servant come to draw water for his
+               master, and our buckets <app xml:id="walc16-app-0242">
+                  <lem>as it were</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">as it were</add>
+                  </rdg>
+               </app> grate together in the same well. The pure Walden water is mingled with the
+               sacred water of the Ganges. With favoring winds it is wafted past the site of the
+               fabulous islands of Atlantis<anchor type="hn" xml:id="hn-16-050"/> and the <app xml:id="walc16-app-0243">
+                  <lem>Hesperides,</lem>
+                  <rdg wit="#wc_0a">islands of the Hesperides. It</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-16-051"/> makes the periplus of Hanno,<anchor type="hn" xml:id="hn-16-052"/> and, floating by Ternate and Tidore<anchor type="hn" xml:id="hn-16-053"/> and the mouth
+               of the Persian Gulf, melts in the tropic gales of the Indian seas, and is landed in
+               ports of which Alexander<anchor type="hn" xml:id="hn-16-054"/>
+               <app xml:id="walc16-app-0244">
+                  <lem>only heard</lem>
+                  <rdg wit="#wc_0a">heard only</rdg>
+               </app> the names. </p>
+         </div>
+      </body>
+   </text>
+</TEI>

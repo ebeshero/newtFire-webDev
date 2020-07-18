@@ -1,0 +1,24 @@
+xquery version "3.1";
+declare variable $ThisFileContent := string-join(
+let $albumInfo := collection('/db/rap159/albumInfo')
+
+let $name := $albumInfo//xml//album//info//studio//name
+
+for $x in $name
+let $studio := $albumInfo//xml//album//info//studio//name
+let $studioName := $studio[preceding::xml//album//info//name ! upper-case(.)[contains(., $x)]]/string()
+let $place := $studioName => distinct-values()
+
+(: ebb: The problem with the next variables is that you need to filter out all the other studios except the one that's your $x
+ : Let's see how the output looks when you put in that predicate filter! :)
+let $N := $albumInfo//xml//album//info//studio[descendant::name = $x]//coordN => distinct-values()
+let $W := $albumInfo//xml//album//info//studio[descendant::name = $x]//coordW => distinct-values()
+
+return string-join(($x, $N, $W), "&#x9;")
+, "&#10;");
+$ThisFileContent
+(:   :let $filename := "studioLocations.tsv"
+let $doc-db-uri := xmldb:store("/db/rap159", $filename, $ThisFileContent, "text/plain")
+return $doc-db-uri :)
+
+ 

@@ -1,0 +1,12 @@
+xquery version "3.1";
+declare variable $s2Coll as document-node()+ := collection('/db/teentitans/season2');
+
+let $episode := $s2Coll//episode/string()
+for $e in $episode
+let $spkr := $s2Coll//spkr[ancestor::root/head/episode[string()= $e]][contains(@ref, 'Robin') or contains(@ref, 'Raven') or contains(@ref, 'Cyborg') or contains(@ref, 'Starfire') or contains(@ref, 'BeastBoy')]/@ref ! tokenize(., '#')[last()]
+let $distSpkr := $spkr => distinct-values()
+for $d in $distSpkr
+let $speech := $s2Coll//sp[ancestor::root/head/episode[string()= $e]]
+let $chars := $speech//char[contains(string(.), 'Robin') or contains(string(.), 'Raven') or contains(string(.), 'Cyborg') or contains(string(.), 'Starfire') or contains(string(.), 'Beast Boy')]/string()
+return $chars
+(:  03-03-2020 shd: i was aiming for going into when each of the titans speak and seeing when they speak about another titan. i was able to separately isolate the titans as speakers and when they are in char tags, but i dont know how to put it all together :)

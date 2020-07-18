@@ -1,0 +1,9 @@
+xquery version "3.1";
+    (: Just change the variable based on which collection you're running over to make csv's for each major section of Ulysses.:)
+let $uColl := collection('/db/ulysses/ulysses')
+let $location := $uColl//location[@name='7 Eccles Street']
+let $locName:= $location/string()
+for $i in $location
+let $content := $location//*/@*/string()
+for $c in $content
+return concat($i, "&#x9;", "loc", "&#x9;",  "ref","&#x9;",  $c)

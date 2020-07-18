@@ -1,0 +1,2087 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Visitors</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
+                     Unported License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY
+               Geneseo using Text Encoding Initiative (TEI) P5 XML Schema, using the Parallel
+               Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and
+               includes critical apparatus laid out by Ronald Clapper, and annotations provided by
+               Ronald Clapper, J. Lyndon Shanley, and Walter Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised
+               edition of dissertation originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc06">
+      <body>
+         <div>
+            <head>Visitors <anchor type="hn" xml:id="hn-06-001"/>
+               <note type="general" resp="#clapper" ana="#wc_0d">The title “Society" appears in
+                  pencil at the top of the leaf containing Visitors 1.</note>
+            </head>
+
+            <p n="1" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 1 written: A; rewritten: B, D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, D</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0b"> Visitors 1 precedes Solitude 12a.</ab>
+               </note>
+               <app xml:id="walc06-app-0002">
+                  <lem>I THINK</lem>
+                  <rdg wit="#wc_0a #wc_0b">Yet I think</rdg>
+                  <rdg wit="#wc_0d">
+                     <del>Yet</del> I think</rdg>
+               </app> that I love society as much as most, and am <app xml:id="walc06-app-0003">
+                  <lem>ready</lem>
+                  <rdg wit="#wc_0a #wc_0b">apt</rdg>
+               </app> enough to fasten myself like a bloodsucker for the time to any full-blooded
+               man that comes in my way. I am naturally no hermit, but <app xml:id="walc06-app-0004">
+                  <lem>might possibly</lem>
+                  <rdg wit="#wc_0a #wc_0b">should probably</rdg>
+               </app> sit out the sturdiest frequenter of the bar-room, if my business called me
+                  <app xml:id="walc06-app-0005">
+                  <lem>thither</lem>
+
+                  <rdg wit="#wc_0a">that way. <quote>
+                        <lg>
+                           <l>What do we ask?</l>
+                           <l>Some worthy task; </l>
+                           <l>Never to run </l>
+                           <l>Till that be done, </l>
+                           <l>That never done </l>
+                           <l>Under the sun. </l>
+                           <l>By might &amp; main </l>
+                           <l>Health and strength gain, </l>
+                           <l> So to give nerve </l>
+                           <l>To our slenderness, </l>
+                           <l>Yet some mighty pain </l>
+                           <l>We would sustain, </l>
+                           <l>So to preserve </l>
+                           <l>Our tenderness. </l>
+                           <l>Strength like the rock </l>
+                           <l>To withstand every shock, </l>
+                           <l>Yet not be deceived, </l>
+                           <l>Of suffering bereaved— </l>
+                           <l> Occasion to gain </l>
+                           <l>To shed human tears, </l>
+                           <l>And to entertain </l>
+                           <l>Still demonic fears. </l>
+                           <l> Not once for all </l>
+                           <l>Forever blest. </l>
+                           <l>Still to be cheered </l>
+                           <l>Out of the west, </l>
+                           <l>Not from our heart </l>
+                           <l>To banish all sighs, </l>
+                           <l>Still be encouraged </l>
+                           <l>By the sun-rise— </l>
+                           <l> For earthly pleasures, </l>
+                           <l>Celestial pains— </l>
+                           <l>Heavenly losses, </l>
+                           <l>For earthly gains. </l>
+                           <l> Must we still eat </l>
+                           <l>The bread we have spurned? </l>
+                           <l>Must we rekindle </l>
+                           <l>The faggots we’ve burned?</l>
+                        </lg>
+                     </quote>
+                  </rdg>
+                  <rdg wit="#wc_0b">that way</rdg>
+                  <rdg wit="#wc_0d">in that direction</rdg>
+               </app>. </p>
+
+            <p n="2" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 2 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">2</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0b">Visitors 2-6 is preceded by Visitors 7-13.</ab>
+                  <ab change="#wc_0a">[The following passage precedes Visitors 2.] Sometimes there
+                     would come half a dozen <add>railroad</add> men to my house at once—healthy and
+                     sturdy working men, descended from sound bodies of men, and still transmitting
+                     arms &amp; legs &amp; bowels <del>from remote generations to posterity. They
+                        had a rude wisdom and courtesy which I love.</del>
+                     <add rendition="pencil">downward from remote days to more remote. Some of them
+                        had got a rude wisdom withal and a courtesy which I love thanks to their
+                        dear-bought experience.</add> I met them so often in the woods—that they
+                     began to look upon me at last as one of their kin. One a handsome younger man a
+                     sailor-like—Greek-like man—says to me to-day—“Sir, I like your notions—I think
+                     I shall live so myself. Only I should like wilder country, where there
+                        <del>is</del>
+                     <add>was</add> more game. I have been among the Indians near Apallachicola. I
+                     have lived with them. I like your kind of life. Good-day, I wish you success
+                     and happiness." They came in troops on Sundays in clean shirts, with washed
+                     hands &amp; faces, and fresh twigs in their hands. There appeared in some of
+                     these men even at a distance, a genuine magnanimity equal to Greek or Roman, of
+                     unexplored and uncontaminated descent—The expression of their grimmed &amp;
+                     sunburnt features made me think of Epaminondas of Socrates &amp; Cato. The most
+                     famous philosophers &amp; poets seem in some respects infantile beside the easy
+                     and successful life of natural men. These faces—homely—hard and scarred like
+                     the rocks, but human &amp; wise—embracing Copt, and Mussulman and all tribes
+                     &amp; nations. One is a pacha or Sultan—Selim—or Mustapha or Mahmoud in
+                     disguise. Circumstances and employment may conceal for a season but they do not
+                     essentially alter the finer qualities of our nature. I observe among these men
+                     when I meet them on the road an ineradicable refinement &amp; delicacy—as old
+                     as the sun &amp; moon.—A fineness which is commonly thought to adorn the
+                     drawing rooms only. There is no more real rudeness in laborers &amp; washer
+                     women—than in gentlemen and ladies. Under some ancient wrinkled, almost forlorn
+                     visage of an Indian chieftain slumbers all that was ever writ or spoken of man.
+                     You can tell a nobleman’s head though he may be shovelling gravel beneath it
+                     six rods off in the midst of a gang with a bandana handkerchief tied about it.
+                     Such as are to succeed the worthies of history. Their humble occupation which
+                     allows them to take no airs upon themselves seems their least
+                     disadvantage—Civilization seems to make bright only the superficial film of the
+                     eye. Most men are wrecked upon their consciousness. </ab>
+                  <ab change="#wc_0b">(preceded by two leaves, #99-101, from A that were taken into
+                     B and renumbered, #117-119) men, descended from sound bodies, and still
+                     transmitting arms and legs and bowels downward <del>from remote days to more
+                        remote</del>. Some of them had got a rude wisdom withal and a courtesy which
+                     I love, thanks to their dear-bought experience. <del>I met them so often in the
+                        woods that they began to look upon me at last as one of their kin.</del> One
+                     a handsome younger <del>man, a</del> sailor-like <del>Greek-like</del> man,
+                     says to me to-day—“Sir, I like your notions, I think I shall live so myself.
+                     Only I should like a wilder country where there is more game. I have been among
+                     the Indians near Apallachicola. I have lived with them. I like your kind of
+                     life. Good-day. I wish you success and happiness." They came in troops on
+                     Sundays, in clean shirts with washed hands &amp; faces, and fresh twigs in
+                     their hands. <del>Circumstances and employment affect but slowly the finer
+                        qualities of our nature.</del> I <del>observe</del>
+                     <add rendition="pencil">observed</add> in <add rendition="pencil">some of</add>
+                     these men an inextinguishable and ineradicable refinement and delicacy of
+                     nature, older and of more worth than the sun &amp; moon, which are commonly
+                     thought to adorn the drawing rooms only. Sometimes a genuine magnanimity
+                        <del>more than Greek or Roman</del> —equal to the least occasion, of
+                     unexplored and uncontaminated descent. Greater traits <del>I seem to observe in
+                        them</del>
+                     <add rendition="pencil">methought I noticed</add> in the shortest intercourse,
+                     than are recorded <del>of Epaminondas Socrates or Cato, With</del>
+                     <add>any of these worthies. They had</add> faces homely, hard and seared like
+                     the rocks, but human and wise<del>, embracing Copt and Mussulman, all races
+                        &amp; nations. One is a pacha or Sultan—Selim—Mustapha or Mahmoud in
+                        disguise. There is no more real rudeness in laborers or washerwomen than in
+                        gentlemen &amp; ladies</del>. Under some ancient and wrinkled, almost
+                     forlorn visage, as of an Indian chieftan <del>slumbers</del>
+                     <add rendition="pencil">slumbered</add> the world famous <del>humanities</del>
+                     <add rendition="pencil">qualities</add> of man. There is the race, and you need
+                     look no further. <del>You can tell a nobleman’s head among a thousand—though he
+                        may be shovelling gravel six rods off in the midst of a gang with cotton
+                        handkerchief tied about it. Such a one as is to succeed the worthies of
+                        history.</del> Their humble occupation and that they take no airs upon
+                     themselves, are no disadvantage. Civilization makes bright only the superficial
+                     film of the eye. Most men are wrecked upon their <del>consciences</del>
+                     <add>consciousness. A farmer who lived near the skirts of the wood would pay me
+                        a visit, and we took a sober view or even review of the state of the world,
+                        &amp; many times we felt that it was good for us to have come together. We
+                        consumed many hours endeavoring to crack those old &amp; now dry nuts on
+                        which so many philosophers &amp; sour sectarians have left the marks of
+                        their teeth, but for the most part we got only the flavor of their shells.
+                        Those which are hardest to crack contain no meat &amp; wise squirrels do not
+                        meddle with them</add>
+                  </ab>
+                  <ab change="#wc_0e">This passage follows Visitors 14b.</ab>
+               </note> I had three chairs in my house; one for solitude, two for friendship, three
+               for society. When visitors came in larger and unexpected numbers there was but the
+               third chair for them all, but they generally economized the room by standing up. It
+               is surprising how many great men and women a small house will contain. I have had
+               twenty-five <anchor type="hn" xml:id="hn-06-002"/> or thirty souls,
+                  <app xml:id="walc06-app-0007">
+                  <lem>with their</lem>
+                  <rdg wit="#wc_0a">
+                     <del>and</del>
+                     <add rendition="pencil">with their</add>
+                  </rdg>
+               </app> bodies, at once under my roof, and yet we often parted without being aware
+               that we had come very near to one<app xml:id="walc06-app-0008">
+                  <lem>another</lem>
+                  <rdg wit="#wc_0a">other</rdg>
+               </app>.<app xml:id="walc06-app-0009">
+                  <lem> Many of our houses, both public and private, with their almost innumerable
+                     apartments, their huge halls and their cellars for the storage of wines and
+                     other munitions of peace, appear to be extravagantly large for their
+                     inhabitants. They are so vast and magnificent that the latter seem to be only
+                     vermin which infest them. I am surprised when the herald blows his summons
+                     before some Tremont or Astor or Middlesex House, to see come creeping out over
+                     the piazza for all inhabitants a ridiculous mouse, which soon again slinks into
+                     some hole in the pavement</lem>
+                  <rdg wit="#wc_0a">
+                     <del>Our houses generally with their huge halls &amp; garretts &amp; cellars,
+                        seem to me extravagantly large for their inhabitants. One would certainly be
+                        somewhat astonished, if when the herald blew his summons before the
+                        Middle-sex House he should see come creeping out over the piazza for all
+                        inhabitants a ridiculous mouse</del>
+                     <add rendition="pencil">Many of our houses with their innumerable apartments,
+                        their huge halls &amp; cellars for the storage of wines &amp; other
+                        munitions of peace, seem to me extravagantly large for their inhabitants.
+                        They are so vast &amp; grim—that the latter appear to be only vermin that
+                        infest them. I am frequently astonished when the herald blows his summons
+                        before some Tremont or Astor or Middle-sex House to see come creeping out
+                        over the piazza for all inhabitants a ridiculous mouse, which soon as it
+                        appears slinks into some hole in the pavement</add>
+                  </rdg>
+                  <rdg wit="#wc_0b">Many of our houses both public and private, with their
+                     innumerable apartments, their huge halls &amp; cellars for the storage of wines
+                     and other munitions of peace, <del>seem</del>
+                     <add>appear</add> to me extravagantly large for their inhabitants. They are so
+                     vast and magnificent that the latter <del>appear</del>
+                     <add>seem</add> to be only vermin that infest them. I am frequently astonished
+                     when the herald blows his summons before some Tremont or Astor or Middlesex
+                     House, to see come creeping out over the piazza for all inhabitants a
+                     ridiculous mouse, which soon <add>again</add> slinks into some hole in the
+                     doorstep</rdg>
+               </app>. </p>
+
+            <p n="3" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 3 written: A; rewritten: B, E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">3</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, E</seg>
+                  </ab>
+                  <ab change="#wc_0e">A fair copy was made of only <quote>thoughts to get into
+                        sailing trim … we gradually shoved our chairs</quote>.</ab>
+               </note> One<app xml:id="walc06-app-0010">
+                  <lem>inconvenience</lem>
+                  <rdg wit="#wc_0b">inconvenience <del>
+                        <add>however</add>
+                     </del>
+                  </rdg>
+               </app> I sometimes experienced in so small a house, the difficulty of getting to a
+               sufficient distance from my guest when we began to utter the big thoughts in big
+               words. You want room for your thoughts to get into sailing trim and run a course or
+               two before they make their port. The bullet of your thought must have overcome its
+               lateral and ricochet motion and fallen into its last and steady course before it<app xml:id="walc06-app-0011">
+                  <lem>reaches</lem>
+                  <rdg wit="#wc_0a">falls into</rdg>
+                  <rdg wit="#wc_0b">
+                     <del>falls into</del>
+                     <add>reaches</add>
+                  </rdg>
+               </app> the ear of the hearer, else it may plough out<app xml:id="walc06-app-0012">
+                  <lem>again</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">again</add>
+                  </rdg>
+               </app> through the side of his head.<app xml:id="walc06-app-0013">
+                  <lem>Also,</lem>
+                  <rdg wit="#wc_0a #wc_0b #wc_0e"><!--[not in ms.]--></rdg>
+               </app> our sentences wanted room to unfold and form their columns in the interval.
+                  <app xml:id="walc06-app-0014">
+                  <lem>Individuals, like nations, must have suitable broad and natural boundaries,
+                     even a considerable neutral ground, between them</lem>
+                  <rdg wit="#wc_0a">
+                     <del>We need a considerable neutral ground—though it be a disputed territory,
+                        for</del> individuals like nations must have suitable broad and natural
+                     boundaries <add rendition="pencil">even a considerable neutral ground—though it
+                        be a disputed territory</add> between them.—The reason why the Kilkenny cats
+                     quarrelled and ate each other all up but the tails in that hollow sphere,
+                     certainly is that there was not room in that small space for their several
+                     spheres to revolve</rdg>
+                  <rdg wit="#wc_0b #wc_0e">Individuals like nations must have suitable broad and
+                     natural boundaries, even a considerable neutral ground, though it be a disputed
+                     territory, between them</rdg>
+               </app>.<app xml:id="walc06-app-0015">
+                  <lem>I have found it a singular luxury to talk across the pond to a companion on
+                     the opposite side.</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">I have found it a singular luxury to talk across the
+                        pond to a companion on the opposite side.</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc06-app-0016">
+                  <lem>In</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">or did you ever talk to the sexton across an empty
+                        meeting house after the audience had gone? It is easy to be eloquent at such
+                        a time</add> In</rdg>
+                  <rdg wit="#wc_0b">or did you ever talk to the sexton across an empty meeting house
+                     after the audience <del>had gone</del>
+                     <add>were gone out</add>? It is easy to be eloquent at such a time. In</rdg>
+                  <rdg wit="#wc_0e">and did you ever talk to the sexton across an empty
+                     meeting-house after the audience were gone out? It is easy to be eloquent at
+                     such a time and in such a place. In</rdg>
+               </app> my house we were so near that we could not<app xml:id="walc06-app-0017">
+                  <lem>begin to</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">begin to</add>
+                  </rdg>
+               </app> hear,—<app xml:id="walc06-app-0018">
+                  <lem>we could not</lem>
+                  <rdg wit="#wc_0a">
+                     <del>and</del>
+                     <add rendition="pencil">or</add> we could not</rdg>
+                  <rdg wit="#wc_0b">and we could not</rdg>
+                  <rdg wit="#wc_0e">
+                     <del>and we could not</del>
+                     <del>
+                        <add>nor could we</add>
+                     </del>
+                     <add>we could not</add>
+                  </rdg>
+               </app> speak low enough to be heard; as when you throw two stones into calm water<app xml:id="walc06-app-0019">
+                  <lem>so</lem>
+                  <rdg wit="#wc_0a">
+                     <del>but</del> so</rdg>
+               </app> near that they break each other’s undulations. If we are<app xml:id="walc06-app-0020">
+                  <lem>merely</lem>
+                  <rdg wit="#wc_0a #wc_0b">very</rdg>
+                  <rdg wit="#wc_0e">
+                     <del>very</del>
+                     <add>merely</add>
+                  </rdg>
+               </app> loquacious and loud talkers,<app xml:id="walc06-app-0021">
+                  <lem>then</lem>
+                  <rdg wit="#wc_0a">then <add rendition="pencil">indeed</add>
+                  </rdg>
+                  <rdg wit="#wc_0b #wc_0e">then indeed</rdg>
+               </app> we can afford to stand very near together,<app xml:id="walc06-app-0022">
+                  <lem>cheek by jowl,</lem>
+                  <rdg wit="#wc_0a">cheek by jowl, and shoulder to shoulder</rdg>
+                  <rdg wit="#wc_0b">
+                     <add>shoulder to shoulder, and</add> cheek by jowl<del>, and shoulder to
+                        shoulder</del>
+                  </rdg>
+                  <rdg wit="#wc_0e">shoulder to shoulder, and cheek by jowl</rdg>
+               </app>
+               <app xml:id="walc06-app-0023">
+                  <lem>and feel each other’s breath;</lem>
+                  <rdg wit="#wc_0a #wc_0b"><!-- [not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0e">
+                     <add>and feel each other’s breath;</add>
+                  </rdg>
+               </app> but if we speak reservedly and thoughtfully, we want to be farther apart, <app xml:id="walc06-app-0024">
+                  <lem>that all animal heat and moisture may have a chance to evaporate. If we would
+                     enjoy the most intimate society with that in each of us which is without, or
+                     above, being spoken to, we must not only be silent, but commonly so far apart
+                     bodily that we cannot possibly hear each other’s voice in any case. Referred to
+                     this standard, speech is for the convenience of those who are hard of hearing;
+                     but there are many fine things which we cannot say if we have to shout</lem>
+                  <rdg wit="#wc_0a">But if we would be silent we must commonly be so far apart that
+                     we cannot possibly hear each other’s voices in any case <add rendition="pencil">&amp; that is what we commonly mean by solitude</add>
+                  </rdg>
+                  <rdg wit="#wc_0b">
+                     <del>But</del>
+                     <add>Indeed</add> if we would be silent <add>&amp; yet enjoy the most intimate
+                        society</add> we must <del>commonly</del> be so far apart <add>bodily</add>
+                     that we cannot possibly hear each other’s voices in any case, <del>and</del>
+                     <add>though</add> this is what men commonly <del>mean by</del>
+                     <add>call</add> solitude</rdg>
+                  <rdg wit="#wc_0e">
+                     <del>If we would be silent, and enjoy the most intimate society, we must
+                        be</del>
+                     <add>that all animal heat and moisture may have a chance to evaporate. If we
+                        would enjoy the most intimate society with that in each of us which is
+                        without or above being spoken to, we must</add>
+                     <add rendition="pencil">not only be silent but commonly</add> so far apart
+                     bodily, that we cannot possibly hear each other’s voices in any case<del>,
+                        though this is what men commonly call solitude</del>. <add rendition="pencil">Referred to this standard</add>
+                     <add>speech is for the convenience of those who are hard of hearing</add>
+                     <add rendition="pencil">but there are many fine things which we cannot say if
+                        we have to shout</add>
+                  </rdg>
+               </app>. As the conversation began to assume a loftier and grander<app xml:id="walc06-app-0025">
+                  <lem>tone</lem>
+                  <rdg wit="#wc_0a">tone<add rendition="pencil">&amp; this was always the case when
+                        it was successful</add>
+                  </rdg>
+               </app>, we gradually shoved our chairs farther apart till they touched the wall in
+               opposite corners, and then<app xml:id="walc06-app-0026">
+                  <lem>commonly</lem>
+                  <rdg wit="#wc_0a #wc_0b">sometimes</rdg>
+               </app> there was not room<app xml:id="walc06-app-0027">
+                  <lem>enough</lem>
+                  <rdg wit="#wc_0a #wc_0b">enough. If you do not want the fire to smoke you must not
+                     stand too near it, so as to divert the current of the chimney’s
+                     inspiration</rdg>
+               </app>. </p>
+
+            <p n="4" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 4 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note> My “best" room, <app xml:id="walc06-app-0028">
+                  <lem>however,</lem>
+                  <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">however,</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc06-app-0029">
+                  <lem>my withdrawing room,</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">my withdrawing room,</add>
+                  </rdg>
+               </app> always ready for company, on whose carpet the sun rarely<app xml:id="walc06-app-0030">
+                  <lem>fell</lem>
+                  <rdg wit="#wc_0a #wc_0b">fell, for its green blinds were kept always closed</rdg>
+               </app>, was the pine wood behind my house.<app xml:id="walc06-app-0031">
+                  <lem>Thither in summer days, when distinguished guests came,</lem>
+                  <rdg wit="#wc_0a">There when distinguished guests came in summer days</rdg>
+                  <rdg wit="#wc_0b">There <add>in summer days</add> when distinguished guests came
+                        <del>in summer days</del>
+                  </rdg>
+               </app> I took them, and<app xml:id="walc06-app-0032">
+                  <lem>a priceless domestic</lem>
+                  <rdg wit="#wc_0a #wc_0b">Nature was my domestic that</rdg>
+               </app> swept the floor and dusted the furniture and kept the things in order. </p>
+
+            <p n="5" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 5 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">5</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab change="#wc_0a">
+                     <quote>You need not rest your reputation … never revisit those scenes</quote>
+                     is interlined in pencil.</ab>
+                  <ab change="#wc_0b">A fair copy was made of only <quote>if one guest came … bread
+                        enough for two, more than if eating</quote>. A leaf (#109) from A containing
+                     the rest of Visitors 5 and the first half of Visitors 6 was taken into B and
+                     renumbered (#127).</ab>
+               </note> If one guest<app xml:id="walc06-app-0033">
+                  <lem>came</lem>
+                  <rdg wit="#wc_0b">came <add>to my house</add>
+                  </rdg>
+               </app> he sometimes partook of my frugal meal, and it was no interruption to
+               conversation to be stirring a<app xml:id="walc06-app-0034">
+                  <lem>hasty-pudding,</lem>
+                  <rdg wit="#wc_0a">hasty-pudding,<del>in the meanwhile</del>
+                  </rdg>
+               </app> or watching the rising and maturing of a loaf of bread in the ashes, in the
+               mean while. But if twenty came and sat in my house there was nothing said about
+               dinner, though there might be bread enough for two, more than if eating were a
+               forsaken habit; but we naturally practised abstinence; and this was never felt to be
+               an offence against hospitality, but the most proper and considerate course. The waste
+               and decay of physical life, which so often needs repair, seemed miraculously retarded
+                  <app xml:id="walc06-app-0035">
+                  <lem>in such a case</lem>
+                  <rdg wit="#wc_0a">
+                     <add>in such a case</add>
+                  </rdg>
+               </app>, and the vital vigor stood its ground. I could entertain thus a thousand as
+               well as twenty; and<app xml:id="walc06-app-0036">
+                  <lem>if</lem>
+                  <rdg wit="#wc_0a">
+                     <del>I am not aware that</del>
+                     <add>if</add>
+                  </rdg>
+               </app> any ever went away disappointed or hungry from my house when they found me at
+               home, <app xml:id="walc06-app-0037">
+                  <lem>they may depend upon it that I sympathized with them at least</lem>
+                  <rdg wit="#wc_0a">
+                     <add rendition="pencil">they may depend upon it that I sympathized with them at
+                        least</add>
+                  </rdg>
+               </app>. So easy is it, though many housekeepers doubt it, to establish new and better
+               customs in the place of the old.<app xml:id="walc06-app-0038">
+                  <lem>You</lem>
+                  <rdg wit="#wc_0a">I mention this to show that you</rdg>
+               </app> need not rest your reputation on the dinners you give. For my own part, I was
+               never so effectually deterred from frequenting a man’s house, by any kind of Cerberus
+               whatever, as by the parade<app xml:id="walc06-app-0039">
+                  <lem>one made about</lem>
+                  <rdg wit="#wc_0a">he made of</rdg>
+               </app> dining me, which I took to be a very polite and roundabout hint never to
+               trouble him so again. I think I shall never revisit those scenes.<app xml:id="walc06-app-0040">
+                  <lem>I should be proud to have for the motto of my cabin those lines of
+                     Spenser</lem>
+                  <rdg wit="#wc_0a">To quote the lines</rdg>
+               </app> which one of my visitors inscribed on a yellow walnut leaf<app xml:id="walc06-app-0041">
+                  <lem>for a card</lem>
+                  <rdg wit="#wc_0a">and which <add>may</add> make <del>part of</del> the motto of my
+                     house</rdg>
+               </app>:— <quote>
+                  <lg>
+                     <l>“Arrivéd there, the little house they fill, </l>
+                     <l>Ne looke for entertainment where none was; </l>
+                     <l>Rest is their feast, and all things at their will: </l>
+                     <l>The noblest mind the best contentment has."</l>
+                  </lg>
+               </quote>
+            </p>
+
+            <p n="6" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 6 written: A; rewritten: B, C.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">6</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, C</seg>
+                  </ab>
+                  <ab change="#wc_0b #wc_0c">Fair copies were made of only <quote>savages’ barbarous
+                        singing … no deficiency in this respect</quote>.</ab>
+               </note> When Winslow, afterward governor of the Plymouth Colony, went with a
+               companion on a visit of ceremony to Massassoit on foot through the woods, and arrived
+               tired and hungry <app xml:id="walc06-app-0042">
+                  <lem>at his lodge,</lem>
+                  <rdg wit="#wc_0a">
+                     <add>at his lodge,</add>
+                  </rdg>
+               </app> they were well received by the king, but nothing was said about eating that
+               day. When the night arrived, to quote their own words,—“He laid us on the bed with
+               himself and his wife, they at the one end and we at the other, it being only plank,
+               laid a foot from the ground and a thin mat upon them. Two more of his chief men, for
+               want of room, pressed by and upon us; so that we were worse weary of our lodging than
+               of our journey." At one o’clock the next day Massassoit "brought two fishes that he
+               had shot," about thrice as big as a bream; “these being boiled, there were at least
+               forty looked for a share in them. The most ate of them. This meal only we had in two
+               nights and a day; and had not one of us bought a partridge, we had taken our journey
+               fasting." <app xml:id="walc06-app-0043">
+                  <lem>Fearing that they would be light-headed for want of food and also sleep,
+                     owing to “the savages’ barbarous singing, (for they use to sing themselves
+                     asleep,)" and that they might get home while they had strength to travel, they
+                     departed. As for lodging, it is true they were but poorly entertained, though
+                     what they found an inconvenience was no doubt intended for an honor; but as far
+                     as eating was concerned, I do not see how the Indians could have done better.
+                     They had nothing to eat themselves, and they were wiser than to think that
+                     apologies could supply the place of food to their guests; so they drew their
+                     belts tighter and said nothing about it. Another time when Winslow visited
+                     them, it being a season of plenty with them, there was no deficiency in this
+                     respect</lem>
+                  <rdg wit="#wc_0a">
+                     <del>For fear</del>
+                     <add rendition="pencil">Fearing that</add> they should be light-headed for want
+                     of <add rendition="pencil">food &amp; also</add> sleep <del>on account of</del>
+                     <add rendition="pencil">owing to</add> “the savages’ barbarous singing (for
+                     they used to sing themselves asleep)," and for want of food, and that they
+                     might get home while they had strength to travel—they departed. The fact
+                     was—the Indians had nothing to eat themselves—and they were wiser than to think
+                     that apologies &amp; ceremony could supply the place of food <add rendition="pencil">to their guests</add>—and so <add rendition="pencil">they
+                        drew their belts tighter &amp;</add> said nothing about it—<add rendition="pencil">As for lodging indeed they were but poorly entertained,
+                        but as far as eating was concerned I do not see how the Indians could have
+                        done better.</add> This was a time of fasting with them. At another time
+                     when Winslow visited them—<del>they</del>
+                     <add>he</add> got as much to eat as he got little before </rdg>
+                  <rdg wit="#wc_0b">savages’ barbarous singing (for they used to sing themselves
+                     asleep)," <del>and for want of food</del> and <add rendition="pencil">in
+                        order</add> that they might get home while they had strength to travel they
+                     departed. <add rendition="pencil">As for lodging, it must be confessed that the
+                        whites were but poorly entertained, but as far as eating was concerned I do
+                        not see how the Indians could have done better.</add> The fact was the
+                     Indians had nothing to eat themselves, <add rendition="pencil">it was a time of
+                        involuntary fasting with them</add> and they were wiser than to think that
+                     apologies &amp; ceremony could supply the place of food to their guests,
+                        <del>and</del> so they drew their belts tighter and said nothing about it.
+                        <del>As for lodging, indeed, they were but poorly entertained, but as far as
+                        eating was concerned I do not see how the Indians could have done better.
+                        This was a time of fasting with them</del>
+                  </rdg>
+                  <rdg wit="#wc_0c">savages’ barbarous singing (for they used to sing themselves
+                     asleep)" and in order that they might get home while they had strength to
+                     travel, they departed. As for lodging, it must be confessed that the whites
+                     were but poorly entertained, but as far as eating was concerned, I do not see
+                     how the Indians could have done better. They had nothing to eat themselves, and
+                     they were wiser than to think that apologies &amp; ceremony could supply the
+                     place of food to their guests; so they drew their belts tighter, and said
+                     nothing about it</rdg>
+               </app>. </p>
+
+            <p n="7" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 7 written: A; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">7</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0a #wc_0e">
+                     <quote>But fewer came to see me on trivial business … uncultivated continents
+                        on the other side</quote> does not appear in the manuscript in A or in the
+                     original copying of E but is interlined in pencil in E.</ab>
+               </note> As for men, they will hardly fail one any where. I <app xml:id="walc06-app-0044">
+                  <lem>had more visitors while</lem>
+                  <rdg wit="#wc_0a">
+                     <del>have</del> had more <add>of their</add> society <del>since</del>
+                     <add rendition="pencil">while</add>
+                  </rdg>
+                  <rdg wit="#wc_0e">had more <del>of their society</del>
+                     <add rendition="pencil">visitors</add> while</rdg>
+               </app> I lived in the woods than at any other period in my life; <app xml:id="walc06-app-0045">
+                  <lem>I mean that I had some.</lem>
+                  <rdg wit="#wc_0a #wc_0e"><!-- [not in ms.]--></rdg>
+               </app>
+               <app xml:id="walc06-app-0046">
+                  <lem>I met several</lem>
+                  <rdg wit="#wc_0a">I met many <del>men</del>
+                  </rdg>
+                  <rdg wit="#wc_0e">
+                     <add rendition="pencil">&amp;</add> I met <del>many</del>
+                     <add>several</add>
+                  </rdg>
+               </app> there under more favorable circumstances than I could any where else.<app xml:id="walc06-app-0047">
+                  <lem>But</lem>
+                  <rdg wit="#wc_0e">
+                     <del>Yet</del>
+                  </rdg>
+               </app> fewer came to see me on trivial<app xml:id="walc06-app-0048">
+                  <lem>business.</lem>
+                  <rdg wit="#wc_0e">business<add>it is true.</add>
+                  </rdg>
+               </app> In this respect, my company was winnowed by my mere distance from town. I had
+               withdrawn so far<app xml:id="walc06-app-0049">
+                  <lem>within</lem>
+                  <rdg wit="#wc_0e">
+                     <del>into</del>
+                     <add>within</add>
+                  </rdg>
+               </app> the great ocean of solitude, into which the rivers of society empty, that for
+               the most part, so far as my needs were concerned, only the finest sediment was
+                  deposited<app xml:id="walc06-app-0050">
+                  <lem>around me. Beside,</lem>
+                  <rdg wit="#wc_0e">
+                     <del>where I was. Also</del>
+                     <add rendition="pencil">around me. Beside</add>
+                  </rdg>
+               </app> there were wafted to me evidences of unexplored and uncultivated continents on
+               the other side.</p>
+
+            <p n="8" change="#wc_0a">
+               <seg n="8a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 8a written: A; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">8a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 8-13 appears in the following order—8a, 10a, 12a,
+                        11b, 8b, 11a, 10b, 13a, 11d, 11f, and 13b.</ab>
+                  </note> Who should come to my lodge this morning but a true Homeric<app xml:id="walc06-app-0052">
+                     <lem>or Paphlagonian</lem>
+                     <rdg wit="#wc_0a">
+                        <del>or Paphlagonian</del>
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>or</del>
+                        <add>a</add> Paphlagonian</rdg>
+                  </app> man,—<app xml:id="walc06-app-0053">
+                     <lem>he had so suitable and poetic a name that I am sorry I cannot print it
+                        here,</lem>
+                     <rdg wit="#wc_0a #wc_0e">
+                        <del>Alex Therien—(terren, Alexander the Farmer) he calls himself</del>
+                        <add>he had so suitable and poetic a name that I am sorry I cannot print it
+                           here,</add>
+                     </rdg>
+                  </app>—a Canadian, a wood-chopper and post-maker, who can hole fifty posts in a
+                  day, who made his last supper on a woodchuck which his dog caught. He, too, has
+                  heard of Homer, and, “if it were not for books," would “not know what to do rainy
+                  days," though perhaps he has not read one wholly through for many rainy seasons.
+                  Some priest who could pronounce the Greek itself taught him to read his verse in
+                  the testament<app xml:id="walc06-app-0054">
+                     <lem>in his native parish far away</lem>
+                     <rdg wit="#wc_0a">at Nicolèt, away by the Trois Riviers once</rdg>
+                     <rdg wit="#wc_0e">
+                        <del>at Nicolèt, away by the Trois Riviers</del> once <add>in his native
+                           parish far away</add>
+                     </rdg>
+                  </app>; and now I must translate to him, while he holds the book, Achilles’
+                  reproof to Patroclus for his sad countenance.—“Why are you in tears, Patroclus, like a young girl?"—<lg>
+                     <l>“Or have you alone heard some news from Phthia? </l>
+                     <l>They say that Menœtius lives yet, son of Actor, </l>
+                     <l>And Peleus lives, son of Æacus, among the Myrmidons, </l>
+                     <l>Either of whom
+                        <app xml:id="walc06-app-0055">
+                           <lem>having died,</lem>
+                           <rdg wit="#wc_0a">
+                              <del>dead</del>
+                              <add>having died,</add>
+                           </rdg>
+                        </app>
+                    we should greatly grieve." </l>
+                  </lg>
+                   He says, “That’s good." He has a great bundle of
+                  white-oak bark under his arm for a sick man, gathered this Sunday morning. “I
+                  suppose there’s no harm in going after such a thing to-day,"<app xml:id="walc06-app-0056">
+                     <lem>says he.</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">says he.</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc06-app-0057">
+                     <lem>To him Homer was a great writer, though what his writing was about he did
+                        not know</lem>
+                     <rdg wit="#wc_0a">
+                        <del>He had heard of Homer.</del>
+                        <add>To him</add> Homer was a great writer, though what his writing was
+                        about under the sun he did not know. I have since seen Therien many
+                        times</rdg>
+                     <rdg wit="#wc_0e">To him Homer was a great writer, though what his writing was
+                        about under the sun he did not know. <del>I have since seen him many
+                           times</del>
+                     </rdg>
+                  </app>. A more simple and natural man<app xml:id="walc06-app-0058">
+                     <lem>it would be hard to find.</lem>
+                     <rdg wit="#wc_0a">
+                        <del>I never saw</del>
+                        <add rendition="pencil">it would be hard to find.</add>
+                     </rdg>
+                  </app> Vice and disease, which cast such a sombre moral hue over the world,<app xml:id="walc06-app-0059">
+                     <lem>seemed to have</lem>
+                     <rdg wit="#wc_0a">had</rdg>
+                     <rdg wit="#wc_0e">
+                        <del>had</del>
+                        <del>
+                           <add>appeared to</add>
+                        </del>
+                        <add rendition="pencil">seemed to</add>
+                        <add>have</add>
+                     </rdg>
+                  </app> hardly any existence for him. <app xml:id="walc06-app-0060">
+                     <lem>He was about twenty-eight years old, and had left Canada and his father’s
+                        house a dozen years before to work in the States, and earn money to buy a
+                        farm with at last, perhaps in his native country</lem>
+                     <rdg wit="#wc_0a">He left Canada and his father’s house a dozen years ago to
+                        work in the states, and earn money to buy a farm with at last, perhaps in
+                        his native country</rdg>
+                     <rdg wit="#wc_0e">
+                        <del>He left Canada and his father’s house a dozen years ago to work in the
+                           States, and earn money perhaps to buy a farm with at last in his native
+                           country.</del> He was about twenty-eight years old <add>&amp; had left
+                           Canada and his father’s house a dozen years before to work in the States,
+                           and earn money to buy a farm with at last perhaps in his native
+                           country</add>
+                     </rdg>
+                  </app>. </seg>
+               <seg n="8b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 8b written: A; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">8b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 8b follows Visitors 11b.</ab>
+                  </note>
+                  <app xml:id="walc06-app-0062">
+                     <lem>He was cast in the coarsest mould; a stout but sluggish body, yet
+                        gracefully carried, with a thick sunburnt neck, dark bushy hair, and dull
+                        sleepy blue eyes, which were occasionally lit up with expression</lem>
+                     <rdg wit="#wc_0a">He was about 28 years old—stout &amp; sluggish, with a strong
+                        thick fleshy &amp; sunburnt neck &amp; dark bushy hair &amp; dull sleepy
+                        &amp; quiet blue eye—breathed hard and smelled of his work</rdg>
+                     <rdg wit="#wc_0e">He was <del>about twenty-eight years old,</del> cast in the
+                        coarsest mould, <del>sluggish and stout of</del>
+                        <add rendition="pencil">a stout but sluggish</add> body with a
+                           <del>strong</del> thick <del>fleshy</del> sunburnt neck, dark bushy hair,
+                        and dull sleepy blue eyes, <del>breathed hard and smelled of his work</del>
+                     </rdg>
+                  </app>. He wore a flat gray cloth cap, a dingy wool-colored<app xml:id="walc06-app-0063">
+                     <lem>greatcoat</lem>
+                     <rdg wit="#wc_0a">greatcoat which draped and concealed his body</rdg>
+                     <rdg wit="#wc_0e">greatcoat <del>which draped and concealed his body</del>
+                     </rdg>
+                  </app>, and cowhide boots. He<app xml:id="walc06-app-0064">
+                     <lem>was</lem>
+                     <rdg wit="#wc_0a">was <del>strong-limbed and</del>
+                     </rdg>
+                  </app> a great consumer of meat, usually carrying his dinner to his work a couple
+                  of miles past my house,—for he chopped all summer,—in a tin pail; cold meats,
+                  often cold<app xml:id="walc06-app-0065">
+                     <lem>woodchucks</lem>
+                     <rdg wit="#wc_0a #wc_0e">woodchucks which his dog had caught</rdg>
+                  </app>, and coffee in a stone bottle which dangled by a string<app xml:id="walc06-app-0066">
+                     <lem>from his belt;</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">from his belt;</add>
+                     </rdg>
+                  </app> and sometimes he offered me a drink. He came along early, crossing my
+                  bean-field, though without<app xml:id="walc06-app-0067">
+                     <lem>anxiety</lem>
+                     <rdg wit="#wc_0a">any anxiety</rdg>
+                  </app> or haste to get to his work, such as Yankees exhibit. <app xml:id="walc06-app-0068">
+                     <lem>He wasn’t a-going to hurt himself. He didn’t care if he only earned his
+                        board.</lem>
+                     <rdg wit="#wc_0a #wc_0e"><!-- [not in ms.]--></rdg>
+                  </app> Frequently he would leave his dinner in the bushes, when his dog had caught
+                  a woodchuck<app xml:id="walc06-app-0069">
+                     <lem>by the way,</lem>
+                     <rdg wit="#wc_0a">
+                        <add>by the way,</add>
+                     </rdg>
+                  </app> and go back a mile and a half to dress it and leave it in the cellar of the
+                  house where he boarded, after deliberating<app xml:id="walc06-app-0070">
+                     <lem>first</lem>
+                     <rdg wit="#wc_0a #wc_0e"><!-- [not in ms.]--></rdg>
+                  </app> for half an hour whether he could not sink it in the pond safely till
+                  nightfall,—loving to dwell long upon these themes. He would say, as he went by in
+                  the morning, “How thick the pigeons are! If working every day were not my trade, I
+                  could get all the meat I should want by hunting,—pigeons, woodchucks, rabbits,
+                     partridges,—by<app xml:id="walc06-app-0071">
+                     <lem>gosh</lem>
+                     <rdg wit="#wc_0a">
+                        <del>George</del>
+                        <add rendition="pencil">gosh</add>
+                     </rdg>
+                  </app>! I could get all I should want for a week in one day." </seg>
+            </p>
+
+            <p n="9" change="#wc_0c">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 9 written: C; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">C</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0c #wc_0e">Visitors 9, which was interlined in pencil in C,
+                     follows Visitors 10b and precedes Visitors 12a.</ab>
+               </note> He was a skilful chopper, and indulged in some flourishes and ornaments in
+               his art. He cut his trees<app xml:id="walc06-app-0072">
+                  <lem>level</lem>
+                  <rdg wit="#wc_0c">so level</rdg>
+                  <rdg wit="#wc_0e">
+                     <del>so</del> level</rdg>
+               </app> and close to the ground, <app xml:id="walc06-app-0073">
+                  <lem>that the sprouts which came up afterward might be more vigorous and a sled
+                     might slide over the stumps</lem>
+                  <rdg wit="#wc_0c">that a sled could slide over them</rdg>
+                  <rdg wit="#wc_0e">that a sled could slide over <del>them</del>
+                     <add rendition="pencil">the stumps, and because the sprouts that came up
+                        afterward were the better for it</add>
+                  </rdg>
+               </app>; and instead of leaving a whole tree to support his corded wood, he would pare
+               it away to a slender stake or splinter which you could break off with your hand at
+               last. </p>
+
+            <p n="10" change="#wc_0a">
+               <seg n="10a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 10a written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">10a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 10a follows Visitors 8a and precedes Visitors
+                        12a.</ab>
+                  </note>He interested me because he was so<app xml:id="walc06-app-0075">
+                     <lem>quiet and solitary and so happy</lem>
+                     <rdg wit="#wc_0a">
+                        <del>happy—so solitary—so quiet</del>
+                        <add rendition="pencil">quiet &amp; solitary &amp; so happy</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc06-app-0076">
+                     <lem>withal;</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0c">
+                        <add rendition="pencil">withal;</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc06-app-0077">
+                     <lem>a well</lem>
+                     <rdg wit="#wc_0a">He was a well</rdg>
+                     <rdg wit="#wc_0c">He was a <del>world</del>
+                        <add>well</add>
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <del>He was</del> a well</rdg>
+                  </app> of good humor and<app xml:id="walc06-app-0078">
+                     <lem>contentment</lem>
+                     <rdg wit="#wc_0a">
+                        <del>happiness</del>
+                        <add rendition="pencil">contentment</add>
+                     </rdg>
+                  </app> which overflowed at his eyes. His mirth was without alloy.</seg>
+               <seg n="10b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 10b written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">10b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 10b follows Visitors 11a and precedes Visitors
+                        13a.</ab>
+                  </note> Sometimes I saw him at <app xml:id="walc06-app-0080">
+                     <lem>his</lem>
+                     <rdg wit="#wc_0a #wc_0c">his own</rdg>
+                  </app> work in the woods, felling trees, and he would greet me with a laugh of
+                  inexpressible satisfaction, and a salutation in Canadian French, though he spoke
+                  English as <app xml:id="walc06-app-0081">
+                     <lem>well</lem>
+                     <rdg wit="#wc_0a">well, and when I asked him in which he thought now, or if he
+                        spoke aloud to himself which language he used—you know we sometimes talk to
+                        ourselves—“Yes—some times" <del>answered he</del>—He said it was in
+                        English</rdg>
+                     <rdg wit="#wc_0c">well—and when I asked him in which he thought now, or if he
+                        spoke aloud to himself, which language he used—you know we sometimes talk to
+                        ourselves—Yes, sometimes—he said it was in English</rdg>
+                     <rdg wit="#wc_0e">well, and when I asked him in which he thought now, or, if he
+                        spoke aloud to himself, which language he used, you know we sometimes talk
+                        to ourselves, said I—“Yes, sometimes," <del>he would reply</del>—He said it
+                        was English</rdg>
+                  </app>. When I approached him he would suspend his work, and with half-suppressed
+                  mirth lie along the trunk of a <app xml:id="walc06-app-0082">
+                     <lem>pine which he had felled, and, peeling off the inner bark, roll it up
+                        into</lem>
+                     <rdg wit="#wc_0a">tree <add rendition="pencil">which</add> he had felled and
+                        peeling off the pine bark, roll it up in</rdg>
+                     <rdg wit="#wc_0c">tree which he had felled, and peeling off the pine bark, roll
+                        it up into</rdg>
+                     <rdg wit="#wc_0e">
+                        <add>pine</add> tree which he had felled, and peeling off the bark, roll it
+                        up into</rdg>
+                  </app> a ball and chew it while he laughed and talked. Such an exuberance of
+                  animal spirits had he that he <app xml:id="walc06-app-0083">
+                     <lem>sometimes tumbled down and rolled</lem>
+                     <rdg wit="#wc_0a #wc_0c #wc_0e">would sometimes tumble down and roll</rdg>
+                  </app> on the ground with laughter at any thing which made him think and tickled
+                  him. <app xml:id="walc06-app-0084">
+                     <lem>Looking round upon the trees he would exclaim,—“By George! I can enjoy
+                        myself well enough here chopping; I want no better sport."</lem>
+                     <rdg wit="#wc_0a #wc_0c"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <add rendition="pencil">Looking round upon the trees he would <del>say</del>
+                           <add rendition="pencil">exclaim</add>,—By George—I can enjoy myself well
+                           enough <del>in the woods</del>
+                           <add rendition="pencil">here</add> chopping—I want no better sport.</add>
+                     </rdg>
+                  </app> Sometimes, when at leisure, he <app xml:id="walc06-app-0085">
+                     <lem>amused himself all day in the woods with a pocket pistol, firing salutes
+                        to himself at regular intervals as he walked</lem>
+                     <rdg wit="#wc_0a">would amuse himself all day in the woods with a little pocket
+                        pistol firing salutes of powder to himself at regular intervals as he
+                        travelled—and would occasionally steal up behind my house and fire a stout
+                        charge—&amp; laugh loudly at my surprise <add rendition="pencil"> or at his
+                           own trick</add> He loved also to frighten his dog when alone with him in
+                        the woods—by pointing his pistol at him &amp; firing powder only</rdg>
+                     <rdg wit="#wc_0c">would amuse himself all day in the woods with a little pocket
+                        pistol firing salutes <del>of powder</del> to himself at regular intervals
+                        as he travelled and would occasionally steal up behind my house and fire a
+                        stout charge, and laugh loudly at my surprise or at his own trick. He loved
+                        also to frighten his dog when alone with him in the woods by pointing his
+                        pistol at him and firing powder only</rdg>
+                     <rdg wit="#wc_0e">would amuse himself all day in the woods with a
+                           <del>little</del> pocket pistol firing salutes to himself at regular
+                        intervals as he travelled <add>or he would frighten his dog by pointing his
+                           pistol at him and firing powder only</add> and <del>would</del>
+                        occasionally <add>he would</add> steal up be-hind my house and fire a stout
+                        charge, and laugh loudly at my surprise or his own trick. <del>He loved also
+                           to frighten his dog when alone with him in his woods by pointing his
+                           pistol at him and firing powder only</del>
+                     </rdg>
+                  </app>. <app xml:id="walc06-app-0086">
+                     <lem>In the winter he had a fire by which at noon he warmed his coffee in a
+                        kettle; and as he sat on a log to eat his dinner the chickadees would
+                        sometimes come round and alight on his arm and peck at the potato in his
+                        fingers; and he said that he “liked to have the little <hi rend="italic">fellers</hi> about him."</lem>
+                     <rdg wit="#wc_0a">
+                        <add>In winter days when chopping in the woods he had a fire by which at
+                           noon he warmed his coffee in a tin kettle, and <add rendition="pencil">as
+                              he</add> sat on a log to eat his dinner<del>. He told me that</del>
+                           the chickadees would come round &amp; light on his arm and peck at the
+                           potatoe in his fingers, &amp; he <del>added “I like"</del>
+                           <add rendition="pencil">said that he “liked</add> to have the little
+                           fellers about <del>me</del>
+                           <add rendition="pencil">him.</add>
+                        </add>
+                     </rdg>
+                     <rdg wit="#wc_0c">In winter he chopped in the woods and had a fire by which at
+                        noon he warmed his coffee in a tin kettle and as he sat on a log to eat his
+                        dinner the chickadees would come round and light on his arm and peck at the
+                        potatoe in his fingers, and he said that he “liked to have the little
+                        fellers about him."</rdg>
+                     <rdg wit="#wc_0e">In <add>the</add> winter he <del>chopped in the woods
+                           and</del> had a fire by which at noon he warmed his coffee in a tin
+                        kettle, and as he sat on a log to eat his dinner the chickadees would <add rendition="pencil">sometimes</add> come round and <del>light</del>
+                        <add rendition="pencil">alight</add> on his arm and peck at the potatoe in
+                        his fingers, and he said that he “liked to have the little fellers about
+                        him."</rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="11" change="#wc_0a">
+               <seg n="11a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 11a written: A; rewritten: B, C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">11a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B, C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 11a follows Visitors 8b and precedes Visitors
+                        10b.</ab>
+                     <ab change="#wc_0b">Visitors 11a follows Visitors 11e and precedes Visitors
+                        12b.</ab>
+                     <ab change="#wc_0c">Visitors 11-12 appears in the following order—12a, 12c,
+                        11b, 11c, 11d, 11f, 11a, and 12b.</ab>
+                  </note>
+                  <app xml:id="walc06-app-0088">
+                     <lem>In him the animal man chiefly was developed.</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0b">
+                        <add rendition="pencil">In him the animal man chiefly was developed.</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc06-app-0089">
+                     <lem>In physical endurance and contentment he was cousin to the pine and the
+                        rock</lem>
+                     <rdg wit="#wc_0a">If others had cultivated their intellectual faculties till
+                        they astonished him—his physical contentment and endurance—like
+                           <del>the</del>
+                        <add rendition="pencil">a</add> cousin to the pine &amp; the rock was
+                        equally astonishing to them</rdg>
+                     <rdg wit="#wc_0b">
+                        <del>If others had cultivated their intellectual faculties till they
+                           astonished him, his</del>
+                        <add>In</add> physical contentment &amp; endurance <del>like a</del>
+                        <add> he was cousin to the</add> pine and the rock <del>was equally
+                           astonishing to them</del>
+                     </rdg>
+                     <rdg wit="#wc_0c">in physical contentment &amp; endurance he was cousin to the
+                        pine &amp; the rock</rdg>
+                     <rdg wit="#wc_0e">In physical <del>contentment and</del> endurance <add>and
+                           contentment</add> he was cousin to the pine and the rock</rdg>
+                  </app>. I asked him once if he was not sometimes tired at night, after working all
+                  day; and he answered, with a sincere and serious <app xml:id="walc06-app-0090">
+                     <lem>look</lem>
+                     <rdg wit="#wc_0a #wc_0b #wc_0c">look, quite truthful</rdg>
+                     <rdg wit="#wc_0e">look, <del>quite truthful</del>
+                     </rdg>
+                  </app>, "Gorrappit, I never was tired in my life."<app xml:id="walc06-app-0091">
+                     <lem>But the intellectual and what is called spiritual man in him were
+                        slumbering as in an infant</lem>
+                     <rdg wit="#wc_0a">It sounded like the triumph of the physical man</rdg>
+                     <rdg wit="#wc_0b">It sounded like the triumph of the physical man <add rendition="pencil">But the intellectual and spiritual man in him were
+                           slumbering like an infant</add>
+                     </rdg>
+                     <rdg wit="#wc_0c">It sounded like the triumph of the physical man. But the
+                        intellectual and spiritual man in him were slumbering <del>like</del>
+                        <add rendition="pencil">as in</add> an infant</rdg>
+                     <rdg wit="#wc_0e">
+                        <del>It sounded like the triumph of the physical man.</del> But the
+                        intellectual and <add>what is called</add> spiritual man in him were
+                        slumbering as in an infant</rdg>
+                  </app>. </seg>
+               <seg n="11b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 11b written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">11b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 11b follows Visitors 12a and precedes Visitors
+                        8b.</ab>
+                     <ab change="#wc_0c">Visitors 11b follows Visitors 12c.</ab>
+                  </note> He had been instructed only in that innocent and ineffectual way in which
+                  the Catholic priests teach the aborigines, <app xml:id="walc06-app-0093">
+                     <lem>by</lem>
+                     <rdg wit="#wc_0a #wc_0c">in</rdg>
+                     <rdg wit="#wc_0e">
+                        <del>in</del>
+                        <add>by</add>
+                     </rdg>
+                  </app> which the pupil is never educated to the degree of consciousness, but only
+                  to the degree of trust and reverence, and a child is not made a man, but kept a
+                  child. When Nature made him, she gave him <app xml:id="walc06-app-0094">
+                     <lem>a strong body and contentment for his portion, and propped him</lem>
+                     <rdg wit="#wc_0a">contentment for his portion, a strong body and health and
+                        propped him, as it were</rdg>
+                     <rdg wit="#wc_0c">
+                        <del>contentment for his portion,</del> a strong body <add>&amp; contentment
+                           for his portion</add>, and propped him</rdg>
+                  </app> on every side with reverence and reliance, that he might live out his
+                  threescore years and ten a child.</seg>
+               <seg n="11c" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 11c written: B; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">11c</seg>
+                        <seg type="written">B</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0b">Visitors 11c follows Visitors 13b and precedes Visitors
+                        11e.</ab>
+                  </note>
+                  <app xml:id="walc06-app-0096">
+                     <lem>He was so genuine and unsophisticated that</lem>
+                     <rdg wit="#wc_0b"><!-- [not in ms.]--></rdg>
+                  </app> no introduction would serve to introduce him, more than if you introduced a
+                  woodchuck to your neighbor. He had got to find him out as you did. He would not
+                  play any<app xml:id="walc06-app-0097">
+                     <lem>part</lem>
+                     <rdg wit="#wc_0b">part, <del>Like all children he <del>lived</del>
+                           <add rendition="pencil">amused himself chiefly</add> alone, not in
+                           society, nor where rumor and fame reach</del>
+                     </rdg>
+                  </app>. <app xml:id="walc06-app-0098">
+                     <lem>Men paid him wages for work, and so helped to feed and clothe him</lem>
+                     <rdg wit="#wc_0b #wc_0c">Men helped to feed &amp; clothe him &amp; paid him his
+                        wages for work</rdg>
+                     <rdg wit="#wc_0e">Men <del>helped to feed &amp; clothe him &amp;</del> paid him
+                        his wages for work <add>&amp; so helped to feed &amp; clothe him</add>
+                     </rdg>
+                  </app>; but he never exchanged opinions with them. </seg>
+               <seg n="11d" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 11d written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">11d</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 11d follows Visitors 13a and precedes Visitors
+                        11f.</ab>
+                  </note> He was so simply and naturally humble—<app xml:id="walc06-app-0100">
+                     <lem>if he can be called humble who never aspires</lem>
+                     <rdg wit="#wc_0a #wc_0c"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <add>if he can be called humble who never aspires</add>
+                     </rdg>
+                  </app>—that humility was no distinct quality in him, nor could he conceive of it.
+                  Wiser men were demigods to him. </seg>
+               <seg n="11e" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 11e written: B; rewritten: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">11e</seg>
+                        <seg type="written">B</seg>
+                        <seg type="rewritten">E</seg>
+                     </ab>
+                     <ab change="#wc_0b">Visitors 11e follows Visitors 11c and precedes Visitors
+                        11a.</ab>
+                     <ab change="#wc_0e">Visitors 11e is interlined in pencil in its present
+                        position.</ab>
+                     <ab change="#wc_0b">Visitors 11e appears as follows. He never heard the sound
+                        of praise. If I told him that a wise man was coming to see him he did not
+                        know nor think how he would behave more than if I told him an archangel were
+                        coming—but <del>he</del> did as if he thought that anything so grand would
+                        expect nothing of himself but take all the responsibility on itself, and let
+                        him be forgotten still</ab>
+                  </note> If you told him that such a one<app xml:id="walc06-app-0102">
+                     <lem>was</lem>
+                     <rdg wit="#wc_0e">were</rdg>
+                  </app> coming, he did as if he thought that any thing so grand would expect
+                  nothing of himself, but take all the responsibility on itself, and let him be
+                  forgotten still. He never heard the sound of praise. </seg>
+               <seg n="11f" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 11f written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">11f</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 11f follows Visitors 11d and precedes Visitors
+                        13b.</ab>
+                     <ab change="#wc_0c">Visitors 11f follows Visitors 11d and precedes Visitors
+                        11a.</ab>
+                  </note> He particularly reverenced the writer and the preacher. Their performances
+                  were miracles. When I told him that I wrote <app xml:id="walc06-app-0104">
+                     <lem>considerably,</lem>
+                     <rdg wit="#wc_0a">a good deal,</rdg>
+                     <rdg wit="#wc_0c">
+                        <del>a good deal</del>
+                        <add rendition="pencil">considerably,</add>
+                     </rdg>
+                  </app> he thought for a long time that it was merely the handwriting<app xml:id="walc06-app-0105">
+                     <lem>which</lem>
+                     <rdg wit="#wc_0a">
+                        <add rendition="pencil">which</add>
+                     </rdg>
+                  </app> I <app xml:id="walc06-app-0106">
+                     <lem>meant</lem>
+                     <rdg wit="#wc_0a">
+                        <del>meant</del>
+                        <add>spoke of</add>
+                     </rdg>
+                  </app>,<note ana="#wc_0c" resp="#clapper">“meant" copied and “spoke of" interlined
+                     as a variant.</note>
+                  <app xml:id="walc06-app-0107">
+                     <lem>for he could write a remarkably good hand himself</lem>
+                     <rdg wit="#wc_0a">
+                        <add>for he could write remarkably well himself, indeed much better than I
+                           commonly do</add>
+                     </rdg>
+                     <rdg wit="#wc_0c">for he could write remarkably well himself, indeed much
+                        better than I commonly do</rdg>
+
+                     <rdg wit="#wc_0e">for he could write a remarkably good hand himself<del>, much
+                           better than I commonly do</del>
+                     </rdg>
+                  </app> . <app xml:id="walc06-app-0108">
+                     <lem>I sometimes found the name of his native parish handsomely written in the
+                        snow by the highway, with the proper French accent, and knew that he had
+                        passed.</lem>
+                     <rdg wit="#wc_0a #wc_0c"><!-- [not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0e">
+                        <add>I sometimes found the name of his native parish handsomely written in
+                           the snow by the highway, with the proper French accent, and knew that he
+                           had passed.</add>
+                     </rdg>
+                  </app> I asked him if he ever wished to write his thoughts. He said that he had
+                  read and written letters for those who could not, but he never tried to write
+                  thoughts,—no, he could not, he could not tell what to put first, it would kill
+                  him, and then there was spelling to be attended to at the same time! </seg>
+            </p>
+
+            <p n="12" change="#wc_0a">
+               <seg n="12a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 12a written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">12a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 12a follows Visitors 10a and precedes Visitors
+                        11b.</ab>
+                     <ab change="#wc_0c">Visitors 12a follows Visitors 10b and precedes Visitors
+                        12c.</ab>
+                  </note> I heard that a <app xml:id="walc06-app-0110">
+                     <lem>distinguished wise man and reformer</lem>
+                     <rdg wit="#wc_0a">wise man <del>
+                           <add>the chief of all the Reformers</add>
+                        </del>
+                     </rdg>
+                     <rdg wit="#wc_0c">
+                        <del>wise man</del>
+                        <del>
+                           <add>distinguished reformer</add>
+                        </del>
+                        <add rendition="pencil">distinguished wise man &amp; reformer</add>
+                     </rdg>
+                  </app> asked him if he did not want the world to be changed;<app xml:id="walc06-app-0111">
+                     <lem>but</lem>
+                     <rdg wit="#wc_0a">and </rdg>
+                     <rdg wit="#wc_0c">
+                        <del>and</del>
+                        <add rendition="pencil">but</add>
+                     </rdg>
+                  </app> he answered with a chuckle of surprise in his Canadian accent, not knowing
+                  that the question had ever been entertained before, “No, <app xml:id="walc06-app-0112">
+                     <lem>I like</lem>
+                     <rdg wit="#wc_0a #wc_0c">he liked</rdg>
+                     <rdg wit="#wc_0e">
+                        <del>he liked</del>
+                        <add>I like</add>
+                     </rdg>
+                  </app> it well enough." It would<app xml:id="walc06-app-0113">
+                     <lem>have suggested</lem>
+                     <rdg wit="#wc_0a">
+                        <del>suggest</del>
+                        <add>have suggested</add>
+                     </rdg>
+                  </app> many things to a philosopher to<app xml:id="walc06-app-0114">
+                     <lem>have dealings with him</lem>
+                     <rdg wit="#wc_0c">have dealings with him <del>
+                           <add>Indeed he was himself a philosopher in his way, &amp; could take his
+                              own views of things</add>
+                        </del>
+                     </rdg>
+                     <rdg wit="#wc_0e">have <del>had</del> dealings with him</rdg>
+                  </app>. </seg>
+               <seg n="12b" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 12b written: B; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">12b</seg>
+                        <seg type="written">B</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0b">Visitors 12b, 14b and 15a are inserted on the verso of the
+                        leaf that contains Visitors 11c, 11e and 11a.</ab>
+                     <ab change="#wc_0e">A fair copy was made of only <quote>To a stranger he
+                           appeared … as wise as Shakspeare, or as simply</quote>.</ab>
+                  </note> To a stranger he<app xml:id="walc06-app-0116">
+                     <lem>appeared</lem>
+                     <rdg wit="#wc_0b">would appear</rdg>
+                  </app> to know nothing of things in general; yet I sometimes saw in him a man whom
+                  I had not<app xml:id="walc06-app-0117">
+                     <lem>seen</lem>
+                     <rdg wit="#wc_0b">known</rdg>
+                  </app> before, and I did not know whether he was as wise as Shakspeare or as
+                  simply ignorant as a child, whether to suspect him of a fine poetic consciousness
+                  or of stupidity.</seg>
+               <seg n="12c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 12c written: A; rewritten: C.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">12c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0c">Visitors 12c, which is interlined in pencil in A,
+                        follows Visitors 12a and precedes Visitors 11b.</ab>
+                  </note>
+                  <app xml:id="walc06-app-0119">
+                     <lem>A townsman told me</lem>
+                     <rdg wit="#wc_0a">My friends said</rdg>
+                     <rdg wit="#wc_0c">One of my friends said</rdg>
+                  </app> that when he met him sauntering through the village in his small
+                  close-fitting cap, <app xml:id="walc06-app-0120">
+                     <lem>and whistling to himself,</lem>
+                     <rdg wit="#wc_0a"><!--[not in ms.]-->
+                     </rdg>
+                     <rdg wit="#wc_0c">
+                        <add rendition="pencil">and whistling to himself,</add>
+                     </rdg>
+                  </app> he reminded him of a prince in disguise.</seg>
+            </p>
+
+            <p n="13" change="#wc_0a">
+               <seg n="13a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 13a written: A; rewritten: C.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">13a</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 13a follows Visitors 10b and precedes Visitors
+                        11d.</ab>
+                     <ab change="#wc_0c">Visitors 13a follows Visitors 12b.</ab>
+                  </note> His only books were an almanac and an arithmetic, in which last<app xml:id="walc06-app-0122">
+                     <lem>he was considerably</lem>
+                     <rdg wit="#wc_0a">especially he was quite</rdg>
+                     <rdg wit="#wc_0c">especially he was <del>quite</del>
+                        <add rendition="pencil">rather</add>
+                     </rdg>
+                  </app> expert. The former was a sort of<app xml:id="walc06-app-0123">
+                     <lem>cyclopædia</lem>
+                     <rdg wit="#wc_0a #wc_0c">universal lexicon</rdg>
+                  </app> to him, which he supposed <app xml:id="walc06-app-0124">
+                     <lem>to contain</lem>
+                     <rdg wit="#wc_0a">contained</rdg>
+                  </app> an abstract of human knowledge, <app xml:id="walc06-app-0125">
+                     <lem>as indeed it does to a considerable extent.</lem>
+                     <rdg wit="#wc_0a #wc_0c"><!-- [not in ms.]--></rdg>
+                  </app> I loved to sound him on <app xml:id="walc06-app-0126">
+                     <lem>the various</lem>
+                     <rdg wit="#wc_0a">all the</rdg>
+                  </app> reforms of the day, and he<app xml:id="walc06-app-0127">
+                     <lem>never</lem>
+                     <rdg wit="#wc_0a #wc_0c">rarely</rdg>
+                  </app> failed to look at them in the most simple and practical<app xml:id="walc06-app-0128">
+                     <lem>light</lem>
+                     <rdg wit="#wc_0a #wc_0c">light and as they concerned him</rdg>
+                  </app>. He had never heard of such things before. <app xml:id="walc06-app-0129">
+                     <lem>Could he do without factories? I asked.</lem>
+                     <rdg wit="#wc_0a">He allowed that he might dispense with many articles of
+                        commerce to advantage</rdg>
+                  </app> He had worn the home-made Vermont gray,<app xml:id="walc06-app-0130">
+                     <lem>he said,</lem>
+                     <rdg wit="#wc_0a"><!-- [not in ms.]--></rdg>
+                  </app> and that was good. <app xml:id="walc06-app-0131">
+                     <lem>Could he dispense with tea and coffee? Did this country afford any
+                        beverage beside water?</lem>
+                     <rdg wit="#wc_0a">If I didn’t like factories—was it necessary to send abroad
+                        for our drink? Did he ever drink anything beside water which the country
+                        afforded? </rdg>
+                     <rdg wit="#wc_0c">Could he dispense with tea and coffee? Did the country afford
+                        any beverage?</rdg>
+                  </app> He had soaked hemlock leaves in water and drank<app xml:id="walc06-app-0132">
+                     <lem>it,</lem>
+                     <rdg wit="#wc_0a #wc_0c">it in Canada,</rdg>
+                  </app> and<app xml:id="walc06-app-0133">
+                     <lem>thought</lem>
+                     <rdg wit="#wc_0a #wc_0c"><!-- [not in ms.]--></rdg>
+                  </app> that was better than water in warm weather.<app xml:id="walc06-app-0134">
+                     <lem>When I asked him if he could do without money</lem>
+                     <rdg wit="#wc_0a">
+                        <del>Could he</del>
+                        <add rendition="pencil">When I asked him once if he could</add> do without
+                        money <del>and</del>
+                     </rdg>
+                  </app>, he showed the convenience of money in such a way as to suggest and
+                  coincide with the most philosophical accounts of the origin of this institution,
+                  and the very derivation of the word <hi rend="italic">pecunia</hi>. If an ox were
+                  his property, and he wished to get <app xml:id="walc06-app-0135">
+                     <lem>needles and thread</lem>
+                     <rdg wit="#wc_0a">needles or thread</rdg>
+                  </app> at the store, he thought it would be inconvenient and impossible soon to go
+                  on mortgaging some<app xml:id="walc06-app-0136">
+                     <lem>portion</lem>
+                     <rdg wit="#wc_0a">fraction</rdg>
+                  </app> of the creature each time to that amount.<app xml:id="walc06-app-0137">
+                     <lem> He could defend many institutions better than any philosopher, because,
+                        in describing them as they concerned him, he gave the true reason for their
+                        prevalence, and speculation had not suggested to him any other.</lem>
+                     <rdg wit="#wc_0a #wc_0c"><!--[not in ms.]--></rdg>
+                  </app>
+               </seg>
+               <seg n="13b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 13b written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">13b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0a">Visitors 13b follows Visitors 11f.</ab>
+                     <ab change="#wc_0c">Visitors 13b is interlined in pencil in its present
+                        order.</ab>
+                     <ab change="#wc_0e">A fair copy was made of only <quote>without feathers, —and
+                           that one exhibited … </quote>knees<quote> bent the wrong
+                        way</quote>.</ab>
+                  </note>
+                  <app xml:id="walc06-app-0139">
+                     <lem>At another time, hearing</lem>
+                     <rdg wit="#wc_0a">Speaking of</rdg>
+                     <rdg wit="#wc_0c">Hearing</rdg>
+                  </app> Plato’s definition of a man,—<app xml:id="walc06-app-0140">
+                     <lem>a biped without feathers,—and that one exhibited a cock plucked and called
+                        it Plato’s man, he thought it an important difference that the <hi rend="style(italic)">knees</hi> bent the wrong way</lem>
+                     <rdg wit="#wc_0a">one day, he said that the knee of the cock turned the other
+                        way from man’s, and that was an important difference</rdg>
+                  </app>. </seg>
+               <seg n="13c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 13c written: A; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">13c</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                  </note> He would <app xml:id="walc06-app-0141">
+                     <lem>sometimes exclaim,</lem>
+                     <rdg wit="#wc_0a">exclaim sometimes <del>
+                           <add>after conversing with me several hours</add>
+                        </del>
+                     </rdg>
+                  </app> “How I love to talk! By George, I could talk all<app xml:id="walc06-app-0142">
+                     <lem>day!"</lem>
+                     <rdg wit="#wc_0a">day! You make me think of things I never thought of
+                        before</rdg>
+                  </app>
+               </seg>
+               <seg n="13d" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 13d written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">13d</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">
+                        <quote>He would sometimes ask me … honesty and the like virtues</quote> is
+                        interlined in pencil.</ab>
+                  </note> I asked him <app xml:id="walc06-app-0144">
+                     <lem>once</lem>
+                     <rdg wit="#wc_0e">
+                        <del>one afternoon</del>
+                        <add>once</add>
+                     </rdg>
+
+                  </app> when I had not seen him for many months, if he had got a new idea this
+                  summer. “Good Lord," <app xml:id="walc06-app-0145">
+                     <lem>said</lem>
+                     <rdg wit="#wc_0e">
+                        <del>says</del>
+                        <add>said</add>
+                     </rdg>
+                  </app> he, “a man that has to work as I do, if he does not forget the ideas he has
+                  had, he will do well. May be the man you hoe with is inclined to race; then,
+                     by<app xml:id="walc06-app-0146">
+                     <lem>gorry,</lem>
+                     <rdg wit="#wc_0e">gorry <del>
+                           <add>[Godfrey]</add>
+                        </del>
+                        <note type="general" subtype="inline" resp="#clapper"> The preceding
+                           brackets are Thoreau’s.</note>
+                     </rdg>
+                  </app> your mind must be there; you think of weeds." He would sometimes ask me
+                  first on such occasions, if I had made any improvement. One winter day I asked<app xml:id="walc06-app-0147">
+                     <lem>him</lem>
+                     <rdg wit="#wc_0e">him <del>once</del>
+                     </rdg>
+                  </app> if he was always satisfied with himself, wishing to suggest a
+                     substitute<app xml:id="walc06-app-0148">
+                     <lem>within him for the priest without, and some higher motive for
+                        living.</lem>
+                     <rdg wit="#wc_0e">for the priest within him <del>employment &amp; an aim for
+                           life</del>
+                        <add>&amp; some higher motive for living.</add>
+                     </rdg>
+                  </app> “Satisfied!" said he; “some men are satisfied with one thing, and some with
+                  another. One man, perhaps, if he has got enough, will be satisfied to sit all day
+                  with his back to the fire and his belly to the table, by George!" Yet I never, by
+                  any manœuvring, could get him to take<app xml:id="walc06-app-0149">
+                     <lem>the spiritual</lem>
+                     <rdg wit="#wc_0e">what is called the spiritual</rdg>
+                  </app> view of things; the highest that he appeared to conceive of was a <app xml:id="walc06-app-0150">
+                     <lem>simple expediency, such as you might expect an animal to appreciate; and
+                        this, practically, is true of most men</lem>
+                     <rdg wit="#wc_0e">
+                        <del>natural</del>
+                        <add>simple</add> expediency <add>which did not imply the moral
+                           sentiment</add>
+                     </rdg>
+                  </app>. If I suggested any improvement in his<app xml:id="walc06-app-0151">
+                     <lem>mode of life</lem>
+                     <rdg wit="#wc_0e">own case</rdg>
+                  </app>, he merely answered, without expressing any regret, that it was too late.
+                  Yet he thoroughly believed in honesty and the like virtues.</seg>
+            </p>
+
+            <p n="14" change="#wc_0e">
+               <seg n="14a" change="#wc_0e">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 14a written: E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">14a</seg>
+                        <seg type="written">E</seg>
+                     </ab>
+                     <ab change="#wc_0e">
+                        <quote>Though he hesitated … presentable thought behind</quote> is
+                        interlined in pencil.</ab>
+                  </note>There was a certain positive originality, however slight, to be detected in
+                  him, and I occasionally observed that he was thinking for himself and expressing
+                  his own<app xml:id="walc06-app-0153">
+                     <lem>opinion</lem>
+                     <rdg wit="#wc_0e">opinion, however crude and indistinct</rdg>
+                  </app>, a phenomenon so rare that I would any day walk ten miles to observe it,
+                  and it amounted to the re-origination of<app xml:id="walc06-app-0154">
+                     <lem>many of</lem>
+                     <rdg wit="#wc_0e">
+                        <add>many of</add>
+                     </rdg>
+                  </app> the institutions of society. Though he hesitated, and perhaps failed to
+                  express himself<app xml:id="walc06-app-0155">
+                     <lem>distinctly,</lem>
+                     <rdg wit="#wc_0e"><!--[not in ms.]--></rdg>
+                  </app> he always had a presentable thought behind. Yet his thinking was so
+                  primitive and immersed in his animal life, that, though more promising than a
+                  merely learned man’s, it<app xml:id="walc06-app-0156">
+                     <lem>rarely</lem>
+                     <rdg wit="#wc_0e">
+                        <del>never</del>
+                        <add>rarely</add>
+                     </rdg>
+                  </app> ripened to any thing which can be reported.</seg>
+               <seg n="14b" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 14b written: B; rewritten: C, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">14b</seg>
+                        <seg type="written">B</seg>
+                        <seg type="rewritten">C, E</seg>
+                     </ab>
+                     <ab change="#wc_0b">Visitors 14b is interlined in pencil.</ab>
+                  </note> He suggested that there might be men of genius in the lowest grades of
+                  life, however permanently humble and illiterate, who <app xml:id="walc06-app-0158">
+                     <lem>take their own view always, or do not pretend to see at all</lem>
+                     <rdg wit="#wc_0b">have a view of their own always &amp; are not indebted to
+                        their neighbors</rdg>
+                     <rdg wit="#wc_0c">take a view of their own always &amp; are not indebted to
+                        their neighbors</rdg>
+                     <rdg wit="#wc_0e">who take their own view always and are not indebted to their
+                        neighbors</rdg>
+                  </app>; who are as bottomless<app xml:id="walc06-app-0159">
+                     <lem>even as</lem>
+                     <rdg wit="#wc_0b #wc_0c">as even</rdg>
+                  </app> Walden Pond was thought to be, though they may be dark and<app xml:id="walc06-app-0160">
+                     <lem>muddy</lem>
+                     <rdg wit="#wc_0e">muddy. Sometimes there would come half a dozen railroad
+                        repairers to my house at once, healthy &amp; sturdy working men, descended
+                        from sound bodies &amp; still transmitting arms and legs and bowels
+                        downward. Some of them had got a rude wisdom withal, and a <add rendition="pencil">genuine</add> courtesy <del>which was sweet</del>
+                        thanks to their dear bought experience. One a handsome sailor-like young man
+                        I remember who had lived among the Indians near Apollachicola, who said to
+                        me “Sir, I like your notions," and went away wishing me “success and
+                        happiness." They came in troops on Sunday in clean shirts, with washed hands
+                        and faces, and fresh twigs in their hands. I observed in some of these men,
+                        under faces homely, hard and <del>seared</del>
+                        <add rendition="pencil">scarred</add> like the rocks, <del>but human &amp;
+                           wise still</del> an <del>inextinguishable &amp;</del> ineradicable
+                        refinement and delicacy of nature, <del>older &amp; of more worth than the
+                           sun &amp; moon</del> which are commonly thought to adorn the drawing
+                        rooms only—Sometimes, I fancied, a genuine magnanimity equal to the least
+                        occasion, <del>and</del> of unexplored &amp; uncontaminated descent,
+                           <del>greater traits methought I noticed in the shortest intercourse, than
+                           are recorded of any of the worthies. Their humble occupation</del>
+                        <add rendition="pencil">such as I had assigned to the worthies of the world.
+                           It was no disadvantage that their occupation was humble</add> and that
+                        they took no aims upon themselves <del>were no disadvantage. Our employment
+                           affects but slowly the finer qualities of our nature.</del>
+                        <add rendition="pencil">Of course</add> there is no more real rudeness in
+                        laborers &amp; washerwomen than in gentlemen and ladies. <del>Most men are
+                           wrecked upon their consciousness. Civilization makes bright only the
+                           superficial film of the eye</del>
+                     </rdg>
+                  </app>.<note type="general" resp="#clapper" ana="#wc_0e"> For earlier versions of
+                     this passage in A &amp; B, see Visitors 2.</note>
+               </seg>
+               <app>
+                  <lem>
+                     <lb/>
+                  </lem>
+               </app>
+            </p>
+
+            <p n="15" change="#wc_0b">
+               <seg n="15a" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 15a written: B; rewritten: D, E.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">15a</seg>
+                        <seg type="written">B</seg>
+                        <seg type="rewritten">D, E</seg>
+                     </ab>
+                     <ab change="#wc_0b">Visitors 15a is interlined in pencil.</ab>
+                     <ab change="#wc_0e">A fair copy was made of only <quote>Many a traveller came
+                           out of his way to see</quote>.</ab>
+                  </note> Many a traveller came out of his way to see me and the inside of my house,
+                     and,<app xml:id="walc06-app-0162">
+                     <lem>as</lem>
+                     <rdg wit="#wc_0b">
+                        <del>for</del>
+                        <add rendition="pencil">as</add>
+                     </rdg>
+                  </app> an excuse for calling, asked for a glass of water. I<app xml:id="walc06-app-0163">
+                     <lem>told</lem>
+                     <rdg wit="#wc_0b #wc_0d">generally told</rdg>
+                  </app> them that I drank<app xml:id="walc06-app-0164">
+                     <lem>at</lem>
+                     <rdg wit="#wc_0b">of</rdg>
+                  </app> the pond, and pointed thither, offering to lend<app xml:id="walc06-app-0165">
+                     <lem>them</lem>
+                     <rdg wit="#wc_0b">
+                        <del>them</del>
+                        <add>him</add>
+                     </rdg>
+                  </app> a<app xml:id="walc06-app-0166">
+                     <lem>dipper</lem>
+                     <rdg wit="#wc_0d">dipper. <del>One Sunday two young women strangers borrowed my
+                           dipper; but I never saw them nor the dipper again. They thirsted not for
+                           water but threw the dipper into the lake perchance. What the lake to them
+                           but liquid fire and brimstone! They will never know peace till they have
+                           returned the dipper. In all worlds this is decreed. Before this, even
+                           while I was first putting my house</del>
+                        <note type="general" subtype="inline" resp="#clapper">the leaf ends here;
+                           after an apparently missing leaf, the next leaf begins:</note> Perhaps he
+                        is one of the sect of philosophers, the only one, so simple, so abstracted
+                        in his thought and life from his contemporaries that his wisdom is
+                        foolishness to them—His very vividness of perception—clear knowledge &amp;
+                        insight—have made him dumb—leaving no common consciousness &amp; ground of
+                        parlance with mankind. I was not to be deceived by a few stupid words of
+                        course, or apparent stolidity. A month or two after this, as I heard, his
+                        body was found dead among the brush over back of the hills, so far
+                        decomposed that his coffin was carried to it, and it was put into it with
+                        pitchforks,—But <add rendition="pencil">still in spite of all I
+                           cherished</add> I have my <del>doubts still</del>
+                        <add rendition="pencil">suspicions</add> that he <del>may</del>
+                        <add rendition="pencil">might</add> have died a Brahmin’s death, dwelling at
+                        the roots of trees at last, and been absorbed into the spirit of Brahm</rdg>
+                  </app>.<app xml:id="walc06-app-0167">
+                     <lem> Far off as I lived, I was not exempted from the annual visitation which
+                        occurs, methinks, about the first of April, when every body is on the move;
+                        and I had my share of good luck, though there were some curious specimens
+                        among my visitors.</lem>
+                     <rdg wit="#wc_0b #wc_0d #wc_0e"><!-- [not in ms.]--></rdg>
+                  </app> Half-witted men from the almshouse<app xml:id="walc06-app-0168">
+                     <lem>and elsewhere</lem>
+                     <rdg wit="#wc_0b"><!-- [not in ms.]--></rdg>
+                  </app> came to see me; but I<app xml:id="walc06-app-0169">
+                     <lem>endeavored to make</lem>
+                     <rdg wit="#wc_0b">made</rdg>
+                  </app> them exercise all the wit they had, and make their confessions to me; in
+                  such cases making wit the theme of our conversation; and so was compensated.
+                  Indeed, I <app xml:id="walc06-app-0170">
+                     <lem>found some of them to be wiser than the so called <hi rend="style(italic)">overseers</hi> of the poor and selectmen of the town, and thought it was
+                        time that the tables were turned. With respect to wit, I learned</lem>
+                     <rdg wit="#wc_0b">find </rdg>
+                     <rdg wit="#wc_0d">found some of them to be wiser than the so called <hi rend="style(underline)">overseers</hi> of the poor and selectmen of the
+                        town, and thought it was time that the tables were turned. <add rendition="pencil">With respect to wit</add> I found</rdg>
+                  </app> that there was not much difference between the half and the whole.</seg>
+               <seg n="15b" change="#wc_0d">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Visitors 15b written: D.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">6</seg>
+                        <seg type="chapterTitle">Visitors</seg>
+                        <seg type="paragraph">15b</seg>
+                        <seg type="written">D</seg>
+                     </ab>
+                  </note> One day,<app xml:id="walc06-app-0171">
+                     <lem>in particular,</lem>
+                     <rdg wit="#wc_0d">
+                        <add rendition="pencil">in particular</add>,</rdg>
+                  </app> an inoffensive, simple-minded pauper, whom with others I had often seen
+                  used as fencing stuff, standing or sitting on a bushel in the fields to keep
+                  cattle and himself from straying, visited me, and expressed a wish to live as I
+                  did. He told me, with the utmost simplicity and truth, quite superior, or rather
+                     <hi rend="style(italics)">inferior</hi>, to any thing that is called humility,
+                  that he was “deficient in intellect." These were his words. The Lord had made him
+                  so, yet he supposed the Lord cared as much for him as for another. “I have always
+                  been so," said he, “from my childhood; I never had much mind; I was not like other
+                  children; I am weak in the head. It was the Lord’s will, I suppose." <app xml:id="walc06-app-0172">
+                     <lem>And there he was to prove the truth of his words. He was a metaphysical
+                        puzzle to me.</lem>
+                     <rdg wit="#wc_0d"><!-- [not in ms.]--></rdg>
+                  </app> I have rarely met a fellow-man on such promising ground,—it was so simple
+                  and sincere and so true all that he said. <app xml:id="walc06-app-0173">
+                     <lem>And, true enough, in proportion as he appeared to humble himself was he
+                        exalted. I did not know at first but it was the result of a wise
+                        policy</lem>
+                     <rdg wit="#wc_0d">I did not know at first but it was the result of a wise
+                        policy so to lay the surest foundations for an intercourse, that might come
+                        to something. For, true enough, in proportion as he appeared to humble
+                        himself <del>he</del> was <add>he</add> exalted</rdg>
+                  </app>. It seemed that from such a basis of truth and frankness as the poor
+                  weak-headed pauper had laid, our intercourse might go forward to something better
+                  than the intercourse of sages.</seg>
+            </p>
+
+            <p n="16" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 16 written: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">16</seg>
+                     <seg type="written">D</seg>
+                  </ab>
+               </note> I had some guests from those not reckoned commonly among the town’s poor, but
+               who should be; who are among the world’s poor, at any rate; guests who appeal, not to
+               your hospitality, but to your <hi rend="style(italics)">hospitality</hi>; who
+               earnestly wish to be helped, and preface their appeal with the information that they
+               are resolved, for one thing, never to help themselves. I require of a visitor that he
+               be not actually starving, though he may have the very best appetite in the world,<app xml:id="walc06-app-0174">
+                  <lem> however he got it</lem>
+                  <rdg wit="#wc_0d">
+                     <add rendition="pencil">however he got it</add> and I will not inquire how he
+                     came by it</rdg>
+               </app>. Objects of charity are not guests. Men who did not know when their visit had
+               terminated, though I went about my business <app xml:id="walc06-app-0175">
+                  <lem>again</lem>
+                  <rdg wit="#wc_0d">again, and regarded myself as alone</rdg>
+               </app>, answering them from greater and greater<app xml:id="walc06-app-0176">
+                  <lem>remoteness.</lem>
+                  <rdg wit="#wc_0d">remoteness.<quote>
+                        <lg>
+                           <l>I’m contented you should stay</l>
+                           <l>For ever and aye</l>
+                           <l>If you can take yourself away</l>
+                           <l>Any day</l>
+                        </lg>
+                     </quote>
+                  </rdg>
+               </app> Men of<app xml:id="walc06-app-0177">
+                  <lem>almost</lem>
+                  <rdg wit="#wc_0d"><!-- [not in ms.]--></rdg>
+               </app> every degree of wit called on me<app xml:id="walc06-app-0178">
+                  <lem>in the migrating season.</lem>
+                  <rdg wit="#wc_0d"><!-- [not in ms.]--></rdg>
+               </app> Some who had more wits than they knew what to do with; runaway slaves with
+               plantation manners, who listened from time to time, like the fox in the fable, as if
+               they heard the hounds a-baying on their track, and looked at me beseechingly, as much
+               as to say, — <quote>
+                  <lg>
+                     <l>“O Christian, will you send me back?"</l>
+                  </lg>
+               </quote> One real runaway slave, among the rest, whom I<app xml:id="walc06-app-0179">
+                  <lem>helped to forward</lem>
+                  <rdg wit="#wc_0d">
+                     <del>forwarded</del>
+                     <add rendition="pencil">helped to forward</add>
+                  </rdg>
+               </app> toward the northstar. Men of one idea, like a hen with one chicken, and that a
+               duckling; men of a thousand ideas, and unkempt heads, like those hens which are made
+               to take charge of a hundred chickens, all in pursuit of one bug, a score of them lost
+               in every morning’s dew,—<app xml:id="walc06-app-0180">
+                  <lem>and become frizzled and mangy in consequence;</lem>
+                  <rdg wit="#wc_0d"><!-- [not in ms.]--></rdg>
+               </app> men of ideas instead of legs, a sort of intellectual centipede that made you
+               crawl all over. One man proposed a book in which visitors should write their names,
+               as at the White Mountains; <app xml:id="walc06-app-0181">
+                  <lem>but, alas! I have too good a memory to make that necessary</lem>
+                  <rdg wit="#wc_0d">said he would be at the expense of it! As if it were of any
+                     significance for a man who had failed to make any impression on you to leave
+                     his name. No, I kept a book, it needed only a small one, to put their <hi rend="style(underline)">fames</hi> in; I was at the expense of it</rdg>
+               </app>. </p>
+
+            <p n="17" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 17 written: B; rewritten: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">17</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">E</seg>
+                  </ab>
+                  <ab change="#wc_0b #wc_0e">
+                     <quote>and you would suppose that they would not go … as many risks as he
+                        runs</quote> does not appear in the manuscript in B or in the original
+                     copying of E but is interlined in E.</ab>
+                  <ab change="#wc_0e">A fair copy was made of only <quote>that it was not possible
+                        to do so much good … feared the men-harriers rather</quote>.</ab>
+               </note> I could not<app xml:id="walc06-app-0182">
+                  <lem>but notice some of the peculiarities of</lem>
+                  <rdg wit="#wc_0b">
+                     <del>help noticing</del>
+                     <add>but notice</add> some <add>of the</add> peculiarities <del>in</del>
+                     <add>of</add>
+                  </rdg>
+               </app> my visitors. Girls and boys and young women generally seemed glad to be in the
+               woods. They looked in the pond and at the flowers, and improved their time. Men of
+                  business,<app xml:id="walc06-app-0183">
+                  <lem>even farmers,</lem>
+                  <rdg wit="#wc_0b"><!-- [not in ms.]--></rdg>
+               </app> thought only of solitude and employment, and of the great distance at which I
+               dwelt from something or other; and though they said that they loved a ramble in the
+               woods occasionally, it was obvious that they did not. Restless committed men, whose
+               time was all taken up in getting a living<app xml:id="walc06-app-0184">
+                  <lem>or keeping it;</lem>
+                  <rdg wit="#wc_0b"><!-- [not in ms.]--></rdg>
+               </app> ministers<app xml:id="walc06-app-0185">
+                  <lem>who spoke of God as if they enjoyed a monopoly of the subject, who could not
+                     bear all kinds of opinions;</lem>
+                  <rdg wit="#wc_0b">
+                     <add>who spoke of God as if they enjoyed a monopoly of the subject, who could
+                        not bear all kinds of opinions;</add>
+                  </rdg>
+               </app> doctors,<app xml:id="walc06-app-0186">
+                  <lem>lawyers</lem>
+                  <rdg wit="#wc_0b">lawyers, conscientious preachers</rdg>
+               </app>, uneasy housekeepers who pried into my cupboard and bed <app xml:id="walc06-app-0187">
+                  <lem>when I was out,—how came Mrs. —— to know that my sheets were not as clean as
+                     hers</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">
+                        <del>What right had</del>
+                        <add rendition="pencil">How came</add> Mrs. —— to know that my sheets were
+                        not <del>the cleanest</del>
+                        <add rendition="pencil">as clean as hers</add>
+                     </add>
+                  </rdg>
+               </app>? —young men who had ceased to be young, and had concluded that it was safest
+               to follow the beaten track of the professions,—<app xml:id="walc06-app-0188">
+                  <lem>all these</lem>
+                  <rdg wit="#wc_0b"><!-- [not in ms.]--></rdg>
+               </app> generally said that it was not possible to do so much good in my position.
+                  <app xml:id="walc06-app-0189">
+                  <lem>Ay! there was the rub.</lem>
+                  <rdg wit="#wc_0b">
+                     <add>Ay! there was the rub.</add>
+                  </rdg>
+               </app> The old and infirm and the timid, of whatever age or sex, thought most of
+               sickness, and sudden accident and death; to them life seemed full of <app xml:id="walc06-app-0190">
+                  <lem>danger,—what danger is there if you don't think of any? —and they thought
+                     that a prudent man would carefully select the safest position,</lem>
+                  <rdg wit="#wc_0b">danger anywhere, and they thought that a prudent man would
+                     carefully select the safest position. (What danger is there if you don’t think
+                     of any?)</rdg>
+                  <rdg wit="#wc_0e">Danger <del>anywhere</del>, <add>—<del>but</del> what danger
+                           <del>of this kind</del> is there if you don’t think of any?—</add> and
+                     they thought that a prudent man would carefully select the safest
+                     position.</rdg>
+               </app>
+               <app xml:id="walc06-app-0191">
+                  <lem>where Dr. B. might be on hand at a moment’s warning.</lem>
+                  <rdg wit="#wc_0b">
+                     <add rendition="pencil">where Dr. B. might be on hand at a moment’s
+                        warning.</add>
+                  </rdg>
+               </app> To them the village was literally a <hi rend="style(italics)">com-munity</hi>,
+               a league for mutual defence, and you would suppose that they would not go
+               a-huckleberrying without a medicine chest. The amount of it is, if a man is alive,
+               there is always <hi rend="style(italics)">danger</hi> that he may die, though the
+               danger must be allowed to be less in proportion as he<app xml:id="walc06-app-0192">
+                  <lem>is</lem>
+                  <rdg wit="#wc_0e">makes himself <del>the more</del>
+                  </rdg>
+               </app> dead-and-alive to begin with. A man sits as many risks as he<app xml:id="walc06-app-0193">
+                  <lem>runs</lem>
+                  <rdg wit="#wc_0e">runs<del>, if he did but know it</del>
+                  </rdg>
+               </app>. Finally, there were the self-styled reformers, the greatest bores of<app xml:id="walc06-app-0194">
+                  <lem>all,</lem>
+                  <rdg wit="#wc_0b">all, <del>not to imply that the others were bores at all</del>
+                  </rdg>
+               </app> who thought that I was forever singing,— <lg>
+                  <l>This is the house that I built;</l>
+                  <l>This is the man that lives in the house that I built;</l>
+               </lg> but<app xml:id="walc06-app-0195">
+                  <lem>they</lem>
+                  <rdg wit="#wc_0b #wc_0e">who</rdg>
+               </app> did not know that the third line was, <lg>
+                  <l>These are the folks that worry the man </l>
+                  <l>That lives in the house that I built. </l>
+               </lg>
+               <app xml:id="walc06-app-0196">
+                  <lem>I did not fear the hen-harriers, for I kept no chickens; but I feared the
+                     men-harriers rather.</lem>
+                  <rdg wit="#wc_0b"><!-- [not in ms.]-->
+                  </rdg>
+                  <rdg wit="#wc_0e">
+                     <add>I did not fear the hen-harriers, for I kept no chickens; but I feared the
+                        men-harriers rather.</add>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="18" change="#wc_0e">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Visitors 18 written: E.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">6</seg>
+                     <seg type="chapterTitle">Visitors</seg>
+                     <seg type="paragraph">18</seg>
+                     <seg type="written">E</seg>
+                  </ab>
+                  <ab change="#wc_0e">Visitors 18 is interlined.</ab>
+               </note>
+               <app xml:id="walc06-app-0197">
+                  <lem>I had more cheering visitors than the last</lem>
+                  <rdg wit="#wc_0e">
+                     <del>But</del> I had more <del>welcome</del>
+                     <add>cheering</add> visitors than these <add>last</add>
+                     <del>from time to time of whom I shall speak in another place</del>
+                  </rdg>
+               </app>. Children come a-berrying, railroad men taking a Sunday morning walk<app xml:id="walc06-app-0198">
+                  <lem>in clean shirts</lem>
+                  <rdg wit="#wc_0e">
+                     <add>in clean shirts</add>
+                  </rdg>
+               </app>, fishermen and hunters,<app xml:id="walc06-app-0199">
+                  <lem>poets and philosophers</lem>
+                  <rdg wit="#wc_0e">
+                     <del>—(all in short who really got to the woods and left the woods behind them
+                        were welcome)</del> fishers &amp; hunters of men too</rdg>
+               </app>, in short, all honest pilgrims, who came out to the woods for freedom’s sake,
+               and really left the village behind, I was ready to greet with,—“Welcome, Englishmen!
+               welcome, Englishmen!" for I had had communication with that race.</p>
+         </div>
+      </body>
+   </text>
+</TEI>

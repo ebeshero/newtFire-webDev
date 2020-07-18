@@ -1,0 +1,1354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"--><TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <!-- Project home: http://digitalthoreau.org/walden -->
+      <!-- Report an issue: http://digitalthoreau.org/walden/report-issue -->
+      <fileDesc>
+         <titleStmt>
+            <title>Walden: Solitude</title>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>Walden: Fluid Text is published by Digital Thoreau at The State University of New York College at Geneseo.</publisher>
+            <availability>
+               <licence target="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                  <p>This work is licensed under a Creative Commons Attribution-ShareAlike 3.0
+                     Unported License.</p>
+               </licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note>This text was encoded by the Technical Services team at Milne Library, SUNY
+               Geneseo using Text Encoding Initiative (TEI) P5 XML Schema, using the Parallel
+               Segmentation method. </note>
+            <note>The text presented here is taken from the Princeton edition of Walden, and
+               includes critical apparatus laid out by Ronald Clapper, and annotations provided by
+               Ronald Clapper, J. Lyndon Shanley, and Walter Harding.</note>
+            <note>Source: Clapper, Ronald E.A. The Development of 'Walden': A Genetic Text, revised
+               edition of dissertation originally published at UCLA, 1967.</note>
+         </notesStmt>
+         <sourceDesc>
+            <listPerson>
+               <personGrp>
+                  <persName xml:id="thoreau" role="author">Henry David Thoreau</persName>
+                  <persName xml:id="harding" role="editor">Walter Harding</persName>
+                  <persName xml:id="shanley" role="editor">J. Lyndon Shanley</persName>
+                  <persName xml:id="clapper" role="editor">Ronald Clapper</persName>
+                  <persName xml:id="easterly" role="manager">Joe Easterly</persName>
+               </personGrp>
+            </listPerson>
+            
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <listChange>
+               <change xml:id="wc_base">Princeton Ed. of Walden</change>
+               <change xml:id="wc_0a">Walden, Version A (1847)</change>
+               <change xml:id="wc_a1">Walden, Version A1 (1847)</change>
+               <change xml:id="wc_a2">Walden, Version A2 (1847)</change>
+               <change xml:id="wc_0b">Walden, Version B (1849)</change>
+               <change xml:id="wc_b1">Walden, Version B1 (1849)</change>
+               <change xml:id="wc_b2">Walden, Version B2 (1849)</change>
+               <change xml:id="wc_0c">Walden, Version C (1849)</change>
+               <change xml:id="wc_c1">Walden, Version C1 (1849)</change>
+               <change xml:id="wc_c2">Walden, Version C2 (1849)</change>
+               <change xml:id="wc_0d">Walden, Version D (1852)</change>
+               <change xml:id="wc_d1">Walden, Version D1 (1852)</change>
+               <change xml:id="wc_d2">Walden, Version D2 (1852)</change>
+               <change xml:id="wc_0e">Walden, Version E (late 1852 - 1853)</change>
+               <change xml:id="wc_e1">Walden, Version E1 (late 1852 - 1853)</change>
+               <change xml:id="wc_e2">Walden, Version E2 (late 1852 - 1853)</change>
+               <change xml:id="wc_0f">Walden, Version F (1853-1854)</change>
+               <change xml:id="wc_f1">Walden, Version F1 (1853-1854)</change>
+               <change xml:id="wc_f2">Walden, Version F2 (1853-1854)</change>
+               <change xml:id="wc_0g">Walden, Version G (1854)</change>
+               <change xml:id="wc_g1">Walden, Version G1 (1854)</change>
+               <change xml:id="wc_g2">Walden, Version G2 (1854)</change>
+            </listChange>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text xml:id="walc05">
+      <body>
+         <div>
+            <head>
+               <app xml:id="walc05-app-0001">
+                  <lem>Solitude </lem>
+                  <rdg wit="#wc_0d" resp="#clapper">Solitude </rdg>
+               </app>
+               <note type="general" resp="#clapper" ana="#wc_0d">The title “Solitude” is inserted
+                  at the top of the leaf containing Solitude 1.</note>
+            </head>
+
+            <p n="1" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 1 written: A; rewritten: B , D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">1</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, D</seg>
+                  </ab>
+                  <ab change="#wc_0a">Only <quote>rabbit, now roam the fields …
+                        the days of animated life</quote> appears in the manuscript, but more may be
+                     contained on the missing leaf (#79) which precedes.</ab>
+                  <ab change="#wc_0b">
+                     <quote>Sympathy with the fluttering alder … the smooth
+                        reflecting surface</quote> does not appear in the manuscript.</ab>
+               </note> This is a delicious evening, when the whole body <app xml:id="walc05-app-0002">
+                  <lem>is</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">seems to be</rdg>
+               </app> one sense, and imbibes delight through every pore. I go and come with a
+               strange liberty in Nature, a part of herself. As I walk along the <app xml:id="walc05-app-0003">
+                  <lem>stony shore of the pond in my shirt sleeves,</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <add rendition="pencil">stony</add> shore <del>of the pond</del>
+                  </rdg>
+                  <rdg wit="#wc_0d" resp="#clapper">stony shore <add rendition="pencil">of the
+                        pond</add> in my shirt-sleeves</rdg>
+               </app> though it is cool <app xml:id="walc05-app-0004">
+                  <lem>as well as</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>as well as</del>
+                     <add> and also</add>
+                  </rdg>
+               </app> cloudy and windy, and I see <app xml:id="walc05-app-0006">
+                  <lem>nothing special to attract me,</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>no peculiarity, which I can describe</del>
+                     <add rendition="pencil">nothing in particular to attract me</add>, </rdg>
+                  <rdg wit="#wc_0d" resp="#clapper">nothing <del>in particular</del>
+                     <add rendition="pencil">special</add> to attract me,</rdg>
+               </app>
+               <app xml:id="walc05-app-0007">
+                  <lem>all the elements are unusually congenial to me. The bullfrogs
+                     trump to usher in the night, and the note of the whippoorwill is borne on the
+                     rippling wind from over the water.</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>yet all things are very</del>
+                     <add rendition="pencil">all the elements are unspeakably</add> congenial to me.
+                        <add rendition="pencil"> Again</add> the frogs <del>peep</del>
+                     <add rendition="pencil">trump</add> to celebrate the sacred hours of the night,
+                     and <del>the whippoorwill sings in</del>
+                     <add rendition="pencil">the note of the whippoorwill is borne on</add> the
+                     rippling wind <add rendition="pencil"> from over the water.</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc05-app-0008">
+                  <lem>Sympathy with</lem>
+                  <rdg wit="#wc_0d" resp="#clapper">
+                     <del>My breath is in</del>
+                     <add>Sympathy with</add>
+                  </rdg>
+               </app> the fluttering alder and poplar leaves almost takes away my breath; yet, like
+               the lake, my <app xml:id="walc05-app-0009">
+                  <lem>serenity is</lem>
+                  <rdg wit="#wc_0d" resp="#clapper">
+                     <del>thoughts are</del>
+                     <add rendition="pencil">serenity is</add>
+                  </rdg>
+               </app> rippled but not ruffled. These small waves raised by the evening wind are as
+                  <app xml:id="walc05-app-0010">
+                  <lem>remote</lem>
+                  <rdg wit="#wc_0d">
+                     <del>far</del>
+                     <add rendition="pencil">remote</add>
+                  </rdg>
+               </app> from storm as the smooth reflecting surface. Though it is now <app xml:id="walc05-app-0011">
+                  <lem>dark, the wind still blows and roars in the wood, the waves
+                     still dash,</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>night, the waves still dash</del>
+                     <add rendition="pencil">dark,</add> the wind still blows and roars in the wood,
+                        <add rendition="pencil"> the waves still dash</add>,</rdg>
+               </app> and some creatures lull the rest with their notes. The repose is never
+               complete. The wildest animals <app xml:id="walc05-app-0012">
+                  <lem>do not repose, but</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>seem not to</del>
+                     <add rendition="pencil">do not</add> repose <del>and</del>
+                     <add>but</add>
+                  </rdg>
+                  
+               </app> seek their prey now; the fox, and skunk, and rabbit, <app xml:id="walc05-app-0013">
+                  <lem>now</lem>
+                  <rdg wit="#wc_0a #wc_0b" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> roam the fields and woods without fear. <app xml:id="walc05-app-0014">
+                  <lem>They are Nature's watchmen,—links which connect the days of
+                     animated life.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>We associate wildness with the night—and silence—But the repose is never
+                        complete;</del> nature has her watchmen who are links connecting the days of
+                     animated life.</rdg>
+                  <rdg wit="#wc_0b" resp="#ygm #clapper" cert="medium">
+                     <del>
+                        <del>Nature has her</del>
+                        <add rendition="pencil">These are Nature’s</add> watchmen <del>who are</del>
+                        <add rendition="pencil">or the</add> links connecting the days of animated
+                        life</del>.</rdg>
+                  <rdg wit="#wc_0d" resp="#clapper">
+                     <add rendition="pencil">They are Nature’s watchmen,—links which connect the
+                        days of animated life</add>.</rdg>
+               </app>
+            </p>
+
+            <p n="2" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 2 written: B; rewritten: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">2</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">D</seg>
+                  </ab>
+                  <ab change="#wc_0d">A fair copy was made of only <quote>When I
+                        return to my house …and generally of what sex or</quote>.</ab>
+               </note> When I return to my house I find that visitors have been <app xml:id="walc05-app-0015">
+                  <lem>there</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>here</del>
+                     <add rendition="pencil">there</add>
+                  </rdg>
+               </app> and left their cards, either a bunch of <app xml:id="walc05-app-0016">
+                  <lem>flowers, or a wreath of evergreen,</lem>
+                  <rdg wit="#wc_0b">violets or houstonias or wintergreen or pyrus <add rendition="pencil">if it be spring</add>,</rdg>
+               </app> or a name in pencil on a yellow walnut leaf or a chip. <app xml:id="walc05-app-0017">
+                  <lem>They</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <add rendition="pencil">if it be fall.</add> For those</rdg>
+                  <rdg wit="#wc_0d" resp="#clapper">Those</rdg>
+               </app> who come rarely to the woods <app xml:id="walc05-app-0018">
+                  <lem>take</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>will</del> commonly take</rdg>
+                  <rdg wit="#wc_0d" resp="#clapper">
+                     <del>commonly</del> take</rdg>
+               </app> some little piece of the forest into their hands to play with by the way,
+               which they leave, <app xml:id="walc05-app-0019">
+                  <lem>either</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <add rendition="pencil">either</add>
+                  </rdg>
+               </app> intentionally or accidentally. One has peeled a willow wand, <app xml:id="walc05-app-0020">
+                  <lem>woven</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">and woven</rdg>
+                  <rdg wit="#wc_0d" resp="#clapper">
+                     <del>and</del> woven</rdg>
+               </app> it into a ring, and dropped it on my table. I could always tell if visitors
+               had called in my absence, either by the bended twigs or grass, or the print of their
+               shoes, and generally of what sex or age <app xml:id="walc05-app-0021">
+                  <lem>or quality</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <!--not in manuscript--></rdg>
+               </app> they were by some slight trace left, as a flower dropped, or a bunch of grass
+               plucked and thrown away, even as far off as the railroad, half a mile distant, or by
+               the lingering odor of a cigar or pipe. <anchor type="hn" xml:id="hn-05-001"/> Nay, I was frequently
+               notified of the passage of a traveller along the highway sixty rods off by the scent
+               of his <app xml:id="walc05-app-0023">
+                  <lem>pipe.</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">pipe. Indeed my senses were as acute as Indians’
+                     in this respect, and I saw how his habit of observation was cultivated.</rdg>
+               </app>
+            </p>
+
+            <p n="3" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 3 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">3</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note> There <app xml:id="walc05-app-0024">
+                  <lem>is commonly</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">seems always to be </rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>seems always to be</del>
+                     <add>is commonly</add>
+                  </rdg>
+               </app> sufficient space about us. Our horizon is never quite at our elbows. The <app xml:id="walc05-app-0025">
+                  <lem>thick</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">thick</add>
+                  </rdg>
+               </app> wood is not just at <app xml:id="walc05-app-0026">
+                  <lem>our</lem>
+                  <rdg wit="#wc_0a #wc_0b" resp="#clapper">my</rdg>
+               </app> door, nor the pond, but somewhat is always clearing, <app xml:id="walc05-app-0027">
+                  <lem>familiar and worn by us, appropriated and fenced in some
+                     way,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>&amp; familiar &amp; worn by us</add> appropriated and fenced in some way
+                        <del>&amp; familiar &amp; worn by us,</del>
+                  </rdg>
+               </app> and reclaimed from Nature. For what reason have I this vast range and circuit,
+                  <app xml:id="walc05-app-0028">
+                  <lem>some square miles</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">in nature—a square mile and more</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>in nature, square mile and more</del>
+                     <add>some square miles</add>
+                  </rdg>
+               </app> of unfrequented forest, for my privacy, abandoned to me by men? <app xml:id="walc05-app-0029">
+                  <lem>My nearest neighbor is</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>Surely we do not live crowded.</del> My nearest neighbor is more
+                     than</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">My nearest neighbor is more than</rdg>
+               </app> a mile distant, and no house is visible from <app xml:id="walc05-app-0030">
+                  <lem>any place but the hill-tops</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">any place but the hill-tops</add>
+                  </rdg>
+               </app> within half a mile of my own. I have my horizon bounded by woods all to
+               myself; <app xml:id="walc05-app-0031">
+                  <lem>a</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">I have a</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>I have</del> a</rdg>
+               </app>  distant view of the railroad where it touches the pond on the one hand, and of 
+               the fence which skirts the woodland road on the other. But for the most part it is as 
+               solitary where I live as on the prairies. It is as much Asia or Africa as New England. 
+               I have, as it were, my own sun and moon and stars, and a little world all to myself. 
+               At night there was never a traveller passed my house, or knocked at my door, more than 
+               if I were the first or last man; unless it were in the spring, <app xml:id="walc05-app-0032">
+                  <lem>when at long intervals some came</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">when some came occasionally</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">when some came <del>occasionally</del>
+                  </rdg>
+               </app> from the village to fish for <app xml:id="walc05-app-0033">
+                  <lem>pouts,</lem>
+                  <rdg wit="#wc_0a #wc_0b" resp="#clapper">pouts in the pond, and,</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-05-002"/>
+               —they plainly fished much more in the Walden Pond of their own natures, and baited
+               their hooks with darkness,—but they soon retreated, usually with light baskets, and
+               left “the <app xml:id="walc05-app-0034">
+                  <lem>world to darkness and to</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">vale to solitude &amp;</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>vale to solitude and</del>
+                     <add>world to darkness and to</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc05-app-0035">
+                  <lem> me,” and the</lem>
+                  <rdg wit="#wc_0a #wc_0b #wc_0d #wc_0f #wc_0g"> me,” and the</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-05-003"/>
+               <app xml:id="walc05-app-0036">
+                  <lem>black</lem>
+                  <rdg wit="#wc_0a #wc_0b" resp="#clapper">dark</rdg>
+               </app> kernel of the night was never profaned by any human neighborhood. I believe
+               that men are generally still a little afraid of the dark, though the witches are
+                  <anchor type="hn" xml:id="hn-05-004"/>
+               <app xml:id="walc05-app-0037">
+                  <lem>all</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">all</add>
+                  </rdg>
+               </app> hung, and Christianity and candles <app xml:id="walc05-app-0038">
+                  <lem>have been introduced.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>are</del>
+                     <add rendition="pencil">have been</add> invented.</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">have been <del>invented</del>
+                     <add>introduced</add>.</rdg>
+               </app>
+            </p>
+
+            <p n="4" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 4 written: A; rewritten: B, F, G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">4</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B, F, G</seg>
+                  </ab>
+                  <ab change="#wc_0b">A fair copy was made of only <quote>Yet I experienced sometimes
+                        that the most sweet and tender</quote> and <quote>thought of them since …
+                        Beautiful daughter of Toscar</quote>. The rest of Solitude 4 was on a leaf
+                     (#83) in A that was taken into B and renumbered (#95).] </ab>
+                  <ab change="#wc_0f #wc_0g">Fair copies were made of only <quote>kindred to me, even
+                        in scenes which we are … Beautiful daughter of Toscar</quote>.</ab>
+               </note>
+                Yet I experienced <app xml:id="walc05-app-0039">
+                  <lem>sometimes</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">occasionally</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>occasionally</del>
+                     <add>sometimes</add>
+                  </rdg>
+               </app> that the most sweet and tender, the most innocent and encouraging society may
+               be found in <app xml:id="walc05-app-0040">
+                  <lem>any</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">every</rdg>
+               </app> natural object, even for the poor misanthrope and most melancholy man. There 
+               can be no very black melancholy to him who lives in the midst of Nature and has his 
+               senses to him still. There was never yet a storm but it was Æeolian music to a 
+               healthy and innocent ear. Nothing can rightly compel a simple and brave
+               man to a vulgar sadness. While I enjoy the friendship of the seasons I trust that
+               nothing can make life a burden to me. The gentle rain which waters my beans and keeps
+               me in the house to-day is not drear and melancholy, but good for me too. Though it
+               prevents my hoeing them, it is of far more worth than my hoeing. <app xml:id="walc05-app-0041">
+                  <lem>If it should continue so long as to cause the seeds to rot in
+                     the ground and destroy the potatoes in the low lands, it would still be good
+                     for the grass on the uplands, and, being good for the grass, it would be good
+                     for me.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">If it should continue so long as to cause the seeds to
+                        rot in the ground and destroy the potatoes in the low lands it would still
+                        be good for the grass on the uplands, <del>though the farmers say it is not
+                           so sweet <unclear reason="illegible" resp="#clapper">xxxxx xxx</unclear>
+                        </del> &amp; being good for the grass it will be good for me</add>
+                  </rdg>
+               </app> Sometimes, when I compare myself with other men, it seems as if I were more
+               favored by the gods than they, <app xml:id="walc05-app-0042">
+                  <lem>beyond any deserts that</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">and beyond any deserts <add rendition="pencil">that</add>
+                  </rdg>
+               </app> I am conscious of; as if I had a warrant and surety at their hands which my
+               fellows have not, and were especially guided and guarded. <app xml:id="walc05-app-0043">
+                  <lem>I do not flatter myself, but if it be possible they flatter
+                     me.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>I do not flatter myself, but if it be possible, they flatter me. <del>So
+                           perchance it appears to each of us</del>
+                        <add rendition="pencil">They are unaccountably kind to me</add>
+                        <del>Notwithstanding a sense of unworthiness which possesses me, for the
+                           most part the spirit of the universe seems unaccountably kind to me,
+                           &amp; I <add rendition="pencil">seem to</add> enjoy an unusual share of
+                           happiness. Yet I think that there may be a settlement to come.</del>
+                     </add>
+                  </rdg>
+               </app> I have never felt <app xml:id="walc05-app-0044">
+                  <lem>lonesome,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>lonely</del>
+                     <add rendition="pencil">lonesome</add>
+                  </rdg>
+               </app> or in the least oppressed by a sense of solitude, but once, and that was a few
+               weeks after I <app xml:id="walc05-app-0045">
+                  <lem>came to the woods,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">went to the <del>pond to live</del>
+                     <add rendition="pencil">woods</add>
+                  </rdg>
+               </app> when, for an hour, I doubted if the near neighborhood of man was not essential
+               to a serene and healthy life. To be alone was something unpleasant. But I was at the
+               same time conscious of a slight insanity in my mood, and seemed to foresee my
+               recovery. In the midst of a gentle rain while these thoughts prevailed, <app xml:id="walc05-app-0046">
+                  <lem>I was suddenly sensible of</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">there suddenly seemed</rdg>
+               </app> such sweet and beneficent society in Nature, in the very pattering of the
+               drops, and in every sound and sight around my house, an infinite and unaccountable
+               friendliness all at once like an atmosphere sustaining me, as made the fancied
+               advantages of human neighborhood insignificant, and I have never thought of them
+               since. Every little pine needle expanded and swelled with sympathy and befriended me.
+               I was so distinctly made aware of the presence of something kindred to me, even in
+               scenes which we are accustomed to call wild and dreary, and also that the nearest of
+               blood to me and humanest was not a person nor a villager, that I thought no place
+               could ever be strange to me again.— <quote>
+                  <lg>
+                     <l>“Mourning untimely consumes the sad; </l>
+                     <l>Few are their days in the land of the living, </l>
+                     <l>Beautiful daughter of Toscar." </l>
+                  </lg>
+               </quote>
+               <anchor type="hn" xml:id="hn-05-005"/>
+            </p>
+
+            <p n="5" change="#wc_0a">
+               <seg n="5a" change="#wc_0f">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 5a written: F; rewritten: G.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">5a</seg>
+                     <seg type="written">F</seg>
+                     <seg type="rewritten">G</seg>
+                  </ab>
+                  <ab change="#wc_0f"><quote>In those driving north-east rains … groove a walking-stick</quote> is
+                        interlined in pencil; <quote>I passed it again … harmless sky eight years
+                           ago</quote> does not appear in the manuscript.</ab>
+               </note>
+                  Some of my pleasantest hours were during the
+                  long <app xml:id="walc05-app-0048">
+                     <lem>rain</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add>rain</add>
+                     </rdg>
+                  </app> storms in the spring or fall, which confined me to the house for the
+                  afternoon as well as the forenoon, soothed by their ceaseless roar and pelting;
+                     <app xml:id="walc05-app-0049">
+                     <lem>when</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">then</add>
+                     </rdg>
+                     <rdg wit="#wc_0g" resp="#clapper">
+                        <del>then</del>
+                        <add rendition="pencil">when</add>
+                     </rdg>
+                  </app> an early twilight ushered in a long evening in which many thoughts had time
+                  to take root and unfold themselves. <app xml:id="walc05-app-0051">
+                     <lem>In those driving north-east</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">In those driving north-east</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0052">
+                     <lem>rains</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">storms</add>
+                     </rdg>
+                     <rdg wit="#wc_0g" resp="#clapper">
+                        <del>storms</del>
+                        <add>rains</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0053">
+                     <lem>which tried the village houses so, when the maids stood
+                        ready with mop and pail in front entries to keep the deluge out, I sat
+                        behind</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">which tried the village houses so, when the maids
+                           stood ready with mop and pail in front entries to keep the deluge out, I
+                           sat behind</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0054">
+                     <lem>my</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">my</add>
+                     </rdg>
+                     <rdg wit="#wc_0g" resp="#clapper">
+                        <del>the</del>
+                        <add>my</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0055">
+                     <lem>door in my little house, which was all entry, and
+                        thoroughly enjoyed its protection. In one</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">door in my little house, which was all entry, and
+                           thoroughly enjoyed its protection. In one</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0056">
+                     <lem>heavy</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">
+                           <del>very</del> heavy</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0057">
+                     <lem>thunder shower the lightning struck a large pitch pine
+                        across the pond, making a very conspicuous and perfectly regular spiral
+                        groove from top to bottom, an inch or more deep, and four or five inches
+                        wide, as</lem>
+                     
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">thunder shower the lightning struck a large pitch
+                           pine across the pond, making a very conspicuous and perfectly regular
+                           spiral groove from top to bottom, an inch or more deep, and four or five
+                           inches wide, as</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0058">
+                     <lem>you</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">one</rdg>
+                     
+                     <rdg wit="#wc_0g" resp="#clapper">
+                        <del>one</del>
+                        <add rendition="pencil">you</add>
+                     </rdg>
+                     
+                  </app>
+                  <app xml:id="walc05-app-0059">
+                     <lem>would groove a</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">would groove a</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0060">
+                     <lem>walking-stick.</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <add rendition="pencil">walking-stick.</add>
+                     </rdg>
+                     
+                     <rdg wit="#wc_0g" resp="#clapper">walking-stick, <del>going round the tree
+                           three times and descending faster as the trunk grew larger yet <del>the
+                              tree</del>
+                           <add rendition="pencil">it</add> did not appear to have suffered
+                           essentially</del>.</rdg>
+                  </app>
+                  <!--Begin Version F not in manuscript--> I passed it <app xml:id="walc05-app-0061">
+                     <lem>again the other day, and was struck with awe</lem>
+                     <rdg wit="#wc_0f" resp="#clapper"><!--not in manuscript--></rdg>
+                     <rdg wit="#wc_0g" resp="#clapper">
+                        <del>lately and was somewhat awestruck</del>
+                        <add rendition="pencil">again the other day &amp; was struck with awe</add>
+                     </rdg>
+                  </app> on looking up and beholding that <app xml:id="walc05-app-0062">
+                     <lem>mark, now</lem>
+                     <rdg wit="#wc_0f" resp="#clapper"><!--not in manuscript--></rdg>
+                     <rdg wit="#wc_0g" resp="#clapper">
+                        <del>broad &amp; regular groove</del>
+                        <add rendition="pencil">mark now</add>
+                     </rdg>
+                  </app> more distinct than ever, <app xml:id="walc05-app-0063">
+                     <lem>where</lem>
+                     <rdg wit="#wc_0f" resp="#clapper"><!--not in manuscript--></rdg>
+                     <rdg wit="#wc_0g" resp="#clapper">
+                        <del>mark</del> where</rdg>
+                  </app> a terrific and resistless bolt came down out of the harmless sky eight
+                  years <app xml:id="walc05-app-0064">
+                     <lem>ago.</lem>
+                     <rdg wit="#wc_0f" resp="#clapper"><!--not in manuscript--></rdg>
+                     <rdg wit="#wc_0g" resp="#clapper">ago<del>and I felt that we had not learned
+                           much since the days of Tullus Hostilius. It saved the earth from
+                           trivialness. The woodpeckers have at length begun to bore its one
+                           side</del>.</rdg>
+                     
+                  </app>
+               </seg>
+               <seg n="5b" change="#wc_0b">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Solitude 5b written: B; rewritten: F, G.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">5</seg>
+                        <seg type="chapterTitle">Solitude</seg>
+                        <seg type="paragraph">5b</seg>
+                        <seg type="written">B</seg>
+                        <seg type="rewritten">F, G</seg>
+                     </ab>
+                     <ab change="#wc_0f">A fair copy was made of only <quote>Men frequently say to me …
+                           This will vary with different.</quote>
+                     </ab>
+                     <ab change="#wc_0g">A fair copy was made of only <quote>Men frequently say to me,
+                           “I should think you would feel.</quote>
+                     </ab>
+                  </note> Men <app xml:id="walc05-app-0066">
+                     <lem>frequently</lem>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <del>generally</del>
+                        <add>frequently</add>
+                     </rdg>
+                     
+                  </app> say to me, “I should think you would feel <app xml:id="walc05-app-0067">
+                     <lem>lonesome down there, and want to be nearer to folks, rainy
+                        and snowy days and nights especially.” I am tempted to reply to such,</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <del>lonely</del>
+                        <add rendition="pencil">lonesome</add> down there. <del>I should think you
+                           would</del>
+                        <add rendition="pencil">&amp;</add> want to be nearer to folks, rainy and
+                           <del>snow</del>
+                        <add rendition="pencil">snowy</add> days and nights especially.”
+                           <del>But</del>
+                        <add>I am tempted to reply to such</add>,</rdg>
+                  </app> —This whole earth which we inhabit is but a point in space. How far apart,
+                  think you, dwell the two most distant inhabitants of yonder star, the breadth of
+                  whose disk cannot be appreciated by our instruments? Why should I feel lonely? is
+                  not our planet in the Milky Way? This which you put seems to me not to be the most
+                  important question. What sort of space is that which separates a man from his
+                  fellows and makes him solitary? I have found that no exertion <app xml:id="walc05-app-0068">
+                     <lem>of</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <del>on the part</del> of</rdg>
+                  </app> the legs can bring two minds much nearer to one another. <app xml:id="walc05-app-0069">
+                     <lem>What</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">What <del>after all</del>
+                     </rdg>
+                  </app> do we want most to dwell near to? Not to many men <app xml:id="walc05-app-0070">
+                     <lem>surely, the depot, the post-office, the bar-room, the
+                        meeting-house, the school-house, the grocery,</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <del>merely</del>
+                        <add>surely</add> —the depot—<del>or</del> the post office—<del>or</del> the
+                           bar-room—<del>or</del> the meeting house <del>or</del> the school house,
+                           <del>or</del> the grocery—<del>or</del>
+                     </rdg>
+                  </app> Beacon Hill, or the Five Points,<anchor type="hn" xml:id="hn-05-006"/> where men <app xml:id="walc05-app-0071">
+                     <lem>most congregate, but</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">are more numerous than anywhere—but, I should
+                        say</rdg>
+                     <rdg wit="#wc_0f" resp="#clapper">
+                        <del>are more numerous than anywhere else</del>
+                        <add rendition="pencil">most congregate</add> but <del>I should say</del>
+                     </rdg>
+                  </app> to the <app xml:id="walc05-app-0072">
+                     <lem>perennial</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add>perennial</add>
+                     </rdg>
+                  </app> source of our life, whence in all our experience we have found that to
+                  issue; as the willow stands near the water and sends out its roots in that
+                  direction. This will vary with different natures, but this is the place where a
+                  wise man will dig his <app xml:id="walc05-app-0073">
+                     <lem>cellar.</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">cellar. <del>
+                           <add>Yet</add> Most men are not so wise as a tree, or rather are like
+                           those trees which being badly located make only wood and leaves and bear
+                           no fruit</del>.</rdg>
+                     
+                  </app> … I one evening overtook one of my townsmen, who has accumulated <app xml:id="walc05-app-0074">
+                     <lem>what is called</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add>what is called</add>
+                     </rdg>
+                  </app> “a handsome property”, <app xml:id="walc05-app-0075">
+                     <lem>—though I never got a <hi rend="style(italics)">fair</hi>
+                        view of it,—</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add>—though I never got a <hi rend="style(italics)">fair</hi> view of
+                           it,—</add>
+                     </rdg>
+                  </app> on the Walden road, driving a pair of cattle to market, who inquired of me
+                  how I could bring my mind to give up so many of the comforts of life. I answered
+                  that I was very sure I liked it passably well; I was not joking. And so I went
+                  home to my bed, and left him to pick his way through the darkness and the mud to
+                     Brighton,<anchor type="hn" xml:id="hn-05-007"/>
+                  <app xml:id="walc05-app-0076">
+                     <lem>—or Bright-town,—</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">—some 15 miles distant,—</rdg>
+                  </app> which place he would reach some time in the morning. </seg>
+            </p>
+
+            <p n="6" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 6 written: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">6</seg>
+                     <seg type="written">B</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc05-app-0078">
+                  <lem>Any prospect of awakening or coming to life to a dead
+                     man</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>The life of the spirit</del>
+                     <add>Any prospect of awakening or coming to life to a dead man</add>
+                  </rdg>
+               </app> makes indifferent all times and places. <app xml:id="walc05-app-0079">
+                  <lem>The place where that may occur</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>That place where it is seen</del>
+                     <add>The place where that may occur</add>
+                  </rdg>
+               </app> is always the same, and indescribably pleasant to all our senses. <app xml:id="walc05-app-0080">
+                  <lem>For the most part we allow only outlying</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>We had allowed only neighboring</del>
+                     <add>For the most part we allow only outlying</add>
+                  </rdg>
+               </app> and transient circumstances to make our occasions. They are, in fact, the <app xml:id="walc05-app-0081">
+                  <lem>cause</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">causes</rdg>
+               </app> of our distraction. Nearest to all things is that power which fashions their
+               being. <hi rend="style(italics)">Next</hi> to us the grandest laws are continually
+               being executed. <hi rend="style(italics)">Next</hi> to us is not the workman whom we
+               have hired, with whom we love so well to talk, but the workman whose work we are. </p>
+
+            <p n="7" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 7, 8, 9 written: B; rewritten: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">7</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">D</seg>
+                  </ab>
+               </note>
+               <app xml:id="walc05-app-0082">
+                  <lem>
+                     <quote>“How vast and profound is the influence of the subtile powers of Heaven
+                        and of Earth!” </quote>
+                  </lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <add rendition="pencil">
+                        <quote>“How vast and profound is the influence of the subtile powers of
+                           Heaven and of Earth!” </quote>
+                     </add>
+                  </rdg>
+               </app>
+            </p>
+            <p n="8" change="#wc_0b">
+               <note type="header" resp="#clapper">
+               <ab type="string">Solitude 7, 8, 9 written: B; rewritten: D.</ab>
+               <ab type="parsed">
+                  <seg type="chapterNum">5</seg>
+                  <seg type="chapterTitle">Solitude</seg>
+                  <seg type="paragraph">8</seg>
+                  <seg type="written">B</seg>
+                  <seg type="rewritten">D</seg>
+               </ab>
+            </note>
+               <quote>
+                  <app xml:id="walc05-app-0083">
+                     <lem>“We seek</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">“One seeks</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0084">
+                     <lem>to perceive them, and</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">to perceive them, and</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0085">
+                     <lem>we do</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">one does</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0086">
+                     <lem>not see them;</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">not see them;</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0087">
+                     <lem>we seek</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">one seeks</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0088">
+                     <lem>to hear them, and</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">to hear them, and</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0089">
+                     <lem>we do</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">one does</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0090">
+                     <lem>not hear them; identified with the substance of things,
+                        they cannot be separated from them.”</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">not hear them; identified with the substance of
+                           things, they cannot be separated from them.”</add>
+                     </rdg>
+                  </app>
+               </quote>
+            </p>
+            <p n="9" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 7, 8, 9 written: B; rewritten: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">9</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">D</seg>
+                  </ab>
+               </note>
+               <quote>
+                  <app xml:id="walc05-app-0091">
+                     <lem>“They cause that in all the universe men purify and
+                        sanctify their hearts, and </lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">“They cause that in all the universe men purify and
+                           sanctify their hearts, and</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0092">
+                     <lem>clothe themselves in their holiday garments</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <del>put on their holiday clothes</del>
+                        <add rendition="pencil">clothe themselves in their holiday garments</add>
+                     </rdg>
+                  </app>
+                  <app xml:id="walc05-app-0093">
+                     <lem>to offer sacrifices and oblations to their ancestors. It is
+                        an ocean of subtile intelligences. They are every where, above us, on our
+                        left, on our right; they environ us on all sides.”<anchor type="hn" xml:id="hn-05-008"/>
+                     </lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add rendition="pencil">to offer sacrifices and oblations to their
+                           ancestors. It is an ocean of subtile intelligences. They are every where,
+                           above us, on our left, on our right; they environ us on all sides.”</add>
+                        <anchor type="hn" xml:id="hn-05-009"/>
+                     </rdg>
+                  </app>
+               </quote>
+            </p>
+
+            <p n="10" change="#wc_0b">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 10 written: B; rewritten: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">10</seg>
+                     <seg type="written">B</seg>
+                     <seg type="rewritten">D</seg>
+                  </ab>
+               </note> We are the subjects of an experiment <app xml:id="walc05-app-0094">
+                  <lem>which</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">which I confess</rdg>
+               </app> is not a little interesting to me. Can we not <app xml:id="walc05-app-0095">
+                  <lem>do without</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">dispense with</rdg>
+               </app> the society of our gossips a little while under these circumstances, <app xml:id="walc05-app-0096">
+                  <lem>—have our own thoughts to cheer us?</lem>
+                  <rdg wit="#wc_0b" resp="#clapper"><!--not in manuscript--></rdg>
+                  <rdg wit="#wc_0d" resp="#clapper">
+                     <del>—If you want society mind your business.</del>
+                  </rdg>
+               </app>
+               <app xml:id="walc05-app-0097">
+                  <lem>Confucius</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <add>Confucius</add>
+                  </rdg>
+               </app>
+               <app xml:id="walc05-app-0098">
+                  <lem>says truly,</lem>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <add>says,</add>
+                  </rdg>
+                  
+               </app>
+               <quote>
+                  <app xml:id="walc05-app-0099">
+                     <lem>“Virtue does not remain as an abandoned orphan; it must of
+                        necessity have neighbors.”<anchor type="hn" xml:id="hn-05-010"/>
+                     </lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <add>“Virtue does not remain as an abandoned orphan; it must of necessity
+                           have neighbors.”</add>
+                        <anchor type="hn" xml:id="hn-05-011"/>
+                     </rdg>
+                  </app>
+               </quote>
+            </p>
+
+            <p n="11" change="#wc_0d">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 11 written: D.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">11</seg>
+                     <seg type="written">D</seg>
+                  </ab>
+                  <ab change="#wc_0d">
+                     <quote>I <hi>may</hi> be affected by a theatrical … so far as he was
+                        concerned</quote> was added to the manuscript on a separate leaf.</ab>
+               </note> With thinking we may be beside <app xml:id="walc05-app-0101">
+                  <lem>ourselves in a sane sense.</lem>
+                  <rdg wit="#wc_0d" resp="#clapper">ourselves.</rdg>
+               </app> By a conscious effort of the mind we can stand aloof from actions and <app xml:id="walc05-app-0102">
+                  <lem>their consequences;</lem>
+                  <rdg wit="#wc_0d" resp="#clapper">the consequences of actions;</rdg>
+               </app> and all things, <app xml:id="walc05-app-0103">
+                  <lem>good</lem>
+                  <rdg wit="#wc_0d" resp="#clapper">both good</rdg>
+               </app> and bad, go by us like a torrent. We are not wholly involved in Nature. I may
+               be either the drift-wood in the stream, or Indra in the sky looking down on it.<anchor type="hn" xml:id="hn-05-012"/>
+               <app xml:id="walc05-app-0104">
+                  <lem>I</lem>
+                  <rdg wit="#wc_0d" resp="#clapper">A man</rdg>
+               </app>
+               <hi rend="style(italics)">may</hi> be affected by a theatrical exhibition; on the
+               other hand, I <hi rend="style(italics)">may not </hi>be affected by an actual event
+               which appears to concern <app xml:id="walc05-app-0105">
+                  <lem>me much more.</lem>
+                  <rdg wit="#wc_0d" resp="#clapper">him never so much.</rdg>
+               </app> I only know myself as a human entity; the scene, so to speak, of thoughts and
+               affections; and am sensible of a certain doubleness by which I can stand as remote
+               from myself as from another. However intense my experience,<anchor type="hn" xml:id="hn-05-013"/> I am conscious of the presence and
+               criticism of a part of me, which, as it were, is not a part of me, but spectator,
+               sharing no experience, but taking note of it; and that is no more I than it is you.
+               When the play, it may be the tragedy, of life is over, the spectator goes his way. It
+               was a kind of fiction, a work of the imagination only, so far as he was concerned.
+               This doubleness may easily make us poor neighbors and friends sometimes. </p>
+
+            <p n="12" change="#wc_0a">
+               <seg n="12a" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 12a written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">12a</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+                  <ab change="#wc_0a">Solitude 12a is preceded by Visitors 1.</ab>
+               </note> I find it <app xml:id="walc05-app-0107">
+                     <lem>wholesome</lem>
+                     <rdg wit="#wc_0a" resp="clapper">
+                        <del>healthy</del>
+                        <add>wholesome</add>
+                     </rdg>
+                  </app> to be alone the <app xml:id="walc05-app-0108">
+                     <lem>greater</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">greatest</rdg>
+                  </app> part of the time. To be in company, even with the best, is soon wearisome
+                  and dissipating. I love to be alone. I never found the companion that was so
+                  companionable as solitude. We are for the most part more lonely when we go abroad
+                     <app xml:id="walc05-app-0109">
+                     <lem>among men</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">amongst folks</rdg>
+                  </app> than when we stay in our chambers. A man thinking or working is always
+                  alone, let him be where he will. </seg>
+               <seg n="12b" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Solitude 12b written: A; rewritten: B.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">5</seg>
+                        <seg type="chapterTitle">Solitude</seg>
+                        <seg type="paragraph">12b</seg>
+                        <seg type="written">A</seg>
+                        <seg type="rewritten">B</seg>
+                     </ab>
+                     <ab change="#wc_0a #wc_0b">Solitude 12b follows Solitude 13.</ab>
+                  </note>
+                  <app xml:id="walc05-app-0111">
+                     <lem>Solitude is not</lem>
+                     <rdg wit="#wc_0b" resp="#clapper">
+                        <del>Nor, on the other hand, is solitude</del>
+                        <add>Solitude is not</add>
+                     </rdg>
+                  </app> measured by the miles of space that intervene between a man and his
+                  fellows. The <app xml:id="walc05-app-0112">
+                     <lem>really</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">
+                        <add rendition="pencil">really</add>
+                     </rdg>
+                  </app> diligent student in one of the crowded hives of <app xml:id="walc05-app-0113">
+                     <lem>Cambridge College</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">
+                        <del>Cambridge College</del>
+                        <add>a university</add>
+                     </rdg>
+                  </app>
+                  <anchor type="hn" xml:id="hn-05-014"/> is as solitary as a dervish in the desert. </seg>
+               <seg n="12c" change="#wc_0a">
+                  <note type="header" resp="#clapper">
+                     <ab type="string">Solitude 12c written: A.</ab>
+                     <ab type="parsed">
+                        <seg type="chapterNum">5</seg>
+                        <seg type="chapterTitle">Solitude</seg>
+                        <seg type="paragraph">12c</seg>
+                        <seg type="written">A</seg>
+                     </ab>
+                  </note> The farmer can work alone in the field or the woods all day, hoeing or
+                     <app xml:id="walc05-app-0114">
+                     <lem>chopping,</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">chopping wood,</rdg>
+                  </app> and not feel lonesome, because he is employed; but when he comes home at
+                  night he cannot sit down in a room alone, at the mercy of <app xml:id="walc05-app-0115">
+                     <lem>his</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">his <del>own</del>
+                     </rdg>
+                  </app> thoughts, but must be where he can “see the folks,” and recreate, and <app xml:id="walc05-app-0116">
+                     <lem>as he thinks</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">
+                        <add>as he thinks</add>
+                     </rdg>
+                  </app> remunerate<anchor type="hn" xml:id="hn-05-015"/>
+                  himself for his day’s solitude; and hence he wonders how the student can sit alone
+                  in the house all night and most of the day without ennui and “the blues;” but he
+                  does not realize that the student, though in the house, is still at work in <hi rend="style(italics)">his</hi> field, and chopping in <hi rend="style(italics)">his</hi> woods, as the farmer in his, and in <app xml:id="walc05-app-0117">
+                     <lem>turn</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">his turn</rdg>
+                  </app> seeks the same recreation and society that <app xml:id="walc05-app-0118">
+                     <lem>the latter does, though it may be a more condensed form of
+                        it.</lem>
+                     <rdg wit="#wc_0a" resp="#clapper">he does.</rdg>
+                  </app>
+               </seg>
+            </p>
+
+            <p n="13" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 13 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">13</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab>A fair copy was made of only <quote>all important and hearty communications …
+                        that we should touch him;</quote> the rest of Solitude 13 is contained,
+                     along with Solitude 12a and 12c, on a leaf (#87) in A that was taken into B and
+                     renumbered (#101).</ab>
+               </note> Society is commonly too cheap. We meet at very short intervals, not having
+               had time to acquire any new value for each other. We meet at meals three times a day,
+               and give each other a new taste of that old musty cheese that we are. We have had to
+               agree on a certain set of rules, called etiquette and politeness, to make this
+               frequent meeting tolerable, and that we need not come to open war. We meet at the
+               post-office, and at the sociable, and about the fireside every night; we live thick
+               and are in each other’s way, and stumble over one another, and I think that we thus
+               lose some respect for one another. Certainly less frequency would suffice for all
+               important and hearty communications. Consider the girls in a factory,—never alone,
+               hardly in their dreams.<anchor type="hn" xml:id="hn-05-016"/> It would be better if
+               there were but one inhabitant to a square mile, as where I live. The value of a man
+               is not in his skin, that we should touch him. </p>
+
+            <p n="14" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 14 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">14</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+                  <ab>Solitude 14 was added to the manuscript on a partial leaf.</ab>
+               </note> I have heard of a man lost in the woods and dying of famine and exhaustion at
+               the foot of a tree, whose loneliness was relieved by the grotesque visions <app xml:id="walc05-app-0119">
+                  <lem>with</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">with</add>
+                  </rdg>
+               </app> which, owing to bodily weakness, <app xml:id="walc05-app-0120">
+                  <lem>his</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>and a</del>
+                     <add rendition="pencil">his</add>
+                  </rdg>
+               </app> diseased imagination <app xml:id="walc05-app-0121">
+                  <lem>surrounded him,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>he was surrounded</del>
+                     <add rendition="pencil">surrounded him</add>
+                  </rdg>
+               </app> and which he believed to be <app xml:id="walc05-app-0122">
+                  <lem>real.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>relieved</del>
+                     <add rendition="pencil">real</add>.</rdg>
+               </app>
+               <anchor type="hn" xml:id="hn-05-017"/>
+               <app xml:id="walc05-app-0123">
+                  <lem>So also, owing to bodily and mental health and strength, we
+                     may be continually cheered by a like but more normal and natural society, and
+                     come to know that we are never alone.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">There <del>are</del>
+                     <add rendition="pencil">may be</add> those who owing to bodily &amp; mental
+                     health &amp; strength <add rendition="pencil"> rather</add> are continually
+                     cheered by <del>the like</del>
+                     <add rendition="pencil">a like though more simple &amp; natural</add> society
+                     and never realize that they are alone.</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">There may be those who owing to bodily and
+                     mental health &amp; strength rather are continually cheered by a like but more
+                     natural society, and never realize that they are alone.</rdg>
+               </app>
+            </p>
+
+            <p n="15" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 15 written: A; rewritten: B.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">15</seg>
+                     <seg type="written">A</seg>
+                     <seg type="rewritten">B</seg>
+                  </ab>
+               </note> I have a great deal of company in my house; especially in the morning, when
+               nobody calls. <app xml:id="walc05-app-0124">
+                  <lem>Let me</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">I will</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>I will</del>
+                     <add rendition="pencil">Let me</add>
+                  </rdg>
+               </app> suggest a few comparisons, <app xml:id="walc05-app-0125">
+                  <lem>that</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>so</del> that</rdg>
+               </app> some one may convey an idea of my situation. I am no more <app xml:id="walc05-app-0126">
+                  <lem>lonely</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>alone</del>
+                     <add>lonely</add>
+                  </rdg>
+               </app> than the loon in the pond that laughs <app xml:id="walc05-app-0127">
+                  <lem>so loud,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>aloud</del>
+                     <add rendition="pencil">so loud</add>,</rdg>
+               </app> or than Walden Pond itself. What company has that lonely lake, I pray? And yet
+               it has not the blue devils,<anchor type="hn" xml:id="hn-05-018"/> but the blue angels in it, in
+               the azure tint of its <app xml:id="walc05-app-0128">
+                  <lem>waters.</lem>
+                  
+                  <rdg wit="#wc_0a" resp="#clapper">waters. <del>I am no more lonely than the north
+                        star</del>
+                  </rdg>
+               </app> The sun is alone, except in thick weather, when there sometimes appear to be
+               two, but one is a mock sun.<anchor type="hn" xml:id="hn-05-019"/> God is alone,—but the devil, he
+               is <app xml:id="walc05-app-0129">
+                  <lem>far from being</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">by no means</rdg>
+                  <rdg wit="#wc_0b" resp="#clapper">
+                     <del>by no means</del>
+                     <add rendition="pencil">far from being</add>
+                  </rdg>
+               </app> alone;<anchor type="hn" xml:id="hn-05-020"/> he sees a great deal of
+               company; <app xml:id="walc05-app-0130">
+                  <lem>he is legion.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">he is legion</add>.</rdg>
+                  
+               </app> I am no more lonely than a <app xml:id="walc05-app-0131">
+                  <lem>single mullein or dandelion</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">single</add> mullein <add rendition="pencil">or
+                        dandelion</add>
+                  </rdg>
+               </app> in a pasture, or a bean leaf, or <app xml:id="walc05-app-0132">
+                  <lem>sorrel,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">sorrel, <del>or a single dandelion—</del>
+                  </rdg>
+                  
+               </app> or a horse-fly, or a humble-bee. I am no more <app xml:id="walc05-app-0133">
+                  <lem>lonely</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>lonesome</del>
+                     <add>lonely</add>
+                  </rdg>
+               </app> than the Mill Brook,<anchor type="hn" xml:id="hn-05-021"/> or a
+               weathercock, <app xml:id="walc05-app-0134">
+                  <lem>or the northstar,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add rendition="pencil">or the northstar</add>,</rdg>
+               </app> or the south wind, or an April shower, or a January thaw, or the <app xml:id="walc05-app-0135">
+                  <lem>first</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>only</del>
+                     <add rendition="pencil">first</add>
+                  </rdg>
+               </app> spider in a new house. </p>
+
+            <p n="16" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 16 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">16</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note> I have occasional visits in the long winter evenings, when the snow falls
+               fast and the wind howls in the wood, from an old settler<anchor type="hn" xml:id="hn-05-022"/> and original proprietor, who is reported to
+               have dug Walden Pond, and stoned it, and fringed it with pine woods; who tells me
+               stories of old time and of new eternity; and between us we <app xml:id="walc05-app-0136">
+                  <lem>manage to</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <add>manage to</add>
+                  </rdg>
+               </app> pass a cheerful evening with social mirth and pleasant views of things, even
+               without apples or cider,—a most wise and humorous friend, whom I love much, who keeps
+               himself more secret than ever did Goffe or Whalley;<anchor type="hn" xml:id="hn-05-023"/> and though he is thought to be dead, none can show where he is
+               buried. An elderly dame,<anchor type="hn" xml:id="hn-05-024"/>
+               too, dwells in my neighborhood, invisible to most persons, in whose odorous herb<anchor type="hn" xml:id="hn-05-025"/> garden I love to stroll
+               sometimes, gathering simples and listening to her fables; for she has a genius of
+               unequalled fertility, and her memory runs back farther than <app xml:id="walc05-app-0137">
+                  <lem>mythology,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>the</del> mythology,</rdg>
+               </app> and she can tell me the original of every fable, and on what fact every one is
+               founded, for the incidents occurred when she was <app xml:id="walc05-app-0138">
+                  <lem>young.</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">
+                     <del>a little girl</del>
+                     <add>young</add>.</rdg>
+               </app> A ruddy and lusty old dame, who delights in all weathers and seasons, and is
+               likely to outlive all her children yet. </p>
+
+            <p n="17" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 17 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">17</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note> The indescribable innocence and beneficence of Nature,—of sun and wind and
+               rain, of summer and winter,—such health, such cheer, they afford forever! and such
+               sympathy have they ever with our race, that all Nature would be affected, and the
+               sun’s brightness fade, and the winds would sigh humanely, and the clouds <app xml:id="walc05-app-0139">
+                  <lem>rain tears,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">keep rain,</rdg>
+               </app> and the woods shed their leaves and put on mourning in midsummer, if any man
+               should ever for a just cause grieve. Shall I not have intelligence with the earth? Am
+               I not partly leaves and vegetable mould <app xml:id="walc05-app-0140">
+                  <lem>myself?</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">myself? <del>God is my father &amp; my
+                        friend—men are my brothers—but nature is my mother &amp; my sister.</del>
+                  </rdg>
+               </app>
+            </p>
+
+            <p n="18" change="#wc_0a">
+               <note type="header" resp="#clapper">
+                  <ab type="string">Solitude 18 written: A.</ab>
+                  <ab type="parsed">
+                     <seg type="chapterNum">5</seg>
+                     <seg type="chapterTitle">Solitude</seg>
+                     <seg type="paragraph">18</seg>
+                     <seg type="written">A</seg>
+                  </ab>
+               </note> What is the pill<anchor type="hn" xml:id="hn-05-026"/> which will keep us well, serene, contented? Not my or thy
+               great-grandfather’s, but our great-grandmother Nature’s universal, vegetable, botanic
+               medicines, by which she has kept herself young always, outlived so many old
+                  Parrs<anchor type="hn" xml:id="hn-05-027"/> in her day, and fed
+               her health with their decaying fatness. For my panacea, instead of one of those quack
+                  vials<anchor type="hn" xml:id="hn-05-028"/> of a mixture dipped <app xml:id="walc05-app-0141">
+                  <lem>from</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">out of</rdg>
+               </app> Acheron<anchor type="hn" xml:id="hn-05-029"/>
+               and the Dead Sea, which come out of those long shallow black-schooner looking wagons
+               which we sometimes see made to carry bottles, let me have a draught of undiluted
+               morning air. Morning air! If men will not drink of this at the fountain-head of the
+               day, why, then, we must even bottle up some and sell it in the shops, for the benefit
+               of those who have lost their subscription ticket to morning time in this world. But
+                  <app xml:id="walc05-app-0142">
+                  <lem>remember,</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">remember that</rdg>
+               </app> it will not keep quite till noon-day even in the coolest cellar, but drive out
+               the stopples long ere that and follow westward the steps of Aurora.<anchor type="hn" xml:id="hn-05-030"/>
+               I am no worshipper of Hygeia,<anchor type="hn" xml:id="hn-05-031"/> who was the daughter of that old herb-doctor Æsculapius,<anchor type="hn" xml:id="hn-05-032"/> and
+               who is represented on monuments holding a serpent in one hand, and in the other a cup
+               out of which the serpent sometimes <app xml:id="walc05-app-0143">
+                  <lem>drinks;</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">drank;</rdg>
+               </app> but rather of Hebe,<anchor type="hn" xml:id="hn-05-033"/> cupbearer to Jupiter, who was the daughter of Juno and wild
+               lettuce, and <app xml:id="walc05-app-0144">
+                  <lem>who</lem>
+                  <rdg wit="#wc_0a" resp="#clapper"><!--not in manuscript--></rdg>
+               </app> had the power of restoring gods and men to the vigor of youth. She was
+               probably the only thoroughly sound-conditioned, healthy, and robust young lady that
+               ever walked <app xml:id="walc05-app-0145">
+                  <lem>the</lem>
+                  <rdg wit="#wc_0a" resp="#clapper">this</rdg>
+               </app> globe, and wherever she came it was spring. </p>
+         </div>
+      </body>
+   </text>
+</TEI>

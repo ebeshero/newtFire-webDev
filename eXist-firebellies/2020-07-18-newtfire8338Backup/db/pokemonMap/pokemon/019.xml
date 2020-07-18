@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schemas/pokemonChecker.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><?xml-model href="../schemas/PokemonSchema.rnc" type="application/relax-ng-compact-syntax"?><pokemon>
+    
+    <info>
+        <dexNum num="019">019</dexNum>
+        <name>Rattata</name>
+        <typing type="Normal">Normal</typing>
+    </info>
+    
+    <locations>
+        <route num="1">Route 1<lvl min="2" max="4"> level 2-4</lvl><rate perc="45"> encounter rate: 45%</rate></route>
+        <route num="2">Route 2<lvl min="2" max="5"> level 2-5</lvl><rate perc="45"> encounter rate: 45%</rate></route>
+        <route num="4">Route 4<lvl min="8" max="12"> level 8-12</lvl><rate perc="45"> encounter rate: 45%</rate></route>
+        <route num="9">Route 9<lvl min="14" max="17"> level 14-17</lvl><rate perc="45"> encounter rate: 45%</rate></route>
+        <route num="16">Route 16<lvl min="18" max="22"> level 18-22</lvl><rate perc="30"> encounter rate: 30%</rate></route>
+        <route num="21">Route 21<lvl min="21" max="23"> level 21-23</lvl><rate perc="35"> encounter rate: 35%</rate></route>
+        <route num="22">Route 22<lvl min="2" max="4"> level 2-4</lvl><rate perc="50"> encounter rate: 50%</rate></route>
+    </locations>
+    
+</pokemon>

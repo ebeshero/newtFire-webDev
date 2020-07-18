@@ -1,0 +1,105 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+declare variable $biggerLetters := collection ('/db/mitford/letters');
+declare variable $MissJames := $biggerLetters/TEI//text//p//persName[@ref="#James_Miss"];
+declare variable $ThisFileContent :=
+
+<html>
+    <head>Sample Co-Citation Counts from the Digital Mitford Project</head>
+    <body>
+        <table>
+             <tr>
+        <th>People</th><th>Count</th>
+        </tr>
+    
+     {
+         let $MJpeople := $MissJames/parent::p[persName[@ref="#James_Miss"]]//persName[not(@ref="#James_Miss")]/@ref | 
+         $MissJames/parent::p[persName[@ref="#James_Miss"]]/rs[@type="person"][not(@ref="#James_Miss")]/@ref
+         let $MJpeeps := distinct-values($MJpeople)
+         for $i in $MJpeeps
+let $deref := $biggerLetters//TEI//text//p[persName[@ref="#James_Miss"]]//persName[@ref = $i]
+let $uri := $deref/tokenize(base-uri(), '/')[last()]
+let $count_i := count ($deref)
+order by $count_i descending 
+         
+      return
+          <tr>
+          <td>{$i}</td>
+          <td>{$count_i}</td>
+          <td>{string-join($uri, ', ')}</td>
+          </tr>
+     
+     }
+    
+    
+    </table>
+<hr/>        
+<table>        
+    <tr>
+        <th>Publications</th><th>Count</th>
+        </tr>
+{
+
+let $MJbooks := $MissJames/parent::p[persName[@ref="#James_Miss"]]/title/@ref | 
+$MissJames/parent::p[persName[@ref="#James_Miss"]]/bibl/@corresp
+let $distinct_MJbooks := distinct-values($MJbooks)
+
+for $b in $distinct_MJbooks
+let $derefB := $biggerLetters//TEI//text//p[persName[@ref="#James_Miss"]]//title[@ref = $b]
+let $count_B := count($derefB)
+let $uri := $derefB/tokenize(base-uri(), '/')[last()]
+order by $count_B descending
+
+return 
+    
+ <tr>
+   
+     <td>{$b}</td>
+     <td>{$count_B}</td>
+     <td>{string-join($uri, ", ")}</td>
+     </tr>
+}    
+
+</table>
+<hr/>
+<table>
+     <tr>
+        <th>Places</th><th>Count</th>
+        </tr>
+    {
+        let $MJplaces := $MissJames/parent::p[persName[@ref="#James_Miss"]]/placeName/@ref | 
+$MissJames/parent::p[persName[@ref="#James_Miss"]]/rs[@type="place"]/@ref
+let $distinct_MJplaces := distinct-values($MJplaces)
+
+for $p in $distinct_MJplaces
+let $derefp := $biggerLetters//TEI//text//p[persName[@ref="#James_Miss"]]//placeName[@ref = $p] |
+$biggerLetters//TEI//text//p[persName[@ref="#James_Miss"]]//rs[@type="place"][@ref = $p]
+let $uri := $derefp/tokenize(base-uri(), '/')[last()]
+let $count_P := count($derefp)
+order by $count_P descending
+    return
+        
+        <tr>
+            <td>{$p} </td>
+            <td>{$count_P} </td>
+            <td>{string-join($uri, ", ")}</td>
+            
+            </tr>
+        
+        
+    }
+    
+    </table>
+
+    
+</body>
+</html>;
+
+let $filename := "MissJames_TableOutput.html"
+let $doc-db-uri := xmldb:store("/db/output", $filename, $ThisFileContent)
+return $doc-db-uri
+
+
+
+
+

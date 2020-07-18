@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema_v2.rnc" type="application/relax-ng-compact-syntax"?><?xml-model href="../tv-schematron.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><root>
+    <head>
+        <episode>AFTERSHOCK - PART 1</episode>
+        <writer>David Slack</writer> 
+        <director>Ciro Nieli</director> 
+        <storyboard>Ben Jones, Kalvin Lee, Alan Wan, Matt Youngberg</storyboard>
+        <animation>Dongwoo Animation Co. Ltd.</animation>
+        <source>https://teentitans.fandom.com/wiki/Aftershock_-_Part_1_(Transcript)</source>
+    </head>
+    <characterList>
+        <charList type="recurring" subtype="titan" id="BeastBoy">Beast Boy</charList>
+        <charList type="recurring" subtype="titan" id="Raven">Raven</charList>
+        <charList type="recurring" subtype="titan" id="Robin">Robin</charList>
+        <charList type="recurring" subtype="titan" id="Cyborg">Cyborg</charList>
+        <charList type="recurring" subtype="titan" id="Starfire">Starfire</charList>
+        <charList type="nonrecurring" subtype="villain" id="Slade">Slade</charList>
+        <charList type="nonrecurring" subtype="both" id="Terra">Terra</charList>
+        <charList type="nonrecurring" id="Guard">Guard</charList>
+        <charList type="nonrecurring" id="DeskMan">A worker in the office that gets destroyed in the episode.</charList>
+        <!--03-27-2020 shd: note that these characters listed below show up or are mentioned in the episode, but do not talk-->
+        <charList type="recurring" subtype="villain" id="Plasmus">Plasmus</charList>
+        <charList type="recurring" subtype="villain" id="Overload"/>
+        <charList type="recurring" subtype="villain" id="Cinderblock"/>
+    </characterList>
+    <locationList>
+        <locList id="tower" lat="37.8002" lon="-122.5004">Titans Tower</locList>
+        <locList id="city" lat="37.776961" lon="-122.437408">Streets of Jump City</locList>
+        <locList id="chamber" lat="37.7733" lon="-122.4377"/>
+        <locList id="forest" lat="37.7587" lon="-122.4585">A forest that Cyborg and Beast Boy travel through on their way to fight Plasmus in the chemical plant.</locList>
+        <locList id="chemical_plant" lat="37.7939" lon="-122.3928">A chemical plant where Beast Boy and Cyborg fight Plasmus</locList>
+        <locList id="mine" lat="37.726730" lon="-122.441710">A mine where Robin and Starfire fight Cinderblock.</locList>
+    </locationList>
+    <body>
+        <act n="0">
+         <title>PROLOGUE</title>
+
+<sd><setNote shot="yes">Opening shot: a stained-glass window, such as might be found in a cathedral, seen from inside.</setNote> Orange-tinted sunlight shines through the panes into the dim chamber. Pull back in steps to reveal more of the interior; a collapsed jumble of steel beams betrays the fact that this place, wherever it is, has not been used in quite some time. Cut to a slow pan along a row of windows. <char ref="Slade">Slade</char> stands at one of them and turns to address the camera. Since his throw down with <char ref="BeastBoy">Beast Boy</char> in "Betrayal", he has had a chance to replace his mask and armor.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> You have had doubts in the past. Made mistakes.</sp>
+
+<sd>Cut to <char ref="Terra">Terra</char> at another window. Seen in profile from the waist up, she stands with head bowed and eyes closed. The black and yellow-orange outfit she sported in her last outing with the Titans has been replaced by a very different rig: steel breastplate and shoulder/elbow pads, a layer of cloth wrappings under the armor to cover her entire body, black codpiece, a metal hair clip above the left ear.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> But all that is behind you, isn't it?</sp>
+
+<sd>Extreme close-up; she opens her eyes and lifts her face.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Yes. <sd>Long shot, silhouette.</sd></sp>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>from o.c.</sd> You belong to me now... <sd>steps into a view near the camera</sd> ...don't you? <sd>Close-up of his eye.</sd></sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>from o.c.</sd> I do. <sd>Cut to her; he walks around behind.</sd></sp>
+
+<sp><spkr ref="Slade">Slade</spkr> From this day forward, will you serve me and me only?</sp>
+
+<sd>She turns her head slightly to look at him over her shoulder. The movement reveals a second clip over her right ear, as well as the hair that has fallen forward to hide that side of her face. Close-up of her, tilting up slightly to his face.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I will.</sp>
+
+<sd>She raises her hands, now clad in thick steel gloves like his. Close-up profile of him.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Will you obey my every command? <sd>Tilt down a bit; she steps forth.</sd></sp>
+
+<sp><spkr ref="Terra">Terra</spkr> I will. <sd>Pull back to frame both.</sd></sp>
+
+<sp><spkr ref="Slade">Slade</spkr> Will you fight at my side forever?</sp>
+
+<sd>He holds out one hand, palm up, and she stares into it. Close-up: he has a disc marked with his S insignia. She gives him a hard look, takes the item after a bit of hesitation, and holds it over her breastplate.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I will. <sd>She fixes it in place.</sd></sp>
+
+<sp><spkr ref="Slade">Slade</spkr> And will you destroy the Teen Titans?</sp>
+
+<sd>He looks searchingly at her. Close-up of her feet, now in steel boots, and tilt up past her steel-padded knees to her head.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I thought you'd never ask.</sp>
+
+<sd>Cut to a close-up of her face, mouth curving up into a cruel smile, then to a silhouetted shot of master and servant at the window. Pull back slowly and snap to black.</sd>
+
+
+<cue>OPENING THEME</cue>
+
+</act>
+
+<act n="1">
+
+<title>ACT ONE</title>
+
+<sd><setNote shot="yes">Opening shot: a street in  <location>Jump City</location> during the day</setNote>. A vehicle motors down the block; in close-up, it is seen to be the T-Car. On the next line, cut to a pan across the Titans inside. <char ref="Robin">Robin</char> rides shotgun next to <char ref="Cyborg">Cyborg</char>.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> Okay, okay, I got one. Why are ducks so funny? <sd>Cut to <char ref="Cyborg">Cyborg</char>; he continues o.c.</sd> Because they're always quacking jokes!</sp>
+
+<sd>To the sound of his laughter, pan toward the back seats as <char ref="Cyborg">Cyborg</char> and <char ref="Robin">Robin</char> groan softly, then cut to just outside <char ref="Raven">Raven</char>'s window.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Pull over. I think I'm gonna be sick.</sp>
+
+<sd>Inside again, at the rear. <char ref="BeastBoy">Beast Boy</char> is caught flat-footed; <char ref="Starfire">Starfire</char> seems positively perplexed, but her face soon lights up.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Oh, I see! It is humorous because ducks lack the large brain necessary for the telling of jokes. <sd>She giggles.</sd></sp>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> Actually, <char ref="Starfire">Starfire</char>, it just wasn't humorous.</sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> Huh? <sd>Outside <char ref="Raven">Raven</char>'s window.</sd></sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Because <char ref="BeastBoy">Beast Boy</char> lacks the large brain necessary for telling jokes. <sd>Inside.</sd></sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> Come on, <char ref="Raven">Raven</char>, you know I'm hilarious. And I'm not gonna give up until I get you to smile. <sd>Pause.</sd> Okay. Why did the aardvark cross the road?</sp>
+
+<sd>Cut to a stoplight, which shows yellow and then red, and tilt down to street level on the next line as the T-Car rolls up and brakes.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>from o.c.</sd> To beat up the idiot telling jokes about him? <sd>Close-up of the windshield; the two boys in the front seats laugh at this one.</sd></sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> The idiot telling the jokes...</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Now that's funny.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>confused</sd> Please. An aardvark is some form of duck?</sp>
+
+<sd>Cut to behind the auto; <char ref="BeastBoy">Beast Boy</char>'s frustrated groan makes itself heard and the light turns green. As the T-Car rolls through the intersection, a boulder slides into view along the cross street and bulldozes it away. <char ref="Cyborg">Cyborg</char>'s pride and joy tumbles over and over, the windshield cracking, and skids upright to a stop in a horrible scream of smoldering rubber. Letterbox view, top third of the screen; it glows brightly from within due to <char ref="Starfire">Starfire</char>'s efforts, and her door is blasted away just before the engine explodes and throws a piece of itself toward the camera.</sd>
+
+<sd>Fullscreen, driver's side: she climbs out, groaning and rubbing her head, and <char ref="Cyborg">Cyborg</char> opens his door. As soon as he steps to the street, it falls off the hinges and both Titans stare ahead in surprise. Pan to the front end as the other three emerge bug-eyed; <char ref="BeastBoy">Beast Boy</char> is the first to find his power of speech again.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <char ref="Terra">Terra</char>?</sp>
+
+<sd>She stands not far away, amid the clearing dust and smoke of her assault.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Hey, guys. Miss me?</sp>
+
+<sd>With a fierce yell, she raises her hands and brings them forward; many small chunks of stone rise from the pavement and rocket toward the Titans. All five bail out, leaving the T-Car to absorb the full bombardment. Glass, headlights, tires, frame, and body panels all are mercilessly battered and smashed hopelessly out of shape. <char ref="BeastBoy">Beast Boy</char> has taken cover behind the large rock she first slung at them; its sudden ascension takes him by surprise.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> Huh?</sp>
+
+<sd>He turns just in time to see it make a perfect one-point landing on the car, crushing it flat. Now <char ref="Terra">Terra</char> focuses her powers on the section of pavement beneath her feet and gets herself airborne to zoom straight at the team.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Titans! Go!</sp>
+
+    <sd><action mrkr="Robin" with="all" move="1" place="city" timestamp="2004-01-10T00:10:30"/>He, <action mrkr="Starfire" with="all" move="1" place="city" timestamp="2004-01-10T00:10:30"/><char ref="Starfire">Starfire</char>, and <action mrkr="BeastBoy" with="all" move="1" place="city" timestamp="2004-01-10T00:10:30"/><char ref="BeastBoy">Beast Boy</char> move first, the last turning into a cheetah as he charges, and <action mrkr="Cyborg" with="all" move="1" place="city" timestamp="2004-01-10T00:10:30"/><char ref="Cyborg">Cyborg</char> and <action mrkr="Raven" with="all" move="1" place="city" timestamp="2004-01-10T00:10:30"/><char ref="Raven">Raven</char> bring up the rear. Cut to an overhead shot of <char ref="Terra">Terra</char> skimming her platform along the street; tilt down slightly to frame a long fissure forming ahead of her. It rapidly widens while racing toward the Titans, and a huge stone pillar rises to push <char ref="Robin">Robin</char> and <char ref="Raven">Raven</char> out of sight. The other three heroes continue their rush, <char ref="Starfire">Starfire</char> blasting away, but a boulder flies into view and knocks her backward.</sd>
+
+<sd><char ref="Cyborg">Cyborg</char> shoots one worried look back toward her, then trains his sonic cannon on <char ref="Terra">Terra</char> and fires. The blast chops away part of her paving fragment and puts her off balance for a moment; however, she quickly regains control and sends the broken piece down at the two remaining Titans. It crashes into <char ref="Cyborg">Cyborg</char>'s face and floors him, but <char ref="BeastBoy">Beast Boy</char> jumps away and becomes a falcon in midair. A fast swoop puts him in her face, at which point he reverts to human form and hauls himself over her leading edge.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <char ref="Terra">Terra</char>, stop! We're your friends!</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> I don't have any friends, remember?</sp>
+
+<sd>Having thrown his words from the end of "Betrayal" back in his face, she follows them with an uppercut that knocks him clear. <char ref="Starfire">Starfire</char> catches him just short of the ground; behind her, <char ref="Terra">Terra</char> flashes past and flips backward off her stone, leaving it to continue riderless. Cut to <char ref="Robin">Robin</char>, who has fallen near the T-Car's wreckage and been knocked out from the hard landing. The mass slams down, bouncing over him, and she soon comes down after it.</sd>
+
+<sd>Close-up of him, tilting up to frame her a short distance away. She directs a vicious smile at the prone Titan and levitates two large stones to crush him. As he starts to sit up, the weights are lifted higher and moved directly over his head, but before she can drop them, <char ref="Raven">Raven</char> touches down and levitates a third stone. Close-up of each girl in turn.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Don't make me hurt you.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Don't make me laugh.</sp>
+
+<sd><char ref="Raven">Raven</char>'s stone moves behind the blond head, but her hold on it is suddenly broken and <char ref="Terra">Terra</char> sends all three boulders straight at her. The impact, just inches short, throws her far down the block; she grabs a lamppost to slow down, spins on it at high speed, and ends up hurtling down the street anyway. The friction of her contact with the metal weakens it to the point that the section of the post above that spot topples into the street.</sd>
+
+<sd>Back to <char ref="Terra">Terra</char>. A swing of the o.c. <char ref="Robin">Robin</char>'s arm knocks hers away, and in an instant, he has charged at her. The two swing at each other energetically; <char ref="Cyborg">Cyborg</char> leaps in to help double-team her, but she promptly kicks both boys away in opposite directions. As soon as <char ref="Robin">Robin</char> is on his feet, the pavement before him erupts into a jagged wall that blocks his approach and stretches far down the block in both directions.</sd>
+
+<sd>She smiles at her work; close-up of a disc as he sticks it on his side. A red light at its center flashes briefly before the thing detonates with a mighty blast. <char ref="Cyborg">Cyborg</char>, meanwhile, is in the clear at another point in the street, and he watches as chunks of debris tumble past him, followed by the human bulldozer herself. <char ref="Robin">Robin</char>'s bomb has blown a hole in the wall.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <char ref="Cyborg">Cyborg</char>! Now! <sd>As she starts to get up. <char ref="Cyborg">Cyborg</char> levels his cannon.</sd></sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Sorry, kid.</sp>
+
+<sd>Extreme close-up of her face. That thin-lipped mouth curves into a smile; pull back as she stabs the fingers of one hand into the ground. A glowing crack spreads ahead and behind and explodes at each boy's feet, sending both skyward. <setNote shot="yes">Just after they have been launched, cut to inside <location>an office</location> whose wall-to-wall windows give a view of the street.</setNote> <char ref="Robin">Robin</char> and <char ref="Cyborg">Cyborg</char> fly up past here as the people inside go about their business. One man runs the copier, while a second sits at his desk and talks to a female co-worker.</sd>
+
+<sp><spkr ref="DeskMan">Desk man</spkr>: Then I said, "Chill out. It's not like the sky's falling."</sp>
+
+<sd>As he says this, <char ref="Robin">Robin</char> crashes onto a rooftop across the street; when he finishes, <char ref="Cyborg">Cyborg</char> comes down through the ceiling and lands on the desk. The woman squeals in terror as the dust clears. Cut to outside this building, the camera pointing up from midair at the smoking crash site, and tilt down to the street. <char ref="Terra">Terra</char> straightens up, looks up toward the spot, and smiles. Long shot of her and <char ref="Raven">Raven</char>; the latter is still half-unconscious from that spin around the lamppost, while the former raises an enormous boulder and shifts it over her.</sd>
+
+<sd>Close-up of the cloaked Titan as the rock's shadow extends to cover her. She looks up with a gasp, and the camera tilts up to the mass, which starts to drop. Back to her; as the gray monolith fills the screen, she lifts one black-glowing hand toward it, and it stops moving just in time and starts to move back up, but not due to her powers. As it rises higher, we see that <char ref="Starfire">Starfire</char> has come to her teammate's rescue. Putting her back into it, she heaves the sheer tonnage over her head; behind her, <char ref="BeastBoy">Beast Boy</char> runs in and gets an arm around <char ref="Raven">Raven</char>'s shoulders to help her up.</sd>
+
+<sd>Cut to just behind these two and tilt up to <char ref="Starfire">Starfire</char>, who stands with that huge missile poised above her head. After a very long moment, she flings it straight across the intersection at <char ref="Terra">Terra</char>. The Titan-turned-destroyer stops it with almost no time to spare and sends it right back, but a two-handed starbolt reduces it to a storm of gravel. <char ref="Starfire">Starfire</char> immediately lets go with an eye blast that finds its mark and sends <char ref="Terra">Terra</char> crashing against the remains of her pavement wall.</sd>
+
+<sd>As the Tamaranean glares at the fallen enemy, wisps of smoke rising from the corners of her eyes, <char ref="Raven">Raven</char> and <char ref="BeastBoy">Beast Boy</char> move up behind her. She flies over and kneels by <char ref="Terra">Terra</char>'s side with obvious concern.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <char ref="Terra">Terra</char>!</sp>
+
+<sd>Close-up of the latter, zooming in slowly. The eyes are closed, but soon pop open and glow very brightly.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You always were easy to fool.</sp>
+
+<sd>The spot of pavement at <char ref="Starfire">Starfire</char>'s feet explodes into a high-pressure jet of mud, propelling her some distance away. <char ref="Terra">Terra</char> steps up and dusts herself off nonchalantly; the now-furious Titan stands up to face her. <char ref="Raven">Raven</char> and <char ref="BeastBoy">Beast Boy</char> come in offer reinforcements; the latter arriving as a falcon, then resuming human form. Pan from them to the front entrance of a nearby building; out comes <char ref="Robin">Robin</char>, freshly descended from the roof where he crashed down. He runs to join the other three, and <char ref="Cyborg">Cyborg</char> emerges from a door across the street to complete the lineup.</sd>
+
+<sd>Cut to a close-up of <char ref="Robin">Robin</char>, pan across the others, and pull back to frame all five as <char ref="Cyborg">Cyborg</char> raises his cannon. <char ref="Terra">Terra</char> has stood her ground and focused her energy on the asphalt around her; glowing cracks now spread in all directions, and more power races along the ones that stretch toward the Titans. Very large masses emerge from the roadbed, forming into a pair of colossal humanoid mud figures that stand in front of <char ref="Terra">Terra</char>. The Titans are momentarily dumbfounded.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> That's a new trick.</sp>
+
+<sd>Cut to a long shot of the group and pull back between the two creatures until <char ref="Terra">Terra</char> is in view. Staring at her hands, she is just as perplexed as they are.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Whoa. How did I--?</sp>
+
+<sd>Profile close-up. Her hair has shifted a bit, exposing her ear, and we can now see a <char ref="Slade">Slade</char>-marked radio receiver plugged into it; the same type given to <char ref="Robin">Robin</char> in "Apprentice".</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>heard in the earpiece</sd> You didn't. <sd>Terra's eyes widen.</sd> I did.</sp>
+
+<sd>She turns a very scared look back toward that ear. <setNote shot="yes">Snap to black, then fade in to the interior of stained-glass-windowed lair</setNote>; he steps toward the camera.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Your new suit is more than a fashion statement, my dear.</sp>
+
+<sd>On the end of this, the light shining through the windows goes out and a different source starts to flicker. Close-up of his feet; a spotlight comes on, then pull back to frame all of him in it. As he continues, blue-white light washes across, not quite hiding the view, and an image of <char ref="Terra">Terra</char> slides in from the right.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> It is a sophisticated neural interface that gives me direct access to your nervous system.</sp>
+
+<sd>As he continues, cut to behind him; he watches her image on a screen. Evening has fallen in the city.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Your power is my power. My strength is your strength.</sp>
+
+<sd>As he continues, cut to a shot of both their faces sliding into view from opposite sides of the screen; his from the left, hers from the right. The left half of her face is hidden by hair in this shot, marking it as a reflection. Both images stop at the center, superimposed on each other and giving the illusion of a complete visage on <char ref="Slade">Slade</char>'s masked head.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> We are connected, <char ref="Terra">Terra</char>; united as master and apprentice! We fight as one!</sp>
+
+<sd>On the end of this, pull back to frame him in the spotlight. He raises his fists behind his head with a growing yell, and the view dissolves to show her doing likewise. The glowing hands hit the pavement, sending out a webwork of shimmering fractures that lace among the Titans' feet. When they fade, the two mud golems drop from sight and part of the street behind the team erupts in a blast of light and smoke. <char ref="Cyborg">Cyborg</char> aims his cannon at the spot only to get smacked away by an emerging arm; its owner stands up from the weakened pavement and <char ref="Robin">Robin</char> rushes toward it. The three standing Titans brace for action and immediately get a torrent of muck in their faces.</sd>
+
+<sd>Beast Boy, almost up to his waist in the mess, becomes a rhinoceros and charges down the street. Cut to the source of the torrent; the second beast, one of whose arms now has a piece of sewer pipe jammed onto the end. It stops the flow and drops away just in time to avoid the green Titan's rush; he returns to human form and throws a confused look around, and the foe stands up from the pavement behind him. Seeing a brown fist coming down at him, he becomes an ankylosaurus and lets the tough hide deflect that blow. The two eye each other as <char ref="Robin">Robin</char> drops into a crouch; he has to jump right away to avoid the first golem's huge fist.</sd>
+
+<sd>He and his enemy square off for a moment, after which he leaps onto the rubble-covered back. It takes little time for the thing to stretch out an arm and pull him loose; he is pinned under that hand, about to take a severe pounding from the other one, but <char ref="Cyborg">Cyborg</char>'s cannon shot severs it. Cut to him, rushing down the block with a yell, then to the monster as he tackles it. As soon as he hits the ground, though, the semi-liquid body disappears to leave him sitting in a cloud of dust. After a quiet moment and a puzzled look back and forth, the ground rumbles and two thick tendrils of mud shoot up just behind him. These loop over his head and punch back through the pavement just in front, crossing just above <char ref="Cyborg">Cyborg</char>'s head. He is quickly pinned down when both loops contract, then finds himself aloft as the creature emerges beneath him.</sd>
+
+<sd>Pan slightly away to show <char ref="Robin">Robin</char> on the scene, ready to mix it up, then cut to a close-up of <char ref="Cyborg">Cyborg</char>'s flailing legs. Tilt up to frame the rest of his captor; it has the big man wrapped up in its arms and is using him as a shield. The sound of a starbolt is heard o.c.; shift to point down the street, where <char ref="Starfire">Starfire</char> backs into view and tosses off a couple of shots. A crack of asphalt at her feet, and a thick tendril of sludge has emerged to ensnare her firmly, but a quick eye blast and a superhuman heave break her loose again. <char ref="Raven">Raven</char> backs up to her, shielding herself from a few flying rocks and a very big one that comes after them, then lifts off.</sd>
+
+<sd>Robin looks toward <char ref="BeastBoy">Beast Boy</char>, who is still eyeing his adversary up and down. It jams the pipe-ended arm into the street, pops it up under the green dinosaur, and spews out a muddy fountain that launches him all the way to the opposite sidewalk. <char ref="BeastBoy">Beast Boy</char> plows into a building near <char ref="Robin">Robin</char>, taking out one of the plate-glass windows, as <char ref="Robin">the Boy Wonder</char> gets a pair of discs ready.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>throws</sd> Titans! Fall back!</sp>
+
+<sd>The projectiles arc toward <char ref="Terra">Terra</char>, who puts up an arm to shield her face, and explode to produce thick smoke.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>coughs</sd> Can't see!</sp>
+
+<sd>As she says this, cut to <char ref="Starfire">Starfire</char>; the tentacle reaching toward her disintegrates suddenly, and the camera pans to <char ref="Raven">Raven</char>, who takes down the barrier she has put up around herself. Both golems vanish into the street, <char ref="Cyborg">Cyborg</char> getting dropped flat as they go, and <char ref="BeastBoy">Beast Boy</char> stands up in human form behind <char ref="Robin">Robin</char>. Each directs a slightly puzzled look at the leader, wondering at his decision since <char ref="Terra">Terra</char>'s offensive has been blunted.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> You heard me! Fall back!</sp>
+
+<sd>He hurls down a smoke bomb, which instantly throws up a thick veil to hide the team's movements. Out of the haze from the discs' explosion, <char ref="Terra">Terra</char> raises herself on a tall stone column and watches the smoke slowly dissipate: no one in sight right now. Cut to a shot of her, frustrated and furious at not having been able to finish the job here and now, and zoom in slowly, then shift back to street level. <char ref="BeastBoy">Beast Boy</char> has not followed <char ref="Robin">Robin</char>'s order right away, but he soon takes a few reluctant steps backward and wheels into a run to catch up.</sd>
+
+    <sd>Cut to the exterior of <location>Titans Tower</location>; it is now nighttime. Inside the entrance hall, <action mrkr="Cyborg" with="all" move="2" place="tower" timestamp="2004-01-10T00:10:40"/><char ref="Cyborg">Cyborg</char> is in one of the armchairs, bending over a table, while <action mrkr="Raven" with="all" move="2" place="tower" timestamp="2004-01-10T00:10:40"/><char ref="Raven">Raven</char> leans against the wall. Her crossed arms and disgusted expression say more about her thoughts on <char ref="Terra">Terra</char>'s turncoat attack than any words ever could. A small clinking sound comes from <char ref="Cyborg">Cyborg</char>'s direction; cut to him. A bowl sits on the table, and he is picking bits of stone from his forearm circuitry and dropping them in here. Farther back, <action mrkr="Starfire" with="all" move="2" place="tower" timestamp="2004-01-10T00:10:40"/><char ref="Starfire">Starfire</char> sits on a flight of stairs next to <action mrkr="Robin" with="all" move="2" place="tower" timestamp="2004-01-10T00:10:40"/><char ref="Robin">Robin</char>, who leans against the railing, and <action mrkr="BeastBoy" with="all" move="2" place="tower" timestamp="2004-01-10T00:10:40"/><char ref="BeastBoy">Beast Boy</char> stands nearby.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>groaning angrily</sd> I shoulda blasted her when I had the chance. <sd>Cut to <char ref="Raven">Raven</char> on the start of the following.</sd></sp>
+
+<sp><spkr ref="Raven">Raven</spkr> I should've hit her with everything I've got. <sd>Cut to the other three.</sd></sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Why did I permit her to fool me again?</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Why couldn't we take her down just like any other criminal?</sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> Because... <sd>Close-up.</sd> ...she's not just another criminal. She's <char ref="Terra">Terra</char>.</sp>
+
+<sd>Dissolve slowly to a close-up of her gently smiling face, set above the collar of the black crop-top turtleneck she wore during her time with the team. Her hair streams in the breeze.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> She was a Titan. <sd>now out of view; voice over</sd> She was...our friend. <sd>Back to <char ref="Raven">Raven</char>.</sd></sp>
+
+<sp><spkr ref="Raven">Raven</spkr> <char ref="Terra">Terra</char> was never our friend. She was a liar and a spy, trained by <char ref="Slade">Slade</char> and sent to destroy us. <sd>Extreme close-up.</sd> She's evil. Always has been, always will be.</sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <sd>incensed, pacing; the camera follows</sd> You don't know what you're talking about, okay, <char ref="Raven">Raven</char>? She's made some serious mistakes, but she's not--</sp>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Hey, man, the girl wrecked my car. Seems pretty evil to me.</sp>
+
+<sd>With one swift, violent motion, <char ref="BeastBoy">Beast Boy</char> seizes the table and flings it aside.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> This isn't a joke! I knew her better than anyone! I know all the terrible things she's done, and I know exactly how messed up she is. But she's not evil! We can't just give up on her.</sp>
+
+<sd><char ref="Raven">Raven</char> is briefly caught out by these words, but her eyebrows soon lower again; her opinion has not shifted a bit.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>coming up behind him</sd> <char ref="BeastBoy">Beast Boy</char>, she's working for <char ref="Slade">Slade</char>.</sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> When you were working for <char ref="Slade">Slade</char>, did we give up on you? <sd>Long pause.</sd></sp>
+
+<sp><spkr ref="Robin">Robin</spkr> She gets one last chance. One. We have to break <char ref="Slade">Slade</char>'s grip on her. We have to try to get <char ref="Terra">Terra</char> back. <sd>The alarm and red flashers go off.</sd></sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Trouble!</sp>
+
+<sd><setNote shot="yes">Cut to an overhead view of <location>the prison</location> seen in "Divide and Conquer"</setNote>. An alarm is going off here as well, and the camera zooms in slowly and starts to tremble violently. Inside the front gate; <char ref="Terra">Terra</char> rides over the wall on a chunk of rock, comes to a stop, and swings both hands above her head with an agonized groan. From one of the cell block towers, a broad rock column shoots straight up; rotate to frame each of two other towers experiencing the same fate. From here, cut to a point in midair, just above the turmoil, one by one, <char ref="Plasmus">Plasmus</char>, <char ref="Overload">Overload</char>, and <char ref="Cinderblock">Cinderblock</char> rise into view on these pedestals. The first of these has the many-eyed form he took on during his fight with the Titans in "Transformation", and the second now has a skeleton of microchips visible through the surging electric sparks that compose his body.</sd>
+
+<sd><char ref="Terra">Terra</char> floats up to their level, after which the camera pulls back to an overhead view of the prison. Her breakout efforts have brought the three villains up to at least twice the height of the towers' roofs. Back to her, floating a bit closer and holding up a disc identical to the one on her breastplate. It is thrown at <char ref="Plasmus">Plasmus</char> to stick under his mouth with a brief flash, eliciting a brief screech from him. Identical devices are scaled across to hit the chests of <char ref="Overload">Overload</char> and <char ref="Cinderblock">Cinderblock</char> in turn and bring a small groan from each.</sd>
+
+<sd>Cut back to <char ref="Plasmus">Plasmus</char> and pan across the other two monsters; <char ref="Terra">Terra</char>'s silhouette floats in the glare from <char ref="Overload">Overload</char>. All three are quite docile now.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>voice over</sd> Well done, my dear apprentice.</sp>
+
+<sd>Cut to him, watching her on his monitor. The image flickers a bit. After a moment, cut to a close-up and move in a circular track around him; three other screens each show one of the newly freed holy terrors.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> The neural remotes are online...Overload, <char ref="Cinderblock">Cinderblock</char>, and <char ref="Plasmus">Plasmus</char> are in my command...</sp>
+
+<sd>The camera stops, framing him before <char ref="Terra">Terra</char>'s screen. Back to her, seen in profile as she leans forward with a diabolical grin and the three do likewise, one by one.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> <sd>voice over</sd> ...and everything is under control.</sp>
+
+<sd>Fade to black.</sd>
+</act>
+
+<act n="2">
+
+<title>ACT TWO</title>
+
+    <sd><setNote shot="yes">Opening shot: a close-up of hooves galloping across a forest plain.</setNote> The legs are green, giving this away as <action mrkr="BeastBoy" with="C" move="3" place="forest" timestamp="2004-01-10T00:10:50"/><char ref="BeastBoy">Beast Boy</char>; on the next line; pull back to show him as a horse. <action mrkr="Cyborg" with="BB" move="3" place="forest" timestamp="2004-01-10T00:10:50"/><char ref="Cyborg">Cyborg</char> rides bareback, his cannon at the ready.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>voice over</sd> We've got three escaped criminals attacking three separate targets. Whatever <char ref="Slade">Slade</char>'s doing, we have to split up and stop it.</sp>
+
+<sd>On the next line, cut to a close-up of the R-Cycle's front wheel, racing through  <location>Jump City</location>.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>voice over</sd> <char ref="Robin">Robin</char> and I shall defeat <char ref="Cinderblock">Cinderblock</char>.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>voice over</sd> I can deal with <char ref="Overload">Overload</char>.</sp>
+
+    <sd>Pull back on the end of the previous line to frame her <action mrkr="Starfire" with="RB" move="3" place="city" timestamp="2004-01-10T00:10:50"/><char ref="Starfire">Starfire</char> in flight above <action mrkr="Robin" with="S" move="3" place="city" timestamp="2004-01-10T00:10:50"/><char ref="Robin">Robin</char>.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>voice over</sd> And <char ref="BeastBoy">Beast Boy</char> and I'll take <char ref="Plasmus">Plasmus</char>.</sp>
+
+<sd>On the end of this, snap to black, against which the hem of <char ref="Raven">Raven</char>'s cloak sweeps across. Her powers exert themselves beneath it.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <sd>voice over</sd> What about <char ref="Terra">Terra</char>?</sp>
+
+    <sd>Pull back. <action mrkr="Raven" with="none" move="3" place="chamber" timestamp="2004-01-10T00:11:00"/>She is floating down an alley, scattering bits of trash in her wake, and the camera pans to the blackness of the dead end.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>voice over</sd> We'll have to worry about her when this is over.</sp>
+
+<sd>Snap to a patch of plain as he and <char ref="Starfire">Starfire</char> roar into view and disappear toward the horizon. After they have gone, cut to a large rectangular chamber; the same one in which <char ref="Robin">Robin</char> met with <char ref="Slade">Slade</char> in "Masks", or else one very similar to it. A large cylindrical piece of equipment is suspended from the ceiling, with a floor platform centered below it. Zoom in on the door, flanked by two armed guards; all is peaceful for the moment, but a crackle of sparks from a nearby control panel breaks the quiet, <char ref="Overload">Overload</char> is hard at work. Tilt up as lines of current trace a lattice up the wall, then cut to the other end of the place as they reach over here. Up the balconies, emergency lights coming on, across the ceiling, toward the suspended device and down its length. More bulbs flick to life on the surface; at the bottom end, the arcs gather within a large ring that faces the floor.</sd>
+
+<sd>Cut to the platform. <char ref="Overload">Overload</char>'s energy surges into it, causing a flash and a broad beam of energy to shoot straight up; the camera follows this to the overhead ring, which is now emitting an identical stream of radiation. The two meet with a blinding flash, which clears to show <char ref="Overload">Overload</char> now in the place.</sd>
+
+<sp><spkr ref="Guard">Guard</spkr> Fire!</sp>
+
+<sd>He and his partner train their fire on the intruder, but without effect. In response, <char ref="Overload">Overload</char> lifts his hand and causes the two weapons to fly out of the guards' hands. They disappear into his arms, which form into spikes; the men yell in panic and beat a quick retreat through the door, the camera backing up to follow them as the entry closes. Back to the chamber; <char ref="Overload">Overload</char> grunts a bit and turns back to the overhead rig from which he emerged, only to see it turn black as <char ref="Raven">Raven</char>'s powers encompass it. The entire place soon goes black as well, and her "soul-self" rises from the floor and turns into the blue-cloaked Titan herself.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> So, <char ref="Overload">Overload</char>, think you can handle a total blackout?</sp>
+
+<sd>Growling, he extends an arm straight at her for a stab; she stops it with a large shield, which she pushes back toward him. It plows into his face, forcing him to somersault backward across the room and right himself in a hurry. She follows this bulldoze with a few black energy bolts that set him bobbing and weaving. He pours himself into the floor grid, races toward the platform, and turns off to go up one wall, at which point he rematerializes in <char ref="Raven">Raven</char>'s face. The shock sets her tumbling in midair, but she flips upright and flies back to him.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Azarath Metrion Zinthos!</sp>
+
+    <sd>Her spell creates a wide barrier, just in time to stop the blow he is aiming at her. The energy of his strike is absorbed and starts to break it down, filling the screen with light; this resolves into the beam from <action mrkr="Cyborg" with="BB" move="4" place="chemical_plant" timestamp="2004-01-10T00:11:10"/><char ref="Cyborg">Cyborg</char>'s built-in flashlight. He and <action mrkr="BeastBoy" with="BB" move="4" place="chemical_plant" timestamp="2004-01-10T00:11:10"/><char ref="BeastBoy">Beast Boy</char>, in human form, are on patrol in a chemical plant. Pan ahead to a couple of large glass storage tanks. <char ref="Plasmus">Plasmus</char>' face appears within the contents of one of them as the two boys pass, but they continue on without noticing.</sd>
+
+<sd>Head-on view of them, backing up to follow their walk; the tank containing the toxic villain comes into view behind. The sound of bubbling liquid is accompanied by the disappearance of that face and causes <char ref="BeastBoy">Beast Boy</char> and <char ref="Cyborg">Cyborg</char> to wheel back to it. They see only the roiling liquid, however, and trade a somewhat bewildered look before resuming their surveillance. Soon, <char ref="Plasmus">Plasmus</char> eases into the tank again with a submerged screech; tilt up to the top end as he bursts out in full voice.</sd>
+
+<sd>He spits a mouthful of the contents at the pair, who spilt up to avoid the hit; <char ref="BeastBoy">Beast Boy</char> turns into a leopard as he bugs out. The sludge quickly eats through the section of equipment where they had been standing, and it topples slowly to the floor. Pan to <char ref="Cyborg">Cyborg</char>, who dives away from the next gush just in time and sets off running. <char ref="Plasmus">Plasmus</char>' shots rain down all around him; finally, he somersaults between a couple of vessels and stops next to <char ref="BeastBoy">Beast Boy</char>.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Great. Now he spits acid. <sd>Beast Boy resumes human form.</sd></sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> Let's just get this over with.</sp>
+
+<sd>He becomes a pterodactyl and hoists <char ref="Cyborg">Cyborg</char> up. The two dodge the creature's slime gobbets and counter with a yell and a cannon blast that tears through the purplish midsection, just as <char ref="Starfire">Starfire</char> did in "Divide and Conquer". The shooter is let go and sails neatly through the hole before <char ref="Plasmus">Plasmus</char> can get it sealed again; he stops at the far wall and looks back.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Huh?</sp>
+
+<sd>Plasmus turns toward him, revealing <char ref="BeastBoy">Beast Boy</char>, back in human form, trapped within one of those huge, vomit-green eyes. The hero holds his breath as he struggles against the outer covering, then begins a transformation. Pull back; the beast roars over <char ref="Cyborg">Cyborg</char>, but that eye starts to bulge out of all proportion, and soon, <char ref="BeastBoy">Beast Boy</char> bursts out of it as a tyrannosaurus rex. <char ref="Cyborg">Cyborg</char> finds himself standing in the growing shadow, which reverts to human form just in time for the changeling to drop neatly into his arms. Close-up of <char ref="Plasmus">Plasmus</char>, roaring down at both of them.</sd>
+
+    <sd>Dissolve to a close-up of <char ref="Cinderblock">Cinderblock</char>'s screaming face and pull back. Facing off against <action mrkr="Robin" with="S" move="4" place="mine" timestamp="2004-01-10T00:11:00"/><char ref="Robin">Robin</char> <setNote shot="no">in an open-pit mine</setNote>, he has lifted a dump truck above his head. He hurls it at <char ref="Robin">the Boy Wonder</char>, who fires a grappling hook and swings away on its line as the vehicle smashes down near him. What he has hooked is the overhead boom of a crane; he swings up and over it in a full circle, coming down for a flying kick at <char ref="Cinderblock">Cinderblock</char>. This blow finds the stone behemoth's forehead and drives him back to the edge of the pit.</sd>
+
+    <sd>He shakes his head to clear it, roars, and charges back in. Cut to his perspective, <char ref="Robin">Robin</char>, standing pat atop an earth-mover. As the approach continues, the Titans' leader jumps out of the way, revealing <action mrkr="Starfire" with="RB" move="4" place="mine" timestamp="2004-01-10T00:11:00"/><char ref="Starfire">Starfire</char> right behind him and flying in fast. Her sucker punch drops <char ref="Cinderblock">Cinderblock</char> into a hard skid across the pit floor; he fetches up against a parked crane. Something creaks overhead, drawing his attention and snapping him back to full consciousness in a very big hurry. High above, the crane's load of steel girders has been set swinging by the crash. Down they come, squarely on him; in no time flat, though, he is back on his feet and hopping mad.</sd>
+
+<sd><char ref="Cinderblock">Cinderblock</char> rips the boom loose and swings it across the pit, but <char ref="Starfire">Starfire</char> hits it with a couple of well-timed shots that slice it apart. Those huge concrete hands wrap themselves around her, just as in "Divide and Conquer", and drag her up to his truly annoyed face. This time, though, she does not smile or apologize for having to disappoint him. Close-up of one violet-booted leg swinging back, then pull back to frame both combatants. The ensuing high kick gets her out of his grip and is followed by a disc flung into his face; it bursts with a brilliant flash that dazzles him. His perspective: bright spots play across his retinas and obscure the double image of the incoming <char ref="Robin">Robin</char>. The eyes focus themselves just before a steel boot crashes into his face; pull back as <char ref="Cinderblock">Cinderblock</char> is dumped onto his back again.</sd>
+
+<sd>He slides across the pit to crash into a piece of equipment and then stands up. Pull back to show <char ref="Robin">Robin</char> watching him from atop a vehicle, with <char ref="Starfire">Starfire</char> floating nearby.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> He is unquestionably persistent.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> But why? There's nothing to capture, nothing to steal. <sd>His perspective, the camera pans to the foe.</sd> Why did <char ref="Slade">Slade</char> send him here?</sp>
+
+<sd>He charges at the camera; back to the two Titans, who bail out before his rush. Back to <char ref="Overload">Overload</char>, who has backed <char ref="Raven">Raven</char> up to the wall. She hits the area with a bit of telekinesis; the black power traces along a couple of conduits behind the plaster, and these break out to hose the electrical enemy with water, the weak spot exploited in "Car Trouble". He is driven back toward the floor platform as more pipes rupture and start to drench him, and gradually, his body subsides into the floor, leaving his circuit-board core lying by itself.</sd>
+
+<sd><char ref="Raven">Raven</char> steps to the center of the room; pull back to frame her standing over the board.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> What is your mission? <sd>Brown sludge emerges from the pipes.</sd> Why are you--?</sp>
+
+<sd>She is hit with a faceful of this stuff and knocked all the way to the wall. Cut to her, brown from top to toe.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>from o.c.</sd> Hel-lo?</sp>
+
+<sd>Cut to <char ref="Overload">Overload</char>'s core. The apprentice's boots approach it, the mud receding around each footfall; tilt up to frame her on the next line.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Does the word "decoy" mean anything to you? <sd><char ref="Overload">Overload</char> floats away.</sd> We had to find some way to coax you cowards out of hiding. <sd><char ref="Raven">Raven</char> warms up.</sd></sp>
+
+<sp><spkr ref="Raven">Raven</spkr> <char ref="Terra">Terra</char>.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <char ref="Raven">Raven</char>.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Traitor.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>eyes glowing</sd> Witch.</sp>
+
+<sd>They charge at one another. Pull back to a long shot of the two; <char ref="Terra">Terra</char> riding up on a muddy wave and jumping free, <char ref="Raven">Raven</char> flying to meet her challenge. They struggle briefly before <char ref="Raven">Raven</char> plans a boot sole in the aforementioned traitor's face and sends her down into the muck. When <char ref="Terra">Terra</char> sits up, she is just as filthy as her opponent, and her eyes start to glow with a new and fiercer light. She raises herself on a column of mud, then jumps off it and hits <char ref="Raven">Raven</char> with a flying tackle. Both tumble into the swamp that covers the floor.</sd>
+
+<sd>The surface settles down and is dead still for a long, tense moment. First to stand up is <char ref="Terra">Terra</char>, who then reaches in and pulls <char ref="Raven">Raven</char> up by the hair, but a burst of telekinesis knocks her off her feet. In a flash, <char ref="Raven">Raven</char> has thrown herself at the former Titan and pushed her head below the surface in an attempt to drown her. A few bubbles break the surface, and then a very large one swells and bursts with enough force to throw <char ref="Raven">Raven</char> halfway across the room.</sd>
+
+<sd><char ref="Terra">Terra</char> stands up, still breathing on her own, and pushes the mire back from a large circle of floor around her. At her touch, the glutinous liquid boils and solidifies into small chunks of baked Earth, which she propels toward the ceiling. <char ref="Raven">Raven</char> levitates a panel away from the wall, positions it to stop the volley, and sends it down at <char ref="Terra">Terra</char>. Now the mud forms into a tidal wave and is quickly cooked to make a stone wall that blocks the metal sheet.</sd>
+
+<sd>The solid wave is smashed apart by the hit, but <char ref="Terra">Terra</char> gathers them together into a large hand. Balling this into a fist, she sends it toward <char ref="Raven">Raven</char>; the Titan throws her own powers at the thing and slices it down the middle. Having avoided the biggest right jab ever thrown in recorded history, she focuses her energy on the overhead equipment and starts to bring it loose from the ceiling. As <char ref="Terra">Terra</char> looks up, the device comes free and sails toward her; she floats away on a stone platform she has created from the mud. She is thrown clear when the mass of metal explodes upon impact with the floor.</sd>
+
+<sd>Close-up of <char ref="Raven">Raven</char>, shielding her eyes from the glare. After the view clears, she looks across the room; a foot or more of mud covering the floor from wall to wall, smoking wreckage from this most recent offensive, and <char ref="Terra">Terra</char> nowhere in sight. Tilt up slowly as a large shape starts to form in the ooze from a gushing pipe behind her; it becomes a mallet that whacks her over the head, and down she goes. However, the figure that immediately rises is not <char ref="Raven">Raven</char> but <char ref="Terra">Terra</char>, still on that rocky perch she created. The brown-tinted heroine gets partway up a moment later.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You know, <char ref="Raven">Raven</char>, I never liked you.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> I never even wanted to know you. <sd>She stands up.</sd> You may have fooled the others, but I always knew you were a liar.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Oh, really? <sd>cooks mud away from one arm</sd> Is that why you let me live in your house and steal all your secrets and--</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Shut up!</sp>
+
+<sd>She forms the mud into a wave and drives it toward <char ref="Terra">Terra</char>, who parts it easily. The latter is now completely cleaned up, and she counters with three long tentacles that snake around the edges of the shield <char ref="Raven">Raven</char> has put up and plow her away. <char ref="Terra">Terra</char> stands for a moment, a fist-sized mud ball floating in front of her face.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Good, <char ref="Terra">Terra</char>. You know her weakness. Exploit it.</sp>
+
+<sd>She rides her stone across the chamber, taking the ball with her; it circles her head as she stops near <char ref="Raven">Raven</char>.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> You're not getting mad, are you, <char ref="Raven">Rae</char>? <sd>The ball stops.</sd> Oh, better be careful. <char ref="BeastBoy">Beast Boy</char> told me all about your temper tantrums.</sp>
+
+<sd>On the end of this, the mud shapes itself into a fair likeness of <char ref="Raven">Raven</char>'s head, with features set in a furious grimace.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> Anger is pointless. My emotions are under control. <sd>The mud face becomes hideously distorted.</sd></sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Nyah, nyah, nyah. <sd>makes flapping mouth with her hand; mud head follows suit</sd> "Anger is pointless". <sd>The face is smoothed away.</sd> And you're calling me a liar?</sp>
+
+<sd>Needled in just the wrong place, <char ref="Raven">Raven</char> gets to her feet and starts toward <char ref="Terra">Terra</char>, but is stopped by a mud hand that emerges to seize her ankle. She is dumped on her face; as she sits up, the blond Earth-shaker floats a bit closer and brings up small stones to use as a staircase. She steps leisurely down toward ground level as she continues, with each stone falling away as she moves off it.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Come on, <char ref="Raven">Raven</char>. What stings the most? <sd>She makes a small ridge and walks down it.</sd> That I tricked you? That I nearly wiped out your team? <sd>kneels to <char ref="Raven">Raven</char>; stone spreading over her</sd> That everyone liked me better than you?</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> Stop it!</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> Or is it that deep down inside, you really believed I was your friend?</sp>
+
+<sd>Close-up of the bowed brown head on the end of this. The eyes pop open, not two, but four, glowing bright red, matching the red-cloaked angry/hateful side of her personality seen in "Nevermore". Pull back as her powers flare up just behind the cloak's hem; with a feral roar, she grows to the same impossible height she attained while fighting Doctor Light in that episode's prologue. Her next two lines echo with a fearsome tone.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> I trusted you!</sp>
+
+<sd>She sends a hail of rocks down at <char ref="Terra">Terra</char>; cut to the latter, who has to back up before them. Other items start flying at her as well.</sd>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>from o.c.</sd> We trusted you! We gave you everything and you treated us like dirt!</sp>
+
+<sd><setNote shot="yes">Pull back to frame both on the end of this; now a piece of the balcony railing is wrapping itself around <char ref="Terra">Terra</char>'s legs, but she hops clear and just avoids the supercomputer that slides her way next.</setNote> She backs up before <char ref="Raven">Raven</char>'s lunge, hits the wall, and forms a pair of mud arms that reach straight ahead. All ten fingers promptly wrap themselves around the gray throat and start squeezing; soon more arms reach up to pull her body in. By this point, the mud has deepened to the point where it is almost overflowing onto the balconies. <char ref="Terra">Terra</char>'s face registers sudden shock at the brutality she and <char ref="Slade">Slade</char> have inflicted.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Finish her!</sp>
+
+<sd>These two words get her back on track. <char ref="Raven">Raven</char> is about to go down for the third time, thanks to all the hands that have seized her; <char ref="Terra">Terra</char> floats over and lowers her stone platform until she is flush with the mud to watch the last stage of the struggle.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>quietly</sd> Who's in control now?</sp>
+
+<sd>Now <char ref="Raven">Raven</char> is the one who gets snapped back to the task at hand. With only her head breaking the surface, her eyes return to normal as she realizes that she has played right into <char ref="Terra">Terra</char>'s trap. She has time enough for a last gasp and cough before being dragged wholly into the swamp.</sd>
+
+    <sd>Dissolve to a patch of surging waves and tilt up to show them breaking against a high rock face. <char ref="Cinderblock">Cinderblock</char> stands at the cliff's edge. <char ref="Robin">Robin</char> and <char ref="Starfire">Starfire</char> charge in, he on foot, she flying to get a grip on his wrist. At just the right moment, she yanks him up and slings him through a full circle as he extends one leg for a flying kick. The combination of muscle and momentum dumps <char ref="Cinderblock">Cinderblock</char> back into <setNote shot="no">the mining excavation; situated not far from  <location>Jump City Bay</location></setNote>, evidently, and the two Titans move to the edge.</sd>
+
+<sp><spkr ref="Starfire">Starfire</spkr> Victory at last. <sd>Tiny flash in the night sky, approaching fast.</sd></sp>
+
+<sp><spkr ref="Robin">Robin</spkr> Now we can concentrate on saving Ter--</sp>
+
+<sd>During this line, the flash resolves into a large boulder hurtling toward the site. <char ref="Starfire">Starfire</char> notices it first and shoves <char ref="Robin">Robin</char> out of the way, but gets the huge weight squarely across her back as a result. Ending up in the pit, he looks back with a stunned gasp; cut to the cliff's edge as she tumbles senseless over it. Trying to grab her, he is a hair slow on the draw; cut to his perspective, watching her plunge toward the jagged rocks hundreds of feet below.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <char ref="Starfire">STARFIRE</char>!!</sp>
+
+<sd>His level. Nasty laughter from the o.c. <char ref="Terra">Terra</char>; pan to put her in frame. She has levitated <char ref="Cinderblock">Cinderblock</char> himself and is standing on the unconscious creature's broad back, with the full moon shining behind her. The two float away.</sd>
+    
+<sd>Cut to inside the chemical plant. <char ref="Plasmus">Plasmus</char>' hands clap down flat on the floor, and the camera pulls back to show him on all fours and badly out of breath. <char ref="BeastBoy">Beast Boy</char>, now a tiger, and <char ref="Cyborg">Cyborg</char> are right in front of him, having gotten the upper hand. The big man breaks out his cannon, but the entire place starts shaking before he can fire a shot.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> Huh?</sp>
+
+<sd>Close-up of one foot; the floor starts to crack beneath it, and the camera pulls back as this widens into a broad fissure. Free-falling into the depths, <char ref="Cyborg">Cyborg</char> launches his left hand upward to use as a grappling hook as he did in "Fractured", and digs its fingers into the floor tiles. Five deep grooves are cut into the surface as it is dragged along, but a perpendicular fracture opens to break the hold entirely. Cut to <char ref="Cyborg">Cyborg</char>, still hanging on the end of his line, which suddenly goes slack as the hand drops into view. He vanishes screaming into the black abyss.</sd>
+
+<sd>Snap to a close-up of <char ref="BeastBoy">Beast Boy</char>'s tiger paw, holding on for dear life to a rock on the wall of one of these new gouges. It reverts to human form; pull back to frame him just below floor level as <char ref="Terra">Terra</char> steps to the edge. He looks up with a shocked gasp, and the camera cuts to a close-up of her feet and tilts up to frame the rest of her.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> Hope you're not expecting a goodbye kiss.</sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <sd>sadly</sd> <char ref="Terra">Terra</char>, you can't.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>eyes glowing</sd> Watch me.</sp>
+
+<sd>Pull back to just below <char ref="BeastBoy">Beast Boy</char>'s head, the camera pointing up toward floor level. The sides of the fissure grind back toward one another.</sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <char ref="Terra">Terra</char>!</sp>
+
+<sd>Fade to black as the light from above is cut off.</sd>
+</act>
+
+<act n="3">
+
+<title>ACT THREE</title>
+
+<sd><setNote shot="yes">Opening shot: a distorted close-up of <char ref="BeastBoy">Beast Boy</char> in the fault that just closed.</setNote></sd>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <sd>sadly</sd> <char ref="Terra">Terra</char>, you can't.</sp>
+
+<sd>A few sparks play across the view as it shifts to show her closing the fissure over him. The camera pulls back as well, revealing this shot to be on one of <char ref="Slade">Slade</char>'s monitors. It forms a row with three others, each of which replays another Titan's defeat; <char ref="Raven">Raven</char>, <char ref="Cyborg">Cyborg</char>, <char ref="Starfire">Starfire</char>. The big boss stands before them.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> Excellent work, <char ref="Terra">Terra</char>. I couldn't have done it without you. But...our conquest is not yet complete.</sp>
+
+<sd>Cut to the exterior of the chemical plant, then to <char ref="Terra">Terra</char> walking away from it. There is an evilly satisfied smile on her face.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I know. Four Titans down, one to--</sp>
+
+    <sd>She is cut off by the revving of the o.c. R-Cycle. Pull back to frame <action mrkr="Robin" with="none" move="5" place="chemical_plant" timestamp="2004-01-10T00:11:10"/><char ref="Robin">Robin</char> in its driver's seat; the vehicle is hurtling over her head, and he jumps clear for a flying tackle that lays her out flat. They struggle, but he has the advantage of leverage and keeps her pinned.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Do, not, move.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> What's the matter, <char ref="Robin">Robin</char>? Feeling lonely since I exterminated all your friends?</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> They were your friends, too.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> I don't need any friends.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> What did we ever do to make you hate us so much? <sd>Extreme close-up of both.</sd></sp>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>menacingly</sd> You were born.</sp>
+
+<sd>Her eyes flare up. Pull back as a fresh tremor cracks the ground, throwing them in opposite directions.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> I promised <char ref="BeastBoy">Beast Boy</char> I'd give you one last chance, and this is it!</sp>
+
+<sd>With a fresh roar, he charges at her and starts raining punches. She dodges the first, blocks all the others, and returns the favor; he avoids her blows and catches her off balance by throwing her at the camera. Cut to behind him; she sails away to land in a crouch, then brings up a chunk of rock and rides it back to deliver a high-speed flying kick that sends him reeling. Now he is the one on the defensive before a storm of punches, but a green-gloved hand locks around an armored wrist and stops her cold. Close-up of her face: the exposed left eye widens in shock, and the camera cuts to overhead as he flings her against a chain-link fence. She hits it face first and is pinned there, <char ref="Robin">Robin</char> not relaxing his grip on the arm he has twisted behind her back.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Look at yourself, <char ref="Terra">Terra</char>!</sp>
+
+<sd>Cut to just in front of them, zooming in slowly through the fence. A broken window shows the two combatants' reflections.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> Is this really what you want to be?</sp>
+
+<sd>Back to the fence. With one swift motion, she reverses her position and <char ref="Robin">Robin</char>'s.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I'm just never gonna be good enough for you, am I?</sp>
+
+<sd>Flipping his legs up the fence, he breaks her grip and somersaults away; she raises herself on a tall stone column. Close-up of him, looking up wide-eyed as the shadow falls over him, and pull back to put her in view. The mass slides at him, throwing showers of earth and boulders everywhere and forcing him to run for it. A long leap gets him clear; he whips a disc up at her, and it explodes at her feet to throw her to the ground. The whole column crumbles into a thundering avalanche of fragments, but she brings these under her control, suspending them in midair, and stands up.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> You don't belong with <char ref="Slade">Slade</char>.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> You don't know anything about me.</sp>
+
+<sd>She sends the stones at him; in a heartbeat he has his fighting staff out and twirling as he charges. One rock after another is crushed to gravel by his powerful swings, and he jumps along the tops of others to drill a huge roundhouse that skids <char ref="Terra">Terra</char> at least fifty yards downrange. Close-up of her; as she starts to come around, the end of the staff pins her back. Tilt up to <char ref="Robin">Robin</char>.</sd>
+
+[Animation goof: The colors of the insignia on her chest reverse themselves several times throughout the remainder of this episode.]
+
+<sp><spkr ref="Robin">Robin</spkr> It doesn't have to be this way, <char ref="Terra">Terra</char>! I was <char ref="Slade">Slade</char>'s apprentice once. I got out. So can you!</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> I don't need you to save me.</sp>
+
+<sp><spkr ref="Robin">Robin</spkr> You can only save yourself.</sp>
+
+<sp><spkr ref="Terra">Terra</spkr> I don't need saving!</sp>
+
+<sd>She kicks him away, breaking the staff, and flips up to her feet. Cut to him, leaping away from the melee; the ground starts to tremble, and the camera cuts back to her, striding toward him, on the next line.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> I'm not some sad little girl who's waiting to be rescued.</sp>
+
+<sd>Back to him. Rocky masses emerge from the earth and are followed by the opening of fissures that send up curtains of dust and wind.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> <sd>from o.c.</sd> I wanted to be this way. I wanted to go with <char ref="Slade">Slade</char>. <sd>The wind dies out; back to her.</sd> I wanted to annihilate you and your pathetic friends!</sp>
+
+<sd>A flick of her hand aims a boulder toward him. It crashes down just to one side, but the shock wave puts him down. As he struggles to rise, she continues her steady approach and directs a second stone; this one also lands short and knocks him flat. He labors for breath after taking the one-two punch; cut to his perspective, she stands over him and raises both hands.</sd>
+
+<sp><spkr ref="Terra">Terra</spkr> And now, I never want to see your face again.</sp>
+
+<sd>The hands come down. Pan slightly to put a third boulder in view, floating above the camera, then dropping straight toward it. There is a flash of white upon impact, which subsides to show a patch of floor under a spotlight. Skidding into view to stop near the camera is a circular black disc marked with a big yellow R: <char ref="Robin">Robin</char>'s insignia, pried from his tunic. Pull back; <char ref="Slade">Slade</char> reaches into view and picks it up, this is his lair, and the camera shifts to frame <char ref="Terra">Terra</char> and the three prison escapees standing at a short distance. <char ref="Overload">Overload</char> has put his body back together since his fight with <char ref="Raven">Raven</char>.</sd>
+
+<sp><spkr ref="Slade">Slade</spkr> You see, my dear apprentice... <sd>crossing to her</sd> ...now that you belong to me, the city belongs to us.</sp>
+
+<sd><setNote shot="yes">Dissolve to the exterior of <location>the Tower</location>, then to a slow pan through a cavern deep beneath it.</setNote> The remaining lines echo slightly in the open space.</sd>
+
+<sp><spkr ref="Cyborg">Cyborg</spkr> <sd>from o.c.</sd> No more chances.</sp>
+
+<sp><spkr ref="Starfire">Starfire</spkr> <sd>from o.c.</sd> No more trust.</sp>
+
+<sp><spkr ref="Raven">Raven</spkr> <sd>from o.c.</sd> And no more mercy.</sp>
+
+<sp><spkr ref="BeastBoy">BeastBoy</spkr> <sd>from o.c.</sd> She's just another criminal.</sp>
+
+    <sd>On the end of this line, the camera stops on the silhouettes of the four Titans at the far end; they have all survived <char ref="Terra">Terra</char>'s onslaughts, and one of <action mrkr="Starfire" with="all" move="5" place="tower" timestamp="2004-01-10T00:11:10"/><char ref="Starfire">Starfire</char>'s hands glows green as a torch.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> <sd>from o.c.</sd> And we're going to stop her.</sp>
+
+    <sd>Close-up of the four, staring at the camera in complete surprise at the sound of his voice. <action mrkr="Raven" with="all" move="4" place="tower" timestamp="2004-01-10T00:11:10"/><char ref="Raven">Raven</char> has cleaned up nicely after her extended mud bath. <char ref="Starfire">Starfire</char> raises her lit hand a bit higher; cut to a close-up of the fifth Titan's face, eyebrows lowered in icy determination. He, too, is in one piece after getting bashed with that boulder, though his clothes are a bit torn.</sd>
+
+<sp><spkr ref="Robin">Robin</spkr> No matter what it takes.</sp>
+
+<sd>Fade to black.</sd> 
+</act>
+    </body>
+    
+</root>

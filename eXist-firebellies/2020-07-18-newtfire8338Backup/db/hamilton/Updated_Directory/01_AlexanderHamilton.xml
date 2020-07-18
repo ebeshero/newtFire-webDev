@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="../../../ODD/out/hamiltonODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="en">
+        <fileDesc>
+            <titleStmt>
+                <title> "Alexander Hamilton" </title>
+            </titleStmt>
+            <publicationStmt>
+                <p> by Lin-Manuel Miranda </p>
+            </publicationStmt>
+            <sourceDesc>
+                <p> Lyrics provided resourced from http://atlanticrecords.com/HamiltonMusic/ </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:lang="en">
+        <body>
+            <head><title>Alexander Hamilton</title></head>
+            <div type="song">
+                <stage type="business">Lights up on Aaron Burr and the Company.</stage>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><seg type="#fact">How does a bastard, orphan, son of a whore</seg> and a</l>
+                    <l>Scotsman, dropped in the middle of a forgotten</l>
+                    <l><seg type="#fact">Spot in the <placeName>Caribbean</placeName></seg> by providence, impoverished, in
+                        squalor</l>
+                    <l>Grow up to be a hero and a scholar?</l>
+                </sp>
+
+                <sp who="#laurens">
+                    <speaker>LAURENS</speaker>
+                    <l><seg type="#fact">The ten-dollar Founding Father without a father</seg></l>
+                    <l>Got a lot farther by working a lot harder</l>
+                    <l>By being a lot smarter</l>
+                    <l>By being a self-starter</l>
+                    <l><seg type="#fact">By fourteen, they placed him in charge of a trading charter</seg></l>
+                </sp>
+
+                <sp who="#jefferson">
+                    <speaker>JEFFERSON</speaker>
+                    <l>And every day while slaves were being slaughtered and carted</l>
+                    <l>Away across the waves, he struggled and kept his guard up</l>
+                    <l>Inside, he was longing for something to be a part of</l>
+                    <l>The brother was ready to beg, steal, borrow, or barter</l>
+                </sp>
+
+                <sp who="#madison">
+                    <speaker>MADISON</speaker>
+                    <l><seg type="#fact">Then a hurricane came, and devastation reigned</seg></l>
+                    <l>Our man saw his future drip, dripping down the drain</l>
+                    <l>Put a pencil to his temple, connected it to his brain</l>
+                    <l><seg type="#fact">And he wrote his first refrain</seg>, a testament to his pain</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Well, the word got around, they said, “This kid is insane, man”</l>
+                    <l><seg type="#fact">Took up a collection just to send him to the mainland</seg></l>
+                    <l>“Get your education, don’t forget from whence you came, and</l>
+                    <l>The world's gonna know your name. What’s your name, man?”</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName></l>
+                    <l>My name is <persName ref="#hamilton">Alexander Hamilton</persName></l>
+                    <l>And there’s a million things I haven’t done</l>
+                    <l>But<phr type="#wait"> just you wait, just you wait...</phr></l>
+                </sp>
+
+                <sp who="#eliza">
+                    <speaker>ELIZA</speaker>
+                    <l><seg type="#fact">When he was ten his father split, full of it, debt-ridden</seg></l>
+                    <l>Two years later, see <persName ref="#hamilton">Alex</persName> and his mother
+                        bed-ridden</l>
+                    <l>Half-dead sittin' in their own sick, the scent thick</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <stage type="delivery">Except Hamilton</stage>
+                    <stage type="delivery">whispering</stage>
+                    <l>And <persName ref="#hamilton">Alex</persName> got better <seg type="#fact">but his mother went
+                        quick</seg></l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l><seg type="#fact">Moved in with a cousin, the cousin committed suicide</seg></l>
+                    <l>Left him with nothin’ but ruined pride, something new inside</l>
+                    <l>A voice saying</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>“<persName ref="#hamilton">Alex</persName>, you gotta fend for yourself.”</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>He started retreatin’ and readin’ every treatise on the shelf</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>There would have been nothin’ left to do</l>
+                    <l>For someone less astute</l>
+                    <l>He woulda been dead or destitute</l>
+                    <l>Without a cent of restitution</l>
+                    <l><seg type="#ambiguous">Started workin’, clerkin’ for his late mother’s landlord</seg></l>
+                    <l>Tradin’ sugar cane and rum and all the things he can’t afford</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Scammin’</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Scammin’ for every book he can get his hands on</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Plannin’</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Plannin’ for the future see him now as he stands on</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>Oooh...</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l><seg type="#fact">The bow of a ship headed for a new land</seg></l>
+                    <l>In <placeName>New York</placeName> you can be a new man </l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>In <placeName>New York</placeName> you can</l>
+                    <l>Be a new man—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><phr type="#wait">Just you wait!</phr></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>In <placeName>New York</placeName> you can</l>
+                    <l>Be a new man—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><phr type="#wait">Just you wait!</phr></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>In <placeName>New York</placeName> you can be a new man—</l>
+                </sp>
+
+                <sp who="#women">
+                    <speaker>WOMEN</speaker>
+                    <l>In <placeName>New York</placeName>— </l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l><placeName>New York</placeName>—</l>
+                </sp>
+
+                <sp who="#hamilton">
+                    <speaker>HAMILTON</speaker>
+                    <l><phr type="#wait">Just you wait!</phr></l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName></l>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName></l>
+                    <l>We are waiting in the wings for you</l>
+                    <l>Waiting in the wings for you</l>
+                    <l>You could never back down</l>
+                    <l>You never learned to <phr type="#time">take your time</phr>!</l>
+                    <l>Oh, <persName ref="#hamilton">Alexander Hamilton</persName></l>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName>…</l>
+                    <l>When <placeName>America</placeName> sings for you</l>
+                    <l><placeName>America</placeName> sings for you</l>
+                    <l>Will they know what you overcame?</l>
+                    <l>Will they know you rewrote the game?</l>
+                    <l>The world will never be the same, oh</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>The ship is in the harbor now</l>
+                    <l>See if you can spot him</l>
+                </sp>
+
+                <sp who="#men">
+                    <speaker>MEN</speaker>
+                    <l><phr type="#wait">Just you wait</phr></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>Another immigrant</l>
+                    <l>Comin’ up from the bottom</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><phr type="#wait">Just you wait</phr></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>His enemies destroyed his rep</l>
+                    <l><placeName>America</placeName> forgot him</l>
+                </sp>
+
+                <sp who="#mulligan #lafayette">
+                    <speaker>MULLIGAN/LAFAYETTE</speaker>
+                    <l>We fought with him</l>
+                </sp>
+
+                <sp who="#philipH">
+                    <speaker>PHILIP</speaker>
+                    <l>Me? I died for him</l>
+                </sp>
+
+                <sp who="#washington">
+                    <speaker>WASHINGTON</speaker>
+                    <l>Me? I trusted him</l>
+                </sp>
+
+                <sp who="#angelica #eliza #maria">
+                    <speaker>ANGELICA/ELIZA/MARIA</speaker>
+                    <l>Me? I loved him</l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>And me? I’m the damn fool that shot him</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l>There’s a million things I haven’t done</l>
+                    <l>But <phr type="#wait">just you wait!</phr></l>
+                </sp>
+
+                <sp who="#burr">
+                    <speaker>BURR</speaker>
+                    <l>What’s your name, man?</l>
+                </sp>
+
+                <sp who="#company">
+                    <speaker>COMPANY</speaker>
+                    <l><persName ref="#hamilton">Alexander Hamilton</persName>!</l>
+                </sp>
+            </div>
+        </body>
+        <back>
+            <listEvent><head>Alexander Hamilton</head><event xml:id="event01" when="1757-01-11"><label>Alexander Hamilton's Birth</label><desc>Alexander Hamilton was born in Charlestown, St. Kitts and Nevis. There is a debate that he was born two years earlier in 1755, but 1757 matches closer to ages listed in the musical.</desc></event>
+                <event xml:id="event02" when="1767-01-16"><label>Hamilton's Father Left</label><desc>James Hamilton, Alexander Hamilton's father and a Scottish Laird, left Hamilton and his family, most likely due to the fact Alexander was his illegitimate son. This date is estimated from the song lyrics describing Alexander Hamilton as ten when his father left.</desc></event>
+                <event xml:id="event03" when="1768-02-19"><label>Hamilton's Mother Dies</label><desc>Rachel Faucette Buck, Hamilton's mother, died on February 19, 1768. After her death, Hamilton and his brother, James, moved to live with their cousin.</desc></event>
+                <event xml:id="event04" when="1771-01-16"><label>Hamilton In Charge of a Trading Charter</label><desc>The lyrics in "Alexander Hamilton" describe Hamilton being in charge of a trading charter when he was fourteen. This is an estimated date to show when he would be in this position.</desc></event>
+                <event xml:id="event05" when="1772-08-31"><label>Hurricane Maria Hits</label><desc>Hurricane Maria hit St.Croix, where Hamilton was currently working, in 1772.</desc></event>
+                <event xml:id="event06" when="1772-09-06"><label>Hamilton Writes Letter About Hurricane Maria</label><desc>Hamilton wrote a letter describing the storm to his father which gained the attention of the island's elite. The letter was how he "wrote his way out" and got to travel to New York.</desc></event>
+                <event xml:id="event07" when="1772-12-01"><label>Hamilton Arrives in New York</label><desc>Near the end of 1772, Alexander Hamilton arrives in New York City. The month and day are estimated based off other dates.</desc></event>
+            </listEvent>
+        </back>
+    </text>
+</TEI>

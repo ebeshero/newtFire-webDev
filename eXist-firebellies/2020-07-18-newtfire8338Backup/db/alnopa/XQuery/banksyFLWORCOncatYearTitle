@@ -1,0 +1,6 @@
+xquery version "3.1";
+(: concat("1999", ": ", collection('/db/banksy')//sourceDesc//title[following-sibling::date/@when[contains(., "1999")]] => string-join("; ")) :)
+let $banksy := collection('/db/banksy')/element()
+let $titles := $banksy//sourceDesc//title
+let $dates := $titles[following-sibling::date/@when[contains(., "2008")]]
+return concat("2008", ": ", $dates => string-join("; "))

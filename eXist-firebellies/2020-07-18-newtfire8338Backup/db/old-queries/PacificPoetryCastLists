@@ -1,0 +1,32 @@
+xquery version "3.0";
+declare default element namespace "http://www.tei-c.org/ns/1.0";
+<html>
+        <head><title>People in the Whole Collection of Poems</title></head>
+        <body>
+            
+            <h1>"Cast Lists" of People in the Pacific Collection of Voyage Poetry, with their Number of Appearances</h1>
+            <h2>"The Injured Islanders" (1779) and "The Elegy on Captain Cook" (1780)</h2>
+{   
+    let $coll:=collection ('/db/pacific/literary')/TEI
+    for $poem in $coll
+    order by $poem descending
+  return
+    <div>
+        <h3>{$poem/teiHeader//titleStmt/title/text()}</h3>
+    <table>
+{ 
+let $text := $poem//text
+let $people := $text//persName | $text//rs[@type="person"]/@ana
+let $distinctPeople := distinct-values($people)
+for $dstPerson in $distinctPeople
+order by $dstPerson
+return 
+    <tr>
+    <td>{$dstPerson}</td>
+    <td>{count($dstPerson=$text//persName | $text//rs[@type="person"]/@ana)}</td>
+}
+</ul>
+</div>
+}
+</body>
+</html>
